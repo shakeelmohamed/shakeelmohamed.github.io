@@ -3,5 +3,5 @@ http://shakeelmohamed.com/zen-youtube-audio-player
 http://shakeelmohamed.com/angular-geocoding-demo
 http://shakeelmohamed.com/egress-foundation
 http://shakeelmohamed.com/egress-bootstrap
-http://shakeelmohamed.com/egress-bootstrap
+http://shakeelmohamed.com/generator-egress
 http://shakeelmohamed.com/htmlslyde
