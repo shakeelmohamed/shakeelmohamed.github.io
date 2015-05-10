@@ -101,6 +101,13 @@ header {
 
 header ul {
   list-style:none;
+  max-width: 250px;
+}
+
+header ul li {
+  float: left;
+  padding-right: 10px;
+  word-wrap: break-word;
 }
 
 strong {
@@ -125,11 +132,6 @@ hr {
   margin:0 0 20px;
 }
 
-footer {
-  width:270px;
-  clear: both;
-  position:relative;
-}
 
 @media print, screen and (max-width: 960px) {
   
@@ -148,6 +150,15 @@ footer {
     padding-right:320px;
   }
   
+  header ul {
+    padding-bottom: 50px;
+  }
+  header ul li {
+    float: left;
+    padding-right: 10px;
+    max-width: 400px;
+  }
+
   section {
     border:1px solid #e5e5e5;
     border-width:1px 0;
@@ -184,11 +195,12 @@ footer {
     padding:15px;
   }
   header ul {
-    padding-bottom: 30px;
+    padding-bottom: 50px;
   }
   header ul li {
     float: left;
     padding-right: 10px;
+    max-width: 500px;
   }
 }
 
