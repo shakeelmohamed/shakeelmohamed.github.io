@@ -1,5 +1,4 @@
 http://shakeelmohamed.com/
-http://shakeelmohamed.com/zen-youtube-audio-player
 http://shakeelmohamed.com/angular-geocoding-demo
 http://shakeelmohamed.com/egress-foundation
 http://shakeelmohamed.com/egress-bootstrap
