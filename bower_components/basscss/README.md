@@ -2,11 +2,12 @@
 
 Low-level CSS toolkit <http://basscss.com>
 
-Documentation: <http://basscss.com/docs>
+[![Build Status](https://travis-ci.org/basscss/basscss.svg)](https://travis-ci.org/basscss/basscss)
+[![npm version](https://badge.fury.io/js/basscss.svg)](https://badge.fury.io/js/basscss)
 
 ## Lightning-Fast Modular CSS with No Side Effects
 
-Basscss is a lightweight collection of base element styles and immutable utilities designed for speed, clarity, performance, and scalability.
+Basscss is a lightweight collection of immutable utilities designed for speed, clarity, performance, and scalability.
 
 
 ## Features
@@ -43,9 +44,8 @@ and to help reduce boilerplate in stylesheets.
 
 ## Unassuming
 
-Modular and customizable base, typography, layout, and color styles
-don't dictate what things should look like
-and play well with other stylesheets and frameworks.
+Modular and customizable typography and layout styles don’t dictate
+what things should look like and play well with other stylesheets and frameworks.
 
 [Read More](http://basscss.com)
 
@@ -53,16 +53,9 @@ and play well with other stylesheets and frameworks.
 
 ## Contributing
 
-Please file an issue before submitting a pull request.
-If you're making changes to a module, please follow the
-[design principles](http://www.basscss.com/docs/reference/principles/).
-
-## Folder Structure
-- `src`: CSS4 source files
-- `css`: Processed CSS files for browser compatibility
-- `scripts`: Compilation and build scripts
+See [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ---
 
-[MIT license](http://opensource.org/licenses/MIT)
+[MIT license](LICENSE.md)
 

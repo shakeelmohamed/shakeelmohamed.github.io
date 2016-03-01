@@ -3,6 +3,6 @@
   "main": "index.html",
   "license": "MIT",
   "dependencies": {
-    "basscss": "~7.0.4"
+    "basscss": "8.x"
   }
 }
