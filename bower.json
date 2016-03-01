@@ -1,8 +1,0 @@
-{
-  "name": "beta",
-  "main": "index.html",
-  "license": "MIT",
-  "dependencies": {
-    "basscss": "8.x"
-  }
-}
