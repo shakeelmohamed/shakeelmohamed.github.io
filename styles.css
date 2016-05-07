@@ -1,3 +1,33 @@
 body {
     font-family: "Signika", sans-serif;
 }
+
+a {
+    color: #39c;
+}
+
+li {
+    list-style-type: none;
+}
+
+.nav {
+    padding-top: 10px;
+}
+
+.social-links {
+    float: right;
+    margin-top: 0.75rem;
+}
+
+.blogposts {
+    padding-left: 0px;
+}
+
+.blogposts li {
+    padding-bottom: 15px;
+}
+
+.blogposts li span.h5 {
+    display: block;
+    padding-bottom: 5px;
+}
