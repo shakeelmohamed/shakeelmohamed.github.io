@@ -1,11 +1,21 @@
 var jade = require("jade");
 var fs = require("fs");
 
+// Read blogs.json as JSON
 var blogs = JSON.parse(fs.readFileSync("./blogs.json").toString());
 
-var fn = jade.compileFile("./index.jade");
+// Create a function for compiling jade
+var builder = jade.compileFile("./index.jade", {pretty: "    "});
 
-var html = fn({"blogs": blogs});
-console.log(html);
+// Do the compilation
+var html = builder({"blogs": blogs});
 
-fs.writeFileSync("./test.html", html);
+// Update index.html
+fs.writeFile("./index.html", html, function(err) {
+    if (err) {
+        console.error(err);
+    }
+    else {
+        console.log("All done! 💯");
+    }
+});

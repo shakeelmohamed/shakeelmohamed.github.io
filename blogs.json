@@ -3,5 +3,70 @@
         "date": "May 23, 2016",
         "title": "Share Solutions to Your Problems",
         "url": "https://medium.com/@_shakeel/share-solutions-to-your-problems-652522580ec9"
+    },
+    {
+        "date": "April 18, 2016",
+        "title": "Productivity Hack: Use Opposite Techniques",
+        "url": "https://medium.com/@_shakeel/productivity-hack-use-opposite-techniques-86b592aff17d"
+    },
+    {
+        "date": "April 10, 2016",
+        "title": "Changing My Git Editor On The Fly",
+        "url": "https://coderwall.com/p/0nl5lw/why-i-change-my-git-editor-on-the-fly"
+    },
+    {
+        "date": "April 3, 2016",
+        "title": "Notice the Colors: a Mindfulness Experiment",
+        "url": "https://medium.com/@_shakeel/notice-the-colors-a-mindfulness-experiment-4a440636178d"
+    },
+    {
+        "date": "March 25, 2016",
+        "title": "Reflecting on 1 Year of Zen Audio Player",
+        "url": "https://medium.com/@_shakeel/reflecting-on-1-year-of-zen-audio-player-57ee759365ee"
+    },
+    {
+        "date": "March 20, 2016",
+        "title": "A bash alias for intermediate git users: gityank",
+        "url": "https://coderwall.com/p/ixj7mq/a-bash-alias-for-intermediate-git-users-gityank"
+    },
+    {
+        "date": "September 4, 2015",
+        "title": "Silence JavaScript console output",
+        "url": "https://coderwall.com/p/1l4cba/silence-javascript-console-output"
+    },
+    {
+        "date": "May 28, 2015",
+        "title": "git diff against a remote branch",
+        "url": "https://coderwall.com/p/rndi8w/git-diff-against-a-remote-branch"
+    },
+    {
+        "date": "May 6, 2015",
+        "title": "\"Oops, I pushed a commit with something sensitive to a public GitHub project!\"",
+        "url": "https://coderwall.com/p/dcqdva/oops-i-pushed-a-commit-with-something-sensitive-to-a-public-github-project"
+    },
+    {
+        "date": "April 21, 2015",
+        "title": "An actually helpful git diff of your uncommitted changes",
+        "url": "https://coderwall.com/p/tekq7q/an-actually-helpful-git-diff-of-your-uncommitted-changes"
+    },
+    {
+        "date": "April 10, 2015",
+        "title": "Magic Spells: Deploying an app to AWS OpsWorks",
+        "url": "https://medium.com/@_shakeel/magic-spells-deploying-an-app-to-aws-opsworks-d53018884dd1"
+    },
+    {
+        "date": "March 19, 2015",
+        "title": "Hacker's First Logo - Designing in PowerPoint",
+        "url": "https://medium.com/@_shakeel/hacker-s-first-logo-designing-in-powerpoint-7eeeb6925097"
+    },
+    {
+        "date": "November 14, 2014",
+        "title": "Remove an accidentally pushed remote git commit",
+        "url": "https://coderwall.com/p/lzuhlq/remove-an-accidentally-pushed-remote-git-commit"
+    },
+    {
+        "date": "September 20, 2013",
+        "title": "Summer with Splunk",
+        "url": "https://medium.com/@_shakeel/summer-with-splunk-ffc57a49f435"
     }
 ]
