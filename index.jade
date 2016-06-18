@@ -1,5 +1,5 @@
 mixin socialLink(name, URL)
-    li(class="inline pr1")
+    li.inline.pr1
         a(href="#{URL}", target="_blank")= name
 mixin blogPost(post)
     li
@@ -22,19 +22,22 @@ html
         <![endif]-->
         <!--This website's source code is available at https://github.com/shakeelmohamed/beta -->
     body
-        div(class="flex center")
-            div(class="mx-auto")
-                div(class="nav center")
-                    h1(class="inline h1 pr2") Shakeel Mohamed
+        div.flex.center
+            div.mx-auto
+                div.nav.center
+                    ul.nav-links
+                        li.inline.pr1
+                            a(href="#blogs") Blog Posts
                     figure
                         a(href="http://shakeelmohamed.com")
-                            img(src="https://s.gravatar.com/avatar/fce1af87b1acae9428fd82ee361a5bc0?s=200" style="-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%;" alt="Photo of Shakeel Mohamed" title="Photo of Shakeel Mohamed")
-                    ul(class="social-links")
+                            img.profile-photo(src="https://s.gravatar.com/avatar/fce1af87b1acae9428fd82ee361a5bc0?s=200" alt="Photo of Shakeel Mohamed" title="Photo of Shakeel Mohamed")
+                    h1.inline.h1.pr2 Shakeel Mohamed
+                    ul.social-links
                         each URL, name in socialLinks
                             +socialLink(name, URL)
-        div(class="flex center")
-            div(class="flex-col mx-auto")
-                h2(class="blogheader")
+        div.flex.center
+            div.flex-col.mx-auto
+                h2.blogheader#blogs
                     | Blog Posts (
                     a(href="https://volleyy.com/shakeel/" target="_blank") subscribe
                     | )

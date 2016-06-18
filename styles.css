@@ -19,6 +19,12 @@ ul {
     padding-top: 10px;
 }
 
+.profile-photo {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
 .social-links {
     margin-top: 0.75rem;
 }
