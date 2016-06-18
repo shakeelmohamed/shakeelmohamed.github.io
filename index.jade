@@ -1,10 +1,31 @@
-mixin blogpost(post)
+mixin navLink(sectionID, name)
+    li.inline.pr1
+        a(href="#{sectionID}", title="#{name}")= name
+mixin socialLink(URL, name)
+    li.inline.pr1
+        a(href="#{URL}", title="#{name}" target="_blank")= name
+mixin project(project)
+    li
+        span.h3
+            a(href="#{project.url}", title="#{project.name}", target="_blank")= project.name
+            if project.source
+                span.inline
+                    |   (
+                    a(href="#{project.source}", title="#{project.name} source", target="_blank") source
+                    | )
+        p= project.description
+mixin blogPost(post)
     li
         span.h5= post.date
         span.h4
             a(href="#{post.url}", title="#{post.title}", target="_blank")= post.title
+mixin news(mention)
+    li
+        span.h5= mention.date
+        span.h4
+            a(href="#{mention.url}", title="#{mention.title}", target="_blank")= mention.title
 doctype html
-html
+html(lang="en")
     head
         title Shakeel Mohamed
         meta(charset="utf-8")
@@ -13,32 +34,47 @@ html
         link(href="https://npmcdn.com/basscss@8.0.1/css/basscss.min.css", rel="stylesheet")
         link(href="styles.css", rel="stylesheet")
         link(href="https://fonts.googleapis.com/css?family=Signika", rel="stylesheet", type="text/css")
-        
+        <!-- -->
         <!--[if lt IE 9]>
         <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
+        <!--This website's source code is available at https://github.com/shakeelmohamed/beta -->
     body
-        div(class="flex center")
-            div(class="mx-auto")
-                div(class="nav center")
-                    span(class="inline h1 pr2") Shakeel Mohamed
-                    ul(class="social-links")
-                        li(class="inline pr1")
-                            a(href="https://github.com/shakeelmohamed", target="_blank") GitHub
-                        li(class="inline pr1") Stack Overflow
-                        li(class="inline pr1") LinkedIn
-                        li(class="inline pr1") Goodreads
-                        li(class="inline pr1")
-                            a(href="https://twitter.com/_shakeel", target="_blank") Twitter
-                        li(class="inline pr1") Instagram
-                        li(class="inline pr1") Facebook
-        div(class="flex center")
-            div(class="flex-col mx-auto")
-                h2(class="blogheader")
+        header.flex.center
+            div.mx-auto
+                div.nav.center
+                    ul.nav-links
+                        +navLink("#projects", "Projects")
+                        +navLink("#blogs", "Blog Posts")
+                        +navLink("#mentions", "Mentions")
+                    figure
+                        a(href="http://shakeelmohamed.com")
+                            img.profile-photo(src="https://s.gravatar.com/avatar/fce1af87b1acae9428fd82ee361a5bc0?s=200" alt="Photo of Shakeel Mohamed" title="Photo of Shakeel Mohamed")
+                    h1.inline.h1.pr2 Shakeel Mohamed
+                    ul.social-links
+                        each URL, name in socialLinks
+                            +socialLink(URL, name)
+        section.flex.center
+            div.flex-col.mx-auto
+                h2#projects Projects
+                hr
+                ul.section-list
+                    each item in projects
+                        +project(item)
+        section.flex.center
+            div.flex-col.mx-auto
+                h2#blogs
                     | Blog Posts (
                     a(href="https://volleyy.com/shakeel/" target="_blank") subscribe
                     | )
                 hr
-                ul.blogposts
-                    each post in blogs
-                        +blogpost(post)
+                ul.section-list
+                    each item in blogs
+                        +blogPost(item)
+        section.flex.center
+            div.flex-col.mx-auto
+                h2#mentions Mentions
+                hr
+                ul.section-list
+                    each item in mentions
+                        +news(item)

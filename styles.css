@@ -19,15 +19,21 @@ ul {
     padding-top: 10px;
 }
 
+.profile-photo {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
 .social-links {
     margin-top: 0.75rem;
 }
 
-.blogposts li {
+.section-list li {
     padding-bottom: 15px;
 }
 
-.blogposts li span.h5 {
+.section-list li span.h5 {
     display: block;
     padding-bottom: 5px;
 }
