@@ -38,6 +38,28 @@ var globals = {
             "source": "https://github.com/shakeelmohamed/egress-bootstrap",
             "description": "Start writing a web app already, with Twitter's Bootstrap framework"
         }
+    ],
+    "mentions": [
+        {
+            "date": "January 6, 2016",
+            "title": "An Hour of Code with Splunk",
+            "url": "http://blogs.splunk.com/2016/01/06/an-hour-of-code-with-splunk/",
+        },
+        {
+            "date": "June 14, 2015",
+            "title": "Commencement pride shines for Seattle University grads",
+            "url": "http://www.seattletimes.com/photo-video/photography/commencement-pride-shines-for-seattle-university-grads/"
+        },
+        {
+            "date": "August 23, 2012",
+            "title": "Meet the 7 startup teams in StudentRND's summer incubator",
+            "url": "http://www.geekwire.com/2012/meet-teams-student-rnd-summer-incubator/"
+        },
+        {
+            "date": "February 28, 2012",
+            "title": "BC Computer Science Club",
+            "url": "http://www.thewatchdogonline.com/bc-computer-science-club-8639"
+        }
     ]
 };
 

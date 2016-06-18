@@ -19,6 +19,11 @@ mixin blogPost(post)
         span.h5= post.date
         span.h4
             a(href="#{post.url}", title="#{post.title}", target="_blank")= post.title
+mixin news(mention)
+    li
+        span.h5= mention.date
+        span.h4
+            a(href="#{mention.url}", title="#{mention.title}", target="_blank")= mention.title
 doctype html
 html(lang="en")
     head
@@ -39,8 +44,9 @@ html(lang="en")
             div.mx-auto
                 div.nav.center
                     ul.nav-links
-                        +navLink("#blogs", "Blog Posts")
                         +navLink("#projects", "Projects")
+                        +navLink("#blogs", "Blog Posts")
+                        +navLink("#mentions", "Mentions")
                     figure
                         a(href="http://shakeelmohamed.com")
                             img.profile-photo(src="https://s.gravatar.com/avatar/fce1af87b1acae9428fd82ee361a5bc0?s=200" alt="Photo of Shakeel Mohamed" title="Photo of Shakeel Mohamed")
@@ -65,3 +71,10 @@ html(lang="en")
                 ul.section-list
                     each item in blogs
                         +blogPost(item)
+        section.flex.center
+            div.flex-col.mx-auto
+                h2#mentions Mentions
+                hr
+                ul.section-list
+                    each item in mentions
+                        +news(item)
