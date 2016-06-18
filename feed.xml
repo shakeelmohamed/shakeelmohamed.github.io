@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">
+  <channel>
+    <title><![CDATA[Blog Most Recent]]></title>
+    <link>https://ShakeelMohamed.com/</link>
+    <description><![CDATA[Most recent blog posts]]></description>
+    <language>en-US</language>
+    <atom:link href="https://ShakeelMohamed.com/rss.xml" rel="self" type="application/rss+xml"/>
+    <lastBuildDate>Sat, 18 Jun 2016 23:18:22 GMT</lastBuildDate>
+    <item>
+      <title><![CDATA[Share Solutions to Your Problems]]></title>
+      <link>https://medium.com/@_shakeel/share-solutions-to-your-problems-652522580ec9</link>
+      <pubDate>May 23, 2016</pubDate>
+      <description><![CDATA[May 23, 2016]]></description>
+      <guid>https://medium.com/@_shakeel/share-solutions-to-your-problems-652522580ec9</guid>
+      <author>Shakeel Mohamed</author>
+    </item>
+    <item>
+      <title><![CDATA[Productivity Hack: Use Opposite Techniques]]></title>
+      <link>https://medium.com/@_shakeel/productivity-hack-use-opposite-techniques-86b592aff17d</link>
+      <pubDate>April 18, 2016</pubDate>
+      <description><![CDATA[April 18, 2016]]></description>
+      <guid>https://medium.com/@_shakeel/productivity-hack-use-opposite-techniques-86b592aff17d</guid>
+      <author>Shakeel Mohamed</author>
+    </item>
+    <item>
+      <title><![CDATA[Changing My Git Editor On The Fly]]></title>
+      <link>https://coderwall.com/p/0nl5lw/why-i-change-my-git-editor-on-the-fly</link>
+      <pubDate>April 10, 2016</pubDate>
+      <description><![CDATA[April 10, 2016]]></description>
+      <guid>https://coderwall.com/p/0nl5lw/why-i-change-my-git-editor-on-the-fly</guid>
+      <author>Shakeel Mohamed</author>
+    </item>
+    <item>
+      <title><![CDATA[Notice the Colors: a Mindfulness Experiment]]></title>
+      <link>https://medium.com/@_shakeel/notice-the-colors-a-mindfulness-experiment-4a440636178d</link>
+      <pubDate>April 3, 2016</pubDate>
+      <description><![CDATA[April 3, 2016]]></description>
+      <guid>https://medium.com/@_shakeel/notice-the-colors-a-mindfulness-experiment-4a440636178d</guid>
+      <author>Shakeel Mohamed</author>
+    </item>
+    <item>
+      <title><![CDATA[Reflecting on 1 Year of Zen Audio Player]]></title>
+      <link>https://medium.com/@_shakeel/reflecting-on-1-year-of-zen-audio-player-57ee759365ee</link>
+      <pubDate>March 25, 2016</pubDate>
+      <description><![CDATA[March 25, 2016]]></description>
+      <guid>https://medium.com/@_shakeel/reflecting-on-1-year-of-zen-audio-player-57ee759365ee</guid>
+      <author>Shakeel Mohamed</author>
+    </item>
+    <item>
+      <title><![CDATA[A bash alias for intermediate git users: gityank]]></title>
+      <link>https://coderwall.com/p/ixj7mq/a-bash-alias-for-intermediate-git-users-gityank</link>
+      <pubDate>March 20, 2016</pubDate>
+      <description><![CDATA[March 20, 2016]]></description>
+      <guid>https://coderwall.com/p/ixj7mq/a-bash-alias-for-intermediate-git-users-gityank</guid>
+      <author>Shakeel Mohamed</author>
+    </item>
+    <item>
+      <title><![CDATA[Silence JavaScript console output]]></title>
+      <link>https://coderwall.com/p/1l4cba/silence-javascript-console-output</link>
+      <pubDate>September 4, 2015</pubDate>
+      <description><![CDATA[September 4, 2015]]></description>
+      <guid>https://coderwall.com/p/1l4cba/silence-javascript-console-output</guid>
+      <author>Shakeel Mohamed</author>
+    </item>
+    <item>
+      <title><![CDATA[git diff against a remote branch]]></title>
+      <link>https://coderwall.com/p/rndi8w/git-diff-against-a-remote-branch</link>
+      <pubDate>May 28, 2015</pubDate>
+      <description><![CDATA[May 28, 2015]]></description>
+      <guid>https://coderwall.com/p/rndi8w/git-diff-against-a-remote-branch</guid>
+      <author>Shakeel Mohamed</author>
+    </item>
+    <item>
+      <title><![CDATA["Oops, I pushed a commit with something sensitive to a public GitHub project!"]]></title>
+      <link>https://coderwall.com/p/dcqdva/oops-i-pushed-a-commit-with-something-sensitive-to-a-public-github-project</link>
+      <pubDate>May 6, 2015</pubDate>
+      <description><![CDATA[May 6, 2015]]></description>
+      <guid>https://coderwall.com/p/dcqdva/oops-i-pushed-a-commit-with-something-sensitive-to-a-public-github-project</guid>
+      <author>Shakeel Mohamed</author>
+    </item>
+    <item>
+      <title><![CDATA[An actually helpful git diff of your uncommitted changes]]></title>
+      <link>https://coderwall.com/p/tekq7q/an-actually-helpful-git-diff-of-your-uncommitted-changes</link>
+      <pubDate>April 21, 2015</pubDate>
+      <description><![CDATA[April 21, 2015]]></description>
+      <guid>https://coderwall.com/p/tekq7q/an-actually-helpful-git-diff-of-your-uncommitted-changes</guid>
+      <author>Shakeel Mohamed</author>
+    </item>
+    <item>
+      <title><![CDATA[Magic Spells: Deploying an app to AWS OpsWorks]]></title>
+      <link>https://medium.com/@_shakeel/magic-spells-deploying-an-app-to-aws-opsworks-d53018884dd1</link>
+      <pubDate>April 10, 2015</pubDate>
+      <description><![CDATA[April 10, 2015]]></description>
+      <guid>https://medium.com/@_shakeel/magic-spells-deploying-an-app-to-aws-opsworks-d53018884dd1</guid>
+      <author>Shakeel Mohamed</author>
+    </item>
+    <item>
+      <title><![CDATA[Hacker's First Logo - Designing in PowerPoint]]></title>
+      <link>https://medium.com/@_shakeel/hacker-s-first-logo-designing-in-powerpoint-7eeeb6925097</link>
+      <pubDate>March 19, 2015</pubDate>
+      <description><![CDATA[March 19, 2015]]></description>
+      <guid>https://medium.com/@_shakeel/hacker-s-first-logo-designing-in-powerpoint-7eeeb6925097</guid>
+      <author>Shakeel Mohamed</author>
+    </item>
+    <item>
+      <title><![CDATA[Remove an accidentally pushed remote git commit]]></title>
+      <link>https://coderwall.com/p/lzuhlq/remove-an-accidentally-pushed-remote-git-commit</link>
+      <pubDate>November 14, 2014</pubDate>
+      <description><![CDATA[November 14, 2014]]></description>
+      <guid>https://coderwall.com/p/lzuhlq/remove-an-accidentally-pushed-remote-git-commit</guid>
+      <author>Shakeel Mohamed</author>
+    </item>
+    <item>
+      <title><![CDATA[Summer with Splunk]]></title>
+      <link>https://medium.com/@_shakeel/summer-with-splunk-ffc57a49f435</link>
+      <pubDate>September 20, 2013</pubDate>
+      <description><![CDATA[September 20, 2013]]></description>
+      <guid>https://medium.com/@_shakeel/summer-with-splunk-ffc57a49f435</guid>
+      <author>Shakeel Mohamed</author>
+    </item>
+  </channel>
+</rss>
