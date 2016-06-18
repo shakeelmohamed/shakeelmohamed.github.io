@@ -1,13 +1,26 @@
-mixin socialLink(name, URL)
+mixin navLink(sectionID, name)
     li.inline.pr1
-        a(href="#{URL}", target="_blank")= name
+        a(href="#{sectionID}", title="#{name}")= name
+mixin socialLink(URL, name)
+    li.inline.pr1
+        a(href="#{URL}", title="#{name}" target="_blank")= name
+mixin project(project)
+    li
+        span.h3
+            a(href="#{project.url}", title="#{project.name}", target="_blank")= project.name
+            if project.source
+                span.inline
+                    |   (
+                    a(href="#{project.source}", title="#{project.name} source", target="_blank") source
+                    | )
+        p= project.description
 mixin blogPost(post)
     li
         span.h5= post.date
         span.h4
             a(href="#{post.url}", title="#{post.title}", target="_blank")= post.title
 doctype html
-html
+html(lang="en")
     head
         title Shakeel Mohamed
         meta(charset="utf-8")
@@ -22,26 +35,33 @@ html
         <![endif]-->
         <!--This website's source code is available at https://github.com/shakeelmohamed/beta -->
     body
-        div.flex.center
+        header.flex.center
             div.mx-auto
                 div.nav.center
                     ul.nav-links
-                        li.inline.pr1
-                            a(href="#blogs") Blog Posts
+                        +navLink("#blogs", "Blog Posts")
+                        +navLink("#projects", "Projects")
                     figure
                         a(href="http://shakeelmohamed.com")
                             img.profile-photo(src="https://s.gravatar.com/avatar/fce1af87b1acae9428fd82ee361a5bc0?s=200" alt="Photo of Shakeel Mohamed" title="Photo of Shakeel Mohamed")
                     h1.inline.h1.pr2 Shakeel Mohamed
                     ul.social-links
                         each URL, name in socialLinks
-                            +socialLink(name, URL)
-        div.flex.center
+                            +socialLink(URL, name)
+        section.flex.center
             div.flex-col.mx-auto
-                h2.blogheader#blogs
+                h2#projects Projects
+                hr
+                ul.section-list
+                    each item in projects
+                        +project(item)
+        section.flex.center
+            div.flex-col.mx-auto
+                h2#blogs
                     | Blog Posts (
                     a(href="https://volleyy.com/shakeel/" target="_blank") subscribe
                     | )
                 hr
-                ul.blogposts
-                    each post in blogs
-                        +blogPost(post)
+                ul.section-list
+                    each item in blogs
+                        +blogPost(item)

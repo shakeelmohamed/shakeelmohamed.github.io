@@ -29,11 +29,11 @@ ul {
     margin-top: 0.75rem;
 }
 
-.blogposts li {
+.section-list li {
     padding-bottom: 15px;
 }
 
-.blogposts li span.h5 {
+.section-list li span.h5 {
     display: block;
     padding-bottom: 5px;
 }

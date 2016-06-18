@@ -18,7 +18,21 @@ var globals = {
         "Twitter": "https://twitter.com/_shakeel",
         "Instagram": "http://instagram.com/shakeel_mohamed",
         "Facebook": "http://www.facebook.com/shakeelm"
-    }
+    },
+    "projects": [ // TODO: logo, screenshot, start/end date
+        {
+            "name": "Zen Audio Player",
+            "url": "https://ZenPlayer.audio",
+            "source": "https://github.com/zen-audio-player",
+            "description": "Listen to YouTube videos without the distracting visuals"
+        },
+        {
+            "name": "Splunk Conf File Syntax Highlighting",
+            "url": "https://packagecontrol.io/packages/Splunk%20Conf%20File%20Syntax%20Highlighting",
+            "source": "https://github.com/shakeelmohamed/sublime-splunk-conf-highlighting",
+            "description": "Syntax highlighting for Splunk .conf files in Sublime Text 2 & 3"
+        }
+    ]
 };
 
 // Do the compilation
