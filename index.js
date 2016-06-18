@@ -31,6 +31,12 @@ var globals = {
             "url": "https://packagecontrol.io/packages/Splunk%20Conf%20File%20Syntax%20Highlighting",
             "source": "https://github.com/shakeelmohamed/sublime-splunk-conf-highlighting",
             "description": "Syntax highlighting for Splunk .conf files in Sublime Text 2 & 3"
+        },
+        {
+            "name": "Egress",
+            "url": "https://shakeelmohamed.com/egress-bootstrap/",
+            "source": "https://github.com/shakeelmohamed/egress-bootstrap",
+            "description": "Start writing a web app already, with Twitter's Bootstrap framework"
         }
     ]
 };
