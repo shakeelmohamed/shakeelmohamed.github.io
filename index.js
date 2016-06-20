@@ -73,12 +73,11 @@ function buildRSSFeed(blogs) {
         "Shakeel Mohamed's Recent Blog Posts",
         "https://ShakeelMohamed.com/",
         "Recent Blog Posts",
-        "Shakeel Mohamed",
+        "contact@shakeelmohamed.com (Shakeel Mohamed)",
         "https://ShakeelMohamed.com/rss.xml"
         );
     blogs.forEach(function(blog) {
-        // TODO: update blogs.json with descriptions of each post
-        feed.addNewItem(blog.title, blog.url, blog.date, "", {});
+        feed.addNewItem(blog.title, blog.url, (new Date(blog.date)).toUTCString(), blog.description || "", {});
     });
 
     var xml = rss.getFeedXML(feed);
