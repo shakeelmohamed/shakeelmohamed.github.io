@@ -79,3 +79,22 @@ html(lang="en")
                 ul.section-list
                     each item in mentions
                         +news(item)
+        script(type="application/ld+json").
+            {
+                "@context": "http://schema.org",
+                "@type": "WebSite",
+                "url": "https://www.shakeelmohamed.com/",
+                "image": "https://s.gravatar.com/avatar/fce1af87b1acae9428fd82ee361a5bc0",
+                "name": "ShakeelMohamed.com",
+                "author": {
+                    "@type": "Person",
+                    "name": "Shakeel Mohamed",
+                    "email": "contact@shakeelmohamed.com",
+                    "jobTitle": "Software Engineer"
+                },
+                "contentLocation": {
+                    "@type": "City",
+                    "name": "Seattle"
+                }
+            }
+        </script>
