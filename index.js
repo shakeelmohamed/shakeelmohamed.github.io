@@ -1,5 +1,6 @@
 var jade = require("jade");
 var fs = require("fs");
+var rss = require("node-rss");
 
 // Create a function for compiling jade
 var builder = jade.compileFile("./index.jade", {pretty: "    "});
@@ -66,12 +67,37 @@ var globals = {
 // Do the compilation
 var html = builder(globals);
 
+// Build the RSS feed
+function buildRSSFeed(blogs) {
+    var feed = rss.createNewFeed(
+        "Shakeel Mohamed's Recent Blog Posts",
+        "https://ShakeelMohamed.com/",
+        "Recent Blog Posts",
+        "contact@shakeelmohamed.com (Shakeel Mohamed)",
+        "https://ShakeelMohamed.com/rss.xml"
+        );
+    blogs.forEach(function(blog) {
+        feed.addNewItem(blog.title, blog.url, (new Date(blog.date)).toUTCString(), blog.description || "", {});
+    });
+
+    var xml = rss.getFeedXML(feed);
+
+    fs.writeFile("./feed.xml", xml, function(err) {
+        if (err) {
+            console.error(err);
+        }
+        else {
+            console.log("All done! 💯");
+        }
+    });
+}
+
 // Update index.html
 fs.writeFile("./index.html", html, function(err) {
     if (err) {
         console.error(err);
     }
     else {
-        console.log("All done! 💯");
+        buildRSSFeed(blogs);
     }
 });
