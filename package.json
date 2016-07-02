@@ -1,0 +1,25 @@
+{
+  "name": "shakeelmohamed-beta",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "node index.js",
+    "start": "npm run-script build && open index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shakeelmohamed/beta.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shakeelmohamed/beta/issues"
+  },
+  "private": true,
+  "homepage": "https://github.com/shakeelmohamed/beta#readme",
+  "dependencies": {
+    "jade": "^1.11.0",
+    "node-rss": "^1.0.5"
+  }
+}

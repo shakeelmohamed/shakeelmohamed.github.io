@@ -1,0 +1,107 @@
+mixin navLink(sectionID, name)
+    li.inline.pr1
+        a(href="#{sectionID}", title="#{name}")= name
+mixin socialLink(URL, name)
+    li.inline.pr1
+        a(href="#{URL}", title="#{name}" target="_blank")= name
+mixin project(project)
+    li
+        span.h3
+            a(href="#{project.url}", title="#{project.name}", target="_blank")= project.name
+            if project.source
+                span.inline
+                    |   (
+                    a(href="#{project.source}", title="#{project.name} source", target="_blank") source
+                    | )
+        p= project.description
+mixin blogPost(post)
+    li
+        span.h5= post.date
+        span.h4
+            a(href="#{post.url}", title="#{post.title}", target="_blank")= post.title
+mixin news(mention)
+    li
+        span.h5= mention.date
+        span.h4
+            a(href="#{mention.url}", title="#{mention.title}", target="_blank")= mention.title
+doctype html
+html(lang="en")
+    head
+        title Shakeel Mohamed
+        meta(charset="utf-8")
+        meta(http-equiv="X-UA-Compatible", content="chrome=1")
+        meta(name="viewport", content="width=device-width, initial-scale=1, user-scalable=no")
+        link(href="https://npmcdn.com/basscss@8.0.1/css/basscss.min.css", rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css?family=Signika", rel="stylesheet", type="text/css")
+        link(href="https://ShakeelMohamed.com/", rel="canonical")
+        link(href="./styles.css", rel="stylesheet")    
+        link(href="./feed.xml", rel="alternate", type="application/rss+xml", title="RSS Feed for ShakeelMohamed.com")
+        
+        | 
+        | <!--[if lt IE 9]>
+        | <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        | <![endif]-->
+        | <!--This website's source code is available at https://github.com/shakeelmohamed/beta -->
+    body
+        header.flex.center
+            div.mx-auto
+                div.nav.center
+                    ul.nav-links
+                        +navLink("#projects", "Projects")
+                        +navLink("#blogs", "Blog Posts")
+                        +navLink("#mentions", "Mentions")
+                        li.inline.pr1
+                            <a href="http://www.google.com/recaptcha/mailhide/d?k=01bgJRXr0EbZyg5V9MqyVSxg==&amp;c=_3ke0hUGSHFK42guBM7K8i3NTiK4Uzf28xoo2-OJjBE=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\x3d01bgJRXr0EbZyg5V9MqyVSxg\x3d\x3d\x26c\x3d_3ke0hUGSHFK42guBM7K8i3NTiK4Uzf28xoo2-OJjBE\x3d', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">Email</a>
+                    figure
+                        a(href="http://shakeelmohamed.com")
+                            img.profile-photo(src="https://s.gravatar.com/avatar/fce1af87b1acae9428fd82ee361a5bc0?s=200" alt="Photo of Shakeel Mohamed" title="Photo of Shakeel Mohamed")
+                    h1.inline.h1.pr2 Shakeel Mohamed
+                    p I'm a software engineer in the Seattle area. Always thinking, often unconventionally.
+                    ul.social-links
+                        each URL, name in socialLinks
+                            +socialLink(URL, name)                
+        section.flex.center
+            div.flex-col.mx-auto
+                h2#projects Projects
+                hr
+                ul.section-list
+                    each item in projects
+                        +project(item)
+        section.flex.center
+            div.flex-col.mx-auto
+                h2#blogs
+                    | Blog Posts (
+                    a(href="https://volleyy.com/shakeel/" target="_blank") subscribe
+                    |  - 
+                    a(href="./feed.xml" target="_blank") rss
+                    | )
+                hr
+                ul.section-list
+                    each item in blogs
+                        +blogPost(item)
+        section.flex.center
+            div.flex-col.mx-auto
+                h2#mentions Mentions
+                hr
+                ul.section-list
+                    each item in mentions
+                        +news(item)
+        script(type="application/ld+json").
+            {
+                "@context": "http://schema.org",
+                "@type": "WebSite",
+                "url": "https://www.shakeelmohamed.com/",
+                "image": "https://s.gravatar.com/avatar/fce1af87b1acae9428fd82ee361a5bc0",
+                "name": "ShakeelMohamed.com",
+                "author": {
+                    "@type": "Person",
+                    "name": "Shakeel Mohamed",
+                    "email": "contact@shakeelmohamed.com",
+                    "jobTitle": "Software Engineer"
+                },
+                "contentLocation": {
+                    "@type": "City",
+                    "name": "Seattle"
+                }
+            }
+        </script>
