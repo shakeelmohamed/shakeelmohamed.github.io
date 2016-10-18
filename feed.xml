@@ -6,7 +6,15 @@
     <description><![CDATA[Recent Blog Posts]]></description>
     <language>en-US</language>
     <atom:link href="https://ShakeelMohamed.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 11 Aug 2016 08:22:12 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 18 Oct 2016 06:28:59 GMT</lastBuildDate>
+    <item>
+      <title><![CDATA[Splunk .conf 2016, through my eyes 👀]]></title>
+      <link>https://medium.com/@_shakeel/splunk-conf-2016-through-my-eyes-fc635bb80046</link>
+      <pubDate>Mon, 17 Oct 2016 07:00:00 GMT</pubDate>
+      <description><![CDATA[Splunk .conf is our annual user's conference, and this year we hosted over 5,000 customers and partners!]]></description>
+      <guid>https://medium.com/@_shakeel/splunk-conf-2016-through-my-eyes-fc635bb80046</guid>
+      <author>contact@shakeelmohamed.com (Shakeel Mohamed)</author>
+    </item>
     <item>
       <title><![CDATA[Share Solutions to Your Problems]]></title>
       <link>https://medium.com/@_shakeel/share-solutions-to-your-problems-652522580ec9</link>
