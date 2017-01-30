@@ -21,5 +21,8 @@
   "dependencies": {
     "jade": "^1.11.0",
     "node-rss": "^1.0.5"
+  },
+  "engines": {
+    "node": "4.x"
   }
 }
