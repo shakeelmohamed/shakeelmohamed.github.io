@@ -1,14 +1,14 @@
-var jade = require("jade");
+var pug = require("pug");
 var fs = require("fs");
 var RSS = require("rss");
 
-// Create a function for compiling jade
-var builder = jade.compileFile("./index.jade", {pretty: "    "});
+// Create a function for compiling pug
+var builder = pug.compileFile("./index.pug", {pretty: "    "});
 
 // Read blogs.json as JSON
 var blogs = JSON.parse(fs.readFileSync("./blogs.json").toString());
 
-// Setup Jade variables
+// Setup Pug variables
 var globals = {
     "blogs": blogs,
     "socialLinks": {
