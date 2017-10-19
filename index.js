@@ -48,6 +48,11 @@ var globals = {
     ],
     "mentions": [
         {
+            "date": "October 5, 2017",
+            "title": "Maintainer Burden Group Therapy - Node.js Interactive 2017 Vancouver, BC",
+            "url": "https://www.youtube.com/watch?v=_Afog6J1pcA&t=6m36s",
+        },
+        {
             "date": "January 6, 2016",
             "title": "An Hour of Code with Splunk",
             "url": "http://blogs.splunk.com/2016/01/06/an-hour-of-code-with-splunk/",
