@@ -4,7 +4,7 @@
         <description><![CDATA[Recent Blog Posts]]></description>
         <link>https://ShakeelMohamed.com/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Thu, 19 Oct 2017 06:45:02 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 19 Oct 2017 17:16:53 GMT</lastBuildDate>
         <atom:link href="https://ShakeelMohamed.com/rss.xml" rel="self" type="application/rss+xml"/>
         <webMaster><![CDATA[contact@shakeelmohamed.com (Shakeel Mohamed)]]></webMaster>
         <item>
@@ -12,119 +12,119 @@
             <description><![CDATA[I was recently reflecting on my sources of inspiration over the past few years. They’re always changing, but one man has been on that list as long as I can remember: Kanye West.]]></description>
             <guid isPermaLink="false">🔥What Kanye West taught me over the past decade 🔥</guid>
             <dc:creator><![CDATA[contact@shakeelmohamed.com (Shakeel Mohamed)]]></dc:creator>
-            <pubDate>Fri, 27 Jan 2017 08:00:00 GMT</pubDate>
+            <pubDate>Thu, 26 Jan 2017 23:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Pablo the Penguin]]></title>
             <description><![CDATA[The following is a children's short story I wrote in my 11th grade creative writing class in 2008.]]></description>
             <guid isPermaLink="false">Pablo the Penguin</guid>
             <dc:creator><![CDATA[contact@shakeelmohamed.com (Shakeel Mohamed)]]></dc:creator>
-            <pubDate>Tue, 25 Oct 2016 07:00:00 GMT</pubDate>
+            <pubDate>Mon, 24 Oct 2016 22:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Splunk .conf 2016, through my eyes 👀]]></title>
             <description><![CDATA[Splunk .conf is our annual user's conference, and this year we hosted over 5,000 customers and partners!]]></description>
             <guid isPermaLink="false">Splunk .conf 2016, through my eyes 👀</guid>
             <dc:creator><![CDATA[contact@shakeelmohamed.com (Shakeel Mohamed)]]></dc:creator>
-            <pubDate>Mon, 17 Oct 2016 07:00:00 GMT</pubDate>
+            <pubDate>Sun, 16 Oct 2016 22:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Share Solutions to Your Problems]]></title>
             <description><![CDATA[As a programmer, it can be really hard to do some things that seem incredibly simple.]]></description>
             <guid isPermaLink="false">Share Solutions to Your Problems</guid>
             <dc:creator><![CDATA[contact@shakeelmohamed.com (Shakeel Mohamed)]]></dc:creator>
-            <pubDate>Mon, 23 May 2016 07:00:00 GMT</pubDate>
+            <pubDate>Sun, 22 May 2016 22:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Productivity Hack: Use Opposite Techniques]]></title>
             <description><![CDATA[Below I present two contrasting productivity techniques I've learned over the years, and show how they can be used to complete a specific task.]]></description>
             <guid isPermaLink="false">Productivity Hack: Use Opposite Techniques</guid>
             <dc:creator><![CDATA[contact@shakeelmohamed.com (Shakeel Mohamed)]]></dc:creator>
-            <pubDate>Mon, 18 Apr 2016 07:00:00 GMT</pubDate>
+            <pubDate>Sun, 17 Apr 2016 22:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Changing My Git Editor On The Fly]]></title>
             <description><![CDATA[I love using Sublime Text as do many developers these days, but I just can't use it regularly for git commit messages.]]></description>
             <guid isPermaLink="false">Changing My Git Editor On The Fly</guid>
             <dc:creator><![CDATA[contact@shakeelmohamed.com (Shakeel Mohamed)]]></dc:creator>
-            <pubDate>Sun, 10 Apr 2016 07:00:00 GMT</pubDate>
+            <pubDate>Sat, 09 Apr 2016 22:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Notice the Colors: a Mindfulness Experiment]]></title>
             <description><![CDATA[I took a walk today, listening to music on my phone as I usually do, and an interesting thought came to me. I often use my headphones to...]]></description>
             <guid isPermaLink="false">Notice the Colors: a Mindfulness Experiment</guid>
             <dc:creator><![CDATA[contact@shakeelmohamed.com (Shakeel Mohamed)]]></dc:creator>
-            <pubDate>Sun, 03 Apr 2016 07:00:00 GMT</pubDate>
+            <pubDate>Sat, 02 Apr 2016 22:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Reflecting on 1 Year of Zen Audio Player]]></title>
             <description><![CDATA[Today marks one year since I made the first commit to the Zen Audio Player (ZAP) project on GitHub! After reading Robby Russell's post...]]></description>
             <guid isPermaLink="false">Reflecting on 1 Year of Zen Audio Player</guid>
             <dc:creator><![CDATA[contact@shakeelmohamed.com (Shakeel Mohamed)]]></dc:creator>
-            <pubDate>Fri, 25 Mar 2016 07:00:00 GMT</pubDate>
+            <pubDate>Thu, 24 Mar 2016 23:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[A bash alias for intermediate git users: gityank]]></title>
             <description><![CDATA[As a git user, every once in a while you'll be doing a git pull and be blindsided by the following error...]]></description>
             <guid isPermaLink="false">A bash alias for intermediate git users: gityank</guid>
             <dc:creator><![CDATA[contact@shakeelmohamed.com (Shakeel Mohamed)]]></dc:creator>
-            <pubDate>Sun, 20 Mar 2016 07:00:00 GMT</pubDate>
+            <pubDate>Sat, 19 Mar 2016 23:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Silence JavaScript console output]]></title>
             <description><![CDATA[This is super helpful for unit testing with 100% code coverage, while maintaining a clean test output on the console!]]></description>
             <guid isPermaLink="false">Silence JavaScript console output</guid>
             <dc:creator><![CDATA[contact@shakeelmohamed.com (Shakeel Mohamed)]]></dc:creator>
-            <pubDate>Fri, 04 Sep 2015 07:00:00 GMT</pubDate>
+            <pubDate>Thu, 03 Sep 2015 22:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[git diff against a remote branch]]></title>
             <description><![CDATA[This is equivalent to previewing a pull request, and it works great across remotes!]]></description>
             <guid isPermaLink="false">git diff against a remote branch</guid>
             <dc:creator><![CDATA[contact@shakeelmohamed.com (Shakeel Mohamed)]]></dc:creator>
-            <pubDate>Thu, 28 May 2015 07:00:00 GMT</pubDate>
+            <pubDate>Wed, 27 May 2015 22:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA["Oops, I pushed a commit with something sensitive to a public GitHub project!"]]></title>
             <description><![CDATA[So you accidentally pushed a commit with some credentials. Shame on you. Here's a potential solution... ]]></description>
             <guid isPermaLink="false">&quot;Oops, I pushed a commit with something sensitive to a public GitHub project!&quot;</guid>
             <dc:creator><![CDATA[contact@shakeelmohamed.com (Shakeel Mohamed)]]></dc:creator>
-            <pubDate>Wed, 06 May 2015 07:00:00 GMT</pubDate>
+            <pubDate>Tue, 05 May 2015 22:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[An actually helpful git diff of your uncommitted changes]]></title>
             <description><![CDATA[So you just made a bunch of changes to a git project, good job. Now you want to review your changes before committing, even better.]]></description>
             <guid isPermaLink="false">An actually helpful git diff of your uncommitted changes</guid>
             <dc:creator><![CDATA[contact@shakeelmohamed.com (Shakeel Mohamed)]]></dc:creator>
-            <pubDate>Tue, 21 Apr 2015 07:00:00 GMT</pubDate>
+            <pubDate>Mon, 20 Apr 2015 22:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Magic Spells: Deploying an app to AWS OpsWorks]]></title>
             <description><![CDATA[My goal with this post is to walk you through the mind-bending procedures required to setup a new app on AWS using OpsWorks.]]></description>
             <guid isPermaLink="false">Magic Spells: Deploying an app to AWS OpsWorks</guid>
             <dc:creator><![CDATA[contact@shakeelmohamed.com (Shakeel Mohamed)]]></dc:creator>
-            <pubDate>Fri, 10 Apr 2015 07:00:00 GMT</pubDate>
+            <pubDate>Thu, 09 Apr 2015 22:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Hacker's First Logo - Designing in PowerPoint]]></title>
             <description><![CDATA[Designing the logo for my team's senior project, Exbedia...]]></description>
             <guid isPermaLink="false">Hacker&apos;s First Logo - Designing in PowerPoint</guid>
             <dc:creator><![CDATA[contact@shakeelmohamed.com (Shakeel Mohamed)]]></dc:creator>
-            <pubDate>Thu, 19 Mar 2015 07:00:00 GMT</pubDate>
+            <pubDate>Wed, 18 Mar 2015 23:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Remove an accidentally pushed remote git commit]]></title>
             <description><![CDATA[As a music enthusiast, I wanted to reflect on my favorite albums released this year.]]></description>
             <guid isPermaLink="false">Remove an accidentally pushed remote git commit</guid>
             <dc:creator><![CDATA[contact@shakeelmohamed.com (Shakeel Mohamed)]]></dc:creator>
-            <pubDate>Fri, 14 Nov 2014 08:00:00 GMT</pubDate>
+            <pubDate>Thu, 13 Nov 2014 23:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Summer with Splunk]]></title>
             <description><![CDATA[This summer I received an unexpected opportunity to be a software engineer intern...]]></description>
             <guid isPermaLink="false">Summer with Splunk</guid>
             <dc:creator><![CDATA[contact@shakeelmohamed.com (Shakeel Mohamed)]]></dc:creator>
-            <pubDate>Fri, 20 Sep 2013 07:00:00 GMT</pubDate>
+            <pubDate>Thu, 19 Sep 2013 22:00:00 GMT</pubDate>
         </item>
     </channel>
 </rss>
