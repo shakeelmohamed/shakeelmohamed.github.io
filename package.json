@@ -22,7 +22,7 @@
   "homepage": "https://github.com/shakeelmohamed/beta#readme",
   "dependencies": {
     "jade": "^1.11.0",
-    "node-rss": "^1.0.5",
+    "rss": "^1.2.2",
     "snyk": "^1.42.6"
   },
   "engines": {
