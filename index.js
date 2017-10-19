@@ -48,8 +48,8 @@ var globals = {
     ],
     "mentions": [
         {
-            "date": "October 16, 2017",
-            "title": "Node.js Interactive 2017 Vancouver, BC",
+            "date": "October 5, 2017",
+            "title": "Maintainer Burden Group Therapy - Node.js Interactive 2017 Vancouver, BC",
             "url": "https://www.youtube.com/watch?v=_Afog6J1pcA&t=6m36s",
         },
         {
