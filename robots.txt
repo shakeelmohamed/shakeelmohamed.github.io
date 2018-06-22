@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: http://www.shakeelmohamed.com/sitemap.txt
+Sitemap: https://www.shakeelmohamed.com/sitemap.txt
