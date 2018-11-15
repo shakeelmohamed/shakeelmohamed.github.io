@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "node index.js",
+    "build": "node src/index.js",
     "start": "npm run-script build && open index.html",
     "snyk-protect": "snyk protect",
     "prepublish": "npm run snyk-protect"

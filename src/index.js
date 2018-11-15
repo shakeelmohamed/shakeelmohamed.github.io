@@ -1,12 +1,13 @@
 var pug = require("pug");
 var fs = require("fs");
 var RSS = require("rss");
+var path = require("path");
 
 // Create a function for compiling pug
-var builder = pug.compileFile("./index.pug", {pretty: "    "});
+var builder = pug.compileFile(path.join(__dirname, "./views/index.pug"), {pretty: "    "});
 
 // Read blogs.json as JSON
-var blogs = JSON.parse(fs.readFileSync("./blogs.json").toString());
+var blogs = JSON.parse(fs.readFileSync(path.join(__dirname, "./data/blogs.json")).toString());
 
 // Setup Pug variables
 var globals = {
@@ -98,7 +99,7 @@ function buildRSSFeed(blogs) {
     });
 
     var xml = feed.xml({indent: true});
-    fs.writeFile("./feed.xml", xml, function(err) {
+    fs.writeFile(path.join(__dirname, "../feed.xml"), xml, function(err) {
         if (err) {
             console.error(err);
         }
@@ -109,7 +110,7 @@ function buildRSSFeed(blogs) {
 }
 
 // Update index.html
-fs.writeFile("./index.html", html, function(err) {
+fs.writeFile(path.join(__dirname, "../index.html"), html, function(err) {
     if (err) {
         console.error(err);
     }

@@ -55,7 +55,7 @@ html(lang="en")
                             <a href="http://www.google.com/recaptcha/mailhide/d?k=01bgJRXr0EbZyg5V9MqyVSxg==&amp;c=_3ke0hUGSHFK42guBM7K8i3NTiK4Uzf28xoo2-OJjBE=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\x3d01bgJRXr0EbZyg5V9MqyVSxg\x3d\x3d\x26c\x3d_3ke0hUGSHFK42guBM7K8i3NTiK4Uzf28xoo2-OJjBE\x3d', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">Email</a>
                     figure
                         a(href="http://shakeelmohamed.com")
-                            img.profile-photo(src="https://s.gravatar.com/avatar/fce1af87b1acae9428fd82ee361a5bc0?s=200" alt="Photo of Shakeel Mohamed" title="Photo of Shakeel Mohamed")
+                            img.profile-photo(src="https://s.gravatar.com/avatar/fce1af87b1acae9428fd82ee361a5bc0?size=200" alt="Photo of Shakeel Mohamed" title="Photo of Shakeel Mohamed")
                     h1.inline.h1.pr2 Shakeel Mohamed
                     p I'm a software engineer in the Seattle area.
                     p I am phenomenal so the people around me have a chance at greatness. 🙌
@@ -106,4 +106,7 @@ html(lang="en")
                     "name": "Seattle"
                 }
             }
-        </script>
+        script.
+            if (window.location.protocol === "http:") {
+                window.location.protocol = "https:";
+            }
