@@ -23,7 +23,7 @@
   "dependencies": {
     "pug": "^2.0.0",
     "rss": "^1.2.2",
-    "snyk": "^1.108.2"
+    "snyk": "^1.124.1"
   },
   "engines": {
     "node": "4.x"
