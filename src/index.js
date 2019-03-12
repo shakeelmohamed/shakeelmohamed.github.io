@@ -49,6 +49,11 @@ var globals = {
     ],
     "mentions": [
         {
+            "date": "March 11, 2019",
+            "title": "Inspiring the Next Generation in Cybersecurity at CodeDay",
+            "url": "https://www.splunk.com/content/splunk-blogs/en/2019/03/11/inspiring-the-next-generation-in-cybersecurity-at-codeday.html",
+        },
+        {
             "date": "October 5, 2017",
             "title": "Maintainer Burden Group Therapy - Node.js Interactive 2017 Vancouver, BC",
             "url": "https://www.youtube.com/watch?v=_Afog6J1pcA&t=6m36s",
