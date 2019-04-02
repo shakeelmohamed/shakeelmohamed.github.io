@@ -39,12 +39,6 @@ var globals = {
             "url": "https://github.com/flippy-flop",
             "source": "https://github.com/flippy-flop/ff-js",
             "description": "An unpredictable data structure."
-        },
-        {
-            "name": "Egress",
-            "url": "https://shakeelmohamed.com/egress-bootstrap/",
-            "source": "https://github.com/shakeelmohamed/egress-bootstrap",
-            "description": "Start writing a web app already, with Twitter's Bootstrap framework"
         }
     ],
     "mentions": [
