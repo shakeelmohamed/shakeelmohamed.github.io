@@ -18,7 +18,7 @@ var globals = {
         "LinkedIn": "http://linkedin.com/in/shakeelmohamed",
         "Goodreads": "https://www.goodreads.com/user/show/31081269-shakeel",
         "Twitter": "https://twitter.com/_shakeel",
-        "Instagram": "http://instagram.com/shakeel_mohamed",
+        "Instagram": "http://instagram.com/shakeelxyz",
         "Facebook": "http://www.facebook.com/shakeelm"
     },
     "projects": [ // TODO: logo, screenshot, start/end date
@@ -85,14 +85,14 @@ function buildRSSFeed(blogs) {
         description: "Recent Blog Posts",
         feed_url: "https://ShakeelMohamed.com/rss.xml",
         site_url: "https://ShakeelMohamed.com/",
-        webMaster: "contact@shakeelmohamed.com (Shakeel Mohamed)"
+        webMaster: "iam@shakeel.xyz (Shakeel Mohamed)"
     });
 
     blogs.forEach(function(blog) {
         feed.item({
             title: blog.title,
             description: blog.description || "",
-            author: "contact@shakeelmohamed.com (Shakeel Mohamed)",
+            author: "iam@shakeel.xyz (Shakeel Mohamed)",
             date: new Date(blog.date),
         });
     });
