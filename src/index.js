@@ -19,7 +19,7 @@ var globals = {
         "Goodreads": "https://www.goodreads.com/user/show/31081269-shakeel",
         "Twitter": "https://twitter.com/_shakeel",
         "Instagram": "http://instagram.com/shakeelxyz",
-        "Facebook": "http://www.facebook.com/shakeelm"
+        "Facebook": "http://www.facebook.com/Shakeelxyz"
     },
     "projects": [ // TODO: logo, screenshot, start/end date
         {
