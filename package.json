@@ -7,7 +7,8 @@
     "build": "node src/index.js",
     "start": "npm run-script build && open index.html",
     "snyk-protect": "snyk protect",
-    "prepublish": "npm run snyk-protect"
+    "prepublish": "npm run snyk-protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -23,7 +24,7 @@
   "dependencies": {
     "pug": "^2.0.0",
     "rss": "^1.2.2",
-    "snyk": "^1.124.1"
+    "snyk": "^1.189.0"
   },
   "engines": {
     "node": "4.x"
