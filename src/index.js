@@ -83,8 +83,8 @@ function buildRSSFeed(blogs) {
     var feed = new RSS({
         title: "Shakeel Mohamed's Recent Blog Posts",
         description: "Recent Blog Posts",
-        feed_url: "https://ShakeelMohamed.com/rss.xml",
-        site_url: "https://ShakeelMohamed.com/",
+        feed_url: "https://Shakeel.xyz/rss.xml",
+        site_url: "https://Shakeel.xyz/",
         webMaster: "iam@shakeel.xyz (Shakeel Mohamed)"
     });
 

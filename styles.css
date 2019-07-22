@@ -1,9 +1,15 @@
 body {
-    font-family: "Signika", sans-serif;
+    /* font-family: "Signika", sans-serif; */
+    font-family: "Roboto", sans-serif;
+}
+
+* {
+    background-color: #f3f0e8;
+    color: #40403f;
 }
 
 a {
-    color: #39c;
+    color: #0074D9;
     text-decoration: none;
 }
 
@@ -23,6 +29,11 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
+}
+
+.logo {
+    width: 30%;
+    max-width: 50%;
 }
 
 .social-links {

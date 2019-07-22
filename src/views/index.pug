@@ -32,10 +32,10 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="chrome=1")
         meta(name="viewport", content="width=device-width, initial-scale=1, user-scalable=no")
         link(href="https://unpkg.com/basscss@8.0.1/css/basscss.min.css", rel="stylesheet")
-        link(href="https://fonts.googleapis.com/css?family=Signika", rel="stylesheet", type="text/css")
-        link(href="https://ShakeelMohamed.com/", rel="canonical")
+        link(href="https://fonts.googleapis.com/css?family=Roboto", rel="stylesheet", type="text/css")
+        link(href="https://Shakeel.xyz/", rel="canonical")
         link(href="./styles.css", rel="stylesheet")    
-        link(href="./feed.xml", rel="alternate", type="application/rss+xml", title="RSS Feed for ShakeelMohamed.com")
+        link(href="./feed.xml", rel="alternate", type="application/rss+xml", title="RSS Feed for Shakeel.xyz")
         
         | 
         | <!--[if lt IE 9]>
@@ -52,10 +52,13 @@ html(lang="en")
                         +navLink("#blogs", "Blog Posts")
                         +navLink("#mentions", "Mentions")
                     figure
-                        a(href="http://shakeelmohamed.com")
+                        a(href="http://Shakeel.xyz")
                             img.profile-photo(src="https://s.gravatar.com/avatar/fce1af87b1acae9428fd82ee361a5bc0?s=200" alt="Photo of Shakeel Mohamed" title="Photo of Shakeel Mohamed")
-                    h1.inline.h1.pr2 Shakeel Mohamed
-                    p(style="max-width: 50%; margin: auto;") Polyglot software developer energized by delivering customer value. Raises standards with comprehensive code reviews. Boosts engineering productivity with process automation. Committed to enhancing team dynamics through transparent communication.
+                    img.logo(src="./img/Shakeel xyz logo.png" alt="Shakeel Mohamed logo")
+                    br.
+                    br.
+                    p(style="max-width: 50%; margin: auto;") Shakeel Mohamed is a polyglot software developer energized by delivering customer value. Raises standards with comprehensive code reviews. Boosts engineering productivity with process automation. Committed to enhancing team dynamics through transparent communication.
+                    br.
                     ul.social-links
                         each URL, name in socialLinks
                             +socialLink(URL, name)                
@@ -88,19 +91,19 @@ html(lang="en")
         script(type="application/ld+json").
             {
                 "@context": "http://schema.org",
-                "@type": "WebSite",
-                "url": "https://www.shakeelmohamed.com/",
+                "@type": "Person",
+                "name": "Shakeel Mohamed",
+                "email": "mailto:iam@Shakeel.xyz",
+                "url": "https://Shakeel.xyz/",
                 "image": "https://s.gravatar.com/avatar/fce1af87b1acae9428fd82ee361a5bc0",
-                "name": "ShakeelMohamed.com",
-                "author": {
-                    "@type": "Person",
-                    "name": "Shakeel Mohamed",
-                    "email": "iam@shakeel.xyz",
-                    "jobTitle": "Software Engineer"
-                },
-                "contentLocation": {
+                "homeLocation": {
                     "@type": "City",
                     "name": "Seattle"
+                },
+                "jobTitle": "Founder",
+                "worksFor": {
+                    "@type": "Corporation",
+                    "name": "ntrsct"
                 }
             }
         script.
