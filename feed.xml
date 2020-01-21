@@ -4,9 +4,15 @@
         <description><![CDATA[Recent Blog Posts]]></description>
         <link>https://ShakeelMohamed.com/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Thu, 16 May 2019 18:57:40 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 21 Jan 2020 20:48:51 GMT</lastBuildDate>
         <atom:link href="https://ShakeelMohamed.com/rss.xml" rel="self" type="application/rss+xml"/>
         <webMaster><![CDATA[iam@shakeel.xyz (Shakeel Mohamed)]]></webMaster>
+        <item>
+            <title><![CDATA[Book Summary: The Adventures of Johnny Bunko 🥢]]></title>
+            <guid isPermaLink="false">Book Summary: The Adventures of Johnny Bunko 🥢</guid>
+            <dc:creator><![CDATA[iam@shakeel.xyz (Shakeel Mohamed)]]></dc:creator>
+            <pubDate>Tue, 21 Jan 2020 08:00:00 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[Virgil Abloh x Harvard: a "YouTube Video" That Redefined Design For Me]]></title>
             <guid isPermaLink="false">Virgil Abloh x Harvard: a &quot;YouTube Video&quot; That Redefined Design For Me</guid>
