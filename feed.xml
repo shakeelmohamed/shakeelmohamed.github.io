@@ -4,9 +4,15 @@
         <description><![CDATA[Recent Blog Posts]]></description>
         <link>https://ShakeelMohamed.com/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 10 Feb 2020 02:31:39 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 11 Feb 2020 05:21:50 GMT</lastBuildDate>
         <atom:link href="https://ShakeelMohamed.com/rss.xml" rel="self" type="application/rss+xml"/>
         <webMaster><![CDATA[iam@shakeel.xyz (Shakeel Mohamed)]]></webMaster>
+        <item>
+            <title><![CDATA[24/31 Days of Designing Lyric Posters]]></title>
+            <guid isPermaLink="false">24/31 Days of Designing Lyric Posters</guid>
+            <dc:creator><![CDATA[iam@shakeel.xyz (Shakeel Mohamed)]]></dc:creator>
+            <pubDate>Mon, 10 Feb 2020 08:00:00 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[Book Summary: The Adventures of Johnny Bunko 🥢]]></title>
             <guid isPermaLink="false">Book Summary: The Adventures of Johnny Bunko 🥢</guid>
