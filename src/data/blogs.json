@@ -1,5 +1,10 @@
 [
     {
+        "date": "March 08, 2020",
+        "title": "Test post",
+        "source": "../posts/2020-03-08-test-post.md"
+    },
+    {
         "date": "Feb 10, 2020",
         "title": "24/31 Days of Designing Lyric Posters",
         "url": "https://www.linkedin.com/pulse/2431-days-designing-lyric-posters-shakeel-mohamed-csm/"

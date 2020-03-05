@@ -2,6 +2,7 @@ var pug = require("pug");
 var fs = require("fs");
 var RSS = require("rss");
 var path = require("path");
+var showdown  = require("showdown");
 
 // Create a function for compiling pug
 var builder = pug.compileFile(path.join(__dirname, "./views/index.pug"), {pretty: "    "});
@@ -9,9 +10,39 @@ var builder = pug.compileFile(path.join(__dirname, "./views/index.pug"), {pretty
 // Read blogs.json as JSON
 var blogs = JSON.parse(fs.readFileSync(path.join(__dirname, "./data/blogs.json")).toString());
 
+// TODO: add a prebuild step to run some validation that all posts are in blogs.json
+// Build the blog pages first and update their URLs
+function buildBlogPages(blogs) {
+    var postBuilder = pug.compileFile(path.join(__dirname, "./views/post.pug"), {pretty: "    ", filename: path.join(__dirname, "./views/post.pug")});
+    var converter = new showdown.Converter({metadata: true});
+    for (var i = 0; i < blogs.length; i++) {
+        // Skip external posts
+        if (!blogs[i].source) {
+            continue;
+        }
+        if (blogs[i].source.indexOf(".md") !== (blogs[i].source.length-3)) {
+            throw new Error("File name doesn't look right " +  JSON.stringify(blogs[i]));
+        }
+
+        // TODO: convert blogs[i].source markdown to HTML, set that content at blogs[i].content
+        
+        var postHTML = converter.makeHtml(fs.readFileSync(path.join(__dirname, 'src', blogs[i].source)).toString());
+        console.log(postHTML);
+        blogs[i].content = postHTML;
+        
+        var pageHTML = postBuilder({"post": blogs[i]});
+
+        var fileName = blogs[i].source.replace(".md", ".html");
+        fs.writeFileSync(path.join(__dirname, "..", "posts", fileName), pageHTML);
+        delete blogs[i].source;
+        blogs[i].url = encodeURI(fileName.slice(1));
+    }
+    return blogs;
+}
+
 // Setup Pug variables
 var globals = {
-    "blogs": blogs,
+    "blogs": buildBlogPages(blogs),
     "socialLinks": {
         "GitHub": "https://github.com/shakeelmohamed",
         "Stack Overflow": "http://stackoverflow.com/users/2785681/shakeel",

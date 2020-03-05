@@ -22,8 +22,9 @@
   "private": true,
   "homepage": "https://github.com/shakeelmohamed/beta#readme",
   "dependencies": {
-    "pug": "^2.0.0",
+    "pug": "^2.0.4",
     "rss": "^1.2.2",
+    "showdown": "^1.9.1",
     "snyk": "^1.290.1"
   },
   "engines": {
