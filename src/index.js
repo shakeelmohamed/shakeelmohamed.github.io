@@ -27,7 +27,7 @@ function buildBlogPages(blogs) {
         // TODO: convert blogs[i].source markdown to HTML, set that content at blogs[i].content
         
         var postHTML = converter.makeHtml(fs.readFileSync(path.join(__dirname, 'src', blogs[i].source)).toString());
-        console.log(postHTML);
+        // console.log(postHTML);
         blogs[i].content = postHTML;
         
         var pageHTML = postBuilder({"post": blogs[i]});
