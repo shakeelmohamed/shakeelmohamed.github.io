@@ -9,9 +9,9 @@ html(lang="en")
         header.flex.center
             div.mx-auto
                 div.nav.center
-                    ul.nav-links
+                    ul.nav-links.no-indent
                         +navLink("./", "Home")
-                        +navLink("https://ntrsct.com/", "ntrsct")
+                        +navLink("https://ntrsct.com/", "ntrsct designs")
                         +navLink("#projects", "Projects")
                         +navLink("#blogs", "Blog Posts")
                         +navLink("#mentions", "Mentions")
@@ -20,14 +20,14 @@ html(lang="en")
                             img.profile-photo(src="https://s.gravatar.com/avatar/fce1af87b1acae9428fd82ee361a5bc0?s=200" alt="Photo of Shakeel Mohamed" title="Photo of Shakeel Mohamed")
                     h1.inline.h1.pr2 Shakeel Mohamed
                     p(style="max-width: 50%; margin: auto;") Polyglot software developer energized by delivering customer value. Raises standards with comprehensive code reviews. Boosts engineering productivity with process automation. Committed to enhancing team dynamics through transparent communication.
-                    ul.social-links
+                    ul.social-links.no-indent
                         each URL, name in socialLinks
                             +socialLink(URL, name)                
         section.flex.center
             div.flex-col.mx-auto
                 h2#projects Projects
                 hr
-                ul.section-list
+                ul.section-list.no-indent
                     each item in projects
                         +project(item)
         section.flex.center
@@ -39,14 +39,14 @@ html(lang="en")
                     a(href="./feed.xml" target="_blank") rss
                     | )
                 hr
-                ul.section-list
+                ul.section-list.no-indent
                     each item in blogs
                         +blogPost(item)
         section.flex.center
             div.flex-col.mx-auto
                 h2#mentions Mentions
                 hr
-                ul.section-list
+                ul.section-list.no-indent
                     each item in mentions
                         +news(item)
         include includes/footer.pug

@@ -99,6 +99,21 @@ var globals = {
             "url": "http://www.seattletimes.com/photo-video/photography/commencement-pride-shines-for-seattle-university-grads/"
         },
         {
+            "date": "March 25, 2015",
+            "title": "The Splunk SDK for JavaScript gets support for Node.js v0.12 and io.js!",
+            "url": "https://www.splunk.com/en_us/blog/tips-and-tricks/the-splunk-sdk-for-javascript-gets-support-for-node-js-v0-12-and-io-js.html"
+        },
+        {
+            "date": "September 17, 2014",
+            "title": "New support for authoring modular inputs in Node.js",
+            "url": "https://www.splunk.com/en_us/blog/tips-and-tricks/new-support-for-authoring-modular-inputs-in-node-js.html"
+        },
+        {
+            "date": "September 10, 2013",
+            "title": "The Splunk SDK for Python gets modular input support",
+            "url": "https://www.splunk.com/en_us/blog/tips-and-tricks/the-splunk-sdk-for-python-gets-modular-input-support.html"
+        },
+        {
             "date": "August 23, 2012",
             "title": "Meet the 7 startup teams in StudentRND's summer incubator",
             "url": "http://www.geekwire.com/2012/meet-teams-student-rnd-summer-incubator/"

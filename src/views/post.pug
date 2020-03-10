@@ -8,7 +8,7 @@ html(lang="en")
     body
         header.flex.center
             div.mx-auto
-                ul.nav-links
+                ul.nav-links.no-indent
                     +navLink("../", "Home")
                     +navLink("https://ntrsct.com/", "ntrsct")
                     +navLink("../index.html#projects", "Projects")
@@ -19,5 +19,5 @@ html(lang="en")
         section.flex.center
             div.flex-col.mx-auto
                 h4 #{post.date}
-                div(style="max-width:50%;margin:auto")!= post.content
+                div.post-content(style="max-width:50%;margin:auto")!= post.content
         include includes/footer.pug

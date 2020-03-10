@@ -17,14 +17,14 @@ mixin head(root)
     | <!--This website's source code is available at https://github.com/shakeelmohamed/shakeelmohamed.github.io -->
 
 mixin navLink(sectionID, name)
-    li.inline.pr1
+    li.inline.pr1.no-bullet
         a(href=sectionID, title=name)= name
 
 mixin socialLink(URL, name)
-    li.inline.pr1
+    li.inline.pr1.no-bullet
         a(href=URL, title=name target="_blank")= name
 mixin project(project)
-    li
+    li.no-bullet
         span.h3
             a(href=project.url, title=project.name, target="_blank")= project.name
             if project.source
@@ -34,12 +34,12 @@ mixin project(project)
                     | )
         p= project.description
 mixin blogPost(post)
-    li
+    li.no-bullet
         span.h5= post.date
         span.h4
             a(href=post.url, title=post.title, target="_blank")= post.title
 mixin news(mention)
-    li
+    li.no-bullet
         span.h5= mention.date
         span.h4
             a(href=mention.url, title=mention.title, target="_blank")= mention.title
