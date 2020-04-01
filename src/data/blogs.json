@@ -1,5 +1,10 @@
 [
     {
+        "date": "March 15, 2020",
+        "title": "Tips for solo travel through Chiang Mai, Thailand",
+        "source": "../posts/2020-03-15-chiang-mai.md"
+    },
+    {
         "date": "Feb 10, 2020",
         "title": "24/31 Days of Designing Lyric Posters",
         "url": "https://www.linkedin.com/pulse/2431-days-designing-lyric-posters-shakeel-mohamed-csm/"
@@ -125,7 +130,7 @@
     {
         "date": "September 20, 2013",
         "title": "Summer with Splunk",
-        "url": "https://medium.com/@_shakeel/summer-with-splunk-ffc57a49f435",
-        "description": "This summer I received an unexpected opportunity to be a software engineer intern..."
+        "description": "This summer I received an unexpected opportunity to be a software engineer intern...",
+        "source": "../posts/2013-09-20-summer-with-splunk.md"
     }
 ]

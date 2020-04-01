@@ -1,0 +1,23 @@
+include includes/mixins.pug
+
+doctype html
+html(lang="en")
+    head
+        title Shakeel Mohamed | #{post.title}
+        +head(false)
+    body
+        header.flex.center
+            div.mx-auto
+                ul.nav-links.no-indent
+                    +navLink("../", "Home")
+                    +navLink("https://ntrsct.com/", "ntrsct")
+                    +navLink("../index.html#projects", "Projects")
+                    +navLink("../#blogs", "Blog Posts")
+                    +navLink("../#mentions", "Mentions")
+                div.nav.center
+                    h1.inline.h1.pr2 Shakeel Mohamed
+        section.flex.center
+            div.flex-col.mx-auto
+                h4 #{post.date}
+                div.post-content(style="max-width:50%;margin:auto")!= post.content
+        include includes/footer.pug

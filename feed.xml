@@ -4,9 +4,15 @@
         <description><![CDATA[Recent Blog Posts]]></description>
         <link>https://ShakeelMohamed.com/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Tue, 11 Feb 2020 05:21:50 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 01 Apr 2020 05:16:08 GMT</lastBuildDate>
         <atom:link href="https://ShakeelMohamed.com/rss.xml" rel="self" type="application/rss+xml"/>
         <webMaster><![CDATA[iam@shakeel.xyz (Shakeel Mohamed)]]></webMaster>
+        <item>
+            <title><![CDATA[Tips for solo travel through Chiang Mai, Thailand]]></title>
+            <guid isPermaLink="false">Tips for solo travel through Chiang Mai, Thailand</guid>
+            <dc:creator><![CDATA[iam@shakeel.xyz (Shakeel Mohamed)]]></dc:creator>
+            <pubDate>Sun, 15 Mar 2020 07:00:00 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[24/31 Days of Designing Lyric Posters]]></title>
             <guid isPermaLink="false">24/31 Days of Designing Lyric Posters</guid>

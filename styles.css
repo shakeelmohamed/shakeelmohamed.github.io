@@ -1,5 +1,5 @@
 body {
-    font-family: "Signika", sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 a {
@@ -7,11 +7,11 @@ a {
     text-decoration: none;
 }
 
-li {
+li.no-bullet {
     list-style-type: none;
 }
 
-ul {
+ul.no-indent {
     padding-left: 0px;
 }
 
@@ -36,4 +36,20 @@ ul {
 .section-list li span.h5 {
     display: block;
     padding-bottom: 5px;
+}
+
+.post-content {
+    text-align: left;
+}
+
+.post-content > h1 {
+    text-align: center;
+}
+
+.post-content > h2 {
+    text-align: center;
+}
+
+.post-content > h3 {
+    text-align: center;
 }

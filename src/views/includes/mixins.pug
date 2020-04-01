@@ -1,0 +1,45 @@
+mixin head(root)
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="chrome=1")
+    meta(name="viewport", content="width=device-width, initial-scale=1, user-scalable=no")
+    link(href="https://unpkg.com/basscss@8.0.1/css/basscss.min.css", rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Montserrat", rel="stylesheet", type="text/css")
+    link(href="https://ShakeelMohamed.com/", rel="canonical")
+    - var relativePrefix = "."
+    if !root
+        - var relativePrefix = ".."
+    link(href=relativePrefix + "/styles.css", rel="stylesheet")    
+    link(href=relativePrefix + "/feed.xml", rel="alternate", type="application/rss+xml", title="RSS Feed for ShakeelMohamed.com")
+    | 
+    | <!--[if lt IE 9]>
+    | <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    | <![endif]-->
+    | <!--This website's source code is available at https://github.com/shakeelmohamed/shakeelmohamed.github.io -->
+
+mixin navLink(sectionID, name)
+    li.inline.pr1.no-bullet
+        a(href=sectionID, title=name)= name
+
+mixin socialLink(URL, name)
+    li.inline.pr1.no-bullet
+        a(href=URL, title=name target="_blank")= name
+mixin project(project)
+    li.no-bullet
+        span.h3
+            a(href=project.url, title=project.name, target="_blank")= project.name
+            if project.source
+                span.inline
+                    |   (
+                    a(href=project.source, title=project.name + " source", target="_blank") source
+                    | )
+        p= project.description
+mixin blogPost(post)
+    li.no-bullet
+        span.h5= post.date
+        span.h4
+            a(href=post.url, title=post.title, target="_blank")= post.title
+mixin news(mention)
+    li.no-bullet
+        span.h5= mention.date
+        span.h4
+            a(href=mention.url, title=mention.title, target="_blank")= mention.title
