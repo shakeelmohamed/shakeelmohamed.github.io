@@ -1,10 +1,12 @@
 include includes/mixins.pug
 
+- var headshot="./img/headshot.jpg";
+- var desc="Polyglot software developer energized by delivering customer value. Raises standards with comprehensive code reviews. Boosts engineering productivity with process automation. Committed to enhancing team dynamics through transparent communication.";
 doctype html
 html(lang="en")
+
     head
-        title Shakeel Mohamed
-        +head(true)
+        +head(true, "Shakeel Mohamed", headshot, desc)
     body
         header.flex.center
             div.mx-auto
@@ -17,9 +19,9 @@ html(lang="en")
                         +navLink("#mentions", "Mentions")
                     figure
                         a(href="http://shakeelmohamed.com")
-                            img.profile-photo(src="https://s.gravatar.com/avatar/fce1af87b1acae9428fd82ee361a5bc0?s=200" alt="Photo of Shakeel Mohamed" title="Photo of Shakeel Mohamed")
+                            img.profile-photo(src=headshot alt="Photo of Shakeel Mohamed" title="Photo of Shakeel Mohamed")
                     h1.inline.h1.pr2 Shakeel Mohamed
-                    p(style="max-width: 50%; margin: auto;") Polyglot software developer energized by delivering customer value. Raises standards with comprehensive code reviews. Boosts engineering productivity with process automation. Committed to enhancing team dynamics through transparent communication.
+                    p(style="max-width: 50%; margin: auto;") #{desc}
                     ul.social-links.no-indent
                         each URL, name in socialLinks
                             +socialLink(URL, name)                

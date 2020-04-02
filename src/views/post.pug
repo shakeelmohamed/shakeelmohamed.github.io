@@ -3,8 +3,7 @@ include includes/mixins.pug
 doctype html
 html(lang="en")
     head
-        title Shakeel Mohamed | #{post.title}
-        +head(false)
+        +head(false, "Shakeel Mohamed | " + post.title, "../img/headshot.jpg", post.description)
     body
         header.flex.center
             div.mx-auto

@@ -1,7 +1,11 @@
-mixin head(root)
+mixin head(root, pageTitle, pageImg, pageDesc)
+    title #{pageTitle}
     meta(charset="utf-8")
     meta(http-equiv="X-UA-Compatible", content="chrome=1")
     meta(name="viewport", content="width=device-width, initial-scale=1, user-scalable=no")
+    meta(property="og:title" content=pageTitle)
+    meta(property="og:image" content=pageImg)
+    meta(property="og:description" content=pageDesc)
     link(href="https://unpkg.com/basscss@8.0.1/css/basscss.min.css", rel="stylesheet")
     link(href="https://fonts.googleapis.com/css?family=Montserrat", rel="stylesheet", type="text/css")
     link(href="https://ShakeelMohamed.com/", rel="canonical")
@@ -37,7 +41,10 @@ mixin blogPost(post)
     li.no-bullet
         span.h5= post.date
         span.h4
-            a(href=post.url, title=post.title, target="_blank")= post.title
+            if post.content
+                a(href=post.url, title=post.title)= post.title
+            else
+                a(href=post.url, title=post.title, target="_blank")= post.title
 mixin news(mention)
     li.no-bullet
         span.h5= mention.date
