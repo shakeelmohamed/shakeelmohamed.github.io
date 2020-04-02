@@ -8,7 +8,8 @@ mixin head(root, pageTitle, pageImg, pageDesc)
     meta(property="og:description" content=pageDesc)
     link(href="https://unpkg.com/basscss@8.0.1/css/basscss.min.css", rel="stylesheet")
     link(href="https://fonts.googleapis.com/css?family=Montserrat", rel="stylesheet", type="text/css")
-    link(href="https://ShakeelMohamed.com/", rel="canonical")
+    if root
+        link(href="https://ShakeelMohamed.com/", rel="canonical")
     - var relativePrefix = "."
     if !root
         - var relativePrefix = ".."
