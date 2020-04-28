@@ -167,4 +167,5 @@ fs.writeFile(path.join(__dirname, "../index.html"), html, function(err) {
     else {
         buildRSSFeed(blogs);
     }
+    // TODO: clean up html files for md files that don't exist
 });
