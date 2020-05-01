@@ -10,6 +10,7 @@ var builder = pug.compileFile(path.join(__dirname, "./views/index.pug"), {pretty
 // Read blogs.json as JSON
 var blogs = JSON.parse(fs.readFileSync(path.join(__dirname, "./data/blogs.json")).toString());
 
+// TODO: update sitemap.txt with blog URLs
 // TODO: add a prebuild step to run some validation that all posts are in blogs.json
 // Build the blog pages first and update their URLs
 function buildBlogPages(blogs) {
@@ -167,4 +168,5 @@ fs.writeFile(path.join(__dirname, "../index.html"), html, function(err) {
     else {
         buildRSSFeed(blogs);
     }
+    // TODO: clean up html files for md files that don't exist
 });

@@ -1,2 +1,6 @@
 User-agent: *
+Disallow: /src/
+Disallow: *.json
+Disallow: *.md
+
 Sitemap: https://www.shakeelmohamed.com/sitemap.txt

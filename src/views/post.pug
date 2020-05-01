@@ -18,5 +18,5 @@ html(lang="en")
         section.flex.center
             div.flex-col.mx-auto
                 h4 #{post.date}
-                div.post-content(style="max-width:50%;margin:auto")!= post.content
+                div.post-content()!= post.content
         include includes/footer.pug

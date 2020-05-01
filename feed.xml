@@ -4,9 +4,16 @@
         <description><![CDATA[Recent Blog Posts]]></description>
         <link>https://ShakeelMohamed.com/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Thu, 02 Apr 2020 05:43:15 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 01 May 2020 06:21:24 GMT</lastBuildDate>
         <atom:link href="https://ShakeelMohamed.com/rss.xml" rel="self" type="application/rss+xml"/>
         <webMaster><![CDATA[iam@shakeel.xyz (Shakeel Mohamed)]]></webMaster>
+        <item>
+            <title><![CDATA[Finding Your Individual Why Statement]]></title>
+            <description><![CDATA[I've been intrigued by Simon Sinek's work for many years. I knew his Golden Circle Theory is an incredible idea but, I didn't know how to apply it in my daily life.]]></description>
+            <guid isPermaLink="false">Finding Your Individual Why Statement</guid>
+            <dc:creator><![CDATA[iam@shakeel.xyz (Shakeel Mohamed)]]></dc:creator>
+            <pubDate>Thu, 30 Apr 2020 07:00:00 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[Tips for solo travel through Chiang Mai, Thailand]]></title>
             <description><![CDATA[Last month I spent 10 days in Thailand in 3 areas: Bangkok, Phuket & Chiang Mai. I just happened to spend most of my time (5 days) in Chiang Mai and loved it!]]></description>
