@@ -2,9 +2,17 @@
 
 I've been intrigued by Simon Sinek's work for many years. I knew his Golden Circle Theory is an incredible idea but, I didn't know how to apply it in my daily life.
 
+## What are WHY statements?
+
+A WHY statement is not aspirational. That's a vision statement.
+
+> **The WHY statement is who we are, stories are the proof.**
+
+A WHY statement is not specific to one area of life, it's a more foundational belief that affects all areas of life. The way you express that why is through your HOWs (family, work, hobbies, etc.).
+
 ## My Why Statement
 
-After my individual WHY discovery session, I came out with a draft of my WHY statement. It was close but didn't really have the juice that my final WHY statement does.
+After my individual WHY discovery session, I came out with a draft of my WHY statement. It was close but didn't really have the juice that my final WHY statement does. I mulled it over for a week and finally landed on the following:
 
 > **To relentlessly pursue being world-class, so that we can experience beyond what's possible.**
 
@@ -12,25 +20,21 @@ After my individual WHY discovery session, I came out with a draft of my WHY sta
 
 ![Golden Circle Theory](https://simonsinek.com/wp-content/uploads/2019/02/GC_slide-2.jpg)
 
-I could try to explain the concept in depth, there's no replacement for Simon's explanation in his original TED talk! The core idea is we should all start with WHY we do what we do. Our HOWs are our strengths, and filters we use to decide WHAT we do.
+I could try to explain the concept in depth but, there's no replacement for Simon's explanation in his original TED talk! The core idea is that we should all start with WHY we do what we do. Our HOWs are our strengths, and the filters we use to decide WHAT we do.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/qp0HIF3SfI4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## How did we get here?
 
-When confronted with some challenges as a leader last year, I sought the guidance of one of my mentors. "Think about **alignment** with your goal, and their beliefs." This really got me thinking, "what do other people care about?". Then I remembered Simon's TED talk about Golden Circle Theory, and that his first book [_Start With Why_](https://smile.amazon.com/Start-Why-Leaders-Inspire-Everyone/dp/B074VF6ZLM/) was on my reading list. So I read it over a few weeks. I was already familiar with the concept however, so I didn't receive as much value as I would've had it been fresh. To put that in context, the book came before his TED talk... back in 2009!
+When confronted with some challenges as a leader last year, I sought the guidance of one of my mentors. "Think about **alignment** with your goal, and their beliefs." This really got me thinking, "what do other people care about?". Then I remembered Simon's TED talk about Golden Circle Theory, and that his first book [_Start With Why_](https://smile.amazon.com/Start-Why-Leaders-Inspire-Everyone/dp/B074VF6ZLM/) was on my reading list. So I read it over the next few weeks. I was already familiar with the concept however, so I didn't receive as much value as I would've had it been fresh. To put that in context, the book came before his TED talk... back in 2009!
 
 ## Total Immersion
 
-Once I finished reading [_Start With Why_](https://smile.amazon.com/Start-Why-Leaders-Inspire-Everyone/dp/B074VF6ZLM/), I felt a little bit empty inside. I had many examples and evidence for _WHY_ Golden Circle Theory is so effective. I still didn't know how to apply it to my life, or any team I am involved with. After very quick Amazon search, found that Simon had recently co-authored a book, called [_Find Your Why_](https://smile.amazon.com/Find-Your-Why-Practical-Discovering-ebook/dp/B01CZCW3ZA/). 
+Once I finished reading [_Start With Why_](https://smile.amazon.com/Start-Why-Leaders-Inspire-Everyone/dp/B074VF6ZLM/), I felt a little bit empty inside. I had many examples and evidence for **WHY** his Golden Circle Theory is so important. I still didn't know how to apply it to my life, or any team I am involved with. After a very quick Amazon search, found that Simon had more recently co-authored a book, called [_Find Your Why_](https://smile.amazon.com/Find-Your-Why-Practical-Discovering-ebook/dp/B01CZCW3ZA/). This book is all about the practical steps needed to uncover WHY statements for individuals and groups.
 
-## What are WHY statements?
+# WHY 101
 
-A WHY statement is not aspirational.
-
-**The WHY statement is who we are, stories are the proof.**
-
-A WHY statement is not specific to one area of life, it's a more foundational belief that affects individual areas of life, HOWs.
+I've prepared a [Google doc](https://docs.google.com/document/d/e/2PACX-1vSgeXDNI6KqJmyiuDtIRO7AJiLnvotTsvQJJtOzMNrmEsdLyasB6_VTCajJJQO214xvRwNzXbbtWWB3/pub) with everything you need to get started for discovering or facilitating an individual why statement. Feel free to download that, but I'll run through the content below.
 
 ## Preparation For Storytellers
 
@@ -51,18 +55,18 @@ Story Collection
 
 Methods for finding stories
 * Memory prompts (list of questions in the book):
-  - Who in your life has helped make you the person you are today?
-  - Have you ever said "I would have done that for free? What happened that day?"
-  - What happened on your worst day of work?
-  - What is the earliest, specific, happy childhood memory you have?
-  - At school, what was an experience you loved?
-  - What has been a pivotal moment in your life, when life changed forever for you?
-  - What happened to change the way you think about the world, and your role in it?
-  - Have you ever given yourself to help someone, when you felt amazing after?
-  - What have you accomplished that you're really proud of? With anyone?
+    - Who in your life has helped make you the person you are today?
+    - Have you ever said "I would have done that for free? What happened that day?"
+    - What happened on your worst day of work?
+    - What is the earliest, specific, happy childhood memory you have?
+    - At school, what was an experience you loved?
+    - What has been a pivotal moment in your life, when life changed forever for you?
+    - What happened to change the way you think about the world, and your role in it?
+    - Have you ever given yourself to help someone, when you felt amazing after?
+    - What have you accomplished that you're really proud of? With anyone?
 * Peaks/valleys over your life on a timeline, the more extreme ones will have more impact. Pick those because they'll most clearly lead to your WHY due to the strong emotions tied to them.
 
-![Peaks and Valleys, image from Find Your Why by Simon Sinek](./img/2020-04-30 life events.jpg)
+![Peaks and Valleys, image from Find Your Why by Simon Sinek](./img/2020-04-30-life-events.jpg)
 
 ## For Facilitators
 * Watch [Simon's TED talk (20 mins)](https://www.youtube.com/watch?v=qp0HIF3SfI4)
@@ -97,6 +101,4 @@ Process
 
 ## Thanks for reading!
 
-I've prepared a [Google doc](https://docs.google.com/document/d/e/2PACX-1vSgeXDNI6KqJmyiuDtIRO7AJiLnvotTsvQJJtOzMNrmEsdLyasB6_VTCajJJQO214xvRwNzXbbtWWB3/pub) with everything you need to get started for discovering or facilitating an individual why statement.
-
-I plan to continue writing about Golden Circle Theory and WHY discovery as I learn more through the process. If you have any questions about WHY discovery - let's talk!
+I plan to continue writing about Golden Circle Theory and WHY discovery as I learn more through the process. There's still a lot I have to learn in terms of using WHY statements as a tool for alignment as a leader. If you have any questions about WHY discovery - let's talk!
