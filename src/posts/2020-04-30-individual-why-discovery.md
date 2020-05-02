@@ -40,6 +40,7 @@ I've prepared a [Google doc](https://docs.google.com/document/d/e/2PACX-1vSgeXDN
 
 Before the session
 * Watch [Simon's TED talk (20 mins)](https://www.youtube.com/watch?v=qp0HIF3SfI4)
+* Select a facilitator, they shouldn't be someone already close to the storyteller to avoid bias
 * Collect stories
 * Circle 3 most impactful stories, share those first
 * Be open and vulnerable when sharing
