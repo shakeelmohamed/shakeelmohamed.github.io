@@ -21,7 +21,7 @@ html(lang="en")
                         a(href="http://shakeelmohamed.com")
                             img.profile-photo(src=headshot alt="Photo of Shakeel Mohamed" title="Photo of Shakeel Mohamed")
                     h1.inline.h1.pr2 Shakeel Mohamed
-                    p(style="max-width: 50%; margin: auto;") #{desc}
+                    p.post-content(style="text-align: center") #{desc}
                     ul.social-links.no-indent
                         each URL, name in socialLinks
                             +socialLink(URL, name)                
