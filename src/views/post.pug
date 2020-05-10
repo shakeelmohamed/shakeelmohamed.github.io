@@ -3,16 +3,18 @@ include includes/mixins.pug
 doctype html
 html(lang="en")
     head
-        +head(false, "Shakeel Mohamed | " + post.title, "https://shakeelmohamed.com/img/headshot.jpg", post.description)
+        +head(relativePrefix, "Shakeel Mohamed | " + post.title, "https://shakeelmohamed.com/img/headshot.jpg", post.description, post.canonical)
+        if post.canonical
+            link(href=post.canonical, rel="canonical")
     body
         header.flex.center
             div.mx-auto
                 ul.nav-links.no-indent
-                    +navLink("../", "Home")
+                    +navLink(relativePrefix, "Home")
                     +navLink("https://ntrsct.com/", "ntrsct")
-                    +navLink("../index.html#projects", "Projects")
-                    +navLink("../#blogs", "Blog Posts")
-                    +navLink("../#mentions", "Mentions")
+                    +navLink(relativePrefix + "/index.html#projects", "Projects")
+                    +navLink(relativePrefix + "/index.html#blogs", "Blog Posts")
+                    +navLink(relativePrefix + "/index.html#mentions", "Mentions")
                 div.nav.center
                     h1.inline.h1.pr2 Shakeel Mohamed
         section.flex.center

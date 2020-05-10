@@ -10,6 +10,9 @@ var builder = pug.compileFile(path.join(__dirname, "./views/index.pug"), {pretty
 // Read blogs.json as JSON
 var blogs = JSON.parse(fs.readFileSync(path.join(__dirname, "./data/blogs.json")).toString());
 
+// TODO: create a blog post list page that ends up at posts/index.html (reuse the component from homepage), with post thumbnails
+// TODO: once all medium.com posts are migrated into this repo, turn on medium monetization
+
 // TODO: update sitemap.txt with blog URLs
 // TODO: add a prebuild step to run some validation that all posts are in blogs.json
 // Build the blog pages first and update their URLs
@@ -21,22 +24,38 @@ function buildBlogPages(blogs) {
         if (!blogs[i].source) {
             continue;
         }
-        if (blogs[i].source.indexOf(".md") !== (blogs[i].source.length-3)) {
-            throw new Error("File name doesn't look right " +  JSON.stringify(blogs[i]));
+
+        var sourceDir = blogs[i].source;
+        var dirName = path.basename(blogs[i].source);
+        var mdFile = path.join(sourceDir, "post.md");
+        var mdPath = path.join(__dirname, 'src', mdFile);
+        if (!fs.existsSync(path.join(__dirname, "src", sourceDir))) {
+            throw new Error("SourceDir doesn't look right " +  JSON.stringify(blogs[i]));
+        }
+        if (!fs.existsSync(mdPath)) {
+            throw new Error("mdPath doesn't look right " +  JSON.stringify(blogs[i]));
         }
 
-        // TODO: convert blogs[i].source markdown to HTML, set that content at blogs[i].content
+        // For posts before 1 directory per post
+        if (blogs[i].canonical) {
+            var rawMarkdown = fs.readFileSync(mdPath).toString();
+            rawMarkdown = rawMarkdown.replace("](./", "](./" + dirName + "/"); // Fix relative paths, mostly images
+            blogs[i].content = converter.makeHtml(rawMarkdown);
+            var legacyPageHTML = postBuilder({"post": blogs[i], "relativePrefix": ".."});
+            var legacyFileName = blogs[i].source + ".html";
+            fs.writeFileSync(path.join(__dirname, "..", "posts", legacyFileName), legacyPageHTML);
+            delete blogs[i].content;
+        }
         
-        var postHTML = converter.makeHtml(fs.readFileSync(path.join(__dirname, 'src', blogs[i].source)).toString());
-        // console.log(postHTML);
-        blogs[i].content = postHTML;
-        
-        var pageHTML = postBuilder({"post": blogs[i]});
+        blogs[i].content = converter.makeHtml(fs.readFileSync(mdPath).toString());
+        var pageHTML = postBuilder({"post": blogs[i], "relativePrefix": "../.."});
+        if (!fs.existsSync(path.join(__dirname, "..", "posts", sourceDir))) {
+            fs.mkdirSync(path.join(__dirname, "..", "posts", sourceDir));    
+        }
+        fs.writeFileSync(path.join(__dirname, "..", "posts", sourceDir, "index.html"), pageHTML);
 
-        var fileName = blogs[i].source.replace(".md", ".html");
-        fs.writeFileSync(path.join(__dirname, "..", "posts", fileName), pageHTML);
+        blogs[i].url = encodeURI(path.join("posts", dirName));
         delete blogs[i].source;
-        blogs[i].url = encodeURI(fileName.slice(1));
     }
     return blogs;
 }
