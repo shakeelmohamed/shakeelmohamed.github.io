@@ -2,7 +2,7 @@
 
 This summer I received an unexpected opportunity to be a software engineer intern at Splunk’s Seattle office.
 
-![View of Safeco Field from the Splunk suite](./img/2013-09-20-safeco-field.jpg)
+![View of Safeco Field from the Splunk suite](./2013-09-20-safeco-field.jpg)
 
 I applied fully on a whim. I mean really. I didn’t even bother writing a cover letter, it seemed impossibly out of reach for me. But somehow my resume alone was enough to continue the hiring process, and I did well enough in my interviews to get an offer. No complaints from me! :)
 

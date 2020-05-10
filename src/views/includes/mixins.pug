@@ -1,4 +1,4 @@
-mixin head(root, pageTitle, pageImg, pageDesc)
+mixin head(relativePrefix, pageTitle, pageImg, pageDesc)
     title #{pageTitle}
     meta(charset="utf-8")
     meta(http-equiv="X-UA-Compatible", content="chrome=1")
@@ -13,12 +13,9 @@ mixin head(root, pageTitle, pageImg, pageDesc)
     link(rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png")
     link(rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png")
     link(rel="manifest" href="/site.webmanifest")
-    //- TODO: canonical url for each page
-    if root
+    //- TODO: canonical url for each page, same value for og:url
+    if relativePrefix == '.'
         link(href="https://ShakeelMohamed.com/", rel="canonical")
-    - var relativePrefix = "."
-    if !root
-        - var relativePrefix = ".."
     link(href=relativePrefix + "/styles.css", rel="stylesheet")    
     link(href=relativePrefix + "/feed.xml", rel="alternate", type="application/rss+xml", title="RSS Feed for ShakeelMohamed.com")
     | 

@@ -67,7 +67,7 @@ Methods for finding stories
     - What have you accomplished that you're really proud of? With anyone?
 * Peaks/valleys over your life on a timeline, the more extreme ones will have more impact. Pick those because they'll most clearly lead to your WHY due to the strong emotions tied to them.
 
-![Peaks and Valleys, image from Find Your Why by Simon Sinek](./img/2020-04-30-life-events.jpg)
+![Peaks and Valleys, image from Find Your Why by Simon Sinek](./2020-04-30-life-events.jpg)
 
 ## For Facilitators
 * Watch [Simon's TED talk (20 mins)](https://www.youtube.com/watch?v=qp0HIF3SfI4)

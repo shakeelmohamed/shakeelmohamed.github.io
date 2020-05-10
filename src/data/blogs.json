@@ -2,14 +2,16 @@
     {
         "date": "April 30, 2020",
         "title": "Finding Your Individual Why Statement",
-        "source": "../posts/2020-04-30-individual-why-discovery.md",
-        "description": "I've been intrigued by Simon Sinek's work for many years. I knew his Golden Circle Theory is an incredible idea but, I didn't know how to apply it in my daily life."
+        "source": "../posts/2020-04-30-individual-why-discovery",
+        "description": "I've been intrigued by Simon Sinek's work for many years. I knew his Golden Circle Theory is an incredible idea but, I didn't know how to apply it in my daily life.",
+        "canonical": "https://shakeelmohamed.com/posts/2020-04-30-individual-why-discovery/"
     },
     {
         "date": "March 15, 2020",
         "title": "Tips for solo travel through Chiang Mai, Thailand",
-        "source": "../posts/2020-03-15-chiang-mai.md",
-        "description": "Last month I spent 10 days in Thailand in 3 areas: Bangkok, Phuket & Chiang Mai. I just happened to spend most of my time (5 days) in Chiang Mai and loved it!"
+        "source": "../posts/2020-03-15-chiang-mai",
+        "description": "Last month I spent 10 days in Thailand in 3 areas: Bangkok, Phuket & Chiang Mai. I just happened to spend most of my time (5 days) in Chiang Mai and loved it!",
+        "canonical": "https://shakeelmohamed.com/posts/2020-03-15-chiang-mai/"
     },
     {
         "date": "Feb 10, 2020",
@@ -138,6 +140,7 @@
         "date": "September 20, 2013",
         "title": "Summer with Splunk",
         "description": "This summer I received an unexpected opportunity to be a software engineer intern...",
-        "source": "../posts/2013-09-20-summer-with-splunk.md"
+        "source": "../posts/2013-09-20-summer-with-splunk",
+        "canonical": "https://shakeelmohamed.com/posts/2013-09-20-summer-with-splunk/"
     }
 ]
