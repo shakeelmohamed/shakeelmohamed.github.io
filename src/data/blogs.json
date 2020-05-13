@@ -121,7 +121,7 @@
     {
         "date": "April 10, 2015",
         "title": "Magic Spells: Deploying an app to AWS OpsWorks",
-        "url": "https://medium.com/@_shakeel/magic-spells-deploying-an-app-to-aws-opsworks-d53018884dd1",
+        "source": "../posts/2015-04-10-magic-spells-deploying-an-app-to-aws-opsworks",
         "description": "My goal with this post is to walk you through the mind-bending procedures required to setup a new app on AWS using OpsWorks."
     },
     {
