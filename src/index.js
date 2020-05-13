@@ -3,6 +3,7 @@ var fs = require("fs");
 var RSS = require("rss");
 var path = require("path");
 var showdown  = require("showdown");
+var showdownHighlight = require("showdown-highlight");
 
 // Create a function for compiling pug
 var builder = pug.compileFile(path.join(__dirname, "./views/index.pug"), {pretty: "    "});
@@ -18,7 +19,7 @@ var blogs = JSON.parse(fs.readFileSync(path.join(__dirname, "./data/blogs.json")
 // Build the blog pages first and update their URLs
 function buildBlogPages(blogs) {
     var postBuilder = pug.compileFile(path.join(__dirname, "./views/post.pug"), {pretty: "    ", filename: path.join(__dirname, "./views/post.pug")});
-    var converter = new showdown.Converter({metadata: true});
+    var converter = new showdown.Converter({metadata: true, extensions: [showdownHighlight]});
     for (var i = 0; i < blogs.length; i++) {
         // Skip external posts
         if (!blogs[i].source) {
@@ -26,10 +27,11 @@ function buildBlogPages(blogs) {
         }
 
         var sourceDir = blogs[i].source;
+        var sourcePath = path.join(__dirname, "src", sourceDir);
         var dirName = path.basename(blogs[i].source);
         var mdFile = path.join(sourceDir, "post.md");
         var mdPath = path.join(__dirname, 'src', mdFile);
-        if (!fs.existsSync(path.join(__dirname, "src", sourceDir))) {
+        if (!fs.existsSync(sourcePath)) {
             throw new Error("SourceDir doesn't look right " +  JSON.stringify(blogs[i]));
         }
         if (!fs.existsSync(mdPath)) {
@@ -53,6 +55,17 @@ function buildBlogPages(blogs) {
             fs.mkdirSync(path.join(__dirname, "..", "posts", sourceDir));    
         }
         fs.writeFileSync(path.join(__dirname, "..", "posts", sourceDir, "index.html"), pageHTML);
+
+        // Move images from src/posts/${dirName}/ to posts/${dirName}
+        var sourceFiles = fs.readdirSync(sourcePath);
+        for (var j = 0; j < sourceFiles.length; j++) {
+            if (sourceFiles[j].length > 3 && (sourceFiles[j].endsWith('.jpg') || sourceFiles[j].endsWith('.png'))) {
+                console.log("Moving this image out of src", dirName, sourceFiles[j]);
+                var oldPath = path.join(sourcePath, sourceFiles[j]);
+                var newPath = oldPath.replace("src/", "");
+                fs.renameSync(oldPath, newPath);
+            }
+        }
 
         blogs[i].url = encodeURI(path.join("posts", dirName));
         delete blogs[i].source;

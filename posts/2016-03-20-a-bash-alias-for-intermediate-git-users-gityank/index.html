@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Shakeel Mohamed | Summer with Splunk</title>
+        <title>Shakeel Mohamed | A bash alias for intermediate git users: gityank</title>
         <meta charset="utf-8"/>
         <meta http-equiv="X-UA-Compatible" content="chrome=1"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-        <meta property="og:title" content="Shakeel Mohamed | Summer with Splunk"/>
+        <meta property="og:title" content="Shakeel Mohamed | A bash alias for intermediate git users: gityank"/>
         <meta property="og:image" content="https://shakeelmohamed.com/img/headshot.jpg"/>
-        <meta property="og:description" content="This summer I received an unexpected opportunity to be a software engineer intern..."/>
+        <meta property="og:description" content="As a git user, every once in a while you'll be doing a git pull and be blindsided by the following error..."/>
         <link href="https://unpkg.com/basscss@8.0.1/css/basscss.min.css" rel="stylesheet"/>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&amp;display=swap" rel="stylesheet" type="text/css"/>
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
@@ -23,7 +23,6 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script>
-        <link href="https://shakeelmohamed.com/posts/2013-09-20-summer-with-splunk/" rel="canonical">
     </head>
     <body>
         <header class="flex center">
@@ -42,17 +41,37 @@
         </header>
         <section class="flex center">
             <div class="flex-col mx-auto">
-                <h4>September 20, 2013</h4>
-                <div class="post-content"><h1 id="summerwithsplunk">Summer with Splunk</h1>
-<p>This summer I received an unexpected opportunity to be a software engineer intern at Splunk’s Seattle office.</p>
-<p><img src="./2013-09-20-safeco-field.jpg" alt="View of Safeco Field from the Splunk suite" /></p>
-<p>I applied fully on a whim. I mean really. I didn’t even bother writing a cover letter, it seemed impossibly out of reach for me. But somehow my resume alone was enough to continue the hiring process, and I did well enough in my interviews to get an offer. No complaints from me! :)</p>
-<p>My first work task involved minor changes to the <a href="http://dev.splunk.com/view/SP-CAAAECM">Splunk SDK for JavaScript</a>. This got me re-interested in Node.js, and prompted me to begin building <a href="https://github.com/shakeelmohamed/today-was">Today Was</a> in Node.</p>
-<p>Then I transitioned into bringing <a href="http://docs.splunk.com/Documentation/Splunk/5.0.4/AdvancedDev/ModInputsIntro">modular input</a> support to the <a href="http://dev.splunk.com/view/SP-CAAAEBB">Splunk SDK for Python in version 1.1</a>. I really appreciated this task because it was a major feature that developers would use, and a chance for me to learn most of Python in about 3-4 weeks (crazy!).</p>
-<p>But it hasn’t been all work. A few weeks ago the whole office went to a Mariner’s game for “intern day”, although I’m no longer a baseball fan I didn’t mind the view from a suite!</p>
-<p>Since that time, I’ve been working on a demo using the new <a href="http://dev.splunk.com/view/app-framework/SP-CAAAEMA">Splunk App Framework Beta</a>.</p>
-<p>A couple random things I’ve loved about my internship include getting to use a MacBook Pro and a standing desk.</p>
-<p>Earlier this week my <a href="http://blogs.splunk.com/2013/09/10/the-splunk-sdk-for-python-gets-modular-input-support/">blog post</a> on my work on the Splunk SDK for Python went live, which has me re-interested in blogging. Next Friday would’ve been the last day of my internship, but my internship has been extended to part-time through the school year — PERFECT.</p></div>
+                <h4>March 20, 2016</h4>
+                <div class="post-content"><h1 id="abashaliasforintermediategitusersgityank">A bash alias for intermediate git users: gityank</h1>
+<p>As a git user, every once in a while you'll be doing a <code>git pull</code> and be blindsided by the following error:</p>
+<pre><code class="hljs bash language-bash">git pull
+There is no tracking information <span class="hljs-keyword">for</span> the current branch.
+Please specify <span class="hljs-built_in">which</span> branch you want to merge with.
+See git-pull(1) <span class="hljs-keyword">for</span> details.
+
+    git pull &lt;remote&gt; &lt;branch&gt;
+
+If you wish to <span class="hljs-built_in">set</span> tracking information <span class="hljs-keyword">for</span> this branch you can <span class="hljs-keyword">do</span> so with:
+
+    git branch --<span class="hljs-built_in">set</span>-upstream-to=&lt;remote&gt;/&lt;branch&gt; mybranch
+</code></pre>
+<p>So naturally, you groan.
+Then proceed to copy/paste pieces of this enormous command, and maybe use shell auto-completion with something like zsh.</p>
+<h2 id="whatifitoldyoutherewasabetterway">What if I told you there was a better way?</h2>
+<p>A while back I had to run this <a href="https://medium.com/@_shakeel/magic-spells-deploying-an-app-to-aws-opsworks-d53018884dd1">incantation</a> several times every day while migrating a few git repos to different remotes. After 2 days of this madness, I had to create a bash function - and it's saved my sanity hundreds of times since then!</p>
+<p>Without further adieu I present <code>gityank</code>; when you cant pull, yank!</p>
+<pre><code class="hljs bash language-bash"><span class="hljs-function"><span class="hljs-title">gityank</span></span>() {
+    <span class="hljs-keyword">if</span> [ <span class="hljs-string">"<span class="hljs-variable">$#</span>"</span> -eq 0 ]; <span class="hljs-keyword">then</span>
+        1=<span class="hljs-string">"<span class="hljs-variable">$(gb)</span>"</span>
+    <span class="hljs-keyword">elif</span> [ <span class="hljs-string">"<span class="hljs-variable">$#</span>"</span> -eq 1 ]; <span class="hljs-keyword">then</span>
+        git branch --<span class="hljs-built_in">set</span>-upstream-to=<span class="hljs-string">"origin/<span class="hljs-variable">$1</span>"</span> <span class="hljs-variable">$1</span>
+    <span class="hljs-keyword">else</span>
+        git branch --<span class="hljs-built_in">set</span>-upstream-to=<span class="hljs-string">"<span class="hljs-variable">$1</span>/<span class="hljs-variable">$2</span>"</span> <span class="hljs-variable">$2</span>
+    <span class="hljs-keyword">fi</span>
+}
+</code></pre>
+<p>The function itself is rather simple. The key is <code>git rev-parse --abbrev-ref HEAD</code>, which determines the current branch.
+In my bash profile, I actually have it aliased to <code>gb</code>.</p></div>
             </div>
         </section>
         <script type="application/ld+json">
