@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Shakeel Mohamed | Summer with Splunk</title>
+        <title>Shakeel Mohamed | Silence JavaScript console output</title>
         <meta charset="utf-8"/>
         <meta http-equiv="X-UA-Compatible" content="chrome=1"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-        <meta property="og:title" content="Shakeel Mohamed | Summer with Splunk"/>
+        <meta property="og:title" content="Shakeel Mohamed | Silence JavaScript console output"/>
         <meta property="og:image" content="https://shakeelmohamed.com/img/headshot.jpg"/>
-        <meta property="og:description" content="This summer I received an unexpected opportunity to be a software engineer intern..."/>
+        <meta property="og:description" content="This is super helpful for unit testing with 100% code coverage, while maintaining a clean test output on the console!"/>
         <link href="https://unpkg.com/basscss@8.0.1/css/basscss.min.css" rel="stylesheet"/>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&amp;display=swap" rel="stylesheet" type="text/css"/>
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
@@ -23,7 +23,6 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script>
-        <link href="https://shakeelmohamed.com/posts/2013-09-20-summer-with-splunk/" rel="canonical">
     </head>
     <body>
         <header class="flex center">
@@ -42,17 +41,31 @@
         </header>
         <section class="flex center">
             <div class="flex-col mx-auto">
-                <h4>September 20, 2013</h4>
-                <div class="post-content"><h1 id="summerwithsplunk">Summer with Splunk</h1>
-<p>This summer I received an unexpected opportunity to be a software engineer intern at Splunk’s Seattle office.</p>
-<p><img src="./2013-09-20-safeco-field.jpg" alt="View of Safeco Field from the Splunk suite" /></p>
-<p>I applied fully on a whim. I mean really. I didn’t even bother writing a cover letter, it seemed impossibly out of reach for me. But somehow my resume alone was enough to continue the hiring process, and I did well enough in my interviews to get an offer. No complaints from me! :)</p>
-<p>My first work task involved minor changes to the <a href="http://dev.splunk.com/view/SP-CAAAECM">Splunk SDK for JavaScript</a>. This got me re-interested in Node.js, and prompted me to begin building <a href="https://github.com/shakeelmohamed/today-was">Today Was</a> in Node.</p>
-<p>Then I transitioned into bringing <a href="http://docs.splunk.com/Documentation/Splunk/5.0.4/AdvancedDev/ModInputsIntro">modular input</a> support to the <a href="http://dev.splunk.com/view/SP-CAAAEBB">Splunk SDK for Python in version 1.1</a>. I really appreciated this task because it was a major feature that developers would use, and a chance for me to learn most of Python in about 3-4 weeks (crazy!).</p>
-<p>But it hasn’t been all work. A few weeks ago the whole office went to a Mariner’s game for “intern day”, although I’m no longer a baseball fan I didn’t mind the view from a suite!</p>
-<p>Since that time, I’ve been working on a demo using the new <a href="http://dev.splunk.com/view/app-framework/SP-CAAAEMA">Splunk App Framework Beta</a>.</p>
-<p>A couple random things I’ve loved about my internship include getting to use a MacBook Pro and a standing desk.</p>
-<p>Earlier this week my <a href="http://blogs.splunk.com/2013/09/10/the-splunk-sdk-for-python-gets-modular-input-support/">blog post</a> on my work on the Splunk SDK for Python went live, which has me re-interested in blogging. Next Friday would’ve been the last day of my internship, but my internship has been extended to part-time through the school year — PERFECT.</p></div>
+                <h4>September 4, 2015</h4>
+                <div class="post-content"><h1 id="silencejavascriptconsoleoutput">Silence JavaScript console output</h1>
+<p>This is super helpful for unit testing with 100% code coverage, while maintaining a clean test output on the console!</p>
+<p>First you need some basic setup code:</p>
+<pre><code class="hljs js language-js"><span class="hljs-comment">// Backup console.log so we can restore it later</span>
+<span class="hljs-keyword">var</span> ___log = <span class="hljs-built_in">console</span>.log;
+<span class="hljs-comment">/**
+ * Silences console.log
+ * Undo this effect by calling unmute().
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">mute</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{};
+}
+<span class="hljs-comment">/**
+ * Un-silences console.log
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">unmute</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log = ___log;
+}
+</code></pre>
+<p>Then, you can write code using <code>mute()</code> and <code>unmute()</code> like so:</p>
+<pre><code class="hljs js language-js">mute();
+MyClass.functionThatPrintsOutput();
+unmute();
+</code></pre></div>
             </div>
         </section>
         <script type="application/ld+json">

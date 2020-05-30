@@ -16,7 +16,7 @@
     {
         "date": "Feb 10, 2020",
         "title": "24/31 Days of Designing Lyric Posters",
-        "url": "https://www.linkedin.com/pulse/2431-days-designing-lyric-posters-shakeel-mohamed-csm/"
+        "source": "../posts/2020-02-10-24-31-days-of-designing-lyric-posters"
     },
     {
         "date": "Jan 21, 2020",
@@ -61,25 +61,25 @@
     {
         "date": "May 23, 2016",
         "title": "Share Solutions to Your Problems",
-        "url": "https://medium.com/@_shakeel/share-solutions-to-your-problems-652522580ec9",
+        "source": "../posts/2016-05-23-share-solutions-to-your-problems",
         "description": "As a programmer, it can be really hard to do some things that seem incredibly simple."
     },
     {
         "date": "April 18, 2016",
         "title": "Productivity Hack: Use Opposite Techniques",
-        "url": "https://medium.com/@_shakeel/productivity-hack-use-opposite-techniques-86b592aff17d",
+        "source": "../posts/2016-04-18-productivity-hack-use-opposite-techniques",
         "description": "Below I present two contrasting productivity techniques I've learned over the years, and show how they can be used to complete a specific task."
     },
     {
         "date": "April 10, 2016",
         "title": "Changing My Git Editor On The Fly",
-        "url": "https://coderwall.com/p/0nl5lw/why-i-change-my-git-editor-on-the-fly",
+        "source": "../posts/2016-04-10-changing-my-git-editor-on-the-fly",
         "description": "I love using Sublime Text as do many developers these days, but I just can't use it regularly for git commit messages."
     },
     {
         "date": "April 3, 2016",
         "title": "Notice the Colors: a Mindfulness Experiment",
-        "url": "https://medium.com/@_shakeel/notice-the-colors-a-mindfulness-experiment-4a440636178d",
+        "source": "../posts/2016-04-03-notice-the-colors-a-mindfulness-experiment",
         "description": "I took a walk today, listening to music on my phone as I usually do, and an interesting thought came to me. I often use my headphones to..."
     },
     {
@@ -91,49 +91,49 @@
     {
         "date": "March 20, 2016",
         "title": "A bash alias for intermediate git users: gityank",
-        "url": "https://coderwall.com/p/ixj7mq/a-bash-alias-for-intermediate-git-users-gityank",
+        "source": "../posts/2016-03-20-a-bash-alias-for-intermediate-git-users-gityank",
         "description": "As a git user, every once in a while you'll be doing a git pull and be blindsided by the following error..."
     },
     {
         "date": "September 4, 2015",
         "title": "Silence JavaScript console output",
-        "url": "https://coderwall.com/p/1l4cba/silence-javascript-console-output",
+        "source": "../posts/2015-09-04-silence-javascript-console-output",
         "description": "This is super helpful for unit testing with 100% code coverage, while maintaining a clean test output on the console!"
     },
     {
         "date": "May 28, 2015",
         "title": "git diff against a remote branch",
-        "url": "https://coderwall.com/p/rndi8w/git-diff-against-a-remote-branch",
+        "source": "../posts/2015-05-28-git-diff-against-a-remote-branch",
         "description": "This is equivalent to previewing a pull request, and it works great across remotes!"
     },
     {
         "date": "May 6, 2015",
         "title": "\"Oops, I pushed a commit with something sensitive to a public GitHub project!\"",
-        "url": "https://coderwall.com/p/dcqdva/oops-i-pushed-a-commit-with-something-sensitive-to-a-public-github-project",
+        "source": "../posts/2015-05-06-oops-i-pushed-a-commit-with-something-sensitive-to-a-public-github-project",
         "description": "So you accidentally pushed a commit with some credentials. Shame on you. Here's a potential solution... "
     },
     {
         "date": "April 21, 2015",
         "title": "An actually helpful git diff of your uncommitted changes",
-        "url": "https://coderwall.com/p/tekq7q/an-actually-helpful-git-diff-of-your-uncommitted-changes",
+        "source": "../posts/2015-04-21-an-actually-helpful-git-diff-of-your-uncommitted-changes",
         "description": "So you just made a bunch of changes to a git project, good job. Now you want to review your changes before committing, even better."
     },
     {
         "date": "April 10, 2015",
         "title": "Magic Spells: Deploying an app to AWS OpsWorks",
-        "url": "https://medium.com/@_shakeel/magic-spells-deploying-an-app-to-aws-opsworks-d53018884dd1",
+        "source": "../posts/2015-04-10-magic-spells-deploying-an-app-to-aws-opsworks",
         "description": "My goal with this post is to walk you through the mind-bending procedures required to setup a new app on AWS using OpsWorks."
     },
     {
         "date": "March 19, 2015",
         "title": "Hacker's First Logo - Designing in PowerPoint",
-        "url": "https://medium.com/@_shakeel/hacker-s-first-logo-designing-in-powerpoint-7eeeb6925097",
+        "source": "../posts/2015-03-19-hackers-first-logo-designing-in-powerpoint",
         "description": "Designing the logo for my team's senior project, Exbedia..."
     },
     {
         "date": "November 14, 2014",
         "title": "Remove an accidentally pushed remote git commit",
-        "url": "https://coderwall.com/p/lzuhlq/remove-an-accidentally-pushed-remote-git-commit",
+        "source": "../posts/2014-11-14-remove-an-accidentally-pushed-remote-git-commit",
         "description": "As a music enthusiast, I wanted to reflect on my favorite albums released this year."
     },
     {

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Shakeel Mohamed | Summer with Splunk</title>
+        <title>Shakeel Mohamed | An actually helpful git diff of your uncommitted changes</title>
         <meta charset="utf-8"/>
         <meta http-equiv="X-UA-Compatible" content="chrome=1"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-        <meta property="og:title" content="Shakeel Mohamed | Summer with Splunk"/>
+        <meta property="og:title" content="Shakeel Mohamed | An actually helpful git diff of your uncommitted changes"/>
         <meta property="og:image" content="https://shakeelmohamed.com/img/headshot.jpg"/>
-        <meta property="og:description" content="This summer I received an unexpected opportunity to be a software engineer intern..."/>
+        <meta property="og:description" content="So you just made a bunch of changes to a git project, good job. Now you want to review your changes before committing, even better."/>
         <link href="https://unpkg.com/basscss@8.0.1/css/basscss.min.css" rel="stylesheet"/>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&amp;display=swap" rel="stylesheet" type="text/css"/>
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
@@ -23,7 +23,6 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script>
-        <link href="https://shakeelmohamed.com/posts/2013-09-20-summer-with-splunk/" rel="canonical">
     </head>
     <body>
         <header class="flex center">
@@ -42,17 +41,28 @@
         </header>
         <section class="flex center">
             <div class="flex-col mx-auto">
-                <h4>September 20, 2013</h4>
-                <div class="post-content"><h1 id="summerwithsplunk">Summer with Splunk</h1>
-<p>This summer I received an unexpected opportunity to be a software engineer intern at Splunk’s Seattle office.</p>
-<p><img src="./2013-09-20-safeco-field.jpg" alt="View of Safeco Field from the Splunk suite" /></p>
-<p>I applied fully on a whim. I mean really. I didn’t even bother writing a cover letter, it seemed impossibly out of reach for me. But somehow my resume alone was enough to continue the hiring process, and I did well enough in my interviews to get an offer. No complaints from me! :)</p>
-<p>My first work task involved minor changes to the <a href="http://dev.splunk.com/view/SP-CAAAECM">Splunk SDK for JavaScript</a>. This got me re-interested in Node.js, and prompted me to begin building <a href="https://github.com/shakeelmohamed/today-was">Today Was</a> in Node.</p>
-<p>Then I transitioned into bringing <a href="http://docs.splunk.com/Documentation/Splunk/5.0.4/AdvancedDev/ModInputsIntro">modular input</a> support to the <a href="http://dev.splunk.com/view/SP-CAAAEBB">Splunk SDK for Python in version 1.1</a>. I really appreciated this task because it was a major feature that developers would use, and a chance for me to learn most of Python in about 3-4 weeks (crazy!).</p>
-<p>But it hasn’t been all work. A few weeks ago the whole office went to a Mariner’s game for “intern day”, although I’m no longer a baseball fan I didn’t mind the view from a suite!</p>
-<p>Since that time, I’ve been working on a demo using the new <a href="http://dev.splunk.com/view/app-framework/SP-CAAAEMA">Splunk App Framework Beta</a>.</p>
-<p>A couple random things I’ve loved about my internship include getting to use a MacBook Pro and a standing desk.</p>
-<p>Earlier this week my <a href="http://blogs.splunk.com/2013/09/10/the-splunk-sdk-for-python-gets-modular-input-support/">blog post</a> on my work on the Splunk SDK for Python went live, which has me re-interested in blogging. Next Friday would’ve been the last day of my internship, but my internship has been extended to part-time through the school year — PERFECT.</p></div>
+                <h4>April 21, 2015</h4>
+                <div class="post-content"><h1 id="anactuallyhelpfulgitdiffofyouruncommittedchanges">An actually helpful git diff of your uncommitted changes</h1>
+<p>TL;DR</p>
+<pre><code class="hljs bash language-bash">git diff -w --patience
+</code></pre>
+<p>So you just made a bunch of changes to a git project, good job. Now you want to review your changes before committing, even better. (I like where you're going with this, please continue.) Then you do what you usually do: <code>git diff</code> but this time, the entire file shows up as different.</p>
+<p>Why does the diff say the entire file changed? A couple reasons could be:</p>
+<ol>
+<li>Whitespace changes (tabs vs. spaces, indentation, etc.)</li>
+<li>File contents got moved in a strange way (rearranging blocks of code, etc.)</li>
+</ol>
+<p>So, I think that's sufficient justification for the <code>-w</code>flag which ignores whitespace.</p>
+<p>Okay great, so now the diff is slightly less weird. But my extremely modified file(s) still has a messy diff… We can do better! Just be patient.</p>
+<p>But, what the hell is that <code>--patience</code> flag? Long story short, patience is a different diff-ing algorithm (read more about it on <a href="http://stackoverflow.com/questions/4045017/what-is-git-diff-patience-for">StackOverflow</a>). Using the patience algorithm when computing a diff can be helpful if the file has changed drastically, but in an unusual way. I've seen this come up when:</p>
+<ol>
+<li>Merging very divergent branches</li>
+<li>Immediately after a massive refactor</li>
+<li>Changing variable and/or function names in a strange way - usually due to divergent branches</li>
+</ol>
+<p>Now that that's out of the way, review your changes and…</p>
+<pre><code class="hljs bash language-bash">git commit -m <span class="hljs-string">"Use git diff -w --patience if you're diffing this"</span>
+</code></pre></div>
             </div>
         </section>
         <script type="application/ld+json">
