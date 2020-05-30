@@ -178,6 +178,7 @@ function buildRSSFeed(blogs) {
     });
 
     blogs.forEach(function(blog) {
+        // TODO: need the url
         feed.item({
             title: blog.title,
             description: blog.description || "",

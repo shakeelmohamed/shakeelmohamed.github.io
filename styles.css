@@ -54,6 +54,13 @@ ul.no-indent {
     display: block;
 }
 
+.post-content figcaption {
+    max-width: 60%;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+
 .post-content iframe {
     margin: 0 auto;
     display: block;
