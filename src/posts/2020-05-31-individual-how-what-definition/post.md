@@ -2,6 +2,8 @@
 
 > If you haven't read my previous post on [Finding Your Individual Why Statement](../2020-04-30-individual-why-discovery), this one won't make much sense so please start there.
 
+<!--TODO: AFF LINK find your why-->
+
 To quickly recap, a WHY statement follows the format: *To [**contribution**] so that [**impact**]*. My individual why statement is:
 
 > **To relentlessly pursue being world-class, so that we can experience beyond what's possible.**
@@ -9,6 +11,21 @@ To quickly recap, a WHY statement follows the format: *To [**contribution**] so 
 That's one epic statement that gets me excited, and ready to jump out of bed in the morning! So now let's get into defining my HOWs and WHATs.
 
 ## HOWs
+
+My HOWs, or my competitive advantages are:
+
+* Outwork deficiencies
+  - Any weakness can be overcome with great effort.
+* Create the future
+   - Start with the end in mind, work towards the plan, adjust as needed.
+* Seek growth constantly
+  - Knowledge is power, so learn from the greats; success leaves clues.
+* Enable understanding through transparency
+  - Use clear & direct communication, translate if necessary.
+* Think from a unique perspective
+  - Think inside, outside, and about the box itself.
+
+These are AWESOME! They feel like my own core life [principles! (Shout out to Ray Dalio's incredible book, Principles)](TODO: AFF LINK).
 
 ## WHATs
 
@@ -32,3 +49,9 @@ So instead, I wanted to make my WHATs a little more fluid to span multiple "task
 * Elevate - constantly raising standards
 * Align - getting others on the same page
 * Lead - selecting a direction, and getting others to join me
+
+Reducing those down to 4 words feels like it summarizes my approach to any task: **synthesize**, **elevate**, **align**, and **lead** (which is easy to remember with an acronym **SEAL**). I believe those four happen are in order as well: before elevating one must get all the information (synthesize), and before leading one must have all of their focus on a clear direction (alignment).
+
+## Thanks for reading!
+
+I plan to continue writing about Golden Circle Theory and WHY discovery as I learn more through the process. There's still a lot I have to learn as a facilitator, and the really interesting stuff: group WHY discovery. I have some things planned and hope to share them soon. If you have any questions about WHY discovery - let's talk!
