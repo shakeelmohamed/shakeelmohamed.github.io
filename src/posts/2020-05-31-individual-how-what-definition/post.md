@@ -2,15 +2,25 @@
 
 > If you haven't read my previous post on [Finding Your Individual Why Statement](../2020-04-30-individual-why-discovery), this one won't make much sense so please start there.
 
-<!--TODO: AFF LINK find your why-->
-
 To quickly recap, a WHY statement follows the format: *To [**contribution**] so that [**impact**]*. My individual why statement is:
 
 > **To relentlessly pursue being world-class, so that we can experience beyond what's possible.**
 
 That's one epic statement that gets me excited, and ready to jump out of bed in the morning! So now let's get into defining my HOWs and WHATs.
 
-## HOWs
+I highly recommend reading [Find Your Why](https://amzn.to/2yOfH8T) if Golden Circle Theory is appealing to you.
+
+## Okay, now what?
+
+I got the WHY, awesome. What I do with this cool sentence now?
+Let's revisit the Golden Circle, WHY is at the center which is followed by the HOWs and the WHATs. 
+
+![Golden Circle Theory](https://simonsinek.com/wp-content/uploads/2019/02/GC_slide-2.jpg
+
+I'll expound upon these two in detail before sharing my individual HOWs and WHATs so will make a bit more sense.
+
+
+## HOWs 
 
 My HOWs, or my competitive advantages are:
 
@@ -25,7 +35,7 @@ My HOWs, or my competitive advantages are:
 * Think from a unique perspective
   - Think inside, outside, and about the box itself.
 
-These are AWESOME! They feel like my own core life [principles! (Shout out to Ray Dalio's incredible book, Principles)](TODO: AFF LINK).
+These are AWESOME! They feel like my own core life principles! (Shout out to Ray Dalio's incredible book, [Principles)](https://amzn.to/2Mfxkl9).
 
 ## WHATs
 
