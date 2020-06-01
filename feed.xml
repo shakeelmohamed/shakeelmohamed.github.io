@@ -4,13 +4,20 @@
         <description><![CDATA[Recent Blog Posts]]></description>
         <link>https://ShakeelMohamed.com/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sat, 30 May 2020 06:35:19 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 01 Jun 2020 06:59:22 GMT</lastBuildDate>
         <atom:link href="https://ShakeelMohamed.com/rss.xml" rel="self" type="application/rss+xml"/>
         <webMaster><![CDATA[iam@shakeel.xyz (Shakeel Mohamed)]]></webMaster>
         <item>
-            <title><![CDATA[Finding Your Individual Why Statement]]></title>
+            <title><![CDATA[Defining Your Individual HOWs and WHATs (Golden Circle Theory, part 2)]]></title>
+            <description><![CDATA[As a follow up from my previous post, I went through the process of completing my individual Golden Circle]]></description>
+            <guid isPermaLink="false">Defining Your Individual HOWs and WHATs (Golden Circle Theory, part 2)</guid>
+            <dc:creator><![CDATA[iam@shakeel.xyz (Shakeel Mohamed)]]></dc:creator>
+            <pubDate>Sun, 31 May 2020 07:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Finding Your Individual Why Statement (Golden Circle Theory, part 1)]]></title>
             <description><![CDATA[I've been intrigued by Simon Sinek's work for many years. I knew his Golden Circle Theory is an incredible idea but, I didn't know how to apply it in my daily life.]]></description>
-            <guid isPermaLink="false">Finding Your Individual Why Statement</guid>
+            <guid isPermaLink="false">Finding Your Individual Why Statement (Golden Circle Theory, part 1)</guid>
             <dc:creator><![CDATA[iam@shakeel.xyz (Shakeel Mohamed)]]></dc:creator>
             <pubDate>Thu, 30 Apr 2020 07:00:00 GMT</pubDate>
         </item>
