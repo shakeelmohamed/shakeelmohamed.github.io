@@ -4,7 +4,7 @@ June 2020. I had no idea where I would be 10 years ago when I graduated from hig
 
 That summer of 2010 I began to teach myself to write C# code, which gave me a decent familiarity with object oriented programming before I began taking computer science courses at Bellevue College that fall.
 
-More importantly, I began an incredible journey of personal development. One day that summer I found this old book that my uncle had given me a few years ago. I read these words on the cover and felt like I had discovered buried treasure: **“This book could be worth a million dollars to ”**. I hadn't even opened [_Think and Grow Rich_](https://amzn.to/2YMBlV8) until that moment, and it changed my life forever!
+More importantly, I began an incredible journey of personal development. One day that summer I found this old book that my uncle had given me a few years ago. I read these words on the cover and felt like I had discovered buried treasure: **“This book could be worth a million dollars to you”**. I hadn't even opened [_Think and Grow Rich_](https://amzn.to/2YMBlV8) until that moment, and it changed my life forever!
 
 > **These are 10 lessons I've learned throughout this 10 year journey of my adult life. These lessons are in chronological order, and each lesson was learned from or around the time I read a specific book.**
 
