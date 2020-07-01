@@ -4,9 +4,16 @@
         <description><![CDATA[Recent Blog Posts]]></description>
         <link>https://ShakeelMohamed.com/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 01 Jun 2020 06:59:22 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 01 Jul 2020 07:09:59 GMT</lastBuildDate>
         <atom:link href="https://ShakeelMohamed.com/rss.xml" rel="self" type="application/rss+xml"/>
         <webMaster><![CDATA[iam@shakeel.xyz (Shakeel Mohamed)]]></webMaster>
+        <item>
+            <title><![CDATA[10 Lessons From My 10 Year Journey]]></title>
+            <description><![CDATA[It's been a decade since I graduated from high school, here's 10 highlights from the past 10 years]]></description>
+            <guid isPermaLink="false">10 Lessons From My 10 Year Journey</guid>
+            <dc:creator><![CDATA[iam@shakeel.xyz (Shakeel Mohamed)]]></dc:creator>
+            <pubDate>Tue, 30 Jun 2020 07:00:00 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[Defining Your Individual HOWs and WHATs (Golden Circle Theory, part 2)]]></title>
             <description><![CDATA[As a follow up from my previous post, I went through the process of completing my individual Golden Circle]]></description>
