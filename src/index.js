@@ -4,6 +4,7 @@ var RSS = require("rss");
 var path = require("path");
 var showdown  = require("showdown");
 var showdownHighlight = require("showdown-highlight");
+var Async = require("async");
 
 // Create a function for compiling pug
 var builder = pug.compileFile(path.join(__dirname, "./views/index.pug"), {pretty: "    "});
@@ -168,7 +169,7 @@ var globals = {
 var html = builder(globals);
 
 // Build the RSS feed
-function buildRSSFeed(blogs) {
+function buildRSSFeed(blogs, done) {
     var feed = new RSS({
         title: "Shakeel Mohamed's Recent Blog Posts",
         description: "Recent Blog Posts",
@@ -188,23 +189,31 @@ function buildRSSFeed(blogs) {
     });
 
     var xml = feed.xml({indent: true});
-    fs.writeFile(path.join(__dirname, "../feed.xml"), xml, function(err) {
-        if (err) {
-            console.error(err);
-        }
-        else {
-            console.log("All done! 💯");
-        }
-    });
+    fs.writeFile(path.join(__dirname, "../feed.xml"), xml, done); 
 }
 
-// Update index.html
-fs.writeFile(path.join(__dirname, "../index.html"), html, function(err) {
-    if (err) {
-        console.error(err);
+function buildBlogListPage(done) {
+    console.log(globals.blogs.length);
+    done();
+}
+
+Async.waterfall([
+    function(done) {
+        // TODO: clean up html files for md files that don't exist
+        fs.writeFile(path.join(__dirname, "../index.html"), html, done);
+    },
+    function(done) {
+        buildBlogListPage(done);
+    },
+    function(done) {
+        buildRSSFeed(blogs, done);
+    }],
+    function(err) {
+        if (err) {
+            console.error(err);
+        } else {
+            console.log("All done! 💯");
+        }
     }
-    else {
-        buildRSSFeed(blogs);
-    }
-    // TODO: clean up html files for md files that don't exist
-});
+);
+
