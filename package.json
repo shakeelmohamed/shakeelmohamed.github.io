@@ -28,7 +28,7 @@
     "rss": "^1.2.2",
     "showdown": "^1.9.1",
     "showdown-highlight": "^2.1.4",
-    "snyk": "^1.316.1"
+    "snyk": "^1.360.0"
   },
   "engines": {
     "node": "4.x"
