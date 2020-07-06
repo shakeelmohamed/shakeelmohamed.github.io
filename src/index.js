@@ -202,6 +202,10 @@ function buildPostListPage(blogs) {
     var pageArgs = globals;
     pageArgs.blogs = blogs;
     pageArgs.relativePrefix = "..";
+    for (var i = 0; i < pageArgs.blogs.length; i++) {
+        pageArgs.blogs[i].url = pageArgs.blogs[i].url.replace("posts/", "");
+        console.log(pageArgs.blogs[i])
+    }
     var content = builder(pageArgs);
     writeFileSync(["../posts", "index.html"], content);
 }
