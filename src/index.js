@@ -4,6 +4,7 @@ var RSS = require("rss");
 var path = require("path");
 var showdown  = require("showdown");
 var showdownHighlight = require("showdown-highlight");
+var Async = require("async");
 
 // Create a function for compiling pug
 var builder = pug.compileFile(path.join(__dirname, "./views/index.pug"), {pretty: "    "});
@@ -11,7 +12,6 @@ var builder = pug.compileFile(path.join(__dirname, "./views/index.pug"), {pretty
 // Read blogs.json as JSON
 var blogs = JSON.parse(fs.readFileSync(path.join(__dirname, "./data/blogs.json")).toString());
 
-// TODO: create a blog post list page that ends up at posts/index.html (reuse the component from homepage), with post thumbnails
 // TODO: once all medium.com posts are migrated into this repo, turn on medium monetization
 
 // TODO: update sitemap.txt with blog URLs
@@ -45,7 +45,7 @@ function buildBlogPages(blogs) {
             blogs[i].content = converter.makeHtml(rawMarkdown);
             var legacyPageHTML = postBuilder({"post": blogs[i], "relativePrefix": ".."});
             var legacyFileName = blogs[i].source + ".html";
-            fs.writeFileSync(path.join(__dirname, "..", "posts", legacyFileName), legacyPageHTML);
+            writeFileSync(["..", "posts", legacyFileName], legacyPageHTML);
             delete blogs[i].content;
         }
         
@@ -54,7 +54,7 @@ function buildBlogPages(blogs) {
         if (!fs.existsSync(path.join(__dirname, "..", "posts", sourceDir))) {
             fs.mkdirSync(path.join(__dirname, "..", "posts", sourceDir));    
         }
-        fs.writeFileSync(path.join(__dirname, "..", "posts", sourceDir, "index.html"), pageHTML);
+        writeFileSync(["..", "posts", sourceDir, "index.html"], pageHTML);
 
         // Move images from src/posts/${dirName}/ to posts/${dirName}
         var sourceFiles = fs.readdirSync(sourcePath);
@@ -85,6 +85,12 @@ var globals = {
         "Instagram": "http://instagram.com/shakeelxyz",
         "Facebook": "http://www.facebook.com/Shakeelxyz"
     },
+    "sitemap": [
+        "https://shakeelmohamed.com/",
+        "https://shakeelmohamed.com/feed.xml",
+        "https://shakeelmohamed.com/angular-geocoding-demo",
+        "https://shakeelmohamed.com/htmlslyde"
+    ],
     "projects": [ // TODO: logo, screenshot, start/end date
         {
             "name": "Zen Audio Player",
@@ -168,7 +174,7 @@ var globals = {
 var html = builder(globals);
 
 // Build the RSS feed
-function buildRSSFeed(blogs) {
+function buildRSSFeed(blogs, done) {
     var feed = new RSS({
         title: "Shakeel Mohamed's Recent Blog Posts",
         description: "Recent Blog Posts",
@@ -188,23 +194,63 @@ function buildRSSFeed(blogs) {
     });
 
     var xml = feed.xml({indent: true});
-    fs.writeFile(path.join(__dirname, "../feed.xml"), xml, function(err) {
-        if (err) {
-            console.error(err);
-        }
-        else {
-            console.log("All done! 💯");
-        }
-    });
+    writeFile("../feed.xml", xml, done);
 }
 
-// Update index.html
-fs.writeFile(path.join(__dirname, "../index.html"), html, function(err) {
-    if (err) {
-        console.error(err);
+function buildPostListPage(blogs) {
+    var builder = getPugBuilder("post-list");
+    var pageArgs = globals;
+    pageArgs.blogs = blogs;
+    pageArgs.relativePrefix = "..";
+    for (var i = 0; i < pageArgs.blogs.length; i++) {
+        pageArgs.blogs[i].url = pageArgs.blogs[i].url.replace("posts/", "");
     }
-    else {
-        buildRSSFeed(blogs);
+    var content = builder(pageArgs);
+    writeFileSync(["../posts", "index.html"], content);
+}
+
+function writeFileSync(destinations, contents) {
+    destinations.unshift(__dirname);
+    return fs.writeFileSync(path.join(...destinations), contents);
+}
+
+function writeFile(destination, contents, done) {
+    fs.writeFile(path.join(__dirname, destination), contents, done);
+}
+
+function getPugBuilder(viewName) {
+    return pug.compileFile(path.join(__dirname, `./views/${viewName}.pug`), {pretty: "    "});
+}
+
+function buildSitemap(blogs) {
+    var prefix = globals.sitemap[0];
+    var sitemap = globals.sitemap.join("\n");
+    blogs.forEach(function(blog) {
+        if (blog.url.indexOf("http") !== 0) {
+            sitemap += `\n${prefix}${blog.url}`;
+        }
+    });
+
+    writeFileSync(["../sitemap.txt"], sitemap);
+}
+
+Async.waterfall([
+    function(done) {
+        // TODO: clean up html files for md files that don't exist
+        writeFile("../index.html", html, done);
+    },
+    function(done) {
+        // TODO: create a blog post list page that ends up at posts/index.html (reuse the component from homepage), with post thumbnails
+        buildSitemap(blogs);
+        buildPostListPage(blogs);
+        buildRSSFeed(blogs, done);
+    }],
+    function(err) {
+        if (err) {
+            console.error(err);
+        } else {
+            console.log("All done! 💯");
+        }
     }
-    // TODO: clean up html files for md files that don't exist
-});
+);
+
