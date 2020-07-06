@@ -204,7 +204,6 @@ function buildPostListPage(blogs) {
     pageArgs.relativePrefix = "..";
     for (var i = 0; i < pageArgs.blogs.length; i++) {
         pageArgs.blogs[i].url = pageArgs.blogs[i].url.replace("posts/", "");
-        console.log(pageArgs.blogs[i])
     }
     var content = builder(pageArgs);
     writeFileSync(["../posts", "index.html"], content);
@@ -242,8 +241,8 @@ Async.waterfall([
     },
     function(done) {
         // TODO: create a blog post list page that ends up at posts/index.html (reuse the component from homepage), with post thumbnails
-        buildPostListPage(blogs);
         buildSitemap(blogs);
+        buildPostListPage(blogs);
         buildRSSFeed(blogs, done);
     }],
     function(err) {
