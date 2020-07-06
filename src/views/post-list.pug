@@ -1,28 +1,28 @@
 include includes/mixins.pug
 
+- var headshot="https://shakeelmohamed.com/img/headshot.jpg";
+- var desc="Polyglot software developer energized by delivering customer value. Raises standards with comprehensive code reviews. Boosts engineering productivity with process automation. Committed to enhancing team dynamics through transparent communication.";
+
 doctype html
 html(lang="en")
     head
-        +head(relativePrefix, "Shakeel Mohamed | " + post.title, "https://shakeelmohamed.com/img/headshot.jpg", post.description, post.canonical)
+        +head(relativePrefix, "Shakeel Mohamed | Blog Posts", "https://shakeelmohamed.com/img/headshot.jpg", headshot, desc)
         link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css")
         script(src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js")
         script.
             hljs.initHighlightingOnLoad();
-        if post.canonical
-            link(href=post.canonical, rel="canonical")
     body
         header.flex.center
             div.mx-auto
                 ul.nav-links.no-indent
                     +navLink(relativePrefix, "Home")
                     +navLink("https://ntrsct.com/", "ntrsct designs")
-                    +navLink(relativePrefix + "/index.html#projects", "Projects")
-                    +navLink(relativePrefix + "/posts", "Blog Posts")
-                    +navLink(relativePrefix + "/index.html#mentions", "Mentions")
                 div.nav.center
                     h1.inline.h1.pr2 Shakeel Mohamed
         section.flex.center
             div.flex-col.mx-auto
-                h4 #{post.date}
-                div.post-content()!= post.content
+                h2 Blog Posts
+                ul.section-list.no-indent
+                    each item in blogs
+                        +blogPost(item)
         include includes/footer.pug
