@@ -37,7 +37,7 @@ As a preview, I've included a list of all 24 songs, artists and the lyrics I use
 23. Kobe by Chief Keef - "I been ballin' so damn hard I swear I think that I'm Kobe"
 24. CREAM by Wu-Tang Clan - "Handcuffed in the back of a bus, forty of us life a short shouldn't be so rough"
 
-![Posters, side by side](./posters-side-by-side.png)
+![Posters, side by side](./posters-side-by-side-two.jpg)
 
 ## Here's my 4 favorite posters from the month!
 
