@@ -4,9 +4,16 @@
         <description><![CDATA[Recent Blog Posts]]></description>
         <link>https://ShakeelMohamed.com/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 06 Jul 2020 06:48:56 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 14 Aug 2020 06:31:57 GMT</lastBuildDate>
         <atom:link href="https://ShakeelMohamed.com/rss.xml" rel="self" type="application/rss+xml"/>
         <webMaster><![CDATA[iam@shakeel.xyz (Shakeel Mohamed)]]></webMaster>
+        <item>
+            <title><![CDATA[CodeLabs 2020: Mentoring College Students During a Global Pandemic]]></title>
+            <description><![CDATA[A quick recap of my experience mentoring two college students during a virtual internship program with Codeday]]></description>
+            <guid isPermaLink="false">CodeLabs 2020: Mentoring College Students During a Global Pandemic</guid>
+            <dc:creator><![CDATA[iam@shakeel.xyz (Shakeel Mohamed)]]></dc:creator>
+            <pubDate>Tue, 11 Aug 2020 07:00:00 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[10 Lessons From My 10 Year Journey]]></title>
             <description><![CDATA[It's been a decade since I graduated from high school, here's 10 highlights from the past 10 years]]></description>
@@ -55,7 +62,7 @@
         </item>
         <item>
             <title><![CDATA[How to Love Yourself (A Different Way)]]></title>
-            <description><![CDATA[Now, imagine going back in time to that moment and talking to your younger self. What would you say to comfort them, to make them feel safe, to make them feel loved?]]></description>
+            <description><![CDATA[Imagine going back in time and talking to your younger self. What would you say to comfort them, to make them feel safe, to make them feel loved?]]></description>
             <guid isPermaLink="false">How to Love Yourself (A Different Way)</guid>
             <dc:creator><![CDATA[iam@shakeel.xyz (Shakeel Mohamed)]]></dc:creator>
             <pubDate>Mon, 27 Nov 2017 08:00:00 GMT</pubDate>

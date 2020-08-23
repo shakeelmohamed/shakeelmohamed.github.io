@@ -14,7 +14,6 @@ var blogs = JSON.parse(fs.readFileSync(path.join(__dirname, "./data/blogs.json")
 
 // TODO: once all medium.com posts are migrated into this repo, turn on medium monetization
 
-// TODO: update sitemap.txt with blog URLs
 // TODO: add a prebuild step to run some validation that all posts are in blogs.json
 // Build the blog pages first and update their URLs
 function buildBlogPages(blogs) {
@@ -83,9 +82,10 @@ var globals = {
         "Goodreads": "https://www.goodreads.com/user/show/31081269-shakeel",
         "Twitter": "https://twitter.com/_shakeel",
         "Instagram": "http://instagram.com/shakeelxyz",
-        "Facebook": "http://www.facebook.com/Shakeelxyz"
+        "Facebook": "http://www.facebook.com/Shakeelxyz",
+        "Behance": "https://www.behance.net/shakeelxyz"
     },
-    "sitemap": [
+    "sitemap": [ // TODO: update sitemap.txt with blog URLs
         "https://shakeelmohamed.com/",
         "https://shakeelmohamed.com/feed.xml",
         "https://shakeelmohamed.com/angular-geocoding-demo",
@@ -112,6 +112,16 @@ var globals = {
         }
     ],
     "mentions": [
+        {
+            "date": "Aug 04, 2020",
+            "title": "Announcing the Newest Version of SimData",
+            "url": "https://www.splunk.com/en_us/blog/tips-and-tricks/introducing-simdata-v1-2.html"
+        },
+        {
+            "date": "July 20, 2020",
+            "title": "Congratulations to the new IPN national leadership team on their appointments! - @officialipn on Instagram",
+            "url": "https://www.instagram.com/p/CC4tWpHlI2k/"
+        },
         {
             "date": "May 21, 2020",
             "title": "Meet Shakeel Mohamed. He's the founder of ntrsct designs - @thehealthaisle on Instagram",
