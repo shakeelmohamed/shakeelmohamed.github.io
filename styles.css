@@ -23,6 +23,8 @@ ul.no-indent {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
+    max-width: 250px;
+    width: 250px;
 }
 
 .social-links {
