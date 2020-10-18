@@ -1,8 +1,8 @@
 # Escaping the Trap of Mediocre Coffee
 
-Life is too short for bad coffee.
+**Life is too short for bad coffee.**
 
-During the p a n d e m i c (are we still calling it that, or did we come up with a new name?), restaurants and coffee shops were forced to shut down for public health reasons. Now, I was never a huge coffee drinker and I'm still not. But after a few weeks I was feeling the itch for a nice americano or iced coffee. About a year ago I had a mission to get rid of my Keurig coffee machine since I'd been exposed to better coffee over the years. It was time to get rid of that bug clunky think on my kitchen country, except I had a lot of those little k-cup things that I was not about to throw away.
+During the p a n d e m i c (are we still calling it that, or did we come up with a trendier name?), restaurants and coffee shops were forced to shut down for public health reasons. Now, I was never a huge coffee drinker and I'm still not. But after a few weeks I was feeling the itch for a nice americano or iced coffee. About a year ago I had a mission to get rid of my Keurig coffee machine since I'd been exposed to better coffee over the years. It was time to get rid of that bug clunky think on my kitchen country, except I had a lot of those little k-cup things that I was not about to throw away.
 
 
 
