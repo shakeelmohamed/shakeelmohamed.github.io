@@ -94,7 +94,7 @@ var globals = {
     "projects": [ // TODO: logo, screenshot, start/end date
         {
             "name": "Zen Audio Player",
-            "url": "https://ZenPlayer.audio",
+            "url": "https://zen-audio-player.github.io/",
             "source": "https://github.com/zen-audio-player",
             "description": "Listen to YouTube videos without the distracting visuals"
         },
