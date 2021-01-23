@@ -37,6 +37,15 @@ function buildBlogPages(blogs) {
             throw new Error("mdPath doesn't look right " +  JSON.stringify(blogs[i]));
         }
 
+        // open graph override
+        blogs[i].og = blogs[i].og || {};
+        blogs[i].og.title = "Shakeel Mohamed | " + blogs[i].title;
+        if (blogs[i].og.image) {
+            blogs[i].og.image = "https://shakeelmohamed.com/" + path.join(sourceDir, blogs[i].og.image).replace("../", "");
+        } else {
+            blogs[i].og.image = "https://shakeelmohamed.com/img/headshot.jpg";
+        }
+
         // For posts before 1 directory per post
         if (blogs[i].canonical) {
             var rawMarkdown = fs.readFileSync(mdPath).toString();
@@ -85,7 +94,7 @@ var globals = {
         "Facebook": "http://www.facebook.com/Shakeelxyz",
         "Behance": "https://www.behance.net/shakeelxyz"
     },
-    "sitemap": [ // TODO: update sitemap.txt with blog URLs
+    "sitemap": [
         "https://shakeelmohamed.com/",
         "https://shakeelmohamed.com/feed.xml",
         "https://shakeelmohamed.com/angular-geocoding-demo",
@@ -250,7 +259,6 @@ Async.waterfall([
         writeFile("../index.html", html, done);
     },
     function(done) {
-        // TODO: create a blog post list page that ends up at posts/index.html (reuse the component from homepage), with post thumbnails
         buildSitemap(blogs);
         buildPostListPage(blogs);
         buildRSSFeed(blogs, done);
