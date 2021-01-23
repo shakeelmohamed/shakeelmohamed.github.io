@@ -3,7 +3,10 @@
         "date": "Jan 22, 2021",
         "title": "Did I Just Discover the Simplest Success Formula? (5 Actionable Steps)",
         "source": "../posts/2021-01-22-5-steps-to-success",
-        "description": "After a lot of reflection, I think I've uncovered something special here: the simplest formula for success!"
+        "description": "After a lot of reflection, I think I've uncovered something special here: the simplest formula for success!",
+        "og": {
+            "image": "./header.png"
+        }
     },
     {
         "date": "Aug 11, 2020",
