@@ -20,7 +20,7 @@ It starts with trying to *understand what the thing is you're trying to learn.* 
 
 ## Step 2: Apply 💪🏽
 
-At this point, you have an intellectual understanding of the skill is and how to start practicing it. I think this is where many people go wrong. When your first start a new skill, you will suck. That's the whole point - *you're trying to get better*! Applying your knowledge is the only way to turn ideas into tangible skills. To practice speed reading, you might time yourself reading one page twice per day while tracking your speed.
+At this point, you have an intellectual understanding of the skill is and how to start practicing it. I think this is where many people go wrong. When you first start a new skill, you will suck. That's the whole point - *you're trying to get better*! Applying your knowledge is the only way to turn ideas into tangible skills. To practice speed reading, you might time yourself reading one page twice per day while tracking your speed.
 
 ## Step 3: Grow 🚀
 
