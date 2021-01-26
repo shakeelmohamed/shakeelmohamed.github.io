@@ -1,12 +1,13 @@
 include includes/mixins.pug
 
 - var headshot="https://shakeelmohamed.com/img/headshot.jpg";
+- var opengraphImage = "https://shakeelmohamed.com/img/shakeel-mohamed-opengraph.png";
 - var desc="I run a design consulting practice called ntrsct designs, focused on supporting small businesses through design and brand strategy. I'm a strategic thinker, fascinated by identifying problems and helping align resources towards an effective solution. I aspire to implement processes that eliminate confusion, enable focus & help small businesses deliver true value to their customers.";
 doctype html
 html(lang="en")
 
     head
-        +head(".", "Shakeel Mohamed", headshot, desc)
+        +head(".", "Shakeel Mohamed", opengraphImage, desc)
     body
         header.flex.center
             div.mx-auto
