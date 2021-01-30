@@ -43,7 +43,7 @@ function buildBlogPages(blogs) {
         if (blogs[i].og.image) {
             blogs[i].og.image = "https://shakeelmohamed.com/" + path.join(sourceDir, blogs[i].og.image).replace("../", "");
         } else {
-            blogs[i].og.image = "https://shakeelmohamed.com/img/headshot.jpg";
+            blogs[i].og.image = "https://shakeelmohamed.com/img/shakeel-mohamed-opengraph.png";
         }
 
         // For posts before 1 directory per post
