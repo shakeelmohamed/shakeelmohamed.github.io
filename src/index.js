@@ -85,14 +85,14 @@ function buildBlogPages(blogs) {
 var globals = {
     "blogs": buildBlogPages(blogs),
     "socialLinks": {
-        "GitHub": "https://github.com/shakeelmohamed",
-        "Stack Overflow": "http://stackoverflow.com/users/2785681/shakeel",
         "LinkedIn": "http://linkedin.com/in/shakeelmohamed",
-        "Goodreads": "https://www.goodreads.com/user/show/31081269-shakeel",
-        "Twitter": "https://twitter.com/_shakeel",
         "Instagram": "http://instagram.com/shakeelxyz",
+        "Goodreads": "https://www.goodreads.com/user/show/31081269-shakeel",
         "Facebook": "http://www.facebook.com/Shakeelxyz",
-        "Behance": "https://www.behance.net/shakeelxyz"
+        "Behance": "https://www.behance.net/shakeelxyz",
+        "Clubhouse": "https://joinclubhouse.com/@shakeelxyz",
+        "Twitter": "https://twitter.com/_shakeel",
+        "GitHub": "https://github.com/shakeelmohamed"
     },
     "sitemap": [
         "https://shakeelmohamed.com/",
