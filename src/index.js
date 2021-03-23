@@ -122,6 +122,11 @@ var globals = {
     ],
     "mentions": [
         {
+            "date": "March 12, 2021",
+            "title": "Agile Mentality in Business with Love Nescio - @lovenescio on Instagram",
+            "url": "https://www.instagram.com/p/CMVpHC7AeDk/"
+        },
+        {
             "date": "Aug 04, 2020",
             "title": "Announcing the Newest Version of SimData",
             "url": "https://www.splunk.com/en_us/blog/tips-and-tricks/introducing-simdata-v1-2.html"
