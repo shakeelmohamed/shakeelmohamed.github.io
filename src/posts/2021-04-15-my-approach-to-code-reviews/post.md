@@ -51,9 +51,9 @@ Bottom line: think with the end customer in mind.
 
 ## 5. At a glance, how does this change impact performance?
 
-Software performance is not one of my strengths as a developer, but it’s often on my mind during code reviews. Obvious things to pay attention to are any kind of multithreading, recursion or loops, especially with larger input sizes. For example, spinning up 5 process threads is not necessarily a bad thing, however spinning up 5 million threads is going to cause some performance issues.
+Software performance is not one of my strengths as a developer, but it’s often on my mind during code reviews. Obvious things to pay attention to are any kind of multithreading, recursion, or loops, especially with larger input sizes. For example, spinning up 5 process threads is not necessarily a bad thing, however, spinning up 5 million threads is going to cause some performance issues.
 
-When working with any kind of network connectivity, the amount of network requests can dramatically impact the performance of an application. If there’s an entity that can be directly retrieved with an HTTP GET call, that’s usually better than a using an HTTP GET call for a collection of entities to then find the the specific one you need. These bottlenecks can be tougher to track down when working with multiple layers of abstraction in a codebase.
+When working with any kind of network connectivity, the number of network requests can dramatically impact the performance of an application. If there’s an entity that can be directly retrieved with an HTTP GET call, that’s usually better than using an HTTP GET call for a collection of entities to then find the specific one you need. These bottlenecks can be tougher to track down when working with multiple layers of abstraction in a codebase.
 
 With a careful analysis of the code, I believe many performance issues can be caught before requiring any sort of performance testing. Who knows, you might even find some ways to optimize the existing code’s performance.
 
