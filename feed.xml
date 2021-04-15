@@ -4,9 +4,16 @@
         <description><![CDATA[Recent Blog Posts]]></description>
         <link>https://ShakeelMohamed.com/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Tue, 23 Mar 2021 05:52:55 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 15 Apr 2021 22:09:46 GMT</lastBuildDate>
         <atom:link href="https://ShakeelMohamed.com/rss.xml" rel="self" type="application/rss+xml"/>
         <webMaster><![CDATA[iam@shakeel.xyz (Shakeel Mohamed)]]></webMaster>
+        <item>
+            <title><![CDATA[My Approach to Code Reviews]]></title>
+            <description><![CDATA[This is my attempt to codify the instinctive and intuitive approach I take to code reviews.]]></description>
+            <guid isPermaLink="false">My Approach to Code Reviews</guid>
+            <dc:creator><![CDATA[iam@shakeel.xyz (Shakeel Mohamed)]]></dc:creator>
+            <pubDate>Thu, 15 Apr 2021 07:00:00 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[Did I Just Discover the Simplest Success Formula? (5 Actionable Steps)]]></title>
             <description><![CDATA[After a lot of reflection, I think I've uncovered something special here: the simplest formula for success!]]></description>
