@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Shakeel Mohamed | My Approach to Code Reviews</title>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="chrome=1"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+        <meta property="og:title" content="Shakeel Mohamed | My Approach to Code Reviews"/>
+        <meta property="og:image" content="https://shakeelmohamed.com/posts/2021-04-15-my-approach-to-code-reviews/header.png"/>
+        <meta property="og:description" content="This is my attempt to codify the instinctive and intuitive approach I take to code reviews."/>
+        <link href="https://unpkg.com/basscss@8.0.1/css/basscss.min.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&amp;display=swap" rel="stylesheet" type="text/css"/>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+        <link rel="manifest" href="/site.webmanifest"/>
+        <link href="../../styles.css" rel="stylesheet"/>
+        <link href="../../feed.xml" rel="alternate" type="application/rss+xml" title="RSS Feed for ShakeelMohamed.com"/> 
+        <!--[if lt IE 9]>
+        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <!--This website's source code is available at https://github.com/shakeelmohamed/shakeelmohamed.github.io -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+    </head>
+    <body>
+        <header class="flex center">
+            <div class="mx-auto">
+                <ul class="nav-links no-indent">
+                    <li class="inline pr1 no-bullet"><a href="../.." title="Home">Home</a></li>
+                    <li class="inline pr1 no-bullet"><a href="https://ntrsct.com/" title="ntrsct designs">ntrsct designs</a></li>
+                    <li class="inline pr1 no-bullet"><a href="../../index.html#projects" title="Projects">Projects</a></li>
+                    <li class="inline pr1 no-bullet"><a href="../../posts" title="Blog Posts">Blog Posts</a></li>
+                    <li class="inline pr1 no-bullet"><a href="../../index.html#mentions" title="Mentions">Mentions</a></li>
+                </ul>
+                <div class="nav center">
+                    <h1 class="inline h1 pr2">Shakeel Mohamed</h1>
+                </div>
+            </div>
+        </header>
+        <section class="flex center">
+            <div class="flex-col mx-auto">
+                <h4>April 15, 2021</h4>
+                <div class="post-content"><h1 id="myapproachtocodereviews">My Approach to Code Reviews</h1>
+<p>One of my first code reviews was when I had a student job in the web development office at Bellevue College. I’d cobbled together a mess of PHP code as a WordPress “plugin” with horrendous variable names like <code>$sillyMe</code>, no exaggeration.</p>
+<p>Over the years I’ve learned a lot about software design and don’t make <em>sillyMe-stakes</em> anymore. In fact, after having my code reviewed dozens of times over the years I became known to give thorough code reviews by knowing what to look for.</p>
+<p>This is my attempt to codify the instinctive and intuitive approach I take to code reviews. These are prompts that you can ask yourself as a reviewer or when writing and self-reviewing code. The process may seem very drawn out, but often the steps happen in a matter of seconds.</p>
+<p>For brevity, I’ll refer to code reviews as PRs (short for <a href="https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests">pull requests</a>) and author as the person submitting the PR.</p>
+<h2 id="1caniunderstandthischange">1. Can I understand this change?</h2>
+<p>PRs are created for various reasons: new features, tests, bug/security fixes, refactors, and style changes are the common ones. It helps to contextualize the code I’m reviewing within these categories first. Hopefully, it’s obvious from skimming the PR description, if not from the title. If it’s not clear to me, I might look at the git commit messages or which files were changed. For example, if a git repository has a directory for tests and only those files have been changed, there’s a good chance the PR is focused on adding or updating tests. Once I know the category for this PR, I can look at it through the appropriate lens.</p>
+<p>At this point, I’ll read through the PR description more carefully to understand the reviewer’s intention for this change. If I’m not already familiar with the project, I might search for details about this change in other places (Jira, Slack, GitHub issues, etc.). If I’m not clear by then, I’ll reach out to the PR author directly.</p>
+<h2 id="2isthiscodechangeperformingthecorrectbehavior">2. Is this code change performing the correct behavior?</h2>
+<p>This is the most important part of the review. I have a clear understanding of the goal, so it’s time to check if the PR aligns with that goal. If the requirements are documented, I’ll refer to those (Jira, the PR description, or wherever the origin of this change was). If the PR author has made any assumptions that don’t align with the requirements, the implementation will likely reflect those assumptions. </p>
+<p>If the code seems to generally be doing the right thing without unintentional side effects, then it’s time to think like a QA engineer - how might this code break?</p>
+<p>For example, with a function like <code>doStuff(int a)</code> what happens if parameter <code>a</code> is:</p>
+<ul>
+<li>Zero</li>
+<li>One</li>
+<li>Even</li>
+<li>Odd </li>
+<li>Negative</li>
+<li>Very large</li>
+<li>Very small</li>
+</ul>
+<p>I'm looking for <a href="https://en.wikipedia.org/wiki/Edge_case">edge cases</a> at this step. When code goes out in the proverbial “real world”, we should expect just about anything. Sometimes addressing these cases are simple fixes, other times they may require a refactor, so it’s good to catch them early in the review process. It’s much better to catch potential issues in review than in production which can lead to any number of problems from data loss to a system outage.</p>
+<h2 id="3whatstheimpactofthischange">3.  What’s the impact of this change?</h2>
+<p>Not all code changes are created equally, nor are the impacts of releasing them. Working on developer tools for several years has taught me to always watch out for breaking changes. Suppose you’re working on an SDK and decide to rename a function. That’s all good and well and you can complete the refactor within the SDK codebase without any issues. However, as soon as you release that change, every single consumer of the SDK who uses that function will have a broken program.</p>
+<p>This level of review can be tricky and may require a solid understanding of the overall codebase, third-party libraries, programming language, runtime environment, and the broader ecosystem of the project. For example, with JavaScript projects, one might consider which EcmaScript or ES standard version the project needs to be compatible with. The ES version required will then impact which JavaScript language features and libraries can be used, as well as which environments the code can run in. </p>
+<p>The ripple effect of code changes are not always easy to anticipate because they can manifest in many ways. It helps to have customer empathy when working on shared code because those APIs essentially are the product, and nobody likes a broken product.</p>
+<h2 id="4howwillthiscodebeusedandbywhom">4. How will this code be used, and by whom?</h2>
+<p>Early in my career, I didn’t think about API design at all. I’d have a task and focus on completing it, and sometimes checking if it performed the correct behavior (see sections 1–2). After working closely with product managers at Splunk, I began to understand that the code I write isn’t just for me to use. Others on my team or other teams at my company might use code I’ve written. When working on developer tools and open source projects, this becomes even more important - someone you’ll never meet might be using your code! This could be a customer building their own solution, or somebody lurking on GitHub trying to do the same thing you are.</p>
+<p>I’ll check things like the encapsulation of variables, see if things are scoped properly, etc. Then it gets into more subjective topics like naming and inline documentation in code comments. I believe APIs should be written in a way that requires little to no documentation when possible, and still have a bit of commentary available. It’s also important to look at how many implementation details the end-user needs to know before using your API.</p>
+<p>Bottom line: think with the end customer in mind.</p>
+<h2 id="5ataglancehowdoesthischangeimpactperformance">5. At a glance, how does this change impact performance?</h2>
+<p>Software performance is not one of my strengths as a developer, but it’s often on my mind during code reviews. Obvious things to pay attention to are any kind of multithreading, recursion or loops, especially with larger input sizes. For example, spinning up 5 process threads is not necessarily a bad thing, however spinning up 5 million threads is going to cause some performance issues.</p>
+<p>When working with any kind of network connectivity, the amount of network requests can dramatically impact the performance of an application. If there’s an entity that can be directly retrieved with an HTTP GET call, that’s usually better than a using an HTTP GET call for a collection of entities to then find the the specific one you need. These bottlenecks can be tougher to track down when working with multiple layers of abstraction in a codebase.</p>
+<p>With a careful analysis of the code, I believe many performance issues can be caught before requiring any sort of performance testing. Who knows, you might even find some ways to optimize the existing code’s performance.</p>
+<h2 id="6canthecodechangebesimplified">6. Can the code change be simplified?</h2>
+<p>I think about programming the same way I think about writing. It helps to get a rough draft to start putting ideas together. Sometimes I even start with a list of comments that resembles an essay outline. That first draft might be messy (slow, duplicative, etc.) but it will improve with an iterative process.</p>
+<p>By this point in the review, the code change should be functionally sound. Some may consider these last two sections as a bonus. However, I believe they’re essential in keeping the codebase readable and maintainable in the long run.</p>
+<p>As with writing, there’s a balance between brevity and readability to consider. A starting point might be to leverage existing utility functions, data structures, and design patterns. The next pass of this might be seeing where code can be shared or abstracted so it’s not implemented multiple times (refer to the <a href="https://en.wikipedia.org/wiki/Rule_of_three_(computer_programming)">rule of three</a>).
+I don’t have any hard and fast rules on simplifying code, I approach this step more intuitively. If the code feels overly complicated, there may be an opportunity to simplify.</p>
+<h2 id="7doesthiscodechangefitthecodebase">7. Does this code change fit the codebase?</h2>
+<p>The idea of “fit” can be subjective, and can lead to unnecessary pushback from the PR author, so this is where reviewers should tread carefully.</p>
+<p>When developing new features, we should take into account the “status quo” or conventions of the project, how the other features interact with each other, and where they exist in the directory structure. If a very large or unique feature is being developed, it may be worth considering if that feature needs its own module or even its own git repository.</p>
+<p>As in Section 4, naming should be focused on the consumers of the code for review. Everything from file names to variables and classes can impact the readability and thus the usability of your code.</p>
+<p>Finally, it’s time to consider code style. Ideally, the compiler or automatic static analysis tools in the CI pipeline have already caught these issues, but sometimes they slip through anyway. Here is where I’ll check for odds and ends to align the incoming PR with the existing codebase. For example:</p>
+<ul>
+<li>Indentation (tabs vs. spaces, consistent indent width)</li>
+<li>Reasonable comments (inline vs. multiline comments, spacing around them, etc.)</li>
+<li>Removing any new commented-out code</li>
+<li>Spelling and grammatical errors</li>
+<li>Consistent spacing around operators, parentheses, braces, and brackets</li>
+<li>Naming conventions for module, class, function, and variable names (relative to the rest of the codebase)</li>
+</ul>
+<h2 id="finalthoughts">Final Thoughts</h2>
+<p>Once I started writing, I was surprised by how much knowledge about code reviews I’ve amassed over the years. This has not been an exhaustive formula on how to review PRs (Google already written one, the link is below) but, rather the way I’ve gone about them. </p>
+<p>To the future reviewers of the World, I hope these ideas spark something for your next PR. </p>
+<h3 id="additionalreading">Additional Reading</h3>
+<ul>
+<li><a href="https://google.github.io/eng-practices/review/">Code Review Developer Guide | eng-practices</a> - Google’s guide to code reviews</li>
+<li><a href="https://smile.amazon.com/Philosophy-Software-Design-John-Ousterhout-ebook/dp/B07N1XLQ7D/">A Philosophy of Software Design by John Ousterhout</a> - a great succinct book on software design</li>
+<li><a href="https://smile.amazon.com/Design-Everyday-Things-Revised-Expanded/dp/0465050654/">The Design of Everyday Things by Don Norman</a> - not directly related to software, but a great read about designing intuitive and empathetic solutions</li>
+</ul></div>
+            </div>
+        </section>
+        <script type="application/ld+json">
+            {
+                "@context": "http://schema.org",
+                "@type": "WebSite",
+                "url": "https://shakeelmohamed.com/",
+                "image": "https://shakeelmohamed.com/img/headshot.jpg",
+                "name": "ShakeelMohamed.com",
+                "author": {
+                    "@type": "Person",
+                    "name": "Shakeel Mohamed",
+                    "email": "iam@shakeel.xyz",
+                    "jobTitle": "Brand strategist and designer"
+                },
+                "contentLocation": {
+                    "@type": "City",
+                    "name": "Seattle"
+                }
+            }
+        </script>
+        <script>
+            if (window.location.protocol === "http:") {
+                window.location.protocol = "https:";
+            }
+            
+        </script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-36907845-2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-36907845-2');
+        </script>
+    </body>
+</html>

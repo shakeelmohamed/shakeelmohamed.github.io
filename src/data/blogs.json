@@ -1,5 +1,14 @@
 [
     {
+        "date": "April 15, 2021",
+        "title": "My Approach to Code Reviews",
+        "source": "../posts/2021-04-15-my-approach-to-code-reviews",
+        "description": "This is my attempt to codify the instinctive and intuitive approach I take to code reviews.",
+        "og": {
+            "image": "./header.png"
+        }
+    },
+    {
         "date": "Jan 22, 2021",
         "title": "Did I Just Discover the Simplest Success Formula? (5 Actionable Steps)",
         "source": "../posts/2021-01-22-5-steps-to-success",
