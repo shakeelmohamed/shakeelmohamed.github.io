@@ -4,12 +4,12 @@
         <description><![CDATA[Recent Blog Posts]]></description>
         <link>https://ShakeelMohamed.com/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Thu, 10 Jun 2021 21:01:15 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 10 Jun 2021 21:16:35 GMT</lastBuildDate>
         <atom:link href="https://ShakeelMohamed.com/rss.xml" rel="self" type="application/rss+xml"/>
         <webMaster><![CDATA[iam@shakeel.xyz (Shakeel Mohamed)]]></webMaster>
         <item>
             <title><![CDATA[Powerful Lessons From Splunk I’ll Never Forget]]></title>
-            <description><![CDATA[While working at Splunk over the past eight years, I’ve had the opportunity to work with incredibly wise people.]]></description>
+            <description><![CDATA[While working at Splunk over the past eight years, I’ve had the opportunity to work with incredibly wise people! These are just a few of the lessons I learned along the way from my most impactful mentors.]]></description>
             <guid isPermaLink="false">Powerful Lessons From Splunk I’ll Never Forget</guid>
             <dc:creator><![CDATA[iam@shakeel.xyz (Shakeel Mohamed)]]></dc:creator>
             <pubDate>Thu, 10 Jun 2021 07:00:00 GMT</pubDate>
