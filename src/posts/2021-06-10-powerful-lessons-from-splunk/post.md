@@ -2,13 +2,13 @@
 
 While working at Splunk over the past eight years, I’ve had the opportunity to work with incredibly wise people. It’s important to note that I joined the company as an intern before my junior year of college, these years were extremely foundational for my career and life overall.
 
-There’s a long list of colleagues I’ve learned from, but these five people made the greatest impact. Some of these lessons came from projects we worked on, conversations we had, or simply their modus operandi. Over the years I’ve passed these lessons on to others, and hope to continue doing so.
+There’s a long list of colleagues I’ve learned from, but these five people made the greatest impact on me. Some of these lessons came from projects we worked on, conversations we had, or simply their modus operandi. Over the years I’ve passed these lessons on to others, and hope to continue doing so.
 
 ## Itay Neeman
 
 ### Lesson: It’s not right until it’s right.
 
-For any field, receiving project feedback early in your career can be frustrating. That feeling only compounds with additional feedback after multiple revisions. Before I worked at Splunk, I hadn’t gone through a real [code review](https://shakeelmohamed.com/posts/2021-04-15-my-approach-to-code-reviews/) process. At previous internships I wrote some code, if it worked that was good enough. After receiving very thorough feedback on a few code reviews (from multiple coworkers, after multiple revisions) I began to embrace an iterative approach to software development. Making 20 revisions is better than making 19 with a critical issue. It’s a mindset that I’ve applied to creative projects as well, from design to video editing.
+For any field, receiving project feedback early in your career can be frustrating. That feeling only compounds with additional feedback after multiple revisions. Before I worked at Splunk, I hadn’t gone through a real [code review](https://shakeelmohamed.com/posts/2021-04-15-my-approach-to-code-reviews/) process. At previous internships I wrote some code, if I thought it worked that was good enough. After receiving very thorough feedback on a few code reviews (from multiple coworkers, after multiple revisions) I began to embrace an iterative approach to software development. Making 20 revisions is better than making 19 with a critical issue. It’s a mindset that I’ve applied to creative projects as well, from design to video editing.
 
 School projects always have a hard deadline, and typically grades are reduced for each day they’re submitted late. In the world of software, this is often not the case. It took me a few years to understand that deadlines can be flexible. On a few occasions, I rushed projects in order to meet deadlines (often arbitrary or self-imposed). As my manager, Itay guided me to focus on quality rather than timeline. Sometimes taking an extra day or week is worth the quality of the project and more importantly the well-being of all team members.
 
@@ -28,7 +28,7 @@ Moving forward, it’s really awesome to know that the customer-first mindset I 
 
 Financial literacy was a foreign concept to me growing up. After years of conversations with Michael, I began to understand money in a very different way. After graduation, he told me to watch out for lifestyle inflation (the tendency to spend more money when you earn more). Another way I’ve heard that lesson: to have more money you can either earn more or spend less. Although this approach may be conservative for some, I saw it as an opportunity to set myself up for financial security in the long term. Michael and I had a similar way of thinking about finances and I think that’s why he continued to mentor me over the years.
 
-I spent my first year out of college living like a student (except the part where I ate a lot of sushi that summer). I kept my expenses at an absolute minimum and spent my free time learning everything I could about personal finance. During that year, I paid off all of my student loans, which reduced my stress a great deal, allowed me to focus on personal development, and gave me an opportunity to give to others.
+I spent my first year out of college living like a student (except the part where I ate a lot of sushi that summer). I kept my expenses at an absolute minimum and spent my free time learning everything I could about personal finance. During that year, I paid off all of my student loans, which reduced my stress a great deal, allowing me to focus on personal development, and gave me an opportunity to give to others.
 
 The biggest upside to financial security has been freeing up my mind to explore other interests instead of worrying about how to pay my bills every month.
 
