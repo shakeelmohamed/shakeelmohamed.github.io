@@ -1,5 +1,14 @@
 [
     {
+        "date": "June 10, 2021",
+        "title": "Powerful Lessons From Splunk I’ll Never Forget",
+        "source": "../posts/2021-06-10-powerful-lessons-from-splunk",
+        "description": "While working at Splunk over the past eight years, I’ve had the opportunity to work with incredibly wise people.",
+        "og": {
+            "image": "./header.png"
+        }
+    },
+    {
         "date": "April 15, 2021",
         "title": "My Approach to Code Reviews",
         "source": "../posts/2021-04-15-my-approach-to-code-reviews",

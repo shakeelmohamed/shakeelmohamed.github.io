@@ -4,9 +4,16 @@
         <description><![CDATA[Recent Blog Posts]]></description>
         <link>https://ShakeelMohamed.com/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Thu, 15 Apr 2021 23:06:53 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 10 Jun 2021 19:21:09 GMT</lastBuildDate>
         <atom:link href="https://ShakeelMohamed.com/rss.xml" rel="self" type="application/rss+xml"/>
         <webMaster><![CDATA[iam@shakeel.xyz (Shakeel Mohamed)]]></webMaster>
+        <item>
+            <title><![CDATA[Powerful Lessons From Splunk I’ll Never Forget]]></title>
+            <description><![CDATA[While working at Splunk over the past eight years, I’ve had the opportunity to work with incredibly wise people.]]></description>
+            <guid isPermaLink="false">Powerful Lessons From Splunk I’ll Never Forget</guid>
+            <dc:creator><![CDATA[iam@shakeel.xyz (Shakeel Mohamed)]]></dc:creator>
+            <pubDate>Thu, 10 Jun 2021 07:00:00 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[My Approach to Code Reviews]]></title>
             <description><![CDATA[This is my attempt to codify the instinctive and intuitive approach I take to code reviews.]]></description>
