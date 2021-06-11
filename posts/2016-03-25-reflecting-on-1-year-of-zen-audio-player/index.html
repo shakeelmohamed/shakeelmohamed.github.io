@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Shakeel Mohamed | Reflecting on 1 Year of Zen Audio Player</title>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="chrome=1"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+        <meta property="og:title" content="Shakeel Mohamed | Reflecting on 1 Year of Zen Audio Player"/>
+        <meta property="og:image" content="https://shakeelmohamed.com/img/shakeel-mohamed-opengraph.png"/>
+        <meta property="og:description" content="Today marks one year since I made the first commit to the Zen Audio Player (ZAP) project on GitHub!"/>
+        <link href="https://unpkg.com/basscss@8.0.1/css/basscss.min.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&amp;display=swap" rel="stylesheet" type="text/css"/>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+        <link rel="manifest" href="/site.webmanifest"/>
+        <link href="../../styles.css" rel="stylesheet"/>
+        <link href="../../feed.xml" rel="alternate" type="application/rss+xml" title="RSS Feed for ShakeelMohamed.com"/> 
+        <!--[if lt IE 9]>
+        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <!--This website's source code is available at https://github.com/shakeelmohamed/shakeelmohamed.github.io -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+    </head>
+    <body>
+        <header class="flex center">
+            <div class="mx-auto">
+                <ul class="nav-links no-indent">
+                    <li class="inline pr1 no-bullet"><a href="../.." title="Home">Home</a></li>
+                    <li class="inline pr1 no-bullet"><a href="https://ntrsct.com/" title="ntrsct designs">ntrsct designs</a></li>
+                    <li class="inline pr1 no-bullet"><a href="../../index.html#projects" title="Projects">Projects</a></li>
+                    <li class="inline pr1 no-bullet"><a href="../../posts" title="Blog Posts">Blog Posts</a></li>
+                    <li class="inline pr1 no-bullet"><a href="../../index.html#mentions" title="Mentions">Mentions</a></li>
+                </ul>
+                <div class="nav center">
+                    <h1 class="inline h1 pr2">Shakeel Mohamed</h1>
+                </div>
+            </div>
+        </header>
+        <section class="flex center">
+            <div class="flex-col mx-auto">
+                <h4>March 25, 2016</h4>
+                <div class="post-content"><h1 id="reflectingon1yearofzenaudioplayer">Reflecting on 1 Year of Zen Audio Player</h1>
+<p>Today marks one year since I made the <a href="https://github.com/zen-audio-player/zen-audio-player.github.io/commit/262d8a23b59860c936fbb07731edf838cb587adf">first commit</a> to the Zen Audio Player (ZAP) project on GitHub! After reading <a href="https://medium.com/@robbyrussell/d-oh-my-zsh-af99ca54212c">Robby Russell’s post about Oh my Zsh</a>, I’ve realized ZAP has a lot of potential going into year 2. Over the past year the project has grown in ways I would’ve never imagined. To date we’ve had 20 contributors, and most have been in the past 4 months!</p>
+<figure>
+<img src="./zap-render.png" alt="A current render of the website, made by Yuri Brunetto."/>
+<figcaption>A current render of the website, made by <a href="https://github.com/YuriBrunetto">Yuri Brunetto.</a></figcaption>
+</figure>
+<h2 id="abrieftimelineofdevelopment">A Brief Timeline of Development</h2>
+<h3 id="birth">Birth</h3>
+<p>Last year, I had a very simple idea: hide the video player on YouTube videos and just listen to the audio. I thought it would be something fairly easy to do, and it was. I slapped together a working version of a website in a couple of weeknights while procrastinating on my <a href="https://shakeelmohamed.com/posts/2015-03-19-hackers-first-logo-designing-in-powerpoint">senior project</a>. My “innovation” was setting the height of the YouTube player small enough so only the controls were visible.</p>
+<!-- TODO: use a figure tag zap-mvp.png -->
+<!-- This was the entire website: 1 heading, 1 text box, 1 button. -->
+<figure>
+<img src="./zap-mvp.png" alt="This was the entire website: 1 heading, 1 text box, 1 button."/>
+<figcaption>This was the entire website: 1 heading, 1 text box, 1 button.</figcaption>
+</figure>
+<p>Life was great for a few months. I was listening to <a href="https://www.youtube.com/results?search_query=progressive+trance">progressive trance mixes</a> at work without being embarrassed by the borderline-NSFW thumbnails/slideshows on most of these videos. In my spare time on nights and weekends I started adding features. Then all of a sudden one day, YouTube redesigned their video player.</p>
+<h3 id="iframeapi">iFrame API</h3>
+<p>To <a href="https://github.com/zen-audio-player/zen-audio-player.github.io/issues/33">workaround YouTube’s new unfavorable UI</a> (which auto-hides the player controls), a great deal of JavaScript was required to manipulate the YouTube iFrame API in the way we wanted. The changes we made to work with YouTube’s iFrame API (instead of direct HTML embeds) still exist in ZAP today. We’re <a href="https://github.com/zen-audio-player/zen-audio-player.github.io/pull/153">currently working</a> on replacing most of this code using <a href="https://plyr.io/">Plyr</a>. <a href="https://github.com/SamPotts">Sam Potts</a> has been tremendously helpful by implementing features for us and we hope to continue collaborating with him.</p>
+<h3 id="contributors">Contributors!</h3>
+<p>Out of the blue one day in October ZAP received our first contributor <a href="https://github.com/zen-audio-player/zen-audio-player.github.io/pull/40">pull request</a> from <a href="https://github.com/BeigeBadger">Matt Stannett</a>! Before Matt, the repo was actually on my personal GitHub account. After some time, I transferred the repo to the <a href="https://github.com/zen-audio-player">ZAP GitHub organization</a>. Working with him on a few changes motivated me to spend more time working on ZAP. His initial involvement inspired me to post the project on <a href="http://up-for-grabs.net/">Up For Grabs</a> leading to many more contributions than expected.</p>
+<h3 id="newfeatures">New Features</h3>
+<p>It still amazes me that some features have been implemented solely by contributors to ZAP. Some of these are:</p>
+<ul>
+<li>Rendering the YouTube video’s description (with proper hyperlinks)</li>
+<li>YouTube search with autocompletion</li>
+<li>Showing search results, and playing the audio for that video without leaving the ZAP website</li>
+</ul>
+<h2 id="tools">Tools</h2>
+<p>GitHub has been really great about promoting <a href="https://github.com/integrations">free tools for open source projects</a>. The following tools have been tremendously helpful and will continue to benefit ZAP in the future:</p>
+<ul>
+<li>GitHub Pages — nothing beats free hosting for our static site!</li>
+<li><a href="https://gitter.im/zen-audio-player/zen-audio-player.github.io">Gitter</a> — our awesome chatroom that’s integrated with our other services</li>
+<li><a href="https://github.com/zen-audio-player/zen-audio-player.github.io/">Travis CI</a> — somebody’s gotta run the tests</li>
+<li><a href="https://codeclimate.com/">Code Climate</a> — a great automated code quality analyzing service</li>
+<li><a href="https://trackjs.com/">TrackJS</a> — useful for tracking &amp; reporting user JavaScript errors</li>
+<li><a href="http://www.google.com/analytics/">Google Analytics</a> / <a href="https://keen.io/">Keen.IO</a> — so we can now how users are using the site</li>
+</ul>
+<h2 id="thanks">Thanks</h2>
+<p>I am deeply grateful for the contributors we’ve had so far, and I look forward to collaborating with more in the future.
+I want to especially thanks the following individuals:</p>
+<ul>
+<li><a href="https://github.com/BeigeBadger"><strong>Matt Stannett</strong></a> — the first contributor, without him I might’ve abandoned the project months ago!</li>
+<li><a href="https://github.com/ecnepsnai"><strong>Ian Spence</strong></a> — he bought the domain name! <a href="https://zenplayer.audio/">ZenPlayer.audio</a></li>
+<li><a href="https://github.com/monicacheung"><strong>Monica Cheung</strong></a> — she’s contributed the most code to the project so far, and added the best feature: YouTube search!</li>
+</ul></div>
+            </div>
+        </section>
+        <script type="application/ld+json">
+            {
+                "@context": "http://schema.org",
+                "@type": "WebSite",
+                "url": "https://shakeelmohamed.com/",
+                "image": "https://shakeelmohamed.com/img/headshot.jpg",
+                "name": "ShakeelMohamed.com",
+                "author": {
+                    "@type": "Person",
+                    "name": "Shakeel Mohamed",
+                    "email": "iam@shakeel.xyz",
+                    "jobTitle": "Brand strategist and designer"
+                },
+                "contentLocation": {
+                    "@type": "City",
+                    "name": "Seattle"
+                }
+            }
+        </script>
+        <script>
+            if (window.location.protocol === "http:") {
+                window.location.protocol = "https:";
+            }
+            
+        </script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-36907845-2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-36907845-2');
+        </script>
+    </body>
+</html>

@@ -92,7 +92,7 @@ Process
 * Break time
 * During the break, facilitator should be identifying common themes
 * Facilitator shares the common themes identified through their notes
-* At the end, storyteller choses the theme (from 2+ stories) that feels like their unique contribution
+* At the end, storyteller chooses the theme (from 2+ stories) that feels like their unique contribution
 * Themes become the HOWs for the storyteller's Golden Circle
 * Facilitator & storytellers take 5 minutes to separately write the storyteller's WHY
 * Share both versions and make a draft with either or both
