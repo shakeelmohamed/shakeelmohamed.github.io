@@ -130,8 +130,8 @@
     {
         "date": "March 25, 2016",
         "title": "Reflecting on 1 Year of Zen Audio Player",
-        "url": "https://medium.com/@_shakeel/reflecting-on-1-year-of-zen-audio-player-57ee759365ee",
-        "description": "Today marks one year since I made the first commit to the Zen Audio Player (ZAP) project on GitHub! After reading Robby Russell's post..."
+        "source": "../posts/2016-03-25-reflecting-on-1-year-of-zen-audio-player",
+        "description": "Today marks one year since I made the first commit to the Zen Audio Player (ZAP) project on GitHub!"
     },
     {
         "date": "March 20, 2016",

@@ -4,7 +4,7 @@
         <description><![CDATA[Recent Blog Posts]]></description>
         <link>https://ShakeelMohamed.com/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 11 Jun 2021 04:39:50 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 11 Jun 2021 05:33:52 GMT</lastBuildDate>
         <atom:link href="https://ShakeelMohamed.com/rss.xml" rel="self" type="application/rss+xml"/>
         <webMaster><![CDATA[iam@shakeel.xyz (Shakeel Mohamed)]]></webMaster>
         <item>
@@ -146,7 +146,7 @@
         </item>
         <item>
             <title><![CDATA[Reflecting on 1 Year of Zen Audio Player]]></title>
-            <description><![CDATA[Today marks one year since I made the first commit to the Zen Audio Player (ZAP) project on GitHub! After reading Robby Russell's post...]]></description>
+            <description><![CDATA[Today marks one year since I made the first commit to the Zen Audio Player (ZAP) project on GitHub!]]></description>
             <guid isPermaLink="false">Reflecting on 1 Year of Zen Audio Player</guid>
             <dc:creator><![CDATA[iam@shakeel.xyz (Shakeel Mohamed)]]></dc:creator>
             <pubDate>Fri, 25 Mar 2016 07:00:00 GMT</pubDate>
