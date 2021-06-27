@@ -4,7 +4,7 @@
   "description": "My personal website",
   "private": true,
   "scripts": {
-    "start": "npx @11ty/eleventy --serve --output=docs",
+    "start": "npx @11ty/eleventy --serve --input=src --output=docs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
