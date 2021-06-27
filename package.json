@@ -4,7 +4,7 @@
   "description": "My personal website",
   "private": true,
   "scripts": {
-    "start": "npx @11ty/eleventy --serve --input=src --output=docs",
+    "start": "npx @11ty/eleventy --serve --formats=html,md,png,jpg --input=src --output=docs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/shakeelmohamed/beta#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^0.12.1"
+    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy-plugin-inclusive-language": "^1.0.2",
+    "markdown-it": "^10.0.0"
   }
 }
