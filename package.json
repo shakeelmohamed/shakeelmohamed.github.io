@@ -1,0 +1,23 @@
+{
+  "name": "shakeelmohamed.com",
+  "version": "5.0.0",
+  "description": "My personal website",
+  "private": true,
+  "scripts": {
+    "start": "npx @11ty/eleventy --serve --output=docs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shakeelmohamed/beta.git"
+  },
+  "author": "Shakeel Mohamed<iam@shakeel.xyz>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shakeelmohamed/beta/issues"
+  },
+  "homepage": "https://github.com/shakeelmohamed/beta#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1"
+  }
+}
