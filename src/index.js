@@ -122,6 +122,16 @@ var globals = {
     ],
     "mentions": [
         {
+            "date": "May 17, 2021",
+            "title": "Made With Love podcast - Shakeel's Journey (part 2)",
+            "url": "https://podcasts.apple.com/me/podcast/shakeels-journey-part-2/id1556518451?i=1000521087904",
+        },
+        {
+            "date": "March 30, 2021",
+            "title": "Made With Love podcast - Shakeel's Journey (part 1)",
+            "url": "https://podcasts.apple.com/me/podcast/shakeels-journey/id1556518451?i=1000515042963",
+        },
+        {
             "date": "March 12, 2021",
             "title": "Agile Mentality in Business with Love Nescio - @lovenescio on Instagram",
             "url": "https://www.instagram.com/p/CMVpHC7AeDk/"
