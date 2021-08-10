@@ -1,7 +1,6 @@
 https://shakeelmohamed.com/
 https://shakeelmohamed.com/feed.xml
-https://shakeelmohamed.com/angular-geocoding-demo
-https://shakeelmohamed.com/htmlslyde
+https://shakeelmohamed.com/posts/
 https://shakeelmohamed.com/posts/2021-06-10-powerful-lessons-from-splunk
 https://shakeelmohamed.com/posts/2021-04-15-my-approach-to-code-reviews
 https://shakeelmohamed.com/posts/2021-01-22-5-steps-to-success
@@ -11,6 +10,7 @@ https://shakeelmohamed.com/posts/2020-05-31-individual-how-what-definition
 https://shakeelmohamed.com/posts/2020-04-30-individual-why-discovery
 https://shakeelmohamed.com/posts/2020-03-15-chiang-mai
 https://shakeelmohamed.com/posts/2020-02-10-24-31-days-of-designing-lyric-posters
+https://shakeelmohamed.com/posts/2020-01-21-book-summary-adventures-johnny-bunko
 https://shakeelmohamed.com/posts/2017-11-27-how-to-love-yourself
 https://shakeelmohamed.com/posts/2016-05-23-share-solutions-to-your-problems
 https://shakeelmohamed.com/posts/2016-04-18-productivity-hack-use-opposite-techniques

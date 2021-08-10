@@ -66,7 +66,10 @@
     {
         "date": "Jan 21, 2020",
         "title": "Book Summary: The Adventures of Johnny Bunko 🥢",
-        "url": "https://www.linkedin.com/pulse/book-summary-adventures-johnny-bunko-shakeel-mohamed-csm"
+        "source": "../posts/2020-01-21-book-summary-adventures-johnny-bunko",
+        "og": {
+            "image": "./bunko.png"
+        }
     },
     {
         "date": "May 2, 2018",
