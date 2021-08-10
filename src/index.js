@@ -97,8 +97,7 @@ var globals = {
     "sitemap": [
         "https://shakeelmohamed.com/",
         "https://shakeelmohamed.com/feed.xml",
-        "https://shakeelmohamed.com/angular-geocoding-demo",
-        "https://shakeelmohamed.com/htmlslyde"
+        "https://shakeelmohamed.com/posts/"
     ],
     "projects": [ // TODO: logo, screenshot, start/end date
         {
