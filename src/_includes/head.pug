@@ -1,3 +1,20 @@
+//- TODO: move type system to its own file
+mixin h3(text)
+    h3(class="font-sans font-bold text-white text-4xl text-center py-4 md:text-left md:text-3xl") #{text}
+
+//- TODO: move to atom
+mixin navItem(href, label)
+    a(class="font-sans font-bold md:inline-block md:pl-8" href=href) #{label}
+
+mixin header()
+    header(class="mx-4 my-8 text-white md:flex md:items-baseline md:justify-between")
+        h3(class="font-sans font-bold text-white text-3xl text-center py-4 flex-nowrap md:text-left") Shakeel Mohamed
+        nav(class="flex justify-between text-lg md:py-5 md:justify-items-end md:flex-shrink-0 md:mx-0")
+            +navItem("/work", "Work")
+            +navItem("/blog", "Blog")
+            +navItem("/about", "About")
+            +navItem("/contact", "Contact")
+
 mixin head()
     doctype html
     html(lang="en")
@@ -17,26 +34,3 @@ mixin head()
             if block
                 block
 
-//- PN bold + italic:
-//- --------------------
-//- font-family: proxima-nova,sans-serif;
-//- font-weight: 700;
-//- font-style: normal;
-
-//- font-family: proxima-nova,sans-serif;
-//- font-weight: 700;
-//- font-style: italic;
-
-//- PN regular + italic:
-//- --------------------
-//- font-family: proxima-nova,sans-serif;
-//- font-weight: 400;
-//- font-style: normal;
-
-//- font-family: proxima-nova,sans-serif;
-//- font-weight: 400;
-//- font-style: italic;
-
-//- EB Garamond:
-//- -------------------
-//- font-family: 'EB Garamond', serif;

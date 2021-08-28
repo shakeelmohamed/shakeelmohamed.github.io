@@ -24,8 +24,6 @@ module.exports = function(eleventyConfig) {
     let markdownLib = markdownIt(options);
     eleventyConfig.setLibrary("md", markdownLib);
 
-    
-
     // Pug specific options 
     eleventyConfig.setPugOptions({
         debug: true,

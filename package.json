@@ -21,6 +21,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
     "@11ty/eleventy-plugin-inclusive-language": "^1.0.2",
+    "@tailwindcss/typography": "^0.4.1",
     "autoprefixer": "^10.3.3",
     "markdown-it": "^10.0.0",
     "postcss": "^8.3.6",
