@@ -1,5 +1,14 @@
+- var base = "font-sans text-white ";
+- var heading = base + "font-bold py-4 text-center md:text-left ";
+
 mixin h1(text)
-    h1(class="font-sans font-bold text-white text-5xl text-center py-4 md:text-left") #{text}
+    h1(class=heading + "text-5xl") #{text}
+
+mixin h2(text)
+    h2(class=heading + "text-4xl") #{text}
 
 mixin h3(text)
-    h3(class="font-sans font-bold text-white text-3xl text-center py-4 md:text-left") #{text}
+    h3(class=heading + "text-3xl") #{text}
+
+mixin subheading(text)
+    p(class=base + "text-left text-l") #{text}

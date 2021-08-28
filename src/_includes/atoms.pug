@@ -5,7 +5,8 @@ mixin navItem(href, label)
 mixin header()
     //- TODO: layout breaks below 320px width
     header(class="text-white md:flex md:items-baseline md:justify-between")
-        h3(class="font-sans font-bold text-white text-3xl text-center py-4 flex-nowrap md:text-left") Shakeel Mohamed
+        h3(class="font-sans font-bold text-white text-3xl text-center py-4 flex-nowrap md:text-left")
+            a(href="/") Shakeel Mohamed
         nav(class="flex justify-between text-lg md:py-5 md:justify-items-end md:flex-shrink-0 md:mx-0")
             +navItem("/work", "Work")
             +navItem("/blog", "Blog")
@@ -13,4 +14,4 @@ mixin header()
             +navItem("/contact", "Contact")
 
 mixin footer()
-    //- blank
+    //- TODO: email signup form, footer nav, social links, copyright
