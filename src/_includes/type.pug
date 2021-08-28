@@ -1,3 +1,6 @@
+//- TODO:
+//- * how can I prevent windows & orphans? Maybe https://workingconcept.com/blog/preventing-widows-responsive-layouts
+
 - var base = "font-sans ";
 - var serif = "font-serif ";
 
@@ -13,8 +16,10 @@ mixin h1(text)
 mixin h1Navy(text)
     h1(class=headingNavy + "text-5xl") #{text}
 
-mixin h2(text)
+mixin h2(text, withAccent=false)
     h2(class=heading + "text-4xl") #{text}
+        if withAccent
+            +accent()
 
 mixin h2Navy(text)
     h2(class=headingNavy + "text-4xl") #{text}
@@ -36,3 +41,7 @@ mixin p(text)
 
 mixin pNavy(text)
     p(class=serif + navy + "text-left text-m") #{text}
+
+mixin accent()
+    //- TODO: design a more elegant icon
+    span.text-orange &nbsp; >>>

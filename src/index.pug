@@ -1,4 +1,5 @@
 extends _includes/layouts/base.pug
+include _includes/molecules.pug
 
 block hero
     div(class="mx-4 my-8")
@@ -8,7 +9,7 @@ block hero
         +subheading("Keep scrolling to check out my portfolio ⬇️")
 
 block content
-    +h2("Projects")
+    +h2("Projects", true)
     +sectionWhite()
         div(class="mx-4 my-8")
             +projectListing("BREAK a Journaling Framework for Overcoming Limiting Beliefs", "photo url", "summary")
