@@ -1,11 +1,16 @@
 extends _includes/layouts/base.pug
 
+block hero
+    div(class="mx-4 my-8")
+        +h1("Hello from Seattle! 🌲")
+        +subheading("I’m a software engineer turned designer applying to design MFA programs.")
+        br
+        +subheading("Keep scrolling to check out my portfolio ⬇️")
+
 block content
-    +h1("Hello from Seattle! 🌲")
-    +subheading("I’m a software engineer turned designer applying to design MFA programs")
-    +subheading("Keep scrolling to check out my portfolio ⬇️")
-
-    section
-        +h2("Projects")
-
-        //- TODO: 3 projects
+    +h2("Projects")
+    +sectionWhite()
+        div(class="mx-4 my-8")
+            +projectListing("BREAK a Journaling Framework for Overcoming Limiting Beliefs", "photo url", "summary")
+            +projectListing("Daily Lyric Posters", "photo url", "summary")
+            +projectListing("Inclüsion T-shirt Design", "photo url", "summary")

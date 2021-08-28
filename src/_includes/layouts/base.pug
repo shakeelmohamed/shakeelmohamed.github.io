@@ -15,12 +15,13 @@ html(lang="en")
         link(href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet")
         //- TODO: optimize tailwind for production
         link(href="dist/tailwind.css" rel="stylesheet")
-        //- TODO: open graph
+        //- TODO: open graph via block?
         //- TODO: favicon(s)
         //- TODO: sitemap
-    body(class="bg-navy mx-4 my-8 md:container md:mx-auto")
+    body(class="bg-navy md:container md:mx-auto")
         +header()
         main
+            block hero
             block content
         //- section //- for projects
         //- p.font-sans testing sans

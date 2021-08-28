@@ -1,14 +1,38 @@
-- var base = "font-sans text-white ";
-- var heading = base + "font-bold py-4 text-center md:text-left ";
+- var base = "font-sans ";
+- var serif = "font-serif ";
+
+- var white = "text-white ";
+- var navy = "text-navy ";
+
+- var heading = base + white + "font-bold py-4 md:text-left ";
+- var headingNavy = base + navy + "font-bold py-4 md:text-left ";
 
 mixin h1(text)
     h1(class=heading + "text-5xl") #{text}
 
+mixin h1Navy(text)
+    h1(class=headingNavy + "text-5xl") #{text}
+
 mixin h2(text)
     h2(class=heading + "text-4xl") #{text}
+
+mixin h2Navy(text)
+    h2(class=headingNavy + "text-4xl") #{text}
 
 mixin h3(text)
     h3(class=heading + "text-3xl") #{text}
 
+mixin h3Navy(text)
+    h3(class=headingNavy + "text-3xl") #{text}
+
 mixin subheading(text)
-    p(class=base + "text-left text-l") #{text}
+    p(class=base + white + "text-left text-l") #{text}
+
+mixin subheadingNavy(text)
+    p(class=base + navy + "text-left text-l") #{text}
+
+mixin p(text)
+    p(class=serif + white + "text-left text-m") #{text}
+
+mixin pNavy(text)
+    p(class=serif + navy + "text-left text-m") #{text}
