@@ -4,7 +4,7 @@ mixin navItem(href, label)
 
 mixin header()
     //- TODO: layout breaks below 320px width
-    header(class="mx-4 my-8 text-white md:flex md:items-baseline md:justify-between")
+    header(class="text-white md:flex md:items-baseline md:justify-between")
         h3(class="font-sans font-bold text-white text-3xl text-center py-4 flex-nowrap md:text-left") Shakeel Mohamed
         nav(class="flex justify-between text-lg md:py-5 md:justify-items-end md:flex-shrink-0 md:mx-0")
             +navItem("/work", "Work")
@@ -12,22 +12,5 @@ mixin header()
             +navItem("/about", "About")
             +navItem("/contact", "Contact")
 
-mixin head()
-    doctype html
-    html(lang="en")
-        head
-            meta(charset="UTF-8")
-            meta(http-equiv="X-UA-Compatible", content="chrome=1")
-            meta(name="viewport" content="width=device-width, initial-scale=1.0")
-            link(rel="stylesheet" href="https://use.typekit.net/uun0nut.css")
-            link(rel="preconnect" href="https://fonts.googleapis.com")
-            link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
-            link(href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet")
-            //- TODO: optimize tailwind for production
-            link(href="dist/tailwind.css" rel="stylesheet")
-            //- TODO: open graph
-            //- TODO: favicon(s)
-            //- TODO: sitemap
-            if block
-                block
-
+mixin footer()
+    //- blank

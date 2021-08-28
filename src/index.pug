@@ -1,12 +1,5 @@
-include _includes/atoms.pug
+extends _includes/layouts/base.pug
+include _includes/type.pug
 
-+head()
-    title Shakeel Mohamed
-body(class="bg-navy md:container md:mx-auto")
-    +header()
-    main
-    //- section //- for projects
-    footer
-    //- p.font-sans testing sans
-    //- p.font-serif testing serif
-    //- p.font-pm testing PN
+block content
+    +h1("Hello from Seattle!")

@@ -1,0 +1,29 @@
+include ../atoms.pug
+
+doctype html
+html(lang="en")
+    head
+        //- TODO: make title dynamic
+        title Shakeel Mohamed
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="chrome=1")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="https://use.typekit.net/uun0nut.css")
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet")
+        //- TODO: optimize tailwind for production
+        link(href="dist/tailwind.css" rel="stylesheet")
+        //- TODO: open graph
+        //- TODO: favicon(s)
+        //- TODO: sitemap
+    body(class="bg-navy mx-4 my-8 md:container md:mx-auto")
+        +header()
+        main
+            block content
+        //- section //- for projects
+        //- p.font-sans testing sans
+        //- p.font-serif testing serif
+        //- p.font-pm testing PN
+        +footer()
+
