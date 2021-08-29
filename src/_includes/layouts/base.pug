@@ -14,17 +14,15 @@ html(lang="en")
         link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
         link(href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet")
         //- TODO: optimize tailwind for production
-        link(href="dist/tailwind.css" rel="stylesheet")
+        link(href="/dist/tailwind.css" rel="stylesheet")
         //- TODO: open graph via block?
+        //- see https://iamjoona.com/blog/seo-tags-in-eleventy/
         //- TODO: favicon(s)
         //- TODO: sitemap
-    body(class="bg-navy md:container md:mx-auto")
-        +header()
+    body(class="bg-navy")
+        +container()
+            +header()
         main
             block hero
             block content
-        //- section //- for projects
-        //- p.font-sans testing sans
-        //- p.font-serif testing serif
-        //- p.font-pm testing PN
         +footer()

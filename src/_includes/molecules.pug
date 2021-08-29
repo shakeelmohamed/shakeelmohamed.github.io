@@ -1,10 +1,10 @@
 //- TODO: move nav
-//- TODO: newsletter signup form
+//- TODO: newsletter signup form; https://github.com/tailwindlabs/tailwindcss-forms
 
 //- TODO: remix so blog listing can reuse part of this
 mixin projectListing(title, photoUrl, summary)
     //- TODO: image
-    div.mx-auto
+    div.justify-self-auto
         img(src="https://dummyimage.com/1200x630/000/fff.png&text=Project+Cover+Photo+Here")
         +h3Navy(title)
         +pNavy(summary)

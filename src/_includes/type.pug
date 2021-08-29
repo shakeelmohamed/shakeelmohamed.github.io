@@ -16,6 +16,7 @@ mixin h1(text)
 mixin h1Navy(text)
     h1(class=headingNavy + "text-5xl") #{text}
 
+//- TODO: find a cleaner way to do this accent thing; maybe make an atom for it
 mixin h2(text, withAccent=false)
     h2(class=heading + "text-4xl") #{text}
         if withAccent

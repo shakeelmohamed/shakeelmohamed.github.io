@@ -4,7 +4,7 @@
   "description": "My personal website",
   "private": true,
   "scripts": {
-    "start": "npx @11ty/eleventy --serve --input=src --output=docs",
+    "start": "npm run-script build && npx @11ty/eleventy --serve --input=src --output=docs",
     "build": "npx @11ty/eleventy --input=src --output=docs && npx tailwindcss -o ./docs/dist/tailwind.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -23,6 +23,7 @@
     "@11ty/eleventy-plugin-inclusive-language": "^1.0.2",
     "@tailwindcss/typography": "^0.4.1",
     "autoprefixer": "^10.3.3",
+    "jstransformer-markdown-it": "^2.1.0",
     "markdown-it": "^10.0.0",
     "postcss": "^8.3.6",
     "tailwindcss": "^2.2.8"

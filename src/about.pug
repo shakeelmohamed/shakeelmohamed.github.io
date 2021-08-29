@@ -1,0 +1,42 @@
+extends _includes/layouts/base.pug
+include _includes/molecules.pug
+
+//- TODO: this entire page has WIP copy
+
+block hero
+    +container()
+        +h1("About me 🙋🏻‍♂️")
+        +subheading("My pronouns are he/him. I’m the former software engineer who thought like a designer his whole career.")
+
+    +sectionWhite()
+        +container()
+            div(class="mx-4 my-8 py-4")
+                +bio()
+
+mixin bio()
+    :markdown-it()
+        I’m a self-taught designer, born and raised in the greater Seattle area. As someone who never quite fit in, I’ve always been curious about how labels shape our identities. These are a few of my labels: ISTJ, capricon, introvered, type A, Ismaili Muslim, Gujarati, first-generation American.
+
+
+        I’m inspired by peak performances whether it’s Michael Jordan in the NBA finals, or The Weeknd performing at the Super Bowl halftime show.
+
+
+        I spend my free time volunteering with the Ismaili Muslim community on various projects. I’m currently applying to graduate school programs in graphic design while running my independent design business, ntrsct (in•ter•sect) designs. 
+
+block content
+    +sectionOrange() 
+        +container()
+            +h2Navy("My Manifesto")
+            +pNavy("This is my approach to any situation, personally or professionally. This is the unique contribution I bring to the world.")
+
+            -
+                var manifesto = {
+                   "Outwork deficiencies": "Any weakness can be overcome with great effort.",
+                   "Create the future": "Start with the end in mind, work towards the plan, adjust as needed.",
+                   "Seek growth constantly": "Knowledge is power, so learn from the greats; success leaves clues.",
+                   "Enable understanding through transparency": "Use clear & direct communication, translate if necessary.",
+                   "Think from a unique perspective": "Think inside, outside, and about the box itself."
+                };
+            each val, key in manifesto
+                +h3(key)
+                +pNavy(val)

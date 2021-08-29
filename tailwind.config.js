@@ -6,7 +6,7 @@ module.exports = {
     // './src/**/*.html',
     // './src/**/*.js',
   ], 
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'media', // or 'media' or 'class'
   theme: {
     extend: {
       fontFamily: {
@@ -16,6 +16,7 @@ module.exports = {
     },
     colors: {
       navy: '#002855',
+      blue: '#002855',
       white: '#FFFFFF',
       'light-blue': '#98B6E4',
       orange: '#FF5C0A'

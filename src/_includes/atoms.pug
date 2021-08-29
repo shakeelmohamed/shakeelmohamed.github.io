@@ -4,7 +4,7 @@ mixin navItem(href, label)
 //- TODO: move to organisms
 mixin header()
     //- TODO: layout breaks below 320px width
-    header(class="text-white mx-4 my-8 md:flex md:items-baseline md:justify-between")
+    header(class="text-white md:flex md:items-baseline md:justify-between")
         h3(class="font-sans font-bold text-white text-3xl text-center py-4 flex-nowrap md:text-left")
             a(href="/") Shakeel Mohamed
         nav(class="flex justify-between text-lg md:py-5 md:justify-items-end md:flex-shrink-0 md:mx-0")
@@ -19,9 +19,13 @@ mixin footer()
 
 
 mixin sectionWhite()
-    section(class="bg-white")
+    section(class="bg-white text-navy")
         block
 
 mixin sectionOrange()
-    section(class="bg-orange")
+    section(class="bg-orange text-navy")
+        block
+
+mixin container
+    div(class="mx-4 my-8 md:container md:mx-auto")
         block

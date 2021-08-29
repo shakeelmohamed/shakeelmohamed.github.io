@@ -29,4 +29,7 @@ module.exports = function(eleventyConfig) {
         debug: true,
         pretty: "    "
     });
+
+    // Template aliases
+    eleventyConfig.addLayoutAlias('post', 'src/_includes/layouts/post.pug');
 };
