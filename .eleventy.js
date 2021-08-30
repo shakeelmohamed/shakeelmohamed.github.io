@@ -6,13 +6,12 @@ module.exports = function(eleventyConfig) {
         "pug",
         "png",
         "jpg",
-        "js",
-        "css"
+        "md"
       ]);
     // Flags from CLI usage --formats=html,md,png,jpg,pug
-
-    // Inclusive language, TODO: how to use this
-    eleventyConfig.addPlugin(inclusiveLangPlugin);
+    // TODO:
+    // eleventyConfig.addPassthroughCopy("assets");
+    // eleventyConfig.addPassthroughCopy("css");
     
     // Custom markdown processor
     let markdownIt = require("markdown-it");
@@ -31,5 +30,7 @@ module.exports = function(eleventyConfig) {
     });
 
     // Template aliases
-    eleventyConfig.addLayoutAlias('post', 'src/_includes/layouts/post.pug');
+    eleventyConfig.addLayoutAlias('post', 'layouts/post.pug');
+
+    // TODO: integrate alex for biased & bad word checks https://github.com/get-alex/alex
 };

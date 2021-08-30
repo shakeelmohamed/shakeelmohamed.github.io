@@ -1,0 +1,13 @@
+extends base.pug
+
+block hero
+    +container()
+        +pLightBlue(date)
+        +h1(title)
+        +subheading(description)
+
+block content
+    +sectionWhite()
+        +container()
+            div.prose
+                != content

@@ -1,4 +1,12 @@
-#Summer with Splunk
+---
+layout: post
+date: 2013-09-20
+title: Summer with Splunk
+description: The story of receiving an unexpected internship opportunity
+tags:
+    - post
+    - career
+---
 
 This summer I received an unexpected opportunity to be a software engineer intern at Splunk’s Seattle office.
 

@@ -1,0 +1,28 @@
+//- TODO: don't break permalink of /posts page
+
+extends _includes/layouts/base.pug
+include _includes/molecules.pug
+
+block hero
+    +container()
+        +h1("The Blog ✍🏽")
+        +subheading("Through writing, I like to reflect about problems I’ve solved, experiences I’ve had, and how to do things that were once difficult for me.")
+
+block content
+    +container()
+        +getPosts()
+
+
+//- TODO: implement me
+//- mixin getFeatured()
+//-     each post in collections.featured
+//-         a(href=post.url)
+//-             +subheading(post.data.title)  
+//-         +pBlue(post.data.description)
+
+//- TODO: design this component
+mixin getPosts()
+    each post in collections.post
+        +pLightBlue(post.data.date + " //// Tags: " +  post.data.categories)
+        a(href=post.url)
+            +subheading(post.data.title)

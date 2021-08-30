@@ -6,9 +6,14 @@
 
 - var white = "text-white ";
 - var navy = "text-navy ";
+- var lightBlue = "text-light-blue ";
 
 - var heading = base + white + "font-bold py-4 md:text-left ";
 - var headingNavy = base + navy + "font-bold py-4 md:text-left ";
+
+//- TODO: something like this would help clean up the duplication
+//- mixin h1(text, color="white")
+//-     h1(class=heading + "text-#{colorclass(color)}" + "text-5xl") #{text}
 
 mixin h1(text)
     h1(class=heading + "text-5xl") #{text}
@@ -32,16 +37,19 @@ mixin h3Navy(text)
     h3(class=headingNavy + "text-3xl") #{text}
 
 mixin subheading(text)
-    p(class=base + white + "text-left text-l") #{text}
+    p(class=base + white + "font-bold text-left text-l") #{text}
 
 mixin subheadingNavy(text)
-    p(class=base + navy + "text-left text-l") #{text}
+    p(class=base + navy + "font-bold text-left text-l") #{text}
 
 mixin p(text)
     p(class=serif + white + "text-left text-m") #{text}
 
 mixin pNavy(text)
     p(class=serif + navy + "text-left text-m") #{text}
+
+mixin pLightBlue(text)
+    p(class=serif + lightBlue + "text-left text-m") #{text}
 
 mixin accent()
     //- TODO: design a more elegant icon
