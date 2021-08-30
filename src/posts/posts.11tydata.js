@@ -21,3 +21,5 @@ function formatDate(date) {
 
     return [year, month, day].join('-');
 }
+
+// TODO: if date is missing, try to parse it from the folder name?

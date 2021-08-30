@@ -22,15 +22,22 @@
         </div>
         <main>
             <div class="mx-4 my-8 md:container md:mx-auto">
-                <h1 class="font-sans text-white font-bold py-4 md:text-left text-5xl">The Blog ✍🏽</h1>
-                <p class="font-sans text-white font-bold text-left text-l">Through writing, I like to reflect about problems I’ve solved, experiences I’ve had, and how to do things that were once difficult for me.</p>
+                <p class="font-serif text-light-blue text-left text-m">2014-11-13</p>
+                <h1 class="font-sans text-white font-bold py-4 md:text-left text-5xl">Remove an accidentally pushed remote git commit</h1>
+                <p class="font-sans text-white font-bold text-left text-l"></p>
             </div>
-            <div class="mx-4 my-8 md:container md:mx-auto">
-                <p class="font-serif text-light-blue text-left text-m">2013-09-19 //// Tags: career</p><a href="/posts/2013-09-20-summer-with-splunk/">
-                    <p class="font-sans text-white font-bold text-left text-l">Summer with Splunk</p></a>
-                <p class="font-serif text-light-blue text-left text-m">2014-11-13 //// Tags: git</p><a href="/posts/2014-11-14-remove-an-accidentally-pushed-remote-git-commit/">
-                    <p class="font-sans text-white font-bold text-left text-l">Remove an accidentally pushed remote git commit</p></a>
-            </div>
+            <section class="bg-white text-navy">
+                <div class="mx-4 my-8 md:container md:mx-auto">
+                    <div class="prose"><!-- TODO: need to style code blocks with some better vertical padding -->
+<pre><code class="language-bash">git checkout &lt;branch name&gt;
+git checkout &lt;commit sha&gt;
+git push -f -n # Do a dry run
+git push -f # Do the damn thing
+</code></pre>
+
+                    </div>
+                </div>
+            </section>
         </main>
     </body>
 </html>

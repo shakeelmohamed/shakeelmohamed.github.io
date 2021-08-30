@@ -8,7 +8,7 @@ module.exports = function(eleventyConfig) {
         "jpg",
         "md"
       ]);
-    // Flags from CLI usage --formats=html,md,png,jpg,pug
+
     // TODO:
     // eleventyConfig.addPassthroughCopy("assets");
     // eleventyConfig.addPassthroughCopy("css");
