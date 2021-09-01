@@ -1,3 +1,5 @@
+
+
 //- TODO: move nav
 //- TODO: newsletter signup form; https://github.com/tailwindlabs/tailwindcss-forms
 
@@ -8,3 +10,11 @@ mixin projectListing(title, photoUrl, summary)
         img(src="https://dummyimage.com/1200x630/000/fff.png&text=Project+Cover+Photo+Here")
         +h3Navy(title)
         +pNavy(summary)
+
+mixin copyright()
+    //- TODO: how can this be reused/modular?
+    div(class="pt-4 mx-auto text-center")
+        p(class="font-serif text-white text-base") Designed and developed with ✨emotion✨ by 
+            a(href="/about") me.
+        p(class="font-serif text-white text-base") &copy;
+            script document.write(new Date().getFullYear())

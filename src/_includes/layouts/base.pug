@@ -1,4 +1,5 @@
 include ../atoms.pug
+include ../organisms.pug
 include ../type.pug
 
 doctype html
@@ -24,7 +25,8 @@ html(lang="en")
         +container()
             +header()
         main
-            div(class="lg:mx-72")
-                block hero
+            +container()
+                div(class="lg:mx-72")
+                    block hero
             block content
         +footer()
