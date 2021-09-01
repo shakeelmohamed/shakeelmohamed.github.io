@@ -16,41 +16,47 @@
 //-     h1(class=heading + "text-#{colorclass(color)}" + "text-5xl") #{text}
 
 mixin h1(text)
-    h1(class=heading + "text-5xl") #{text}
+    h1(class=heading + "text-7xl") #{text}
+    //- h1(class=heading + "text-5xl") #{text}
 
 mixin h1Navy(text)
-    h1(class=headingNavy + "text-5xl") #{text}
+    h1(class=headingNavy + "text-7xl") #{text}
+    //- h1(class=headingNavy + "text-5xl") #{text}
 
 //- TODO: find a cleaner way to do this accent thing; maybe make an atom for it
-mixin h2(text, withAccent=false)
-    h2(class=heading + "text-4xl") #{text}
-        if withAccent
-            +accent()
+mixin h2(text)
+    //- h2(class=heading + "text-4xl") #{text}
+    h2(class=heading + "text-5xl") #{text}
+        block
 
 mixin h2Navy(text)
-    h2(class=headingNavy + "text-4xl") #{text}
+    //- h2(class=headingNavy + "text-4xl") #{text}
+    h2(class=headingNavy + "text-5xl") #{text}
 
 mixin h3(text)
-    h3(class=heading + "text-3xl") #{text}
+    //- h3(class=heading + "text-3xl") #{text}
+    h3(class=heading + "text-4xl") #{text}
 
 mixin h3Navy(text)
-    h3(class=headingNavy + "text-3xl") #{text}
+    //- h3(class=headingNavy + "text-3xl") #{text}
+    h3(class=headingNavy + "text-4xl") #{text}
 
+//- TODO: subheading looks odd in bold
 mixin subheading(text)
-    p(class=base + white + "font-bold text-left text-l") #{text}
+    p(class=base + white + "font-bold text-left text-lg") #{text}
 
 mixin subheadingNavy(text)
-    p(class=base + navy + "font-bold text-left text-l") #{text}
+    p(class=base + navy + "font-bold text-left text-lg") #{text}
 
 mixin p(text)
-    p(class=serif + white + "text-left text-m") #{text}
+    p(class=serif + white + "text-left text-base") #{text}
 
 mixin pNavy(text)
-    p(class=serif + navy + "text-left text-m") #{text}
+    p(class=serif + navy + "text-left text-base") #{text}
 
 mixin pLightBlue(text)
-    p(class=serif + lightBlue + "text-left text-m") #{text}
+    p(class=serif + lightBlue + "text-left text-base") #{text}
 
 mixin accent()
     //- TODO: design a more elegant icon
-    span.text-orange &nbsp; >>>
+    span.text-orange.font-bold &nbsp; >>>

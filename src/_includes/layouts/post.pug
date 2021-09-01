@@ -9,5 +9,7 @@ block hero
 block content
     +sectionWhite()
         +container()
-            div.prose
-                != content
+            div(class="lg:mx-72")
+                //- TODO: this text-base will probably break any headings, ditto for font-serif
+                .prose.font-serif.text-base
+                    != content

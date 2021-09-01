@@ -9,20 +9,28 @@ block hero
         +subheading("Through writing, I like to reflect about problems I’ve solved, experiences I’ve had, and how to do things that were once difficult for me.")
 
 block content
+    +sectionOrange()
+        div(class="lg:mx-72 pb-4")
+            +h2Navy("Featured Posts")
+            +container()
+            +getFeatured()
     +container()
-        +getPosts()
+        div(class="lg:mx-72 py-4")
+            +getPosts()
 
 
 //- TODO: implement me
-//- mixin getFeatured()
-//-     each post in collections.featured
-//-         a(href=post.url)
-//-             +subheading(post.data.title)  
-//-         +pBlue(post.data.description)
+mixin getFeatured()
+    each post in collections.featured
+        a(href=post.url)
+            +h3(post.data.title)  
+        +pNavy(post.data.description)
 
 //- TODO: design this component
 mixin getPosts()
     each post in collections.post
-        +pLightBlue(post.data.date + " //// Tags: " +  post.data.categories)
+        .flex.place-content-between
+            +pLightBlue(post.data.date)
+            +pLightBlue("Tags: " +  post.data.categories)
         a(href=post.url)
             +subheading(post.data.title)

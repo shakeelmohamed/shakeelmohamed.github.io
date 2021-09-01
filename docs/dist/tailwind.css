@@ -17379,7 +17379,7 @@ video {
 }
 
 .font-serif {
-  font-family: "EB Garamond", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  font-family: garamond-premier-pro, ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
 .font-mono {
@@ -17397,8 +17397,7 @@ video {
 }
 
 .text-base {
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 1.25rem;
 }
 
 .text-lg {
@@ -38459,7 +38458,7 @@ video {
   }
 
   .sm\:font-serif {
-    font-family: "EB Garamond", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    font-family: garamond-premier-pro, ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   }
 
   .sm\:font-mono {
@@ -38477,8 +38476,7 @@ video {
   }
 
   .sm\:text-base {
-    font-size: 1rem;
-    line-height: 1.5rem;
+    font-size: 1.25rem;
   }
 
   .sm\:text-lg {
@@ -59503,7 +59501,7 @@ video {
   }
 
   .md\:font-serif {
-    font-family: "EB Garamond", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    font-family: garamond-premier-pro, ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   }
 
   .md\:font-mono {
@@ -59521,8 +59519,7 @@ video {
   }
 
   .md\:text-base {
-    font-size: 1rem;
-    line-height: 1.5rem;
+    font-size: 1.25rem;
   }
 
   .md\:text-lg {
@@ -80547,7 +80544,7 @@ video {
   }
 
   .lg\:font-serif {
-    font-family: "EB Garamond", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    font-family: garamond-premier-pro, ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   }
 
   .lg\:font-mono {
@@ -80565,8 +80562,7 @@ video {
   }
 
   .lg\:text-base {
-    font-size: 1rem;
-    line-height: 1.5rem;
+    font-size: 1.25rem;
   }
 
   .lg\:text-lg {
@@ -101591,7 +101587,7 @@ video {
   }
 
   .xl\:font-serif {
-    font-family: "EB Garamond", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    font-family: garamond-premier-pro, ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   }
 
   .xl\:font-mono {
@@ -101609,8 +101605,7 @@ video {
   }
 
   .xl\:text-base {
-    font-size: 1rem;
-    line-height: 1.5rem;
+    font-size: 1.25rem;
   }
 
   .xl\:text-lg {
@@ -122635,7 +122630,7 @@ video {
   }
 
   .\32xl\:font-serif {
-    font-family: "EB Garamond", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    font-family: garamond-premier-pro, ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   }
 
   .\32xl\:font-mono {
@@ -122653,8 +122648,7 @@ video {
   }
 
   .\32xl\:text-base {
-    font-size: 1rem;
-    line-height: 1.5rem;
+    font-size: 1.25rem;
   }
 
   .\32xl\:text-lg {

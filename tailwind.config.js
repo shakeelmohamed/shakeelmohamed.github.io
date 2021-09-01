@@ -11,7 +11,10 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['proxima-nova', ...defaultTheme.fontFamily.sans],
-        serif: ['"EB Garamond"', ...defaultTheme.fontFamily.serif],
+        serif: ['garamond-premier-pro', ...defaultTheme.fontFamily.serif],
+      },
+      fontSize: { // TODO: customize other type sizes here
+        'base': '1.25rem' // This is 20px on desktop... originally had designed with 24px in mind
       }
     },
     colors: {
@@ -20,7 +23,7 @@ module.exports = {
       white: '#FFFFFF',
       'light-blue': '#98B6E4',
       orange: '#FF5C0A'
-    }
+    },
   },
   variants: {
     extend: {},

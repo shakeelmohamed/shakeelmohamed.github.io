@@ -18,7 +18,8 @@ module.exports = function(eleventyConfig) {
     let options = {
         html: true,
         linkify: true,
-        typographer: true
+        typographer: true,
+        breaks: true
     };
     let markdownLib = markdownIt(options);
     eleventyConfig.setLibrary("md", markdownLib);
@@ -36,7 +37,7 @@ module.exports = function(eleventyConfig) {
     // Use the default sorting algorithm in reverse (descending dir, date, filename)
     // Note that using a template engine’s `reverse` filter might be easier here
     eleventyConfig.addCollection("post", function(collectionApi) {
-        console.dir(collectionApi);
+        // TODO: should featured posts be omitted?
         return collectionApi.getFilteredByTag("post").reverse();
     });
 
