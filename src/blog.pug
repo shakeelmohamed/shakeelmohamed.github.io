@@ -10,10 +10,10 @@ block hero
 
 block content
     +sectionOrange()
-        div(class="lg:mx-72 pb-4")
-            +h2Navy("Featured Posts")
-            +container()
-            +getFeatured()
+        +container()
+            div(class="lg:mx-72 pb-4")
+                +h2Navy("Featured Posts")
+                +getFeatured()
     +container()
         div(class="lg:mx-72 py-4")
             +getPosts()

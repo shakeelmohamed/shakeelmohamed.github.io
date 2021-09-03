@@ -16,11 +16,11 @@
 //-     h1(class=heading + "text-#{colorclass(color)}" + "text-5xl") #{text}
 
 mixin h1(text)
-    h1(class=heading + "text-7xl") #{text}
+    h1(class=heading + "text-5xl md:text-7xl") #{text}
     //- h1(class=heading + "text-5xl") #{text}
 
 mixin h1Navy(text)
-    h1(class=headingNavy + "text-7xl") #{text}
+    h1(class=headingNavy + " text-5xl md:text-7xl") #{text}
     //- h1(class=headingNavy + "text-5xl") #{text}
 
 //- TODO: find a cleaner way to do this accent thing; maybe make an atom for it
@@ -42,11 +42,12 @@ mixin h3Navy(text)
     h3(class=headingNavy + "text-4xl") #{text}
 
 //- TODO: subheading looks odd in bold
-mixin subheading(text)
-    p(class=base + white + "font-bold text-left text-lg") #{text}
+mixin subheading()
+    p(class=base + white + "text-left text-xl")
+        block
 
 mixin subheadingNavy(text)
-    p(class=base + navy + "font-bold text-left text-lg") #{text}
+    p(class=base + navy + "text-left text-xl") #{text}
 
 //- TODO: need some styling for links with anchor tags
 

@@ -1,6 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+
 /* Currently unused, custom style can go here for the typography plugin
 
 e.g.:
@@ -14,3 +17,16 @@ prose {
     }
 }
 */
+}
+
+@layer base {
+    p a {
+        @apply text-orange;   
+
+        
+    }
+}
+
+/* p a {
+    color: #FF5C0A;
+} */

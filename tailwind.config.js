@@ -29,7 +29,9 @@ module.exports = {
     extend: {},
   },
   plugins: [
-    // TODO: maybe omit this plugin entirely, lots of manual work needed to override font colors
-    require('@tailwindcss/typography')
+    // TODO: lots of manual work needed to override font family & colors whenever using .prose class
+    // see docs https://github.com/tailwindlabs/tailwindcss-typography
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/forms')
   ],
 }
