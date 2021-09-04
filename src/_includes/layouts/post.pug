@@ -3,13 +3,11 @@ extends base.pug
 block hero
     +container()
         +pLightBlue(date)
-        +h1(title)
+        h1.text-white #{title}
         +subheading(description)
 
+//- TODO: this text-base will probably break any headings, ditto for font-serif
 block content
     +sectionWhite()
         +container()
-            div(class="lg:mx-72")
-                //- TODO: this text-base will probably break any headings, ditto for font-serif
-                .prose.font-serif.text-base
-                    != content
+            div(class="prose lg:mx-72")!= content

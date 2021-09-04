@@ -1,21 +1,23 @@
 //- Temporary workaround: this file is blog.pug, symlinked to posts.pug for legacy SEO
 //- TODO: decide which one should be canonical, mark it here as such
+//- TODO: SEO and open graph https://iamjoona.com/blog/seo-tags-in-eleventy/
 extends _includes/layouts/base.pug
 include _includes/molecules.pug
 
 block hero
     +container()
-        +h1("The Blog ✍🏽")
+        h1.text-white The Blog ✍🏽
         +subheading("Through writing, I like to reflect about problems I’ve solved, experiences I’ve had, and how to do things that were once difficult for me.")
 
 block content
     +sectionOrange()
         +container()
             div(class="lg:mx-72 pb-4")
-                +h2Navy("Featured Posts")
+                h2.text-navy Featured Posts
                 +getFeatured()
     +container()
         div(class="lg:mx-72 py-4")
+            h2.text-white Recent Posts
             +getPosts()
 
 
@@ -23,7 +25,7 @@ block content
 mixin getFeatured()
     each post in collections.featured
         a(href=post.url)
-            +h3(post.data.title)  
+            h3.text-white #{post.data.title}
         +pNavy(post.data.description)
 
 //- TODO: design this component

@@ -5,31 +5,31 @@ include _includes/molecules.pug
 
 block hero
     +container()
-        +h1("About me 🙋🏻‍♂️")
+        h1.text-white About me 🙋🏻‍♂️ 
         +subheading("My pronouns are he/him.")
         +subheading("I’m the former software engineer who thought like a designer his whole career.")
 
 mixin bio()
-    :markdown-it(html=true)
-        I’m a self-taught designer, born and raised in the greater Seattle area.
+    //- TODO: this is also a temp workaround, see post.pug
+    div(class="prose md:mx-auto")
+        :markdown-it(html=true)
+            I’m a self-taught designer, born and raised in the greater Seattle area.
 
-        As someone who never quite fit in, I’ve always been curious about how labels shape our identities. These are a few of my labels: ISTJ, capricon, introvered, type A, Ismaili Muslim, Gujarati, first-generation American.
+            As someone who never quite fit in, I’ve always been curious about how labels shape our identities. These are a few of my labels: ISTJ, capricon, introvered, type A, Ismaili Muslim, Gujarati, first-generation American.
 
-        I’m inspired by peak performances whether it’s Michael Jordan in the NBA finals, or The Weeknd performing at the Super Bowl halftime show.
+            I’m inspired by peak performances whether it’s Michael Jordan in the NBA finals, or The Weeknd performing at the Super Bowl halftime show.
 
-        I spend my free time volunteering with the Ismaili Muslim community on various projects. I’m currently applying to graduate school programs in graphic design while running my independent design business, [ntrsct (in•ter•sect) designs](https://ntrsct.com).
+            I spend my free time volunteering with the Ismaili Muslim community on various projects. I’m currently applying to graduate school programs in graphic design while running my independent design business, [ntrsct (in•ter•sect) designs](https://ntrsct.com).
 
 block content
     +sectionWhite()
         +container()
             //- TODO: add at least 1 photo on this page
-            //- TODO: this is also a temp workaround, see post.pug
-            div(class="prose font-serif text-base md:mx-auto")
-                +bio()
+            +bio()
     +sectionOrange() 
         +container()
             div(class="py-4 lg:mx-72")
-                +h2Navy("My Manifesto")
+                h2.text-navy My Manifesto
                 +pNavy("This is my approach to any situation, personally or professionally. This is the unique contribution I bring to the world.")
 
                 -
@@ -41,5 +41,5 @@ block content
                        "Think from a unique perspective": "Think inside, outside, and about the box itself."
                     };
                 each val, key in manifesto
-                    +h3(key)
+                    h3.text-white #{key}
                     +pNavy(val)

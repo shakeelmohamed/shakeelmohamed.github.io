@@ -1,11 +1,17 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
-  purge: [
-    // TODO: optimize for production
-    // './src/**/*.html',
-    // './src/**/*.js',
-  ], 
+  purge: {
+    // TODO: further optimize for production, goal size for tailwind.css is 16k
+    enabled: true,
+    content: [
+      './src/**/*.pug',
+      './src/**/*.md'
+    ],
+    options: {
+      keyframes: true,
+    }
+  }, 
   darkMode: 'media', // or 'media' or 'class'
   theme: {
     extend: {
@@ -13,9 +19,9 @@ module.exports = {
         sans: ['proxima-nova', ...defaultTheme.fontFamily.sans],
         serif: ['garamond-premier-pro', ...defaultTheme.fontFamily.serif],
       },
-      fontSize: { // TODO: customize other type sizes here
+      fontSize: { // TODO: customize other type sizes here; actually do it in src/styles.css
         'base': '1.25rem' // This is 20px on desktop... originally had designed with 24px in mind
-      }
+      },
     },
     colors: {
       navy: '#002855',

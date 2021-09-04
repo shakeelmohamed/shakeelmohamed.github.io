@@ -3,30 +3,40 @@
 @tailwind utilities;
 
 @layer base {
-
-/* Currently unused, custom style can go here for the typography plugin
-
-e.g.:
-
-prose {
-    h1, h2, h3, h4, h5 {
-        @apply font-sans
+    /* Headers */
+    h1 {
+        @apply font-sans font-bold py-4 text-5xl md:text-7xl; /*md:text-left*/
     }
-    p {
-        @apply font-serif
+    h2 {
+        @apply font-sans font-bold py-4 text-4xl md:text-5xl; /*md:text-left*/
     }
-}
-*/
-}
+    h3 {
+        @apply font-sans font-bold py-4 text-3xl md:text-4xl; /*md:text-left*/
+    }
 
-@layer base {
+    /* Type style */
     p a {
-        @apply text-orange;   
-
-        
+        @apply text-orange;
     }
+
+    /* TODO: define a style for full width section, which can then have a color applied to it */
 }
 
-/* p a {
-    color: #FF5C0A;
-} */
+@layer utilities {
+    /* Typography plugin customization */
+    .prose {
+        @apply font-serif text-base;
+    }
+    .prose h1 {
+        @apply font-serif text-navy font-bold py-4 md:text-left text-5xl md:text-7xl;
+    }
+    .prose h2 {
+        @apply font-serif text-navy py-4;
+    }
+    .prose h3 {
+        @apply font-serif text-navy;
+    }
+    .prose a {
+        @apply text-light-blue;
+    }
+}
