@@ -32,11 +32,19 @@ module.exports = function(eleventyConfig) {
 
     // Template aliases
     eleventyConfig.addLayoutAlias('post', 'layouts/post.pug');
+    eleventyConfig.addLayoutAlias('project', 'layouts/project.pug');
 
-    // Omit featured post, sort remaining in reverse order
+    // Omit featured posts, sort remaining in reverse order
     eleventyConfig.addCollection("post", function(collectionApi) {
         return collectionApi.getFilteredByTag("post").reverse().filter(post => {
             return !post.data.tags.includes("featured");
+        });
+    });
+
+    // Omit archived projects, sort remaining in reverse order
+    eleventyConfig.addCollection("project", function(collectionApi) {
+        return collectionApi.getFilteredByTag("project").reverse().filter(post => {
+            return !post.data.tags.includes("archive");
         });
     });
 

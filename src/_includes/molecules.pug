@@ -1,20 +1,22 @@
-
-
-//- TODO: move nav
-//- TODO: newsletter signup form; https://github.com/tailwindlabs/tailwindcss-forms
-
 //- TODO: remix so blog listing can reuse part of this
-mixin projectListing(title, photoUrl, summary)
-    //- TODO: image
+mixin projectListing(project)
+    //- TODO: cover image, same as the open graph image
     div.justify-self-auto
         img(src="https://dummyimage.com/1200x630/000/fff.png&text=Project+Cover+Photo+Here")
-        h3.text-navy title
-        +pNavy(summary)
+        h3.text-navy
+            a(href=project.url) #{project.data.title}
+        p.text-navy #{project.data.description}
 
 mixin copyright()
     //- TODO: how can this be reused/modular?
     div(class="pt-4 mx-auto text-center")
-        p(class="font-serif text-white text-base") Designed and developed with ✨emotion✨ by 
+        p.caption.text-white Designed and developed with ✨emotion✨ by 
             a(href="/about") me.
-        p(class="font-serif text-white text-base") &copy;
+        p.caption.text-white &copy;
             script document.write(new Date().getFullYear())
+
+//- mixin projectSectionText()
+    
+//- mixin projectSectionSplit()
+    
+//- mixin projectSectionImage()

@@ -6,12 +6,13 @@ include _includes/molecules.pug
 block hero
     +container()
         h1.text-white About me 🙋🏻‍♂️ 
-        +subheading("My pronouns are he/him.")
-        +subheading("I’m the former software engineer who thought like a designer his whole career.")
+        p.subhead.text-white My pronouns are he/him.
+        p.subhead.text-white I’m the former software engineer who thought like a designer his whole career.
 
 mixin bio()
     //- TODO: this is also a temp workaround, see post.pug
     div(class="prose md:mx-auto")
+        //- TODO: something about career transition here
         :markdown-it(html=true)
             I’m a self-taught designer, born and raised in the greater Seattle area.
 
@@ -19,7 +20,9 @@ mixin bio()
 
             I’m inspired by peak performances whether it’s Michael Jordan in the NBA finals, or The Weeknd performing at the Super Bowl halftime show.
 
-            I spend my free time volunteering with the Ismaili Muslim community on various projects. I’m currently applying to graduate school programs in graphic design while running my independent design business, [ntrsct (in•ter•sect) designs](https://ntrsct.com).
+            I spend my free time volunteering with [the Ismaili Muslim community](https://the.ismaili/) on various (sometimes creative) projects.
+
+            I’m currently applying to graduate school MFA programs in graphic design while running my independent design business, [ntrsct (in•ter•sect) designs](https://ntrsct.com).
 
 block content
     +sectionWhite()
@@ -29,8 +32,8 @@ block content
     +sectionOrange() 
         +container()
             div(class="py-4 lg:mx-72")
-                h2.text-navy My Manifesto
-                +pNavy("This is my approach to any situation, personally or professionally. This is the unique contribution I bring to the world.")
+                h2.text-navy My Principles
+                p.text-navy This is my approach to any situation, personally or professionally. This is the unique contribution I bring to the world.
 
                 -
                     var manifesto = {
@@ -40,6 +43,6 @@ block content
                        "Enable understanding through transparency": "Use clear & direct communication, translate if necessary.",
                        "Think from a unique perspective": "Think inside, outside, and about the box itself."
                     };
-                each val, key in manifesto
-                    h3.text-white #{key}
-                    +pNavy(val)
+                each details, name in manifesto
+                    h3.text-white #{name}
+                    p.text-navy #{details}

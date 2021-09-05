@@ -13,8 +13,19 @@
     h3 {
         @apply font-sans font-bold py-4 text-3xl md:text-4xl; /*md:text-left*/
     }
+    /* subheading */
+    p.subhead {
+        @apply font-sans text-xl;
+    }
+    /* caption */
+    p.caption {
+        @apply font-sans text-sm;
+    }
 
     /* Type style */
+    p {
+        @apply font-serif text-base;
+    }
     p a {
         @apply text-orange;
     }
@@ -25,7 +36,7 @@
 @layer utilities {
     /* Typography plugin customization */
     .prose {
-        @apply font-serif text-base;
+        @apply font-serif text-base leading-normal;
     }
     .prose h1 {
         @apply font-serif text-navy font-bold py-4 md:text-left text-5xl md:text-7xl;

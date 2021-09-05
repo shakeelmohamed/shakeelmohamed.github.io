@@ -7,7 +7,7 @@ include _includes/molecules.pug
 block hero
     +container()
         h1.text-white The Blog ✍🏽
-        +subheading("Through writing, I like to reflect about problems I’ve solved, experiences I’ve had, and how to do things that were once difficult for me.")
+        p.subhead.text-white Through writing, I like to reflect about problems I’ve solved, experiences I’ve had, and how to do things that were once difficult for me.
 
 block content
     +sectionOrange()
@@ -20,19 +20,17 @@ block content
             h2.text-white Recent Posts
             +getPosts()
 
-
-//- TODO: implement me
 mixin getFeatured()
     each post in collections.featured
         a(href=post.url)
             h3.text-white #{post.data.title}
-        +pNavy(post.data.description)
+        p.text-navy #{post.data.description}
 
 //- TODO: design this component
 mixin getPosts()
     each post in collections.post
         .flex.place-content-between
-            +pLightBlue(post.data.date)
-            +pLightBlue("Tags: " +  post.data.categories)
+            p.text-light-blue #{post.data.date}
+            p.text-light-blue= "Tags: " +  post.data.categories
         a(href=post.url)
-            +subheading(post.data.title)
+            p.subhead.text-white #{post.data.title}

@@ -4,17 +4,18 @@ include _includes/molecules.pug
 block hero
     +container()
         h1.text-white Hello from Seattle! 🌲
-        +subheading("I’m a software engineer turned designer applying to design MFA programs.")
-        +subheading("Keep scrolling to check out my portfolio ⬇️")
-        a(href="/work")
-            h2.text-white Projects
-                +accent()
+        p.subhead.text-white I’m a software engineer turned designer applying to design MFA programs.
+        if collections.portfolio
+            p.subhead.text-white Keep scrolling to check out my portfolio ⬇️
 
 block content
-    //- TODO: this double container thing is really strange
-    +sectionWhite()
-        div(class="lg:mx-72")
-            +container()
-                +projectListing("BREAK a Journaling Framework for Overcoming Limiting Beliefs", "photo url", "summary")
-                +projectListing("Daily Lyric Posters", "photo url", "summary")
-                +projectListing("Inclüsion T-shirt Design", "photo url", "summary")
+    if collections.portfolio
+        //- TODO: this double container thing is really strange
+        +sectionWhite()
+            div(class="lg:mx-72")
+                h2.text-navy Projects
+                +container()
+                    //- +projectListing("BREAK a Journaling Framework for Overcoming Limiting Beliefs", "photo url", "summary")
+                    //- +projectListing("Daily Lyric Posters", "photo url", "summary")
+                    each project in collections.portfolio
+                        +projectListing(project)
