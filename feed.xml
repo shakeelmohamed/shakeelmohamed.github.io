@@ -4,9 +4,16 @@
         <description><![CDATA[Recent Blog Posts]]></description>
         <link>https://ShakeelMohamed.com/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Tue, 10 Aug 2021 12:18:57 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 07 Sep 2021 20:46:50 GMT</lastBuildDate>
         <atom:link href="https://ShakeelMohamed.com/rss.xml" rel="self" type="application/rss+xml"/>
         <webMaster><![CDATA[iam@shakeel.xyz (Shakeel Mohamed)]]></webMaster>
+        <item>
+            <title><![CDATA[My New Hustle Manifesto]]></title>
+            <description><![CDATA[After a great deal of reflection during the pandemic, I've begun to rethink how I want work]]></description>
+            <guid isPermaLink="false">My New Hustle Manifesto</guid>
+            <dc:creator><![CDATA[iam@shakeel.xyz (Shakeel Mohamed)]]></dc:creator>
+            <pubDate>Wed, 08 Sep 2021 07:00:00 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[Powerful Lessons From Splunk I’ll Never Forget]]></title>
             <description><![CDATA[While working at Splunk over the past eight years, I’ve had the opportunity to work with incredibly wise people! These are just a few of the lessons I learned along the way from my most impactful mentors.]]></description>

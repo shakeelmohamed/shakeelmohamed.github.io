@@ -1,5 +1,14 @@
 [
     {
+        "date": "Sep 8, 2021",
+        "title": "My New Hustle Manifesto",
+        "source": "../posts/2021-09-08-my-new-hustle-manifesto",
+        "description": "After a great deal of reflection during the pandemic, I've begun to rethink how I want work",
+        "og": {
+            "image": "./header.png"
+        }
+    },
+    {
         "date": "June 10, 2021",
         "title": "Powerful Lessons From Splunk I’ll Never Forget",
         "source": "../posts/2021-06-10-powerful-lessons-from-splunk",
