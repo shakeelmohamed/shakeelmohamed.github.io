@@ -51,7 +51,7 @@ ul.no-indent {
 }
 
 .post-content img {
-    max-width: 60%;
+    max-width: 100%;
     margin: 0 auto;
     display: block;
 }
