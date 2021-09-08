@@ -42,5 +42,5 @@ This post was inspired by the phenomenal book *Deep Work* by Cal Newport. I reco
 * Deep Work by Cal Newport
 * [Primer by Asian Efficiency](https://store.asianefficiency.com/primer/)
 * [The Productivity Show by Asian Efficiency](https://www.asianefficiency.com/podcasts/)
-* Avoid the "Urgency Trap" with the Eisenhower Matrix 
+* [Avoid the "Urgency Trap" with the Eisenhower Matrix](https://todoist.com/productivity-methods/eisenhower-matrix)
 * I found someone else who wrote a similar blog post years ago! [Redefining Hustle: My New Hustle Manifesto](https://www.kaylainthecity.com/2017/01/26/redefining-hustle/)
