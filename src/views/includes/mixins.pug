@@ -1,4 +1,4 @@
-mixin head(relativePrefix, pageTitle, pageImg, pageDesc)
+mixin head(relativePrefix, pageTitle, pageImg, pageDesc, twittterImg)
     title #{pageTitle}
     meta(charset="utf-8")
     meta(http-equiv="X-UA-Compatible", content="chrome=1")
@@ -8,8 +8,10 @@ mixin head(relativePrefix, pageTitle, pageImg, pageDesc)
     meta(property="og:title" content=pageTitle)
     meta(property="og:image" content=pageImg)
     meta(property="og:description" content=pageDesc)
-    meta(property="twitter:card" content="summary")
+    meta(property="twitter:card" content="summary_large_image")
     meta(property="twitter:creator" content="@_Shakeel")
+    if twitterImg
+        meta(property="twitter:image" content=twitterImg)
     link(href="https://unpkg.com/basscss@8.0.1/css/basscss.min.css", rel="stylesheet")
     link(href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap", rel="stylesheet", type="text/css")
     link(rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png")
