@@ -1,6 +1,7 @@
 https://shakeelmohamed.com/
 https://shakeelmohamed.com/feed.xml
 https://shakeelmohamed.com/posts/
+https://shakeelmohamed.com/posts/2021-09-08-my-new-hustle-manifesto
 https://shakeelmohamed.com/posts/2021-06-10-powerful-lessons-from-splunk
 https://shakeelmohamed.com/posts/2021-04-15-my-approach-to-code-reviews
 https://shakeelmohamed.com/posts/2021-01-22-5-steps-to-success
