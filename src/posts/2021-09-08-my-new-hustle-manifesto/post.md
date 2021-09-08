@@ -33,7 +33,7 @@ Anyone who’s familiar with Agile or Scrum likely knows about the [Agile Manife
 
 Changing the way I approach work is not going to happen overnight, it will require constant reminders and catching myself when I drift into my old patterns. That’s what growth is all about. I won’t dive into the details of the Eisenhower Matrix here, [Todoist has written a great post about it](https://todoist.com/productivity-methods/eisenhower-matrix). It’s a great tool for auditing which activities you devote your time to. In the old hustle mode, it’s easy to get caught up in in being busy – doing urgent things of varying importance. The key to this new definition of hustle is to consistently make time for the important things, which aren’t necessarily urgent.
 
-## Acknowledgements
+## Acknowledgments
 
 This post was inspired by the phenomenal book *Deep Work* by Cal Newport. I recommend reading the second part in the book which is focused on practical strategies to prioritize periods of intense concentration. I’d be remiss if I didn’t mention Asian Efficiency, a group I’ve been following for over a decade for productivity tips for all areas of life.
 
