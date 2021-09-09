@@ -26,7 +26,7 @@ module.exports = function(eleventyConfig) {
 
     // Pug specific options 
     eleventyConfig.setPugOptions({
-        debug: true,
+        debug: false,
         pretty: "    "
     });
 
