@@ -2,7 +2,8 @@
 mixin projectListing(project)
     //- TODO: cover image, same as the open graph image
     div.justify-self-auto
-        img(src="https://dummyimage.com/1200x630/000/fff.png&text=Project+Cover+Photo+Here")
+        a(href=project.url)
+            img(src="https://dummyimage.com/1200x630/000/fff.png&text=Project+Cover+Photo+Here")
         h3.text-navy
             a(href=project.url) #{project.data.title}
         p.text-navy #{project.data.description}
