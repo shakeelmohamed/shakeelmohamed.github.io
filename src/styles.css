@@ -42,7 +42,7 @@
         @apply font-serif text-navy font-bold py-4 md:text-left text-5xl md:text-7xl;
     }
     .prose h2 {
-        @apply font-serif text-navy py-4;
+        @apply font-serif text-navy py-4 mt-0.5 mb-0.5;
     }
     .prose h3 {
         @apply font-serif text-navy;
