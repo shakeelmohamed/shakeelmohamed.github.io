@@ -41,6 +41,11 @@ module.exports = function(eleventyConfig) {
         });
     });
 
+    // Reverse sort featured posts
+    eleventyConfig.addCollection("featured", function(collectionApi) {
+        return collectionApi.getFilteredByTag("featured").reverse();
+    });
+
     // Omit archived projects, sort remaining in reverse order
     eleventyConfig.addCollection("project", function(collectionApi) {
         return collectionApi.getFilteredByTag("project").reverse().filter(post => {
