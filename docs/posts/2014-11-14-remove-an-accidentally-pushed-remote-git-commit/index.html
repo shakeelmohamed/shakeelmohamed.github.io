@@ -8,33 +8,35 @@
         <link rel="stylesheet" href="https://use.typekit.net/uun0nut.css">
         <link href="/dist/tailwind.css" rel="stylesheet">
     </head>
-    <body class="bg-navy">
+    <body class="bg-navy debug-screens">
         <div class="mx-4 pb-2 md:container md:mx-auto">
-            <header class="text-white md:flex md:items-baseline md:justify-between">
-                <h3 class="font-sans font-bold text-white text-3xl text-center py-4 flex-nowrap md:text-left"><a href="/">Shakeel Mohamed</a></h3>
-                <nav class="flex justify-between text-lg md:py-5 md:justify-items-end md:flex-shrink-0 md:mx-0"><a class="font-sans font-bold md:inline-block md:pl-8" href="/">Work</a><a class="font-sans font-bold md:inline-block md:pl-8" href="/blog">Blog</a><a class="font-sans font-bold md:inline-block md:pl-8" href="/about">About</a><a class="font-sans font-bold md:inline-block md:pl-8" href="/contact">Contact</a>
-                </nav>
-            </header>
+            <div class="lg:mx-72">
+                <header class="text-white md:flex md:items-baseline md:justify-between">
+                    <h3 class="font-sans font-bold text-white text-3xl text-center py-4 flex-nowrap md:text-left"><a href="/">Shakeel Mohamed</a></h3>
+                    <nav class="flex justify-between text-lg md:py-5 md:justify-items-end md:flex-shrink-0 md:mx-0"><a class="font-sans font-bold md:inline-block md:pl-8" href="/">Work</a><a class="font-sans font-bold md:inline-block md:pl-8" href="/blog">Blog</a><a class="font-sans font-bold md:inline-block md:pl-8" href="/about">About</a><a class="font-sans font-bold md:inline-block md:pl-8" href="/contact">Contact</a>
+                    </nav>
+                </header>
+            </div>
         </div>
         <main>
             <div class="mx-4 pb-2 md:container md:mx-auto">
                 <div class="lg:mx-72">
-                    <div class="mx-4 pb-2 md:container md:mx-auto">
-                        <p class="text-light-blue">2014-11-13</p>
-                        <h1 class="text-white">Remove an accidentally pushed remote git commit</h1>
-                        <p class="subhead text-white"></p>
-                    </div>
+                    <p class="text-light-blue">2014-11-13</p>
+                    <h1 class="text-white">Remove an accidentally pushed remote git commit</h1>
+                    <p class="subhead text-white"></p>
                 </div>
             </div>
             <section class="bg-white text-navy py-4">
                 <div class="mx-4 pb-2 md:container md:mx-auto">
-                    <div class="prose lg:mx-72"><!-- TODO: need to style code blocks with some better vertical padding -->
+                    <div class="lg:mx-72">
+                        <div class="prose"><!-- TODO: need to style code blocks with some better vertical padding -->
 <pre><code class="language-bash">git checkout &lt;branch name&gt;
 git checkout &lt;commit sha&gt;
 git push -f -n # Do a dry run
 git push -f # Do the damn thing
 </code></pre>
 </div>
+                    </div>
                 </div>
             </section>
         </main>

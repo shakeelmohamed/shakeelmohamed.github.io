@@ -8,6 +8,8 @@ module.exports = {
     }
 };
 
+// TODO: the date returned may be off by 1 day due to UTC Offset
+// see also: https://www.11ty.dev/docs/dates/
 function formatDate(date) {
     var d = new Date(date),
         month = '' + (d.getMonth() + 1),

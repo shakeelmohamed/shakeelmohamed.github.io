@@ -5,20 +5,16 @@ extends _includes/layouts/base.pug
 include _includes/molecules.pug
 
 block hero
-    +container()
-        h1.text-white The Blog ✍🏽
-        p.subhead.text-white Through writing, I like to reflect about problems I’ve solved, experiences I’ve had, and how to do things that were once difficult for me.
+    h1.text-white The Blog ✍🏽
+    p.subhead.text-white Through writing, I like to reflect about problems I’ve solved, experiences I’ve had, and how to do things that were once difficult for me.
 
 block content
     +sectionOrange()
-        +container()
-            div(class="lg:mx-72 pb-4")
-                h2.text-navy Featured Posts
-                +getFeatured()
-    +container()
-        div(class="lg:mx-72 py-4")
-            h2.text-white Recent Posts
-            +getPosts()
+        h2.text-navy Featured Posts
+        +getFeatured()
+    +sectionNavy()
+        h2.text-white Recent Posts
+        +getPosts()
 
 mixin getFeatured()
     each post in collections.featured

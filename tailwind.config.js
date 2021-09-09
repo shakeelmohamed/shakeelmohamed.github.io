@@ -48,6 +48,7 @@ module.exports = {
     // TODO: lots of manual work needed to override font family & colors whenever using .prose class
     // see docs https://github.com/tailwindlabs/tailwindcss-typography
     require('@tailwindcss/typography'),
-    require('@tailwindcss/forms')
+    require('@tailwindcss/forms'),
+    require('tailwindcss-debug-screens')
   ],
 }

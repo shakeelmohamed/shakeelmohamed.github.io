@@ -2,20 +2,18 @@ extends _includes/layouts/base.pug
 include _includes/molecules.pug
 
 block hero
-    +container()
-        h1.text-white Hello from Seattle! 🌲
-        p.subhead.text-white I’m a software engineer turned designer applying to design MFA programs.
-        if collections.portfolio
-            p.subhead.text-white Keep scrolling to check out my portfolio ⬇️
+    //- Look into using Twemoji for cross platform consistent emoji https://github.com/twitter/twemoji
+    h1.text-white Hello from Seattle! 🌲
+    p.subhead.text-white I’m a software engineer turned designer applying to design MFA programs.
+    if collections.portfolio
+        p.subhead.text-white Keep scrolling to check out my portfolio ⬇️
 
 block content
     if collections.portfolio
         //- TODO: this double container thing is really strange
-        +sectionWhite()
-            div(class="lg:mx-72")
-                h2.text-navy Projects
-                +container()
-                    //- +projectListing("BREAK a Journaling Framework for Overcoming Limiting Beliefs", "photo url", "summary")
-                    //- +projectListing("Daily Lyric Posters", "photo url", "summary")
-                    each project in collections.portfolio
-                        +projectListing(project)
+        +sectionWhite()            
+            h2.text-navy Projects
+            //- +projectListing("BREAK a Journaling Framework for Overcoming Limiting Beliefs", "photo url", "summary")
+            //- +projectListing("Daily Lyric Posters", "photo url", "summary")
+            each project in collections.portfolio
+                +projectListing(project)

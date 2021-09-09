@@ -1,14 +1,11 @@
 extends base.pug
 
 block hero
-    +container()
-        p.text-light-blue #{date}
-        h1.text-white #{title}
-        p.subhead.text-white #{description}
+    p.text-light-blue #{date}
+    h1.text-white #{title}
+    p.subhead.text-white #{description}
 
 //- TODO: use article markup
-//- TODO: this text-base will probably break any headings, ditto for font-serif
 block content
     +sectionWhite()
-        +container()
-            div(class="prose lg:mx-72")!= content
+        div(class="prose")!= content

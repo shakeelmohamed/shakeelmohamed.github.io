@@ -13,20 +13,18 @@ html(lang="en")
         link(rel="stylesheet" href="https://use.typekit.net/uun0nut.css")
         //- link(rel="preconnect" href="https://fonts.googleapis.com")
         //- link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
-        //- link(href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet")
-        //- TODO: optimize tailwind for production
         link(href="/dist/tailwind.css" rel="stylesheet")
         //- link(href="/dist/styles.css" rel="stylesheet")
         //- TODO: open graph via block?
         //- see https://iamjoona.com/blog/seo-tags-in-eleventy/
         //- TODO: favicon(s)
         //- TODO: sitemap
-    body(class="bg-navy")
+    //- TODO: remove debug-screens for production
+    body(class="bg-navy debug-screens")
         +container()
             +header()
         main
             +container()
-                div(class="lg:mx-72")
-                    block hero
+                block hero
             block content
         +footer()

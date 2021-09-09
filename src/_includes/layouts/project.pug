@@ -3,9 +3,8 @@ extends base.pug
 block hero
     //- TODO: all the metadata can go here; TBD
     //- e.g.: date, medium, role, team members
-    +container()
-        h1.text-white #{title}
-        p.subhead.text-white #{description}
+    h1.text-white #{title}
+    p.subhead.text-white #{description}
 
 //- TODO: design all possible layouts for a project
 //- full screen image
@@ -15,5 +14,4 @@ block hero
 //- TODO: this text-base will probably break any headings, ditto for font-serif
 block content
     +sectionWhite()
-        +container()
-            div(class="prose lg:mx-72")!= content
+        div(class="prose")!= content

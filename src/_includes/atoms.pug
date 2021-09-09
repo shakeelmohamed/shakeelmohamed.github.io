@@ -6,14 +6,20 @@ mixin navItem(href, label)
 //- TODO: migrate section mixins to postcss instead
 mixin sectionWhite()
     section(class="bg-white text-navy py-4")
-        block
+        +container()
+            block
 
 mixin sectionOrange()
-    section(class="bg-orange text-navy")
-        block
+    section(class="bg-orange text-navy py-4")
+        +container()
+            block
+
+mixin sectionNavy()
+    section(class="bg-navy text-navy py-4")
+        +container()
+            block
 
 mixin container
     div(class="mx-4 pb-2 md:container md:mx-auto")
-        //- TODO: probably need something this here, and cleanup all usages 
-        //- div(class="lg:mx-72")
-        block
+        div(class="lg:mx-72")
+            block
