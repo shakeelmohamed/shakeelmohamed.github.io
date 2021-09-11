@@ -1,5 +1,3 @@
-const inclusiveLangPlugin = require("@11ty/eleventy-plugin-inclusive-language");
-
 module.exports = function(eleventyConfig) {
     // File extensions to passthrough copy
     eleventyConfig.setTemplateFormats([
@@ -31,6 +29,7 @@ module.exports = function(eleventyConfig) {
     });
 
     // Template aliases
+    eleventyConfig.addLayoutAlias('base', 'layouts/base.pug');
     eleventyConfig.addLayoutAlias('post', 'layouts/post.pug');
     eleventyConfig.addLayoutAlias('project', 'layouts/project.pug');
 

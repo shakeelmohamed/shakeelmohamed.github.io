@@ -1,5 +1,6 @@
 module.exports = {
     eleventyComputed: {
+        title: data => data.title + " by Shakeel Mohamed",
         // Reformat the date in ISO format
         date: data => formatDate(data.date),
         categories: data => data.tags.filter((val) => {

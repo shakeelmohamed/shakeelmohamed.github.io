@@ -1,20 +1,17 @@
+---
+title: Blog posts by Shakeel Mohamed
+description: chickens
+---
+
+extends _includes/layouts/base.pug
+
 //- Temporary workaround: this file is blog.pug, symlinked to posts.pug for legacy SEO
 //- TODO: decide which one should be canonical, mark it here as such
 //- TODO: SEO and open graph https://iamjoona.com/blog/seo-tags-in-eleventy/
-extends _includes/layouts/base.pug
-include _includes/molecules.pug
 
 block hero
     h1.text-white The Blog ✍🏽
-    p.subhead.text-white Through writing, I like to reflect about problems I’ve solved, experiences I’ve had, and how to do things that were once difficult for me.
-
-block content
-    +sectionOrange()
-        h2.text-navy Featured Posts
-        +getFeatured()
-    +sectionNavy()
-        h2.text-white Recent Posts
-        +getPosts()
+    p.subhead.text-white #{description}
 
 mixin getFeatured()
     each post in collections.featured
@@ -30,3 +27,11 @@ mixin getPosts()
             p.text-light-blue= "Tags: " +  post.data.categories
         a(href=post.url)
             p.subhead.text-white #{post.data.title}
+
+block content
+    +sectionOrange()
+        h2.text-navy Featured Posts
+        +getFeatured()
+    +sectionNavy()
+        h2.text-white Recent Posts
+        +getPosts()
