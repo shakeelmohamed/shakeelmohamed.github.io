@@ -2,16 +2,11 @@ include ../atoms.pug
 include ../organisms.pug
 include ../type.pug
 
-//- TODO: this tag logic should probably not be in the base template
-if tags
-    - if (tags.includes("project"))
-        - pageTitle = title + " – Design Portfolio – Shakeel Mohamed";
-    - //else if (tags.includes("blog"))
-        - //pageTitle = title + " by Shakeel Mohamed";
-if title
-    - pageTitle = title
-else
-    - var pageTitle = "Shakeel Mohamed – Designer & Brand Strategist";
+if !pageTitle
+    if title
+        - pageTitle = title
+    else
+        - var pageTitle = "Shakeel Mohamed – Design Portfolio";
 
 doctype html
 html(lang="en")
