@@ -772,6 +772,11 @@ p a {
 
 /* TODO: define a style for full width section, which can then have a color applied to it */
 
+section {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 .container {
   width: 100%;
 }
@@ -1233,6 +1238,11 @@ p a {
 .mx-4 {
   margin-left: 1rem;
   margin-right: 1rem;
+}
+
+.mx-72 {
+  margin-left: 18rem;
+  margin-right: 18rem;
 }
 
 .mx-auto {

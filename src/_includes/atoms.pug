@@ -3,22 +3,22 @@
 mixin navItem(href, label)
     a(class="font-sans font-bold md:inline-block md:pl-8" href=href) #{label}
 
-//- TODO: migrate section mixins to postcss instead
 mixin sectionWhite()
-    section(class="bg-white text-navy py-4")
+    section(class="bg-white text-navy")
         +container()
             block
 
 mixin sectionOrange()
-    section(class="bg-orange text-navy py-4")
+    section(class="bg-orange text-navy")
         +container()
             block
 
 mixin sectionNavy()
-    section(class="bg-navy text-navy py-4")
+    section(class="bg-navy text-navy")
         +container()
             block
 
+//- TODO: this mx-72 thing is too rigid and causing some issues
 mixin container
     div(class="mx-4 pb-2 md:container md:mx-auto")
         div(class="lg:mx-72")
