@@ -52,6 +52,13 @@ module.exports = function(eleventyConfig) {
         });
     });
 
+    // For "featured portfolio" projects, allow manual positioning
+    eleventyConfig.addCollection("portfolio", function(collectionApi) {
+        return collectionApi.getFilteredByTag("portfolio").sort((a, b) => {
+            return a.data.position - b.data.position;
+        });
+    });
+
     // TODO: Include speedlify score somewhere, maybe on the design system page
     // https://github.com/zachleat/speedlify-score
 

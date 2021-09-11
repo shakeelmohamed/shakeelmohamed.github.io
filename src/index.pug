@@ -6,7 +6,6 @@ extends _includes/layouts/base.pug
 include _includes/molecules.pug
 
 block hero
-    //- Look into using Twemoji for cross platform consistent emoji https://github.com/twitter/twemoji
     h1.text-white Hello from Seattle! 🌲
     p.subhead.text-white I’m a software engineer turned designer applying to design MFA programs.
     if collections.portfolio
@@ -15,10 +14,7 @@ block hero
 
 block content
     if collections.portfolio
-        //- TODO: this double container thing is really strange
         +sectionWhite()            
             h2.text-navy Projects
-            //- +projectListing("BREAK a Journaling Framework for Overcoming Limiting Beliefs", "photo url", "summary")
-            //- +projectListing("Daily Lyric Posters", "photo url", "summary")
             each project in collections.portfolio
                 +projectListing(project)

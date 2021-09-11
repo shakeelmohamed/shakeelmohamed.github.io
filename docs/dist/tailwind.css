@@ -1338,8 +1338,20 @@ p a {
   padding-top: 1rem;
 }
 
+.pb-0 {
+  padding-bottom: 0px;
+}
+
 .pb-2 {
   padding-bottom: 0.5rem;
+}
+
+.pb-8 {
+  padding-bottom: 2rem;
+}
+
+.pb-0\.5 {
+  padding-bottom: 0.125rem;
 }
 
 .text-left {
@@ -1374,6 +1386,10 @@ p a {
 
 .font-bold {
   font-weight: 700;
+}
+
+.leading-tight {
+  line-height: 1.25;
 }
 
 .text-navy {

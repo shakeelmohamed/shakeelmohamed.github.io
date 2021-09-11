@@ -1,12 +1,12 @@
 //- TODO: remix so blog listing can reuse part of this
 mixin projectListing(project)
     //- TODO: cover image, same as the open graph image
-    div.justify-self-auto
+    div.justify-self-auto.pb-8
         a(href=project.url)
             img(src="https://dummyimage.com/1200x630/000/fff.png&text=Project+Cover+Photo+Here")
-        h3.text-navy
+        h3(class="text-navy pb-0.5")
             a(href=project.url) #{project.data.title}
-        p.text-navy #{project.data.description}
+        p.text-navy.leading-tight #{project.data.description}
 
 mixin copyright()
     //- TODO: how can this be reused/modular?
