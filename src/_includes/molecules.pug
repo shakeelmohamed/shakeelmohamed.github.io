@@ -1,6 +1,5 @@
 //- TODO: remix so blog listing can reuse part of this
 mixin projectListing(project)
-    //- TODO: cover image, same as the open graph image
     div.justify-self-auto.pb-8
         a(href=project.url)
             img(src="https://dummyimage.com/1200x630/000/fff.png&text=Project+Cover+Photo+Here")
@@ -12,7 +11,7 @@ mixin copyright()
     //- TODO: how can this be reused/modular?
     div(class="pt-4 mx-auto text-center")
         p.text-white Designed and developed with ✨emotion✨ by 
-            a(href="/about") me.
+            a(href="/about/") me.
         p.text-white &copy; Shakeel Mohamed 
             script document.write(new Date().getFullYear())
 
