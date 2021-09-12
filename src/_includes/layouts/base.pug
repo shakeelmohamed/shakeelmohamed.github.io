@@ -19,25 +19,26 @@ html(lang="en")
         meta(name="description" content=description)
         //- opengraph
         //- TODO: dynamic og:url with full permalink
-        //- meta(property="og:url" content=page.url)
+        //- see https://iamjoona.com/blog/seo-tags-in-eleventy/
+        meta(property="og:url" content=metadata.baseurl + page.url)
         meta(property="og:title" content=pageTitle)
+        //- TODO: need a default OG image, maybe make them dynamic...
         //- meta(property="og:image" content=pageImg)
+        //- TODO: OG type for article, etc.
         meta(property="og:description" content=description)
         meta(property="twitter:card" content="summary_large_image")
         meta(property="twitter:creator" content="@_Shakeel")
-
-        //- <!-- TODO: remove in production -->
-        base(href="https://shakeelmohamed.com/beta/" target="_blank")
         
-        //- TODO: canonical link
+        if canonical
+            link(href=metadata.baseurl + canonical, rel="canonical")
+        else
+            link(href=metadata.baseurl + page.url, rel="canonical")
 
         link(rel="stylesheet" href="https://use.typekit.net/uun0nut.css")
-        link(href="dist/tailwind.css" rel="stylesheet")
+        link(href="/dist/tailwind.css" rel="stylesheet")
         //- link(rel="preconnect" href="https://fonts.googleapis.com")
         //- link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
         
-        //- TODO: open graph via block?
-        //- see https://iamjoona.com/blog/seo-tags-in-eleventy/
         //- TODO: favicon(s)
         //- TODO: sitemap
     //- TODO: remove debug-screens for production
@@ -49,5 +50,6 @@ html(lang="en")
             block content
         +footer()
     script(src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous")
+    //- TODO: could optimize twemoji by pulling it at build time
     script.
         twemoji.parse(document.body);
