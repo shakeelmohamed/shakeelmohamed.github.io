@@ -9,16 +9,15 @@ extends _includes/layouts/base.pug
 
 block hero
     h1.text-white Say Hello! 👋🏽
-    //- TODO: links on IG/LinkedIn
 
 block content
     +sectionWhite() 
         +gridWithBigColumn()
             p.subhead.text-navy
                 | I’m easy to reach by DM on 
-                a.text-light-blue(href="https://linkedin.com/in/shakeelmohamed/") LinkedIn 
+                a.text-light-blue(href=metadata.social.linkedin) LinkedIn 
                 |  or 
-                a.text-light-blue(href="https://instagram.com/shakeelxyz") Instagram
+                a.text-light-blue(href=metadata.social.instagram) Instagram
                 | !
             p.subhead.text-navy
                 | Otherwise, send me an email at

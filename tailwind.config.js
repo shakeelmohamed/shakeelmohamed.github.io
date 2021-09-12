@@ -33,9 +33,6 @@ module.exports = {
         '6-xl': ''
       }
     },
-    container: {
-      center: true
-    },
     colors: {
       navy: '#002855',
       blue: '#002855',
@@ -48,8 +45,6 @@ module.exports = {
     extend: {},
   },
   plugins: [
-    // TODO: lots of manual work needed to override font family & colors whenever using .prose class
-    // see docs https://github.com/tailwindlabs/tailwindcss-typography
     require('@tailwindcss/typography'),
     require('@tailwindcss/forms'),
     require('tailwindcss-debug-screens')
