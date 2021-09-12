@@ -40,7 +40,8 @@
     }
 
     a {
-        @apply transition hover:underline;
+        /* TODO:  bring this back once I figure out how to skip underlining the nav type/logo */
+        /* @apply transition hover:underline; */
     }
 }
 
