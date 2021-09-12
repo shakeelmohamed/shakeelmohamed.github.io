@@ -25,6 +25,9 @@ html(lang="en")
         meta(property="og:description" content=description)
         meta(property="twitter:card" content="summary_large_image")
         meta(property="twitter:creator" content="@_Shakeel")
+
+        //- <!-- TODO: remove in production -->
+        base(href="https://shakeelmohamed.com/beta" target="_blank")
         
         //- TODO: canonical link
 
@@ -37,8 +40,6 @@ html(lang="en")
         //- see https://iamjoona.com/blog/seo-tags-in-eleventy/
         //- TODO: favicon(s)
         //- TODO: sitemap
-        //- <!-- TODO: remove in production -->
-        base(href="https://shakeelmohamed.com/beta" target="_blank")
     //- TODO: remove debug-screens for production
     body(class="bg-navy debug-screens")
         +header()
