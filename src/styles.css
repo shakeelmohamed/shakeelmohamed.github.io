@@ -34,6 +34,14 @@
     section {
         @apply py-4;
     }
+
+    img {
+        @apply transition transform hover:scale-105 ease-in-out duration-300;
+    }
+
+    a {
+        @apply transition hover:underline;
+    }
 }
 
 @layer utilities {

@@ -23,10 +23,16 @@ mixin sectionLightBlue()
         +container()
             block
 
+mixin hero()
+    div(class="md:mt-10 md:mb-5 xl:mt-20 xl:mb-10")
+        +container()
+            +gridWithBigColumn()
+                    block
+
 //- TODO: does every container have a grid?
 //- hmm maybe not... BUT every section might have a grid!
 mixin container
-    div(class="pb-2 mx-4 md:px-8 lg:mx-auto")
+    div(class="py-2 mx-4 md:px-8 lg:mx-auto")
         block
 
 mixin grid()
