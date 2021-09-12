@@ -4,7 +4,7 @@ module.exports = {
         // Reformat the date in ISO format
         date: data => formatDate(data.page.date),
         categories: data => data.tags.filter((val) => {
-            return val.toLowerCase() != "post";
+            return !(val.toLowerCase() == "post" || val.toLowerCase() == "featured");
         }).join(", ")
     }
 };

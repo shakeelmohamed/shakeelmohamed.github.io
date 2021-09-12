@@ -33,11 +33,9 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addLayoutAlias('post', 'layouts/post.pug');
     eleventyConfig.addLayoutAlias('project', 'layouts/project.pug');
 
-    // Omit featured posts, sort remaining in reverse order
+    // Reverse sort posts
     eleventyConfig.addCollection("post", function(collectionApi) {
-        return collectionApi.getFilteredByTag("post").reverse().filter(post => {
-            return !post.data.tags.includes("featured");
-        });
+        return collectionApi.getFilteredByTag("post").reverse();
     });
 
     // Reverse sort featured posts

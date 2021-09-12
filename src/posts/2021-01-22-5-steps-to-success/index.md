@@ -6,9 +6,9 @@ description: "After a lot of reflection, I think I've uncovered something specia
 tags:
     - post
     - life lessons
-    - featured
 ---
 
+<!-- TODO: redesign this open graph image -->
 ![5 Steps to Success](./header.png)
 
 Sometimes our best ideas come as flashes of insight, rather than theories we develop over time. I suppose that has something to do with the power of the subconscious mind.

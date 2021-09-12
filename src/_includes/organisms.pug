@@ -2,7 +2,7 @@ include ./molecules.pug
 
 //- TODO: many of these elements will be populated by 
 //- a) content: posts and projects
-//- b) data: featured content, mentions, archives; see: https://www.11ty.dev/docs/pages-from-data/
+//- b) data: mentions, archives; see: https://www.11ty.dev/docs/pages-from-data/
 
 
 //- TODO: featured content (projects or posts)
@@ -31,6 +31,7 @@ mixin footer()
     
 mixin mailingListForm()
     //- TODO: beautify this form somehow https://github.com/tailwindlabs/tailwindcss-forms
+    //- TODO: the form itself needs to be centered, heading can stay as is
     div(class="mx-auto")
         h2.text-navy Subscribe
         p.subhead.text-white Get a friendly note from me, once a month.

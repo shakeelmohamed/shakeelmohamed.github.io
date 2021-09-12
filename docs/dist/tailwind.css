@@ -22098,6 +22098,16 @@ a {
   color: rgba(152, 182, 228, var(--tw-text-opacity));
 }
 
+/* Don't automatically add quotes to a blockquote (from markdown) */
+
+.prose blockquote p:last-of-type::before {
+  content: none;
+}
+
+.prose blockquote p:last-of-type::after {
+  content: none;
+}
+
 img.emoji {
   height: 1em;
   width: 1em;
