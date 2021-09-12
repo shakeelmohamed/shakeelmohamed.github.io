@@ -30,21 +30,23 @@ mixin bio()
 block content
     +sectionWhite()
         //- TODO: add at least 1 photo on this page
-        +bio()
+        +gridWithBigColumn()
+            +bio()
     +sectionOrange() 
-        h2.text-navy My Principles
-        p.text-navy This is my approach to any situation, personally or professionally. This is the unique contribution I bring to the world.
+        +gridWithBigColumn()
+            h2.text-navy My Principles
+            p.text-navy This is my approach to any situation, personally or professionally. This is the unique contribution I bring to the world.
 
-        -
-            var manifesto = {
-               "Outwork deficiencies": "Any weakness can be overcome with great effort.",
-               "Create the future": "Start with the end in mind, work towards the plan, adjust as needed.",
-               "Seek growth constantly": "Knowledge is power, so learn from the greats; success leaves clues.",
-               "Enable understanding through transparency": "Use clear & direct communication, translate if necessary.",
-               "Think from a unique perspective": "Think inside, outside, and about the box itself."
-            };
-        each details, name in manifesto
-            h3.text-white #{name}
-            p.text-navy #{details}
+            -
+                var manifesto = {
+                   "Outwork deficiencies": "Any weakness can be overcome with great effort.",
+                   "Create the future": "Start with the end in mind, work towards the plan, adjust as needed.",
+                   "Seek growth constantly": "Knowledge is power, so learn from the greats; success leaves clues.",
+                   "Enable understanding through transparency": "Use clear & direct communication, translate if necessary.",
+                   "Think from a unique perspective": "Think inside, outside, and about the box itself."
+                };
+            each details, name in manifesto
+                h3.text-white #{name}
+                p.text-navy #{details}
 //- TODO: mentions
 //- TODO: CTA for contact me for projects, or something?

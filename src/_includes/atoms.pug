@@ -1,7 +1,7 @@
-//- One of the best resources of Tailwind components https://tailblocks.cc/
+//- TODO: One of the best resources of Tailwind components https://tailblocks.cc/
 
 mixin navItem(href, label)
-    a(class="font-sans font-bold md:inline-block md:pl-8" href=href) #{label}
+    a(class="font-sans font-bold text-white md:inline-block md:ml-8" href=href) #{label}
 
 mixin sectionWhite()
     section(class="bg-white text-navy")
@@ -18,8 +18,26 @@ mixin sectionNavy()
         +container()
             block
 
-//- TODO: this mx-72 thing is too rigid and causing some issues
+mixin sectionLightBlue()
+    section(class="bg-light-blue text-navy")
+        +container()
+            block
+
+//- TODO: does every container have a grid?
+//- hmm maybe not... BUT every section might have a grid!
 mixin container
-    div(class="mx-4 pb-2 md:container md:mx-auto")
-        div(class="lg:mx-72")
+    div(class="pb-2 px-8 lg:mx-auto")
+        block
+
+mixin grid()
+    div(class="md:grid md:grid-cols-12")
+        block
+
+mixin gridBigColumn()
+    div(class="md:col-span-12 lg:col-span-8 lg:col-start-3 lg:col-end-11")
+        block
+
+mixin gridWithBigColumn()
+    +grid()
+        +gridBigColumn()
             block

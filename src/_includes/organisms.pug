@@ -10,24 +10,28 @@ include ./molecules.pug
 
 mixin header()
     //- TODO: layout breaks below 320px width
-    header(class="text-white md:flex md:items-baseline md:justify-between")
-        h3(class="font-sans font-bold text-white text-3xl text-center py-4 flex-nowrap md:text-left")
+    header(class="text-white max-w-screen-xl mx-auto px-8 md:flex md:items-baseline md:justify-between")
+        h3(class="text-white text-center py-4 flex-nowrap md:text-left")
             a(href="/") Shakeel Mohamed
-        nav(class="flex justify-between text-lg md:py-5 md:justify-items-end md:flex-shrink-0 md:mx-0")
+        nav(class="flex justify-between text-lg mx-4 md:py-5 md:justify-items-end md:flex-shrink-0 md:mx-0")
             +navItem("/", "Work")
             +navItem("/blog", "Blog")
             +navItem("/about", "About")
             +navItem("/contact", "Contact")
 
 mixin footer()
-    +mailingListForm()
-    //- TODO: footer nav, social links
-    +container()
-        +copyright()
+    +sectionLightBlue()
+        +grid()
+            div(class="md:col-span-12 lg:col-span-8 lg:col-start-3 lg:col-end-11")
+                +mailingListForm()
+            //- TODO: footer nav, social links
+    +sectionNavy()
+        +container()
+            +copyright()
     
 mixin mailingListForm()
     //- TODO: beautify this form somehow https://github.com/tailwindlabs/tailwindcss-forms
-    div(class="bg-light-blue")
+    div(class="mx-auto")
         +container()
             h2.text-navy Subscribe
             p.subhead.text-white Get a friendly note from me, once a month.

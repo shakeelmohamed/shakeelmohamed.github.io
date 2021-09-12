@@ -6,7 +6,7 @@ if !pageTitle
     if title
         - pageTitle = title
     else
-        - var pageTitle = "Shakeel Mohamed – Design Portfolio";
+        - pageTitle = "Shakeel Mohamed – Design Portfolio";
 
 doctype html
 html(lang="en")
@@ -39,11 +39,11 @@ html(lang="en")
         //- TODO: sitemap
     //- TODO: remove debug-screens for production
     body(class="bg-navy debug-screens")
-        +container()
-            +header()
+        +header()
         main
             +container()
-                block hero
+                +gridWithBigColumn()
+                    block hero
             block content
         +footer()
     script(src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous")

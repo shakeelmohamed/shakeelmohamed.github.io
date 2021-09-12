@@ -3,7 +3,7 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 module.exports = {
   purge: {
     // TODO: further optimize for production, goal size for tailwind.css is 16k
-    enabled: true,
+    enabled: false,
     content: [
       './src/**/*.pug',
       './src/**/*.md'
@@ -32,6 +32,9 @@ module.exports = {
         '4-xl': '',
         '6-xl': ''
       }
+    },
+    container: {
+      center: true
     },
     colors: {
       navy: '#002855',

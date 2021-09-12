@@ -10,22 +10,24 @@ extends _includes/layouts/base.pug
 block hero
     h1.text-white Say Hello! 👋🏽
     //- TODO: links on IG/LinkedIn
-    p.subhead.text-white
-        | Send me a DM on 
-        a(href="https://linkedin.com/in/shakeelmohamed/") LinkedIn 
-        |  or 
-        a(href="https://instagram.com/shakeelxyz") Instagram
-        | !
-    p.subhead.text-white
-        | Otherwise, send me an email at
-        +mailto("iam", "shakeel.xyz", "Hey, I love your website!")
-    //- TODO: add link for website
-    p.subhead.text-white
-        | For project inquiries, reach out through my business website:  
-        a(href="https://ntrsct.com") ntrsct.com 
-        |
 
 block content
+    +sectionWhite() 
+        +gridWithBigColumn()
+            h3.text-navy A contact form is coming soon, I promise 🙏🏽
+            p.subhead.text-navy
+                | I’m easy to reach by DM on 
+                a.text-light-blue(href="https://linkedin.com/in/shakeelmohamed/") LinkedIn 
+                |  or 
+                a.text-light-blue(href="https://instagram.com/shakeelxyz") Instagram
+                | !
+            p.subhead.text-navy
+                | Otherwise, send me an email at
+                +mailto("iam", "shakeel.xyz", "Hey, I love your website!")
+            //- TODO: add link for website
+            p.subhead.text-navy
+                | For project inquiries, reach out through my business website:  
+                a.text-light-blue(href="https://ntrsct.com") ntrsct.com 
     //- +sectionOrange() 
     //-     +container()
     //-         div(class="py-4 lg:mx-72")
@@ -37,7 +39,7 @@ mixin mailto(user, domain, subject)
     span.mailto
         script(type="text/javascript").
             function gen_mail_to_link(lhs, rhs, subject) {
-                document.write("<a href=\"mailto");
+                document.write("<a class=\"text-light-blue\" href=\"mailto");
                 document.write(":" + lhs + "@");
                 document.write(rhs + "?subject=" + subject + "\">" + lhs + "@" + rhs + "<\/a>");
             }

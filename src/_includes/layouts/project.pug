@@ -14,4 +14,5 @@ block hero
 //- TODO: this text-base will probably break any headings, ditto for font-serif
 block content
     +sectionWhite()
-        div(class="prose")!= content
+        +gridWithBigColumn()
+            div(class="prose")!= content

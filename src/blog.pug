@@ -30,8 +30,10 @@ mixin getPosts()
 
 block content
     +sectionOrange()
-        h2.text-navy Featured Posts
-        +getFeatured()
+        +gridWithBigColumn()
+            h2.text-navy Featured Posts
+            +getFeatured()
     +sectionNavy()
-        h2.text-white Recent Posts
-        +getPosts()
+        +gridWithBigColumn()
+            h2.text-white Recent Posts
+            +getPosts()

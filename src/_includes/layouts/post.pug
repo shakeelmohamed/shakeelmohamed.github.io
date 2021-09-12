@@ -9,4 +9,5 @@ block hero
 //- TODO: use article markup
 block content
     +sectionWhite()
-        div(class="prose")!= content
+        +gridWithBigColumn()
+            div(class="prose")!= content

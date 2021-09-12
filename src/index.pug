@@ -10,12 +10,15 @@ block hero
     p.subhead.text-white
         | I’m a software engineer turned designer applying to design MFA programs.
         if collections.portfolio
+            br
             |  Keep scrolling to check out my portfolio
     .subhead.animate-bounce ⬇️
 
+
 block content
     if collections.portfolio
-        +sectionWhite()            
-            h2.text-navy Projects
-            each project in collections.portfolio
-                +projectListing(project)
+        +sectionWhite()
+            +gridWithBigColumn()
+                h2.text-navy Projects
+                each project in collections.portfolio
+                    +projectListing(project)
