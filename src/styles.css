@@ -63,7 +63,7 @@
         @apply text-light-blue;
     }
     /* Don't automatically add quotes to a blockquote (from markdown) */
-    .prose blockquote p:last-of-type::before {
+    .prose blockquote p:first-of-type::before {
         content: none;
     }
     .prose blockquote p:last-of-type::after {

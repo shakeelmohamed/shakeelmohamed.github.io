@@ -57,4 +57,4 @@ As a preview, I've included a list of all 24 songs, artists and the lyrics I use
 
 ![Poster 18](./poster-18.png)
 
-Thank you for taking the time to read this post, I've love to know what you thought of it!
+Thank you for taking the time to read this post, I'd love to know what you thought of it!
