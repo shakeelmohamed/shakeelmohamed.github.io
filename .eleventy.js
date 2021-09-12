@@ -61,6 +61,4 @@ module.exports = function(eleventyConfig) {
 
     // TODO: Include speedlify score somewhere, maybe on the design system page
     // https://github.com/zachleat/speedlify-score
-
-    // TODO: integrate alex for biased & bad word checks https://github.com/get-alex/alex
 };
