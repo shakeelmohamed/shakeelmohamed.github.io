@@ -2,7 +2,7 @@
 layout: post
 date: 2020-05-31
 title: Defining Your Individual HOWs and WHATs (Golden Circle Theory, part 2)
-description: IAs a follow up from my previous post, I went through the process of completing my individual Golden Circle
+description: As a follow up from my previous post, I went through the process of completing my individual Golden Circle
 canonical: https://shakeelmohamed.com/posts/2020-04-30-individual-why-discovery/
 tags:
     - post
