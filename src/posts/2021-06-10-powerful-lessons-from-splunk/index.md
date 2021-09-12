@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2020-06-10
+date: 2021-06-10
 title: Powerful Lessons From Splunk I’ll Never Forget
 description: This is my attempt to codify the instinctive and intuitive approach I take to code reviews.
 tags:
