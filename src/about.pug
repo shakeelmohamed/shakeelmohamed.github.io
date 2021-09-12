@@ -27,6 +27,16 @@ mixin bio()
 
             I’m currently applying to graduate school MFA programs in graphic design while running my independent design business, [ntrsct (in•ter•sect) designs](https://ntrsct.com).
 
+mixin mentionList()
+    h3.text-navy Mentions
+    p.subheading These are some things I've done or what people have said about me
+    .prose.leading-tight
+        ul
+            each mention in mentions
+                li #{mention.date} – 
+                    a(href=mention.url) #{mention.title}
+
+
 block content
     +sectionWhite()
         //- TODO: add at least 1 photo on this page
@@ -48,5 +58,9 @@ block content
             each details, name in manifesto
                 h3.text-white #{name}
                 p.text-navy #{details}
-//- TODO: mentions
+    
+    +sectionWhite()
+        +gridWithBigColumn()
+            +mentionList()
+
 //- TODO: CTA for contact me for projects, or something?
