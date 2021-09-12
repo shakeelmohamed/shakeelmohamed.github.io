@@ -11,8 +11,7 @@ include ./molecules.pug
 mixin header()
     //- TODO: layout breaks below 320px width
     header(class="text-white max-w-screen-xl mx-auto px-8 md:flex md:items-baseline md:justify-between")
-        h3(class="text-white text-center py-4 flex-nowrap md:text-left")
-            a(href="/") Shakeel Mohamed
+        +headerLogo()
         nav(class="flex justify-between text-lg mx-4 md:py-5 md:justify-items-end md:flex-shrink-0 md:mx-0")
             +navItem("/", "Work")
             +navItem("/blog", "Blog")
@@ -21,12 +20,11 @@ mixin header()
 
 mixin footer()
     +sectionLightBlue()
-        +grid()
-            div(class="md:col-span-12 lg:col-span-8 lg:col-start-3 lg:col-end-11")
-                +mailingListForm()
+        +gridWithBigColumn()
+            +mailingListForm()
             //- TODO: footer nav, social links
     +sectionNavy()
-        +container()
+        +gridWithBigColumn()
             +copyright()
     
 mixin mailingListForm()

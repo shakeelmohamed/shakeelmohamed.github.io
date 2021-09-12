@@ -5,13 +5,13 @@
 @layer base {
     /* Headers */
     h1 {
-        @apply font-sans font-bold py-4 text-5xl md:text-7xl; /*md:text-left*/
+        @apply font-sans font-bold py-4 text-5xl md:text-7xl;
     }
     h2 {
-        @apply font-sans font-bold py-4 text-4xl md:text-5xl; /*md:text-left*/
+        @apply font-sans font-bold py-4 text-4xl md:text-5xl;
     }
     h3 {
-        @apply font-sans font-bold py-4 text-3xl md:text-4xl; /*md:text-left*/
+        @apply font-sans font-bold py-4 text-3xl md:text-4xl;
     }
     /* subheading */
     p.subhead {
@@ -21,8 +21,7 @@
     p.caption {
         @apply font-sans text-sm;
     }
-
-    /* Type style */
+    /* Body text style */
     p {
         @apply font-serif text-base;
     }
@@ -55,7 +54,7 @@
         @apply font-serif text-base leading-normal;
     }
     .prose h1 {
-        @apply font-sans text-navy font-bold py-4 md:text-left text-5xl md:text-7xl;
+        @apply font-sans text-navy font-bold py-4 text-5xl md:text-7xl;
     }
     .prose h2 {
         @apply font-sans text-navy py-4 mt-0.5 mb-0.5;

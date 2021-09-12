@@ -1,7 +1,13 @@
 //- TODO: One of the best resources of Tailwind components https://tailblocks.cc/
 
+mixin headerLogo()
+    h3(class="text-white text-center py-4 flex-nowrap md:text-left")
+            a(href="/") Shakeel Mohamed
+
 mixin navItem(href, label)
     a(class="font-sans font-bold text-white md:inline-block md:ml-8" href=href) #{label}
+
+//- TODO: every section has a gridWithBigColumn(), tidy up many places
 
 mixin sectionWhite()
     section(class="bg-white text-navy")
@@ -29,8 +35,6 @@ mixin hero()
             +gridWithBigColumn()
                     block
 
-//- TODO: does every container have a grid?
-//- hmm maybe not... BUT every section might have a grid!
 mixin container
     div(class="py-2 mx-4 md:px-8 lg:mx-auto")
         block
