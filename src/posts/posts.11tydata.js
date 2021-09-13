@@ -16,6 +16,7 @@ function formatDate(date) {
     return date.toISOString().split("T")[0];
 }
 
+// TODO: actually this is for Atom/RSS feeds, not sitemaps
 function formatDateForSitemap(date) {
     let dateObj = new Date(date);
     // Atom uses RFC 3339 dates
