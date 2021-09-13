@@ -33,6 +33,19 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addLayoutAlias('post', 'layouts/post.pug');
     eleventyConfig.addLayoutAlias('project', 'layouts/project.pug');
 
+    // Sort all pages for sitemap
+    eleventyConfig.addCollection("sitemap", function(collectionApi) {
+        return collectionApi.getAll().sort((a, b) => {
+            if (a.url < b.url) {
+                return -1;
+            } else if (a.url > b.url) {
+                return 1;
+            } else {
+                return 0;
+            }
+        });
+    });
+
     // Reverse sort posts
     eleventyConfig.addCollection("post", function(collectionApi) {
         return collectionApi.getFilteredByTag("post").reverse();
