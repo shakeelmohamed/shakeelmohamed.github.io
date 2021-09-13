@@ -1,8 +1,11 @@
 {
     "baseurl": "https://shakeelmohamed.com",
+    "author": {
+        "name": "Shakeel Mohamed",
+        "email": "iam@shakeel.xyz"
+    },
     "social": {
         "instagram": "https://instagram.com/shakeelxyz",
         "linkedin": "https://linkedin.com/in/shakeelmohamed/"
     }
-
 }

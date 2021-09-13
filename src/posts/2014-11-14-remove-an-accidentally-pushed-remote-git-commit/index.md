@@ -2,8 +2,7 @@
 layout: post
 date: 2014-11-14
 title: Remove an accidentally pushed remote git commit
-// TODO: add a description
-description: 
+description: A quick set of commands for removing a commit once it's been pushed to a remote 
 tags:
     - post
     - git

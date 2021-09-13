@@ -22,7 +22,7 @@ mixin getFeatured()
 mixin getPosts()
     each post in collections.post
         .flex.place-content-between
-            p.text-light-blue #{post.data.date}
+            p.text-light-blue #{post.data.cleanDate}
             p.text-light-blue= "Tags: " +  post.data.categories
         a(href=post.url)
             p.subhead.text-white #{post.data.title}

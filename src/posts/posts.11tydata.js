@@ -2,7 +2,8 @@ module.exports = {
     eleventyComputed: {
         pageTitle: data => data.title + " by Shakeel Mohamed",
         // Reformat the date in ISO format
-        date: data => formatDate(data.page.date),
+        cleanDate: data => formatDate(data.page.date),
+        sitemapDate: data => formatDateForSitemap(data.page.date),
         categories: data => data.tags.filter((val) => {
             return !(val.toLowerCase() == "post" || val.toLowerCase() == "featured");
         }).join(", ")
@@ -13,6 +14,19 @@ module.exports = {
 // This split on T is probably not ideal, but good enough for now
 function formatDate(date) {
     return date.toISOString().split("T")[0];
+}
+
+function formatDateForSitemap(date) {
+    let dateObj = new Date(date);
+    // Atom uses RFC 3339 dates
+    // https://tools.ietf.org/html/rfc3339#section-5.8
+    let s = dateObj.toISOString();
+
+    // remove milliseconds
+    let split = s.split(".");
+    split.pop();
+
+    return split.join("") + "Z";
 }
 
 // TODO: if date is missing, try to parse it from the folder name?
