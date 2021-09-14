@@ -4,7 +4,8 @@ module.exports = function(eleventyConfig) {
         "pug",
         "png",
         "jpg",
-        "md"
+        "md",
+        "svg"
       ]);
 
     // TODO:

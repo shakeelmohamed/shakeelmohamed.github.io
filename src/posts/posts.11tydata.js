@@ -4,6 +4,9 @@ module.exports = {
         // Reformat the date in ISO format
         cleanDate: data => formatDate(data.page.date),
         sitemapDate: data => formatDateForSitemap(data.page.date),
+        categoriesList: data => data.tags.filter((val) => {
+            return !(val.toLowerCase() == "post" || val.toLowerCase() == "featured");
+        }),
         categories: data => data.tags.filter((val) => {
             return !(val.toLowerCase() == "post" || val.toLowerCase() == "featured");
         }).join(", ")

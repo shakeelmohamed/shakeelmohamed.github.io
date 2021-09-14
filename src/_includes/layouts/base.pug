@@ -24,8 +24,15 @@ html(lang="en")
         meta(property="og:title" content=pageTitle)
         //- TODO: need a default OG image, maybe make them dynamic...
         //- meta(property="og:image" content=pageImg)
-        //- TODO: OG type for article, etc.
         meta(property="og:description" content=description)
+        if layout == "post"
+            meta(property="og:type" content="article")
+            meta(property="og:article:published_time" content=cleanDate)
+            meta(property="og:article:author" content=metadata.author.name)
+            each tag in categoriesList
+                meta(property="og:article:tag" content=tag)
+        else
+            meta(property="og:type" content="website")
         meta(property="twitter:card" content="summary_large_image")
         meta(property="twitter:creator" content="@_Shakeel")
         
@@ -40,7 +47,10 @@ html(lang="en")
         //- link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
         
         //- TODO: favicon(s)
-        //- TODO: sitemap
+        link(rel="sitemap" type="text/plain" title="Sitemap" href="/sitemap.txt")
+        //- TODO: uncomment once XML sitemap is ready
+        //- link(rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml")
+        link(href="./feed.xml" rel="alternate" type="application/rss+xml" title="Shakeel Mohamed's blog posts")
     //- TODO: remove debug-screens for production
     body(class="bg-navy debug-screens")
         +header()
