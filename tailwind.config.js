@@ -22,15 +22,15 @@ module.exports = {
       fontSize: { // TODO: customize other type sizes here; actually do it in src/styles.css
         'base': '1.5rem', // 1.25rem is 20px on desktop... originally had designed with 1.5rem or 24px in mind
         // desktop styles
-        'sm': '1em',
-        'xl': '',
-        '3-xl': '',
-        '5-xl': '',
-        '7-xl': '',
-        // mobile styles
-        '2-xl': '',
-        '4-xl': '',
-        '6-xl': ''
+        'sm': '1rem',
+        // 'xl': '',
+        // '3-xl': '',
+        // '5-xl': '',
+        // '7-xl': '',
+        // // mobile styles
+        // '2-xl': '',
+        // '4-xl': '',
+        // '6-xl': ''
       }
     },
     colors: {

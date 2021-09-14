@@ -18,14 +18,38 @@ mixin header()
             +navItem("/about", "About")
             +navItem("/contact", "Contact")
 
+mixin footerContent()
+    div(class="grid grid-cols-4")
+        div(class="col-span-1")
+            h3.text-white Lost
+            ul.list-none.text-white
+                +footerNavItem("/", "Work")
+                +footerNavItem("/blog", "Blog")
+                +footerNavItem("/about", "About")
+                +footerNavItem("/contact", "Contact")
+        div(class="col-span-1")
+            h3.text-white Found
+            ul.list-none.text-white
+                each link, name in metadata.social
+                    li
+                        a.subhead(href=link) #{name}
+        div(class="col-span-2")
+            div(class="pt-4")
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-light-blue rounded-full" viewBox="0 0 24 24">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg>
+            //- TODO: link this next paragraph to the project/blog page about the website itself
+            p.caption.text-white Designed and developed with✨emotion✨.
+            p.caption.text-white
+                script document.write("&copy; " + new Date().getFullYear() + " Shakeel Mohamed")    
+
 mixin footer()
     +sectionLightBlue()
         +gridWithBigColumn()
             +mailingListForm()
-            //- TODO: footer nav, social links
     +sectionNavy()
         +gridWithBigColumn()
-            +copyright()
+            +footerContent()
     
 mixin mailingListForm()
     //- TODO: beautify this form somehow https://github.com/tailwindlabs/tailwindcss-forms

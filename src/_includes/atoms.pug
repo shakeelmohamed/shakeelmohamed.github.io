@@ -7,6 +7,10 @@ mixin headerLogo()
 mixin navItem(href, label)
     a(class="font-sans font-bold text-white md:inline-block md:ml-8" href=href) #{label}
 
+mixin footerNavItem(href, label)
+    li
+        a.subhead(href=href) #{label}
+
 //- TODO: every section has a gridWithBigColumn(), tidy up many places
 
 mixin sectionWhite()
@@ -30,7 +34,7 @@ mixin sectionLightBlue()
             block
 
 mixin hero()
-    div(class="md:mt-10 md:mb-5 xl:mt-20 xl:mb-10")
+    div(class="mt-10 mb-5 xl:mt-20 xl:mb-10")
         +container()
             +gridWithBigColumn()
                     block

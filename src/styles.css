@@ -14,11 +14,11 @@
         @apply font-sans font-bold py-4 text-3xl md:text-4xl;
     }
     /* subheading */
-    p.subhead {
+    .subhead {
         @apply font-sans text-xl;
     }
     /* caption */
-    p.caption {
+    .caption {
         @apply font-sans text-sm;
     }
     /* Body text style */

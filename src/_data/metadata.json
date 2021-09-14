@@ -5,7 +5,15 @@
         "email": "iam@shakeel.xyz"
     },
     "social": {
-        "instagram": "https://instagram.com/shakeelxyz",
-        "linkedin": "https://linkedin.com/in/shakeelmohamed/"
+        "LinkedIn": "http://linkedin.com/in/shakeelmohamed",
+        "Instagram": "http://instagram.com/shakeelxyz",
+        "Twitter": "https://twitter.com/_shakeel",
+        "GitHub": "https://github.com/shakeelmohamed"
+    },
+    "social_unused": {
+        "Goodreads": "https://www.goodreads.com/user/show/31081269-shakeel",
+        "Facebook": "http://www.facebook.com/Shakeelxyz",
+        "Behance": "https://www.behance.net/shakeelxyz",
+        "Clubhouse": "https://joinclubhouse.com/@shakeelxyz"
     }
 }

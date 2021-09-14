@@ -790,16 +790,17 @@ h3 {
 
 /* subheading */
 
-p.subhead {
+.subhead {
   font-family: proxima-nova, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: ;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 /* caption */
 
-p.caption {
+.caption {
   font-family: proxima-nova, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 /* Body text style */
@@ -17695,7 +17696,7 @@ hr {
 }
 
 .text-sm {
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 .text-base {
@@ -17708,7 +17709,8 @@ hr {
 }
 
 .text-xl {
-  font-size: ;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .text-2xl {
@@ -17749,30 +17751,6 @@ hr {
 .text-9xl {
   font-size: 8rem;
   line-height: 1;
-}
-
-.text-3-xl {
-  font-size: ;
-}
-
-.text-5-xl {
-  font-size: ;
-}
-
-.text-7-xl {
-  font-size: ;
-}
-
-.text-2-xl {
-  font-size: ;
-}
-
-.text-4-xl {
-  font-size: ;
-}
-
-.text-6-xl {
-  font-size: ;
 }
 
 .font-thin {
@@ -38837,7 +38815,7 @@ img.emoji {
   }
 
   .sm\:text-sm {
-    font-size: 1em;
+    font-size: 1rem;
   }
 
   .sm\:text-base {
@@ -38850,7 +38828,8 @@ img.emoji {
   }
 
   .sm\:text-xl {
-    font-size: ;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 
   .sm\:text-2xl {
@@ -38891,30 +38870,6 @@ img.emoji {
   .sm\:text-9xl {
     font-size: 8rem;
     line-height: 1;
-  }
-
-  .sm\:text-3-xl {
-    font-size: ;
-  }
-
-  .sm\:text-5-xl {
-    font-size: ;
-  }
-
-  .sm\:text-7-xl {
-    font-size: ;
-  }
-
-  .sm\:text-2-xl {
-    font-size: ;
-  }
-
-  .sm\:text-4-xl {
-    font-size: ;
-  }
-
-  .sm\:text-6-xl {
-    font-size: ;
   }
 
   .sm\:font-thin {
@@ -59902,7 +59857,7 @@ img.emoji {
   }
 
   .md\:text-sm {
-    font-size: 1em;
+    font-size: 1rem;
   }
 
   .md\:text-base {
@@ -59915,7 +59870,8 @@ img.emoji {
   }
 
   .md\:text-xl {
-    font-size: ;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 
   .md\:text-2xl {
@@ -59956,30 +59912,6 @@ img.emoji {
   .md\:text-9xl {
     font-size: 8rem;
     line-height: 1;
-  }
-
-  .md\:text-3-xl {
-    font-size: ;
-  }
-
-  .md\:text-5-xl {
-    font-size: ;
-  }
-
-  .md\:text-7-xl {
-    font-size: ;
-  }
-
-  .md\:text-2-xl {
-    font-size: ;
-  }
-
-  .md\:text-4-xl {
-    font-size: ;
-  }
-
-  .md\:text-6-xl {
-    font-size: ;
   }
 
   .md\:font-thin {
@@ -80967,7 +80899,7 @@ img.emoji {
   }
 
   .lg\:text-sm {
-    font-size: 1em;
+    font-size: 1rem;
   }
 
   .lg\:text-base {
@@ -80980,7 +80912,8 @@ img.emoji {
   }
 
   .lg\:text-xl {
-    font-size: ;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 
   .lg\:text-2xl {
@@ -81021,30 +80954,6 @@ img.emoji {
   .lg\:text-9xl {
     font-size: 8rem;
     line-height: 1;
-  }
-
-  .lg\:text-3-xl {
-    font-size: ;
-  }
-
-  .lg\:text-5-xl {
-    font-size: ;
-  }
-
-  .lg\:text-7-xl {
-    font-size: ;
-  }
-
-  .lg\:text-2-xl {
-    font-size: ;
-  }
-
-  .lg\:text-4-xl {
-    font-size: ;
-  }
-
-  .lg\:text-6-xl {
-    font-size: ;
   }
 
   .lg\:font-thin {
@@ -102032,7 +101941,7 @@ img.emoji {
   }
 
   .xl\:text-sm {
-    font-size: 1em;
+    font-size: 1rem;
   }
 
   .xl\:text-base {
@@ -102045,7 +101954,8 @@ img.emoji {
   }
 
   .xl\:text-xl {
-    font-size: ;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 
   .xl\:text-2xl {
@@ -102086,30 +101996,6 @@ img.emoji {
   .xl\:text-9xl {
     font-size: 8rem;
     line-height: 1;
-  }
-
-  .xl\:text-3-xl {
-    font-size: ;
-  }
-
-  .xl\:text-5-xl {
-    font-size: ;
-  }
-
-  .xl\:text-7-xl {
-    font-size: ;
-  }
-
-  .xl\:text-2-xl {
-    font-size: ;
-  }
-
-  .xl\:text-4-xl {
-    font-size: ;
-  }
-
-  .xl\:text-6-xl {
-    font-size: ;
   }
 
   .xl\:font-thin {
@@ -123097,7 +122983,7 @@ img.emoji {
   }
 
   .\32xl\:text-sm {
-    font-size: 1em;
+    font-size: 1rem;
   }
 
   .\32xl\:text-base {
@@ -123110,7 +122996,8 @@ img.emoji {
   }
 
   .\32xl\:text-xl {
-    font-size: ;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 
   .\32xl\:text-2xl {
@@ -123151,30 +123038,6 @@ img.emoji {
   .\32xl\:text-9xl {
     font-size: 8rem;
     line-height: 1;
-  }
-
-  .\32xl\:text-3-xl {
-    font-size: ;
-  }
-
-  .\32xl\:text-5-xl {
-    font-size: ;
-  }
-
-  .\32xl\:text-7-xl {
-    font-size: ;
-  }
-
-  .\32xl\:text-2-xl {
-    font-size: ;
-  }
-
-  .\32xl\:text-4-xl {
-    font-size: ;
-  }
-
-  .\32xl\:text-6-xl {
-    font-size: ;
   }
 
   .\32xl\:font-thin {
