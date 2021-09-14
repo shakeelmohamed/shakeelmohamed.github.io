@@ -34,7 +34,7 @@
         @apply py-4;
     }
 
-    img {
+    img:not(.emoji) {
         @apply transition transform hover:scale-105 ease-in-out duration-300 filter hover:grayscale;
     }
 
