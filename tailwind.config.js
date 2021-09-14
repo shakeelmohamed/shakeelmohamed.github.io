@@ -42,7 +42,9 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      grayscale: ['hover']
+    },
   },
   plugins: [
     require('@tailwindcss/typography'),

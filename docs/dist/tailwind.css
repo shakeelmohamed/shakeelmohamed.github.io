@@ -839,6 +839,23 @@ img:hover {
 }
 
 img {
+  --tw-blur: var(--tw-empty,/*!*/ /*!*/);
+  --tw-brightness: var(--tw-empty,/*!*/ /*!*/);
+  --tw-contrast: var(--tw-empty,/*!*/ /*!*/);
+  --tw-grayscale: var(--tw-empty,/*!*/ /*!*/);
+  --tw-hue-rotate: var(--tw-empty,/*!*/ /*!*/);
+  --tw-invert: var(--tw-empty,/*!*/ /*!*/);
+  --tw-saturate: var(--tw-empty,/*!*/ /*!*/);
+  --tw-sepia: var(--tw-empty,/*!*/ /*!*/);
+  --tw-drop-shadow: var(--tw-empty,/*!*/ /*!*/);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+img:hover {
+  --tw-grayscale: grayscale(100%);
+}
+
+img {
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
@@ -21542,6 +21559,14 @@ hr {
 }
 
 .grayscale {
+  --tw-grayscale: grayscale(100%);
+}
+
+.hover\:grayscale-0:hover {
+  --tw-grayscale: grayscale(0);
+}
+
+.hover\:grayscale:hover {
   --tw-grayscale: grayscale(100%);
 }
 
@@ -42651,6 +42676,14 @@ img.emoji {
     --tw-grayscale: grayscale(100%);
   }
 
+  .sm\:hover\:grayscale-0:hover {
+    --tw-grayscale: grayscale(0);
+  }
+
+  .sm\:hover\:grayscale:hover {
+    --tw-grayscale: grayscale(100%);
+  }
+
   .sm\:hue-rotate-0 {
     --tw-hue-rotate: hue-rotate(0deg);
   }
@@ -63690,6 +63723,14 @@ img.emoji {
   }
 
   .md\:grayscale {
+    --tw-grayscale: grayscale(100%);
+  }
+
+  .md\:hover\:grayscale-0:hover {
+    --tw-grayscale: grayscale(0);
+  }
+
+  .md\:hover\:grayscale:hover {
     --tw-grayscale: grayscale(100%);
   }
 
@@ -84735,6 +84776,14 @@ img.emoji {
     --tw-grayscale: grayscale(100%);
   }
 
+  .lg\:hover\:grayscale-0:hover {
+    --tw-grayscale: grayscale(0);
+  }
+
+  .lg\:hover\:grayscale:hover {
+    --tw-grayscale: grayscale(100%);
+  }
+
   .lg\:hue-rotate-0 {
     --tw-hue-rotate: hue-rotate(0deg);
   }
@@ -105777,6 +105826,14 @@ img.emoji {
     --tw-grayscale: grayscale(100%);
   }
 
+  .xl\:hover\:grayscale-0:hover {
+    --tw-grayscale: grayscale(0);
+  }
+
+  .xl\:hover\:grayscale:hover {
+    --tw-grayscale: grayscale(100%);
+  }
+
   .xl\:hue-rotate-0 {
     --tw-hue-rotate: hue-rotate(0deg);
   }
@@ -126816,6 +126873,14 @@ img.emoji {
   }
 
   .\32xl\:grayscale {
+    --tw-grayscale: grayscale(100%);
+  }
+
+  .\32xl\:hover\:grayscale-0:hover {
+    --tw-grayscale: grayscale(0);
+  }
+
+  .\32xl\:hover\:grayscale:hover {
     --tw-grayscale: grayscale(100%);
   }
 

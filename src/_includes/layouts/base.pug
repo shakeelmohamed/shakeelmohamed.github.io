@@ -8,6 +8,9 @@ if !pageTitle
     else
         - pageTitle = "Shakeel Mohamed – Design Portfolio";
 
+if !openGraphImage
+    - openGraphImage = "/img/opengraph - default.png"
+
 doctype html
 html(lang="en")
     head
@@ -22,8 +25,9 @@ html(lang="en")
         //- see https://iamjoona.com/blog/seo-tags-in-eleventy/
         meta(property="og:url" content=metadata.baseurl + page.url)
         meta(property="og:title" content=pageTitle)
-        //- TODO: need a default OG image, maybe make them dynamic...
-        //- meta(property="og:image" content=pageImg)
+        meta(property="og:image" content=metadata.baseurl + openGraphImage)
+
+        //- TODO: open graph image for whatsapp
         meta(property="og:description" content=description)
         if layout == "post"
             meta(property="og:type" content="article")
