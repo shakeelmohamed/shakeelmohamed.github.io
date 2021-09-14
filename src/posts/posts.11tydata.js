@@ -3,7 +3,7 @@ module.exports = {
         pageTitle: data => data.title + " by Shakeel Mohamed",
         // Reformat the date in ISO format
         cleanDate: data => formatDate(data.page.date),
-        sitemapDate: data => formatDateForSitemap(data.page.date),
+        atomFeedDate: data => formatDateForAtomFeed(data.page.date),
         categoriesList: data => data.tags.filter((val) => {
             return !(val.toLowerCase() == "post" || val.toLowerCase() == "featured");
         }),
@@ -20,7 +20,7 @@ function formatDate(date) {
 }
 
 // TODO: actually this is for Atom/RSS feeds, not sitemaps
-function formatDateForSitemap(date) {
+function formatDateForAtomFeed(date) {
     let dateObj = new Date(date);
     // Atom uses RFC 3339 dates
     // https://tools.ietf.org/html/rfc3339#section-5.8

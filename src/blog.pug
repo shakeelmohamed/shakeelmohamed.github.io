@@ -25,14 +25,14 @@ mixin getPosts()
             p.text-light-blue #{post.data.cleanDate}
             p.text-light-blue= "Tags: " +  post.data.categories
         a(href=post.url)
-            p.subhead.text-white #{post.data.title}
+            p.subhead.text-navy #{post.data.title}
 
 block content
     +sectionOrange()
         +gridWithBigColumn()
             h2.text-navy Featured Posts
             +getFeatured()
-    +sectionNavy()
+    +sectionWhite()
         +gridWithBigColumn()
-            h2.text-white Recent Posts
+            h2.text-navy Recent Posts
             +getPosts()
