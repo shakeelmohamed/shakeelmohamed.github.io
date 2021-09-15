@@ -1,6 +1,13 @@
+mixin getRandomLogo(size=50)
+    script.
+        getRandomLogo(#{size})
+
+
 mixin headerLogo()
     h3(class="text-white text-center py-4 flex-nowrap md:text-left")
-            a(href="/") Shakeel Mohamed
+        a(href="/")
+            +getRandomLogo()
+            | Shakeel Mohamed
 
 mixin navItem(href, label)
     a(class="font-sans font-bold text-white md:inline-block md:ml-8" href=href) #{label}

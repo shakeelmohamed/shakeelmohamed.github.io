@@ -5,12 +5,10 @@ module.exports = function(eleventyConfig) {
         "png",
         "jpg",
         "md",
-        "svg"
+        "svg",
+        "ico",
+        "webmanifest"
       ]);
-
-    // TODO:
-    // eleventyConfig.addPassthroughCopy("assets");
-    // eleventyConfig.addPassthroughCopy("css");
     
     // Custom markdown processor
     let markdownIt = require("markdown-it");
