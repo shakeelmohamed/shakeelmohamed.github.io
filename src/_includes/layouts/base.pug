@@ -20,13 +20,11 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="chrome=1")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
         meta(name="description" content=description)
+        
         //- opengraph
-        //- TODO: dynamic og:url with full permalink
-        //- see https://iamjoona.com/blog/seo-tags-in-eleventy/
         meta(property="og:url" content=metadata.baseurl + page.url)
         meta(property="og:title" content=pageTitle)
         meta(property="og:image" content=metadata.baseurl + openGraphImage)
-
         //- TODO: open graph image for whatsapp
         meta(property="og:description" content=description)
         if layout == "post"
@@ -47,6 +45,7 @@ html(lang="en")
 
         link(rel="stylesheet" href="https://use.typekit.net/uun0nut.css")
         link(href="/dist/tailwind.css" rel="stylesheet")
+        //- TODO: will need google fonts for Inter
         //- link(rel="preconnect" href="https://fonts.googleapis.com")
         //- link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
         
@@ -73,3 +72,9 @@ html(lang="en")
     //- TODO: could optimize twemoji by pulling it at build time
     script.
         twemoji.parse(document.body);
+    script(async src="https://www.googletagmanager.com/gtag/js?id=UA-36907845-2")
+    script.
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-36907845-2');
