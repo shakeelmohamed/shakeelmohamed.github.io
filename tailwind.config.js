@@ -3,13 +3,15 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 module.exports = {
   purge: {
     // TODO: further optimize for production, goal size for tailwind.css is 16k
-    enabled: false,
+    enabled: true,
     content: [
       './src/**/*.pug',
       './src/**/*.md'
     ],
+    mode: 'all',
+    preserveHtmlElements: false,
     options: {
-      keyframes: true,
+      keyframes: true
     }
   }, 
   darkMode: 'media', // or 'media' or 'class'
