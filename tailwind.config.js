@@ -6,10 +6,11 @@ module.exports = {
     enabled: true,
     content: [
       './src/**/*.pug',
-      './src/**/*.md'
+      './src/**/*.md',
+      '../docs/scripts/**/*.js'
     ],
     mode: 'all',
-    preserveHtmlElements: false,
+    preserveHtmlElements: true,
     options: {
       keyframes: true
     }
