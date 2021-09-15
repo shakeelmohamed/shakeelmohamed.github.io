@@ -1,3 +1,7 @@
+if (window.location.protocol === "http:") {
+    window.location.protocol = "https:";
+}
+
 var num = Math.floor(Math.random() * 5) + 1;
 function getRandomLogo(size) {
     size = size || 50;
