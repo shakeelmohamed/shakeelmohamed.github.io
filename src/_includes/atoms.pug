@@ -44,8 +44,11 @@ mixin hero()
             +gridWithBigColumn()
                 block
 
+//- TODO: The max-w-screen-xl class here and in the header
+//- is a temp workaround to center content on 2xl screens (aka 5k imac)
+//- Ideally, show a much wider view of beautiful images
 mixin container
-    div(class="py-2 mx-4 md:px-8 lg:mx-auto")
+    div(class="py-2 mx-4 md:px-8 max-w-screen-xl lg:mx-auto")
         block
 
 mixin grid()
