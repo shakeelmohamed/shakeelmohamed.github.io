@@ -1,0 +1,81 @@
+include ../atoms.pug
+include ../organisms.pug
+include ../type.pug
+
+if !pageTitle
+    if title
+        - pageTitle = title
+    else
+        - pageTitle = "Shakeel Mohamed – Design Portfolio";
+
+if !openGraphImage
+    - openGraphImage = "/img/opengraph - default.png"
+
+doctype html
+html(lang="en")
+    head
+        title #{pageTitle}
+
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="chrome=1")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(name="description" content=description)
+        
+        //- opengraph
+        meta(property="og:url" content=metadata.baseurl + page.url)
+        meta(property="og:title" content=pageTitle)
+        meta(property="og:image" content=metadata.baseurl + openGraphImage)
+        //- TODO: open graph image for whatsapp
+        meta(property="og:description" content=description)
+        if layout == "post"
+            meta(property="og:type" content="article")
+            meta(property="og:article:published_time" content=cleanDate)
+            meta(property="og:article:author" content=metadata.author.name)
+            each tag in categoriesList
+                meta(property="og:article:tag" content=tag)
+        else
+            meta(property="og:type" content="website")
+        meta(property="twitter:card" content="summary_large_image")
+        meta(property="twitter:creator" content="@_Shakeel")
+        
+        if canonical
+            link(href=metadata.baseurl + canonical, rel="canonical")
+        else
+            link(href=metadata.baseurl + page.url, rel="canonical")
+
+        link(rel="stylesheet" href="https://use.typekit.net/uun0nut.css")
+        link(href="/dist/tailwind.css" rel="stylesheet")
+        //- TODO: will need google fonts for Inter
+        //- link(rel="preconnect" href="https://fonts.googleapis.com")
+        //- link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        
+        link(rel="sitemap" type="text/plain" title="Sitemap" href="/sitemap.txt")
+        //- TODO: uncomment once XML sitemap is ready
+        //- link(rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml")
+        link(href="./feed.xml" rel="alternate" type="application/rss+xml" title="Shakeel Mohamed's blog posts")
+
+        link(rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png")
+        link(rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png")
+        link(rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png")
+        link(rel="manifest" href="/site.webmanifest")
+
+        script(src="/scripts/main.js")
+    //- TODO: remove debug-screens for production
+    //- body(class="bg-navy debug-screens")
+    body(class="bg-navy")
+        +header()
+        main
+            +hero()
+                block hero
+            block content
+        +footer()
+    script(src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous")
+    //- TODO: could optimize twemoji by pulling it at build time
+    script.
+        twemoji.parse(document.body);
+    script(async src="https://www.googletagmanager.com/gtag/js?id=UA-36907845-2")
+    script.
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-36907845-2');

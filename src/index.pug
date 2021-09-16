@@ -1,0 +1,24 @@
+---
+description: Shakeel Mohamed is a designer & brand strategist in the greater Seattle area.
+---
+
+extends _includes/layouts/base.pug
+include _includes/molecules.pug
+
+block hero
+    h1.text-white Hello from Seattle! 🌲
+    p.subhead.text-white
+        | I’m a software engineer turned designer applying to design MFA programs.
+        if collections.portfolio
+            br
+            |  Keep scrolling to check out my portfolio
+    h3.mt-4.pb-0.animate-bounce ⬇️
+
+
+block content
+    if collections.portfolio
+        +sectionWhite()
+            +gridWithBigColumn()
+                h2.text-navy Projects
+                each project in collections.portfolio
+                    +projectListing(project)

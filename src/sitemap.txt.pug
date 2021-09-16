@@ -1,0 +1,9 @@
+---
+permalink: "/sitemap.txt"
+dynamicPermalink: false
+eleventyExcludeFromCollections: true
+---
+
+each page in collections.sitemap
+    | #{metadata.baseurl + page.url}
+    |

@@ -1,0 +1,36 @@
+{
+  "name": "shakeelmohamed.com",
+  "version": "5.0.0",
+  "description": "My personal website",
+  "private": true,
+  "scripts": {
+    "start": "npm run-script build && npx @11ty/eleventy --serve --input=src --output=docs",
+    "build": "npx @11ty/eleventy --input=src --output=docs && npm run-script postcss",
+    "test": "alex --html ./docs/",
+    "postcss": "postcss src/styles.css -o docs/dist/tailwind.css",
+    "postcss:w": "postcss -w src/styles.css -o docs/dist/tailwind.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shakeelmohamed/beta.git"
+  },
+  "author": "Shakeel Mohamed<iam@shakeel.xyz>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shakeelmohamed/beta/issues"
+  },
+  "homepage": "https://github.com/shakeelmohamed/beta#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "@tailwindcss/forms": "^0.3.3",
+    "@tailwindcss/typography": "^0.4.1",
+    "alex": "^9.1.0",
+    "autoprefixer": "^10.3.3",
+    "jstransformer-markdown-it": "^2.1.0",
+    "markdown-it": "^10.0.0",
+    "postcss": "^8.3.6",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.2.8",
+    "tailwindcss-debug-screens": "^2.1.0"
+  }
+}

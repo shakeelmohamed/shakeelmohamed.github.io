@@ -1,0 +1,39 @@
+---
+title: Blog posts by Shakeel Mohamed
+description: Through writing, I like to reflect about problems I’ve solved, experiences I’ve had, and how to do things that were once difficult for me.
+canonical: "/blog"
+---
+
+extends _includes/layouts/base.pug
+
+//- Temporary workaround: this file is blog.pug, symlinked to posts.pug for legacy SEO
+
+block hero
+    h1.text-white The Blog ✍🏽
+    p.subhead.text-white #{description}
+
+mixin getFeatured()
+    each post in collections.featured
+        a(href=post.url)
+            h3.text-white #{post.data.title}
+        p.text-navy #{post.data.description}
+
+//- TODO: design this component
+mixin getPosts()
+    each post in collections.post
+        .flex.place-content-between
+            p.text-light-blue #{post.data.cleanDate}
+            //- TODO: make tags clickable
+            p.text-light-blue= "Tags: " +  post.data.categories
+        a(href=post.url)
+            p.subhead.text-navy #{post.data.title}
+
+block content
+    +sectionOrange()
+        +gridWithBigColumn()
+            h2.text-navy Featured Posts
+            +getFeatured()
+    +sectionWhite()
+        +gridWithBigColumn()
+            h2.text-navy Recent Posts
+            +getPosts()

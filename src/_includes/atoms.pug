@@ -1,0 +1,63 @@
+mixin getRandomLogo(size=50)
+    script getRandomLogo(#{size})
+
+mixin headerLogo()
+    h3(class="text-white text-center py-4 flex-nowrap md:text-left")
+        a(href="/")
+            +getRandomLogo()
+            | Shakeel Mohamed
+
+mixin navItem(href, label)
+    a(class="font-sans font-bold text-white md:inline-block md:ml-8" href=href) #{label}
+
+mixin footerNavItem(href, label)
+    li
+        a.subhead(href=href) #{label}
+
+//- TODO: every section has a gridWithBigColumn(), tidy up many places
+
+mixin sectionWhite()
+    section(class="bg-white text-navy")
+        +container()
+            block
+
+mixin sectionOrange()
+    section(class="bg-orange text-navy")
+        +container()
+            block
+
+mixin sectionNavy()
+    section(class="bg-navy text-navy")
+        +container()
+            block
+
+mixin sectionLightBlue()
+    section(class="bg-light-blue text-navy")
+        +container()
+            block
+
+mixin hero()
+    div(class="mt-10 mb-5 xl:mt-20 xl:mb-10")
+        +container()
+            +gridWithBigColumn()
+                block
+
+//- TODO: The max-w-screen-xl class here and in the header
+//- is a temp workaround to center content on 2xl screens (aka 5k imac)
+//- Ideally, show a much wider view of beautiful images
+mixin container
+    div(class="py-2 mx-4 md:px-8 max-w-screen-xl lg:mx-auto")
+        block
+
+mixin grid()
+    div(class="md:grid md:grid-cols-12")
+        block
+
+mixin gridBigColumn()
+    div(class="md:col-span-12 lg:col-span-8 lg:col-start-3 lg:col-end-11")
+        block
+
+mixin gridWithBigColumn()
+    +grid()
+        +gridBigColumn()
+            block
