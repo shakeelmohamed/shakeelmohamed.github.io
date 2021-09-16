@@ -3,6 +3,7 @@ https://shakeelmohamed.com/about/
 https://shakeelmohamed.com/blog-archive/
 https://shakeelmohamed.com/blog/
 https://shakeelmohamed.com/contact/
+https://shakeelmohamed.com/mentions/
 https://shakeelmohamed.com/posts/
 https://shakeelmohamed.com/posts/2013-09-20-summer-with-splunk/
 https://shakeelmohamed.com/posts/2014-11-14-remove-an-accidentally-pushed-remote-git-commit/
