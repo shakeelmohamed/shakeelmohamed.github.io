@@ -1,0 +1,28 @@
+---
+title: Blog post archive by Shakeel Mohamed
+description: "The archive of all blog posts I've written in the past"
+canonical: "/blog-archive"
+---
+
+extends _includes/layouts/base.pug
+
+//- TODO: update description as archive
+block hero
+    h1.text-white Blog Archive
+    p.subhead.text-white #{description}
+
+//- TODO: design this component, reuse what's in the blog page
+mixin getPosts()
+    each post in collections.post
+        .flex.place-content-between
+            p.text-light-blue #{post.data.cleanDate}
+            //- TODO: make tags clickable
+            p.text-light-blue= "Tags: " +  post.data.categories
+        a(href=post.url)
+            p.subhead.text-navy #{post.data.title}
+
+block content
+    +sectionWhite()
+        +gridWithBigColumn()
+            h2.text-navy All Posts
+            +getPosts()

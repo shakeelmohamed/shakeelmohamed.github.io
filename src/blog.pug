@@ -20,7 +20,7 @@ mixin getFeatured()
 
 //- TODO: design this component
 mixin getPosts()
-    each post in collections.post
+    each post in collections.recentPosts
         .flex.place-content-between
             p.text-light-blue #{post.data.cleanDate}
             //- TODO: make tags clickable
@@ -37,3 +37,6 @@ block content
         +gridWithBigColumn()
             h2.text-navy Recent Posts
             +getPosts()
+            br
+            p.subhead Keep reading in the 
+                a.text-light-blue(href="/post-archive") archive
