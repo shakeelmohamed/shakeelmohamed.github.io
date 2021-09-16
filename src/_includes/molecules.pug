@@ -2,7 +2,7 @@
 mixin projectListing(project)
     div.justify-self-auto.pb-8
         a(href=project.url)
-            img(src=project.data.openGraphImage)
+            img.portfolio-cover(src=project.data.openGraphImage)
         h3(class="text-navy pb-0.5")
             a(href=project.url) #{project.data.title}
         p.text-navy.leading-tight #{project.data.description}
