@@ -51,6 +51,15 @@ module.exports = function(eleventyConfig) {
         });
     });
 
+
+    // Reverse sort posts, only show this and last year's posts
+    eleventyConfig.addCollection("recentPosts", function(collectionApi) {
+        return collectionApi.getFilteredByTag("post").reverse().filter(post => {
+            const lastYear = (new Date()).getFullYear() - 1;
+            return post.data.date.getFullYear() >= lastYear;
+        });
+    });
+
     // Reverse sort posts
     eleventyConfig.addCollection("post", function(collectionApi) {
         return collectionApi.getFilteredByTag("post").reverse();

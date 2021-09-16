@@ -2,7 +2,7 @@
 mixin projectListing(project)
     div.justify-self-auto.pb-8
         a(href=project.url)
-            img(src=project.data.openGraphImage)
+            img.portfolio-cover(src=project.data.openGraphImage)
         h3(class="text-navy pb-0.5")
             a(href=project.url) #{project.data.title}
         p.text-navy.leading-tight #{project.data.description}
@@ -21,3 +21,32 @@ mixin copyright()
 //- mixin projectSectionSplit()
     
 //- mixin projectSectionImage()
+
+//- TODO: design this component
+mixin getPosts(recent=false)
+    - var source = collections.recentPosts;
+    if !recent
+        - source = collections.post;
+    each post in source
+        .flex.place-content-between
+            p.text-light-blue #{post.data.cleanDate}
+            //- TODO: make tags clickable
+            p.text-light-blue= "Tags: " +  post.data.categories
+        a(href=post.url)
+            p.subhead.text-navy #{post.data.title}
+
+mixin getFeaturedPosts()
+    each post in collections.featured
+        a(href=post.url)
+            h3.text-white #{post.data.title}
+        p.text-navy #{post.data.description}
+
+mixin getMentions(recent=false)
+    - var source = mentions.recent;
+    if !recent
+        - source = mentions.all;
+    .prose.leading-tight
+        ul
+            each mention in source                
+                li #{mention.date} – 
+                    a(href=mention.url) #{mention.title}

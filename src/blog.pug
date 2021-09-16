@@ -12,28 +12,15 @@ block hero
     h1.text-white The Blog ✍🏽
     p.subhead.text-white #{description}
 
-mixin getFeatured()
-    each post in collections.featured
-        a(href=post.url)
-            h3.text-white #{post.data.title}
-        p.text-navy #{post.data.description}
-
-//- TODO: design this component
-mixin getPosts()
-    each post in collections.post
-        .flex.place-content-between
-            p.text-light-blue #{post.data.cleanDate}
-            //- TODO: make tags clickable
-            p.text-light-blue= "Tags: " +  post.data.categories
-        a(href=post.url)
-            p.subhead.text-navy #{post.data.title}
-
 block content
     +sectionOrange()
         +gridWithBigColumn()
             h2.text-navy Featured Posts
-            +getFeatured()
+            +getFeaturedPosts()
     +sectionWhite()
         +gridWithBigColumn()
             h2.text-navy Recent Posts
-            +getPosts()
+            +getPosts(true)
+            br
+            p.subhead Keep reading in the 
+                a.text-light-blue(href="/post-archive") archive

@@ -28,19 +28,8 @@ mixin bio()
 
             I’m currently applying to graduate programs in graphic design while running my independent design business, [ntrsct (in•ter•sect) designs](https://ntrsct.com).
 
-mixin mentionList()
-    h3.text-navy Mentions
-    p.subheading Exciting things I've done in the past
-    .prose.leading-tight
-        ul
-            each mention in mentions
-                li #{mention.date} – 
-                        a(href=mention.url) #{mention.title}
-
-
 block content
     +sectionWhite()
-        //- TODO: add at least 1 photo on this page
         +gridWithBigColumn()
             +bio()
     +sectionOrange() 
@@ -62,6 +51,11 @@ block content
     
     +sectionWhite()
         +gridWithBigColumn()
-            +mentionList()
+            h3.text-navy Mentions
+            p.subheading Exciting things I've done in the past
+            +getMentions(true)
+            p.subhead See the 
+                a.text-navy(href="/mentions") full list here
+
 
 //- TODO: CTA for contact me for projects, or something?

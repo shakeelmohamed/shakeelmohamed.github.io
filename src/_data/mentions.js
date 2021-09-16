@@ -1,4 +1,4 @@
-[
+var all = [
     {
         "date": "May 17, 2021",
         "title": "Made With Love podcast - Shakeel's Journey (part 2)",
@@ -69,4 +69,14 @@
         "title": "BC Computer Science Club",
         "url": "http://www.thewatchdogonline.com/bc-computer-science-club-8639"
     }
-]
+];
+
+var recent = all.filter(mention => {
+    const twoYearsAgo = (new Date()).getFullYear() - 2;
+    return (new Date(mention.date)).getFullYear() >= twoYearsAgo;
+});
+
+module.exports = {
+    all,
+    recent
+};

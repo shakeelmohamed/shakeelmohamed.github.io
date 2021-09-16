@@ -34,7 +34,7 @@
         @apply py-4;
     }
 
-    img:not(.emoji) {
+    img.portfolio-cover {
         @apply transition transform hover:scale-105 ease-in-out duration-300 filter hover:grayscale;
     }
 
