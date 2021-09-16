@@ -1,0 +1,44 @@
+---
+title: Contact me – Shakeel Mohamed
+description: Say hello! Send me a DM on LinkedIn or Instagram. For project inquiries, reach out through my business website ntrsct.com
+---
+
+extends _includes/layouts/base.pug
+
+//- TODO: this entire page has WIP copy
+
+block hero
+    h1.text-white Say Hello! 👋🏽
+
+block content
+    +sectionWhite() 
+        +gridWithBigColumn()
+            p.subhead.text-navy
+                | I’m easy to reach by DM on 
+                a.text-light-blue(href=metadata.social.LinkedIn) LinkedIn 
+                |  or 
+                a.text-light-blue(href=metadata.social.Instagram) Instagram
+                | !
+            p.subhead.text-navy
+                | Otherwise, send me an email at
+                +mailto("iam", "shakeel.xyz", "Hey, I love your website!")
+            //- TODO: add link for website
+            p.subhead.text-navy
+                | For project inquiries, reach out through my business website:  
+                a.text-light-blue(href="https://ntrsct.com") ntrsct.com 
+    //- +sectionOrange() 
+    //-     +container()
+    //-         div(class="py-4 lg:mx-72")
+    //-             //- TODO: look at tailwind forms, make a component
+    //-             +p("Form coming soon")
+
+mixin mailto(user, domain, subject)
+    //- <!-- // http://lists.evolt.org/archive/Week-of-Mon-20040202/154813.html -->
+    span.mailto
+        script(type="text/javascript").
+            function gen_mail_to_link(lhs, rhs, subject) {
+                document.write("<a class=\"text-light-blue\" href=\"mailto");
+                document.write(":" + lhs + "@");
+                document.write(rhs + "?subject=" + subject + "\">" + lhs + "@" + rhs + "<\/a>");
+            }
+            gen_mail_to_link("#{user}", "#{domain}", "#{subject}")

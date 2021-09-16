@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    /* Headers */
+    h1 {
+        @apply font-sans font-bold py-4 text-5xl md:text-7xl;
+    }
+    h2 {
+        @apply font-sans font-bold py-4 text-4xl md:text-5xl;
+    }
+    h3 {
+        @apply font-sans font-bold py-4 text-3xl md:text-4xl;
+    }
+    /* subheading */
+    .subhead {
+        @apply font-sans text-xl;
+    }
+    /* caption */
+    .caption {
+        @apply font-sans text-sm;
+    }
+    /* Body text style */
+    p {
+        @apply font-serif text-base;
+    }
+    p a {
+        @apply text-orange;
+    }
+
+    /* TODO: define a style for full width section, which can then have a color applied to it */
+    section {
+        @apply py-4;
+    }
+
+    img:not(.emoji) {
+        @apply transition transform hover:scale-105 ease-in-out duration-300 filter hover:grayscale;
+    }
+
+    img.logo {
+        @apply inline mr-2;
+    }
+
+    a {
+        /* TODO:  bring this back once I figure out how to skip underlining the nav type/logo */
+        /* @apply transition hover:underline; */
+    }
+
+    hr {
+        @apply my-4;
+    }
+}
+
+@layer utilities {
+    /* Typography plugin customization */
+    .prose {
+        @apply font-serif text-base leading-normal;
+    }
+    .prose h1 {
+        @apply font-sans text-navy font-bold py-4 text-5xl md:text-7xl;
+    }
+    .prose h2 {
+        @apply font-sans text-navy py-4 mt-0.5 mb-0.5;
+    }
+    .prose h3 {
+        @apply font-sans text-navy;
+    }
+    .prose a {
+        @apply text-light-blue;
+    }
+    /* Don't automatically add quotes to a blockquote (from markdown) */
+    .prose blockquote p:first-of-type::before {
+        content: none;
+    }
+    .prose blockquote p:last-of-type::after {
+        content: none;
+    }
+    .prose ul {
+        @apply list-none;
+    }
+
+    img.emoji {
+       height: 1em;
+       width: 1em;
+       margin: 0 .05em 0 .1em;
+       vertical-align: -0.1em;
+       display: inline;
+    }
+}

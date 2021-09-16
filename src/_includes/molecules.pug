@@ -1,0 +1,23 @@
+//- TODO: remix so blog listing can reuse part of this
+mixin projectListing(project)
+    div.justify-self-auto.pb-8
+        a(href=project.url)
+            img(src=project.data.openGraphImage)
+        h3(class="text-navy pb-0.5")
+            a(href=project.url) #{project.data.title}
+        p.text-navy.leading-tight #{project.data.description}
+
+//- TODO: this has been refactored away, delete once footer is final
+mixin copyright()
+    .mx-auto.text-center
+        //- TODO: link this next paragraph to the project/blog page about the website itself
+        p.caption.text-white Designed and developed with ✨emotion✨.
+        p.caption.text-white
+            script document.write("&copy; " + new Date().getFullYear() + " Shakeel Mohamed")
+    
+
+//- mixin projectSectionText()
+    
+//- mixin projectSectionSplit()
+    
+//- mixin projectSectionImage()

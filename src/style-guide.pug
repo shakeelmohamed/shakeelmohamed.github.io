@@ -1,0 +1,48 @@
+---
+title: Style Guide – Shakeel Mohamed
+description: This is work in progress documentatation of the design system used on this website, along with some personal brand guidelines.
+---
+
+extends _includes/layouts/base.pug
+include _includes/molecules.pug
+
+block hero
+    h1.text-white Style Guide
+    p.subheading.text-white #{description}
+
+block content
+    +sectionWhite()
+        +gridWithBigColumn()
+            +textStyles()
+            hr
+            +colors()
+
+mixin textStyles()
+    //- TODO: exhaustive typography examples for prose block quotes, italics, bold, etc
+    h1 Typography
+    p.subhead Proxima Nova is used for headings, subheadings, and captions.
+    p All body text uses Garamond Premiere Pro.
+    p Both font families are licensed through Typekit from Adobe Creative Cloud.
+    .mx-8
+        h1 Heading 1
+        h2 Heading 2
+        h3 Heading 3
+        p.subhead Subheading
+        p Plain paragraph text
+        p.caption Caption text
+
+mixin colors()
+    //- TODO: programatically pull hex codes, note primary/secondary, etc.
+    //- need an 11tydata file to import values from tailwind.config.js
+    h1 Colors
+    .flex.flex-wrap
+        div.flex
+            +colorCircle("navy", "Navy", "white")
+            +colorCircle("white", "White")
+        div.flex
+            +colorCircle("orange", "Orange")
+            +colorCircle("light-blue", "Light Blue")
+
+mixin colorCircle(bgColor, text, textColor="navy")
+    div(class="rounded-full h-32 w-32 flex items-center justify-center border-solid border-2 m-2 bg-" + bgColor + " border-" + textColor)
+        p(class="text-" + textColor) #{text}
