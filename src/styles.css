@@ -76,6 +76,9 @@
     .prose blockquote p:last-of-type::after {
         content: none;
     }
+    .prose ul {
+        @apply list-none;
+    }
 
     img.emoji {
        height: 1em;

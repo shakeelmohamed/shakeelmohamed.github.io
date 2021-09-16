@@ -1385,6 +1385,21 @@ hr {
   max-width: 1280px;
 }
 
+.flex-grow {
+  flex-grow: 1;
+}
+
+.transform {
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 @-webkit-keyframes bounce {
   0%, 100% {
     transform: translateY(-25%);
@@ -1596,10 +1611,6 @@ hr {
   --tw-ring-shadow: 0 0 #0000;
 }
 
-.hover\:grayscale:hover {
-  --tw-grayscale: grayscale(100%);
-}
-
 .transition {
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
@@ -1671,6 +1682,10 @@ hr {
 
 .prose blockquote p:last-of-type::after {
   content: none;
+}
+
+.prose ul {
+  list-style-type: none;
 }
 
 img.emoji {

@@ -2,13 +2,19 @@ module.exports = function(eleventyConfig) {
     // File extensions to passthrough copy
     eleventyConfig.setTemplateFormats([
         "pug",
+        "md",
+
         "png",
         "jpg",
-        "md",
         "svg",
         "ico",
-        "webmanifest"
-      ]);
+
+        "webmanifest",
+        "xml",
+        "txt"
+    ]);
+    eleventyConfig.addPassthroughCopy("src/scripts");
+    eleventyConfig.addPassthroughCopy("src/CNAME");
     
     // Custom markdown processor
     let markdownIt = require("markdown-it");

@@ -7,7 +7,7 @@ module.exports = {
     content: [
       './src/**/*.pug',
       './src/**/*.md',
-      '../docs/scripts/**/*.js'
+      './src/scripts/**/*.js'
     ],
     mode: 'all',
     preserveHtmlElements: true,

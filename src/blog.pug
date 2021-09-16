@@ -23,6 +23,7 @@ mixin getPosts()
     each post in collections.post
         .flex.place-content-between
             p.text-light-blue #{post.data.cleanDate}
+            //- TODO: make tags clickable
             p.text-light-blue= "Tags: " +  post.data.categories
         a(href=post.url)
             p.subhead.text-navy #{post.data.title}

@@ -16,14 +16,14 @@ mixin header()
 mixin footerContent()
     div(class="grid grid-cols-4")
         div(class="col-span-1")
-            h3.text-white Lost
+            h3.text-white Let’s
             ul.list-none.text-white
                 +footerNavItem("/", "Work")
                 +footerNavItem("/blog", "Blog")
                 +footerNavItem("/about", "About")
                 +footerNavItem("/contact", "Contact")
         div(class="col-span-1")
-            h3.text-white Found
+            h3.text-white Connect
             ul.list-none.text-white
                 each link, name in metadata.social
                     li
