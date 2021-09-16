@@ -14,7 +14,7 @@ mixin header()
             +navItem("/contact", "Contact")
 
 mixin footerContent()
-    div(class="grid grid-cols-4")
+    div(class="grid grid-cols-2 md:grid-cols-4")
         div(class="col-span-1")
             h3.text-white Let’s
             ul.list-none.text-white
@@ -29,7 +29,7 @@ mixin footerContent()
                     li
                         a.subhead(href=link) #{name}
         div(class="col-span-2")
-            div(class="float-right")
+            div(class="md:float-right")
                 div(class="pt-4")
                     +getRandomLogo()
                 //- TODO: link this next paragraph to the project/blog page about the website itself
