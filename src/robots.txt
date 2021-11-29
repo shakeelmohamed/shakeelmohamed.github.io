@@ -1,2 +1,9 @@
 User-agent: *
-Disallow: /
+Disallow: /src/
+Disallow: *.json
+Disallow: *.md
+Disallow: /beta/*
+Disallow: /angular-geocoding-demo
+Disallow: /htmlslyde
+
+Sitemap: https://www.shakeelmohamed.com/sitemap.txt
