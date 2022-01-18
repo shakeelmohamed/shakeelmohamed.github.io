@@ -21,16 +21,16 @@
   },
   "homepage": "https://github.com/shakeelmohamed/beta#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy": "^1.0.0",
     "@tailwindcss/forms": "^0.3.3",
     "@tailwindcss/typography": "^0.4.1",
-    "alex": "^9.1.0",
+    "alex": "^10.0.0",
     "autoprefixer": "^10.3.3",
     "jstransformer-markdown-it": "^2.1.0",
     "markdown-it": "^10.0.0",
     "postcss": "^8.3.6",
     "postcss-cli": "^8.3.1",
-    "tailwindcss": "^2.2.8",
+    "tailwindcss": "^2.2.19",
     "tailwindcss-debug-screens": "^2.1.0"
   }
 }
