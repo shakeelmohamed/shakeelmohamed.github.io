@@ -1,4 +1,4 @@
-// TODO: bring in more metadata fields: tools, client, year
+// TODO: bring in more metadata fields: what (branding, type, etc.), tools, client, year
 module.exports = {
     eleventyComputed: {
         pageTitle: data => data.title + " – Design Portfolio – Shakeel Mohamed",
