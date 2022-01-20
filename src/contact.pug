@@ -3,34 +3,26 @@ title: Contact me – Shakeel Mohamed
 description: Say hello! Send me a DM on LinkedIn or Instagram. For project inquiries, reach out through my business website ntrsct.com
 ---
 
-extends _includes/layouts/base.pug
+//- extends _includes/layouts/base.pug
+extends _includes_new/layouts/base.pug
 
 //- TODO: this entire page has WIP copy
 
 block hero
-    h1.text-white Say Hello! 👋🏽
+    h2.text-navy Say Hello! 👋🏽
 
 block content
-    +sectionWhite() 
-        +gridWithBigColumn()
-            p.subhead.text-navy
-                | I’m easy to reach by DM on 
-                a.text-light-blue(href=metadata.social.LinkedIn) LinkedIn 
-                |  or 
-                a.text-light-blue(href=metadata.social.Instagram) Instagram
-                | !
-            p.subhead.text-navy
-                | Otherwise, send me an email at
-                +mailto("iam", "shakeel.xyz", "Hey, I love your website!")
-            //- TODO: add link for website
-            p.subhead.text-navy
-                | For project inquiries, reach out through my business website:  
-                a.text-light-blue(href="https://ntrsct.com") ntrsct.com 
-    //- +sectionOrange() 
-    //-     +container()
-    //-         div(class="py-4 lg:mx-72")
-    //-             //- TODO: look at tailwind forms, make a component
-    //-             +p("Form coming soon")
+    .px-8.pb-16
+        p.text-navy.font-sans
+            | I’m easy to reach by DM on 
+            a.text-light-blue(href=metadata.social.LinkedIn) LinkedIn 
+            |  or 
+            a.text-light-blue(href=metadata.social.Instagram) Instagram.&nbsp;
+            | Otherwise, send me an email at
+            +mailto("contact", "shakeelmohamed.com", "Hey Shakeel, let’s talk")
+        p.text-navy.font-sans
+            | For project inquiries, reach out through my business website:  
+            a.text-light-blue(href="https://ntrsct.com") ntrsct.com 
 
 mixin mailto(user, domain, subject)
     //- <!-- // http://lists.evolt.org/archive/Week-of-Mon-20040202/154813.html -->
