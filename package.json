@@ -4,6 +4,7 @@
   "description": "My personal website",
   "private": true,
   "scripts": {
+    "dev": "concurrently \"npm:start\" \"npm:postcss:w\"",
     "start": "npm run-script build && npx @11ty/eleventy --serve --input=src --output=docs",
     "build": "npx @11ty/eleventy --input=src --output=docs && npm run-script postcss",
     "test": "alex --html ./docs/",
@@ -26,6 +27,7 @@
     "@tailwindcss/typography": "^0.4.1",
     "alex": "^10.0.0",
     "autoprefixer": "^10.3.3",
+    "concurrently": "^7.0.0",
     "jstransformer-markdown-it": "^2.1.0",
     "markdown-it": "^12.3.2",
     "postcss": "^8.3.6",
