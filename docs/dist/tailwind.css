@@ -715,6 +715,8 @@ select {
 
 /* Headers */
 
+/* TODO: make h2 the new h1, etc. */
+
 h1 {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -782,7 +784,7 @@ h3 {
 /* Body text style */
 
 p {
-  font-family: freight-big-pro, ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  font-family: proxima-nova, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
 }
 
@@ -1554,6 +1556,10 @@ font-style: italic; */
   padding-bottom: 2rem;
 }
 
+.pb-12 {
+  padding-bottom: 3rem;
+}
+
 .pb-16 {
   padding-bottom: 4rem;
 }
@@ -1837,11 +1843,6 @@ img.emoji {
 
   .lg\:col-end-11 {
     grid-column-end: 11;
-  }
-
-  .lg\:mx-72 {
-    margin-left: 18rem;
-    margin-right: 18rem;
   }
 
   .lg\:mx-auto {

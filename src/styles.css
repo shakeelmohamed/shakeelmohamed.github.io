@@ -4,6 +4,8 @@
 
 @layer base {
     /* Headers */
+
+    /* TODO: make h2 the new h1, etc. */
     h1 {
         @apply font-sans font-bold py-4 text-5xl md:text-7xl;
     }
@@ -23,7 +25,7 @@
     }
     /* Body text style */
     p {
-        @apply font-serif text-base;
+        @apply font-sans text-base;
     }
     p a {
         @apply text-orange;

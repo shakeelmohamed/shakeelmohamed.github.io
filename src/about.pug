@@ -3,15 +3,16 @@ title: About – Shakeel Mohamed
 description: I’m a self-taught designer, born and raised in the greater Seattle area.
 ---
 
-extends _includes/layouts/base.pug
+//- extends _includes/layouts/base.pug
+extends _includes_new/layouts/base.pug
 include _includes/molecules.pug
 
 //- TODO: this entire page has WIP copy
 
 block hero
-    h1.text-white About me 🙋🏻‍♂️ 
-    p.subhead.text-white My pronouns are he/him.
-    p.subhead.text-white I’m the former software engineer who thought like a designer his whole career.
+    h2.text-navy About me 🙋🏻‍♂️ 
+    p.text-navy My pronouns are he/him.
+    p.text-navy I’m the former software engineer who thought like a designer his whole career.
 
 mixin bio()
     div(class="prose")
@@ -24,38 +25,33 @@ mixin bio()
 
             I’m inspired by peak performances, from [Michael Jordan in the NBA Finals](https://www.youtube.com/watch?v=d8qXbVyVNnA) to [The Weeknd performing at the Super Bowl halftime show](https://www.youtube.com/watch?v=9rhadTURsrw).
 
-            I spend my free time volunteering with [the Ismaili Muslim community](https://the.ismaili/) on various (sometimes creative) projects.
-
-            I’m currently applying to graduate programs in graphic design while running my independent design business, [ntrsct (in•ter•sect) designs](https://ntrsct.com).
+            I’m currently running my independent design business, [ntrsct (in•ter•sect) designs](https://ntrsct.com), while learning more about design.
+            I spend my free time volunteering with [the Ismaili Muslim community](https://the.ismaili/) on projects varying from branding to video production.
 
 block content
-    +sectionWhite()
-        +gridWithBigColumn()
-            +bio()
-    +sectionOrange() 
-        +gridWithBigColumn()
-            h2.text-navy My Principles
-            p.text-navy This is my approach to any situation, personally or professionally. This is the unique contribution I bring to the world.
+    .px-8.pb-12
+        +bio()
+        //- TODO: bring in my design principles: local to global, change the medium, etc.
+        h3.text-navy My Principles
+        p.text-navy This is my approach to any situation, personally or professionally. This is the unique contribution I bring to the world.
 
-            -
-                var manifesto = {
-                   "Outwork deficiencies": "Any weakness can be overcome with great effort.",
-                   "Create the future": "Start with the end in mind, work towards the plan, adjust as needed.",
-                   "Seek growth constantly": "Knowledge is power, so learn from the greats; success leaves clues.",
-                   "Enable understanding through transparency": "Use clear & direct communication, translate if necessary.",
-                   "Think from a unique perspective": "Think inside, outside, and about the box itself."
-                };
-            each details, name in manifesto
-                h3.text-white #{name}
-                p.text-navy #{details}
-    
-    +sectionWhite()
-        +gridWithBigColumn()
-            h3.text-navy Mentions
-            p.subheading Exciting things I've done in the past
-            +getMentions(true)
-            p.subhead See the 
-                a.text-navy(href="/mentions") full list here
+        -
+            var manifesto = {
+               "Outwork deficiencies": "Any weakness can be overcome with great effort.",
+               "Create the future": "Start with the end in mind, work towards the plan, adjust as needed.",
+               "Seek growth constantly": "Knowledge is power, so learn from the greats; success leaves clues.",
+               "Enable understanding through transparency": "Use clear & direct communication, translate if necessary.",
+               "Think from a unique perspective": "Think inside, outside, and about the box itself."
+            };
+        each details, name in manifesto
+            p.subhead.text-navy #{name}
+            p.text-navy #{details}
+        
+        h3.text-navy Mentions
+        p.subheading Exciting things I've done in the past
+        +getMentions(true)
+        p.subhead See the 
+            a.text-navy(href="/mentions") full list here
 
 
 //- TODO: CTA for contact me for projects, or something?
