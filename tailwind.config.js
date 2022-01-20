@@ -1,21 +1,28 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
-  purge: {
-    // TODO: further optimize for production, goal size for tailwind.css is 16k
-    enabled: true,
-    content: [
-      './src/**/*.pug',
-      './src/**/*.md',
-      './src/scripts/**/*.js'
-    ],
-    mode: 'all',
-    preserveHtmlElements: true,
-    options: {
-      keyframes: true
-    }
-  }, 
-  darkMode: 'media', // or 'media' or 'class'
+  content: [
+    // './src/**/*.{md,pug}'
+    './docs/**/*.html'
+    // ,
+    // './src/scripts/**/*.js' // TODO: probably remove, only used by random logo picker
+  ],
+  safelist: [
+    'font-*'
+  ],
+  // content: {
+  //   // TODO: further optimize for production, goal size for tailwind.css is 16k
+  //   enabled: true,
+  //   content: [
+  //     './src/**/*.{md,pug}',
+  //     './src/scripts/**/*.js' 
+  //   ],
+  //   mode: 'all',
+  //   preserveHtmlElements: true,
+  //   options: {
+  //     keyframes: true
+  //   }
+  // }, 
   theme: {
     extend: {
       fontFamily: {
@@ -47,11 +54,11 @@ module.exports = {
       gray: '#666666'
     },
   },
-  variants: {
-    extend: {
-      grayscale: ['hover']
-    },
-  },
+  // variants: {
+  //   extend: {
+  //     grayscale: ['hover']
+  //   },
+  // },
   plugins: [
     require('@tailwindcss/typography'),
     require('@tailwindcss/forms'),

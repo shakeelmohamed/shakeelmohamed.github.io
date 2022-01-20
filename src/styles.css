@@ -37,7 +37,7 @@
     }
 
     img.portfolio-cover {
-        @apply transition transform ease-in-out duration-300 filter hover:grayscale;
+        @apply transition ease-in-out duration-300 filter hover:grayscale;
     }
 
     img.logo {
@@ -53,24 +53,22 @@
         @apply my-4;
     }
 
+    /* TODO: refactor away if used anywhere */
     .freight-book-it {
         font-family: freight-big-pro, serif;
         font-weight: 400;
         font-style: italic;
     }
 
-/*     font-family: freight-big-pro,serif;
-font-weight: 400;
-font-style: italic; */
 }
 
 @layer utilities {
     /* Typography plugin customization */
     .prose {
-        @apply font-serif text-base leading-normal;
+        @apply font-sans text-base leading-normal;
     }
     .prose h1 {
-        @apply font-sans text-navy font-semibold py-4 text-5xl md:text-7xl;
+        @apply font-serif text-navy font-normal italic py-4 text-3xl md:text-5xl;
     }
     .prose h2 {
         @apply font-sans text-navy py-4 mt-0.5 mb-0.5;
