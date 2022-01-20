@@ -1373,6 +1373,10 @@ font-style: italic; */
   margin-bottom: 1.25rem;
 }
 
+.mb-12 {
+  margin-bottom: 3rem;
+}
+
 .block {
   display: block;
 }
@@ -1528,11 +1532,6 @@ font-style: italic; */
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
-}
-
-.px-16 {
-  padding-left: 4rem;
-  padding-right: 4rem;
 }
 
 .py-2 {
@@ -1833,6 +1832,11 @@ img.emoji {
     padding-right: 2rem;
   }
 
+  .md\:px-16 {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
   .md\:py-4 {
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -1868,8 +1872,16 @@ img.emoji {
 }
 
 @media (min-width: 1280px) {
+  .xl\:mt-12 {
+    margin-top: 3rem;
+  }
+
   .xl\:mt-20 {
     margin-top: 5rem;
+  }
+
+  .xl\:mb-8 {
+    margin-bottom: 2rem;
   }
 
   .xl\:mb-10 {

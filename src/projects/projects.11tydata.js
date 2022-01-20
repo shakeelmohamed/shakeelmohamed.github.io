@@ -1,7 +1,7 @@
 // TODO: bring in more metadata fields: what (branding, type, etc.), tools, client, year
 module.exports = {
     eleventyComputed: {
-        pageTitle: data => data.title + " – Design Portfolio – Shakeel Mohamed",
+        pageTitle: data => data.title + " – Shakeel Mohamed",
         openGraphImage: data => {
             if (data.openGraphImage) {
                 return data.page.filePathStem.replace("index", "") + data.openGraphImage;
