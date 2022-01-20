@@ -1442,6 +1442,10 @@ font-style: italic; */
   list-style-type: none;
 }
 
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -1468,6 +1472,15 @@ font-style: italic; */
 
 .justify-between {
   justify-content: space-between;
+}
+
+.gap-x-16 {
+  -moz-column-gap: 4rem;
+       column-gap: 4rem;
+}
+
+.gap-y-4 {
+  row-gap: 1rem;
 }
 
 .justify-self-auto {
@@ -1567,6 +1580,11 @@ font-style: italic; */
 
 .text-lg {
   font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
   line-height: 1.75rem;
 }
 
@@ -1767,6 +1785,10 @@ img.emoji {
 
   .md\:flex-shrink-0 {
     flex-shrink: 0;
+  }
+
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .md\:grid-cols-4 {
