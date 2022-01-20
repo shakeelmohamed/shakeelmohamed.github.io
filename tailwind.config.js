@@ -20,12 +20,14 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['proxima-nova', ...defaultTheme.fontFamily.sans],
-        serif: ['garamond-premier-pro', ...defaultTheme.fontFamily.serif],
+        // serif: ['garamond-premier-pro', ...defaultTheme.fontFamily.serif],
+        serif: ['freight-big-pro', ...defaultTheme.fontFamily.serif],
       },
       fontSize: { // TODO: customize other type sizes here; actually do it in src/styles.css
-        'base': '1.5rem', // 1.25rem is 20px on desktop... originally had designed with 1.5rem or 24px in mind
+        // 'old_base': '1.5rem', // 1.25rem is 20px on desktop... originally had designed with 1.5rem or 24px in mind
+        'base': '1rem', // 1rem is 16px on desktop... originally had designed with 1.5rem or 24px in mind
         // desktop styles
-        'sm': '1rem',
+        // 'sm': '1rem',
         // 'xl': '',
         // '3-xl': '',
         // '5-xl': '',

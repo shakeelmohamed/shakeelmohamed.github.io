@@ -2,10 +2,26 @@
 mixin projectListing(project)
     div.justify-self-auto.pb-8
         a(href=project.url)
-            img.portfolio-cover(src=project.data.openGraphImage)
-        h3(class="text-navy pb-0.5")
-            a(href=project.url) #{project.data.title}
-        p.text-navy.leading-tight #{project.data.description}
+            img.portfolio-cover.w-full(src=project.data.openGraphImage)
+        .pt-2
+            div(class="text-navy pb-0.5 text-2xl font-sans font-semibold")
+                a(href=project.url) #{project.data.title}
+            //- TODO: need a max-width here so the lines aren't super long
+            p.text-navy.leading-tight.font-sans Media: #{project.data.media}
+            p.text-navy.leading-tight.font-sans(class="md:w-1/2") #{project.data.description}.
+            //- .flex.flex-wrap
+            //-     div.mr-16
+            //-         p.text-navy.leading-tight.font-sans Media: #{project.data.media}
+            //-     div
+            //-         p.text-navy.leading-tight.font-sans.w-full #{project.data.description}
+
+//- mixin projectListing(project)
+//-     div.justify-self-auto.pb-8
+//-         a(href=project.url)
+//-             img.portfolio-cover(src=project.data.openGraphImage)
+//-         h3(class="text-navy pb-0.5")
+//-             a(href=project.url) #{project.data.title}
+//-         p.text-navy.leading-tight #{project.data.description}
 
 //- TODO: this has been refactored away, delete once footer is final
 mixin copyright()

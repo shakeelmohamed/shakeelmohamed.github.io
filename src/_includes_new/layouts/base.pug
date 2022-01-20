@@ -50,7 +50,7 @@ mixin footer()
                     if name == "GitHub"
                         - continue
                     span
-                        a.subhead(href=link) #{name} &nbsp;
+                        a(href=link) #{name} &nbsp;
                         if numLinks < (Object.keys(metadata.social).length - 1)
                             | | &nbsp;
         div(class="col-span-2")
