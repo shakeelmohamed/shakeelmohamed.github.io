@@ -50,6 +50,16 @@
     hr {
         @apply my-4;
     }
+
+    .freight-book-it {
+        font-family: freight-big-pro, serif;
+        font-weight: 400;
+        font-style: italic;
+    }
+
+/*     font-family: freight-big-pro,serif;
+font-weight: 400;
+font-style: italic; */
 }
 
 @layer utilities {
