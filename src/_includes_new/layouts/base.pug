@@ -8,7 +8,7 @@ mixin getRandomLogo(size=50)
     script getRandomLogo(#{size})
 
 mixin headerLogo()
-    div(class="text-navy freight-book-it text-4xl text-center py-4 flex-nowrap md:text-left")
+    div(class="py-6 text-navy freight-book-it text-4xl text-center flex-nowrap md:text-left")
         a(href="/") Shakeel Mohamed
 
 mixin navItem(href, label)
@@ -17,18 +17,16 @@ mixin navItem(href, label)
 mixin header()
     //- TODO: layout breaks below 320px width
     //- header(class="text-navy max-w-screen-xl mx-auto px-8 md:flex md:items-baseline md:justify-between")
-    header(class="text-navy mx-auto px-8 md:flex md:items-baseline md:justify-between")
+    header(class="text-navy mx-auto md:flex md:items-baseline md:justify-between")
         +headerLogo()
-        nav(class="flex justify-between text-lg mx-4 md:py-5 md:justify-items-end md:flex-shrink-0 md:mx-0")
+        nav(class="flex justify-between text-lg mx-4 md:py-4 md:justify-items-end md:flex-shrink-0 md:mx-0")
             +navItem("/", "Work")
             +navItem("/blog", "Blog")
             +navItem("/about", "About")
             +navItem("/contact", "Contact")
 
 mixin hero()
-    div(class="px-8 mt-10 mb-5 xl:mt-20 xl:mb-10")
-        //- +container()
-        //-     +gridWithBigColumn()
+    div(class="mt-4 mb-12 xl:mt-12 xl:mb-8")
         block
 
 mixin footerNavItem(href, label)
@@ -36,7 +34,7 @@ mixin footerNavItem(href, label)
         a.subhead(href=href) #{label}
 
 mixin footer()
-    div(class="px-8 grid grid-cols-1 gap-x-16 gap-y-4 md:grid-cols-3")
+    div(class="pt-16 grid grid-cols-1 gap-x-16 gap-y-4 md:grid-cols-3")
         div(class="col-span-1")
             p.text-navy.font-sans.font-semibold.text-xl Subscribe
             +mailingListForm()
@@ -122,7 +120,7 @@ html(lang="en")
         script(src="/scripts/main.js")
     //- TODO: remove debug-screens for production
     //- body(class="bg-navy debug-screens")
-    body(class="bg-white")
+    body(class="bg-white").px-16
         +header()
         main
             +hero()

@@ -1,10 +1,10 @@
-extends base.pug
+extends ../../_includes_new/layouts/base.pug
 
 block hero
     //- TODO: all the metadata can go here; TBD
     //- e.g.: date, medium, role, team members
-    h1.text-white #{title}
-    p.subhead.text-white #{description}
+    h2.text-navy #{title}
+    p.subhead.text-navy #{description}
 
 //- TODO: design all possible layouts for a project
 //- full screen image
@@ -13,6 +13,4 @@ block hero
 
 //- TODO: this text-base will probably break any headings, ditto for font-serif
 block content
-    +sectionWhite()
-        +gridWithBigColumn()
-            div(class="prose")!= content
+    div(class="prose")!= content

@@ -29,29 +29,28 @@ mixin bio()
             I spend my free time volunteering with [the Ismaili Muslim community](https://the.ismaili/) on projects varying from branding to video production.
 
 block content
-    .px-8.pb-12
-        +bio()
-        //- TODO: bring in my design principles: local to global, change the medium, etc.
-        h3.text-navy My Principles
-        p.text-navy This is my approach to any situation, personally or professionally. This is the unique contribution I bring to the world.
+    +bio()
+    //- TODO: bring in my design principles: local to global, change the medium, etc.
+    h3.text-navy My Principles
+    p.text-navy This is my approach to any situation, personally or professionally. This is the unique contribution I bring to the world.
 
-        -
-            var manifesto = {
-               "Outwork deficiencies": "Any weakness can be overcome with great effort.",
-               "Create the future": "Start with the end in mind, work towards the plan, adjust as needed.",
-               "Seek growth constantly": "Knowledge is power, so learn from the greats; success leaves clues.",
-               "Enable understanding through transparency": "Use clear & direct communication, translate if necessary.",
-               "Think from a unique perspective": "Think inside, outside, and about the box itself."
-            };
-        each details, name in manifesto
-            p.subhead.text-navy #{name}
-            p.text-navy #{details}
-        
-        h3.text-navy Mentions
-        p.subheading Exciting things I've done in the past
-        +getMentions(true)
-        p.subhead See the 
-            a.text-navy(href="/mentions") full list here
+    -
+        var manifesto = {
+           "Outwork deficiencies": "Any weakness can be overcome with great effort.",
+           "Create the future": "Start with the end in mind, work towards the plan, adjust as needed.",
+           "Seek growth constantly": "Knowledge is power, so learn from the greats; success leaves clues.",
+           "Enable understanding through transparency": "Use clear & direct communication, translate if necessary.",
+           "Think from a unique perspective": "Think inside, outside, and about the box itself."
+        };
+    each details, name in manifesto
+        p.subhead.text-navy #{name}
+        p.text-navy #{details}
+    
+    h3.text-navy Mentions
+    p.subheading Exciting things I've done in the past
+    +getMentions(true)
+    p.subhead See the 
+        a.text-navy(href="/mentions") full list here
 
 
 //- TODO: CTA for contact me for projects, or something?

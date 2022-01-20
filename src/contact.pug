@@ -12,17 +12,16 @@ block hero
     h2.text-navy Say Hello! 👋🏽
 
 block content
-    .px-8.pb-16
-        p.text-navy.font-sans
-            | I’m easy to reach by DM on 
-            a.text-light-blue(href=metadata.social.LinkedIn) LinkedIn 
-            |  or 
-            a.text-light-blue(href=metadata.social.Instagram) Instagram.&nbsp;
-            | Otherwise, send me an email at
-            +mailto("contact", "shakeelmohamed.com", "Hey Shakeel, let’s talk")
-        p.text-navy.font-sans
-            | For project inquiries, reach out through my business website:  
-            a.text-light-blue(href="https://ntrsct.com") ntrsct.com 
+    p.text-navy
+        | I’m easy to reach by DM on 
+        a.text-light-blue(href=metadata.social.LinkedIn) LinkedIn 
+        |  or 
+        a.text-light-blue(href=metadata.social.Instagram) Instagram.&nbsp;
+        | Otherwise, send me an email at
+        +mailto("contact", "shakeelmohamed.com", "Hey Shakeel, let’s talk")
+    p.text-navy
+        | For project inquiries, reach out through my business website:  
+        a.text-light-blue(href="https://ntrsct.com") ntrsct.com 
 
 mixin mailto(user, domain, subject)
     //- <!-- // http://lists.evolt.org/archive/Week-of-Mon-20040202/154813.html -->

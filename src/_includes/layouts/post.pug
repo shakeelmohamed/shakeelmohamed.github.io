@@ -1,13 +1,11 @@
-extends base.pug
+extends ../../_includes_new/layouts/base.pug
 
 block hero
-    p.text-light-blue #{cleanDate}
-    h1.text-white #{title}
-    p.subhead.text-white #{description}
+    p.text-gray #{cleanDate}
+    h2.text-navy #{title}
+    p.subhead.text-navy #{description}
     //- TODO: display categories
 
 //- TODO: use article markup
 block content
-    +sectionWhite()
-        +gridWithBigColumn()
-            div(class="prose")!= content
+    div(class="prose")!= content

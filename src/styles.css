@@ -7,13 +7,13 @@
 
     /* TODO: make h2 the new h1, etc. */
     h1 {
-        @apply font-sans font-bold py-4 text-5xl md:text-7xl;
+        @apply font-sans font-semibold py-4 text-5xl md:text-7xl;
     }
     h2 {
-        @apply font-sans font-bold py-4 text-4xl md:text-5xl;
+        @apply font-sans font-semibold py-4 text-4xl md:text-5xl;
     }
     h3 {
-        @apply font-sans font-bold py-4 text-3xl md:text-4xl;
+        @apply font-sans font-semibold py-4 text-3xl md:text-4xl;
     }
     /* subheading */
     .subhead {
@@ -70,7 +70,7 @@ font-style: italic; */
         @apply font-serif text-base leading-normal;
     }
     .prose h1 {
-        @apply font-sans text-navy font-bold py-4 text-5xl md:text-7xl;
+        @apply font-sans text-navy font-semibold py-4 text-5xl md:text-7xl;
     }
     .prose h2 {
         @apply font-sans text-navy py-4 mt-0.5 mb-0.5;
