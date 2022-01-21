@@ -1199,13 +1199,17 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(255 92 10 / var(--tw-bg-opacity));
 }
-.px-8 {
-  padding-left: 2rem;
-  padding-right: 2rem;
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+}
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 .py-4 {
   padding-top: 1rem;
@@ -1290,13 +1294,13 @@ select {
   --tw-text-opacity: 1;
   color: rgb(0 40 85 / var(--tw-text-opacity));
 }
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
 .text-light-blue {
   --tw-text-opacity: 1;
   color: rgb(152 182 228 / var(--tw-text-opacity));
+}
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 .text-gray {
   --tw-text-opacity: 1;
