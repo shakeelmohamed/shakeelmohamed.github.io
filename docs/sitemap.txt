@@ -1,11 +1,9 @@
 https://shakeelmohamed.com/
-https://shakeelmohamed.com/_includes_new/layouts/base/
 https://shakeelmohamed.com/about/
 https://shakeelmohamed.com/blog-archive/
 https://shakeelmohamed.com/blog/
 https://shakeelmohamed.com/break/
 https://shakeelmohamed.com/contact/
-https://shakeelmohamed.com/index_old/
 https://shakeelmohamed.com/mentions/
 https://shakeelmohamed.com/posts/
 https://shakeelmohamed.com/posts/2013-09-20-summer-with-splunk/

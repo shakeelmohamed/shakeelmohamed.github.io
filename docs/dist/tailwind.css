@@ -1191,13 +1191,13 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(0 40 85 / var(--tw-bg-opacity));
 }
-.bg-orange {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 92 10 / var(--tw-bg-opacity));
-}
 .bg-light-blue {
   --tw-bg-opacity: 1;
   background-color: rgb(152 182 228 / var(--tw-bg-opacity));
+}
+.bg-orange {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 92 10 / var(--tw-bg-opacity));
 }
 .px-8 {
   padding-left: 2rem;
