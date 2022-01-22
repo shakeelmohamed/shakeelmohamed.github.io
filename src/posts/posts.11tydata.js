@@ -1,9 +1,12 @@
+const fs = require('fs');
+
 module.exports = {
     eleventyComputed: {
         pageTitle: data => data.title + " by Shakeel Mohamed",
         // Reformat the date in ISO format
         cleanDate: data => formatDate(data.page.date),
         atomFeedDate: data => formatDateForAtomFeed(data.page.date),
+        atomUpdatedDate: data => formatDateForAtomFeed(fs.statSync(data.page.inputPath).mtime),
         categoriesList: data => data.tags.filter((val) => {
             return !(val.toLowerCase() == "post" || val.toLowerCase() == "featured");
         }),

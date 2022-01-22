@@ -10,12 +10,12 @@ description: "Recent blog posts from Shakeel Mohamed, designer & brand strategis
 feed(xmlns="http://www.w3.org/2005/Atom")
     title #{title}
     subtitle #{description}
-    link(href="#{metadata.baseurl + permalink}" rel="self")
-    link(href="#{metadata.baseurl}")
+    link(href=(metadata.baseurl + permalink) rel="self")
+    link(href=metadata.baseurl)
     //- <updated>{{ collections.post | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
     //- see https://github.com/11ty/eleventy-plugin-rss/blob/master/src/getNewestCollectionItemDate.js
     //- TODO: use a real non-hardcoded updated date, based on latest updated date
-    updated 2021-09-08T00:00:00Z
+    updated 2022-01-21T00:00:00Z
     id #{metadata.baseurl}/
     author
       name #{metadata.author.name}
@@ -23,7 +23,8 @@ feed(xmlns="http://www.w3.org/2005/Atom")
     each post in collections.post
         entry
             title #{post.data.title}
-            link(href="#{metadata.baseurl + post.url}")
-            updated #{post.data.atomFeedDate}
+            link(href=metadata.baseurl + post.url)
+            published #{post.data.atomFeedDate}
+            updated #{post.data.atomUpdatedDate}
             id #{metadata.baseurl + post.url}
             summary type="text" #{post.data.description}
