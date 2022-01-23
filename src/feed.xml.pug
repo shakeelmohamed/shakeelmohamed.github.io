@@ -12,10 +12,7 @@ feed(xmlns="http://www.w3.org/2005/Atom")
     subtitle #{description}
     link(href=(metadata.baseurl + permalink) rel="self")
     link(href=metadata.baseurl)
-    //- <updated>{{ collections.post | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
-    //- see https://github.com/11ty/eleventy-plugin-rss/blob/master/src/getNewestCollectionItemDate.js
-    //- TODO: use a real non-hardcoded updated date, based on latest updated date
-    updated 2022-01-21T00:00:00Z
+    updated #{eleventyComputed.atomFeedUpdatedDate}
     id #{metadata.baseurl}/
     author
       name #{metadata.author.name}
