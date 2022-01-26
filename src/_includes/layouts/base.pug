@@ -12,14 +12,14 @@ mixin headerLogo()
         a.header-logo(href="/") Shakeel Mohamed
 
 mixin navItem(href, label)
-    a(class="font-sans font-semibold text-navy text-left md:text-center md:inline-block md:ml-8" href=href) #{label}
+    a(class="font-sans font-semibold text-navy text-left ml-0 mr-8 md:text-center md:inline-block md:mr-0 md:ml-8" href=href) #{label}
 
 mixin header()
     //- TODO: layout breaks below 320px width
     //- header(class="text-navy max-w-screen-xl mx-auto px-8 md:flex md:items-baseline md:justify-between")
     header(class="text-navy mx-auto md:flex md:items-baseline md:justify-between")
         +headerLogo()
-        nav(class="flex justify-between text-lg md:py-4 md:justify-items-end md:flex-shrink-0 md:mx-0")
+        nav(class="flex md:justify-between text-lg md:py-4 md:justify-items-end md:flex-shrink-0 md:mx-0")
             +navItem("/", "Work")
             +navItem("/blog", "Blog")
             +navItem("/about", "About")
@@ -27,7 +27,8 @@ mixin header()
 
 mixin hero()
     div(class="mt-4 mb-12 xl:mt-12 xl:mb-8")
-        block
+        +gridCols2()
+            block
 
 mixin footerNavItem(href, label)
     li
@@ -45,11 +46,9 @@ mixin footer()
             div
                 each link, name in metadata.social
                     -- ++numLinks
-                    if name == "GitHub"
-                        - continue
                     span
                         a(href=link) #{name} &nbsp;
-                        if numLinks < (Object.keys(metadata.social).length - 1)
+                        if numLinks < (Object.keys(metadata.social).length)
                             | | &nbsp;
         div(class="col-span-1")
             h3 &nbsp;

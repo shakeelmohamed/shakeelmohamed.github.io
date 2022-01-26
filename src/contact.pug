@@ -8,19 +8,20 @@ extends _includes/layouts/base.pug
 //- TODO: this entire page has WIP copy
 
 block hero
-    h1.text-navy Say Hello! 👋🏽
+    div
+        h1.text-navy Say Hello! 👋🏽
 
 block content
-    p.text-navy
+    p
         | I’m easy to reach by DM on 
-        a.text-light-blue(href=metadata.social.LinkedIn) LinkedIn 
+        a(href=metadata.social.LinkedIn) LinkedIn 
         |  or 
-        a.text-light-blue(href=metadata.social.Instagram) Instagram.&nbsp;
+        a(href=metadata.social.Instagram) Instagram.&nbsp;
         | Otherwise, send me an email at
         +mailto("contact", "shakeelmohamed.com", "Hey Shakeel, let’s talk")
-    p.text-navy
+    p
         | For project inquiries, reach out through my business website:  
-        a.text-light-blue(href="https://ntrsct.com") ntrsct.com 
+        a(href="https://ntrsct.com") ntrsct.com 
 
 mixin mailto(user, domain, subject)
     //- <!-- // http://lists.evolt.org/archive/Week-of-Mon-20040202/154813.html -->

@@ -1,14 +1,15 @@
 ---
 title: Shakeel Mohamed – Mentions
-description: "Exciting things I’ve done in the past"
+description: "It’s not exactly press..."
 canonical: "/mentions"
 ---
 
 extends _includes/layouts/base.pug
 
 block hero
-    h1.text-navy All Mentions
-    p.text-navy #{description}
+    div
+        h1.text-navy All Mentions
+        p.text-navy #{description}
 
 block content
     +getMentions()

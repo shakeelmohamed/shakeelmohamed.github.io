@@ -9,9 +9,10 @@ include _includes/molecules.pug
 //- TODO: this entire page has WIP copy
 
 block hero
-    h1.text-navy About me 🙋🏻‍♂️ 
-    p.text-navy My pronouns are he/him.
-    p.text-navy I’m the former software engineer who thought like a designer his whole career.
+    div
+        h1.text-navy Developer turned designer
+        p My pronouns are he/him.
+        p I’m the former software engineer who thought like a designer his whole career.
 
 mixin bio()
     div(class="prose")
@@ -30,8 +31,23 @@ mixin bio()
 block content
     +bio()
     //- TODO: bring in my design principles: local to global, change the medium, etc.
-    h3.text-navy My Principles
-    p.text-navy This is my approach to any situation, personally or professionally. This is the unique contribution I bring to the world.
+    h2.text-navy Design Principles (draft)
+    p.subhead I’ve begun finding themes in my work, and constantly discovering new ones.
+    -
+        var designPrinciples = {
+           "Local to Global": "Taking my unique experiences and finding the core idea that applies to an international audience.",
+           "What If?": "My creative process often begins with this question, then finding the easiest step to get started.",
+           "Switch it Up": "I work through creative blocks by changing tools from sketchbook to Procreate on my iPad to going back to the computer.",
+           "Normal or 🐐?": "At any moment, we have a choice between two paths, normal or strive to be the G.O.A.T. (greatest of all time). The joke is that there’s only one choice, and it’s not normal.",
+
+        };
+    each details, name in designPrinciples
+        p.font-bold #{name}
+        p.ml-8.pb-2 #{details}
+
+    h2.text-navy Life Principles
+    p This is my approach to any situation, personally or professionally. This is the unique contribution I bring to the world.
+    br
 
     -
         var manifesto = {
@@ -42,14 +58,15 @@ block content
            "Think from a unique perspective": "Think inside, outside, and about the box itself."
         };
     each details, name in manifesto
-        p.subhead.text-navy #{name}
-        p.text-navy #{details}
+        p.font-bold #{name}
+        p.ml-8.pb-2 #{details}
     
-    h3.text-navy Mentions
-    p.subheading Exciting things I've done in the past
+    h2.text-navy Mentions
+    p.subhead It’s not exactly press...&nbsp;
+        | see the&nbsp;
+        a(href="/mentions") full list here.
+    br
     +getMentions(true)
-    p.subhead See the 
-        a.text-navy(href="/mentions") full list here
 
 
 //- TODO: CTA for contact me for projects, or something?

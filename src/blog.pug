@@ -9,18 +9,19 @@ extends _includes/layouts/base.pug
 //- Temporary workaround: this file is blog.pug, symlinked to posts.pug for legacy SEO
 
 block hero
-    h1.text-navy The Blog ✍🏽
-    p.text-navy #{description}
+    div
+        h1.text-navy The Blog ✍🏽
+        p #{description}
 
 block content
     //- +sectionOrange()
     //-     +gridWithBigColumn()
-    h3.text-navy Featured Posts
-        +getFeaturedPosts()
+    h2.text-navy Featured Posts
+    +getFeaturedPosts()
     //- +sectionWhite()
     //-     +gridWithBigColumn()
-    h3.text-navy Recent Posts
-        +getPosts(true)
-        br
-        p.subhead Keep reading in the 
-            a.text-light-blue(href="/blog-archive") archive
+    h2.text-navy Recent Posts
+    +getPosts(true)
+    br
+    p.subhead Keep reading in the 
+        a(href="/blog-archive") archive.

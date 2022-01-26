@@ -1,24 +1,30 @@
+mixin gridCols2()
+    div(class="grid grid-cols-1 md:grid-cols-2 gap-4")
+        block
+
 //- TODO: remix so blog listing can reuse part of this
 mixin projectListing(project)
-    div.justify-self-auto.pb-8
+    //- div.justify-self-auto.pb-8
+    div.pb-8
         a(href=project.url)
             img.portfolio-cover.w-full(src=project.data.openGraphImage)
-        .pt-2
-            div(class="text-navy pb-0.5 text-2xl font-sans font-semibold")
-                h2
-                    a(href=project.url) #{project.data.title}
-            //- TODO: need a max-width here so the lines aren't super long
-            div.project-meta(class="md:w-1/2")
-                if project.data.media
-                    p
-                        span.font-semibold Media:&nbsp;
-                        | #{project.data.mediaString}
-                p.leading-tight.font-sans #{project.data.description}.
-                //- .flex.flex-wrap
-                //-     div.mr-16
-                //-         p.text-navy.leading-tight.font-sans Media: #{project.data.media}
-                //-     div
-                //-         p.text-navy.leading-tight.font-sans.w-full #{project.data.description}
+        +gridCols2()
+            div.pt-2
+                div(class="text-navy pb-0.5 text-2xl font-sans font-semibold")
+                    h2
+                        a(href=project.url) #{project.data.title}
+                //- TODO: need a max-width here so the lines aren't super long
+                div.project-meta
+                    if project.data.media
+                        p
+                            span.font-semibold Media:&nbsp;
+                            | #{project.data.mediaString}
+                    p #{project.data.description}.
+                    //- .flex.flex-wrap
+                    //-     div.mr-16
+                    //-         p.text-navy.leading-tight.font-sans Media: #{project.data.media}
+                    //-     div
+                    //-         p.text-navy.leading-tight.font-sans.w-full #{project.data.description}
 
 //- mixin projectListing(project)
 //-     div.justify-self-auto.pb-8
@@ -52,25 +58,26 @@ mixin getPosts(recent=false)
     if !recent
         - source = collections.post;
     each post in source
-        .flex.place-content-between
-            p.text-light-blue #{post.data.cleanDate}
+        //- .flex.place-content-start.align-baseline
+        .flex.items-baseline
+            p #{post.data.cleanDate} &nbsp;
+            p(class="text-navy hover:text-orange")
+                a(href=post.url) #{post.data.title}
             //- TODO: make tags clickable
-            p.text-light-blue= "Tags: " +  post.data.categories
-        a(href=post.url)
-            p.subhead.text-navy #{post.data.title}
+        p #{post.data.categories}
 
 mixin getFeaturedPosts()
     each post in collections.featured
         a(href=post.url)
-            h3.text-navy #{post.data.title}
-        p.text-navy #{post.data.description}
+            h3(class="text-navy hover:text-orange") #{post.data.title}
+        p #{post.data.description}
 
 mixin getMentions(recent=false)
     - var source = mentions.recent;
     if !recent
         - source = mentions.all;
-    .prose.leading-tight
-        ul
-            each mention in source                
-                li #{mention.date} – 
-                    a(href=mention.url) #{mention.title}
+    each mention in source
+        .flex.items-baseline
+            p #{mention.date} – &nbsp;
+            p(class="text-navy hover:text-orange")
+                a(href=mention.url) #{mention.title}

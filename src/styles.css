@@ -15,7 +15,7 @@
     }
     /* subheading */
     .subhead {
-        @apply font-sans text-lg text-gray;
+        @apply font-sans text-lg text-gray pb-4;
     }
     /* caption */
     .caption {
@@ -26,9 +26,12 @@
         @apply font-sans text-base text-gray;
     }
     p a {
-        /* TODO:  bring this back once I figure out how to skip underlining the nav type/logo */
-        @apply transition hover:underline;
-        @apply text-orange;
+        /* TODO: do something more interesting here, especially for blog posts */
+        /* @apply transition hover:underline; */
+        @apply font-semibold;
+    }
+    a {
+        @apply transition hover:text-orange;
     }
 
     /* TODO: define a style for full width section, which can then have a color applied to it */
@@ -48,28 +51,16 @@
         @apply text-4xl italic font-serif;
     }
 
-    a {
-        /* TODO:  bring this back once I figure out how to skip underlining the nav type/logo */
-        @apply transition hover:text-orange;
-    }
-
     hr {
         @apply my-4;
     }
-
-    /* TODO: refactor away if used anywhere */
-    /* .freight-book-it {
-        font-family: freight-big-pro, serif;
-        font-weight: 400;
-        font-style: italic;
-    } */
-
 }
 
 @layer utilities {
     /* Typography plugin customization */
+    /* TODO: align these with default headings... but scaled down a bit; */
     .prose {
-        @apply font-sans text-base leading-normal;
+        @apply font-sans text-base leading-normal text-gray;
     }
     .prose h1 {
         @apply font-serif text-navy font-normal italic py-4 text-3xl md:text-5xl;
@@ -80,8 +71,12 @@
     .prose h3 {
         @apply font-sans text-navy;
     }
+    .prose p {
+        @apply text-gray;
+    }
     .prose a {
-        @apply text-light-blue;
+        @apply transition hover:text-orange;
+        @apply text-gray;
     }
     /* Don't automatically add quotes to a blockquote (from markdown) */
     .prose blockquote p:first-of-type::before {
@@ -90,9 +85,9 @@
     .prose blockquote p:last-of-type::after {
         content: none;
     }
-    .prose ul {
+    /* .prose ul {
         @apply list-none;
-    }
+    } */
 
     img.emoji {
        height: 1em;
