@@ -7,8 +7,8 @@ mixin projectListing(project)
             div(class="text-navy pb-0.5 text-2xl font-sans font-semibold")
                 a(href=project.url) #{project.data.title}
             //- TODO: need a max-width here so the lines aren't super long
-            p.text-navy.leading-tight.font-sans Media: #{project.data.media}
-            p.text-navy.leading-tight.font-sans(class="md:w-1/2") #{project.data.description}.
+            p.leading-tight.font-sans Media: #{project.data.media}
+            p.leading-tight.font-sans(class="md:w-1/2") #{project.data.description}.
             //- .flex.flex-wrap
             //-     div.mr-16
             //-         p.text-navy.leading-tight.font-sans Media: #{project.data.media}

@@ -41,8 +41,8 @@ mixin footer()
         - var numLinks = 0;
         div(class="col-span-1")
             p.text-navy.font-sans.font-semibold.text-xl Contact
-            .text-navy contact@shakeelmohamed.com
-            .text-navy
+            div contact@shakeelmohamed.com
+            div
                 each link, name in metadata.social
                     -- ++numLinks
                     if name == "GitHub"
@@ -54,8 +54,8 @@ mixin footer()
         div(class="col-span-1")
             div
                 //- TODO: link this next paragraph to the project/blog page about the website itself
-                p.text-navy.text-semibold.font-sans Designed and developed with✨emotion✨.
-                p.text-navy.font-sans
+                p.text-semibold.font-sans Designed and developed with✨emotion✨.
+                p.font-sans
                     script document.write("&copy; " + new Date().getFullYear() + " Shakeel Mohamed")    
 
 //- TODO: Move above into atomic design file structure
