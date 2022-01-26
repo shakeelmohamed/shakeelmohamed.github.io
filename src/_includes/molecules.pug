@@ -5,15 +5,20 @@ mixin projectListing(project)
             img.portfolio-cover.w-full(src=project.data.openGraphImage)
         .pt-2
             div(class="text-navy pb-0.5 text-2xl font-sans font-semibold")
-                a(href=project.url) #{project.data.title}
+                h2
+                    a(href=project.url) #{project.data.title}
             //- TODO: need a max-width here so the lines aren't super long
-            p.leading-tight.font-sans Media: #{project.data.media}
-            p.leading-tight.font-sans(class="md:w-1/2") #{project.data.description}.
-            //- .flex.flex-wrap
-            //-     div.mr-16
-            //-         p.text-navy.leading-tight.font-sans Media: #{project.data.media}
-            //-     div
-            //-         p.text-navy.leading-tight.font-sans.w-full #{project.data.description}
+            div.project-meta(class="md:w-1/2")
+                if project.data.media
+                    p
+                        span.font-semibold Media:&nbsp;
+                        | #{project.data.mediaString}
+                p.leading-tight.font-sans #{project.data.description}.
+                //- .flex.flex-wrap
+                //-     div.mr-16
+                //-         p.text-navy.leading-tight.font-sans Media: #{project.data.media}
+                //-     div
+                //-         p.text-navy.leading-tight.font-sans.w-full #{project.data.description}
 
 //- mixin projectListing(project)
 //-     div.justify-self-auto.pb-8

@@ -2,8 +2,7 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
   content: [
-    // './src/**/*.{md,pug}'
-    './docs/**/*.html'
+    './src/**/*.{md,pug}'
     // ,
     // './src/scripts/**/*.js' // TODO: probably remove, only used by random logo picker
   ],
@@ -27,7 +26,6 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['proxima-nova', ...defaultTheme.fontFamily.sans],
-        // serif: ['garamond-premier-pro', ...defaultTheme.fontFamily.serif],
         serif: ['freight-big-pro', ...defaultTheme.fontFamily.serif],
       },
       fontSize: { // TODO: customize other type sizes here; actually do it in src/styles.css

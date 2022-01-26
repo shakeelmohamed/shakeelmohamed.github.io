@@ -4,30 +4,30 @@
 
 @layer base {
     /* Headers */
-
-    /* TODO: make h2 the new h1, etc. */
     h1 {
-        @apply font-sans font-semibold py-4 text-5xl md:text-7xl;
+       @apply font-sans font-semibold py-4 text-4xl md:text-5xl;
     }
     h2 {
-        @apply font-sans font-semibold py-4 text-4xl md:text-5xl;
+        @apply font-sans font-semibold py-4 text-2xl md:text-3xl;
     }
     h3 {
-        @apply font-sans font-semibold py-4 text-3xl md:text-4xl;
+        @apply font-sans font-semibold py-4 text-xl md:text-xl;
     }
     /* subheading */
     .subhead {
-        @apply font-sans text-xl;
+        @apply font-sans text-lg text-gray;
     }
     /* caption */
     .caption {
-        @apply font-sans text-sm;
+        @apply font-sans text-sm text-gray;
     }
     /* Body text style */
     p {
         @apply font-sans text-base text-gray;
     }
     p a {
+        /* TODO:  bring this back once I figure out how to skip underlining the nav type/logo */
+        @apply transition hover:underline;
         @apply text-orange;
     }
 
@@ -43,10 +43,13 @@
     img.logo {
         @apply inline mr-2;
     }
+    .header-logo {
+        @apply text-4xl italic font-serif;
+    }
 
     a {
         /* TODO:  bring this back once I figure out how to skip underlining the nav type/logo */
-        /* @apply transition hover:underline; */
+        @apply transition hover:text-orange;
     }
 
     hr {
@@ -54,11 +57,11 @@
     }
 
     /* TODO: refactor away if used anywhere */
-    .freight-book-it {
+    /* .freight-book-it {
         font-family: freight-big-pro, serif;
         font-weight: 400;
         font-style: italic;
-    }
+    } */
 
 }
 

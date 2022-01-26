@@ -9,7 +9,6 @@ module.exports = {
                 return "https://dummyimage.com/1200x630/000/fff.png&text=Project+Cover+Photo+Here";
             }
         },
-        // TODO: update metadata in every project, then swap "data." with "media."
-        media: data => data.tags.join(", ")
+        mediaString: data => (data.media || []).sort().join(", ")
     }
 };

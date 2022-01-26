@@ -8,18 +8,18 @@ mixin getRandomLogo(size=50)
     script getRandomLogo(#{size})
 
 mixin headerLogo()
-    div(class="py-6 text-navy freight-book-it text-4xl text-center flex-nowrap md:text-left")
-        a(href="/") Shakeel Mohamed
+    div(class="py-6 text-navy text-left flex-nowrap")
+        a.header-logo(href="/") Shakeel Mohamed
 
 mixin navItem(href, label)
-    a(class="font-sans font-medium text-navy md:inline-block md:ml-8" href=href) #{label}
+    a(class="font-sans font-semibold text-navy text-left md:text-center md:inline-block md:ml-8" href=href) #{label}
 
 mixin header()
     //- TODO: layout breaks below 320px width
     //- header(class="text-navy max-w-screen-xl mx-auto px-8 md:flex md:items-baseline md:justify-between")
     header(class="text-navy mx-auto md:flex md:items-baseline md:justify-between")
         +headerLogo()
-        nav(class="flex justify-between text-lg mx-4 md:py-4 md:justify-items-end md:flex-shrink-0 md:mx-0")
+        nav(class="flex justify-between text-lg md:py-4 md:justify-items-end md:flex-shrink-0 md:mx-0")
             +navItem("/", "Work")
             +navItem("/blog", "Blog")
             +navItem("/about", "About")
@@ -36,12 +36,12 @@ mixin footerNavItem(href, label)
 mixin footer()
     div(class="pt-16 grid grid-cols-1 gap-x-16 gap-y-4 md:grid-cols-3")
         div(class="col-span-1")
-            p.text-navy.font-sans.font-semibold.text-xl Subscribe
+            h3 Subscribe
             +mailingListForm()
         - var numLinks = 0;
         div(class="col-span-1")
-            p.text-navy.font-sans.font-semibold.text-xl Contact
-            div contact@shakeelmohamed.com
+            h3 Contact
+            p contact@shakeelmohamed.com
             div
                 each link, name in metadata.social
                     -- ++numLinks
@@ -52,6 +52,7 @@ mixin footer()
                         if numLinks < (Object.keys(metadata.social).length - 1)
                             | | &nbsp;
         div(class="col-span-1")
+            h3 &nbsp;
             div
                 //- TODO: link this next paragraph to the project/blog page about the website itself
                 p.text-semibold.font-sans Designed and developed with✨emotion✨.
