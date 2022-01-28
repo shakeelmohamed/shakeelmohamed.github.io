@@ -12,12 +12,12 @@
         <meta property="og:description" content="I’m a self-taught designer, born and raised in the greater Seattle area.">
         <meta property="og:type" content="website">
         <meta property="twitter:card" content="summary_large_image">
-        <meta property="twitter:creator" content="@_Shakeel">
+        <meta property="twitter:creator" content="https://twitter.com/_shakeel">
         <link href="https://shakeelmohamed.com/about/" rel="canonical">
         <link rel="stylesheet" href="https://use.typekit.net/uun0nut.css">
         <link href="/dist/tailwind.css" rel="stylesheet">
         <link rel="sitemap" type="text/plain" title="Sitemap" href="/sitemap.txt">
-        <link href="/feed.xml" rel="alternate" type="application/rss+xml" title="Shakeel Mohamed's blog posts">
+        <link href="/feed.xml" rel="alternate" type="application/rss+xml" title="Shakeel Mohamed’s blog posts">
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -32,7 +32,7 @@
         </header>
         <main>
             <div class="mt-4 mb-12 xl:mt-12 xl:mb-8">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
                     <div>
                         <h1 class="text-navy">Developer turned designer</h1>
                         <p>My pronouns are he/him.</p>
@@ -47,28 +47,34 @@
 I spend my free time volunteering with <a href="https://the.ismaili/">the Ismaili Muslim community</a> on projects varying from branding to video production.</p>
 
             </div>
-            <h2 class="text-navy">Design Principles (draft)</h2>
-            <p class="subhead">I’ve begun finding themes in my work, and constantly discovering new ones.</p>
-            <p class="font-bold">Local to Global</p>
-            <p class="ml-8 pb-2">Taking my unique experiences and finding the core idea that applies to an international audience.</p>
-            <p class="font-bold">What If?</p>
-            <p class="ml-8 pb-2">My creative process often begins with this question, then finding the easiest step to get started.</p>
-            <p class="font-bold">Switch it Up</p>
-            <p class="ml-8 pb-2">I work through creative blocks by changing tools from sketchbook to Procreate on my iPad to going back to the computer.</p>
-            <p class="font-bold">Normal or 🐐?</p>
-            <p class="ml-8 pb-2">At any moment, we have a choice between two paths, normal or strive to be the G.O.A.T. (greatest of all time). The joke is that there’s only one choice, and it’s not normal.</p>
-            <h2 class="text-navy">Life Principles</h2>
-            <p>This is my approach to any situation, personally or professionally. This is the unique contribution I bring to the world.</p><br>
-            <p class="font-bold">Outwork deficiencies</p>
-            <p class="ml-8 pb-2">Any weakness can be overcome with great effort.</p>
-            <p class="font-bold">Create the future</p>
-            <p class="ml-8 pb-2">Start with the end in mind, work towards the plan, adjust as needed.</p>
-            <p class="font-bold">Seek growth constantly</p>
-            <p class="ml-8 pb-2">Knowledge is power, so learn from the greats; success leaves clues.</p>
-            <p class="font-bold">Enable understanding through transparency</p>
-            <p class="ml-8 pb-2">Use clear &amp; direct communication, translate if necessary.</p>
-            <p class="font-bold">Think from a unique perspective</p>
-            <p class="ml-8 pb-2">Think inside, outside, and about the box itself.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+                <div>
+                    <h2 class="text-navy">Design Principles</h2>
+                    <p class="subhead">I’ve begun finding themes in my work, and constantly discovering new ones.</p>
+                    <p class="font-bold">Local to Global</p>
+                    <p class="ml-8 pb-2">Taking my unique experiences and finding the core idea that applies to an international audience.</p>
+                    <p class="font-bold">What If?</p>
+                    <p class="ml-8 pb-2">My creative process often begins with this question, then finding the easiest step to get started.</p>
+                    <p class="font-bold">Switch it Up</p>
+                    <p class="ml-8 pb-2">I work through creative blocks by changing tools from sketchbook to Procreate on my iPad to going back to the computer.</p>
+                    <p class="font-bold">Normal or 🐐?</p>
+                    <p class="ml-8 pb-2">At any moment, we have a choice between two paths, normal or strive to be the G.O.A.T. (greatest of all time). The joke is that there’s only one choice, and it’s not normal.</p>
+                </div>
+                <div>
+                    <h2 class="text-navy">Life Principles</h2>
+                    <p class="subhead">More broadly, this has been my formula for achievement.</p>
+                    <p class="font-bold">Outwork deficiencies</p>
+                    <p class="ml-8 pb-2">Any weakness can be overcome with great effort.</p>
+                    <p class="font-bold">Create the future</p>
+                    <p class="ml-8 pb-2">Start with the end in mind, work towards the plan, adjust as needed.</p>
+                    <p class="font-bold">Seek growth constantly</p>
+                    <p class="ml-8 pb-2">Knowledge is power, so learn from the greats; success leaves clues.</p>
+                    <p class="font-bold">Enable understanding through transparency</p>
+                    <p class="ml-8 pb-2">Use clear &amp; direct communication, translate if necessary.</p>
+                    <p class="font-bold">Think from a unique perspective</p>
+                    <p class="ml-8 pb-2">Think inside, outside, and about the box itself.</p>
+                </div>
+            </div>
             <h2 class="text-navy">Mentions</h2>
             <p class="subhead">
                 It’s not exactly press...&nbsp;see the&nbsp;<a href="/mentions">full list here.</a></p><br>
@@ -121,7 +127,17 @@ I spend my free time volunteering with <a href="https://the.ismaili/">the Ismail
             </div>
             <div class="col-span-1">
                 <h3>Contact</h3>
-                <p>contact@shakeelmohamed.com</p>
+                <p><span class="mailto">
+                        <script type="text/javascript">
+                            function gen_mail_to_link(lhs, rhs, subject) {
+                                document.write("<a class=\"transition hover:text-orange\" href=\"mailto");
+                                document.write(":" + lhs + "@");
+                                document.write(rhs + "?subject=" + subject + "\">" + lhs + "@" + rhs + "<\/a>");
+                            }
+                            gen_mail_to_link("contact", "shakeelmohamed.com", "Hey Shakeel, let’s talk")
+                            
+                        </script></span>
+                </p>
                 <div><span><a href="https://linkedin.com/in/shakeelmohamed">LinkedIn &nbsp;</a>| &nbsp;</span><span><a href="https://instagram.com/shakeelxyz">Instagram &nbsp;</a>| &nbsp;</span><span><a href="https://twitter.com/_shakeel">Twitter &nbsp;</a>| &nbsp;</span><span><a href="https://github.com/shakeelmohamed">GitHub &nbsp;</a></span>
                 </div>
             </div>

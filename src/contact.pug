@@ -18,18 +18,8 @@ block content
         |  or 
         a(href=metadata.social.Instagram) Instagram.&nbsp;
         | Otherwise, send me an email at
-        +mailto("contact", "shakeelmohamed.com", "Hey Shakeel, let’s talk")
+        +myEmail()
     p
         | For project inquiries, reach out through my business website:  
         a(href="https://ntrsct.com") ntrsct.com 
 
-mixin mailto(user, domain, subject)
-    //- <!-- // http://lists.evolt.org/archive/Week-of-Mon-20040202/154813.html -->
-    span.mailto
-        script(type="text/javascript").
-            function gen_mail_to_link(lhs, rhs, subject) {
-                document.write("<a class=\"text-light-blue\" href=\"mailto");
-                document.write(":" + lhs + "@");
-                document.write(rhs + "?subject=" + subject + "\">" + lhs + "@" + rhs + "<\/a>");
-            }
-            gen_mail_to_link("#{user}", "#{domain}", "#{subject}")

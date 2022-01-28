@@ -30,43 +30,43 @@ mixin bio()
 
 block content
     +bio()
-    //- TODO: bring in my design principles: local to global, change the medium, etc.
-    h2.text-navy Design Principles (draft)
-    p.subhead I’ve begun finding themes in my work, and constantly discovering new ones.
-    -
-        var designPrinciples = {
-           "Local to Global": "Taking my unique experiences and finding the core idea that applies to an international audience.",
-           "What If?": "My creative process often begins with this question, then finding the easiest step to get started.",
-           "Switch it Up": "I work through creative blocks by changing tools from sketchbook to Procreate on my iPad to going back to the computer.",
-           "Normal or 🐐?": "At any moment, we have a choice between two paths, normal or strive to be the G.O.A.T. (greatest of all time). The joke is that there’s only one choice, and it’s not normal.",
+    +gridCols2()
+        div
+            h2.text-navy Design Principles
+            p.subhead I’ve begun finding themes in my work, and constantly discovering new ones.
+            -
+                var designPrinciples = {
+                   "Local to Global": "Taking my unique experiences and finding the core idea that applies to an international audience.",
+                   "What If?": "My creative process often begins with this question, then finding the easiest step to get started.",
+                   "Switch it Up": "I work through creative blocks by changing tools from sketchbook to Procreate on my iPad to going back to the computer.",
+                   "Normal or 🐐?": "At any moment, we have a choice between two paths, normal or strive to be the G.O.A.T. (greatest of all time). The joke is that there’s only one choice, and it’s not normal.",
 
-        };
-    each details, name in designPrinciples
-        p.font-bold #{name}
-        p.ml-8.pb-2 #{details}
-
-    h2.text-navy Life Principles
-    p This is my approach to any situation, personally or professionally. This is the unique contribution I bring to the world.
-    br
-
-    -
-        var manifesto = {
-           "Outwork deficiencies": "Any weakness can be overcome with great effort.",
-           "Create the future": "Start with the end in mind, work towards the plan, adjust as needed.",
-           "Seek growth constantly": "Knowledge is power, so learn from the greats; success leaves clues.",
-           "Enable understanding through transparency": "Use clear & direct communication, translate if necessary.",
-           "Think from a unique perspective": "Think inside, outside, and about the box itself."
-        };
-    each details, name in manifesto
-        p.font-bold #{name}
-        p.ml-8.pb-2 #{details}
+                };
+            each details, name in designPrinciples
+                p.font-bold #{name}
+                p.ml-8.pb-2 #{details}
+        div
+            h2.text-navy Life Principles
+            p.subhead More broadly, this has been my formula for achievement.
+            -
+                var lifePrinciples = {
+                   "Outwork deficiencies": "Any weakness can be overcome with great effort.",
+                   "Create the future": "Start with the end in mind, work towards the plan, adjust as needed.",
+                   "Seek growth constantly": "Knowledge is power, so learn from the greats; success leaves clues.",
+                   "Enable understanding through transparency": "Use clear & direct communication, translate if necessary.",
+                   "Think from a unique perspective": "Think inside, outside, and about the box itself."
+                };
+            each details, name in lifePrinciples
+                p.font-bold #{name}
+                p.ml-8.pb-2 #{details}
     
-    h2.text-navy Mentions
-    p.subhead It’s not exactly press...&nbsp;
-        | see the&nbsp;
-        a(href="/mentions") full list here.
-    br
-    +getMentions(true)
+    if mentions.recent.length > 0
+        h2.text-navy Mentions
+        p.subhead It’s not exactly press...&nbsp;
+            | see the&nbsp;
+            a(href="/mentions") full list here.
+        br
+        +getMentions(true)
 
 
 //- TODO: CTA for contact me for projects, or something?

@@ -1,5 +1,4 @@
-//- include ../atoms.pug
-include ../../_includes/organisms.pug
+include ../organisms.pug
 //- include ../type.pug
 
 
@@ -42,7 +41,8 @@ mixin footer()
         - var numLinks = 0;
         div(class="col-span-1")
             h3 Contact
-            p contact@shakeelmohamed.com
+            p
+                +myEmail()
             div
                 each link, name in metadata.social
                     -- ++numLinks
@@ -93,7 +93,7 @@ html(lang="en")
         else
             meta(property="og:type" content="website")
         meta(property="twitter:card" content="summary_large_image")
-        meta(property="twitter:creator" content="@_Shakeel")
+        meta(property="twitter:creator" content=metadata.social.Twitter)
         
         if canonical
             link(href=metadata.baseurl + canonical, rel="canonical")
@@ -109,7 +109,7 @@ html(lang="en")
         link(rel="sitemap" type="text/plain" title="Sitemap" href="/sitemap.txt")
         //- TODO: uncomment once XML sitemap is ready
         //- link(rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml")
-        link(href="/feed.xml" rel="alternate" type="application/rss+xml" title="Shakeel Mohamed's blog posts")
+        link(href="/feed.xml" rel="alternate" type="application/rss+xml" title="Shakeel Mohamed’s blog posts")
 
         link(rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png")
         link(rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png")
@@ -118,7 +118,7 @@ html(lang="en")
 
         script(src="/scripts/main.js")
     //- TODO: remove debug-screens for production
-    //- body(class="bg-navy debug-screens")
+    //- body(class="debug-screens")
     body(class="bg-white px-4 md:px-16")
         +header()
         main

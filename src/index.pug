@@ -3,7 +3,6 @@ description: Shakeel Mohamed is a designer & brand strategist in the greater Sea
 ---
 
 extends _includes/layouts/base.pug
-//- include _includes/molecules.pug
 
 block hero
     div
@@ -11,8 +10,8 @@ block hero
         p.font-light.font-sans.text-lg
             | Hello, I’m Shakeel! I’m a visual designer in Seattle, specializing in branding and experimental typography. After over 10 years of working as a software engineer, I began exploring my creative side. I’ve recently applied to graduate design programs with the intent of learning more about typography, branding, and design leadership.
         br
-        //- Replace any email address with a mixin which obfuscates and hyperlinks it
-        p.font-light.font-sans Say hello! contact@shakeelmohamed.com.
+        p.font-light.font-sans Say hello!
+            +myEmail()
 
 block content
    if collections.portfolio
