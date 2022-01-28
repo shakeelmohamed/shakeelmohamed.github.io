@@ -1,3 +1,8 @@
+mixin fullWidth(bgClass, textClass)
+    div.pt-8.pb-12(class="full-width " + bgClass + " " + textClass)
+        .main
+            block
+
 mixin myEmail()
     +mailto("contact", "shakeelmohamed.com", "Hey Shakeel, let’s talk")
 

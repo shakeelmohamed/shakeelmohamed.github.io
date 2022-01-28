@@ -87,11 +87,27 @@
         } */
     }
 
+    /* TODO: make this work with tailwind build ins */
     img.emoji {
        height: 1em;
        width: 1em;
        margin: 0 .05em 0 .1em;
        vertical-align: -0.1em;
        display: inline;
+    }
+
+    .main {
+        @apply px-4 md:px-16;
+    }
+
+    /* TODO: make this work with tailwind build ins */
+    .full-width {
+      left: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      max-width: 100vw;
+      position: relative;
+      right: 50%;
+      width: 100vw;
     }
 }
