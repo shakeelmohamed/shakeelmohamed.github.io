@@ -28,7 +28,7 @@
     p a {
         /* TODO: do something more interesting here, especially for blog posts */
         /* @apply transition hover:underline; */
-        @apply font-semibold;
+        @apply font-medium underline;
     }
     a {
         @apply transition hover:text-orange;
@@ -76,7 +76,7 @@
     }
     .prose a {
         @apply transition hover:text-orange;
-        @apply text-gray;
+        @apply text-gray font-medium;
     }
     /* Don't automatically add quotes to a blockquote (from markdown) */
     .prose blockquote p:first-of-type::before {

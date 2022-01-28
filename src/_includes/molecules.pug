@@ -54,6 +54,8 @@ mixin copyright()
 //- mixin projectSectionFullWidth()
 //- images or videos most likely
 
+//- TODO: for each of these, have a min col width so 2nd column is flush nicely
+
 //- TODO: design this component
 mixin getPosts(recent=false)
     - var source = collections.recentPosts;
@@ -63,15 +65,16 @@ mixin getPosts(recent=false)
         //- .flex.place-content-start.align-baseline
         .flex.items-baseline
             p #{post.data.cleanDate} &nbsp;
-            p(class="text-navy hover:text-orange")
-                a(href=post.url) #{post.data.title}
-            //- TODO: make tags clickable
-        p #{post.data.categories}
+            div
+                h3(class="hover:text-orange")
+                    a(href=post.url) #{post.data.title}
+                //- TODO: make tags clickable
+                p Topics: #{post.data.categories}
 
 mixin getFeaturedPosts()
     each post in collections.featured
         a(href=post.url)
-            h3(class="text-navy hover:text-orange") #{post.data.title}
+            h3(class="hover:text-orange") #{post.data.title}
         p #{post.data.description}
 
 mixin getMentions(recent=false)
