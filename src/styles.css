@@ -20,7 +20,7 @@
         @apply font-sans text-sm text-gray;
     }
     /* Body text style */
-    p {
+    p, li {
         @apply font-sans text-base text-gray font-light;
     }
     p a {

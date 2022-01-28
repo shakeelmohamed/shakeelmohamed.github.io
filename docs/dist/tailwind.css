@@ -607,7 +607,7 @@ select {
   color: rgb(102 102 102 / var(--tw-text-opacity));
 }
     /* Body text style */
-    p {
+    p, li {
   font-family: proxima-nova, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
   font-weight: 300;
@@ -1208,9 +1208,6 @@ select {
 }
 .max-w-screen-xl {
   max-width: 1280px;
-}
-.max-w-full {
-  max-width: 100%;
 }
 .resize {
   resize: both;
