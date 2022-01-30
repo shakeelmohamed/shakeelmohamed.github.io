@@ -66,10 +66,12 @@ mixin getPosts(recent=false)
                 p Topics: #{post.data.categories}
 
 mixin getFeaturedPosts()
-    each post in collections.featured
-        a(href=post.url)
-            h3(class="hover:text-orange") #{post.data.title}
-        p #{post.data.description}
+    +gridCols2()
+        div
+            each post in collections.featured
+                a(href=post.url)
+                    h3(class="hover:text-orange") #{post.data.title}
+                p #{post.data.description}
 
 mixin getMentions(recent=false)
     - var source = mentions.recent;

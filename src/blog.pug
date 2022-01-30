@@ -14,12 +14,8 @@ block hero
         p #{description}
 
 block content
-    //- +sectionOrange()
-    //-     +gridWithBigColumn()
     h2.text-navy Featured Posts
     +getFeaturedPosts()
-    //- +sectionWhite()
-    //-     +gridWithBigColumn()
     h2.text-navy Recent Posts
     +getPosts(true)
     br
