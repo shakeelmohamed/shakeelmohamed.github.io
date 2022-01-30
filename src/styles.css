@@ -5,13 +5,13 @@
 @layer base {
     /* Headings */
     h1 {
-       @apply font-sans font-semibold py-4 text-4xl md:text-5xl;
+       @apply font-serif font-semibold text-gray py-4 text-4xl md:text-5xl;
     }
     h2 {
-        @apply font-sans font-semibold py-4 text-2xl md:text-3xl;
+        @apply font-sans font-semibold text-navy py-4 text-2xl md:text-3xl;
     }
     h3 {
-        @apply font-sans font-semibold py-4 text-xl md:text-xl;
+        @apply font-sans font-semibold text-navy py-4 text-xl md:text-xl;
     }
     .subhead {
         @apply font-sans text-lg text-gray pb-4;
@@ -29,7 +29,10 @@
         @apply font-medium underline;
     }
     a {
-        @apply transition text-gray hover:text-orange;
+        @apply transition hover:text-orange;
+    }
+    strong {
+        @apply text-gray;
     }
 
     /* TODO: define a style for full width section, which can then have a color applied to it */
@@ -46,7 +49,7 @@
         @apply inline mr-2;
     }
     .header-logo {
-        @apply text-4xl italic font-serif;
+        @apply text-4xl text-navy italic font-serif;
     }
 
     hr {
@@ -72,6 +75,9 @@
     .prose a {
         @apply transition hover:text-orange;
         @apply text-gray font-medium;
+    }
+    .prose strong {
+        @apply text-gray;
     }
     
     /* Don't automatically add quotes to a blockquote (from markdown) */

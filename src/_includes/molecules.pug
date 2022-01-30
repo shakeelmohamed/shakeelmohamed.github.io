@@ -9,7 +9,6 @@ mixin projectListing(project)
     div.pb-8
         a(href=project.url)
             img.portfolio-cover.w-full(src=project.data.openGraphImage)
-        
             div.pt-2
                 div(class="text-navy pb-0.5 text-2xl font-sans font-semibold")
                     h2
@@ -79,6 +78,6 @@ mixin getMentions(recent=false)
         - source = mentions.all;
     each mention in source
         .flex.items-baseline
-            p #{mention.date} – &nbsp;
+            p #{mention.date} &nbsp;
             p(class="text-navy hover:text-orange")
                 a(href=mention.url) #{mention.title}

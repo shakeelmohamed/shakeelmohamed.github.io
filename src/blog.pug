@@ -10,13 +10,13 @@ extends _includes/layouts/base.pug
 
 block hero
     div
-        h1.text-navy The Blog ✍🏽
+        h1 The Blog ✍🏽
         p #{description}
 
 block content
-    h2.text-navy Featured Posts
+    h2 Featured Posts
     +getFeaturedPosts()
-    h2.text-navy Recent Posts
+    h2 Recent Posts
     +getPosts(true)
     br
     p.subhead Keep reading in the 

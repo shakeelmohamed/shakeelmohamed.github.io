@@ -7,11 +7,11 @@ mixin getRandomLogo(size=50)
     script getRandomLogo(#{size})
 
 mixin headerLogo()
-    div(class="py-6 text-navy text-left flex-nowrap")
+    div(class="py-6 text-left flex-nowrap")
         a.header-logo(href="/") Shakeel Mohamed
 
 mixin navItem(href, label)
-    a(class="font-sans font-semibold text-gray text-left ml-0 mr-8 md:text-center md:inline-block md:mr-0 md:ml-8" href=href) #{label}
+    a(class="font-sans font-semibold text-navy text-left ml-0 mr-8 md:text-center md:inline-block md:mr-0 md:ml-8" href=href) #{label}
 
 mixin header()
     //- TODO: layout breaks below 320px width
@@ -40,7 +40,7 @@ mixin footer()
         - var numLinks = 0;
         div(class="col-span-1")
             h3 Contact
-            p
+            span
                 +myEmail()
             div
                 each link, name in metadata.social
