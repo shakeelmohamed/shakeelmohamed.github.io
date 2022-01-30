@@ -1209,6 +1209,12 @@ select {
 .max-w-screen-xl {
   max-width: 1280px;
 }
+.flex-grow {
+  flex-grow: 1;
+}
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
 .resize {
   resize: both;
 }
@@ -1283,9 +1289,16 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(152 182 228 / var(--tw-bg-opacity));
 }
+.bg-\[\#ff6700\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 103 0 / var(--tw-bg-opacity));
+}
 .bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+.p-12 {
+  padding: 3rem;
 }
 .py-4 {
   padding-top: 1rem;
@@ -1383,6 +1396,10 @@ select {
 .text-gray {
   --tw-text-opacity: 1;
   color: rgb(102 102 102 / var(--tw-text-opacity));
+}
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
