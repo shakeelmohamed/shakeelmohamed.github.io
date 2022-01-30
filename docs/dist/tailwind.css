@@ -622,6 +622,8 @@ select {
                 text-decoration-line: underline;
     }
     a {
+  --tw-text-opacity: 1;
+  color: rgb(102 102 102 / var(--tw-text-opacity));
   transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
@@ -1430,10 +1432,6 @@ select {
   line-height: 1.5;
   --tw-text-opacity: 1;
   color: rgb(102 102 102 / var(--tw-text-opacity));
-
-        /* ul {
-            @apply list-none;
-        } */
 }
 .prose h1 {
   font-family: freight-big-pro, ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
@@ -1471,9 +1469,12 @@ select {
   color: rgb(102 102 102 / var(--tw-text-opacity));
 }
 /* Don't automatically add quotes to a blockquote (from markdown) */
-.prose blockquote p:first-of-type::before, .prose blockquote p:last-of-type::after {
-                content: none;
-            }
+.prose  blockquote p:first-of-type::before, .prose  blockquote p:last-of-type::after {
+            content: none;
+        }
+/* ul {
+        @apply list-none;
+    } */
 /* TODO: make this work with tailwind build ins */
 img.emoji {
        height: 1em;
@@ -1550,10 +1551,6 @@ img.emoji {
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
 
-  .md\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .md\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
@@ -1614,6 +1611,10 @@ img.emoji {
   .lg\:mx-auto {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .lg\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 @media (min-width: 1280px) {

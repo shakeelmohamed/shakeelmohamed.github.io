@@ -1,16 +1,15 @@
 include ./atoms.pug
 
 mixin gridCols2()
-    div(class="grid grid-cols-1 md:grid-cols-2 gap-16")
+    div(class="grid grid-cols-1 lg:grid-cols-2 gap-16")
         block
 
 //- TODO: remix so blog listing can reuse part of this
 mixin projectListing(project)
-    //- div.justify-self-auto.pb-8
     div.pb-8
         a(href=project.url)
             img.portfolio-cover.w-full(src=project.data.openGraphImage)
-        +gridCols2()
+        
             div.pt-2
                 div(class="text-navy pb-0.5 text-2xl font-sans font-semibold")
                     h2

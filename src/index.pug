@@ -15,5 +15,6 @@ block hero
 
 block content
    if collections.portfolio
-        each project in collections.portfolio
-            +projectListing(project)
+        +gridCols2()
+            each project in collections.portfolio
+                +projectListing(project)
