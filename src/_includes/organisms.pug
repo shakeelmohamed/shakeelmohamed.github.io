@@ -3,16 +3,6 @@ include ./molecules.pug
 //- TODO: featured content (projects or posts)
 //- TODO: list of projects / blog posts; should be reusable
 
-mixin header()
-    //- TODO: layout breaks below 320px width
-    header(class="text-white max-w-screen-xl mx-auto px-8 md:flex md:items-baseline md:justify-between")
-        +headerLogo()
-        nav(class="flex justify-between text-lg mx-4 md:py-5 md:justify-items-end md:flex-shrink-0 md:mx-0")
-            +navItem("/", "Work")
-            +navItem("/blog", "Blog")
-            +navItem("/about", "About")
-            +navItem("/contact", "Contact")
-
 mixin footerContent()
     div(class="grid grid-cols-2 md:grid-cols-4")
         div(class="col-span-1")
@@ -36,14 +26,6 @@ mixin footerContent()
                 p.caption.text-white Designed and developed with✨emotion✨.
                 p.caption.text-white
                     script document.write("&copy; " + new Date().getFullYear() + " Shakeel Mohamed")    
-
-mixin footer()
-    +sectionLightBlue()
-        +gridWithBigColumn()
-            +mailingListForm()
-    +sectionNavy()
-        +gridWithBigColumn()
-            +footerContent()
     
 mixin mailingListForm()
     //- TODO: beautify this form somehow https://github.com/tailwindlabs/tailwindcss-forms

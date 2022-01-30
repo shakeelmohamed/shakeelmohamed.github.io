@@ -1257,9 +1257,6 @@ select {
 .justify-center {
   justify-content: center;
 }
-.justify-between {
-  justify-content: space-between;
-}
 .gap-16 {
   gap: 4rem;
 }
@@ -1320,10 +1317,6 @@ select {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
-.px-8 {
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
@@ -1336,6 +1329,9 @@ select {
 }
 .pb-12 {
   padding-bottom: 3rem;
+}
+.pt-16 {
+  padding-top: 4rem;
 }
 .pb-8 {
   padding-bottom: 2rem;
@@ -1351,9 +1347,6 @@ select {
 }
 .pt-4 {
   padding-top: 1rem;
-}
-.pt-16 {
-  padding-top: 4rem;
 }
 .text-left {
   text-align: left;
@@ -1518,6 +1511,17 @@ img.emoji {
       right: 50%;
       width: 100vw;
     }
+.mailto {
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.mailto:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 92 10 / var(--tw-text-opacity));
+}
 .hover\:text-orange:hover {
   --tw-text-opacity: 1;
   color: rgb(255 92 10 / var(--tw-text-opacity));
@@ -1565,12 +1569,12 @@ img.emoji {
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
 
-  .md\:grid-cols-4 {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .md\:items-baseline {
@@ -1588,11 +1592,6 @@ img.emoji {
   .md\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
-  }
-
-  .md\:py-5 {
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
   }
 
   .md\:py-4 {

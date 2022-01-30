@@ -15,6 +15,7 @@ module.exports = function(eleventyConfig) {
     ]);
     eleventyConfig.addPassthroughCopy("src/scripts");
     eleventyConfig.addPassthroughCopy("src/CNAME");
+    eleventyConfig.addPassthroughCopy("src/break/styles.css");
     
     // Custom markdown processor
     let markdownIt = require("markdown-it");

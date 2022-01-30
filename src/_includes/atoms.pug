@@ -11,7 +11,7 @@ mixin mailto(user, domain, subject)
     span.mailto
         script(type="text/javascript").
             function gen_mail_to_link(lhs, rhs, subject) {
-                document.write("<a class=\"transition hover:text-orange\" href=\"mailto");
+                document.write("<a class=\"mailto\" href=\"mailto");
                 document.write(":" + lhs + "@");
                 document.write(rhs + "?subject=" + subject + "\">" + lhs + "@" + rhs + "<\/a>");
             }

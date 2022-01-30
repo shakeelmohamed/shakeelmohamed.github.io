@@ -114,4 +114,7 @@
       right: 50%;
       width: 100vw;
     }
+    .mailto {
+        @apply transition hover:text-orange;
+    }
 }
