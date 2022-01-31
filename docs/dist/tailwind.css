@@ -1188,6 +1188,9 @@ select {
 .mb-12 {
   margin-bottom: 3rem;
 }
+.mt-0 {
+  margin-top: 0px;
+}
 .block {
   display: block;
 }
@@ -1209,6 +1212,9 @@ select {
 .h-32 {
   height: 8rem;
 }
+.max-h-screen {
+  max-height: 100vh;
+}
 .w-1\/3 {
   width: 33.333333%;
 }
@@ -1217,6 +1223,12 @@ select {
 }
 .w-full {
   width: 100%;
+}
+.w-2\/3 {
+  width: 66.666667%;
+}
+.w-1\/2 {
+  width: 50%;
 }
 .max-w-screen-xl {
   max-width: 1280px;
@@ -1309,6 +1321,9 @@ select {
 .p-12 {
   padding: 3rem;
 }
+.p-8 {
+  padding: 2rem;
+}
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -1324,6 +1339,10 @@ select {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 .pb-2 {
   padding-bottom: 0.5rem;
@@ -1351,6 +1370,9 @@ select {
 }
 .pt-4 {
   padding-top: 1rem;
+}
+.pt-0 {
+  padding-top: 0px;
 }
 .text-left {
   text-align: left;

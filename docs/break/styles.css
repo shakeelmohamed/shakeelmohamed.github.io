@@ -8,7 +8,7 @@ body {
     background-color: #FF5C0A !important;
 }
 
-header > nav > a:hover, a.header-logo:hover {
+.header-logo:hover, header > nav > a:hover, .mailto:hover {
     color: white !important;
 }
 
@@ -26,6 +26,6 @@ p, .prose p {
 .social-link, .mailto {
     color: white !important;
 }
-.social-link:hover, .mailto:hover, a:hover, .prose a:hover, .mailto:hover {
+.social-link:hover, .mailto:hover {
     color: #002855 !important;
 }
