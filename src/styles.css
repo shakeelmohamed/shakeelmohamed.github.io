@@ -23,13 +23,8 @@
     p, li {
         @apply font-sans text-base text-gray font-light;
     }
-    p a {
-        /* TODO: do something more interesting here, especially for blog posts */
-        /* @apply transition hover:underline; */
-        @apply font-medium underline;
-    }
     a {
-        @apply transition hover:text-orange;
+        @apply transition text-gray hover:text-orange;
     }
     strong {
         @apply text-gray;
@@ -74,7 +69,7 @@
     }
     .prose a {
         @apply transition hover:text-orange;
-        @apply text-gray font-medium;
+        @apply text-gray font-light;
     }
     .prose strong {
         @apply text-gray;

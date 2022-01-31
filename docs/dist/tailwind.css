@@ -620,14 +620,9 @@ select {
   --tw-text-opacity: 1;
   color: rgb(102 102 102 / var(--tw-text-opacity));
 }
-    p a {
-        /* TODO: do something more interesting here, especially for blog posts */
-        /* @apply transition hover:underline; */
-        font-weight: 500;
-        -webkit-text-decoration-line: underline;
-                text-decoration-line: underline;
-    }
     a {
+  --tw-text-opacity: 1;
+  color: rgb(102 102 102 / var(--tw-text-opacity));
   transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
@@ -1406,6 +1401,9 @@ select {
 .font-semibold {
   font-weight: 600;
 }
+.font-medium {
+  font-weight: 500;
+}
 .capitalize {
   text-transform: capitalize;
 }
@@ -1493,7 +1491,7 @@ select {
   color: rgb(255 92 10 / var(--tw-text-opacity));
 }
 .prose a {
-  font-weight: 500;
+  font-weight: 300;
   --tw-text-opacity: 1;
   color: rgb(102 102 102 / var(--tw-text-opacity));
 }

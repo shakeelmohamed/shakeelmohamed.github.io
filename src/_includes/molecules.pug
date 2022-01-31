@@ -134,5 +134,5 @@ mixin getMentions(recent=false)
     each mention in source
         .flex.items-baseline
             p #{mention.date} &nbsp;
-            p(class="text-navy hover:text-orange")
-                a(href=mention.url) #{mention.title}
+            p
+                a(href=mention.url, class="text-navy font-medium hover:text-orange") #{mention.title}
