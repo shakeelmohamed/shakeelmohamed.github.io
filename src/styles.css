@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+    html {
+        @apply text-gray;
+    }
+
     /* Headings */
     h1 {
        @apply font-serif font-semibold text-gray py-4 text-4xl md:text-5xl;
@@ -24,7 +28,7 @@
         @apply font-sans text-base text-gray font-light;
     }
     a {
-        @apply transition text-gray hover:text-orange;
+        @apply transition hover:text-orange;
     }
     strong {
         @apply text-gray;
@@ -69,7 +73,7 @@
     }
     .prose a {
         @apply transition hover:text-orange;
-        @apply text-gray font-light;
+        @apply font-light;
     }
     .prose strong {
         @apply text-gray;
