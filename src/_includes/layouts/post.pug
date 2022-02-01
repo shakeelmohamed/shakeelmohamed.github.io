@@ -1,7 +1,7 @@
 extends ./base.pug
 
 block hero
-    div
+    +centeredPage()
         p.text-gray #{cleanDate}
         h1.text-navy #{title}
         p.subhead.text-navy #{description}
@@ -9,4 +9,5 @@ block hero
 
 //- TODO: use article markup
 block content
-    div(class="prose")!= content
+    +centeredPage()
+        div(class="prose")!= content

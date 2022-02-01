@@ -36,15 +36,17 @@
         </header>
         <main>
             <div class="mt-4 mb-12 xl:mt-12 xl:mb-8">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
-                    <div>
+                <div class="mx-auto grid grid-cols-4">
+                    <div class="col-start-2 col-span-2">
                         <p class="text-gray">2015-04-21</p>
                         <h1 class="text-navy">An actually helpful git diff of your uncommitted changes</h1>
                         <p class="subhead text-navy">So you just made a bunch of changes to a git project, good job. Now you want to review your changes before committing, even better.</p>
                     </div>
                 </div>
             </div>
-            <div class="prose"><p>TL;DR</p>
+            <div class="mx-auto grid grid-cols-4">
+                <div class="col-start-2 col-span-2">
+                    <div class="prose"><p>TL;DR</p>
 <pre><code class="language-bash">git diff -w --patience
 </code></pre>
 <p>So you just made a bunch of changes to a git project, good job. Now you want to review your changes before committing, even better. (I like where you’re going with this, please continue.) Then you do what you usually do: <code>git diff</code> but this time, the entire file shows up as different.</p>
@@ -65,6 +67,8 @@
 <pre><code class="language-bash">git commit -m &quot;Use git diff -w --patience if you're diffing this&quot;
 </code></pre>
 </div>
+                </div>
+            </div>
         </main>
         <div class="pt-16 grid grid-cols-1 gap-x-16 gap-y-4 md:grid-cols-3">
             <div class="col-span-1">

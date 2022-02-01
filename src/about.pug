@@ -9,7 +9,7 @@ include _includes/molecules.pug
 //- TODO: this entire page has WIP copy
 
 block hero
-    div
+    +centeredPage()
         h1 Developer turned designer
         p My pronouns are he/him.
         p I’m the former software engineer who thought like a designer his whole career.
@@ -29,8 +29,8 @@ mixin bio()
             I spend my free time volunteering with [the Ismaili Muslim community](https://the.ismaili/) on projects varying from branding to video production.
 
 block content
-    +bio()
-    +gridCols2()
+    +centeredPage()
+        +bio()
         div
             h2.text-navy Design Principles
             p.subhead I’ve begun finding themes in my work, and constantly discovering new ones.
@@ -59,14 +59,14 @@ block content
             each details, name in lifePrinciples
                 p.font-bold #{name}
                 p.ml-8.pb-2 #{details}
-    
-    if mentions.recent.length > 0
-        h2.text-navy Mentions
-        p.subhead It’s not exactly press...&nbsp;
-            | see the&nbsp;
-            a(href="/mentions") full list here.
-        br
-        +getMentions(true)
+        
+        if mentions.recent.length > 0
+            h2.text-navy Mentions
+            p.subhead It’s not exactly press...&nbsp;
+                | see the&nbsp;
+                a(href="/mentions") full list here.
+            br
+            +getMentions(true)
 
 
 //- TODO: CTA for contact me for projects, or something?

@@ -9,15 +9,16 @@ extends _includes/layouts/base.pug
 //- Temporary workaround: this file is blog.pug, symlinked to posts.pug for legacy SEO
 
 block hero
-    div
+    +centeredPage()
         h1 The Blog ✍🏽
         p #{description}
 
 block content
-    h2 Featured Posts
-    +getFeaturedPosts()
-    h2 Recent Posts
-    +getPosts(true)
-    br
-    p.subhead Keep reading in the 
-        a(href="/blog-archive") archive.
+    +centeredPage()
+        h2 Featured Posts
+        +getFeaturedPosts()
+        h2 Recent Posts
+        +getPosts(true)
+        br
+        p.subhead Keep reading in the 
+            a(href="/blog-archive") archive.

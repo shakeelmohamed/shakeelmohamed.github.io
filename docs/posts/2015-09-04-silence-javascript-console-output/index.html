@@ -35,15 +35,17 @@
         </header>
         <main>
             <div class="mt-4 mb-12 xl:mt-12 xl:mb-8">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
-                    <div>
+                <div class="mx-auto grid grid-cols-4">
+                    <div class="col-start-2 col-span-2">
                         <p class="text-gray">2015-09-04</p>
                         <h1 class="text-navy">Silence JavaScript console output</h1>
                         <p class="subhead text-navy">This is super helpful for unit testing with 100% code coverage, while maintaining a clean test output on the console!</p>
                     </div>
                 </div>
             </div>
-            <div class="prose"><p>This is super helpful for unit testing with 100% code coverage, while maintaining a clean test output on the console!</p>
+            <div class="mx-auto grid grid-cols-4">
+                <div class="col-start-2 col-span-2">
+                    <div class="prose"><p>This is super helpful for unit testing with 100% code coverage, while maintaining a clean test output on the console!</p>
 <p>First you need some basic setup code:</p>
 <pre><code class="language-js">// Backup console.log so we can restore it later
 var ___log = console.log;
@@ -67,6 +69,8 @@ MyClass.functionThatPrintsOutput();
 unmute();
 </code></pre>
 </div>
+                </div>
+            </div>
         </main>
         <div class="pt-16 grid grid-cols-1 gap-x-16 gap-y-4 md:grid-cols-3">
             <div class="col-span-1">

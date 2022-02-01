@@ -8,18 +8,19 @@ extends _includes/layouts/base.pug
 //- TODO: this entire page has WIP copy
 
 block hero
-    div
+    +centeredPage()
         h1 Say Hello! 👋🏽
 
 block content
-    p
-        | I’m easy to reach by DM on 
-        a(href=metadata.social.LinkedIn) LinkedIn 
-        |  or 
-        a(href=metadata.social.Instagram) Instagram.&nbsp;
-        | Otherwise, send me an email at
-        +myEmail()
-    p
-        | For project inquiries, reach out through my business website:  
-        a(href="https://ntrsct.com") ntrsct.com 
+    +centeredPage()
+        p
+            | I’m easy to reach by DM on 
+            a(href=metadata.social.LinkedIn) LinkedIn 
+            |  or 
+            a(href=metadata.social.Instagram) Instagram.&nbsp;
+            | Otherwise, send me an email at
+            +myEmail()
+        p
+            | For project inquiries, reach out through my business website:  
+            a(href="https://ntrsct.com") ntrsct.com 
 

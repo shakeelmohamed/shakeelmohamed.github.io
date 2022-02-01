@@ -7,9 +7,10 @@ canonical: "/mentions"
 extends _includes/layouts/base.pug
 
 block hero
-    div
+    +centeredPage()
         h1 All Mentions
         p.subhead #{description}
 
 block content
-    +getMentions()
+    +centeredPage()
+        +getMentions()

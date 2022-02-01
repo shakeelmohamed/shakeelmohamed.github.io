@@ -35,19 +35,23 @@
         </header>
         <main>
             <div class="mt-4 mb-12 xl:mt-12 xl:mb-8">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
-                    <div>
+                <div class="mx-auto grid grid-cols-4">
+                    <div class="col-start-2 col-span-2">
                         <p class="text-gray">2015-05-28</p>
                         <h1 class="text-navy">git diff against a remote branch</h1>
                         <p class="subhead text-navy">This is equivalent to previewing a pull request, and it works great across remotes!</p>
                     </div>
                 </div>
             </div>
-            <div class="prose"><p>This is equivalent to previewing a pull request, and it works great across remotes!</p>
+            <div class="mx-auto grid grid-cols-4">
+                <div class="col-start-2 col-span-2">
+                    <div class="prose"><p>This is equivalent to previewing a pull request, and it works great across remotes!</p>
 <pre><code class="language-bash">git diff -w --patience HEAD...origin/master
 </code></pre>
 <p>But, what are those crazy arguments? read my other <a href="../2015-04-21-an-actually-helpful-git-diff-of-your-uncommitted-changes">protip</a> for an explanation.</p>
 </div>
+                </div>
+            </div>
         </main>
         <div class="pt-16 grid grid-cols-1 gap-x-16 gap-y-4 md:grid-cols-3">
             <div class="col-span-1">

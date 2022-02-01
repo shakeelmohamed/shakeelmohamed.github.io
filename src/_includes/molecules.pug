@@ -4,6 +4,11 @@ mixin gridCols2()
     div(class="grid grid-cols-1 lg:grid-cols-2 gap-16")
         block
 
+mixin centeredPage()
+    .mx-auto(class="grid grid-cols-4")
+        .col-start-2.col-span-2
+            block
+
 //- TODO: Move this into atomic design file structure
 mixin getRandomLogo(size=50)
     script getRandomLogo(#{size})
@@ -27,8 +32,7 @@ mixin header()
 
 mixin hero()
     div(class="mt-4 mb-12 xl:mt-12 xl:mb-8")
-        +gridCols2()
-            block
+        block
 
 mixin footerNavItem(href, label)
     li

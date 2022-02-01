@@ -1,20 +1,21 @@
 extends ./base.pug
 
 block hero
-    div
-        //- TODO: all the metadata can go here; TBD
-        //- e.g.: role, team members
-        h1 #{title}
-        p.subhead #{tagline}
-        div.project-meta
-            if media
-                +projectMeta("Media", mediaString)
-            +projectMeta("When", when)
-            +projectMeta("Client", client)
-            +projectMeta("Tools", tools)
-            +projectMeta("Goal", goal)
-    div
-        img(src=openGraphImage)
+    +gridCols2()
+        div
+            //- TODO: all the metadata can go here; TBD
+            //- e.g.: role, team members
+            h1 #{title}
+            p.subhead #{tagline}
+            div.project-meta
+                if media
+                    +projectMeta("Media", mediaString)
+                +projectMeta("When", when)
+                +projectMeta("Client", client)
+                +projectMeta("Tools", tools)
+                +projectMeta("Goal", goal)
+        div
+            img(src=openGraphImage)
 
 
 //- TODO: design all possible layouts for a project

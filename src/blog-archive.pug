@@ -7,10 +7,11 @@ canonical: "/blog-archive"
 extends _includes/layouts/base.pug
 
 block hero
-    div
+    +centeredPage()
         h1.text-navy Blog Archive
         p #{description}
 
 block content
-    h2.text-navy All Posts
-    +getPosts()
+    +centeredPage()
+        h2.text-navy All Posts
+        +getPosts()

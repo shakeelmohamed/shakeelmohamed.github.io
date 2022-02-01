@@ -30,6 +30,9 @@
     a {
         @apply transition hover:text-orange;
     }
+    p a {
+        @apply underline;
+    }
     strong {
         @apply text-gray;
     }
