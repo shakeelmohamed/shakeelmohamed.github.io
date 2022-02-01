@@ -18,23 +18,26 @@ position: 2
 include ../../_includes/molecules.pug
 
 block content
-    +gridCols2()
-        div
-            p After buying a book by David Carson, I got interested in expressive typography. For my first attempt at this medium, I designed a poster every day in January 2020 to better understand expressive type. With a busy travel month, I designed some posters at airport gates and sketched on random scraps of paper. Each poster uses lyrics from my favorite hip hop songs.
-            br
-            p During the month-long project, I learned about geometric compositions and types of grids used in typography. After completing the project, I wrote a blog post about my experience.
-        div &nbsp;
-            //- img here - blog
-    +gridCols2()
-        div
-            //- img here - sketches
-        div
-            //- img here - grids
+    section
+        +centeredPage()
+            div
+                p After buying a book by David Carson, I got interested in expressive typography. For my first attempt at this medium, I designed a poster every day in January 2020 to better understand expressive type. With a busy travel month, I designed some posters at airport gates and sketched on random scraps of paper. Each poster uses lyrics from my favorite hip hop songs.
+                br
+                p During the month-long project, I learned about geometric compositions and types of grids used in typography. After completing the project, I wrote a blog post about my experience.
+            div &nbsp;
+                //- img here - blog
+    section
+        +centeredPage()
+            div
+                //- img here - sketches
+            div
+                //- img here - grids
     +fullWidth("bg-black", "text-white")
-        +gridCols2()
-            div
-                //- img here - poster 1
-                p.caption.text-white This poster of a Kid Cudi song from 2009 borrows colors from a Post Malone album cover from 2018.
-            div
-                //- img here - poster 2
-                p.caption.text-white As an avid reader, book cover designs live in my subconscious. After completing the month of poster designs, I realized this poster mimics the book cover for Power vs. Force by David Hawkins.
+        section
+            +centeredPage()
+                div
+                    //- img here - poster 1
+                    p.caption.text-white This poster of a Kid Cudi song from 2009 borrows colors from a Post Malone album cover from 2018.
+                div
+                    //- img here - poster 2
+                    p.caption.text-white As an avid reader, book cover designs live in my subconscious. After completing the month of poster designs, I realized this poster mimics the book cover for Power vs. Force by David Hawkins.
