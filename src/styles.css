@@ -12,6 +12,9 @@
     section {
         @apply w-full aspect-video;
     }
+    .centered-page img {
+        @apply mx-auto;
+    }
 
     /* Headings */
     h1 {
