@@ -1,12 +1,11 @@
-include ../atoms.pug
 include ../organisms.pug
-include ../type.pug
+//- include ../type.pug
 
 if !pageTitle
     if title
         - pageTitle = title
     else
-        - pageTitle = "Shakeel Mohamed – Design Portfolio";
+        - pageTitle = "Shakeel Mohamed – Visual Designer in Seattle";
 
 if !openGraphImage
     - openGraphImage = "/img/opengraph - default.png"
@@ -25,7 +24,6 @@ html(lang="en")
         meta(property="og:url" content=metadata.baseurl + page.url)
         meta(property="og:title" content=pageTitle)
         meta(property="og:image" content=metadata.baseurl + openGraphImage)
-        //- TODO: open graph image for whatsapp
         meta(property="og:description" content=description)
         if layout == "post"
             meta(property="og:type" content="article")
@@ -36,7 +34,7 @@ html(lang="en")
         else
             meta(property="og:type" content="website")
         meta(property="twitter:card" content="summary_large_image")
-        meta(property="twitter:creator" content="@_Shakeel")
+        meta(property="twitter:creator" content=metadata.social.Twitter)
         
         if canonical
             link(href=metadata.baseurl + canonical, rel="canonical")
@@ -52,7 +50,7 @@ html(lang="en")
         link(rel="sitemap" type="text/plain" title="Sitemap" href="/sitemap.txt")
         //- TODO: uncomment once XML sitemap is ready
         //- link(rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml")
-        link(href="./feed.xml" rel="alternate" type="application/rss+xml" title="Shakeel Mohamed's blog posts")
+        link(href="/feed.xml" rel="alternate" type="application/rss+xml" title="Shakeel Mohamed’s blog posts")
 
         link(rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png")
         link(rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png")
@@ -61,14 +59,17 @@ html(lang="en")
 
         script(src="/scripts/main.js")
     //- TODO: remove debug-screens for production
-    //- body(class="bg-navy debug-screens")
-    body(class="bg-navy")
+    //- body(class="debug-screens")
+    
+    //- TODO: refactor the whole body to be a block which can be overridden
+    body(class="bg-white main")
         +header()
         main
             +hero()
                 block hero
             block content
-        +footer()
+        footer
+            +footer()
     script(src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous")
     //- TODO: could optimize twemoji by pulling it at build time
     script.

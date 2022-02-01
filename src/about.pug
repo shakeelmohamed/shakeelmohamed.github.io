@@ -1,5 +1,5 @@
 ---
-title: About – Shakeel Mohamed
+title: Shakeel Mohamed – About
 description: I’m a self-taught designer, born and raised in the greater Seattle area.
 ---
 
@@ -9,9 +9,8 @@ include _includes/molecules.pug
 //- TODO: this entire page has WIP copy
 
 block hero
-    h1.text-white About me 🙋🏻‍♂️ 
-    p.subhead.text-white My pronouns are he/him.
-    p.subhead.text-white I’m the former software engineer who thought like a designer his whole career.
+    +centeredPage()
+        h1 Developer turned designer
 
 mixin bio()
     div(class="prose")
@@ -20,42 +19,51 @@ mixin bio()
         :markdown-it(html=true)
             I’m a visual designer, born and raised in the greater Seattle area.
 
-            As someone who never quite fit in, I’ve always been curious about how labels shape our identities. These are a few of my labels: [ISTJ](https://en.wikipedia.org/wiki/ISTJ), [capricon](https://en.wikipedia.org/wiki/Capricorn_(astrology)), [introvered](https://en.wikipedia.org/wiki/Extraversion_and_introversion#Introversion), [type A](https://en.wikipedia.org/wiki/Type_A_and_Type_B_personality_theory#Type_A), [Ismaili Muslim](https://en.wikipedia.org/wiki/Isma%27ilism), [Gujarati](https://en.wikipedia.org/wiki/Gujarati_people), [first-generation college graduate](https://en.wikipedia.org/wiki/First-generation_college_students_in_the_United_States).
+            As someone who never quite fit in, I’ve always been curious about how labels shape our identities. These are a few of my labels: [ISTJ](https://en.wikipedia.org/wiki/ISTJ), [Capricorn](https://en.wikipedia.org/wiki/Capricorn_(astrology)), [introverted](https://en.wikipedia.org/wiki/Extraversion_and_introversion#Introversion), [type A](https://en.wikipedia.org/wiki/Type_A_and_Type_B_personality_theory#Type_A), [Ismaili Muslim](https://en.wikipedia.org/wiki/Isma%27ilism), [Gujarati](https://en.wikipedia.org/wiki/Gujarati_people), [first-generation college graduate](https://en.wikipedia.org/wiki/First-generation_college_students_in_the_United_States).
 
             I’m inspired by peak performances, from [Michael Jordan in the NBA Finals](https://www.youtube.com/watch?v=d8qXbVyVNnA) to [The Weeknd performing at the Super Bowl halftime show](https://www.youtube.com/watch?v=9rhadTURsrw).
 
-            I spend my free time volunteering with [the Ismaili Muslim community](https://the.ismaili/) on various (sometimes creative) projects.
-
-            I’m currently applying to graduate programs in graphic design while running my independent design business, [ntrsct (in•ter•sect) designs](https://ntrsct.com).
+            I’m currently running my independent design business, [ntrsct (in•ter•sect) designs](https://ntrsct.com), while learning more about design.
+            I spend my free time volunteering with [the Ismaili Muslim community](https://the.ismaili/) on projects varying from branding to video production.
 
 block content
-    +sectionWhite()
-        +gridWithBigColumn()
-            +bio()
-    +sectionOrange() 
-        +gridWithBigColumn()
-            h2.text-navy My Principles
-            p.text-navy This is my approach to any situation, personally or professionally. This is the unique contribution I bring to the world.
-
+    +centeredPage()
+        +bio()
+        div
+            h2.text-navy Design Principles
+            p.subhead So far, I’ve seen these themes emerge from my work.
             -
-                var manifesto = {
+                var designPrinciples = {
+                   "Local to Global": "Taking my unique experiences and finding the core idea that applies to an international audience.",
+                   "What If?": "My creative process often begins with this question, then finding the easiest step to get started.",
+                   "Switch it Up": "I work through creative blocks by changing tools (e.g.: analog to digital and back).",
+                   "Normal or G.O.A.T. 🐐?": "There’s only one choice, and it’s not normal.",
+
+                };
+            each details, name in designPrinciples
+                p.font-bold #{name}
+                p.ml-8.pb-2 #{details}
+        div
+            h2.text-navy Life Principles
+            p.subhead More broadly, this has been my formula for achievement.
+            -
+                var lifePrinciples = {
                    "Outwork deficiencies": "Any weakness can be overcome with great effort.",
                    "Create the future": "Start with the end in mind, work towards the plan, adjust as needed.",
                    "Seek growth constantly": "Knowledge is power, so learn from the greats; success leaves clues.",
                    "Enable understanding through transparency": "Use clear & direct communication, translate if necessary.",
                    "Think from a unique perspective": "Think inside, outside, and about the box itself."
                 };
-            each details, name in manifesto
-                h3.text-white #{name}
-                p.text-navy #{details}
-    
-    +sectionWhite()
-        +gridWithBigColumn()
-            h3.text-navy Mentions
-            p.subheading Exciting things I've done in the past
+            each details, name in lifePrinciples
+                p.font-bold #{name}
+                p.ml-8.pb-2 #{details}
+        
+        if mentions.recent.length > 0
+            h2.text-navy Mentions
+            p.subhead It’s not exactly press...&nbsp;
+                | see the&nbsp;
+                a(href="/mentions") full list here.
             +getMentions(true)
-            p.subhead See the 
-                a.text-navy(href="/mentions") full list here
 
 
 //- TODO: CTA for contact me for projects, or something?

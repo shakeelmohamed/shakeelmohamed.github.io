@@ -15,6 +15,7 @@ module.exports = function(eleventyConfig) {
     ]);
     eleventyConfig.addPassthroughCopy("src/scripts");
     eleventyConfig.addPassthroughCopy("src/CNAME");
+    eleventyConfig.addPassthroughCopy("src/break/styles.css");
     
     // Custom markdown processor
     let markdownIt = require("markdown-it");
@@ -86,4 +87,14 @@ module.exports = function(eleventyConfig) {
 
     // TODO: Include speedlify score somewhere, maybe on the design system page
     // https://github.com/zachleat/speedlify-score
+    // 
+    
+    /* TODO: available hack for using pug filters
+    see https://github.com/11ty/eleventy/issues/1523
+    
+    global.filters = eleventyConfig.javascriptFunctions; // magic happens here
+    eleventyConfig.setPugOptions({ // and here
+        globals: ['filters']
+    });
+     */
 };

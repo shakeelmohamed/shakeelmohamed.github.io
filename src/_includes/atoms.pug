@@ -1,3 +1,22 @@
+mixin fullWidth(bgClass, textClass)
+    div.pt-8.pb-12(class="full-width " + bgClass + " " + textClass)
+        .main
+            block
+
+mixin myEmail()
+    +mailto("contact", "shakeelmohamed.com", "Hey Shakeel, let’s talk")
+
+mixin mailto(user, domain, subject)
+    //- <!-- // http://lists.evolt.org/archive/Week-of-Mon-20040202/154813.html -->
+    span.mailto
+        script(type="text/javascript").
+            function gen_mail_to_link(lhs, rhs, subject) {
+                document.write("<a class=\"mailto\" href=\"mailto");
+                document.write(":" + lhs + "@");
+                document.write(rhs + "?subject=" + subject + "\">" + lhs + "@" + rhs + "<\/a>");
+            }
+            gen_mail_to_link("#{user}", "#{domain}", "#{subject}")
+
 mixin getRandomLogo(size=50)
     script getRandomLogo(#{size})
 

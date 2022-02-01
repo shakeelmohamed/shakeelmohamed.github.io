@@ -1,31 +1,38 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
-  purge: {
-    // TODO: further optimize for production, goal size for tailwind.css is 16k
-    enabled: true,
-    content: [
-      './src/**/*.pug',
-      './src/**/*.md',
-      './src/scripts/**/*.js'
-    ],
-    mode: 'all',
-    preserveHtmlElements: true,
-    options: {
-      keyframes: true
-    }
-  }, 
-  darkMode: 'media', // or 'media' or 'class'
+  content: [
+    './src/**/*.{md,pug}'
+    // ,
+    // './src/scripts/**/*.js' // TODO: probably remove, only used by random logo picker
+  ],
+  safelist: [
+    'font-*'
+  ],
+  // content: {
+  //   // TODO: further optimize for production, goal size for tailwind.css is 16k
+  //   enabled: true,
+  //   content: [
+  //     './src/**/*.{md,pug}',
+  //     './src/scripts/**/*.js' 
+  //   ],
+  //   mode: 'all',
+  //   preserveHtmlElements: true,
+  //   options: {
+  //     keyframes: true
+  //   }
+  // }, 
   theme: {
     extend: {
       fontFamily: {
         sans: ['proxima-nova', ...defaultTheme.fontFamily.sans],
-        serif: ['garamond-premier-pro', ...defaultTheme.fontFamily.serif],
+        serif: ['freight-big-pro', ...defaultTheme.fontFamily.serif],
       },
       fontSize: { // TODO: customize other type sizes here; actually do it in src/styles.css
-        'base': '1.5rem', // 1.25rem is 20px on desktop... originally had designed with 1.5rem or 24px in mind
+        // 'old_base': '1.5rem', // 1.25rem is 20px on desktop... originally had designed with 1.5rem or 24px in mind
+        'base': '1rem', // 1rem is 16px on desktop... originally had designed with 1.5rem or 24px in mind
         // desktop styles
-        'sm': '1rem',
+        // 'sm': '1rem',
         // 'xl': '',
         // '3-xl': '',
         // '5-xl': '',
@@ -38,17 +45,18 @@ module.exports = {
     },
     colors: {
       navy: '#002855',
-      blue: '#002855',
       white: '#FFFFFF',
       'light-blue': '#98B6E4',
-      orange: '#FF5C0A'
+      orange: '#FF5C0A',
+      gray: '#666666',
+      black: '#000000'
     },
   },
-  variants: {
-    extend: {
-      grayscale: ['hover']
-    },
-  },
+  // variants: {
+  //   extend: {
+  //     grayscale: ['hover']
+  //   },
+  // },
   plugins: [
     require('@tailwindcss/typography'),
     require('@tailwindcss/forms'),

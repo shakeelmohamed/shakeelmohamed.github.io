@@ -1,11 +1,98 @@
+include ./atoms.pug
+
+mixin flexCols2()
+    div(class="flex flex-wrap lg:flex-nowrap gap-16 justify-items-stretch")
+        block
+
+mixin gridCols2()
+    div(class="grid grid-cols-1 lg:grid-cols-2 gap-x-16 grap-y-2")
+        block
+
+mixin centeredPage()
+    //- 
+    //- DO NOT TOUCH THIS FOR NOW!
+    //- *** Blog posts are looking perfect on desktop. ***
+    //- Other pages,not so much...
+    //- Regular pages needs feel cohesive with the homepage
+    //- 
+    div(class="mx-auto place-content-center self-center lg:w-1/2")
+        block
+
+//- TODO: Move this into atomic design file structure
+mixin getRandomLogo(size=50)
+    script getRandomLogo(#{size})
+
+mixin headerLogo()
+    div(class="py-6 text-left flex-nowrap")
+        a.header-logo(href="/") Shakeel Mohamed
+
+mixin navItem(href, label)
+    a(class="font-sans font-semibold text-navy text-left ml-0 mr-8 md:text-center md:inline-block md:mr-0 md:ml-8" href=href) #{label}
+
+mixin header()
+    //- TODO: layout breaks below 320px width
+    header(class="mx-auto md:flex md:items-baseline md:justify-between")
+        +headerLogo()
+        nav(class="flex md:justify-between text-lg md:py-4 md:justify-items-end md:flex-shrink-0 md:mx-0")
+            +navItem("/", "Work")
+            +navItem("/blog", "Blog")
+            +navItem("/about", "About")
+            +navItem("/contact", "Contact")
+
+mixin hero()
+    div(class="mt-4 mb-12 xl:mt-12 xl:mb-8")
+        block
+
+mixin footerNavItem(href, label)
+    li
+        a.subhead(href=href) #{label}
+
+mixin footer()
+    +flexCols2()
+        div(class="lg:basis-1/2")
+            div(class="md:w-2/3")
+                h3 Subscribe
+                +mailingListForm()
+        div(class="lg:basis-1/2")
+            //- TODO: figure out how to place this whole div to the right edge
+            div()
+                h3 Contact
+                span
+                    +myEmail()
+                div
+                    - var numLinks = 0;
+                    each link, name in metadata.social
+                        -- ++numLinks
+                        span
+                            a(class="social-link" href=link) #{name} &nbsp;
+                            if numLinks < (Object.keys(metadata.social).length)
+                                | | &nbsp;
+                br
+                div
+                    //- TODO: link this next paragraph to the project/blog page about the website itself
+                    p Designed and developed with✨emotion✨.
+                    p
+                        script document.write("&copy; " + new Date().getFullYear() + " Shakeel Mohamed")   
+
+
 //- TODO: remix so blog listing can reuse part of this
 mixin projectListing(project)
-    div.justify-self-auto.pb-8
-        a(href=project.url)
-            img.portfolio-cover(src=project.data.openGraphImage)
-        h3(class="text-navy pb-0.5")
-            a(href=project.url) #{project.data.title}
-        p.text-navy.leading-tight #{project.data.description}
+    div.pb-8
+        //- TODO: bring back the links dude
+        //- a(href=project.url)
+            //- img.portfolio-cover.w-full(src=project.data.openGraphImage)
+        img.portfolio-cover.w-full(src=project.data.openGraphImage)
+        div.pt-2
+            div(class="text-navy pb-0.5 text-2xl font-sans font-semibold")
+                h2 #{project.data.title}
+                    //- a(href=project.url) #{project.data.title}
+            //- TODO: need a max-width here so the lines aren't super long
+            div.project-meta
+                if project.data.media
+                    p
+                        span.font-semibold Media:&nbsp;
+                        | #{project.data.mediaString}
+                p #{project.data.tagline}.
 
 //- TODO: this has been refactored away, delete once footer is final
 mixin copyright()
@@ -17,10 +104,15 @@ mixin copyright()
     
 
 //- mixin projectSectionText()
+
+//- mixin projectSectionTextBig()
     
 //- mixin projectSectionSplit()
     
-//- mixin projectSectionImage()
+//- mixin projectSectionFullWidth()
+//- images or videos most likely
+
+//- TODO: for each of these, have a min col width so 2nd column is flush nicely
 
 //- TODO: design this component
 mixin getPosts(recent=false)
@@ -28,25 +120,30 @@ mixin getPosts(recent=false)
     if !recent
         - source = collections.post;
     each post in source
-        .flex.place-content-between
-            p.text-light-blue #{post.data.cleanDate}
-            //- TODO: make tags clickable
-            p.text-light-blue= "Tags: " +  post.data.categories
-        a(href=post.url)
-            p.subhead.text-navy #{post.data.title}
+        .flex.flex-nowrap.items-baseline
+            p.whitespace-nowrap #{post.data.cleanDate} &nbsp;
+            div
+                h3(class="hover:text-orange")
+                    a(href=post.url) #{post.data.title}
+                //- TODO: make tags clickable
+                p Topics: #{post.data.categories}
 
 mixin getFeaturedPosts()
-    each post in collections.featured
-        a(href=post.url)
-            h3.text-white #{post.data.title}
-        p.text-navy #{post.data.description}
+    +gridCols2()
+        each post in collections.featured
+            //- TODO: give this a border and make it a "card" design
+            div
+                a(href=post.url)
+                    h3(class="hover:text-orange") #{post.data.title}
+                p #{post.data.description}
 
 mixin getMentions(recent=false)
     - var source = mentions.recent;
     if !recent
         - source = mentions.all;
-    .prose.leading-tight
-        ul
-            each mention in source                
-                li #{mention.date} – 
-                    a(href=mention.url) #{mention.title}
+    each mention in source
+        //- TODO: fix this so all titles are flush left properly
+        .flex.flex-nowrap.items-baseline
+            p.whitespace-nowrap #{mention.date} &nbsp;
+            p
+                a(href=mention.url, class="text-navy font-medium hover:text-orange") #{mention.title}

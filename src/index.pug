@@ -3,22 +3,19 @@ description: Shakeel Mohamed is a designer & brand strategist in the greater Sea
 ---
 
 extends _includes/layouts/base.pug
-include _includes/molecules.pug
 
 block hero
-    h1.text-white Hello from Seattle! 🌲
-    p.subhead.text-white
-        | I’m a software engineer turned designer applying to design MFA programs.
-        if collections.portfolio
+    +gridCols2()
+        div
+            h1 Developer turned designer
+            p.text-lg
+                | Hello, I’m Shakeel! I’m a visual designer in Seattle, specializing in branding and experimental typography. After 10 years of working as a software engineer, I began exploring my creative side. I’ve recently applied to graduate design programs with the intent of learning more about typography, branding, and design leadership.
             br
-            |  Keep scrolling to check out my portfolio
-    h3(class="mt-4 pb-0") ⬇️
-
+            div Say hello!
+                +myEmail()
 
 block content
-    if collections.portfolio
-        +sectionWhite()
-            +gridWithBigColumn()
-                h2.text-navy Projects
-                each project in collections.portfolio
-                    +projectListing(project)
+   if collections.portfolio
+        +gridCols2()
+            each project in collections.portfolio
+                +projectListing(project)

@@ -65,5 +65,5 @@ I am deeply grateful for the contributors we’ve had so far, and I look forward
 I want to especially thanks the following individuals:
 
 * [**Matt Stannett**](https://github.com/BeigeBadger) — the first contributor, without him I might’ve abandoned the project months ago!
-* [**Ian Spence**](https://github.com/ecnepsnai) — he bought the domain name! [ZenPlayer.audio](https://zenplayer.audio/)
+* [**Ian Spence**](https://github.com/ecnepsnai) — he bought the domain name! [ZenPlayer.audio](https://zen-audio-player.github.io/)
 * [**Monica Cheung**](https://github.com/monicacheung) — she’s contributed the most code to the project so far, and added the best feature: YouTube search!

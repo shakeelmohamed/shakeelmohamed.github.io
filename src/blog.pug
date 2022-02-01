@@ -1,5 +1,5 @@
 ---
-title: Blog posts by Shakeel Mohamed
+title: Shakeel Mohamed – Blog
 description: Through writing, I like to reflect about problems I’ve solved, experiences I’ve had, and how to do things that were once difficult for me.
 canonical: "/blog"
 ---
@@ -9,18 +9,16 @@ extends _includes/layouts/base.pug
 //- Temporary workaround: this file is blog.pug, symlinked to posts.pug for legacy SEO
 
 block hero
-    h1.text-white The Blog ✍🏽
-    p.subhead.text-white #{description}
+    +centeredPage()
+        h1 The Blog ✍🏽
+        p #{description}
 
 block content
-    +sectionOrange()
-        +gridWithBigColumn()
-            h2.text-navy Featured Posts
-            +getFeaturedPosts()
-    +sectionWhite()
-        +gridWithBigColumn()
-            h2.text-navy Recent Posts
-            +getPosts(true)
-            br
-            p.subhead Keep reading in the 
-                a.text-light-blue(href="/post-archive") archive
+    +centeredPage()
+        h2 Featured Posts
+        +getFeaturedPosts()
+        h2 Recent Posts
+        +getPosts(true)
+        br
+        p.subhead Keep reading in the 
+            a(href="/blog-archive") archive.
