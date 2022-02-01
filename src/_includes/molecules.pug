@@ -64,7 +64,7 @@ mixin footer()
                     each link, name in metadata.social
                         -- ++numLinks
                         span
-                            a(class="social-link" href=link) #{name} &nbsp;
+                            a(class="social-link" href=link target="_blank") #{name} &nbsp;
                             if numLinks < (Object.keys(metadata.social).length)
                                 | | &nbsp;
                 br

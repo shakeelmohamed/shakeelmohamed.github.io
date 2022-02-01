@@ -9,6 +9,9 @@
     footer {
         @apply py-12;
     }
+    section {
+        @apply w-full aspect-video;
+    }
 
     /* Headings */
     h1 {
