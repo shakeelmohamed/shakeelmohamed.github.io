@@ -5,6 +5,7 @@ title: Finding Your Individual Why Statement (Golden Circle Theory, part 1)
 description: I've been intrigued by Simon Sinek's work for many years. I knew his Golden Circle Theory is an incredible idea but, I didn't know how to apply it in my daily life.
 tags:
     - post
+    - featured
     - find your why
     - book review
 ---

@@ -6,6 +6,9 @@
     html {
         @apply text-gray;
     }
+    footer {
+        @apply py-12;
+    }
 
     /* Headings */
     h1 {
