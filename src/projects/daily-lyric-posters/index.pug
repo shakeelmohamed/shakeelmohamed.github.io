@@ -24,20 +24,38 @@ block content
                 p After buying a book by David Carson, I got interested in expressive typography. For my first attempt at this medium, I designed a poster every day in January 2020 to better understand expressive type. With a busy travel month, I designed some posters at airport gates and sketched on random scraps of paper. Each poster uses lyrics from my favorite hip hop songs.
                 br
                 p During the month-long project, I learned about geometric compositions and types of grids used in typography. After completing the project, I wrote a blog post about my experience.
-            div &nbsp;
-                //- img here - blog
+            div 
+                //- TODO: to linkedin, or the version on the website itself?
+                a(href="https://www.linkedin.com/pulse/2431-days-designing-lyric-posters-shakeel-mohamed-csm" target="_blank")
+                    img.py-2(src="lyric-posters-linkedin-article.png" alt="A screenshot of the LinkedIn article I wrote about the lyric poster project")
     section
         +centeredPage()
-            div
-                //- img here - sketches
-            div
-                //- img here - grids
+            h2 Exploring Grids
+            +gridCols2()
+                div
+                    img.py-2(src="./lyric-posters-sketch.jpg" alt="")
+                div
+                    img.py-2(src="./Typographic-Systems-by-Kimberly-Elam-book-cover.jpg" alt="The book cover for Typographic Systems by Kimberly Elam")
+                    img.py-2(src="./Typographic-Systems-radial system.jpg" alt="A scan of the radial system from Typographic Systems by Kimberly Elam")
+            +gridCols2()
+                img.py-2(src="./Kanye-West-poster-with-grid.png" alt="Kanye West poster with grid lines drawn over in Adobe Illustrator")
+                img.py-2(src="./6black-poster-with-grid.png" alt="6black poster with grid lines drawn over in Adobe Illustrator")
     +fullWidth("bg-black", "text-white")
-        section
-            +centeredPage()
-                div
-                    //- img here - poster 1
-                    p.caption.text-white This poster of a Kid Cudi song from 2009 borrows colors from a Post Malone album cover from 2018.
-                div
-                    //- img here - poster 2
-                    p.caption.text-white As an avid reader, book cover designs live in my subconscious. After completing the month of poster designs, I realized this poster mimics the book cover for Power vs. Force by David Hawkins.
+        +centeredPage()
+            h2.text-white Final Posters
+            section
+                +gridCols2()
+                    img.my-2.border-2.border-white(src="./Kid-Cudi-poster.png" alt="The poster I made using lyrics from the song ”Up Up & Away” by Kid Cudi")
+                    div
+                        p.text-white This poster of a Kid Cudi song from 2009 borrows colors from a Post Malone album cover from 2018.
+                        img.py-2(src="./Post-Malone-album-cover.jpg" alt="The album cover for Beerbongs and Bentleys by Post Malone")
+                +gridCols2()
+                    img.my-2.border-2.border-white(src="./Juice-WRLD-poster.png" alt="The poster I made using lyrics from the song ”Robbery” by Juice WRLD")
+                    div
+                        p.text-white As an avid reader, book cover designs live in my subconscious. After completing the month of poster designs, I realized this poster mimics the book cover for Power vs. Force by David Hawkins.
+                        img.py-2(src="./Power-vs-Force-book-cover.jpg" alt="The book cover for Power vs. Force by David Hawkins")
+                +gridCols2()
+                    img.my-2.border-2.border-white(src="./Frank-Ocean-poster.jpg" alt="The poster I made using lyrics from the song ”Seigfried” by Frank Ocean")
+                    div
+                        p.text-white This poster uses my favorite painting by the Chinese artist Xue Jiye, reminiscent of the album cover for this song. He has permitted me to use his artwork for personal and commercial use.
+                        img.py-2(src="./Blonde-album-cover.jpg" alt="The album cover for Blonde by Frank Ocean")
