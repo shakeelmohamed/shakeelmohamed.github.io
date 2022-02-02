@@ -653,6 +653,7 @@ select {
           text-decoration-line: underline;
 }
     strong {
+  font-weight: 700;
   --tw-text-opacity: 1;
   color: rgb(102 102 102 / var(--tw-text-opacity));
 }
@@ -1254,6 +1255,9 @@ select {
 .resize {
   resize: both;
 }
+.list-disc {
+  list-style-type: disc;
+}
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
@@ -1274,6 +1278,9 @@ select {
 }
 .justify-center {
   justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
 }
 .justify-items-stretch {
   justify-items: stretch;

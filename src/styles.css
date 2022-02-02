@@ -43,7 +43,7 @@
         @apply underline;
     }
     strong {
-        @apply text-gray;
+        @apply text-gray font-bold;
     }
 
     /* TODO: define a style for full width section, which can then have a color applied to it */

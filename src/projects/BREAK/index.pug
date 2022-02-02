@@ -1,6 +1,6 @@
 ---
 layout: project
-title: BREAK Journal
+title: BREAK Journaling
 tagline: Designing for a persona
 description: A guided journal for overcoming limiting beliefs
 openGraphImage: "open graph - BREAK.png"
@@ -19,57 +19,101 @@ position: 1
 include ../../_includes/molecules.pug
 
 block content
-    +gridCols2()
-        div
-            p BREAK is a journaling process I created while on vacation in Thailand just before the pandemic in February 2022. Days after a stressful project, I noticed myself ruminating on negative thoughts that I knew to be untrue.
-            p On the trip I noted all the limiting beliefs I observed and a fact or two to disprove them. After a few days of this, my anxiety subsided. I drafted this five-step process on my last night of vacation, knowing it was special.
-        div
-            //- img here - notebook photo
-            p.caption My original BREAK Journal outline from 2020, pre-pandemic.
+    section
+        +centeredPage()
+            div
+                p BREAK is a journaling process I created while on vacation in Thailand just before the pandemic in February 2022. Days after a stressful project, I noticed myself ruminating on negative thoughts that I knew to be untrue.
+                p On the trip I noted all the limiting beliefs I observed and a fact or two to disprove them. After a few days of this, my anxiety subsided. I drafted this five-step process on my last night of vacation, knowing it was special.
+            div
+                img.my-2(src="./break-notebook-first-notes.png" alt="My notebook with the first concept of the BREAK journaling process written out")
+                p.caption My original BREAK Journal outline from 2020, pre-pandemic.
+            div
+                img.my-2(src="./break-first-presentation.png" alt="A screenshot of the first BREAK presentation cover slide, white text set in Inter on an orange background.")
+                p.caption The first BREAK presentation from 2021.
+            div
+                h2 The Journal Steps
+                //- TODO: lil mixin to make this rendering easier and bold the steps
+                ul
+                    li
+                        strong Belief:
+                        |  State the limiting belief
+                    li
+                        strong Reframe:
+                        |  How could you describe this situation without judgment?
+                    li
+                        strong Empower:
+                        |  What is an empowering alternative belief?
+                    li
+                        strong Attest:
+                        |  List facts that disprove the limiting belief
+                    li
+                        strong Kill:
+                        |  What can you do to totally eliminate the limiting belief?
 
-    +gridCols2()
-        div
-            //- img here - slide
-            p.caption The first BREAK presentation from 2021.
-        div
-            h2 The Journal Steps
-            //- TODO: lil mixin to make this rendering easier and bold the steps
-            ul
-                li Belief: State the limiting belief
-                li Reframe: How could you describe this situation without judgment?
-                li Empower: What is an empowering alternative belief?
-                li Attest: List facts that disprove the limiting belief
-                li Kill: What can you do to totally eliminate the limiting belief?
-
-        //- img here - Spanish
-        //- p.caption My reaction to the framework being translated into Spanish!
-    +gridCols2()
-        div
-            h2 Target persona
-            p The pandemic triggered mental health issues for many people. I used the BREAK process repeatedly to keep my emotions in check throughout the summer of 2020. I shared my BREAK steps and vacation anxiety example with some close friends and a few found it helpful.
-            p I defined this persona based on conversations with my friends, hoping to improve BREAK. In doing so, I made a clear picture of the kind of person BREAK could help. I uncovered a few ways to access the framework through these conversations—initially as a slideshow, but a guided workbook would be the most helpful.
-        div
-            //- demographics, story, needs
-    //- img here - stylescape 
+            img.my-2(src="./break-spanish-ig-screenshot.png" alt="A screenshot of an Instagram story from @roxamk showing the BREAK framework translated into Spanish")
+            p.caption My reaction to the framework being translated into Spanish!
+    section
+        +centeredPage()
+            div
+                h2 Target persona
+                p The pandemic triggered mental health issues for many people. I used the BREAK process repeatedly to keep my emotions in check throughout the summer of 2020. I shared my BREAK steps and vacation anxiety example with some close friends and a few found it helpful.
+                p I defined this persona based on conversations with my friends, hoping to improve BREAK. In doing so, I made a clear picture of the kind of person BREAK could help. I uncovered a few ways to access the framework through these conversations—initially as a slideshow, but a guided workbook would be the most helpful.
+            div
+                .flex.justify-between
+                    div
+                        h3 Demographics
+                        ul.list-disc
+                            li 26, female
+                            li Lives in Dallas, TX
+                            li Business analyst
+                            li Annual income: $80k
+                            li Pakistani American
+                    div
+                        h3 Story
+                        ul.list-disc
+                            li Living with roommates
+                            li Recent break up
+                            li Immigrant trauma
+                            li Bullied until high school
+                            li Fitness journey after college
+                    div
+                        h3 Needs
+                        ul.list-disc
+                            li Confidence
+                            li Self-advocacy
+                            li Learning to set boundaries
+                            li Open her heart again
+            //- TODO: fix this image, it has no transparency and a baked in drop shadow oooops!
+            //- TODO: maybe make it full width too to break the layout a bit
+            img.my-2(src="./break-moodboard.jpg" alt="A moodboard depicting the lifestyle of the target user persona for BREAK Journaling")
+            p.caption Moodboard based on the lifestyle of the target user persona. 
     
-    +gridCols2()
-        div
-            h2 The Booklet
-            p 
-                strong Page dimensions:&nbsp;
-                | 11" x 8.5", US Letter size
-            br
-            p I chose to design a physical booklet for many reasons, and the primary one is to learn about the process of designing a booklet. It’s easy to download PDF workbooks and forget about them in the downloads folder (I’m guilty of this myself). I continued using BREAK because I had a dedicated notebook for it.
-            br
-            p
-                strong Each of the five steps is accompanied by a typographic image, an explanation of the step, and an example.
-                | The BREAK booklet concludes with a journaling worksheet to guide the reader through the process for their own limiting beliefs.
-            br
-            p As of January 2022, this booklet design is a work in progress. Through the Faces from Places support group I started in 2021, I have facilitated short BREAK workshops to guide our members through the process.
-            br
-            p One member of the group has already translated the framework into Spanish. With another group member, I plan to present a BREAK workshop with the Small Business Administration in Arizona sometime in 2022.
-        div
-            //- img here - sketches
-            //- img here - spreads 1-3
-    //- img here - full width spread 4
-    //- img here - woorksheet mockup
+    section
+        +centeredPage()
+            +gridCols2()
+                div
+                    h2 The Booklet
+                    p 
+                        strong Page dimensions:&nbsp;
+                        | 11" x 8.5", US Letter size
+                    br
+                    p I chose to design a physical booklet for many reasons, and the primary one is to learn about the process of designing a booklet. It’s easy to download PDF workbooks and forget about them in the downloads folder (I’m guilty of this myself). I continued using BREAK because I had a dedicated notebook for it.
+                    br
+                    p
+                        strong Each of the five steps is accompanied by a typographic image, an explanation of the step, and an example.
+                        | The BREAK booklet concludes with a journaling worksheet to guide the reader through the process for their own limiting beliefs.
+                    br
+                    p As of January 2022, this booklet design is a work in progress. Through the Faces from Places support group I started in 2021, I have facilitated short BREAK workshops to guide our members through the process.
+                    br
+                    p One member of the group has already translated the framework into Spanish. With another group member, I plan to present a BREAK workshop with the Small Business Administration in Arizona sometime in 2022.
+                div
+                    img.my-2(src="./break-sketches-1.jpg" alt="Initial notebook sketches of typographic expressions for the steps in the BREAK Journaling process")
+                    img.my-2(src="./break-sketches-2.jpg" alt="Initial notebook sketches of typographic expressions for the steps in the BREAK Journaling process")
+            
+            img.my-2(src="./break-spread-1.jpg" alt="The first two page spread from the BREAK Journaling workbook")
+            img.my-2(src="./break-spread-2.jpg" alt="The second two page spread from the BREAK Journaling workbook")
+            img.my-2(src="./break-spread-3.jpg" alt="The third two page spread from the BREAK Journaling workbook")
+            //- TODO:
+            //- img here - full width large spread 3
+            img.my-2(src="./break-worksheet-mockup.jpg" alt="A mockup of the journaling worksheet from the BREAK Journaling workbook")
+            p.caption The BREAK Journal workbook ends with a worksheet to guide the reader through the process.
