@@ -84,8 +84,8 @@ mixin projectListing(project)
         img.portfolio-cover.w-full(src=project.data.openGraphImage)
         div.pt-2
             div(class="text-navy pb-0.5 text-2xl font-sans font-semibold")
-                h2 #{project.data.title}
-                    //- a(href=project.url) #{project.data.title}
+                h2
+                    a(href=project.url) #{project.data.title}
             //- TODO: need a max-width here so the lines aren't super long
             div.project-meta
                 if project.data.media
