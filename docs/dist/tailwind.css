@@ -1200,6 +1200,9 @@ select {
 .mb-12 {
   margin-bottom: 3rem;
 }
+.mb-16 {
+  margin-bottom: 4rem;
+}
 .block {
   display: block;
 }
@@ -1327,9 +1330,6 @@ select {
 .bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-.p-12 {
-  padding: 3rem;
 }
 .p-8 {
   padding: 2rem;
