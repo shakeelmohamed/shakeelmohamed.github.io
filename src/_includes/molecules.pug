@@ -78,10 +78,8 @@ mixin footer()
 //- TODO: remix so blog listing can reuse part of this
 mixin projectListing(project)
     div.pb-8
-        //- TODO: bring back the links dude
-        //- a(href=project.url)
-            //- img.portfolio-cover.w-full(src=project.data.openGraphImage)
-        img.portfolio-cover.w-full(src=project.data.openGraphImage)
+        a(href=project.url)
+            img.portfolio-cover.w-full(src=project.data.openGraphImage)
         div.pt-2
             div(class="text-navy pb-0.5 text-2xl font-sans font-semibold")
                 h2
