@@ -9,6 +9,12 @@
     footer {
         @apply py-12;
     }
+    section {
+        @apply w-full aspect-video;
+    }
+    .centered-page img {
+        @apply mx-auto;
+    }
 
     /* Headings */
     h1 {
@@ -37,7 +43,7 @@
         @apply underline;
     }
     strong {
-        @apply text-gray;
+        @apply text-gray font-bold;
     }
 
     /* TODO: define a style for full width section, which can then have a color applied to it */

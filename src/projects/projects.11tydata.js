@@ -9,6 +9,8 @@ module.exports = {
                 return "https://dummyimage.com/1200x630/000/fff.png&text=Project+Cover+Photo+Here";
             }
         },
+        // TODO: consider making media a hardcoded string... unless using it for filtering
+        //      (e.g.: I could make a "tag" view for projects /media/experimental-typography)
         mediaString: data => (data.media || []).sort().join(", ")
     }
 };

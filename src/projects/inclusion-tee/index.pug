@@ -21,45 +21,53 @@ include ../../_includes/molecules.pug
 
 block content
     +fullWidth("bg-black", "text-white")
-        +gridCols2()
-            div
-                h2.text-white Inspiration
-                p.text-white In 2018 I started a clothing brand called&nbsp;
-                    a(href="https://ntrsct.com") ntrsct
-                    | , which has evolved into my independent design business.
-                br
-                p.text-white The logomark emerged from my fascination with the numerous aspects of one’s identity and finding ways to embrace them. An X is the simplest expression of an intersection, symbolizing the point where the many elements of our identity meet.
-                br
-                p.text-white Black and white in the graphic symbolize the (illusion of) maximum contrast of our differences. While Virgil Abloh’s brand Off-White stands for the grey area between black and white, I see it differently. To me, black is white.
-                br
-                p.text-white The Inclüsion Tee was the best-selling product while running the clothing brand.
-                img(class="py-4", src="./off-white-tag.jpg", alt="Clothing tag from Off-white")
-            div
-                
-                img(class="py-4 w-2/3", src="./hbz-virgil-611450214-1522065262.jpg", alt="The late Virgil Abloh with his hands in prayer")
-                p.caption.text-white The late Virgil Abloh was the catalyst for my interest in design. One person can change your whole life.
+        section
+            +centeredPage()
+                div
+                    h2.text-white Inspiration
+                    p.text-white In 2018 I started a clothing brand called&nbsp;
+                        a(href="https://ntrsct.com") ntrsct
+                        | , which has evolved into my independent design business.
                     br
-                    strong.text-white RIP Virgil Abloh (1980–2021)
-        h2.text-white Company Logo
-        img(class="mx-auto w-1/3 py-16", src="./ntrsct-logo-white.png", alt="The ntrsct designs logo, and X with ntrsct written out horizontally") 
-        h1.font-serif.text-white It starts with yoü.
-        +gridCols2()
-            div
-                p.text-white I chose the German character, ü (u-umlaut), to symbolize the viewer (you) being the source of an inclusive environment—an ode to the reunification of East and West Germany after WWII. It also looks like a smiley face!
-                br
-                p.text-white This graphic resonated with me at a time when political and social issues were polarizing the American people.
-                img(class="py-4 w-1/2" src="./inclusion-sketch.png", alt="An early sketch of the inclusion tee graphic from the Procreate app for iPad")
-                p.caption.text-white From sketch to reality. The figure-ground ambiguity of the X was a happy accident while working in Adobe Illustrator.
-            div
-                h2.text-white.pt-0.mt-0 Final graphic
-                img(class="p-8", src="./inclusion-white.png", alt="The inclusion tee graphic, spelling out inclusion with an X in the negative space")
-
-        img(class="mx-auto max-h-screen" src="./inclusion-tee-mockup.png", alt="A digital mockup of the inclusion graphic in black ink on a white t-shirt")
-    br
-    img(src="./inclusion-tee-model-1.jpg", alt="")
-    br
-    img(src="./inclusion-tee-model-2.jpg", alt="")
-    br
-    // TODO: need this image to match the aspect ratio of others
-    img(src="./inclusion-tee-model-3.jpg", alt="")
-    //- TODO: show DSC07070.jpg, needs cropping or a different photo
+                    p.text-white The logomark emerged from my fascination with the numerous aspects of one’s identity and finding ways to embrace them. An X is the simplest expression of an intersection, symbolizing the point where the many elements of our identity meet.
+                    br
+                    p.text-white Black and white in the graphic symbolize the (illusion of) maximum contrast of our differences. While Virgil Abloh’s brand Off-White stands for the grey area between black and white, I see it differently. To me, black is white.
+                    br
+                    p.text-white The Inclüsion Tee was the best-selling product while running the clothing brand.
+                    img(class="py-4", src="./off-white-tag.jpg", alt="Clothing tag from Off-white")
+                div
+                    
+                    img(class="py-4 w-2/3", src="./hbz-virgil-611450214-1522065262.jpg", alt="The late Virgil Abloh with his hands in prayer")
+                    p.caption.text-white The late Virgil Abloh was the catalyst for my interest in design. One person can change your whole life.
+                        br
+                        strong.text-white RIP Virgil Abloh (1980–2021)
+        section
+            +centeredPage()
+                h2.text-white Company Logo
+                //- TODO: refactor out as a utility for vertical + horizontal centering
+                div(class="flex justify-center items-center lg:h-screen")
+                    img(class="mx-auto w-1/2", src="./ntrsct-logo-white.png", alt="The ntrsct designs logo, and X with ntrsct written out horizontally") 
+        section
+            +centeredPage()
+                h1.font-serif.text-white It starts with yoü.
+                div
+                    p.text-white I chose the German character, ü (u-umlaut), to symbolize the viewer (you) being the source of an inclusive environment—an ode to the reunification of East and West Germany after WWII. It also looks like a smiley face!
+                    br
+                    p.text-white This graphic resonated with me at a time when political and social issues were polarizing the American people.
+                    img(class="py-4 w-1/2" src="./inclusion-sketch.png", alt="An early sketch of the inclusion tee graphic from the Procreate app for iPad")
+                    p.caption.text-white From sketch to reality. The figure-ground ambiguity of the X was a happy accident while working in Adobe Illustrator.
+        section
+            +centeredPage()
+                div
+                    h2.text-white(class="lg:mt-0 lg:pt-0") Final graphic
+                    img(class="p-8", src="./inclusion-white.png", alt="The inclusion tee graphic, spelling out inclusion with an X in the negative space")
+        section
+            img(class="mx-auto max-h-screen" src="./inclusion-tee-mockup.png", alt="A digital mockup of the inclusion graphic in black ink on a white t-shirt")
+        section
+            img.w-full(src="./inclusion-tee-model-1.jpg", alt="")
+        section
+            img.w-full(src="./inclusion-tee-model-2.jpg", alt="")
+        section
+            //- TODO: need this image to match the aspect ratio of others
+            img.w-full(src="./inclusion-tee-model-3.jpg", alt="")
+        //- TODO: show DSC07070.jpg, needs cropping or a different photo

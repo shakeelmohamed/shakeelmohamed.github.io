@@ -15,7 +15,7 @@ mixin centeredPage()
     //- Other pages,not so much...
     //- Regular pages needs feel cohesive with the homepage
     //- 
-    div(class="mx-auto place-content-center self-center lg:w-1/2")
+    div.centered-page(class="mx-auto place-content-center self-center lg:w-1/2")
         block
 
 //- TODO: Move this into atomic design file structure
@@ -64,7 +64,7 @@ mixin footer()
                     each link, name in metadata.social
                         -- ++numLinks
                         span
-                            a(class="social-link" href=link) #{name} &nbsp;
+                            a(class="social-link" href=link target="_blank") #{name} &nbsp;
                             if numLinks < (Object.keys(metadata.social).length)
                                 | | &nbsp;
                 br
@@ -78,14 +78,12 @@ mixin footer()
 //- TODO: remix so blog listing can reuse part of this
 mixin projectListing(project)
     div.pb-8
-        //- TODO: bring back the links dude
-        //- a(href=project.url)
-            //- img.portfolio-cover.w-full(src=project.data.openGraphImage)
-        img.portfolio-cover.w-full(src=project.data.openGraphImage)
+        a(href=project.url)
+            img.portfolio-cover.w-full(src=project.data.openGraphImage)
         div.pt-2
             div(class="text-navy pb-0.5 text-2xl font-sans font-semibold")
-                h2 #{project.data.title}
-                    //- a(href=project.url) #{project.data.title}
+                h2
+                    a(href=project.url) #{project.data.title}
             //- TODO: need a max-width here so the lines aren't super long
             div.project-meta
                 if project.data.media

@@ -31,7 +31,7 @@ I'll expound upon these two in detail before sharing my individual HOWs and WHAT
 
 ## HOWs - approach to doing
 
-HOWs are the the methods, the approaches, the way that an individual uniquely goes about their life. The HOWs also have a process to go through defining them, this step is independent. Once one has completed the individual why discovery, they will have a list of themes common among the stories they've shared. One of those themes is the **contribution**, the other is the **impact** which were used in the WHY statement. Eliminate those from the list to begin the HOW definition process.
+HOWs are the methods, the approaches, the way that an individual uniquely goes about their life. The HOWs also have a process to go through defining them, this step is independent. Once one has completed the individual why discovery, they will have a list of themes common among the stories they've shared. One of those themes is the **contribution**, the other is the **impact** which were used in the WHY statement. Eliminate those from the list to begin the HOW definition process.
 
 1. Narrow down the list of themes to at most 5, you may want to combine or remove similar themes at this step.
 2. State your HOWs, they will follow a solid structure. (e.g.: "Learn something from everyone"). Use active language, start with a verb, remove "ing" from verbs, be as concise as you can.
