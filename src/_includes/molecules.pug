@@ -70,7 +70,7 @@ mixin footer()
                 br
                 div
                     //- TODO: link this next paragraph to the project/blog page about the website itself
-                    p Designed and developed with✨emotion✨.
+                    p Designed and developed with ✨emotion✨.
                     p
                         script document.write("&copy; " + new Date().getFullYear() + " Shakeel Mohamed")   
 
@@ -81,7 +81,7 @@ mixin projectListing(project)
         //- TODO: bring back the links dude
         //- a(href=project.url)
             //- img.portfolio-cover.w-full(src=project.data.openGraphImage)
-        img.portfolio-cover.w-full(src=project.data.openGraphImage)
+        img.portfolio-cover.w-full(src=project.data.openGraphImage alt="Cover image for " + project.data.title + " project")
         div.pt-2
             div(class="text-navy pb-0.5 text-2xl font-sans font-semibold")
                 h2 #{project.data.title}
