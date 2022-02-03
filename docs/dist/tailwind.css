@@ -1292,6 +1292,10 @@ select {
   -moz-column-gap: 4rem;
        column-gap: 4rem;
 }
+.gap-x-8 {
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+}
 .self-center {
   align-self: center;
 }
