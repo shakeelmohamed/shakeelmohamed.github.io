@@ -3,6 +3,7 @@ layout: post
 date: 2021-06-10
 title: Powerful Lessons From Splunk I’ll Never Forget
 description: This is my attempt to codify the instinctive and intuitive approach I take to code reviews.
+openGraphImage: ./header.png
 tags:
     - post
     - career
@@ -43,7 +44,7 @@ The biggest upside to financial security has been freeing up my mind to explore 
 
 ## Tedd Hellmann
 
-### Lesson: Know which battles to fight, let go of the rest. 
+### Lesson: Know which battles to fight, let go of the rest.
 
 As the team’s product manager, Tedd and I worked closely together on many customer requests with Splunk developer tools. At times we’d have a huge backlog of requests coming in. It never felt good, yet we had to balance them with new projects. I don’t know if we ever talked about it directly, but we often applied the [Pareto Principle](https://en.wikipedia.org/wiki/Pareto_principle) to stay balanced (addressing 80% of issues with 20% engineering effort).
 

@@ -16,6 +16,14 @@ module.exports = {
         split.pop();
 
         return split.join("") + "Z";
+    },
+    buildOGImageURL: data => {
+        if (data.openGraphImage) {
+            return data.page.filePathStem.replace("index", "") + data.openGraphImage;
+        } else {
+            console.warn(`buildOGImageURL dun goof'd for ${data.title}`);
+            return;
+        }
     }
     // TODO: if date is missing, try to parse it from the folder name?
 };

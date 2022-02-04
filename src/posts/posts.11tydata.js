@@ -13,6 +13,7 @@ module.exports = {
         }),
         categories: data => data.tags.filter((val) => {
             return !(val.toLowerCase() == "post" || val.toLowerCase() == "featured");
-        }).join(", ")
+        }).join(", "),
+        openGraphImage: data => utils.buildOGImageURL(data)
     }
 };
