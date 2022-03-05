@@ -7,7 +7,7 @@ module.exports = {
         // Reformat the date in ISO format
         cleanDate: data => utils.formatDate(data.page.date),
         atomFeedDate: data => utils.formatDateForAtomFeed(data.page.date),
-        atomUpdatedDate: data => utils.formatDateForAtomFeed(fs.statSync(data.page.inputPath).mtime),
+        atomUpdatedDate: data => utils.gitDates(data.page.inputPath).then(dates => utils.formatDateForAtomFeed(dates.modified)),
         categoriesList: data => data.tags.filter((val) => {
             return !(val.toLowerCase() == "post" || val.toLowerCase() == "featured");
         }),

@@ -28,6 +28,7 @@
     "alex": "^10.0.0",
     "autoprefixer": "^10.4.2",
     "concurrently": "^7.0.0",
+    "git-date-extractor": "^4.0.1",
     "jstransformer-markdown-it": "^2.1.0",
     "markdown-it": "^12.3.2",
     "postcss": "^8.4.5",
