@@ -10,6 +10,7 @@ block hero
     +centeredPage()
         h1 Links 🔗
         img(src="/img/headshot.jpg" alt="Shakeel Mohamed headshot" class="w-1/3 rounded-full")
+        br
         p #{description}
 
 block content
@@ -23,6 +24,9 @@ block content
 
 mixin links()
     each link in links
-        button.formkit-submit.formkit-submit.bg-navy.w-full(type="button" style="border-radius:4px;")
-            h3(style="padding: 12px 24px")
-                a.text-white(href=link.url) #{link.text}
+        +link(link.text, link.url)
+
+mixin link(label, url)
+    a(href=url)
+        button.link-button(type="button")
+            h3(style="padding: 12px 24px") #{label}

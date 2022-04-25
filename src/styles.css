@@ -92,7 +92,7 @@
     }
     
     /* Don't automatically add quotes to a blockquote (from markdown) */
-    .prose  blockquote {
+    .prose blockquote {
         p:first-of-type::before, p:last-of-type::after {
             content: none;
         }
@@ -127,5 +127,12 @@
     }
     .mailto {
         @apply transition hover:text-orange;
+    }
+
+    .link-button {
+        @apply my-2 bg-navy w-full rounded-md hover:bg-orange;
+    }
+    .link-button h3 {
+        @apply text-white hover:text-white;
     }
 }

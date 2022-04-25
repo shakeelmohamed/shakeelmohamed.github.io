@@ -23,7 +23,7 @@ module.exports = {
         if (data.openGraphImage) {
             return data.page.filePathStem.replace("index", "") + data.openGraphImage;
         } else {
-            console.warn(`buildOGImageURL dun goof'd for ${data.title}`);
+            console.warn(`buildOGImageURL is missing an OG image for ${data.title}`);
             return;
         }
     },
