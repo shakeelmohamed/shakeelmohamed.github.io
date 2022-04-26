@@ -4,28 +4,48 @@ description: Shakeel Mohamed is a designer & brand strategist in the greater Sea
 canonical: "/links"
 ---
 
-extends _includes/layouts/base.pug
+extends _includes/layouts/super.pug
 
-block hero
-    +centeredPage()
-        h1 Links 🔗
-        img(src="/img/headshot.jpg" alt="Shakeel Mohamed headshot" class="w-1/3 rounded-full")
-        br
-        p #{description}
+block body
+    main
+        +centeredPage()
+            +headerLogo()
+            img(src="/img/headshot.jpg" alt="Shakeel Mohamed headshot" class="w-1/3 rounded-full")
+            br
+            p #{description}
 
-block content
-    +centeredPage()
-        h2 Subscribe
-        +mailingListForm()
-        br
-        +links()
-        h2 Recent Posts
-        +getPosts(true)
-        br
-        p.subhead Keep reading in the 
-            a(href="/blog-archive") archive.
-        h2 Contact
-        +contact()
+            h2 Subscribe
+            +mailingListForm()
+            br
+            +links()
+            h2 Recent Posts
+            +getPosts(true)
+            br
+            p.subhead Keep reading in the 
+                a(href="/blog-archive") archive.
+            h2 Contact
+            +contact()
+
+//- block hero
+//-     +centeredPage()
+//-         h1 Links 🔗
+//-         img(src="/img/headshot.jpg" alt="Shakeel Mohamed headshot" class="w-1/3 rounded-full")
+//-         br
+//-         p #{description}
+
+//- block content
+//-     +centeredPage()
+//-         h2 Subscribe
+//-         +mailingListForm()
+//-         br
+//-         +links()
+//-         h2 Recent Posts
+//-         +getPosts(true)
+//-         br
+//-         p.subhead Keep reading in the 
+//-             a(href="/blog-archive") archive.
+//-         h2 Contact
+//-         +contact()
 
 mixin links()
     each link in links
