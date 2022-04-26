@@ -15,12 +15,17 @@ block hero
 
 block content
     +centeredPage()
+        h2 Subscribe
+        +mailingListForm()
+        br
         +links()
         h2 Recent Posts
         +getPosts(true)
         br
         p.subhead Keep reading in the 
             a(href="/blog-archive") archive.
+        h2 Contact
+        +contact()
 
 mixin links()
     each link in links
@@ -28,5 +33,5 @@ mixin links()
 
 mixin link(label, url)
     a(href=url)
-        button.link-button(type="button")
+        button.link-button.bg-navy(type="button")
             h3(style="padding: 12px 24px") #{label}
