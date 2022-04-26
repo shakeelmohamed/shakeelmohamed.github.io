@@ -1,0 +1,39 @@
+---
+title: Shakeel Mohamed – Links
+description: Shakeel Mohamed is a designer & brand strategist in the greater Seattle area.
+canonical: "/links"
+---
+
+extends _includes/layouts/super.pug
+
+block body
+    main
+        +centeredPage()
+            +headerLogo()
+            img(src="/img/headshot.jpg" alt="Shakeel Mohamed headshot" class="w-1/3 rounded-full")
+            br
+            p #{description}
+
+            h2 Subscribe
+            +mailingListForm()
+            br
+            +links()
+
+            //- TODO: bring these back once there’s a new mixin so they look like linktree buttons
+            //- h2 Recent Posts
+            //- +getPosts(true)
+            //- br
+            //- p.subhead Keep reading in the 
+            //-     a(href="/blog-archive") archive.
+            
+            h2 Contact
+            +contact()
+
+mixin links()
+    each link in links
+        +link(link.text, link.url)
+
+mixin link(label, url)
+    a(href=url)
+        button.link-button.bg-navy(type="button")
+            h3(style="padding: 12px 24px") #{label}

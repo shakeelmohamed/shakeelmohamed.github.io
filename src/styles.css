@@ -51,6 +51,10 @@
         @apply py-4;
     }
 
+    button {
+        @apply bg-navy w-full rounded-md hover:bg-orange;
+    }
+
     /* TODO: idk, I go back and forth on this thing */
     /* img.portfolio-cover {
         @apply transition ease-in-out duration-300 filter hover:grayscale;
@@ -92,7 +96,7 @@
     }
     
     /* Don't automatically add quotes to a blockquote (from markdown) */
-    .prose  blockquote {
+    .prose blockquote {
         p:first-of-type::before, p:last-of-type::after {
             content: none;
         }
@@ -127,5 +131,12 @@
     }
     .mailto {
         @apply transition hover:text-orange;
+    }
+
+    .link-button {
+        @apply my-2;
+    }
+    .link-button h3 {
+        @apply text-white hover:text-white;
     }
 }
