@@ -23,7 +23,7 @@
   "private": true,
   "homepage": "https://github.com/shakeelmohamed/beta#readme",
   "dependencies": {
-    "async": "^3.2.0",
+    "async": "^3.2.2",
     "pug": "^3.0.2",
     "rss": "^1.2.2",
     "showdown": "^1.9.1",
