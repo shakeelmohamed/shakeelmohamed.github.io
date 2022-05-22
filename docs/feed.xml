@@ -4,19 +4,27 @@
     <subtitle>Recent blog posts from Shakeel Mohamed, visual designer based in the greater Seattle area</subtitle>
     <link href="https://shakeelmohamed.com/feed.xml" rel="self"/>
     <link href="https://shakeelmohamed.com"/>
-    <updated>2021-09-08T00:00:00Z</updated>
+    <updated>2022-05-23T00:00:00Z</updated>
     <id>https://shakeelmohamed.com/</id>
     <author>
         <name>Shakeel Mohamed</name>
         <email>contact@shakeelmohamed.com</email>
     </author>
     <entry>
+        <title>One Year Can Change Your Whole Life (Accepted to ArtCenter)</title>
+        <link href="https://shakeelmohamed.com/posts/2022-05-23-one-year-can-change-your-whole-life/"/>
+        <published>2022-05-23T00:00:00Z</published>
+        <updated>2022-05-22T07:51:11Z</updated>
+        <id>https://shakeelmohamed.com/posts/2022-05-23-one-year-can-change-your-whole-life/</id>
+        <summary>type="text" For me, a career in design and creativity is a worthy lifelong pursuit.</summary>
+    </entry>
+    <entry>
         <title>My New Hustle Manifesto</title>
         <link href="https://shakeelmohamed.com/posts/2021-09-08-my-new-hustle-manifesto/"/>
         <published>2021-09-08T00:00:00Z</published>
         <updated>2022-02-04T19:17:15Z</updated>
         <id>https://shakeelmohamed.com/posts/2021-09-08-my-new-hustle-manifesto/</id>
-        <summary>type="text" After a great deal of reflection during the pandemic, I've begun to rethink how I want work</summary>
+        <summary>type="text" After a great deal of reflection during the pandemic, I‘ve begun to rethink how I want work</summary>
     </entry>
     <entry>
         <title>Powerful Lessons From Splunk I’ll Never Forget</title>

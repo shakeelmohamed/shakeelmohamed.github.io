@@ -1,0 +1,66 @@
+---
+layout: post
+date: 2022-05-23
+title: One Year Can Change Your Whole Life (Accepted to ArtCenter)
+description: "For me, a career in design and creativity is a worthy lifelong pursuit."
+openGraphImage: "header.png" 
+# TODO: need a header image
+tags:
+    - post
+    - grad school
+    - design school
+    - career journey
+---
+
+One year can change your whole life.
+
+This is the story of how I went from having a full-time job as a software engineer to receiving an MFA acceptance letter from my top school, ArtCenter College of Design.
+
+I’ve known I wanted to pursue a career in design for years but little did I know how much further I could get in one year alone. I owe much of my growth in this time to ideas from [Deep Work](https://smile.amazon.com/Deep-Work-Focused-Success-Distracted/dp/1455586692/) and The [12 Week Year](https://smile.amazon.com/12-Week-Year-Others-Months/dp/1118509234/). Together, these ideas helped me channel my excitement, nervousness, and sporadic ideas into two clear outcomes.
+
+1. Design a kick-ass portfolio
+2. Complete MFA applications
+
+## Making a Change
+
+Before I get into the how, let’s rewind to early 2021. Coming off of the collective trauma of 2020 in multiple areas of life, I knew I had to take massive action toward my dreams of a career in design. By this point, I had recognized there were ceilings to how much I could learn about design through self-study. I had taken online courses from [The Futur](https://thefutur.com/) and other resources, which helped me to recognize my skill gaps. Most importantly, Chris Do and his colleagues at The Futur exposed me to world-class design standards and this magical place called [ArtCenter](http://artcenter.edu/).
+
+All that said, I knew I was ready to leave my job but I wanted to test the waters a bit before I did. Going into 2021, I requested a 90-day sabbatical through my employer. This was one of the best decisions I’ve made because it gave me the mental space to think through what I desired in the next phase of my career. A month earlier, one of my mentors suggested looking into graduate design programs to accelerate my learning process and build a rock-solid foundation of design skills. I began the research process to learn about programs at different schools, keeping a spreadsheet of application requirements, and the unique advantages of each. Over the year, I narrowed down my list of 21 schools to 8, then 5, then 3, eventually applying to 2 schools.
+
+During those 3 months away from work, I spent the majority of my time reaching out to designers to hear their career journeys and volunteering with the Ismaili Muslim community. These two activities were tremendously productive. In conversations with these designers, I learned to embrace my experience as a developer as I began my career transition. Before these conversations, I had deluded myself into thinking that my past experiences had no value moving forward. Though they might not translate directly into visual design skills, the problem-solving approach I learned as a developer can be applied to any field. Through my volunteer experience I had the opportunity to remotely collaborate with dozens of people on creative projects at national and global scale. Once I began to embrace who I was, and where I came from, I let go of my perceived limitations of the past. I am a different kind of designer, and that’s perfectly okay. Along the way, I came up with the label: Developer Turned Designer, which is now the name of my email newsletter.
+
+Coming back from my sabbatical, on my first day I accidentally prompted my manager to ask me for some news. I decided at that moment to give my 2-week notice and wanted to spend the rest of 2021 working on my portfolio for applying to a design MFA. For better or worse, that news spread through the company Slack and everyone knew I was a) leaving and b) making a radical career change. Based on the positive feedback I received from my peers, I took another bold action. I don’t recommend this to anyone, because the consequences of failure can be very painful. I put my [BHAG (big, hairy, audacious goal)](https://www.jimcollins.com/concepts/bhag.html) in my social media bios: *Applying to graduate design programs*. By stating this goal very publicly, and in just about every conversation, I made it clear to my friends and family that I was absolutely committed to this next chapter of my career and would not be stopped. Yet, there were hurdles to overcome. 
+
+<!-- TODO: add screenshots of IG and Twitter bios -->
+
+## Starting Over
+
+Now let’s look at April 2021. At this point, I had never created a design portfolio before—which is the most important part of the application for design school. I knew I had worked on design projects, and I had some things up on my business website, I had even shared some things on social media. But to thoughtfully show and explain my design process on a page… that was foreign to me. In software development, you may add some comments to your code or write up some documentation, but that’s the extent of “showing your work” for many developers. This is where the limiting beliefs and impostor syndrome were storming at an all-time high.
+
+I had no idea what I was doing and spent many nights panicking before multiple online portfolio review events, only to skip the event because I didn’t feel like I was ready. Months later, I saw the [AIGA Portfolio Festival](https://www.aiga.org/design/design-conferences/aiga-portfolio-festival) was coming up and figured this would be a great opportunity to both have my portfolio reviewed and to listen to the feedback other participants received. I also knew some well-known designers were giving talks and wanted to soak up their wisdom. In the days leading up to the event, I cobbled together a hot mess as my first design portfolio just in time for the event. I joined the Zoom breakout room when it was time and oh boy, that review was a tough pill to swallow. I took copious notes from my reviewer but felt totally defeated. Did I have what it takes to get into *any* design program, let alone ArtCenter?
+
+This is where the power of a supportive network was essential. I shared my experience from the event and a handful of friends helped me to reframe my perspective as a growth opportunity. Much easier said than done. Ultimately I used the pain of that portfolio review to fuel my effort into making a drastically better one. One of the challenges I faced was not knowing the exact portfolio format each school wanted, so I began reaching out to admissions counselors at the top schools on my list. These conversations were incredibly helpful, along with seeking out recent alumni portfolios. If I could just make a portfolio close to the level of polish as an alumni’s, then I should have a chance among the pool of applicants. I have this foundational story of being around designers my whole career as a developer. I knew that would stand out when applying to these top design schools, many of whom have designers branching out to use code as a creative tool. With my conversations earlier in the year, I had a new level of confidence that my technical skills were an asset rather than a limitation.
+
+> “Sep-Nov 2021: The most critical point in my design career. 90 days of focus for grad school [applications].”
+
+As the summer came to an end, I knew time was running out and I had to get my act together (I’ve omitted a few here…). I had struggled to focus on a day to day basis, especially with a lack of structure I was used to in my full time job. I made the switch from one cup of decaf to regular coffee and rediscovered the power of caffeine. I started reading Deep Work after hearing it mentioned many times over the years. I jumped straight to the second half about practical strategies to focus more. I quit social media cold turkey, Instagram Reels was really doing a number on my attention span. I leaned into the idea of intense work sessions, followed by totally unplugging during timed breaks. I paired this idea with The 12 Week Year, because hey—it was September, and these applications were due in January. On my whiteboard I wrote in giant letters: “Sep-Nov 2021: The most critical point in my design career. 90 days of focus for grad school [applications].” Bold and to the point. I saw that message every day and it triggered something in my mind. A level of clarity, motivation, and dedication I hadn’t experienced since I first read Think and Grow Rich over ten years prior, which wired me to set and accomplish the first goals of my life.
+
+## Focus Mode
+
+For the next few months, I was a graphic design MFA applicant machine. My calendar was blocked out 9am to 11pm every day of the week. I was either designing, working on my portfolio, writing/revising my essay, redesigning my resume, asking for feedback, or learning more about the schools I was applying to. In that time, I fully redesigned and threw out my portfolio at least 3 times just for ArtCenter. I rewrote my personal statement as many times, going deeper and getting clearer on why I was applying to graduate school in the first place. As deadlines approached for the schools I applied to, I leaned into my focus even more. I slept on the couch 5 feet from my desk so I didn’t have to think about making my bed. I exclusively ate delivery meals from restaurants nearby. I went all in.
+
+January 15, 2022 arrived. Applications are due tonight, Saturday night. The day continued on just as the past several had. Intense periods of focus while taking breaks to watch clips of The Office. That evening caffeine no longer had any effect on me. I played [Sacrifice by The Weeknd](https://www.youtube.com/watch?v=VafTMsrnSTU) on repeat on hours as some form of bizzare working meditation. Multiple cups of coffee, tea, and Coke Zero couldn’t help me focus. My hips, legs and back started cramping up. Not from stress, but from physically sitting at my desk for so many hours nonstop for the previous few weeks. I hand cranked my desk up so I could stand. “When was the last time I stretched?” The music blared on. I was on autopilot now, the homestretch. I checked for typos and misalignment obsessively. File, export. Adobe InDesign crashed. The document corrupted itself. Sweating and in a half panic at 1am (an hour after the application deadline), I copied over my whole portfolio into a new InDesign file and successfully exported a PDF. Got the size right, and submitted the application. I quickly emailed my admissions counselor letting them know about slightly missing the deadline. I laid down on the couch and quickly fired off messages to a few friends letting them know my application was submitted. Sweet. Relief.
+
+Over a year since I first considered applying to graduate school, my applications were finally in. For the first time, maybe in my whole life, I accomplished something without hating myself on the other side of it. The final push was crazy, but looking back a few months later it’s a great story. With the encouragement of my mentors, I pushed aside the doubts and relentlessly did the work required. I rarely felt stressed during the final few weeks. There was a lot to do, and somehow I knewI could get everything done. This experience would not have been possible without the journey to developing [My New Hustle Manifesto](https://shakeelmohamed.com/posts/2021-09-08-my-new-hustle-manifesto/). In my application essay, I mentioned spending 3 years or 30 to find mastery in the craft of (graphic) design–and I mean it. For me, a career in design and creativity is a worthy lifelong pursuit. 
+
+## The Next Chapter
+
+In the end, I received acceptances to both schools that I applied to! After visiting both schools last month, I committed to ArtCenter. Looking back, it feels surreal. (Insert additional clichés). In another post I’d like to dive into the earlier parts of my life. Who knew that growing up in the (then) small town of Marysville, Washington would be the starting point of this journey I call: Local to Global. I’ll admit that it still hasn’t sunk in that I’m attending ArtCenter in a few months, even after touring the campus and meeting with faculty face to face.
+
+I owe gratitude to dozens of people for supporting me over the years. In particular, the following people were instrumental in guiding me through the application process: [Jose Caballer](https://www.linkedin.com/in/josecaballer/), [Gloria Kondrup](https://www.linkedin.com/in/gloria-kondrup-18a02911), [R. Lance Garcia](https://www.linkedin.com/in/rlance), [Juan Ulloa](https://www.linkedin.com/in/julloa), [Rahim Bhimani](https://www.linkedin.com/in/rahimbhimani) & [Neha Sadruddin](https://www.linkedin.com/in/nehasadruddin).
+
+## Thank You.
+
+As I mentioned in my first newsletter, I got accepted to ArtCenter and will be moving to Los Angeles in time for fall semester! Until then I’m tying up loose ends in Seattle before I start this new adventure of graduate school. I’ll be sharing monthly notes about my journey as a Developer Turned Designer. If you want to hear more, please sign up [here](https://shakeelmohamed.com/links).
+
+Finally, if you know anyone who might be interested in logo design or brand strategy services, I would greatly appreciate an introduction to them!
