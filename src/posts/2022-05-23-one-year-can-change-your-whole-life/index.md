@@ -3,8 +3,7 @@ layout: post
 date: 2022-05-23
 title: One Year Can Change Your Whole Life (Accepted to ArtCenter)
 description: "For me, a career in design and creativity is a worthy lifelong pursuit."
-openGraphImage: "header.png" 
-# TODO: need a header image
+openGraphImage: "header.png"
 tags:
     - post
     - grad school
@@ -31,7 +30,7 @@ During those 3 months away from work, I spent the majority of my time reaching o
 
 Coming back from my sabbatical, on my first day I accidentally prompted my manager to ask me for some news. I decided at that moment to give my 2-week notice and wanted to spend the rest of 2021 working on my portfolio for applying to a design MFA. For better or worse, that news spread through the company Slack and everyone knew I was a) leaving and b) making a radical career change. Based on the positive feedback I received from my peers, I took another bold action. I don’t recommend this to anyone, because the consequences of failure can be very painful. I put my [BHAG (big, hairy, audacious goal)](https://www.jimcollins.com/concepts/bhag.html) in my social media bios: *Applying to graduate design programs*. By stating this goal very publicly, and in just about every conversation, I made it clear to my friends and family that I was absolutely committed to this next chapter of my career and would not be stopped. Yet, there were hurdles to overcome. 
 
-<!-- TODO: add screenshots of IG and Twitter bios -->
+[![A screenshot of Shakeel Mohamed’s Instagram bio, with the following line highlighted: Applying to graduate design programs.](ig-bio.png)](https://instagram.com/shakeelxyz)
 
 ## Starting Over
 
