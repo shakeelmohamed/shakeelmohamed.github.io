@@ -8,6 +8,11 @@ module.exports = {
         "just",
         "simple",
         "special",
-        "of-course"
+        "of-course",
+        "alumnae-alumni",
+        "yank",
+        "boy-girl",
+        "aunt-uncle",
+        "savage"
     ]
 };

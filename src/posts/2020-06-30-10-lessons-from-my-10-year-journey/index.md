@@ -62,7 +62,7 @@ Marie Kondo is such a soulful person, I loved watching her Netflix show! Around 
 
 > My why statement is: **to relentlessly pursue being world-class, so that we can all experience beyond what's possible!**
 
-After reading my previous 9 lessons, that WHY statement feels so right! Over the past year I've grown to be a leader in many ways, especially in my volunteer role as the National Product manager for [IPNOnline](https://ipnonline.net). I received one incredible piece of advice to lean into alignment when recruiting volunteers who're already interested in what the team is trying to achieve. You don't have to convince people to do anything if they already want to do it - just make them aware of the opportunity.
+After reading my previous 9 lessons, that WHY statement feels so right! Over the past year I've grown to be a leader in many ways, especially in my volunteer role as the National Product manager for [IPNOnline](https://ipnonline.net). I received one incredible piece of advice to lean into alignment when recruiting volunteers who’re already interested in what the team is trying to achieve. You don't have to convince people to do anything if they already want to do it - just make them aware of the opportunity.
 
 That piece of advice sent me down a rabbit whole on Simon Sinek's Golden Circle Theory, which I've written 2 posts about:
 
