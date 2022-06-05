@@ -3,52 +3,39 @@ title: BREAK Journaling – Shakeel Mohamed
 description: A journaling framework for overcoming limiting beliefs
 ---
 
-extends ../_includes/layouts/base.pug
+extends ../_includes/layouts/break.pug
 
 //- TODO: this entire page has WIP copy
 
 block hero
     link(href="./styles.css" rel="stylesheet")
+    +bigBreak()
     div
         h1 BREAK Journaling
         p.subhead BREAK is a journaling process I created while on vacation in Thailand just before the pandemic in February 2022. Days after a stressful project, I noticed myself ruminating on negative thoughts that I knew to be untrue.
             br
             | On the trip I noted all the limiting beliefs I observed and a fact or two to disprove them. After a few days of this, my anxiety subsided. I drafted this five-step process on my last night of vacation, knowing it was special.
 
+
+mixin bigBreak()
+    div.flex.items-end(style="min-height:100vh")
+        //- TODO: make an arrow here
+        img.full-width(src="./BREAK-large-type.svg" alt="BREAK logo in navy at full page width")
+
 block content
-    :markdown-it(html=true)
-        > ‼️Work in progress. ‼️
-
-        This page should be in better shape by ~July 1, 2022.
-
-        Until then, see my full story in [this presentation](https://tiny.cc/limiting-beliefs).
-
-
-        # The Framework Steps
-
-        ## BELIEF
-
-        State the limiting belief.
-
-        ## REFRAME
-
-        How could you describe this situation without judgment?
-
-        ## EMPOWER
-
-        What is an empowering alternative belief?
-
-        ## ATTEST
-
-        List facts that disprove the limiting belief.
-
-
-        ## KILL
-
-        What can you do to totally eliminate the limiting belief?
-
+    //- TODO: background
+    +stepHeader(1, "Belief")
+    +stepHeader(2, "Reframe")
+    +stepHeader(3, "Empower")
+    +stepHeader(4, "Attest")
+    +stepHeader(5, "Kick")
+    //- TODO: waitlist
     .mx-auto.py-8
         +breakForm()
+    //- TODO: bio
+
+mixin stepHeader(number, text)
+    h2 #{number}. #{text}
 
 mixin breakForm()
     <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>

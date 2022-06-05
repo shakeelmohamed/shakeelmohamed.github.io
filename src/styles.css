@@ -6,14 +6,31 @@
     html {
         @apply text-gray;
     }
+    body {
+        @apply overflow-x-hidden;
+    }
+    body {
+        @apply px-0;
+    }
+    header {
+        @apply mx-auto sticky top-0 z-50;
+    }
     footer {
         @apply py-12;
     }
     section {
         @apply w-full aspect-video;
     }
+    /* TODO: define a style for full width section, which can then have a color applied to it */
+    section {
+        @apply py-4;
+    }
     .centered-page img {
         @apply mx-auto;
+    }
+
+    main {
+        @apply px-0 mx-8;
     }
 
     /* Headings */
@@ -46,19 +63,10 @@
         @apply text-gray font-bold;
     }
 
-    /* TODO: define a style for full width section, which can then have a color applied to it */
-    section {
-        @apply py-4;
-    }
 
     button {
         @apply bg-navy w-full rounded-md hover:bg-orange;
     }
-
-    /* TODO: idk, I go back and forth on this thing */
-    /* img.portfolio-cover {
-        @apply transition ease-in-out duration-300 filter hover:grayscale;
-    } */
 
     img.logo {
         @apply inline mr-2;
@@ -113,10 +121,6 @@
        margin: 0 .05em 0 .1em;
        vertical-align: -0.1em;
        display: inline;
-    }
-
-    .main {
-        @apply px-4 md:px-16;
     }
 
     /* TODO: make this work with tailwind build ins */

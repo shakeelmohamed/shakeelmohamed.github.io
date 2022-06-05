@@ -549,6 +549,19 @@ select {
   --tw-text-opacity: 1;
   color: rgb(102 102 102 / var(--tw-text-opacity));
 }
+    body {
+  overflow-x: hidden;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+    header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  z-index: 50;
+  margin-left: auto;
+  margin-right: auto;
+}
     footer {
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -557,9 +570,21 @@ select {
   aspect-ratio: 16 / 9;
   width: 100%;
 }
+    /* TODO: define a style for full width section, which can then have a color applied to it */
+    section {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
     .centered-page img {
   margin-left: auto;
   margin-right: auto;
+}
+
+    main {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
     /* Headings */
@@ -658,11 +683,6 @@ select {
   color: rgb(102 102 102 / var(--tw-text-opacity));
 }
 
-    /* TODO: define a style for full width section, which can then have a color applied to it */
-    section {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
 
     button {
   width: 100%;
@@ -671,15 +691,11 @@ select {
   background-color: rgb(0 40 85 / var(--tw-bg-opacity));
 }
 
+
     button:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(255 92 10 / var(--tw-bg-opacity));
 }
-
-    /* TODO: idk, I go back and forth on this thing */
-    /* img.portfolio-cover {
-        @apply transition ease-in-out duration-300 filter hover:grayscale;
-    } */
 
     img.logo {
   margin-right: 0.5rem;
@@ -1188,6 +1204,10 @@ select {
   margin-left: auto;
   margin-right: auto;
 }
+.my-0 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
 .my-2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -1273,6 +1293,9 @@ select {
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
 .flex-wrap {
   flex-wrap: wrap;
 }
@@ -1281,6 +1304,9 @@ select {
 }
 .place-content-center {
   place-content: center;
+}
+.items-end {
+  align-items: flex-end;
 }
 .items-center {
   align-items: center;
@@ -1364,10 +1390,6 @@ select {
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-}
-.py-6 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
 }
 .py-8 {
   padding-top: 2rem;
@@ -1528,17 +1550,6 @@ img.emoji {
        vertical-align: -0.1em;
        display: inline;
     }
-.main {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-@media (min-width: 768px) {
-
-  .main {
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-}
 /* TODO: make this work with tailwind build ins */
 .full-width {
       left: 50%;
