@@ -127,11 +127,11 @@ mixin getPosts(recent=false)
     - var source = collections.recentPosts;
     if !recent
         - source = collections.post;
-    //- TODO: fix this so all titles are flush left properly against variable width dates
-    each post in source
-        .flex.flex-nowrap.items-baseline
-            p.whitespace-nowrap #{post.data.cleanDate} &nbsp;
-            div
+    .flex.flex-wrap.items-baseline
+        each post in source
+            div(class="basis-1/4")
+                p.whitespace-nowrap.text-right #{post.data.cleanDate} &nbsp;
+            div(class="basis-3/4")
                 h3(class="hover:text-orange")
                     a(href=post.url) #{post.data.title}
                 //- TODO: make tags clickable
@@ -150,10 +150,10 @@ mixin getMentions(recent=false)
     - var source = mentions.recent;
     if !recent
         - source = mentions.all;
-    //- TODO: fix this so all titles are flush left properly against variable width dates
-    each mention in source
-        .flex.flex-nowrap.items-baseline
-            p.whitespace-nowrap.text-right #{mention.date} &nbsp;
-            div
-                p
-                    a(href=mention.url, class="text-navy font-medium hover:text-orange") #{mention.title}
+    .flex.flex-wrap.items-baseline
+        each mention in source
+            div(class="basis-1/4")
+                p.whitespace-nowrap.text-right #{mention.date} &nbsp;
+            div(class="basis-3/4")
+                a(href=mention.url, class="text-navy font-medium hover:text-orange") #{mention.title}
+                br

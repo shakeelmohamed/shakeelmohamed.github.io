@@ -1245,6 +1245,9 @@ select {
 .flex {
   display: flex;
 }
+.table {
+  display: table;
+}
 .grid {
   display: grid;
 }
@@ -1281,6 +1284,15 @@ select {
 .flex-grow {
   flex-grow: 1;
 }
+.basis-1\/4 {
+  flex-basis: 25%;
+}
+.basis-3\/4 {
+  flex-basis: 75%;
+}
+.table-auto {
+  table-layout: auto;
+}
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
@@ -1293,8 +1305,8 @@ select {
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
-.grid-cols-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+.flex-row {
+  flex-direction: row;
 }
 .flex-wrap {
   flex-wrap: wrap;
@@ -1421,6 +1433,9 @@ select {
 }
 .text-center {
   text-align: center;
+}
+.text-right {
+  text-align: right;
 }
 .font-sans {
   font-family: proxima-nova, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -1587,6 +1602,13 @@ img.emoji {
   --tw-text-opacity: 1;
   color: rgb(255 92 10 / var(--tw-text-opacity));
 }
+@media (min-width: 640px) {
+
+  .sm\:py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
 @media (min-width: 768px) {
 
   .md\:col-span-12 {
@@ -1645,11 +1667,6 @@ img.emoji {
   .md\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
-  }
-
-  .md\:py-4 {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
   }
 
   .md\:text-left {
