@@ -138,6 +138,7 @@ mixin getPosts(recent=false)
                 p Topics: #{post.data.categories}
 
 mixin getFeaturedPosts()
+    //- TODO: this might be nice as a 4 column grid on desktop
     +gridCols2()
         each post in collections.featured
             //- TODO: give this a border and make it a "card" design

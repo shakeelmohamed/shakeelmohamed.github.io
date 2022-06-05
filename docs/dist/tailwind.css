@@ -547,7 +547,7 @@ select {
 }
     html {
   --tw-text-opacity: 1;
-  color: rgb(102 102 102 / var(--tw-text-opacity));
+  color: rgb(85 85 85 / var(--tw-text-opacity));
 }
     body {
   overflow-x: hidden;
@@ -596,7 +596,7 @@ select {
   line-height: 2.5rem;
   font-weight: 600;
   --tw-text-opacity: 1;
-  color: rgb(102 102 102 / var(--tw-text-opacity));
+  color: rgb(85 85 85 / var(--tw-text-opacity));
 }
     @media (min-width: 768px) {
 
@@ -645,14 +645,14 @@ select {
   font-size: 1.125rem;
   line-height: 1.75rem;
   --tw-text-opacity: 1;
-  color: rgb(102 102 102 / var(--tw-text-opacity));
+  color: rgb(85 85 85 / var(--tw-text-opacity));
 }
     .caption {
   font-family: proxima-nova, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 0.875rem;
   line-height: 1.25rem;
   --tw-text-opacity: 1;
-  color: rgb(102 102 102 / var(--tw-text-opacity));
+  color: rgb(85 85 85 / var(--tw-text-opacity));
 }
     /* Body text style */
     p, li {
@@ -660,7 +660,7 @@ select {
   font-size: 1rem;
   font-weight: 300;
   --tw-text-opacity: 1;
-  color: rgb(102 102 102 / var(--tw-text-opacity));
+  color: rgb(85 85 85 / var(--tw-text-opacity));
 }
     a {
   transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
@@ -680,7 +680,7 @@ select {
     strong {
   font-weight: 700;
   --tw-text-opacity: 1;
-  color: rgb(102 102 102 / var(--tw-text-opacity));
+  color: rgb(85 85 85 / var(--tw-text-opacity));
 }
 
 
@@ -1192,6 +1192,9 @@ select {
 .m-2 {
   margin: 0.5rem;
 }
+.m-24 {
+  margin: 6rem;
+}
 .mx-8 {
   margin-left: 2rem;
   margin-right: 2rem;
@@ -1207,6 +1210,10 @@ select {
 .my-0 {
   margin-top: 0px;
   margin-bottom: 0px;
+}
+.mx-48 {
+  margin-left: 12rem;
+  margin-right: 12rem;
 }
 .my-2 {
   margin-top: 0.5rem;
@@ -1244,9 +1251,6 @@ select {
 }
 .flex {
   display: flex;
-}
-.table {
-  display: table;
 }
 .grid {
   display: grid;
@@ -1290,9 +1294,6 @@ select {
 .basis-3\/4 {
   flex-basis: 75%;
 }
-.table-auto {
-  table-layout: auto;
-}
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
@@ -1305,8 +1306,8 @@ select {
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
-.flex-row {
-  flex-direction: row;
+.flex-col {
+  flex-direction: column;
 }
 .flex-wrap {
   flex-wrap: wrap;
@@ -1316,6 +1317,9 @@ select {
 }
 .place-content-center {
   place-content: center;
+}
+.items-start {
+  align-items: flex-start;
 }
 .items-end {
   align-items: flex-end;
@@ -1403,9 +1407,9 @@ select {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
-.py-8 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 .pb-2 {
   padding-bottom: 0.5rem;
@@ -1463,6 +1467,9 @@ select {
 .capitalize {
   text-transform: capitalize;
 }
+.italic {
+  font-style: italic;
+}
 .text-navy {
   --tw-text-opacity: 1;
   color: rgb(0 40 85 / var(--tw-text-opacity));
@@ -1477,7 +1484,7 @@ select {
 }
 .text-gray {
   --tw-text-opacity: 1;
-  color: rgb(102 102 102 / var(--tw-text-opacity));
+  color: rgb(85 85 85 / var(--tw-text-opacity));
 }
 .text-black {
   --tw-text-opacity: 1;
@@ -1511,7 +1518,7 @@ select {
   font-size: 1rem;
   line-height: 1.5;
   --tw-text-opacity: 1;
-  color: rgb(102 102 102 / var(--tw-text-opacity));
+  color: rgb(85 85 85 / var(--tw-text-opacity));
 }
 .prose h1 {
   font-family: freight-big-pro, ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
@@ -1530,7 +1537,7 @@ select {
 .prose p, .prose li {
   font-weight: 300;
   --tw-text-opacity: 1;
-  color: rgb(102 102 102 / var(--tw-text-opacity));
+  color: rgb(85 85 85 / var(--tw-text-opacity));
 }
 .prose a {
   transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
@@ -1548,7 +1555,7 @@ select {
 }
 .prose strong {
   --tw-text-opacity: 1;
-  color: rgb(102 102 102 / var(--tw-text-opacity));
+  color: rgb(85 85 85 / var(--tw-text-opacity));
 }
 /* Don't automatically add quotes to a blockquote (from markdown) */
 .prose blockquote p:first-of-type::before, .prose blockquote p:last-of-type::after {

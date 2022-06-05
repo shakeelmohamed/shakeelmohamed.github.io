@@ -26,6 +26,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['proxima-nova', ...defaultTheme.fontFamily.sans],
+        // TODO: bring in freight display, rethink which cuts should be used where
         serif: ['freight-big-pro', ...defaultTheme.fontFamily.serif],
       },
       fontSize: { // TODO: customize other type sizes here; actually do it in src/styles.css
@@ -48,7 +49,7 @@ module.exports = {
       white: '#FFFFFF',
       'light-blue': '#98B6E4',
       orange: '#FF5C0A',
-      gray: '#666666',
+      gray: '#555555',
       black: '#000000'
     },
   },

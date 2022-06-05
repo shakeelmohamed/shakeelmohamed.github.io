@@ -5,38 +5,70 @@ description: A journaling framework for overcoming limiting beliefs
 
 extends ../_includes/layouts/break.pug
 
-//- TODO: this entire page has WIP copy
-
 block hero
     link(href="./styles.css" rel="stylesheet")
     +bigBreak()
-    div
-        h1 BREAK Journaling
-        p.subhead BREAK is a journaling process I created while on vacation in Thailand just before the pandemic in February 2022. Days after a stressful project, I noticed myself ruminating on negative thoughts that I knew to be untrue.
-            br
-            | On the trip I noted all the limiting beliefs I observed and a fact or two to disprove them. After a few days of this, my anxiety subsided. I drafted this five-step process on my last night of vacation, knowing it was special.
-
 
 //- TODO: need to test this on other screens; looks fine on MBP only
 mixin bigBreak()
     div.flex.items-end(style="min-height:100vh")
         //- TODO: make an arrow here
         img.full-width(src="./BREAK-large-type.svg" alt="BREAK logo in navy at full page width")
+    hr.text-navy.my-0.full-width(style="border-width: 0.125em;")
 
 block content
-    //- TODO: background
-    +stepHeader(1, "Belief")
-    +stepHeader(2, "Reframe")
-    +stepHeader(3, "Empower")
-    +stepHeader(4, "Attest")
-    +stepHeader(5, "Kick")
-    //- TODO: waitlist
-    .mx-auto.py-8
-        +breakForm()
-    //- TODO: bio
+    .flex.flex-col.mx-48
+        +section(null, "Background")
+            //- TODO: bring in photos from the original deck, showcase authentic storytelling
+            p BREAK is a journaling process I created while on vacation in Thailand just before the pandemic in February 2022. Days after a stressful project, I noticed myself ruminating on negative thoughts that I knew to be untrue. On the trip I noted all the limiting beliefs I observed and a fact or two to disprove them. After a few days of this, my anxiety subsided. I drafted this five-step process on my last night of vacation, knowing it was special.
+            br
+            p From my over a decade of personal development training from world renowned success coaches including Tony Robbins, Eric Thomas. The BREAK Journal was created from my experiences of overcoming challenges in all areas of life including metal health, personal finances, and career development.
+        +section(1, "Belief")
+            +subhead("State the Limiting Belief")
+            p Limiting beliefs often begin with “I am...”, “Everyone is...”, or “I can’t...”. We have these instinctual thoughts when something isn’t happening the way we want.
+            +subhead("Example")
+            p.italic “I can’t take vacations because I will lose my job if I’m gone”
+        +section(2, "Reframe")
+            +subhead("How could you describe this situation without judgment?")
+            p The goal with this step is to think from an outside perspective. What would remain after peeling away several layers if this belief is an onion? If a friend told you this is what they believe about themselves, how might you respond if you wanted to help?
+            +subhead("Example")
+            p.italic “Other people take vacations, what makes me so special? Nothing, actually!”
+        +section(3, "Empower")
+            +subhead("What is an empowering alternative belief?")
+            p How else could you think about this topic? What statement might you say to remind yourself that this limiting belief is not true?
+            +subhead("Example")
+            p.italic “Taking vacations are actually necessary for me to perform at a high level”
+        +section(4, "Attest")
+            +subhead("List facts to disprove the limiting belief.")
+            p What is every possible reason you think this belief is nonsense? Brainstorm! Obvious reasons, silly reasons, get creative—whatever it takes. Make the longest list you can. Going beyond 10 items becomes more powerful. You want to gather evidence like you’re trying to convict the limiting belief for a crime. Punish this belief for the pain it caused you.
+            +subhead("Example")
+            p.italic “PTO is a legal requirement. If I did lose my job for taking a vacation, it would be a huge risk for my employer. In fact, taking a vacation will improve my productivity, prevent burnout, and boost employee morale.”
+        +section(5, "Kick")
+            +subhead("What could you do to totally eliminate this limiting belief?")
+            p Here is where it gets real. What things will you do the next time you notice this limiting belief? These can be mindset shifts, actions, behaviors, habits. You want a list of simple steps you can take to remind yourself this limiting belief has no merit. Make sure you have different tools. Variety is key.
+            +subhead("Example")
+            p.italic “Take a vacation! Even one day of paid time off for a weekend trip. Reflect on previous vacation experiences. Talk to others about their vacations. Voice concern with managers, get reassurance.”
+        +section(null, "Waitlist")
+            +subhead("Stay Tuned!")
+            //- TODO: waitlist copy
+            +breakForm()
 
-mixin stepHeader(number, text)
-    h2 #{number}. #{text}
+mixin section(num, text)
+    div(class="flex flex-col items-start py-12")
+        if num
+            //- TODO: fix left flush alignment on the heading AND all content within the section
+            h2(style="color:white !important;") #{num}. #{text}
+        else
+            h2 #{text}
+        .m-24
+            block
+        //- TODO: this is really hacky, and easier way is to
+        //- a) decrease the parent x-margin AND
+        //- b) add a padding to the section content
+        hr.text-navy.my-0(style="border-width: 0.065rem; min-width: 110%; position: relative; left: 50%; transform: translateX(-50%);")
+
+mixin subhead(text)
+    h3 #{text}
 
 mixin breakForm()
     <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
