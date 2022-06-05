@@ -20,6 +20,11 @@ var all = [
         "url": "https://www.splunk.com/en_us/blog/tips-and-tricks/introducing-simdata-v1-2.html"
     },
     {
+        "date": "August 8, 2020",
+        "title": "Spotifaves (Codeday Labs 2020 mentor project)",
+        "utl": "https://showcase.codeday.org/project/ckkh1rouo20550711o548ws85h8"
+    },
+    {
         "date": "May 21, 2020",
         "title": "Meet Shakeel Mohamed. He's the founder of ntrsct designs - @thehealthaisle on Instagram",
         "url": "https://www.instagram.com/p/CAeR7YonA2x/"
