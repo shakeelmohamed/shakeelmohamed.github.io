@@ -7,7 +7,7 @@
         @apply text-gray;
     }
     body {
-        @apply overflow-x-hidden;
+        @apply overflow-x-hidden relative;
     }
     body {
         @apply px-0;
@@ -16,8 +16,8 @@
         @apply mx-auto sticky top-0 z-50;
     }
     footer {
-        @apply py-12;
     }
+
     section {
         @apply w-full aspect-video;
     }

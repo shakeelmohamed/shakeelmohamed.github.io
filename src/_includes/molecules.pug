@@ -5,7 +5,7 @@ mixin flexCols2()
         block
 
 mixin gridCols2()
-    div(class="grid grid-cols-1 lg:grid-cols-2 gap-x-16 grap-y-2")
+    div(class="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-2")
         block
 
 mixin centeredPage()
@@ -31,7 +31,7 @@ mixin navItem(href, label)
 
 mixin header(bg="bg-white")
     //- TODO: layout breaks below 320px width
-    header
+    header(style="position: sticky; top: 0;")
         div(class="full-width " + bg)
             .mx-8
                 div(class="md:flex md:items-baseline md:justify-between")
