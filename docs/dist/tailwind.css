@@ -538,10 +538,19 @@ select {
 [type='file']:focus {
   outline: 1px auto -webkit-focus-ring-color;
 }
+    /* TODO: swap out tailwind classes for most of this mess */
+
+    html, body {
+      min-height: 100vh;
+      /* margin: 0; */
+      margin: 0px;
+    }
+
     html {
   --tw-text-opacity: 1;
   color: rgb(85 85 85 / var(--tw-text-opacity));
 }
+
     body {
   position: relative;
   overflow-x: hidden;
@@ -549,16 +558,42 @@ select {
       overscroll-behavior: none;
   padding-left: 0px;
   padding-right: 0px;
+        display: flex;
+        flex-flow: column;
+        height: 100%;
 }
+
     header {
-  position: -webkit-sticky;
-  position: sticky;
   top: 0px;
-  z-index: 50;
   margin-left: auto;
   margin-right: auto;
+        top: 0;
+        position: -webkit-sticky;
+        position: sticky;
+        z-index: 999;
+        /* TODO: make this dynamic */
+        /* TODO: need to remove left and right margins.. */
+        background-color: white;
+
+        flex: 0 1 auto;
+        /* The above is shorthand for:
+        flex-grow: 0,
+        flex-shrink: 1,
+        flex-basis: auto
+        */
 }
+
+    main {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  padding-left: 0px;
+  padding-right: 0px;
+      position: relative;
+      flex: 1 1 auto;
+}
+
     footer {
+      flex: 0 1 auto;
     }
 
     section {
@@ -573,13 +608,6 @@ select {
     .centered-page img {
   margin-left: auto;
   margin-right: auto;
-}
-
-    main {
-  margin-left: 2rem;
-  margin-right: 2rem;
-  padding-left: 0px;
-  padding-right: 0px;
 }
 
     /* Headings */
@@ -1393,9 +1421,6 @@ select {
 .max-w-screen-xl {
   max-width: 1280px;
 }
-.flex-shrink {
-  flex-shrink: 1;
-}
 .flex-grow {
   flex-grow: 1;
 }
@@ -1669,9 +1694,10 @@ select {
   color: rgb(85 85 85 / var(--tw-text-opacity));
 }
 /* Don't automatically add quotes to a blockquote (from markdown) */
-.prose blockquote p:first-of-type::before, .prose blockquote p:last-of-type::after {
-            content: none;
-        }
+.prose blockquote p:first-of-type::before,  .prose blockquote p:last-of-type::after {
+  --tw-content: none;
+  content: var(--tw-content);
+}
 /* ul {
         @apply list-none;
     } */
@@ -1716,10 +1742,12 @@ img.emoji {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+
 .hover\:text-orange:hover {
   --tw-text-opacity: 1;
   color: rgb(255 92 10 / var(--tw-text-opacity));
 }
+
 @media (min-width: 640px) {
 
   .sm\:py-4 {
@@ -1727,6 +1755,7 @@ img.emoji {
     padding-bottom: 1rem;
   }
 }
+
 @media (min-width: 768px) {
 
   .md\:col-span-12 {
@@ -1795,6 +1824,7 @@ img.emoji {
     text-align: center;
   }
 }
+
 @media (min-width: 1024px) {
 
   .lg\:col-span-8 {
@@ -1842,6 +1872,7 @@ img.emoji {
     padding-top: 0px;
   }
 }
+
 @media (min-width: 1280px) {
 
   .xl\:mt-20 {

@@ -3,19 +3,50 @@
 @tailwind utilities;
 
 @layer base {
+    /* TODO: swap out tailwind classes for most of this mess */
+
+    html, body {
+      min-height: 100vh;
+      /* margin: 0; */
+      @apply m-0;
+    }
+
     html {
         @apply text-gray;
     }
+
     body {
-        @apply overflow-x-hidden overscroll-none relative;
+        @apply overflow-x-hidden overscroll-none relative px-0;
+        display: flex;
+        flex-flow: column;
+        height: 100%;
     }
-    body {
-        @apply px-0;
-    }
+
     header {
         @apply mx-auto sticky top-0 z-50;
+        top: 0;
+        position: sticky;
+        z-index: 999;
+        /* TODO: make this dynamic */
+        /* TODO: need to remove left and right margins.. */
+        background-color: white;
+
+        flex: 0 1 auto;
+        /* The above is shorthand for:
+        flex-grow: 0,
+        flex-shrink: 1,
+        flex-basis: auto
+        */
     }
+
+    main {
+      @apply px-0 mx-8;
+      position: relative;
+      flex: 1 1 auto;
+    }
+
     footer {
+      flex: 0 1 auto;
     }
 
     section {
@@ -27,10 +58,6 @@
     }
     .centered-page img {
         @apply mx-auto;
-    }
-
-    main {
-        @apply px-0 mx-8;
     }
 
     /* Headings */
@@ -106,7 +133,7 @@
     /* Don't automatically add quotes to a blockquote (from markdown) */
     .prose blockquote {
         p:first-of-type::before, p:last-of-type::after {
-            content: none;
+            @apply content-none;
         }
     }
 

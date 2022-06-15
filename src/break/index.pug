@@ -16,9 +16,10 @@ mixin bigBreak()
             img.full-width(src="./BREAK-large-type.svg" alt="BREAK logo in navy at full page width")
     hr.text-navy.mt-24.full-width(style="border-width: 0.125em;")
 
+
 block content
     link(href="./styles.css" rel="stylesheet")
-    div.absolute.top-0.inset-x-0
+    div.top-0.inset-x-0
         +bigBreak()
         .flex.flex-col.mx-48
             +section(null, "Background")
@@ -64,7 +65,7 @@ mixin section(num, text)
             h2(style="color:white !important;") #{num}. #{text}
         else
             h2 #{text}
-        .m-24
+        .my-24.mx-auto
             block
         //- TODO: this is really hacky, and easier way is to
         //- a) decrease the parent x-margin AND
