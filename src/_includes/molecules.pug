@@ -32,7 +32,7 @@ mixin navItem(href, label)
 mixin header(bg="bg-white")
     //- TODO: layout breaks below 320px width
     header
-        div(class="full-width " + bg)
+        div.full-width(class=bg)
             .mx-8
                 div(class="md:flex md:items-baseline md:justify-between")
                     +headerLogo()

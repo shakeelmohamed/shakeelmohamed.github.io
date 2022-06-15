@@ -540,11 +540,15 @@ select {
 }
     /* TODO: swap out tailwind classes for most of this mess */
 
-    html, body {
-      min-height: 100vh;
-      /* margin: 0; */
-      margin: 0px;
-    }
+    /* Push everything back so the sticky header stays put */
+    * {
+  z-index: 0;
+}
+
+    html,  body {
+  margin: 0px;
+  min-height: 100vh;
+}
 
     html {
   --tw-text-opacity: 1;
@@ -553,48 +557,38 @@ select {
 
     body {
   position: relative;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
   overflow-x: hidden;
   -ms-scroll-chaining: none;
       overscroll-behavior: none;
   padding-left: 0px;
   padding-right: 0px;
-        display: flex;
-        flex-flow: column;
-        height: 100%;
 }
 
     header {
+  position: -webkit-sticky;
+  position: sticky;
   top: 0px;
+  z-index: 50;
   margin-left: auto;
   margin-right: auto;
-        top: 0;
-        position: -webkit-sticky;
-        position: sticky;
-        z-index: 999;
-        /* TODO: make this dynamic */
-        /* TODO: need to remove left and right margins.. */
-        background-color: white;
-
-        flex: 0 1 auto;
-        /* The above is shorthand for:
-        flex-grow: 0,
-        flex-shrink: 1,
-        flex-basis: auto
-        */
+  flex: 0 1 auto;
 }
 
     main {
+  position: relative;
   margin-left: 2rem;
   margin-right: 2rem;
+  flex: 1 1 auto;
   padding-left: 0px;
   padding-right: 0px;
-      position: relative;
-      flex: 1 1 auto;
 }
 
     footer {
-      flex: 0 1 auto;
-    }
+  flex: 0 1 auto;
+}
 
     section {
   aspect-ratio: 16 / 9;
@@ -1321,9 +1315,6 @@ select {
 .m-2 {
   margin: 0.5rem;
 }
-.m-24 {
-  margin: 6rem;
-}
 .mx-8 {
   margin-left: 2rem;
   margin-right: 2rem;
@@ -1698,10 +1689,10 @@ select {
   --tw-content: none;
   content: var(--tw-content);
 }
-/* ul {
-        @apply list-none;
-    } */
-/* TODO: make this work with tailwind build ins */
+/* TODO: I don't think I'm using twemoji,
+     *      an even better option might be noto emoji:
+     *      https://fonts.google.com/noto/specimen/Noto+Emoji            
+     */
 img.emoji {
        height: 1em;
        width: 1em;
@@ -1709,16 +1700,15 @@ img.emoji {
        vertical-align: -0.1em;
        display: inline;
     }
-/* TODO: make this work with tailwind build ins */
 .full-width {
-      left: 50%;
-      margin-left: -50vw;
-      margin-right: -50vw;
-      max-width: 100vw;
-      position: relative;
-      right: 50%;
-      width: 100vw;
-    }
+  position: relative;
+  left: 50%;
+  right: 50%;
+  width: 100vw;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        max-width: 100vw;
+}
 .mailto {
   transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
@@ -1742,12 +1732,10 @@ img.emoji {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
-
 .hover\:text-orange:hover {
   --tw-text-opacity: 1;
   color: rgb(255 92 10 / var(--tw-text-opacity));
 }
-
 @media (min-width: 640px) {
 
   .sm\:py-4 {
@@ -1755,7 +1743,6 @@ img.emoji {
     padding-bottom: 1rem;
   }
 }
-
 @media (min-width: 768px) {
 
   .md\:col-span-12 {
@@ -1824,7 +1811,6 @@ img.emoji {
     text-align: center;
   }
 }
-
 @media (min-width: 1024px) {
 
   .lg\:col-span-8 {
@@ -1872,7 +1858,6 @@ img.emoji {
     padding-top: 0px;
   }
 }
-
 @media (min-width: 1280px) {
 
   .xl\:mt-20 {
