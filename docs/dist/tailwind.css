@@ -1316,6 +1316,10 @@ select {
   margin-left: 12rem;
   margin-right: 12rem;
 }
+.my-24 {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
 .my-2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
