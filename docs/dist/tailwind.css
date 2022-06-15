@@ -545,6 +545,8 @@ select {
     body {
   position: relative;
   overflow-x: hidden;
+  -ms-scroll-chaining: none;
+      overscroll-behavior: none;
   padding-left: 0px;
   padding-right: 0px;
 }

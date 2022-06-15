@@ -7,7 +7,7 @@
         @apply text-gray;
     }
     body {
-        @apply overflow-x-hidden relative;
+        @apply overflow-x-hidden overscroll-none relative;
     }
     body {
         @apply px-0;
