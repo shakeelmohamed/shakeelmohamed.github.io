@@ -36,7 +36,7 @@ module.exports = {
       'light-blue': '#98B6E4',
       orange: '#FF5C0A',
       gray: '#555555',
-      black: '#000000'
+      black: '#111111'
     },
   },
   // variants: {
