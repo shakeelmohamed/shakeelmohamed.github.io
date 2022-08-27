@@ -1331,10 +1331,6 @@ select {
   margin-top: 0px;
   margin-bottom: 0px;
 }
-.mx-48 {
-  margin-left: 12rem;
-  margin-right: 12rem;
-}
 .my-24 {
   margin-top: 6rem;
   margin-bottom: 6rem;
@@ -1521,7 +1517,7 @@ select {
 }
 .bg-black {
   --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  background-color: rgb(17 17 17 / var(--tw-bg-opacity));
 }
 .p-8 {
   padding: 2rem;
@@ -1582,6 +1578,10 @@ select {
   font-size: 1.5rem;
   line-height: 2rem;
 }
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
 .font-bold {
   font-weight: 700;
 }
@@ -1615,7 +1615,7 @@ select {
 }
 .text-black {
   --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
+  color: rgb(17 17 17 / var(--tw-text-opacity));
 }
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
@@ -1732,6 +1732,21 @@ img.emoji {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+/* TODO:  figure out a cleaner way to have BREAK styles */
+h2.break {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+@media (min-width: 1024px) {
+
+  h2.break {
+    font-size: 6rem;
+    line-height: 1;
+  }
+}
+h2.break {
+        line-height: normal;
+    }
 .hover\:text-orange:hover {
   --tw-text-opacity: 1;
   color: rgb(255 92 10 / var(--tw-text-opacity));
@@ -1828,6 +1843,11 @@ img.emoji {
   .lg\:mx-auto {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .lg\:mx-48 {
+    margin-left: 12rem;
+    margin-right: 12rem;
   }
 
   .lg\:mt-0 {

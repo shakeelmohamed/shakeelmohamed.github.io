@@ -21,7 +21,7 @@ block content
     link(href="./styles.css" rel="stylesheet")
     div.top-0.inset-x-0
         +bigBreak()
-        .flex.flex-col.mx-48
+        .flex.flex-col(class="lg:mx-48 mx-8")
             +section(null, "Background")
                 //- TODO: bring in photos from the original deck, showcase authentic storytelling
                 //- https://docs.google.com/presentation/d/1Ghu_DhpO3fPKq3PVFLh7qWuVXUIdD2zIHKMRhF21hhQ/edit#slide=id.gd12d243c76_0_36
@@ -55,16 +55,16 @@ block content
                 p.italic “Take a vacation! Even one day of paid time off for a weekend trip. Reflect on previous vacation experiences. Talk to others about their vacations. Voice concern with managers, get reassurance.”
             +section(null, "Waitlist")
                 +subhead("Stay Tuned!")
-                //- TODO: waitlist copy
+                p.italic Join the waitlist to get updates about the BREAK journal, related content and future products.
                 +breakForm()
 
 mixin section(num, text)
     div(class="flex flex-col items-start py-12")
         if num
             //- TODO: fix left flush alignment on the heading AND all content within the section
-            h2(style="color:white !important;") #{num}. #{text}
+            h2.break(style="color:white !important;") #{num}. #{text}
         else
-            h2 #{text}
+            h2.break #{text}
         .my-24.mx-auto
             block
         //- TODO: this is really hacky, and easier way is to

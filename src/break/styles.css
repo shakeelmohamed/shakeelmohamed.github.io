@@ -29,8 +29,3 @@ p, .prose p {
 .social-link:hover, .mailto:hover {
     color: #002855 !important;
 }
-
-h2 {
-    font-size: 6em;
-    line-height: normal;
-}

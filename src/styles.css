@@ -151,4 +151,10 @@
     .link-button h3 {
         @apply text-white hover:text-white;
     }
+
+    /* TODO:  figure out a cleaner way to have BREAK styles */
+    h2.break {
+        @apply lg:text-8xl text-4xl;
+        line-height: normal;
+    }
 }
