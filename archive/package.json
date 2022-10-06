@@ -28,7 +28,7 @@
     "rss": "^1.2.2",
     "showdown": "^1.9.1",
     "showdown-highlight": "https://github.com/Bloggify/showdown-highlight.git",
-    "snyk": "^1.518.0"
+    "snyk": "^1.996.0"
   },
   "engines": {
     "node": "10.x"
