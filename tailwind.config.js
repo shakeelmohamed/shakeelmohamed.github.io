@@ -1,31 +1,18 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
+  mode: "jit",
   content: [
     './src/**/*.{md,pug}'
-    // ,
-    // './src/scripts/**/*.js' // TODO: probably remove, only used by random logo picker
   ],
   safelist: [
     'font-*'
   ],
-  // content: {
-  //   // TODO: further optimize for production, goal size for tailwind.css is 16k
-  //   enabled: true,
-  //   content: [
-  //     './src/**/*.{md,pug}',
-  //     './src/scripts/**/*.js' 
-  //   ],
-  //   mode: 'all',
-  //   preserveHtmlElements: true,
-  //   options: {
-  //     keyframes: true
-  //   }
-  // }, 
   theme: {
     extend: {
       fontFamily: {
         sans: ['proxima-nova', ...defaultTheme.fontFamily.sans],
+        // TODO: bring in freight display, rethink which cuts should be used where
         serif: ['freight-big-pro', ...defaultTheme.fontFamily.serif],
       },
       fontSize: { // TODO: customize other type sizes here; actually do it in src/styles.css
@@ -44,12 +31,12 @@ module.exports = {
       }
     },
     colors: {
-      navy: '#002855',
+      navy: '#002855', // This should mostly disappear, I don't like navy that much anymore
       white: '#FFFFFF',
       'light-blue': '#98B6E4',
       orange: '#FF5C0A',
-      gray: '#666666',
-      black: '#000000'
+      gray: '#111111', // TODO: clean these up, don't need gray AND black
+      black: '#111111'
     },
   },
   // variants: {

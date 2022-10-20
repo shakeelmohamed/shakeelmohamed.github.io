@@ -5,7 +5,7 @@ mixin flexCols2()
         block
 
 mixin gridCols2()
-    div(class="grid grid-cols-1 lg:grid-cols-2 gap-x-16 grap-y-2")
+    div(class="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-2")
         block
 
 mixin centeredPage()
@@ -23,21 +23,26 @@ mixin getRandomLogo(size=50)
     script getRandomLogo(#{size})
 
 mixin headerLogo()
-    div(class="py-6 text-left flex-nowrap")
+    div(class="py-4 text-left flex-nowrap")
         a.header-logo(href="/") Shakeel Mohamed
 
 mixin navItem(href, label)
-    a(class="font-sans font-semibold text-navy text-left ml-0 mr-8 md:text-center md:inline-block md:mr-0 md:ml-8" href=href) #{label}
+    a(class="font-sans font-semibold text-black text-left ml-0 mr-8 md:text-center md:inline-block md:mr-0 md:ml-8" href=href) #{label}
 
-mixin header()
+mixin header(bg="bg-white")
     //- TODO: layout breaks below 320px width
-    header(class="mx-auto md:flex md:items-baseline md:justify-between")
-        +headerLogo()
-        nav(class="flex md:justify-between text-lg md:py-4 md:justify-items-end md:flex-shrink-0 md:mx-0")
-            +navItem("/", "Work")
-            +navItem("/blog", "Blog")
-            +navItem("/about", "About")
-            +navItem("/contact", "Contact")
+    header
+        div.full-width(class=bg)
+            .mx-8
+                div(class="md:flex md:items-baseline md:justify-between")
+                    +headerLogo()
+                    nav(class="flex md:justify-between text-lg sm:py-4 md:justify-items-end md:flex-shrink-0 md:mx-0")
+                        +navItem("/", "Work")
+                        +navItem("/blog", "Blog")
+                        +navItem("/about", "About")
+                        +navItem("/contact", "Contact")
+            hr.text-black.my-0(style="border-width: 0.125em;")
+
 
 mixin hero()
     div(class="mt-4 mb-12 xl:mt-12 xl:mb-8")
@@ -47,17 +52,21 @@ mixin footerNavItem(href, label)
     li
         a.subhead(href=href) #{label}
 
+//- TODO: need to fix margin/padding with new body styles
 mixin footer()
-    +flexCols2()
-        div(class="lg:basis-1/2")
-            div(class="md:w-2/3")
-                h3 Subscribe
-                +mailingListForm()
-        div(class="lg:basis-1/2")
-            //- TODO: figure out how to place this whole div to the right edge
-            div()
-                h3 Contact
-                +contact()
+    footer
+        .full-width
+            .mx-8
+                +flexCols2()
+                    div(class="lg:basis-1/2")
+                        div(class="md:w-2/3")
+                            h3 Subscribe
+                            +mailingListForm()
+                    div(class="lg:basis-1/2")
+                        //- TODO: figure out how to place this whole div to the right edge
+                        div()
+                            h3 Contact
+                            +contact()
 
 mixin contact()
     span
@@ -83,7 +92,7 @@ mixin projectListing(project)
         a(href=project.url)
             img.portfolio-cover.w-full(src=project.data.openGraphImage alt="Cover image for " + project.data.title + " project")
         div.pt-2
-            div(class="text-navy pb-0.5 text-2xl font-sans font-semibold")
+            div(class="text-black pb-0.5 text-2xl font-sans font-semibold")
                 h2
                     a(href=project.url) #{project.data.title}
             //- TODO: need a max-width here so the lines aren't super long
@@ -112,23 +121,24 @@ mixin copyright()
 //- mixin projectSectionFullWidth()
 //- images or videos most likely
 
-//- TODO: for each of these, have a min col width so 2nd column is flush nicely
 
 //- TODO: design this component
 mixin getPosts(recent=false)
     - var source = collections.recentPosts;
     if !recent
         - source = collections.post;
-    each post in source
-        .flex.flex-nowrap.items-baseline
-            p.whitespace-nowrap #{post.data.cleanDate} &nbsp;
-            div
+    .flex.flex-wrap.items-baseline
+        each post in source
+            div(class="basis-1/4")
+                p.whitespace-nowrap.text-right #{post.data.cleanDate} &nbsp;
+            div(class="basis-3/4")
                 h3(class="hover:text-orange")
                     a(href=post.url) #{post.data.title}
                 //- TODO: make tags clickable
                 p Topics: #{post.data.categories}
 
 mixin getFeaturedPosts()
+    //- TODO: this might be nice as a 4 column grid on desktop
     +gridCols2()
         each post in collections.featured
             //- TODO: give this a border and make it a "card" design
@@ -141,9 +151,10 @@ mixin getMentions(recent=false)
     - var source = mentions.recent;
     if !recent
         - source = mentions.all;
-    each mention in source
-        //- TODO: fix this so all titles are flush left properly
-        .flex.flex-nowrap.items-baseline
-            p.whitespace-nowrap #{mention.date} &nbsp;
-            p
-                a(href=mention.url, class="text-navy font-medium hover:text-orange") #{mention.title}
+    .flex.flex-wrap.items-baseline
+        each mention in source
+            div(class="basis-1/4")
+                p.whitespace-nowrap.text-right #{mention.date} &nbsp;
+            div(class="basis-3/4")
+                a(href=mention.url, class="text-black font-medium hover:text-orange") #{mention.title}
+                br

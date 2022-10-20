@@ -3,14 +3,44 @@
 @tailwind utilities;
 
 @layer base {
+    /* TODO: swap out tailwind classes for most of this mess */
+
+    /* Push everything back so the sticky header stays put */
+    * {
+        @apply z-0;
+    }
+
+    html, body {
+      @apply min-h-screen m-0;
+    }
+
     html {
         @apply text-gray;
     }
-    footer {
-        @apply py-12;
+
+    body {
+        @apply overflow-x-hidden overscroll-none h-full flex flex-col relative px-0;
+        
     }
+
+    header {
+        @apply flex-initial sticky z-50 top-0 mx-auto;
+    }
+
+    main {
+      @apply relative flex-auto px-0 mx-8;
+    }
+
+    footer {
+      @apply flex-initial;
+    }
+
     section {
         @apply w-full aspect-video;
+    }
+    /* TODO: define a style for full width section, which can then have a color applied to it */
+    section {
+        @apply py-4;
     }
     .centered-page img {
         @apply mx-auto;
@@ -21,10 +51,10 @@
        @apply font-serif font-semibold text-gray py-4 text-4xl md:text-5xl;
     }
     h2 {
-        @apply font-sans font-semibold text-navy py-4 text-2xl md:text-3xl;
+        @apply font-sans font-semibold text-black py-4 text-2xl md:text-3xl;
     }
     h3 {
-        @apply font-sans font-semibold text-navy py-4 text-xl md:text-xl;
+        @apply font-sans font-semibold text-black py-4 text-xl md:text-xl;
     }
     .subhead {
         @apply font-sans text-lg text-gray pb-4;
@@ -46,25 +76,16 @@
         @apply text-gray font-bold;
     }
 
-    /* TODO: define a style for full width section, which can then have a color applied to it */
-    section {
-        @apply py-4;
-    }
 
     button {
-        @apply bg-navy w-full rounded-md hover:bg-orange;
+        @apply bg-black w-full rounded-md hover:bg-orange;
     }
-
-    /* TODO: idk, I go back and forth on this thing */
-    /* img.portfolio-cover {
-        @apply transition ease-in-out duration-300 filter hover:grayscale;
-    } */
 
     img.logo {
         @apply inline mr-2;
     }
     .header-logo {
-        @apply text-4xl text-navy italic font-serif;
+        @apply text-4xl text-black italic font-serif;
     }
 
     hr {
@@ -79,10 +100,10 @@
         @apply font-sans text-base leading-normal text-gray;
     }
     .prose h1 {
-        @apply text-navy font-serif font-normal italic;
+        @apply text-black font-serif font-normal italic;
     }
     .prose h2, .prose h3, .prose h4, .prose h5 {
-        @apply text-navy font-sans my-0.5;
+        @apply text-black font-sans my-0.5;
     }
     .prose p, .prose li {
         @apply text-gray font-light;
@@ -98,15 +119,14 @@
     /* Don't automatically add quotes to a blockquote (from markdown) */
     .prose blockquote {
         p:first-of-type::before, p:last-of-type::after {
-            content: none;
+            @apply content-none;
         }
     }
 
-    /* ul {
-        @apply list-none;
-    } */
-
-    /* TODO: make this work with tailwind build ins */
+    /* TODO: I don't think I'm using twemoji,
+     *      an even better option might be noto emoji:
+     *      https://fonts.google.com/noto/specimen/Noto+Emoji            
+     */
     img.emoji {
        height: 1em;
        width: 1em;
@@ -115,19 +135,11 @@
        display: inline;
     }
 
-    .main {
-        @apply px-4 md:px-16;
-    }
-
-    /* TODO: make this work with tailwind build ins */
     .full-width {
-      left: 50%;
-      margin-left: -50vw;
-      margin-right: -50vw;
-      max-width: 100vw;
-      position: relative;
-      right: 50%;
-      width: 100vw;
+        @apply relative w-screen inset-x-1/2;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        max-width: 100vw;
     }
     .mailto {
         @apply transition hover:text-orange;
@@ -138,5 +150,11 @@
     }
     .link-button h3 {
         @apply text-white hover:text-white;
+    }
+
+    /* TODO:  figure out a cleaner way to have BREAK styles */
+    h2.break {
+        @apply lg:text-8xl text-4xl;
+        line-height: normal;
     }
 }

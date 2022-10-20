@@ -4,7 +4,7 @@ mixin fullWidth(bgClass, textClass)
             block
 
 mixin myEmail()
-    +mailto("contact", "shakeelmohamed.com", "Hey Shakeel, let’s talk")
+    +mailto("hello", "shakeel.design", "Hey Shakeel, let’s talk")
 
 mixin mailto(user, domain, subject)
     //- <!-- // http://lists.evolt.org/archive/Week-of-Mon-20040202/154813.html -->
@@ -36,22 +36,23 @@ mixin footerNavItem(href, label)
 //- TODO: every section has a gridWithBigColumn(), tidy up many places
 
 mixin sectionWhite()
-    section(class="bg-white text-navy")
+    section(class="bg-white text-black")
         +container()
             block
 
 mixin sectionOrange()
-    section(class="bg-orange text-navy")
+    section(class="bg-orange text-black")
         +container()
             block
 
-mixin sectionNavy()
-    section(class="bg-navy text-navy")
+//- TODO: refactor this away
+mixin sectionNavy() 
+    section(class="bg-navy text-white")
         +container()
             block
 
 mixin sectionLightBlue()
-    section(class="bg-light-blue text-navy")
+    section(class="bg-light-blue text-black")
         +container()
             block
 

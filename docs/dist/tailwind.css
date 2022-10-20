@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.0.15 | MIT License | https://tailwindcss.com
+! tailwindcss v3.1.3 | MIT License | https://tailwindcss.com
 *//*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
 2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
@@ -164,6 +164,7 @@ select,
 textarea {
   font-family: inherit; /* 1 */
   font-size: 100%; /* 1 */
+  font-weight: inherit; /* 1 */
   line-height: inherit; /* 1 */
   color: inherit; /* 1 */
   margin: 0; /* 2 */
@@ -372,14 +373,6 @@ video {
   height: auto;
 }
 
-/*
-Ensure the default browser behavior of the `hidden` attribute.
-*/
-
-[hidden] {
-  display: none;
-}
-
 [type='text'],[type='email'],[type='url'],[type='password'],[type='number'],[type='date'],[type='datetime-local'],[type='month'],[type='search'],[type='tel'],[type='time'],[type='week'],[multiple],textarea,select {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -545,17 +538,66 @@ select {
 [type='file']:focus {
   outline: 1px auto -webkit-focus-ring-color;
 }
+    /* TODO: swap out tailwind classes for most of this mess */
+
+    /* Push everything back so the sticky header stays put */
+    * {
+  z-index: 0;
+}
+
+    html,  body {
+  margin: 0px;
+  min-height: 100vh;
+}
+
     html {
   --tw-text-opacity: 1;
-  color: rgb(102 102 102 / var(--tw-text-opacity));
+  color: rgb(17 17 17 / var(--tw-text-opacity));
 }
+
+    body {
+  position: relative;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  overflow-x: hidden;
+  -ms-scroll-chaining: none;
+      overscroll-behavior: none;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+    header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  z-index: 50;
+  margin-left: auto;
+  margin-right: auto;
+  flex: 0 1 auto;
+}
+
+    main {
+  position: relative;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  flex: 1 1 auto;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
     footer {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  flex: 0 1 auto;
 }
+
     section {
   aspect-ratio: 16 / 9;
   width: 100%;
+}
+    /* TODO: define a style for full width section, which can then have a color applied to it */
+    section {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
     .centered-page img {
   margin-left: auto;
@@ -571,7 +613,7 @@ select {
   line-height: 2.5rem;
   font-weight: 600;
   --tw-text-opacity: 1;
-  color: rgb(102 102 102 / var(--tw-text-opacity));
+  color: rgb(17 17 17 / var(--tw-text-opacity));
 }
     @media (min-width: 768px) {
 
@@ -588,7 +630,7 @@ select {
   line-height: 2rem;
   font-weight: 600;
   --tw-text-opacity: 1;
-  color: rgb(0 40 85 / var(--tw-text-opacity));
+  color: rgb(17 17 17 / var(--tw-text-opacity));
 }
     @media (min-width: 768px) {
 
@@ -605,7 +647,7 @@ select {
   line-height: 1.75rem;
   font-weight: 600;
   --tw-text-opacity: 1;
-  color: rgb(0 40 85 / var(--tw-text-opacity));
+  color: rgb(17 17 17 / var(--tw-text-opacity));
 }
     @media (min-width: 768px) {
 
@@ -620,22 +662,22 @@ select {
   font-size: 1.125rem;
   line-height: 1.75rem;
   --tw-text-opacity: 1;
-  color: rgb(102 102 102 / var(--tw-text-opacity));
+  color: rgb(17 17 17 / var(--tw-text-opacity));
 }
     .caption {
   font-family: proxima-nova, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 0.875rem;
   line-height: 1.25rem;
   --tw-text-opacity: 1;
-  color: rgb(102 102 102 / var(--tw-text-opacity));
+  color: rgb(17 17 17 / var(--tw-text-opacity));
 }
     /* Body text style */
-    p, li {
+    p,  li {
   font-family: proxima-nova, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
   font-weight: 300;
   --tw-text-opacity: 1;
-  color: rgb(102 102 102 / var(--tw-text-opacity));
+  color: rgb(17 17 17 / var(--tw-text-opacity));
 }
     a {
   transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
@@ -655,31 +697,22 @@ select {
     strong {
   font-weight: 700;
   --tw-text-opacity: 1;
-  color: rgb(102 102 102 / var(--tw-text-opacity));
+  color: rgb(17 17 17 / var(--tw-text-opacity));
 }
 
-    /* TODO: define a style for full width section, which can then have a color applied to it */
-    section {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
 
     button {
   width: 100%;
   border-radius: 0.375rem;
   --tw-bg-opacity: 1;
-  background-color: rgb(0 40 85 / var(--tw-bg-opacity));
+  background-color: rgb(17 17 17 / var(--tw-bg-opacity));
 }
+
 
     button:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(255 92 10 / var(--tw-bg-opacity));
 }
-
-    /* TODO: idk, I go back and forth on this thing */
-    /* img.portfolio-cover {
-        @apply transition ease-in-out duration-300 filter hover:grayscale;
-    } */
 
     img.logo {
   margin-right: 0.5rem;
@@ -691,7 +724,7 @@ select {
   line-height: 2.5rem;
   font-style: italic;
   --tw-text-opacity: 1;
-  color: rgb(0 40 85 / var(--tw-text-opacity));
+  color: rgb(17 17 17 / var(--tw-text-opacity));
 }
 
     hr {
@@ -700,6 +733,102 @@ select {
 }
 
 *, ::before, ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+
+::-webkit-backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+
+::backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
   --tw-translate-x: 0;
   --tw-translate-y: 0;
   --tw-rotate: 0;
@@ -1173,6 +1302,16 @@ select {
   position: -webkit-sticky;
   position: sticky;
 }
+.inset-x-0 {
+  left: 0px;
+  right: 0px;
+}
+.bottom-0 {
+  bottom: 0px;
+}
+.top-0 {
+  top: 0px;
+}
 .m-2 {
   margin: 0.5rem;
 }
@@ -1187,6 +1326,18 @@ select {
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+.my-0 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 .my-2 {
   margin-top: 0.5rem;
@@ -1212,6 +1363,9 @@ select {
 }
 .mb-12 {
   margin-bottom: 3rem;
+}
+.mt-24 {
+  margin-top: 6rem;
 }
 .mb-16 {
   margin-bottom: 4rem;
@@ -1261,6 +1415,12 @@ select {
 .flex-grow {
   flex-grow: 1;
 }
+.basis-1\/4 {
+  flex-basis: 25%;
+}
+.basis-3\/4 {
+  flex-basis: 75%;
+}
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
@@ -1273,6 +1433,9 @@ select {
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
+.flex-col {
+  flex-direction: column;
+}
 .flex-wrap {
   flex-wrap: wrap;
 }
@@ -1281,6 +1444,9 @@ select {
 }
 .place-content-center {
   place-content: center;
+}
+.items-start {
+  align-items: flex-start;
 }
 .items-center {
   align-items: center;
@@ -1303,6 +1469,9 @@ select {
 .gap-x-16 {
   -moz-column-gap: 4rem;
        column-gap: 4rem;
+}
+.gap-y-2 {
+  row-gap: 0.5rem;
 }
 .gap-x-8 {
   -moz-column-gap: 2rem;
@@ -1346,13 +1515,13 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(152 182 228 / var(--tw-bg-opacity));
 }
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 17 17 / var(--tw-bg-opacity));
+}
 .bg-\[\#ff6700\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 103 0 / var(--tw-bg-opacity));
-}
-.bg-black {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 .p-8 {
   padding: 2rem;
@@ -1365,13 +1534,9 @@ select {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
-.py-6 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
-.py-8 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 .pb-2 {
   padding-bottom: 0.5rem;
@@ -1400,6 +1565,9 @@ select {
 .text-center {
   text-align: center;
 }
+.text-right {
+  text-align: right;
+}
 .font-sans {
   font-family: proxima-nova, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
@@ -1426,6 +1594,9 @@ select {
 .capitalize {
   text-transform: capitalize;
 }
+.italic {
+  font-style: italic;
+}
 .text-navy {
   --tw-text-opacity: 1;
   color: rgb(0 40 85 / var(--tw-text-opacity));
@@ -1434,17 +1605,17 @@ select {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(17 17 17 / var(--tw-text-opacity));
+}
 .text-orange {
   --tw-text-opacity: 1;
   color: rgb(255 92 10 / var(--tw-text-opacity));
 }
 .text-gray {
   --tw-text-opacity: 1;
-  color: rgb(102 102 102 / var(--tw-text-opacity));
-}
-.text-black {
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
+  color: rgb(17 17 17 / var(--tw-text-opacity));
 }
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
@@ -1474,26 +1645,26 @@ select {
   font-size: 1rem;
   line-height: 1.5;
   --tw-text-opacity: 1;
-  color: rgb(102 102 102 / var(--tw-text-opacity));
+  color: rgb(17 17 17 / var(--tw-text-opacity));
 }
 .prose h1 {
   font-family: freight-big-pro, ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 400;
   font-style: italic;
   --tw-text-opacity: 1;
-  color: rgb(0 40 85 / var(--tw-text-opacity));
+  color: rgb(17 17 17 / var(--tw-text-opacity));
 }
-.prose h2, .prose h3, .prose h4, .prose h5 {
+.prose h2,  .prose h3,  .prose h4,  .prose h5 {
   margin-top: 0.125rem;
   margin-bottom: 0.125rem;
   font-family: proxima-nova, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --tw-text-opacity: 1;
-  color: rgb(0 40 85 / var(--tw-text-opacity));
+  color: rgb(17 17 17 / var(--tw-text-opacity));
 }
-.prose p, .prose li {
+.prose p,  .prose li {
   font-weight: 300;
   --tw-text-opacity: 1;
-  color: rgb(102 102 102 / var(--tw-text-opacity));
+  color: rgb(17 17 17 / var(--tw-text-opacity));
 }
 .prose a {
   transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
@@ -1511,16 +1682,17 @@ select {
 }
 .prose strong {
   --tw-text-opacity: 1;
-  color: rgb(102 102 102 / var(--tw-text-opacity));
+  color: rgb(17 17 17 / var(--tw-text-opacity));
 }
 /* Don't automatically add quotes to a blockquote (from markdown) */
-.prose blockquote p:first-of-type::before, .prose blockquote p:last-of-type::after {
-            content: none;
-        }
-/* ul {
-        @apply list-none;
-    } */
-/* TODO: make this work with tailwind build ins */
+.prose blockquote p:first-of-type::before,  .prose blockquote p:last-of-type::after {
+  --tw-content: none;
+  content: var(--tw-content);
+}
+/* TODO: I don't think I'm using twemoji,
+     *      an even better option might be noto emoji:
+     *      https://fonts.google.com/noto/specimen/Noto+Emoji            
+     */
 img.emoji {
        height: 1em;
        width: 1em;
@@ -1528,27 +1700,15 @@ img.emoji {
        vertical-align: -0.1em;
        display: inline;
     }
-.main {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-@media (min-width: 768px) {
-
-  .main {
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-}
-/* TODO: make this work with tailwind build ins */
 .full-width {
-      left: 50%;
-      margin-left: -50vw;
-      margin-right: -50vw;
-      max-width: 100vw;
-      position: relative;
-      right: 50%;
-      width: 100vw;
-    }
+  position: relative;
+  left: 50%;
+  right: 50%;
+  width: 100vw;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        max-width: 100vw;
+}
 .mailto {
   transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
@@ -1572,9 +1732,31 @@ img.emoji {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+/* TODO:  figure out a cleaner way to have BREAK styles */
+h2.break {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+@media (min-width: 1024px) {
+
+  h2.break {
+    font-size: 6rem;
+    line-height: 1;
+  }
+}
+h2.break {
+        line-height: normal;
+    }
 .hover\:text-orange:hover {
   --tw-text-opacity: 1;
   color: rgb(255 92 10 / var(--tw-text-opacity));
+}
+@media (min-width: 640px) {
+
+  .sm\:py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
 }
 @media (min-width: 768px) {
 
@@ -1636,11 +1818,6 @@ img.emoji {
     padding-right: 2rem;
   }
 
-  .md\:py-4 {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-
   .md\:text-left {
     text-align: left;
   }
@@ -1666,6 +1843,16 @@ img.emoji {
   .lg\:mx-auto {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .lg\:mx-48 {
+    margin-left: 12rem;
+    margin-right: 12rem;
+  }
+
+  .lg\:my-24 {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
   }
 
   .lg\:mt-0 {

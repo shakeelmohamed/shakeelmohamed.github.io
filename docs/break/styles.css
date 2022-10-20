@@ -8,7 +8,7 @@ body {
     background-color: #FF5C0A !important;
 }
 
-.header-logo:hover, header > nav > a:hover, .mailto:hover {
+.header-logo:hover, nav > a:hover, .mailto:hover {
     color: white !important;
 }
 
@@ -19,7 +19,7 @@ h1, h2, h3, h4, h5, .prose h1, .prose h2, .prose h3, .prose h4, .prose h5 {
 }
 
 p, .prose p {
-    color: white !important;
+    color: #002855 !important;
     font-family: Inter, sans-serif;
 }
 

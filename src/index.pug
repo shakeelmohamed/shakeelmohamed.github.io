@@ -1,5 +1,5 @@
 ---
-description: Shakeel Mohamed is a designer & brand strategist in the greater Seattle area.
+description: Shakeel Mohamed is a designer & graduate student at ArtCenter College of Design.
 ---
 
 extends _includes/layouts/base.pug
@@ -9,15 +9,18 @@ block hero
         div
             h1 Developer turned designer
             p.text-lg
-                | Hello, I’m Shakeel! I’m a visual designer in Seattle, specializing in branding and experimental typography. After 10 years of working as a software engineer, I began exploring my creative side. This fall, I will begin an MFA in Graphic Design at ArtCenter College of Design, with the intent of learning more about typography, branding, and design leadership.
+                | Hello, I’m Shakeel! I’m a Graduate Graphic Design student at ArtCenter College of Design interested in branding, typography, creative technology, and design leadership. After 10 years of working as a software engineer, I began exploring my creative side. *Expect updated  projects before January 2023.*
             br
             div Say hello!
                 +myEmail()
                 br
                 | Full PDF portfolio available upon request.
 
+
 block content
-   if collections.portfolio
+    //- TODO: rework this to collections.home or something; goal is to have multiple blocks of content.
+    //- could be projects, videos, bio, etc.
+    if collections.portfolio
         +gridCols2()
             each project in collections.portfolio
                 +projectListing(project)
