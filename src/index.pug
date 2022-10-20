@@ -15,18 +15,12 @@ block hero
                 +myEmail()
                 br
                 | Full PDF portfolio available upon request.
-        //- TODO: rework this into the grid of portfolio projects
-        div.pb-8
-            h1(class="h") &nbsp;
-            <script src="https://cdn.plyr.io/3.7.2/plyr.polyfilled.js"></script>
-            <div class="plyr__video-embed" id="player">
-              <iframe src="https://www.youtube.com/embed/bTqVqk7FSmY?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1" allowfullscreen allowtransparency allow="autoplay"></iframe>
-            </div>
 
-            //- <iframe width="640" height="360" src="https://www.youtube.com/embed/HtRtGYQx480" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 block content
-   if collections.portfolio
+    //- TODO: rework this to collections.home or something; goal is to have multiple blocks of content.
+    //- could be projects, videos, bio, etc.
+    if collections.portfolio
         +gridCols2()
             each project in collections.portfolio
                 +projectListing(project)
