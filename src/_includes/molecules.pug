@@ -27,7 +27,7 @@ mixin headerLogo()
         a.header-logo(href="/") Shakeel Mohamed
 
 mixin navItem(href, label)
-    a(class="font-sans font-semibold text-navy text-left ml-0 mr-8 md:text-center md:inline-block md:mr-0 md:ml-8" href=href) #{label}
+    a(class="font-sans font-semibold text-black text-left ml-0 mr-8 md:text-center md:inline-block md:mr-0 md:ml-8" href=href) #{label}
 
 mixin header(bg="bg-white")
     //- TODO: layout breaks below 320px width
@@ -41,7 +41,7 @@ mixin header(bg="bg-white")
                         +navItem("/blog", "Blog")
                         +navItem("/about", "About")
                         +navItem("/contact", "Contact")
-            hr.text-navy.my-0(style="border-width: 0.125em;")
+            hr.text-black.my-0(style="border-width: 0.125em;")
 
 
 mixin hero()
@@ -92,7 +92,7 @@ mixin projectListing(project)
         a(href=project.url)
             img.portfolio-cover.w-full(src=project.data.openGraphImage alt="Cover image for " + project.data.title + " project")
         div.pt-2
-            div(class="text-navy pb-0.5 text-2xl font-sans font-semibold")
+            div(class="text-black pb-0.5 text-2xl font-sans font-semibold")
                 h2
                     a(href=project.url) #{project.data.title}
             //- TODO: need a max-width here so the lines aren't super long
@@ -156,5 +156,5 @@ mixin getMentions(recent=false)
             div(class="basis-1/4")
                 p.whitespace-nowrap.text-right #{mention.date} &nbsp;
             div(class="basis-3/4")
-                a(href=mention.url, class="text-navy font-medium hover:text-orange") #{mention.title}
+                a(href=mention.url, class="text-black font-medium hover:text-orange") #{mention.title}
                 br

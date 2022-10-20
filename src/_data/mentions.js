@@ -1,5 +1,10 @@
 var all = [
     {
+        "date": "July 21, 2022",
+        "title": "2022 AIGA Portfolio Festival | One Year Can Change Your Whole Life by Shakeel Mohamed",
+        "url": "https://www.youtube.com/watch?v=HtRtGYQx480"
+    },
+    {
         "date": "May 17, 2021",
         "title": "Made With Love podcast - Shakeel's Journey (part 2)",
         "url": "https://podcasts.apple.com/me/podcast/shakeels-journey-part-2/id1556518451?i=1000521087904"

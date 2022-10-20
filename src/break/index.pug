@@ -21,6 +21,7 @@ block content
     link(href="./styles.css" rel="stylesheet")
     div.top-0.inset-x-0
         +bigBreak()
+        //- TODO: these <section>s are breaking Safari reader mode, ugh
         .flex.flex-col(class="lg:mx-48 mx-8")
             +section(null, "Background")
                 //- TODO: bring in photos from the original deck, showcase authentic storytelling
@@ -56,6 +57,7 @@ block content
             +section(null, "Waitlist")
                 +subhead("Stay Tuned!")
                 p.italic Join the waitlist to get updates about the BREAK journal, related content and future products.
+                br
                 +breakForm()
 
 mixin section(num, text)
@@ -65,12 +67,12 @@ mixin section(num, text)
             h2.break(style="color:white !important;") #{num}. #{text}
         else
             h2.break #{text}
-        .my-24.mx-auto
+        div(class="my-8 mx-auto lg:my-24")
             block
         //- TODO: this is really hacky, and easier way is to
         //- a) decrease the parent x-margin AND
         //- b) add a padding to the section content
-        hr.text-navy.my-0(style="border-width: 0.065rem; min-width: 110%; position: relative; left: 50%; transform: translateX(-50%);")
+        hr.text-navy.my-4(style="border-width: 0.065rem; min-width: 110%; position: relative; left: 50%; transform: translateX(-50%);")
 
 mixin subhead(text)
     h3 #{text}

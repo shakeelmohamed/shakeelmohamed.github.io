@@ -9,12 +9,21 @@ block hero
         div
             h1 Developer turned designer
             p.text-lg
-                | Hello, I’m Shakeel! I’m a visual designer from Seattle, specializing in branding and experimental typography. After 10 years of working as a software engineer, I began exploring my creative side. I am an Graduate Graphic Design student at ArtCenter College of Design, interested typography, branding, and design leadership.
+                | Hello, I’m Shakeel! I’m a Graduate Graphic Design student at ArtCenter College of Design interested in branding, typography, creative technology, and design leadership. After 10 years of working as a software engineer, I began exploring my creative side. *Expect updated  projects before January 2023.*
             br
             div Say hello!
                 +myEmail()
                 br
                 | Full PDF portfolio available upon request.
+        //- TODO: rework this into the grid of portfolio projects
+        div.pb-8
+            h1(class="h") &nbsp;
+            <script src="https://cdn.plyr.io/3.7.2/plyr.polyfilled.js"></script>
+            <div class="plyr__video-embed" id="player">
+              <iframe src="https://www.youtube.com/embed/bTqVqk7FSmY?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1" allowfullscreen allowtransparency allow="autoplay"></iframe>
+            </div>
+
+            //- <iframe width="640" height="360" src="https://www.youtube.com/embed/HtRtGYQx480" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 block content
    if collections.portfolio

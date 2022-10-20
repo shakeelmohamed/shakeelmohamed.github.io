@@ -31,11 +31,11 @@ module.exports = {
       }
     },
     colors: {
-      navy: '#002855',
+      navy: '#002855', // This should mostly disappear, I don't like navy that much anymore
       white: '#FFFFFF',
       'light-blue': '#98B6E4',
       orange: '#FF5C0A',
-      gray: '#555555',
+      gray: '#111111', // TODO: clean these up, don't need gray AND black
       black: '#111111'
     },
   },
