@@ -7,20 +7,24 @@ extends _includes/layouts/base.pug
 block hero
     +gridCols2()
         div
-            h1 Developer turned designer
-            p.text-lg
-                | Hello, I’m Shakeel! I’m a Graduate Graphic Design student at ArtCenter College of Design interested in branding, typography, creative technology, and design leadership. After 10 years of working as a software engineer, I began exploring my creative side. *Expect updated  projects soon.*
+            p
+                b Developer turned designer
+            p
+                | Hello, I’m Shakeel! I’m a Graduate Graphic Design student at ArtCenter College of Design interested in branding, typography, creative technology, and design leadership. After 10 years of working as a software engineer, I began exploring my creative side.
             br
-            div Say hello!
+            p
+                | Say hello!
                 +myEmail()
-                br
-                | Full PDF portfolio available upon request.
+            p
+                b
+                    | My design portfolio is available at 
+                    a(href="https://shakeel.design") shakeel.design
 
 
 block content
     //- TODO: rework this to collections.home or something; goal is to have multiple blocks of content.
     //- could be projects, videos, bio, etc.
-    if collections.portfolio
-        +gridCols2()
-            each project in collections.portfolio
-                +projectListing(project)
+    //- if collections.portfolio
+    //-     +gridCols2()
+    //-         each project in collections.portfolio
+    //-             +projectListing(project)

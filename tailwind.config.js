@@ -17,7 +17,7 @@ module.exports = {
       },
       fontSize: { // TODO: customize other type sizes here; actually do it in src/styles.css
         // 'old_base': '1.5rem', // 1.25rem is 20px on desktop... originally had designed with 1.5rem or 24px in mind
-        'base': '1rem', // 1rem is 16px on desktop... originally had designed with 1.5rem or 24px in mind
+        'base': '1.25rem', // 1rem is 16px on desktop... originally had designed with 1.5rem or 24px in mind
         // desktop styles
         // 'sm': '1rem',
         // 'xl': '',

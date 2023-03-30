@@ -48,13 +48,13 @@
 
     /* Headings */
     h1 {
-       @apply font-serif font-semibold text-gray py-4 text-4xl md:text-5xl;
+       @apply font-sans font-bold text-gray py-4 text-4xl md:text-5xl;
     }
     h2 {
-        @apply font-sans font-semibold text-black py-4 text-2xl md:text-3xl;
+        @apply font-sans font-bold text-black py-4 text-2xl md:text-3xl;
     }
     h3 {
-        @apply font-sans font-semibold text-black py-4 text-xl md:text-xl;
+        @apply font-sans font-bold text-black py-4 text-xl md:text-xl;
     }
     .subhead {
         @apply font-sans text-lg text-gray pb-4;
@@ -64,14 +64,14 @@
     }
     /* Body text style */
     p, li {
-        @apply font-sans text-base text-gray font-light;
+        @apply font-sans text-base text-gray font-normal;
     }
     a {
         @apply transition hover:text-orange;
     }
-    p a {
+    /* p a {
         @apply underline;
-    }
+    } */
     strong {
         @apply text-gray font-bold;
     }
@@ -85,7 +85,7 @@
         @apply inline mr-2;
     }
     .header-logo {
-        @apply text-4xl text-black italic font-serif;
+        @apply text-4xl font-normal font-serif;
     }
 
     hr {
@@ -100,17 +100,17 @@
         @apply font-sans text-base leading-normal text-gray;
     }
     .prose h1 {
-        @apply text-black font-serif font-normal italic;
+        @apply text-black font-serif font-normal;
     }
     .prose h2, .prose h3, .prose h4, .prose h5 {
         @apply text-black font-sans my-0.5;
     }
     .prose p, .prose li {
-        @apply text-gray font-light;
+        @apply text-gray font-normal;
     }
     .prose a {
         @apply transition hover:text-orange;
-        @apply font-light;
+        @apply font-normal;
     }
     .prose strong {
         @apply text-gray;
