@@ -203,3 +203,41 @@ Months later, at the 2022 AIGA National Design Conference in Seattle, I had the 
 The recording is available on <a href="https://youtu.be/HtRtGYQx480" target="_blank">YouTube</a>.</div>
 </div><br>
 ```
+
+## #Salgirah85 International Festival Branding
+
+```html
+<div grid-row="" grid-pad="2" grid-gutter="4">
+    <div grid-col="8" grid-pad="2"><h2>#Salgirah85 International Festival Branding</h2>
+</div>
+    <div grid-col="4" grid-pad="2"></div>
+</div><br>
+<div grid-row="" grid-pad="2" grid-gutter="4" grid-responsive=""><div grid-col="8" grid-pad="2">
+{image 1}<br>
+<br>
+<iframe src="https://www.youtube.com/embed/HtRtGYQx480?t=375s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" style="aspect-ratio: 16 / 9; width: 100%;" class=""></iframe><br>
+Above is the recording of my presentation of this project (at 6:15) from the 2022 AIGA Portfolio Festival.<br><br>
+{image 2}<br><br>
+{image 3}<br><br>
+{image 4}<br><br>
+{image 5}<br><br>
+{image 6}<br><br>
+{image 7}<br><br><br>
+<h2>The following assets were created my marketing teams in various countries after deliving the completed brand package.</h2><br>
+{image 8}{image 9}<br><br>
+{image 10}<br>
+<br>{image 11}<br><br>
+<br>
+{image 12}<br><br>
+{image 13}<br>
+<br>{image 14}<br>
+<br>
+</div>
+    <div grid-col="4" grid-pad="2">
+<b></b><b>When:&nbsp;</b>2021<br>
+<b>Organization:</b> <a href="https://the.ismaili/" target="_blank">The Ismaili Community</a> (globally)<br>
+<b>Media:</b> Branding, Motion<br>
+<b>Tools:</b> Illustrator, Photoshop, AfterEffects, InDesign<br><br>
+<br></div>
+</div><br>
+```
