@@ -223,7 +223,7 @@ Above is the recording of my presentation of this project (at 6:15) from the 202
 {image 5}<br><br>
 {image 6}<br><br>
 {image 7}<br><br><br>
-<h2>The following assets were created my marketing teams in various countries after deliving the completed brand package.</h2><br>
+<h2>The following assets were created by marketing teams in various countries after delivering the completed brand package.</h2><br>
 {image 8}{image 9}<br><br>
 {image 10}<br>
 <br>{image 11}<br><br>
