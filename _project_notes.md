@@ -208,36 +208,54 @@ The recording is available on <a href="https://youtu.be/HtRtGYQx480" target="_bl
 
 ```html
 <div grid-row="" grid-pad="2" grid-gutter="4">
-    <div grid-col="8" grid-pad="2"><h2>#Salgirah85 International Festival Branding</h2>
+    <div grid-col="8" grid-pad="2"><h2>#Salgirah85 International Festival Identity</h2>
 </div>
     <div grid-col="4" grid-pad="2"></div>
 </div><br>
 <div grid-row="" grid-pad="2" grid-gutter="4" grid-responsive=""><div grid-col="8" grid-pad="2">
-{image 1}<br>
+{image 1}<br>Dubai World Trade Centre. The Ismaili community in Dubai, UAE held their first in-person celebration since the COVID-19 pandemic at the Dubai WTC. Unfortunately I was not able to attend for multiple reasons, but received some photos from the local team. Additional highlights are shown below. All assets designed by the local team.
+<br>
 <br>
 <iframe src="https://www.youtube.com/embed/HtRtGYQx480?t=375s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" style="aspect-ratio: 16 / 9; width: 100%;" class=""></iframe><br>
 Above is the recording of my presentation of this project (at 6:15) from the 2022 AIGA Portfolio Festival.<br><br>
-{image 2}<br><br>
-{image 3}<br><br>
-{image 4}<br><br>
-{image 5}<br><br>
-{image 6}<br><br>
-{image 7}<br><br><br>
+{image 2}<br>Full-color logo. The colors come from the Ismaili community’s flag, seen in the photograph of His Highness the Aga Khan (below).
+<br><br>
+{image 3}<br>Here, His Highness the Aga Khan is pictured in front of the Canadian and Ismaili flags at the Global Centre for Pluralism in Ottawa, Canada.
+<br><br>
+{image 4}<br>Five Ring Motif. The motif is my take on Islamic geometric design. Initially, you see three rings of 17 diamonds. In the negative space between them, two additional rings are created for a total of five total rings of 17 (17x5 = 85). One diamond representing each year of His Highness’ life.<br>
+{image 5}<br>The three rings are inspired by the three nuktas (dots) above the first letter in the Arabic word, shukr, meaning gratitude. The rings in negative space are a reminder of the esoteric aspects of the Ismaili faith.<br>
+{image 6}<br>Additional logo variations. The system works in full color on white backgrounds, or in white on red or green backgrounds.
+<br><br>
+{image 7}<br>Brand pattern. Designed by deconstructing the motif to an individual diamond and tiling them infinitely. These forms create an interesting 2.5D illusion.
+<br><br><br>
 <h2>The following assets were created by marketing teams in various countries after delivering the completed brand package.</h2><br>
-{image 8}{image 9}<br><br>
-{image 10}<br>
-<br>{image 11}<br><br>
+{image 8}<br>After delivering all brand assets, social media teams in the Ismaili community launched global, national, and regional digital marketing campaigns. These assets (social media content, videos, website) were created by many talented people around the world in multiple languages. I have included them here to show the context and impact of the brand identity.<br>
 <br>
-{image 12}<br><br>
-{image 13}<br>
-<br>{image 14}<br>
+{image 9}<br>Photo backdrop in Atlanta, Georgia, USA. Designed by the local team.
+<br><br>
+{image 10}<br><div style="text-align: left;">Retirement home celebrations in Calgary, Canada. Designed by the local team.
+</div>
+<br>{image 11}<br>Wow. I didn’t even know they had access to large scale printing in the mountainous region of Hunza, Pakistan. Designed by the local team.
+<br><br>
+{image 12}<br>I never expected a logo I designed to be on a cake! (Or sherbet bottle, a milk-based drink made for special occasions). Houston, Texas, USA. Designed by the local team.
+<br><br>
+{image 13}<br>Branding displayed on stage during musical performances. Designed by the local team.
+<br>
+<br>{image 14}<br>Signage for Golden Members (elders in the community, 65+), and wristbands to enter the venue. Designed by the local team.
+<br>
+<br>
+<iframe src="https://www.youtube.com/embed/J4gO_TFNdxw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" style="aspect-ratio: 16 / 9; width: 100%;"></iframe><br>This is a mini-reel of all motion graphics I worked on for #Salgirah85. These animations were used across social media, opening slates for various forms of video content for the festival, and on stage at some live events. Music was selected by The Ismaili Sounds global team.
 <br>
 </div>
     <div grid-col="4" grid-pad="2">
-<b></b><b>When:&nbsp;</b>2021<br>
+<b></b><b>When:&nbsp;</b>2021 (6 weeks)<br>
 <b>Organization:</b> <a href="https://the.ismaili/" target="_blank">The Ismaili Community</a> (globally)<br>
 <b>Media:</b> Branding, Motion<br>
-<b>Tools:</b> Illustrator, Photoshop, AfterEffects, InDesign<br><br>
-<br></div>
+<b>Tools:</b> Illustrator, Photoshop, AfterEffects, InDesign<br><br><b>Goal:</b> Design a unified festival identity for the global Ismaili Muslim community in 21 countries.<br><br>
+Salgirah is a religious festival observed by Ismaili Muslims every December. It marks the birthday of His Highness the Aga Khan, a descendant of Prophet Muhammad, the spiritual leader of 15 million Ismailis worldwide. December 13, 2021, marked his 85th birthday, or Salgirah.<br><br>The brief given to me by the Ismaili global communications team was to embrace the theme of shukr (gratitude in Arabic) while conveying 85 through (Islamic) geometry. This brand identity would be used worldwide by the Ismaili community to promote a sense of unity.
+<br>
+<br>This was by far the largest project I’ve worked on in terms of scale and one I will remember forever. The team only had two brief Zoom meetings over the six weeks of the project. I was impressed with our ability to collaborate across timezones through a Whatsapp group. Since this is a faith-based organization, all team members involved shared a common belief system about the festival.<br><br>
+ 
+One year later I was invited to refresh the indentity for the Aga Khan’s 86th Salgirah festival.</div>
 </div><br>
 ```
