@@ -259,3 +259,34 @@ Salgirah is a religious festival observed by Ismaili Muslims every December. It 
 One year later I was invited to refresh the indentity for the Aga Khan’s 86th Salgirah festival.</div>
 </div><br>
 ```
+
+## Salgirah 86
+
+```html
+<div grid-row="" grid-pad="2" grid-gutter="4">
+    <div grid-col="8" grid-pad="2"><h2>86th Salgirah Festival Identity</h2></div>
+    <div grid-col="4" grid-pad="2"></div>
+</div><br>
+<div grid-row="" grid-pad="2" grid-gutter="4" grid-responsive=""><div grid-col="8" grid-pad="2">
+{image 1}<br>
+<br>
+{image 2}<br>
+{image 3}{image 4}<br>
+<br>
+{image 5}<br><br>
+{image 6}<br>{image 7}<br><br>
+<br>
+{image 8}<br><br>
+{image 9}<br>{image 10}<br><br>
+<br>
+{image 12}<br><br>
+{image 13}<br></div>
+    <div grid-col="4" grid-pad="2">
+<b></b><b>When:</b> December 2022 (6 days)<br>
+<b>Organization:</b> <a href="https://the.ismaili/" target="_blank">The Ismaili Muslicm Community (globally)</a>
+<br>
+<b>Media:</b> branding<br>
+<b>Tools:</b> Illustrator, Photoshop, InDesign<br><br><b>Goal:</b> Quickly adapt my identity design <a href="Salgirah85-International-Festival-Branding" rel="history">from the previous year</a> without disrupting the established geometry.<br><br><div style="text-align: left;">The local team in Seattle told me about their ambitious design plans for the celebration, and that I had to be there to see my design come to life at the venue. Despite my intense workload for the last few days of the semester, I made a last-minute decision to take a 36-hour trip back home in secrecy. It was the first time I could physically see anything I’d designed at this scale. In my hometown no less.</div><div style="text-align: left;"><br></div>
+<br></div>
+</div><br>
+```
