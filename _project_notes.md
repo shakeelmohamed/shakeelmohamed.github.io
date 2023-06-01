@@ -10,24 +10,33 @@ This file should eventually be removed, once shakeel.design content is folded in
     <div grid-col="8" grid-pad="2"><h2>Mark Rothko Documentary Campaign</h2></div>
     <div grid-col="4" grid-pad="2"></div>
 </div><div grid-row="" grid-pad="2" grid-gutter="4" grid-responsive="">
-    <div grid-col="8" grid-pad="2">{image 1}<br><br>
-{image 2}<br><br>
-{image 3}<br><br>
-{image 4}<br><br>
-{image 5}<br>{image 6}<br>{image 7}<br><br>
+    <div grid-col="8" grid-pad="2">{image 1}<br>
+A poster triptych promoting the documentary episode.<br><br>
+{image 2}<br>
+Sean Adams, the Department Chair of Graphic Design at ArtCenter, selected one poster from the set to display in his office.<br><br>
+{image 3}<br>
+Screenshots of the augmented reality experience created using Adobe Aero.<br><br>
+{image 4}<br>
+During my research I visited MOCA in Downtown Los Angeles for another Rothko experience.<br><br>
+{image 5}<br>
+My research included reading Johanna Drucker’s recently released book, <i>Inventing the Alphabet</i>, as I saught a deeper understanding for primitive letterforms. Conceptually, this aligned with Rothko’s ability to tap into the viewer’s primitive emotions with his artwork.<br>
+<br>{image 6}<br>Various sketches during the wordmark design process which ultimately led to me discovering the magic of this H-K ligature to minimize visual clutter.<br>
+<br>{image 7}<br>
+The final wordmark set on a purple inspired by the colors of Rothko’s paintings in the Rothko Chapel. The primitive forms for “Mark” tie back to the primitive emotions evoked by his work. While “Rothko” is set in all caps to symbolize the monolithic scale of his paintings.<br><br>
 <br>
 <br>
-{image 8}<br>{image 9}<br><br>
+{image 8}<br>During our midterm critique with some recent alumni, Erin Georgia suggested looking at the placement of “Mark” as a dynamic element which could create a logo system. Conceptually, this connects back to Mark Rothko’s many years of searching before finally settling on the style of art we know him for (and his legacy) as Rothko.<br>
+<br>{image 9}<br>Envisioning the start of an opening title sequence for the documentary.<br>
 <br>
 {image 10}<br>
-</div>
+The final set of posters with a call to action to stream the documentary at PBS.org.</div>
     <div grid-col="4" grid-pad="2">
 <b>When:</b> 2022<br><b>Professor:</b> <a href="http://morindesignoffice.com/" target="_blank">Christian Perez-Morin</a><br><b>Course:</b> Graduate Studio 1, ArtCenter<br>
 <b>Media:</b> Branding, Posters, Augmented Reality,<br>
-<b>Tools:</b> InDesign, Photoshop, Illustrator, AfterEffects, Aero
+<b>Tools:</b> InDesign, Photoshop, Illustrator, AfterEffects, Aero<br>
  
 
-<br>
+<b>Recognition:</b> One poster was selected for display in office of the Chair of Graphic Design at ArtCenter. (Spring 2023)<br>
 
 <br>
 Wordmark and posters for a campaign promoting a documentary about Mark Rothko, the abstract expressionist.<br>
