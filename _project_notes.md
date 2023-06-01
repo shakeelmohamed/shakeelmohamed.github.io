@@ -4,7 +4,6 @@ This file should eventually be removed, once shakeel.design content is folded in
 
 ## Rothko Documentary Campaign
 
-<!-- NOTE: On May 23, 2023 I accidentally lost all the content for this project... hopefully Cargo can roll it back otherwise I will be re-writing it. -->
 
 ```html
 <div grid-row="" grid-pad="2" grid-gutter="4">
@@ -50,7 +49,7 @@ The posters came together at the last minute once I embraced placing elements ov
 
 <br>
 During a break in our final presentation, I pulled together a rough augmented reality experience with Adobe Aero.<br><br>
-<b>Future work:</b> I plan to expand this project further by envisioning a pop-up exhibition to promote the documentary episode. This exibition would be focused on his life, rather than his art, giving the audience an opporuntity to lean more about the artist through an immersive experience.<br><br>
+<b>Future work:</b> I plan to expand this project further by envisioning a pop-up exhibition to promote the documentary episode. This exhibition would be focused on his life, rather than his art, giving the audience an opportunity to lean more about the artist through an immersive experience.<br><br>
 <b>Special thanks to:</b> The National Gallery of Art for high quality images of Rothko’s artwork. I am also grateful to Sean Adams, Michael Neal, Erin Georgia, and Sean Shang for additional critique during the semester.</div>
 </div><br>
 ```
@@ -204,7 +203,7 @@ The recording is available on <a href="https://youtu.be/HtRtGYQx480" target="_bl
 </div><br>
 ```
 
-## #Salgirah85 International Festival Branding
+## #Salgirah85 International Festival Identity
 
 ```html
 <div grid-row="" grid-pad="2" grid-gutter="4">
@@ -213,7 +212,7 @@ The recording is available on <a href="https://youtu.be/HtRtGYQx480" target="_bl
     <div grid-col="4" grid-pad="2"></div>
 </div><br>
 <div grid-row="" grid-pad="2" grid-gutter="4" grid-responsive=""><div grid-col="8" grid-pad="2">
-{image 1}<br>Dubai World Trade Centre. The Ismaili community in Dubai, UAE held their first in-person celebration since the COVID-19 pandemic at the Dubai WTC. Unfortunately I was not able to attend for multiple reasons, but received some photos from the local team. Additional highlights are shown below. All assets designed by the local team.
+{image 1}<br>Dubai World Trade Centre. The Ismaili community in Dubai, UAE held their first in-person celebration since the COVID-19 pandemic at the Dubai WTC. Unfortunately I was not able to attend for multiple reasons, but received some photos from the local team. Additional highlights are shown below. All assets were designed by the local team in Dubai.
 <br>
 <br>
 <iframe src="https://www.youtube.com/embed/HtRtGYQx480?t=375s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" style="aspect-ratio: 16 / 9; width: 100%;" class=""></iframe><br>
@@ -244,7 +243,7 @@ Above is the recording of my presentation of this project (at 6:15) from the 202
 <br>{image 14}<br>Signage for Golden Members (elders in the community, 65+), and wristbands to enter the venue. Designed by the local team.
 <br>
 <br>
-<iframe src="https://www.youtube.com/embed/J4gO_TFNdxw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" style="aspect-ratio: 16 / 9; width: 100%;"></iframe><br>This is a mini-reel of all motion graphics I worked on for #Salgirah85. These animations were used across social media, opening slates for various forms of video content for the festival, and on stage at some live events. Music was selected by The Ismaili Sounds global team.
+<iframe src="https://www.youtube.com/embed/J4gO_TFNdxw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" style="aspect-ratio: 16 / 9; width: 100%;" class=""></iframe><br>This is a mini-reel of all motion graphics I worked on for #Salgirah85. These animations were used across social media, opening slates for various forms of video content for the festival, and on stage at some live events. Music was selected by The Ismaili Sounds global team.
 <br>
 </div>
     <div grid-col="4" grid-pad="2">
@@ -256,11 +255,11 @@ Salgirah is a religious festival observed by Ismaili Muslims every December. It 
 <br>
 <br>This was by far the largest project I’ve worked on in terms of scale and one I will remember forever. The team only had two brief Zoom meetings over the six weeks of the project. I was impressed with our ability to collaborate across timezones through a Whatsapp group. Since this is a faith-based organization, all team members involved shared a common belief system about the festival.<br><br>
  
-One year later I was invited to refresh the indentity for the Aga Khan’s 86th Salgirah festival.</div>
+One year later I was invited to refresh the identity for the Aga Khan’s 86th Salgirah festival.</div>
 </div><br>
 ```
 
-## Salgirah 86
+## 86th Salgirah International Festival Identity
 
 ```html
 <div grid-row="" grid-pad="2" grid-gutter="4">
@@ -269,24 +268,40 @@ One year later I was invited to refresh the indentity for the Aga Khan’s 86th 
 </div><br>
 <div grid-row="" grid-pad="2" grid-gutter="4" grid-responsive=""><div grid-col="8" grid-pad="2">
 {image 1}<br>
+Community members from Afghanistan performed a traditional dance at the celebrations in Seattle.<br>
 <br>
 {image 2}<br>
-{image 3}{image 4}<br>
+The primary logo lockup in a vertical orientation to honor the new motif.<br>
+{image 3}<br>
+A secondary horizontal lockup was developed to emphasize the number 86.<br>
 <br>
-{image 5}<br><br>
-{image 6}<br>{image 7}<br><br>
+{image 4}<br>
+The local decor team in Seattle beautifully applied the identity to a photobooth and various elements at the venue.<br>
 <br>
-{image 8}<br><br>
-{image 9}<br>{image 10}<br><br>
+{image 5}<br>
+Stage backdrop and lighting designed by the local decor team in Seattle.<br><br>
+{image 6}<br>A floating installation of the motif hanging over the dance floor, designed by local decor team in Seattle. I was told this took nearly six hours to assemble and hang.<br>
+<br>{image 7}<br>
+I had the opportunity to support the local photography team on my quick trip up to Seattle.<br>
 <br>
-{image 12}<br><br>
-{image 13}<br></div>
+{image 8}<br>
+Volunteer badges designed by the local team in Seattle.<br><br>
+{image 14}<br>
+Aprons worn by the kitchen staff, designed by the local team in Seattle.<br>
+<br>{image 10}<br>
+Cakes! There were found on social media accounts.<br>
+<br>
+{image 12}<br>
+Children’s celebrations, I believe this was in East Africa.<br><br>
+{image 13}<br>
+Additional celebrations in Pakistan.</div>
     <div grid-col="4" grid-pad="2">
 <b></b><b>When:</b> December 2022 (6 days)<br>
-<b>Organization:</b> <a href="https://the.ismaili/" target="_blank">The Ismaili Muslicm Community (globally)</a>
+<b>Organization:</b> <a href="https://the.ismaili/" target="_blank">The Ismaili Muslim Community (globally)</a>
 <br>
 <b>Media:</b> branding<br>
-<b>Tools:</b> Illustrator, Photoshop, InDesign<br><br><b>Goal:</b> Quickly adapt my identity design <a href="Salgirah85-International-Festival-Branding" rel="history">from the previous year</a> without disrupting the established geometry.<br><br><div style="text-align: left;">The local team in Seattle told me about their ambitious design plans for the celebration, and that I had to be there to see my design come to life at the venue. Despite my intense workload for the last few days of the semester, I made a last-minute decision to take a 36-hour trip back home in secrecy. It was the first time I could physically see anything I’d designed at this scale. In my hometown no less.</div><div style="text-align: left;"><br></div>
-<br></div>
+<b>Tools:</b> Illustrator, Photoshop, InDesign<br><br><b>Goal:</b> Quickly adapt my identity design from the previous year without disrupting the established geometry.<br><br>Salgirah is a religious festival observed by Ismaili Muslims every December. It marks the birthday of His Highness the Aga Khan, a descendant of Prophet Muhammad, the spiritual leader of 15 million Ismailis worldwide. December 13, 2022, marked his 86th birthday, or Salgirah. For additional context, please read through <b><a href="Salgirah85-International-Festival-Branding" rel="history">the identity I designed from the previous year</a></b>.<br><br>
+The main challenge in designing this year’s identity was finding a way to represent the number 86 with geometry in the logo. From the previous year, 85 had easy multiples to work with (7 x 15) however 86 could only be broken down to 43 x 2 which does not lead to a pleasing form.<br><br>
+After discussions with international marketing leadership, I was given permission to explore the number 49 instead. His Highness the Aga Khan is recognized as the the 49th Ismaili Muslim Imam and a direct descendant of the Prophet Muhammad. 49 breaks down nicely into 7x7 and offered the opportunity to reuse the identity for future years.<br><br><div style="text-align: left;">The local team in Seattle told me about their ambitious design plans for the celebration, and that I had to be there to see my design come to life at the venue. Despite my intense workload for the last few days of the semester, I made a last-minute decision to take a 36-hour trip back home in secrecy. It was the first time I could physically see anything I’d designed at this scale. In my hometown no less.</div></div>
 </div><br>
 ```
