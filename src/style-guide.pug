@@ -1,14 +1,14 @@
 ---
 title: Shakeel Mohamed – Style Guide
-description: This is work in progress documentatation of the design system used on this website, along with some personal brand guidelines.
+description: This is work in progress documentation of the design system used on this website, along with some personal brand guidelines.
 ---
 
 extends _includes/layouts/base.pug
 include _includes/molecules.pug
 
 block hero
-    h1.text-navy Style Guide
-    p.text-navy #{description}
+    h1.text-black Style Guide
+    p.text-black #{description}
 
 block content
     +textStyles()
@@ -21,8 +21,8 @@ mixin textStyles()
     //- TODO: all of this is stale
     //- TODO: exhaustive typography examples for prose block quotes, italics, bold, etc
     h1 Typography
-    p.subhead Freight is used for headings.
-    p All body text uses Proxima Nova.
+    p.subhead Proxima Nova bold is used for headings.
+    p All body text uses Proxima Nova regular.
     p Both font families are licensed through Typekit from Adobe Creative Cloud.
     .mx-8
         h1 Heading 1
@@ -39,12 +39,10 @@ mixin colors()
     h1 Colors
     .flex.flex-wrap
         div.flex
-            +colorCircle("navy", "Navy", "white")
+            +colorCircle("black", "Black", "white")
             +colorCircle("white", "White")
-        div.flex
             +colorCircle("orange", "Orange")
-            +colorCircle("light-blue", "Light Blue")
 
-mixin colorCircle(bgColor, text, textColor="navy")
+mixin colorCircle(bgColor, text, textColor="black")
     div(class="rounded-full h-32 w-32 flex items-center justify-center border-solid border-2 m-2 bg-" + bgColor + " border-" + textColor)
         p(class="text-" + textColor) #{text}

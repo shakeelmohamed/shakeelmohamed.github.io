@@ -7,7 +7,7 @@ mixin myEmail()
     +mailto("hello", "shakeel.design", "Hey Shakeel, let’s talk")
 
 mixin mailto(user, domain, subject)
-    //- <!-- // http://lists.evolt.org/archive/Week-of-Mon-20040202/154813.html -->
+    //- See: http://lists.evolt.org/archive/Week-of-Mon-20040202/154813.html
     span.mailto
         script(type="text/javascript").
             function gen_mail_to_link(lhs, rhs, subject) {
@@ -17,14 +17,9 @@ mixin mailto(user, domain, subject)
             }
             gen_mail_to_link("#{user}", "#{domain}", "#{subject}")
 
-mixin getRandomLogo(size=50)
-    script getRandomLogo(#{size})
-
 mixin headerLogo()
     h3(class="text-white text-center py-4 flex-nowrap md:text-left")
-        a(href="/")
-            +getRandomLogo()
-            | Shakeel Mohamed
+        a(href="/") Shakeel Mohamed
 
 mixin navItem(href, label)
     a(class="font-sans font-bold text-white md:inline-block md:ml-8" href=href) #{label}
@@ -48,11 +43,6 @@ mixin sectionOrange()
 //- TODO: refactor this away
 mixin sectionNavy() 
     section(class="bg-navy text-white")
-        +container()
-            block
-
-mixin sectionLightBlue()
-    section(class="bg-light-blue text-black")
         +container()
             block
 
