@@ -1,7 +1,7 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
-  mode: "jit",
+  mode: 'jit',
   content: [
     './src/**/*.{md,pug}'
   ],
@@ -12,11 +12,12 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['proxima-nova', ...defaultTheme.fontFamily.sans],
-        // TODO: bring in freight display, rethink which cuts should be used where
-        serif: ['freight-big-pro', ...defaultTheme.fontFamily.serif],
+        serif: ['freight-display-pro', ...defaultTheme.fontFamily.serif],
       },
       fontSize: {
-        base: '1rem',
+        // [fontSize, lineHeight]
+        base: ['1.2rem', '1.2'],
+        heading: ['2.4rem', '1.2'] // Just for logo header
       }
     },
     colors: {

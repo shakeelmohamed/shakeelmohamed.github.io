@@ -18,31 +18,34 @@ mixin centeredPage()
     div.centered-page(class="mx-auto place-content-center self-center lg:w-1/2")
         block
 
-mixin headerLogo()
-    div(class="py-4 text-left flex-nowrap")
+mixin headerBranding()
+    div(class="pb-4 text-left flex-nowrap")
         a.header-logo(href="/") Shakeel Mohamed
+        p.h2
+            span.bold Graphic Designer:
+            span &nbsp;Branding, Typography, Leadership
 
 mixin navItem(href, label)
-    a(class="font-sans font-semibold text-black text-left ml-0 mr-8 md:text-center md:inline-block md:mr-0 md:ml-8" href=href) #{label}
+    p.bold.h2.text-right
+        a(class="text-left ml-0 md:text-center md:inline-block md:mr-0 md:ml-8" href=href) #{label}
 
 mixin header(bg="bg-white")
     //- TODO: layout breaks below 320px width
     header
-        div.full-width(class=bg)
-            .mx-8
-                div(class="md:flex md:items-baseline md:justify-between")
-                    +headerLogo()
-                    nav(class="flex md:justify-between text-lg sm:py-4 md:justify-items-end md:flex-shrink-0 md:mx-0")
-                        +navItem("https://shakeel.design", "Portfolio")
-                        //- +navItem("/", "Work")
-                        +navItem("/blog", "Blog")
-                        //- +navItem("/about", "About")
-                        //- +navItem("/contact", "Contact")
-            hr.text-black.my-0(style="border-width: 0.125em;")
+        +headerBranding()
+        //- nav(class="flex md:justify-between text-lg sm:py-4 md:justify-items-end md:flex-shrink-0 md:mx-0")
+        nav
+            +navItem("mailto:hello@shakeel.design", "hello@shakeel.design")
+            +navItem("https://shakeel.design", "Portfolio")
+            //- +navItem("/", "Work")
+            +navItem("/blog", "Blog")
+            
+            //- +navItem("/about", "About")
+            //- +navItem("/contact", "Contact")
 
 
 mixin hero()
-    div(class="mt-4 mb-12 xl:mt-12 xl:mb-8")
+    div(class="mt-2 mb-12 xl:mt-12 xl:mb-8")
         block
 
 mixin footerNavItem(href, label)
@@ -52,21 +55,19 @@ mixin footerNavItem(href, label)
 //- TODO: need to fix margin/padding with new body styles
 mixin footer()
     footer
-        .full-width
-            .mx-8
-                +flexCols2()
-                    div(class="lg:basis-1/2")
-                        div(class="md:w-2/3")
-                            h3 Subscribe
-                            +mailingListForm()
-                    div(class="lg:basis-1/2")
-                        //- TODO: figure out how to place this whole div to the right edge
-                        div()
-                            h3 Contact
-                            +contact()
+        +flexCols2()
+            div(class="lg:basis-1/2")
+                div(class="md:w-2/3")
+                    p.bold.h2 Subscribe
+                    +mailingListForm()
+            div(class="lg:basis-1/2")
+                //- TODO: figure out how to place this whole div to the right edge
+                div
+                    p.bold.h2 Contact
+                    +contact()
 
 mixin contact()
-    span
+    span.bold
         +myEmail()
     div
         - var numLinks = 0;
@@ -89,14 +90,14 @@ mixin projectListing(project)
         a(href=project.url)
             img.portfolio-cover.w-full(src=project.data.openGraphImage alt="Cover image for " + project.data.title + " project")
         div.pt-2
-            div(class="text-black pb-0.5 text-2xl font-sans font-semibold")
+            div(class="pb-0.5 text-2xl font-bold")
                 h2
                     a(href=project.url) #{project.data.title}
             //- TODO: need a max-width here so the lines aren't super long
             div.project-meta
                 if project.data.media
                     p
-                        span.font-semibold Media:&nbsp;
+                        span.font-bold Media:&nbsp;
                         | #{project.data.mediaString}
                 p #{project.data.tagline}.
 
@@ -153,5 +154,5 @@ mixin getMentions(recent=false)
             div(class="basis-1/4")
                 p.whitespace-nowrap.text-right #{mention.date} &nbsp;
             div(class="basis-3/4")
-                a(href=mention.url, class="text-black font-medium hover:text-orange") #{mention.title}
+                a(href=mention.url, class="font-bold hover:text-orange") #{mention.title}
                 br

@@ -10,21 +10,29 @@
         @apply z-0 antialiased;
     }
 
-    html, body {
-      @apply min-h-screen m-0 text-black;
+    html {
+      @apply min-h-screen w-screen text-black font-sans p-0 m-0;
+        
+        /* TODO: this is carryover from cargo, factor it away please */
+        font-size: 90%;
     }
 
     body {
-        @apply overflow-x-hidden overscroll-none h-full flex flex-col relative px-0;
-        
+        @apply m-8 overflow-x-hidden overscroll-none h-full flex flex-col relative text-base;
     }
 
     header {
-        @apply flex-initial sticky z-50 top-0 mx-auto;
+    /*         @apply md:flex md:flex-row md:items-baseline md:justify-between; */
+
+        @apply flex items-baseline justify-between;
+    }
+
+    nav {
+        @apply font-bold;
     }
 
     main {
-      @apply relative flex-auto px-0 mx-8;
+      @apply relative flex-auto;
     }
 
     footer {
@@ -32,35 +40,39 @@
     }
 
     section {
-        @apply w-full aspect-video;
+        @apply w-full aspect-video py-4;
     }
-    /* TODO: define a style for full width section, which can then have a color applied to it */
-    section {
-        @apply py-4;
-    }
+
     .centered-page img {
         @apply mx-auto;
     }
 
+    /* TODO: this is cargo carryover, fix it */
+    .h2 {
+        letter-spacing: 0.01em;
+        line-height: 1.8;
+    }
+
     /* Headings */
     h1 {
-       @apply font-sans font-bold text-black py-4 text-4xl md:text-5xl;
+       @apply font-bold py-4 text-4xl md:text-5xl;
     }
     h2 {
-        @apply font-sans font-bold text-black py-4 text-2xl md:text-3xl;
+        @apply font-bold py-4 text-2xl md:text-3xl;
     }
     h3 {
-        @apply font-sans font-bold text-black py-4 text-xl md:text-xl;
+        @apply font-bold py-4 text-xl md:text-xl;
     }
     .subhead {
-        @apply font-sans text-lg text-black pb-4;
+        @apply text-lg pb-4;
     }
     .caption {
-        @apply font-sans text-sm text-black;
+        @apply text-sm;
     }
+
     /* Body text style */
     p, li {
-        @apply font-sans text-base text-black font-normal;
+        @apply font-normal;
     }
     a {
         @apply transition hover:text-orange;
@@ -83,7 +95,8 @@
         @apply inline mr-2;
     }
     .header-logo {
-        @apply text-4xl font-normal font-serif;
+        @apply text-heading font-normal font-serif;
+/*         @apply text-4xl font-normal font-serif; */
     }
 
     hr {
@@ -91,8 +104,8 @@
     }
 
     input {
-        @apply text-black-90;
-        @apply rounded;
+/* TODO: figure out why this border class is not compiling in */
+/*         @apply rounded border-gray-300; */
     }
 }
 
@@ -100,23 +113,23 @@
     /* Typography plugin customization */
     /* TODO: align these with default headings... but scaled down a bit; */
     .prose {
-        @apply font-sans text-base leading-normal text-black;
+        @apply text-base leading-normal;
     }
     .prose h1 {
-        @apply text-black font-serif font-normal;
+        @apply font-serif font-normal;
     }
     .prose h2, .prose h3, .prose h4, .prose h5 {
-        @apply text-black font-sans my-0.5;
+        @apply my-0.5;
     }
     .prose p, .prose li {
-        @apply text-black font-normal;
+        @apply font-normal;
     }
     .prose a {
         @apply transition hover:text-orange;
         @apply font-normal;
     }
     .prose strong, .prose b {
-        @apply text-black;
+/*         @apply; */
     }
     
     /* Don't automatically add quotes to a blockquote (from markdown) */
@@ -176,7 +189,7 @@
 }
 .formkit-form[data-uid="76b5042373"] legend {
     border: none;
-    font-size: inherit;
+/*     font-size: inherit; */
     margin-bottom: 10px;
     padding: 0;
     position: relative;
@@ -198,20 +211,20 @@
 .formkit-form[data-uid="76b5042373"] h5,
 .formkit-form[data-uid="76b5042373"] h6 {
     color: inherit;
-    font-size: inherit;
+/*     font-size: inherit; */
     font-weight: inherit;
 }
 .formkit-form[data-uid="76b5042373"] h2 {
-    font-size: inherit;
+/*     font-size: inherit; */
     margin: 1em 0;
 }
 .formkit-form[data-uid="76b5042373"] h3 {
-    font-size: inherit;
+/*     font-size: inherit; */
     margin: 1em 0;
 }
 .formkit-form[data-uid="76b5042373"] p {
     color: inherit;
-    font-size: inherit;
+/*     font-size: inherit; */
     font-weight: inherit;
 }
 .formkit-form[data-uid="76b5042373"] ol:not([template-default]),
@@ -260,7 +273,7 @@
     cursor: pointer;
     display: inline-block;
     text-align: center;
-    font-size: inherit;
+/*     font-size: inherit; */
     font-weight: 500;
     cursor: pointer;
     margin-bottom: 15px;
@@ -290,7 +303,7 @@
 }
 .formkit-form[data-uid="76b5042373"] .formkit-input {
     background: #ffffff;
-    font-size: inherit;
+/*     font-size: inherit; */
     padding: 12px;
     border: 1px solid #e3e3e3;
     -webkit-flex: 1 0 auto;
@@ -352,7 +365,7 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    font-size: inherit;
+/*     font-size: inherit; */
     padding: 12px;
     padding-right: 25px;
     border: 1px solid #e3e3e3;
@@ -589,7 +602,7 @@
 }
 .formkit-form[data-uid="76b5042373"] .seva-custom-content {
     padding: 15px;
-    font-size: inherit;
+/*     font-size: inherit; */
     color: #fff;
     mix-blend-mode: difference;
 }
