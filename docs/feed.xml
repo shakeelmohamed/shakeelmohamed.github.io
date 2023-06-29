@@ -187,7 +187,7 @@
         <summary>type="text" This is equivalent to previewing a pull request, and it works great across remotes!</summary>
     </entry>
     <entry>
-        <title>&quot;Oops, I pushed a commit with something sensitive to a public GitHub project!&quot;</title>
+        <title>“Oops, I pushed a commit with something sensitive to a public GitHub project!”</title>
         <link href="https://shakeelmohamed.com/posts/2015-05-06-oops-i-pushed-a-commit-with-something-sensitive-to-a-public-github-project/"/>
         <published>2015-05-06T00:00:00Z</published>
         <updated>2021-09-12T07:58:43Z</updated>

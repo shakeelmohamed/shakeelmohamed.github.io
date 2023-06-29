@@ -661,6 +661,7 @@ select {
 
     footer {
   flex: 0 1 auto;
+  padding-bottom: 1rem;
 }
 
     section {
@@ -1528,16 +1529,19 @@ select {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
-.py-12 {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
 .pb-2 {
   padding-bottom: 0.5rem;
+}
+.pt-4 {
+  padding-top: 1rem;
 }
 .pt-8 {
   padding-top: 2rem;

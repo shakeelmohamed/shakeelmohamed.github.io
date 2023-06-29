@@ -48,7 +48,7 @@
     }
 
     footer {
-      @apply flex-initial;
+      @apply flex-initial pb-4;
     }
 
     section {
