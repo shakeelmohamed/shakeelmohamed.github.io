@@ -5,7 +5,6 @@
 @layer base {
     /* TODO: swap out tailwind classes for most of this mess */
 
-    /* Push everything back so the sticky header stays put */
     * {
         @apply z-0 antialiased;
     }
@@ -18,16 +17,19 @@
     }
 
     body {
-        @apply m-4 md:m-8 overflow-x-hidden overscroll-none h-full flex flex-col relative;
+        @apply p-4 md:p-8 overflow-x-hidden overscroll-none h-screen flex flex-col relative;
         @apply text-base_sm md:text-base;
     }
 
     header {
-        @apply md:flex items-baseline justify-between;
+        /* TODO: may only need md:flex here since children should have flex-grow:1 */
+        @apply md:flex md:items-baseline md:justify-between;
     }
 
     nav {
         @apply font-bold;
+        /* On desktop, show nav as a bar with email last */
+        @apply md:flex md:flex-row-reverse;
     }
     nav > p {
         @apply bold h2;
@@ -38,7 +40,6 @@
 
     .header-logo {
         @apply font-normal font-serif pb-4;
-/*         @apply text-heading_sm md:text-heading; */
         @apply text-heading;
     }
 
@@ -108,6 +109,7 @@
 
     hr {
         @apply my-4;
+        border-width: thin;
     }
 
     input {
@@ -116,7 +118,7 @@
     }
 
     ol {
-        @apply list-decimal pl-4;
+        @apply list-decimal list-inside;
     }
 }
 

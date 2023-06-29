@@ -19,7 +19,7 @@ module.exports = {
         base_sm: ['1rem', '1.1'], // Body mobile
         base: ['1.2rem', '1.2'], // Body
         heading_sm: ['2.2rem', '1.2'], // Branding mobile
-        heading: ['2.4rem', '1.2'] // Branding header
+          heading: ['2.4rem', '1.2'] // Branding header
       }
     },
     colors: {

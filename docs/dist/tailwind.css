@@ -540,7 +540,6 @@ select {
 }
     /* TODO: swap out tailwind classes for most of this mess */
 
-    /* Push everything back so the sticky header stays put */
     * {
   z-index: 0;
   -webkit-font-smoothing: antialiased;
@@ -562,19 +561,19 @@ select {
 
     body {
   position: relative;
-  margin: 1rem;
   display: flex;
-  height: 100%;
+  height: 100vh;
   flex-direction: column;
   overflow-x: hidden;
   -ms-scroll-chaining: none;
       overscroll-behavior: none;
+  padding: 1rem;
 }
 
     @media (min-width: 768px) {
 
   body {
-    margin: 2rem;
+    padding: 2rem;
   }
 }
 
@@ -592,19 +591,29 @@ select {
 }
 
     header {
-  align-items: baseline;
-  justify-content: space-between;
-}
+        /* TODO: may only need md:flex here since children should have flex-grow:1 */
+    }
 
     @media (min-width: 768px) {
 
   header {
     display: flex;
+    align-items: baseline;
+    justify-content: space-between;
   }
 }
 
     nav {
   font-weight: 700;
+        /* On desktop, show nav as a bar with email last */
+}
+
+    @media (min-width: 768px) {
+
+  nav {
+    display: flex;
+    flex-direction: row-reverse;
+  }
 }
     nav > p {
         letter-spacing: 0.01em;
@@ -641,9 +650,8 @@ select {
   padding-bottom: 1rem;
   font-family: freight-display-pro, ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 400;
-/*         @apply text-heading_sm md:text-heading; */
-font-size: 2.4rem;
-line-height: 1.2;
+  font-size: 2.4rem;
+  line-height: 1.2;
 }
 
     main {
@@ -772,6 +780,7 @@ line-height: 1.2;
     hr {
   margin-top: 1rem;
   margin-bottom: 1rem;
+        border-width: thin;
 }
 
     input {
@@ -780,8 +789,8 @@ line-height: 1.2;
     }
 
     ol {
+  list-style-position: inside;
   list-style-type: decimal;
-  padding-left: 1rem;
 }
 
 *, ::before, ::after {
@@ -1358,9 +1367,6 @@ line-height: 1.2;
 .mt-2 {
   margin-top: 0.5rem;
 }
-.mb-12 {
-  margin-bottom: 3rem;
-}
 .mt-24 {
   margin-top: 6rem;
 }
@@ -1412,6 +1418,9 @@ line-height: 1.2;
 .flex-grow {
   flex-grow: 1;
 }
+.grow {
+  flex-grow: 1;
+}
 .basis-1\/4 {
   flex-basis: 25%;
 }
@@ -1424,11 +1433,11 @@ line-height: 1.2;
 .resize {
   resize: both;
 }
-.list-disc {
-  list-style-type: disc;
-}
 .list-none {
   list-style-type: none;
+}
+.list-disc {
+  list-style-type: disc;
 }
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -1462,13 +1471,6 @@ line-height: 1.2;
 }
 .justify-items-stretch {
   justify-items: stretch;
-}
-.gap-16 {
-  gap: 4rem;
-}
-.gap-x-16 {
-  -moz-column-gap: 4rem;
-       column-gap: 4rem;
 }
 .gap-y-2 {
   row-gap: 0.5rem;
@@ -1555,6 +1557,9 @@ line-height: 1.2;
 .pb-0 {
   padding-bottom: 0px;
 }
+.pb-1 {
+  padding-bottom: 0.25rem;
+}
 .text-left {
   text-align: left;
 }
@@ -1569,10 +1574,6 @@ line-height: 1.2;
 }
 .font-serif {
   font-family: freight-display-pro, ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-}
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
 }
 .text-2xl {
   font-size: 1.5rem;
@@ -2155,13 +2156,6 @@ h2.break {
   --tw-text-opacity: 1;
   color: rgb(255 92 10 / var(--tw-text-opacity));
 }
-@media (min-width: 640px) {
-
-  .sm\:py-4 {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-}
 @media (min-width: 768px) {
 
   .md\:invisible {
@@ -2172,17 +2166,16 @@ h2.break {
     grid-column: span 12 / span 12;
   }
 
-  .md\:mx-0 {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-
   .md\:ml-8 {
     margin-left: 2rem;
   }
 
   .md\:mr-0 {
     margin-right: 0px;
+  }
+
+  .md\:mb-12 {
+    margin-bottom: 3rem;
   }
 
   .md\:inline-block {
@@ -2197,20 +2190,8 @@ h2.break {
     width: 66.666667%;
   }
 
-  .md\:flex-shrink-0 {
-    flex-shrink: 0;
-  }
-
   .md\:grid-cols-12 {
     grid-template-columns: repeat(12, minmax(0, 1fr));
-  }
-
-  .md\:justify-between {
-    justify-content: space-between;
-  }
-
-  .md\:justify-items-end {
-    justify-items: end;
   }
 
   .md\:px-8 {
@@ -2273,6 +2254,15 @@ h2.break {
 
   .lg\:flex-nowrap {
     flex-wrap: nowrap;
+  }
+
+  .lg\:gap-16 {
+    gap: 4rem;
+  }
+
+  .lg\:gap-x-16 {
+    -moz-column-gap: 4rem;
+         column-gap: 4rem;
   }
 
   .lg\:pt-0 {
