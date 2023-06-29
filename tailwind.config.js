@@ -12,12 +12,12 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['proxima-nova', ...defaultTheme.fontFamily.sans],
-        serif: ['freight-display-pro', ...defaultTheme.fontFamily.serif],
+        serif: ['freight-display-pro', ...defaultTheme.fontFamily.serif], // Only used for branding
       },
       fontSize: {
         // [fontSize, lineHeight]
         base: ['1.2rem', '1.2'],
-        heading: ['2.4rem', '1.2'] // Just for logo header
+        heading: ['2.4rem', '1.2'] // Just for branding header
       }
     },
     colors: {

@@ -22,4 +22,5 @@ block content
     //- if collections.portfolio
     //-     +gridCols2()
     //-         each project in collections.portfolio
-    //-             +projectListing(project)
+    //-             if project not in collections.archive
+    //-                 +projectListing(project)
