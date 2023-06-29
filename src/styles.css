@@ -18,17 +18,28 @@
     }
 
     body {
-        @apply m-8 overflow-x-hidden overscroll-none h-full flex flex-col relative text-base;
+        @apply m-4 md:m-8 overflow-x-hidden overscroll-none h-full flex flex-col relative;
+        @apply text-base_sm md:text-base;
     }
 
     header {
-    /*         @apply md:flex md:flex-row md:items-baseline md:justify-between; */
-
-        @apply flex items-baseline justify-between;
+        @apply md:flex items-baseline justify-between;
     }
 
     nav {
         @apply font-bold;
+    }
+    nav > p {
+        @apply bold h2;
+        @apply text-left md:text-right;
+        /* On mobile, include '> ' before each nav item */
+        @apply before:content-['>\00a0'] md:before:content-[''];
+    }
+
+    .header-logo {
+        @apply font-normal font-serif pb-4;
+/*         @apply text-heading_sm md:text-heading; */
+        @apply text-heading;
     }
 
     main {
@@ -93,10 +104,6 @@
 
     img.logo {
         @apply inline mr-2;
-    }
-    .header-logo {
-        @apply text-heading font-normal font-serif;
-/*         @apply text-4xl font-normal font-serif; */
     }
 
     hr {

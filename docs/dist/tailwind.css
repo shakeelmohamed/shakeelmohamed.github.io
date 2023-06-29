@@ -562,26 +562,88 @@ select {
 
     body {
   position: relative;
-  margin: 2rem;
+  margin: 1rem;
   display: flex;
   height: 100%;
   flex-direction: column;
   overflow-x: hidden;
   -ms-scroll-chaining: none;
       overscroll-behavior: none;
-  font-size: 1.2rem;
-  line-height: 1.2;
+}
+
+    @media (min-width: 768px) {
+
+  body {
+    margin: 2rem;
+  }
+}
+
+    body {
+  font-size: 1rem;
+  line-height: 1.1;
+}
+
+    @media (min-width: 768px) {
+
+  body {
+    font-size: 1.2rem;
+    line-height: 1.2;
+  }
 }
 
     header {
-    /*         @apply md:flex md:flex-row md:items-baseline md:justify-between; */
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+    @media (min-width: 768px) {
+
+  header {
     display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    }
+  }
+}
 
     nav {
   font-weight: 700;
+}
+    nav > p {
+        letter-spacing: 0.01em;
+        line-height: 1.8;
+    }
+     nav > p {
+  font-weight: 700;
+}
+    nav > p {
+  text-align: left;
+}
+    @media (min-width: 768px) {
+
+  nav > p {
+    text-align: right;
+  }
+}
+    nav > p {
+        /* On mobile, include '> ' before each nav item */
+    }
+    nav > p::before {
+  --tw-content: '>\00a0';
+  content: var(--tw-content);
+}
+    @media (min-width: 768px) {
+
+  nav > p::before {
+    --tw-content: '';
+    content: var(--tw-content);
+  }
+}
+
+    .header-logo {
+  padding-bottom: 1rem;
+  font-family: freight-display-pro, ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  font-weight: 400;
+/*         @apply text-heading_sm md:text-heading; */
+font-size: 2.4rem;
+line-height: 1.2;
 }
 
     main {
@@ -705,13 +767,6 @@ select {
     img.logo {
   margin-right: 0.5rem;
   display: inline;
-}
-    .header-logo {
-  font-family: freight-display-pro, ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  font-size: 2.4rem;
-  line-height: 1.2;
-  font-weight: 400;
-/*         @apply text-4xl font-normal font-serif; */
 }
 
     hr {
@@ -1480,9 +1535,6 @@ select {
 .pb-12 {
   padding-bottom: 3rem;
 }
-.pb-4 {
-  padding-bottom: 1rem;
-}
 .pb-8 {
   padding-bottom: 2rem;
 }
@@ -2103,6 +2155,10 @@ h2.break {
   }
 }
 @media (min-width: 768px) {
+
+  .md\:invisible {
+    visibility: hidden;
+  }
 
   .md\:col-span-12 {
     grid-column: span 12 / span 12;

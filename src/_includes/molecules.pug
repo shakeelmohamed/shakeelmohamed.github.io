@@ -19,14 +19,14 @@ mixin centeredPage()
         block
 
 mixin headerBranding()
-    div(class="pb-4 text-left flex-nowrap")
+    div(class="text-left flex-nowrap")
         a.header-logo(href="/") Shakeel Mohamed
         p.h2
-            span.bold Graphic Designer:
-            span &nbsp;Branding, Typography, Leadership
+            span.bold Graphic Designer:&nbsp;
+            span Branding, Typography, Leadership
 
 mixin navItem(href, label)
-    p.bold.h2.text-right
+    p
         a(class="text-left ml-0 md:text-center md:inline-block md:mr-0 md:ml-8" href=href) #{label}
 
 mixin header(bg="bg-white")
@@ -42,6 +42,7 @@ mixin header(bg="bg-white")
             
             //- +navItem("/about", "About")
             //- +navItem("/contact", "Contact")
+            hr(class="md:invisible full-width")
 
 
 mixin hero()

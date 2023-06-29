@@ -17,12 +17,13 @@ mixin mailto(user, domain, subject)
             }
             gen_mail_to_link("#{user}", "#{domain}", "#{subject}")
 
-mixin xnavItem(href, label)
-    a(class="font-sans font-bold text-white md:inline-block md:ml-8" href=href) #{label}
 
-mixin footerNavItem(href, label)
-    li
-        a.subhead(href=href) #{label}
+//- mixin xnavItem(href, label)
+//-     a(class="font-sans font-bold text-white md:inline-block md:ml-8" href=href) #{label}
+
+//- mixin footerNavItem(href, label)
+//-     li
+//-         a.subhead(href=href) #{label}
 
 //- TODO: every section has a gridWithBigColumn(), tidy up many places
 
