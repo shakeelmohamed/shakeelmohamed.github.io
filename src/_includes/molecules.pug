@@ -33,14 +33,12 @@ mixin header(bg="bg-white")
     //- TODO: layout breaks below 320px width
     header
         +headerBranding()
-        //- nav(class="flex md:justify-between text-lg sm:py-4 md:justify-items-end md:flex-shrink-0 md:mx-0")
         nav
             +navItem("mailto:hello@shakeel.design", "hello@shakeel.design")
             +navItem("https://shakeel.design", "Portfolio")
             //- +navItem("/", "Work")
             +navItem("/blog", "Blog")
-            
-            //- +navItem("/about", "About")
+            +navItem("/about", "About")
             //- +navItem("/contact", "Contact")
             hr(class="md:invisible full-width")
 
@@ -151,9 +149,12 @@ mixin getMentions(recent=false)
     if !recent
         - source = mentions.all;
     .flex.flex-wrap.items-baseline
-        each mention in source
-            div(class="basis-1/4")
-                p.whitespace-nowrap.text-right #{mention.date} &nbsp;
-            div(class="basis-3/4")
-                a(href=mention.url, class="font-bold hover:text-orange") #{mention.title}
-                br
+        if source.length > 0
+            ul
+            each mention in source
+                li.list-none
+                    div(class="basis-1/4")
+                        p.whitespace-nowrap.text-left #{mention.date} &nbsp;
+                    div(class="basis-3/4")
+                        a(href=mention.url, class="font-bold hover:text-orange") #{mention.title}
+                    br

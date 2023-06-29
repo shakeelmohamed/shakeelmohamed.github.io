@@ -114,6 +114,10 @@
 /* TODO: figure out why this border class is not compiling in */
 /*         @apply rounded border-gray-300; */
     }
+
+    ol {
+        @apply list-decimal pl-4;
+    }
 }
 
 @layer utilities {
