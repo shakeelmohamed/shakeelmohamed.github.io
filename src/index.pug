@@ -4,7 +4,7 @@ description: Shakeel Mohamed is a candidate for an MFA in Graphic Design at ArtC
 
 extends _includes/layouts/base.pug
 
-block hero
+block content
     +gridCols2()
         div
             p.bold.h2 Hello, I’m Shakeel!
@@ -15,8 +15,6 @@ block hero
             p.bold.h2 My design portfolio is available at 
                 a(href="https://shakeel.design") shakeel.design.
 
-
-block content
     //- TODO: rework this to collections.home or something; goal is to have multiple blocks of content.
     //- could be projects, videos, bio, etc.
     //- if collections.portfolio

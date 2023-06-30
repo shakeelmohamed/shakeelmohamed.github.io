@@ -7,7 +7,7 @@ extends _includes/layouts/base.pug
 include _includes/molecules.pug
 //- TODO: CTA for contact me for projects, or something? Maybe a separate services page?
 
-block hero
+block content
     +gridCols2()
         div
             p.bold.h2 “The best way to predict the future is to create it”
@@ -59,7 +59,6 @@ mixin bio()
             I spend my free time volunteering with [the Ismaili Muslim community](https://the.ismaili/) on projects varying from branding to video production.
 
 //- TODO: resolve this
-//- block content
 //-     +centeredPage()
 //-         +bio()
 //-         div

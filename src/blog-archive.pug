@@ -1,17 +1,14 @@
 ---
 title: Shakeel Mohamed – Blog Archive
-description: "The archive of all blog posts I've written in the past"
+description: "The archive of all blog posts I’ve written in the past"
 canonical: "/blog-archive"
 ---
 
 extends _includes/layouts/base.pug
 
-block hero
-    +centeredPage()
-        h1.text-black Blog Archive
-        p #{description}
-
 block content
     +centeredPage()
-        h2.text-black All Posts
+        h1 Blog Archive
+        p #{description}
+        h2 All Posts
         +getPosts()

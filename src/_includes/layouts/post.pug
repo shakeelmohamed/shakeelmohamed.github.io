@@ -1,13 +1,10 @@
 extends ./base.pug
 
-block hero
+//- TODO: use article markup
+block content
     +centeredPage()
         p.text-black #{cleanDate}
         h1.text-black #{title}
         p.subhead.text-black #{description}
         //- TODO: display categories
-
-//- TODO: use article markup
-block content
-    +centeredPage()
         div(class="prose")!= content

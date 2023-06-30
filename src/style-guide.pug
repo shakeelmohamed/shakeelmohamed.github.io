@@ -6,11 +6,9 @@ description: This is work in progress documentation of the design system used on
 extends _includes/layouts/base.pug
 include _includes/molecules.pug
 
-block hero
+block content
     h1.text-black Style Guide
     p.text-black #{description}
-
-block content
     +textStyles()
     hr
     +colors()

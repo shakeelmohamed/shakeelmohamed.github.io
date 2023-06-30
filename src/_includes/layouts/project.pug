@@ -1,6 +1,6 @@
 extends ./base.pug
 
-block hero
+block content
     h1 #{title}
     p.subhead #{tagline}
     //- TODO: all the metadata can go here; TBD
@@ -13,17 +13,13 @@ block hero
         +projectMeta("Tools", tools)
         +projectMeta("Goal", goal)
     img.w-full.py-2(src=openGraphImage)
-
+    div!= content
 
 
 //- TODO: design all possible layouts for a project
 //- full screen larger text, maybe a blockquote... thatline for inspo
 
-block content
-    div!= content
-
-
 mixin projectMeta(key, value)
     p
-        span.font-semibold #{key}:&nbsp;
+        span.bold #{key}:&nbsp;
         | #{value}

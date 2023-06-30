@@ -8,7 +8,7 @@ extends _includes/layouts/base.pug
 
 //- Temporary workaround: this file is blog.pug, symlinked to posts.pug for legacy SEO
 
-block hero
+block content
     +getFeaturedPosts()
     //- TODO: might want to a) write more or b) just link to the archive
     +gridCols2()
@@ -17,13 +17,3 @@ block hero
             +getPosts()
             //- p.bold.pt-4
             //-     a(href="/blog-archive") Keep reading in the archive.
-
-block content
-    //- +centeredPage()
-    //-     h2 Featured Posts
-    //-     +getFeaturedPosts()
-    //-     h2 Recent Posts
-    //-     +getPosts(true)
-    //-     br
-    //-     p.subhead Keep reading in the 
-    //-         a(href="/blog-archive") archive.
