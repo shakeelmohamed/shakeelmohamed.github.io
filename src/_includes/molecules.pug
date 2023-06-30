@@ -1,5 +1,6 @@
 include ./atoms.pug
 
+//- TODO: this is only used in the footer, find a way to refactor it away
 mixin flexCols2()
     div(class="flex flex-wrap lg:flex-nowrap lg:gap-16 justify-items-stretch")
         block
@@ -8,6 +9,7 @@ mixin gridCols2()
     div(class="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-16 gap-y-2")
         block
 
+//- TODO: This should go away very soon, currently used on: projects, links - both need redesigns
 mixin centeredPage()
     //- 
     //- DO NOT TOUCH THIS FOR NOW!
@@ -148,7 +150,7 @@ mixin featuredPost(post)
             
 
 mixin getFeaturedPosts()
-    //- TODO: this might be nice as a 4 column grid on desktop
+    //- TODO: this might be nice as a 4 column grid on desktop, once cover photos are nice
     +gridCols2()
         each post in collections.featured
             +featuredPost(post)

@@ -2,9 +2,10 @@ extends ./base.pug
 
 //- TODO: use article markup
 block content
-    +centeredPage()
-        p.text-black #{cleanDate}
-        h1.text-black #{title}
-        p.subhead.text-black #{description}
-        //- TODO: display categories
-        div(class="prose")!= content
+    +gridCols2()
+        div
+            p #{cleanDate}
+            h1 #{title}
+            p.subhead #{description}
+            //- TODO: display categories
+            div(class="prose")!= content

@@ -8,16 +8,13 @@ extends _includes/layouts/base.pug
 //- TODO: this entire page has WIP copy
 
 block content
-    +centeredPage()
-        h1 Say Hello! 👋🏽
-        p
-            | I’m easy to reach by DM on 
-            a(href=metadata.social.LinkedIn) LinkedIn 
-            |  or 
-            a(href=metadata.social.Instagram) Instagram
-            | . Otherwise, send me an email at
-            +myEmail()
-        p
-            | For project inquiries, you can schedule a call through my business website:  
-            a(href="https://ntrsct.com") ntrsct.com 
-
+    +gridCols2()
+        div
+            h1 Say Hello! 👋🏽
+            p
+                | I’m easy to reach by DM on 
+                a(href=metadata.social.LinkedIn) LinkedIn 
+                |  or 
+                a(href=metadata.social.Instagram) Instagram
+                | . Otherwise, send me an email at
+                +myEmail()

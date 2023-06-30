@@ -41,13 +41,12 @@
             <hr class="md:invisible full-width"/>
         </header>
         <main>
-            <div class="mt-2 md:mb-12 xl:mt-12 xl:mb-8">
-            </div>
-            <div class="centered-page mx-auto place-content-center self-center lg:w-1/2">
-                <p class="text-black">2015-09-04</p>
-                <h1 class="text-black">Silence JavaScript console output</h1>
-                <p class="subhead text-black">This is super helpful for unit testing with 100% code coverage, while maintaining a clean test output on the console!</p>
-                <div class="prose"><p>This is super helpful for unit testing with 100% code coverage, while maintaining a clean test output on the console!</p>
+            <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-16 gap-y-2">
+                <div>
+                    <p>2015-09-04</p>
+                    <h1>Silence JavaScript console output</h1>
+                    <p class="subhead">This is super helpful for unit testing with 100% code coverage, while maintaining a clean test output on the console!</p>
+                    <div class="prose"><p>This is super helpful for unit testing with 100% code coverage, while maintaining a clean test output on the console!</p>
 <p>First you need some basic setup code:</p>
 <pre><code class="language-js">// Backup console.log so we can restore it later
 var ___log = console.log;
@@ -71,6 +70,7 @@ MyClass.functionThatPrintsOutput();
 unmute();
 </code></pre>
 </div>
+                </div>
             </div>
         </main>
         <footer>
