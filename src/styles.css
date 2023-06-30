@@ -21,9 +21,17 @@
         @apply text-base_sm md:text-base;
     }
 
-    header {
+    header, footer {
         /* TODO: may only need md:flex here since children should have flex-grow:1 */
         @apply md:flex md:items-baseline md:justify-between;
+    }
+
+    main {
+      @apply relative flex-auto;
+    }
+
+    footer {
+      @apply pb-4;
     }
 
     nav {
@@ -41,14 +49,6 @@
     .header-logo {
         @apply font-normal font-serif pb-4;
         @apply text-heading;
-    }
-
-    main {
-      @apply relative flex-auto;
-    }
-
-    footer {
-      @apply flex-initial pb-4;
     }
 
     section {
