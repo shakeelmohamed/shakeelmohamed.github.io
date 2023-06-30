@@ -23,6 +23,7 @@ module.exports = {
         if (data.openGraphImage) {
             return data.page.filePathStem.replace("index", "") + data.openGraphImage;
         } else {
+            // TODO: this is where to generate the OG images, for now use the IDD template
             console.warn(`buildOGImageURL is missing an OG image for ${data.title}`);
             return;
         }

@@ -140,7 +140,8 @@ mixin getPosts(recent=false)
 mixin featuredPost(post)
     div.py-4
         a(href=post.url)
-            img.portfolio-cover.w-full.pb-1(src=post.data.openGraphImage alt="Cover image for " + post.data.title)
+            //- TODO: Once I have beautiful cover images (not branded OG images), utilize those here
+            //- img.portfolio-cover.w-full.pb-1(src=post.data.openGraphImage alt="Cover image for " + post.data.title)
             p.bold.h2 #{post.data.title}
         p #{post.data.description}
         //- p #{post.data.categories}

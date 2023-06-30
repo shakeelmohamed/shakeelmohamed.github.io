@@ -35,8 +35,8 @@ block hero
                     li When in doubt, talk it out.
 
             if mentions.recent.length > 0
-                h2 Mentions
                 br
+                p.bold.h2 Mentions
                 +getMentions(true)
                 p.bold See the&nbsp;
                     a(href="/mentions") full list here.

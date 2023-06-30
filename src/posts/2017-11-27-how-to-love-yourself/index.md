@@ -3,6 +3,7 @@ layout: post
 date: 2017-11-27
 title: How to Love Yourself (A Different Way)
 description: Imagine going back in time and talking to your younger self. What would you say to comfort them, to make them feel safe, to make them feel loved?
+openGraphImage: "header.png"
 tags:
     - post
     - self love
