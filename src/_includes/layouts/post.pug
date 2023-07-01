@@ -6,6 +6,7 @@ block content
         div
             p #{cleanDate}
             h1 #{title}
-            p.subhead #{description}
+            p.bold #{description}
+            br
             //- TODO: display categories
             div(class="prose")!= content

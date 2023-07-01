@@ -606,6 +606,7 @@ select {
     main {
   position: relative;
   flex: 1 1 auto;
+  padding-top: 1rem;
 }
 
     footer {

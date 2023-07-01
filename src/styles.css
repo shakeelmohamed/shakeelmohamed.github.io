@@ -27,7 +27,7 @@
     }
 
     main {
-      @apply relative flex-auto;
+      @apply relative flex-auto pt-4;
     }
 
     footer {

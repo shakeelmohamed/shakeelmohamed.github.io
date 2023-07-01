@@ -2,7 +2,7 @@
 layout: post
 date: 2021-09-08
 title: My New Hustle Manifesto
-description: "After a great deal of reflection during the pandemic, I‘ve begun to rethink how I want work"
+description: "After a great deal of reflection during the pandemic, I‘ve begun to rethink how I want work."
 openGraphImage: "header.png"
 tags:
     - post
