@@ -3,7 +3,7 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 module.exports = {
   mode: 'jit',
   content: [
-    './src/**/*.{md,pug}'
+    './src/**/*.{md,pug,json}'
   ],
   safelist: [
     'font-*'
