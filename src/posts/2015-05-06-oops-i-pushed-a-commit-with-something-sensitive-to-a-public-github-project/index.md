@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2015-05-06
-title: "\"Oops, I pushed a commit with something sensitive to a public GitHub project!\""
+title: "“Oops, I pushed a commit with something sensitive to a public GitHub project!”"
 description: So you accidentally pushed a commit with some credentials. Shame on you. Here's a potential solution...
 tags:
     - post

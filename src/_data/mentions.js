@@ -1,5 +1,15 @@
 var all = [
     {
+        "date": "June 16, 2023",
+        "title": "A year in the life: Graduate Graphic Design student Shakeel Mohamed recaps his first chapter. - @artcenteredu on Instagram",
+        "url": "https://www.instagram.com/p/CtjqybbxLWW/"
+    },
+    {
+        "date": "March 23, 2023",
+        "title": "Type Thursday LA Featured Speaker - @typethursdayla on Instagram",
+        "url": "https://www.instagram.com/p/CqJdQNfPx1P/"
+    },
+    {
         "date": "July 21, 2022",
         "title": "2022 AIGA Portfolio Festival | One Year Can Change Your Whole Life by Shakeel Mohamed",
         "url": "https://www.youtube.com/watch?v=HtRtGYQx480"

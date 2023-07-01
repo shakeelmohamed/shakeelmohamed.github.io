@@ -1,18 +1,49 @@
 ---
 title: Shakeel Mohamed – About
-description: I’m an designer & graduate student at ArtCenter College of Design.
+description: Shakeel Mohamed is a candidate for an MFA in Graphic Design at ArtCenter College of Design.
 ---
 
 extends _includes/layouts/base.pug
 include _includes/molecules.pug
+//- TODO: CTA for contact me for projects, or something? Maybe a separate services page?
 
-//- TODO: this entire page has WIP copy
-//- TODO: CTA for contact me for projects, or something?
+block content
+    +gridCols2()
+        div
+            p.bold.h2 “The best way to predict the future is to create it”
+            p.bold.h2 — Peter Drucker (attributed)
+            br
+            p This quote beautifully captures my professional pursuits, motivation, and accomplishments in my life. From my experience in software engineering into my transition to graphic design, I love to take concepts from idea to reality.
+            br
+            p.bold.h2 About me
+            p I am a Graphic Design MFA Candidate at ArtCenter College of Design, set to graduate in spring 2025. My undergraduate Computer Science degree led me to six years of experience as a software engineer. Along the way, I discovered my passion for graphic design, particularly branding. With my diverse professional experiences as a foundation, I am excited for my career ahead as a designer. I am highly motivated and always ready to learn.
+            br
+            p.bold.h2 I’m inspired by
+                ol
+                    li Underdogs
+                    li Walking
+                    li Conversations
+                    li Music
+                    li Warmth
+            br
+            p.bold.h2 Reminders to myself
+                ol
+                    li Focus intensely, rest completely.
+                    li Take more (design) risks.
+                    li Explore more ideas than required.
+                    li Design is a spiritual practice.
+                    li When in doubt, talk it out.
 
-block hero
-    +centeredPage()
-        h1 Developer turned designer
+            if mentions.recent.length > 0
+                br
+                p.bold.h2 Mentions
+                +getMentions(true)
+                p.bold See the&nbsp;
+                    a(href="/mentions") full list here.
+        //- TODO: add an image here on the right column
 
+
+//- TODO: this mixin is currently unused, but some of the copy could be integrated
 mixin bio()
     div(class="prose")
         img(src="/img/headshot.jpg" alt="Shakeel Mohamed headshot" class="w-1/3 rounded-full")
@@ -27,41 +58,35 @@ mixin bio()
             I’m currently running my independent design business, [ntrsct (in•ter•sect) designs](https://ntrsct.com), while learning more about design.
             I spend my free time volunteering with [the Ismaili Muslim community](https://the.ismaili/) on projects varying from branding to video production.
 
-block content
-    +centeredPage()
-        +bio()
-        div
-            h2.text-black Design Principles
-            p.subhead So far, I’ve seen these themes emerge from my work.
-            -
-                var designPrinciples = {
-                   "Local to Global": "Taking my unique experiences and finding the core idea that applies to an international audience.",
-                   "What If?": "My creative process often begins with this question, then finding the easiest step to get started.",
-                   "Switch it Up": "I work through creative blocks by changing tools (e.g.: analog to digital and back).",
-                   "Normal or G.O.A.T. 🐐?": "There’s only one choice, and it’s not normal.",
+//- TODO: resolve this
+//-     +centeredPage()
+//-         +bio()
+//-         div
+//-             h2.text-black Design Principles
+//-             p.subhead So far, I’ve seen these themes emerge from my work.
+//-             -
+//-                 var designPrinciples = {
+//-                    "Local to Global": "Taking my unique experiences and finding the core idea that applies to an international audience.",
+//-                    "What If?": "My creative process often begins with this question, then finding the easiest step to get started.",
+//-                    "Switch it Up": "I work through creative blocks by changing tools (e.g.: analog to digital and back).",
+//-                    "Normal or G.O.A.T. 🐐?": "There’s only one choice, and it’s not normal.",
 
-                };
-            each details, name in designPrinciples
-                p.font-bold #{name}
-                p.ml-8.pb-2 #{details}
-        div
-            h2.text-black Life Principles
-            p.subhead More broadly, this has been my formula for achievement.
-            -
-                var lifePrinciples = {
-                   "Outwork deficiencies": "Any weakness can be overcome with great effort.",
-                   "Create the future": "Start with the end in mind, work towards the plan, adjust as needed.",
-                   "Seek growth constantly": "Knowledge is power, so learn from the greats; success leaves clues.",
-                   "Enable understanding through transparency": "Use clear & direct communication, translate if necessary.",
-                   "Think from a unique perspective": "Think inside, outside, and about the box itself."
-                };
-            each details, name in lifePrinciples
-                p.font-bold #{name}
-                p.ml-8.pb-2 #{details}
-        
-        if mentions.recent.length > 0
-            h2.text-black Mentions
-            p.subhead It’s not exactly press...&nbsp;
-                | see the&nbsp;
-                a(href="/mentions") full list here.
-            +getMentions(true)
+//-                 };
+//-             each details, name in designPrinciples
+//-                 p.font-bold #{name}
+//-                 p.ml-8.pb-2 #{details}
+//-         div
+//-             h2.text-black Life Principles
+//-             p.subhead More broadly, this has been my formula for achievement.
+//-             -
+//-                 var lifePrinciples = {
+//-                    "Outwork deficiencies": "Any weakness can be overcome with great effort.",
+//-                    "Create the future": "Start with the end in mind, work towards the plan, adjust as needed.",
+//-                    "Seek growth constantly": "Knowledge is power, so learn from the greats; success leaves clues.",
+//-                    "Enable understanding through transparency": "Use clear & direct communication, translate if necessary.",
+//-                    "Think from a unique perspective": "Think inside, outside, and about the box itself."
+//-                 };
+//-             each details, name in lifePrinciples
+//-                 p.font-bold #{name}
+//-                 p.ml-8.pb-2 #{details}
+//-         

@@ -168,7 +168,7 @@ I also designed: stickers and an augmented reality motion poster with a direct c
 
 <br>
 Conferences are about the exchange of ideas and perspectives, design conferences should also be great fun. I chose this playful arrangement of curved organic letterforms&nbsp; to symbolize these concepts.<br><br>
-The conference venue, Museo Tamayo Arte Contemporáneo (@eneltamayo), has a sharp, brutalist architectural style. My identity design embraces the human aspect of the design community by contrast.<br><br>
+The conference venue, Museo Tamayo Arte Contemporáneo, has a sharp, brutalist architectural style. My identity design embraces the human aspect of the design community by contrast.<br><br>
 I envision conference organizers and staff wearing black shirts to not draw attention to themselves backstage. Attendees would receive white shirts when checking in on the first day of the conference. <br>
 
 <br>

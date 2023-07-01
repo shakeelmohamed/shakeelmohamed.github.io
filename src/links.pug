@@ -4,19 +4,11 @@ description: Shakeel Mohamed is a candidate for an MFA in Graphic Design at ArtC
 canonical: "/links"
 ---
 
-extends _includes/layouts/super.pug
+extends _includes/layouts/base.pug
 
-block body
-    main
-        +centeredPage()
-            +headerLogo()
-            img(src="/img/headshot.jpg" alt="Shakeel Mohamed headshot" class="w-1/3 rounded-full")
-            br
-            p #{description}
-
-            h2 Subscribe
-            +mailingListForm()
-            br
+block content
+    +gridCols2()
+        div
             h2 Links
             +links()
 
@@ -26,9 +18,6 @@ block body
             //- br
             //- p.subhead Keep reading in the 
             //-     a(href="/blog-archive") archive.
-            
-            h2 Contact
-            +contact()
 
 mixin links()
     each link in links
