@@ -2,6 +2,46 @@
 
 This file should eventually be removed, once shakeel.design content is folded into this repo.
 
+## Referential Mono Typeface
+
+```html
+<div grid-row="" grid-pad="2" grid-gutter="4">
+    <div grid-col="8" grid-pad="2"><h2>Referential Mono Typeface</h2></div>
+    <div grid-col="4" grid-pad="2"></div>
+</div><br>
+<div grid-row="" grid-pad="2" grid-gutter="4" grid-responsive=""><div grid-col="8" grid-pad="2">
+{image 11}<br><br>{image 19}<br><br>
+{image 13}<br>
+<br>{image 14}<br>
+<br>
+{image 15}<br>
+<br>{image 16}<br>
+<br>
+
+
+{image 20}<br>
+<br>{image 17}<br><br>
+{image 21}<br>
+<br>
+{image 18}<br>
+        
+</div>
+    <div grid-col="4" grid-pad="2">
+<b>When:</b> 2023 <br>
+<b>Professors:</b> Simon Johnston, Lavinia Lascaris<br>
+<b>Course:</b> Graduate Typography 3, ArtCenter<br>
+<b>Media:&nbsp;</b>type design<br>
+<b>Tools:</b> Glyphs, Illustrator, InDesign, Figma<br><br>
+Referential Mono is built on a 5x5 grid, inspired by early computing and Islamic History. As a developer and Muslim, this project was an opportunity to combine many aspects of my identity in one.<br>
+<br>HMCT graciously featured some typefaces from our class in their holiday greetings. Shoutout to my peers who were also featured: Umang Ahluwalia, Sisi Chen, Jean Wang, and Amanda Mei!<br><br>
+Future work includes: an Arabic version, motion design, and generative typography.<br><br>
+<b>Special thanks to:</b> our teaching assistant Noah Cousineau, and feedback from Milka Broukhim and Wael Morcos.<br><br>
+</div>
+</div>
+```
+
+
+
 ## Rothko Documentary Campaign
 
 
