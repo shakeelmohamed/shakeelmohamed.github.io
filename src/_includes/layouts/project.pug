@@ -1,5 +1,7 @@
 extends ./base.pug
 
+//- TODO: redesign me to match cargo
+
 block content
     h1 #{title}
     p.subhead #{tagline}
@@ -12,7 +14,8 @@ block content
         +projectMeta("Client", client)
         +projectMeta("Tools", tools)
         +projectMeta("Goal", goal)
-    img.w-full.py-2(src=openGraphImage)
+    //- TODO: I don’t always want this... the fallback is the site’s OG image, yikes!
+    //- img.w-full.py-2(src=openGraphImage)
     div!= content
 
 

@@ -1,5 +1,5 @@
 ---
-description: Shakeel Mohamed is a candidate for an MFA in Graphic Design at ArtCenter College of Design.
+description: Shakeel Mohamed is a Graphic Design MFA Candidate at ArtCenter College of Design.
 ---
 
 extends _includes/layouts/base.pug
@@ -12,13 +12,13 @@ block content
             br
             p If any of this sounds interesting, please reach out by email, LinkedIn, or Instagram. I enjoy discussing design and professional growth with people at any stage of their careers.
             br
-            p.bold.h2 My design portfolio is available at 
-                a(href="https://shakeel.design") shakeel.design.
+            p.bold.h2
+                a(href="https://www.dropbox.com/s/gf84ls6cxxa65el/Shakeel_Mohamed_resume.pdf?dl=0") You can view my resume here.
+            br
 
     //- TODO: rework this to collections.home or something; goal is to have multiple blocks of content.
     //- could be projects, videos, bio, etc.
-    //- if collections.portfolio
-    //-     +gridCols2()
-    //-         each project in collections.portfolio
-    //-             if project not in collections.archive
-    //-                 +projectListing(project)
+    if collections.portfolio
+        +gridCols2()
+            each project in collections.portfolio
+                +projectListing(project)

@@ -47,7 +47,7 @@
     }
 
     .header-logo {
-        @apply font-normal font-serif pb-4;
+        @apply font-medium font-serif pb-4;
         @apply text-heading;
     }
 
@@ -67,10 +67,10 @@
 
     /* Headings */
     h1 {
-       @apply font-bold py-4 text-4xl md:text-5xl;
+       @apply font-bold py-4 text-sizeh1 md:text-sizeh1;
     }
     h2 {
-        @apply font-bold py-4 text-2xl md:text-3xl;
+        @apply font-bold py-4 text-sizeh2 md:text-sizeh2;
     }
     h3 {
         @apply font-bold py-4 text-xl md:text-xl;
@@ -84,7 +84,7 @@
 
     /* Body text style */
     p, li {
-        @apply font-normal;
+        @apply font-light;
     }
     a {
         @apply transition hover:text-orange;
@@ -129,17 +129,17 @@
         @apply text-base leading-normal;
     }
     .prose h1 {
-        @apply font-serif font-normal;
+        @apply font-serif font-light;
     }
     .prose h2, .prose h3, .prose h4, .prose h5 {
         @apply my-0.5;
     }
     .prose p, .prose li {
-        @apply font-normal;
+        @apply font-light;
     }
     .prose a {
         @apply transition hover:text-orange;
-        @apply font-normal;
+        @apply font-light;
     }
     .prose strong, .prose b {
 /*         @apply; */

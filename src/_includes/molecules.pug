@@ -1,7 +1,8 @@
 include ./atoms.pug
 
+
 mixin gridCols2()
-    div(class="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-16 gap-y-2")
+    div(class="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-8 gap-y-2")
         block
 
 //- TODO: This should go away very soon, currently used on: projects, links - both need redesigns
@@ -30,15 +31,18 @@ mixin header(bg="bg-white")
     //- TODO: layout breaks below 320px width
     header
         +headerBranding()
+        //- TODO: figure out why this list has to be in reverse order, if not, nav will not float right
         nav.grow
-            //- Email must always be firsts
+            //- Email must always be first (last)
             +navItem("mailto:hello@shakeel.design", "hello@shakeel.design")
-            +navItem("https://shakeel.design", "Portfolio")
-            //- +navItem("/", "Work")
-            +navItem("/blog", "Blog")
             +navItem("/about", "About")
+            //- TODO: temp hiding the blog because there is nothing recent there
+            +navItem("/blog", "Blog")
+            //- TODO: new category for design experiments, short projects
+            //- +navItem("/play", "Play")
+            +navItem("/projects", "Work")
             //- +navItem("/contact", "Contact")
-        hr(class="md:invisible full-width")
+        //- hr(class="md:invisible full-width")
 
 
 mixin hero()
@@ -82,17 +86,13 @@ mixin projectListing(project)
     div.pb-8
         a(href=project.url)
             img.portfolio-cover.w-full(src=project.data.openGraphImage alt="Cover image for " + project.data.title + " project")
-        div.pt-2
-            div(class="pb-0.5 text-2xl font-bold")
-                h2
+        div.pt-1
+            div(class="text-sizeh2 font-bold")
+                h2.pb-1
                     a(href=project.url) #{project.data.title}
             //- TODO: need a max-width here so the lines aren't super long
             div.project-meta
-                if project.data.media
-                    p
-                        span.font-bold Media:&nbsp;
-                        | #{project.data.mediaString}
-                p #{project.data.tagline}.
+                p.opacity-40.capitalize!= project.data.mediaLinks
 
 //- TODO: this has been refactored away, delete once footer is final
 mixin copyright()

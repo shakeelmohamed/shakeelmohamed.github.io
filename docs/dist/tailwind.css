@@ -32,7 +32,7 @@ html {
   -moz-tab-size: 4; /* 3 */
   -o-tab-size: 4;
      tab-size: 4; /* 3 */
-  font-family: proxima-nova, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
+  font-family: tt-commons-pro, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
 }
 
 /*
@@ -551,9 +551,9 @@ select {
   min-height: 100vh;
   width: 100vw;
   padding: 0px;
-  font-family: proxima-nova, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: tt-commons-pro, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --tw-text-opacity: 1;
-  color: rgb(17 17 17 / var(--tw-text-opacity));
+  color: rgb(0 0 0 / var(--tw-text-opacity));
         
         /* TODO: this is carryover from cargo, factor it away please */
         font-size: 90%;
@@ -658,8 +658,8 @@ select {
 
     .header-logo {
   padding-bottom: 1rem;
-  font-family: freight-display-pro, ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  font-weight: 400;
+  font-family: corporate-a, ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  font-weight: 500;
   font-size: 2.4rem;
   line-height: 1.2;
 }
@@ -686,29 +686,29 @@ select {
     h1 {
   padding-top: 1rem;
   padding-bottom: 1rem;
-  font-size: 2.25rem;
-  line-height: 2.5rem;
+  font-size: 2.5rem;
+  line-height: 1.2;
   font-weight: 700;
 }
     @media (min-width: 768px) {
 
   h1 {
-    font-size: 3rem;
-    line-height: 1;
+    font-size: 2.5rem;
+    line-height: 1.2;
   }
 }
     h2 {
   padding-top: 1rem;
   padding-bottom: 1rem;
   font-size: 1.5rem;
-  line-height: 2rem;
+  line-height: 1.3;
   font-weight: 700;
 }
     @media (min-width: 768px) {
 
   h2 {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
+    font-size: 1.5rem;
+    line-height: 1.3;
   }
 }
     h3 {
@@ -737,7 +737,7 @@ select {
 
     /* Body text style */
     p,  li {
-  font-weight: 400;
+  font-weight: 300;
 }
     a {
   transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
@@ -764,7 +764,7 @@ select {
   width: 100%;
   border-radius: 0.375rem;
   --tw-bg-opacity: 1;
-  background-color: rgb(17 17 17 / var(--tw-bg-opacity));
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 
@@ -1504,7 +1504,7 @@ select {
 }
 .bg-black {
   --tw-bg-opacity: 1;
-  background-color: rgb(17 17 17 / var(--tw-bg-opacity));
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 .bg-white {
   --tw-bg-opacity: 1;
@@ -1552,14 +1552,8 @@ select {
 .pb-8 {
   padding-bottom: 2rem;
 }
-.pt-2 {
-  padding-top: 0.5rem;
-}
-.pb-0\.5 {
-  padding-bottom: 0.125rem;
-}
-.pb-0 {
-  padding-bottom: 0px;
+.pt-1 {
+  padding-top: 0.25rem;
 }
 .pb-1 {
   padding-bottom: 0.25rem;
@@ -1571,14 +1565,14 @@ select {
   text-align: center;
 }
 .font-sans {
-  font-family: proxima-nova, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: tt-commons-pro, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 .font-serif {
-  font-family: freight-display-pro, ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  font-family: corporate-a, ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
-.text-2xl {
+.text-sizeh2 {
   font-size: 1.5rem;
-  line-height: 2rem;
+  line-height: 1.3;
 }
 .font-bold {
   font-weight: 700;
@@ -1591,7 +1585,7 @@ select {
 }
 .text-black {
   --tw-text-opacity: 1;
-  color: rgb(17 17 17 / var(--tw-text-opacity));
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 .text-white {
   --tw-text-opacity: 1;
@@ -1604,6 +1598,9 @@ select {
 .text-navy {
   --tw-text-opacity: 1;
   color: rgb(0 40 85 / var(--tw-text-opacity));
+}
+.opacity-40 {
+  opacity: 0.4;
 }
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
@@ -1633,15 +1630,15 @@ select {
   line-height: 1.5;
 }
 .prose h1 {
-  font-family: freight-display-pro, ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  font-weight: 400;
+  font-family: corporate-a, ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  font-weight: 300;
 }
 .prose h2,  .prose h3,  .prose h4,  .prose h5 {
   margin-top: 0.125rem;
   margin-bottom: 0.125rem;
 }
 .prose p,  .prose li {
-  font-weight: 400;
+  font-weight: 300;
 }
 .prose a {
   transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
@@ -1655,7 +1652,7 @@ select {
   color: rgb(255 92 10 / var(--tw-text-opacity));
 }
 .prose a {
-  font-weight: 400;
+  font-weight: 300;
 }
 .prose strong, .prose b {
 /*         @apply; */
@@ -2246,9 +2243,9 @@ h2.break {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .lg\:gap-x-16 {
-    -moz-column-gap: 4rem;
-         column-gap: 4rem;
+  .lg\:gap-x-8 {
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
   }
 
   .lg\:pt-0 {
