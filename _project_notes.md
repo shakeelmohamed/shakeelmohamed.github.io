@@ -2,6 +2,75 @@
 
 This file should eventually be removed, once shakeel.design content is folded into this repo.
 
+## Midjourney Strategic Rebrand
+
+```html
+<div grid-row="" grid-pad="2" grid-gutter="4">
+    <div grid-col="8" grid-pad="2"><h2>Midjourney Strategic Rebrand (in progress)</h2></div>
+    <div grid-col="4" grid-pad="2"></div>
+</div><br>
+<div grid-row="" grid-pad="2" grid-gutter="4" grid-responsive="">
+    <div grid-col="8" grid-pad="2">{image 5}<br>
+<br>
+{image 1}<br><br>
+{image 7}<br><br>
+{image 6}<br><br>
+<br>
+        
+</div>
+    <div grid-col="4" grid-pad="2">
+<b>When:</b> 2023 (in progress)<br>
+<b>Professor:</b> Gerardo Herrera<br>
+<b>Course:</b> Graduate Studio 3, ArtCenter<br>
+<b>Media:</b> branding, strategy, website, motion, 3D, transmedia, augmented reality, website, mobile app, packaging, installation<br>
+<b>Tools:</b> InDesign, Illustrator, Figma, AfterEffects, Blender, Midjourney, Photoshop<br><br>
+<b>Typefaces:</b> Clash Display and Clash Grotesk from Indian Type Foundry.<br><br>
+Disclaimer: this is a work in progress student project at ArtCenter College of Design.<br><br>
+For more information, please reach out at: <b><a href="mailto:hello@shakeel.design">hello@shakeel.design</a></b>.<br><br>
+I re-imagined the identity of Midjourney across a wide range of touchpoints including digital, print, conference, wayfinding, a new corporate headquarters, and much more.<br><br>
+<b>“How do you build these boats that let them navigate and be empowered and sort of sail the ocean of imagination, instead of just drowning?”.</b><br>
+<br>
+The new Midjourney logo is an evolution of the previous sailboat symbol. This refined symbol is a reminder of the groundbreaking work they do within generative AI.<br>
+<br>
+The new brand colors are inspired by light refraction, symbolizing the expansive creativity possible with our products. These colors aim to connect with a broader audience across cultures, and industries.<br><br>
+The underlying strategy is rooted in remaining competitive with the many new generative AI companies emerging since 2021.&nbsp;</div>
+</div>
+```
+
+## digital anarchy: a history of internet piracy
+
+```html
+<div grid-row="" grid-pad="2" grid-gutter="4">
+    <div grid-col="8" grid-pad="2"><h2>digital anarchy: a history of internet piracy</h2></div>
+    <div grid-col="4" grid-pad="2"></div>
+</div><br>
+<div grid-row="" grid-pad="2" grid-gutter="4" grid-responsive="">
+    <div grid-col="8" grid-pad="2">
+{image 1}<br><br>
+{image 6}<br><br>
+
+
+
+{image 2}<br><br>
+{image 3}<br>
+<br>{image 4}<br>
+<br>
+{image 5}<br>
+        
+</div>
+    <div grid-col="4" grid-pad="2">
+<b>When:</b> 2023 <br>
+<b>Professors:</b> Simon Johnston, Lavinia Lascaris<br>
+<b>Course:</b> Graduate Typography 3, ArtCenter<br>
+<b>Media:&nbsp;</b>exhibition, editorial, posters<br>
+<b>Tools:</b> InDesign, Illustrator, Photoshop<br><br>
+digital anarchy is a hypothetical exhibition about the history of internet piracy. I designed 64 page digital tabloid newsprint publication, along with a set of three posters, and an exhibition title wall. <br><br>
+Visual elements were inspired by early the early days of the Internet including: Windows 98 UI aesthetics, browser frames, pixelation, corrupted text, and intersecting linear graph lines representing connectivity.<br><br>
+Future work may include motion graphics, generative typography, 3D modeling, and continued build out of the exhibition.</div>
+</div>
+```
+
+
 ## Referential Mono Typeface
 
 ```html
