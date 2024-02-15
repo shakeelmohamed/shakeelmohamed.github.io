@@ -2,6 +2,57 @@
 
 This file should eventually be removed, once shakeel.design content is folded into this repo.
 
+## Words have power
+
+```
+<div grid-row="" grid-pad="2" grid-gutter="4">
+    <div grid-col="8" grid-pad="2"><h2>“Words Have Power” Installation (prototype)</h2></div>
+    <div grid-col="4" grid-pad="2"></div>
+</div><br>
+<div grid-row="" grid-pad="2" grid-gutter="4" grid-responsive="">
+    <div grid-col="8" grid-pad="2">
+
+
+
+
+
+<iframe src="https://www.youtube.com/embed/FgXr_smf4yo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" style="aspect-ratio: 16 / 9; width: 100%;" class=""></iframe><br>
+This teaser video documents my setup process for the midterm prototype installation.<br>
+<br>
+<iframe src="https://www.youtube.com/embed/41Fk9HTuJwU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" style="aspect-ratio: 16 / 9; width: 100%;" class=""></iframe><br>
+This is a longer form presentation covering the theory, concept, setup, and execution of the installation.<br>
+
+<br>{image 7}<br>
+Research and inspiration.<br>
+<br>{image 14}<br>
+Early table top form studies.<br><br>
+{image 16}<br>
+Initial models at full scale, realizing that sufficient height was necessary for an immersive experience.<br><br>
+{image 18}<br>Final build from table-top model to full size.<br>
+<br>
+{image 8}<br>All visuals were generated through experimentating in TouchDesigner.<br><br>{image 13}<br>
+Projection mapping in TouchDesigner.<br>
+<br>
+{image 9}<br>
+<br>
+{image 10}<br><br>
+{image 11}<br>
+<br>{image 12}<br>
+
+        
+</div>
+    <div grid-col="4" grid-pad="2">
+<b>When:</b> 2023<br>
+<b>Professor:</b> Miles Mazzie<br>
+<b>Course:</b> Graduate Transmedia, ArtCenter<br>
+<b>Media:&nbsp;</b>transmedia, coding, installation<br>
+<b>Tools:</b> TouchDesigner, Python, projection mapping, model building, microphone<br><br>
+<b>Special thanks to:</b> Camille MacRae for helping me plan and build the installation.<br><br>
+</div>
+</div>
+```
+
+
 ## Midjourney Strategic Rebrand
 
 ```html
