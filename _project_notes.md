@@ -458,7 +458,7 @@ Volunteer badges designed by the local team in Seattle.<br><br>
 {image 14}<br>
 Aprons worn by the kitchen staff, designed by the local team in Seattle.<br>
 <br>{image 10}<br>
-Cakes! There were found on social media accounts.<br>
+Cakes! These were found on social media accounts.<br>
 <br>
 {image 12}<br>
 Children’s celebrations, I believe this was in East Africa.<br><br>
