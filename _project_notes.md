@@ -4,7 +4,7 @@ This file should eventually be removed, once shakeel.design content is folded in
 
 ## Words have power
 
-```
+```html
 <div grid-row="" grid-pad="2" grid-gutter="4">
     <div grid-col="8" grid-pad="2"><h2>“Words Have Power” Installation (prototype)</h2></div>
     <div grid-col="4" grid-pad="2"></div>
@@ -30,7 +30,7 @@ Early table top form studies.<br><br>
 Initial models at full scale, realizing that sufficient height was necessary for an immersive experience.<br><br>
 {image 18}<br>Final build from table-top model to full size.<br>
 <br>
-{image 8}<br>All visuals were generated through experimentating in TouchDesigner.<br><br>{image 13}<br>
+{image 8}<br>All visuals were generated through experimentation in TouchDesigner.<br><br>{image 13}<br>
 Projection mapping in TouchDesigner.<br>
 <br>
 {image 9}<br>
@@ -46,7 +46,14 @@ Projection mapping in TouchDesigner.<br>
 <b>Professor:</b> Miles Mazzie<br>
 <b>Course:</b> Graduate Transmedia, ArtCenter<br>
 <b>Media:&nbsp;</b>transmedia, coding, installation<br>
-<b>Tools:</b> TouchDesigner, Python, projection mapping, model building, microphone<br><br>
+<b>Tools:</b> TouchDesigner, Python, projection mapping, model building, microphone<br><br>This interactive installation uses projection mapping to visually show the impact of our voice through generative graphics activated by microphone input. Applying graphic design foundations across media types has always interested me, this was the perfect opportunity to explore design in space.<br>
+<br>
+I was inspired by Masuru Emoto’s research on what happens to water crystals based on what words or music they are exposed to before freezing. I watched his documentary as a child and totally forgotten about it until one day I remembered this reference.<br>
+<br>
+This project is not done, but I am really pleased with my progress and hope to continue exploring these technologies. Transmedia curriculum is one of the main reasons I chose to attend ArtCenter, and I’m so glad to learn these skills I’ve been thinking about for years!<br>
+<br>
+<b>Future work:</b> adding key phrase triggers and emotion detection software to provide a significantly more engaging experience.
+<br><br>
 <b>Special thanks to:</b> Camille MacRae for helping me plan and build the installation.<br><br>
 </div>
 </div>
