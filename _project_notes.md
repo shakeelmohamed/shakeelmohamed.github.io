@@ -12,10 +12,6 @@ This file should eventually be removed, once shakeel.design content is folded in
 <div grid-row="" grid-pad="2" grid-gutter="4" grid-responsive="">
     <div grid-col="8" grid-pad="2">
 
-
-
-
-
 <iframe src="https://www.youtube.com/embed/FgXr_smf4yo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" style="aspect-ratio: 16 / 9; width: 100%;" class=""></iframe><br>
 This teaser video documents my setup process for the midterm prototype installation.<br>
 <br>
@@ -43,8 +39,6 @@ Projection mapping in TouchDesigner.<br>
 </div>
     <div grid-col="4" grid-pad="2">
 <b>When:</b> 2023<br>
-<b>Professor:</b> Miles Mazzie<br>
-<b>Course:</b> Graduate Transmedia, ArtCenter<br>
 <b>Media:&nbsp;</b>transmedia, coding, installation<br>
 <b>Tools:</b> TouchDesigner, Python, projection mapping, model building, microphone<br><br>This interactive installation uses projection mapping to visually show the impact of our voice through generative graphics activated by microphone input. Applying graphic design foundations across media types has always interested me, this was the perfect opportunity to explore design in space.<br>
 <br>
@@ -54,7 +48,7 @@ This project is not done, but I am really pleased with my progress and hope to c
 <br>
 <b>Future work:</b> adding key phrase triggers and emotion detection software to provide a significantly more engaging experience.
 <br><br>
-<b>Special thanks to:</b> Camille MacRae for helping me plan and build the installation.<br><br>
+<b>Special thanks to:</b> Miles Mazzie, and Camille MacRae.<br>
 </div>
 </div>
 ```
@@ -78,20 +72,22 @@ This project is not done, but I am really pleased with my progress and hope to c
 </div>
     <div grid-col="4" grid-pad="2">
 <b>When:</b> 2023 (in progress)<br>
-<b>Professor:</b> Gerardo Herrera<br>
-<b>Course:</b> Graduate Studio 3, ArtCenter<br>
 <b>Media:</b> branding, strategy, website, motion, 3D, transmedia, augmented reality, website, mobile app, packaging, installation<br>
 <b>Tools:</b> InDesign, Illustrator, Figma, AfterEffects, Blender, Midjourney, Photoshop<br><br>
 <b>Typefaces:</b> Clash Display and Clash Grotesk from Indian Type Foundry.<br><br>
 Disclaimer: this is a work in progress student project at ArtCenter College of Design.<br><br>
 For more information, please reach out at: <b><a href="mailto:hello@shakeel.design">hello@shakeel.design</a></b>.<br><br>
 I re-imagined the identity of Midjourney across a wide range of touchpoints including digital, print, conference, wayfinding, a new corporate headquarters, and much more.<br><br>
-<b>“How do you build these boats that let them navigate and be empowered and sort of sail the ocean of imagination, instead of just drowning?”.</b><br>
+<b>“How do you build these boats that let them navigate and be empowered and sort of sail the ocean of imagination, instead of just drowning?”. 
+
+<br>
+(Founder, David Holz).</b><br>
 <br>
 The new Midjourney logo is an evolution of the previous sailboat symbol. This refined symbol is a reminder of the groundbreaking work they do within generative AI.<br>
 <br>
 The new brand colors are inspired by light refraction, symbolizing the expansive creativity possible with our products. These colors aim to connect with a broader audience across cultures, and industries.<br><br>
-The underlying strategy is rooted in remaining competitive with the many new generative AI companies emerging since 2021.&nbsp;</div>
+The underlying strategy is rooted in remaining competitive with the many new generative AI companies emerging since 2021.&nbsp;<br><br><b>Special thanks to:</b> Gerardo Herrera and Miles Mazzie.<br>
+</div>
 </div>
 ```
 
@@ -118,13 +114,13 @@ The underlying strategy is rooted in remaining competitive with the many new gen
 </div>
     <div grid-col="4" grid-pad="2">
 <b>When:</b> 2023 <br>
-<b>Professors:</b> Simon Johnston, Lavinia Lascaris<br>
-<b>Course:</b> Graduate Typography 3, ArtCenter<br>
+<b></b>
 <b>Media:&nbsp;</b>exhibition, editorial, posters<br>
 <b>Tools:</b> InDesign, Illustrator, Photoshop<br><br>
 digital anarchy is a hypothetical exhibition about the history of internet piracy. I designed 64 page digital tabloid newsprint publication, along with a set of three posters, and an exhibition title wall. <br><br>
 Visual elements were inspired by early the early days of the Internet including: Windows 98 UI aesthetics, browser frames, pixelation, corrupted text, and intersecting linear graph lines representing connectivity.<br><br>
-Future work may include motion graphics, generative typography, 3D modeling, and continued build out of the exhibition.</div>
+Future work may include motion graphics, generative typography, 3D modeling, and continued build out of the exhibition.<br><br><b>Special thanks to:</b> Simon Johnston, Lavinia Lascaris, Noah Cousineau, Cheri Gray, and Shuwen Ding.<br>
+</div>
 </div>
 ```
 
@@ -137,7 +133,8 @@ Future work may include motion graphics, generative typography, 3D modeling, and
     <div grid-col="4" grid-pad="2"></div>
 </div><br>
 <div grid-row="" grid-pad="2" grid-gutter="4" grid-responsive=""><div grid-col="8" grid-pad="2">
-{image 11}<br><br>{image 19}<br><br>
+{image 22}<br>
+<br>{image 19}<br><br>
 {image 13}<br>
 <br>{image 14}<br>
 <br>
@@ -155,14 +152,12 @@ Future work may include motion graphics, generative typography, 3D modeling, and
 </div>
     <div grid-col="4" grid-pad="2">
 <b>When:</b> 2023 <br>
-<b>Professors:</b> Simon Johnston, Lavinia Lascaris<br>
-<b>Course:</b> Graduate Typography 3, ArtCenter<br>
 <b>Media:&nbsp;</b>type design<br>
 <b>Tools:</b> Glyphs, Illustrator, InDesign, Figma<br><br>
 Referential Mono is built on a 5x5 grid, inspired by early computing and Islamic History. As a developer and Muslim, this project was an opportunity to combine many aspects of my identity in one.<br>
-<br>HMCT graciously featured some typefaces from our class in their holiday greetings. Shoutout to my peers who were also featured: Umang Ahluwalia, Sisi Chen, Jean Wang, and Amanda Mei!<br><br>
-Future work includes: an Arabic version, motion design, and generative typography.<br><br>
-<b>Special thanks to:</b> our teaching assistant Noah Cousineau, and feedback from Milka Broukhim and Wael Morcos.<br><br>
+<br><a href="https://hmctartcenter.org/" target="_blank">HMCT</a> graciously featured the typeface in their December 2023 holiday greeting email newsletter.<br><br>
+Ongoing work includes: an Arabic version, motion design, and generative typography.<br><br>
+<b>Special thanks to:</b> Simon Johnston, Lavinia Lascaris, Noah Cousineau, with additional feedback from Milka Broukhim, Greg Lindy of Lux Typo, and Wael Morcos.<br>
 </div>
 </div>
 ```
@@ -322,8 +317,6 @@ Special thanks to the National Gallery of Art for providing high quality images 
 </div>
     <div grid-col="4" grid-pad="2">
 <b>When:</b> 2023<br>
-<b>Professor:</b> <a href="http://morindesignoffice.com/" target="_blank">River</a> Jukes-Hudson<br>
-<b>Course:</b> Graduate Typography 2, ArtCenter<br>
 <b>Media:</b> branding, poster, t-shirt, augmented reality, motion<br>
 <b>Tools:</b> InDesign, Illustrator, Artivive, After Effects<br><br>
 <b>Typefaces:</b>&nbsp;Yink from Eclectotype and Ofelia from Blackletra.<br>
@@ -341,10 +334,7 @@ I envision conference organizers and staff wearing black shirts to not draw atte
 <br>
 
 <br>
-<b>Special thanks to:</b> our teaching assistant Noah 
-
-<br>
-Cousineau, Cheri Gray, Shuwen Ding, and Shengjie Wu, and the great audience at Type Thursday LA for additional critique.<br>
+<b>Special thanks to:</b> <a href="http://morindesignoffice.com/" target="_blank">River</a> Jukes-Hudson, Noah Cousineau, Cheri Gray, Shuwen Ding, and Shengjie Wu, and the great audience at Type Thursday LA for additional critique.<br>
 
 </div>
 </div>
@@ -480,4 +470,64 @@ Additional celebrations in Pakistan.</div>
 The main challenge in designing this year’s identity was finding a way to represent the number 86 with geometry in the logo. From the previous year, 85 had easy multiples to work with (7 x 15) however 86 could only be broken down to 43 x 2 which does not lead to a pleasing form.<br><br>
 After discussions with international marketing leadership, I was given permission to explore the number 49 instead. His Highness the Aga Khan is recognized as the the 49th Ismaili Muslim Imam and a direct descendant of the Prophet Muhammad. 49 breaks down nicely into 7x7 and offered the opportunity to reuse the identity for future years.<br><br><div style="text-align: left;">The local team in Seattle told me about their ambitious design plans for the celebration, and that I had to be there to see my design come to life at the venue. Despite my intense workload for the last few days of the semester, I made a last-minute decision to take a 36-hour trip back home in secrecy. It was the first time I could physically see anything I’d designed at this scale. In my hometown no less.</div></div>
 </div><br>
+```
+
+## Hadhan Coffee Packaging
+
+```
+<div grid-row="" grid-pad="2" grid-gutter="4">
+    <div grid-col="8" grid-pad="2"><h2>Hadhan Coffee Packaging (in progress)</h2></div>
+    <div grid-col="4" grid-pad="2"></div>
+</div><br>
+<div grid-row="" grid-pad="2" grid-gutter="4" grid-responsive="">
+    <div grid-col="8" grid-pad="2" class="">
+<div class="image-gallery" gid="7">
+{image 2}
+</div>
+    
+</div>
+    <div grid-col="4" grid-pad="2">
+<b>When:</b> 2023 (in progress)<br>
+<b>Media:</b> packaging, branding<br>
+<b>Tools:</b> InDesign, Photoshop, Illustrator<br><br>
+
+
+
+Hadhan Coffee Roasting Co. is a captivating hypothetical brand that takes you on a sensory journey with every sip. The name comes from the Arabic word for “hug”, symbolizing the feeling of comfort from a warm cup of coffee.<br>
+<br>
+Targeting the diverse city of Toronto, Hadhan's specialty beans are sourced from countries with significant importance in the Islamic history. The brand's unique varietals are packaged in bags that showcase distinctive Islamic patterns from the beans' country of origin or roast.<br>
+<br>
+During my research, I discovered a connection between the origins of coffee and Islamic countries, which added a layer of storytelling to the project. While coffee beans originated in Ethiopia, it was the mystics in Yemen who first recognized and consumed them for their energizing properties. This project expanded beyond just packaging and transformed into a brand that shares the untold and fascinating history of coffee from Islamic countries.<br><br>
+Through expert interviews, I received invaluable feedback from subject matter experts in packaging design, history of coffee in Islamic countries, and native<br><br>
+Ongoing revisions:<br>
+<ul><li>Hand lettering for primary logotype</li><li>Revised brand story</li><li>Expanded brand applications (posters, t-shirts, coffee mugs)</li></ul><br>
+<b>Special thank to:</b> Daniel Hoy, Tori Kwon, Milka Broukhim, Wael Morcos.</div>
+</div>
+```
+
+## SHE WILL: Malala Fund x Timex
+```
+<div grid-row="" grid-pad="2" grid-gutter="4">
+    <div grid-col="8" grid-pad="2"><h2>SHE WILL: Malala Fund x Timex</h2></div>
+    <div grid-col="4" grid-pad="2"></div>
+</div><br>
+<div grid-row="" grid-pad="2" grid-gutter="4" grid-responsive="">
+    <div grid-col="8" grid-pad="2">
+{image 8}<br><br>
+<video width="1920" height="1080" controls="" style="aspect-ratio: 16 / 9;" poster="https://freight.cargo.site/t/original/i/c20db3454ad0ef53fd86635ce4d687ad5df94de6c773bf599ac2b14747b804d6/thumb.png">
+    <source src="https://files.cargocollective.com/c1603295/HMCT_SHE_WILL_edit_01.mp4" type="video/mp4">
+</video>
+<div style="padding: 56.25% 0px 0px; position: relative;"><br><br>
+
+<br>
+</div>
+<br>
+        
+</div>
+    <div grid-col="4" grid-pad="2">
+<b>When:</b> 2024 (in progress)<br>
+<b>Media:</b> posters, messaging, spatial<br>
+<b>Tools:</b> InDesign, Illustrator, p5.js, AfterEffects, Blender, Midjourney, Photoshop<br><br>Coming soon.<br><br><b>Special thanks to:</b> Tyrone Drake.<br>
+</div>
+</div>
 ```
