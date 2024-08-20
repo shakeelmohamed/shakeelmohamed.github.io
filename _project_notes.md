@@ -6,7 +6,7 @@ This file should eventually be removed, once shakeel.design content is folded in
 
 ```html
 <div grid-row="" grid-pad="2" grid-gutter="4">
-    <div grid-col="8" grid-pad="2"><h2>“Words Have Power” Installation (prototype)</h2></div>
+    <div grid-col="8" grid-pad="2"><h2>Words Have Power Installation (prototype)</h2></div>
     <div grid-col="4" grid-pad="2"></div>
 </div><br>
 <div grid-row="" grid-pad="2" grid-gutter="4" grid-responsive="">
@@ -16,7 +16,9 @@ This file should eventually be removed, once shakeel.design content is folded in
 This teaser video documents my setup process for the midterm prototype installation.<br>
 <br>
 <iframe src="https://www.youtube.com/embed/41Fk9HTuJwU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" style="aspect-ratio: 16 / 9; width: 100%;" class=""></iframe><br>
-This is a longer form presentation covering the theory, concept, setup, and execution of the installation.<br>
+This is a longer form presentation covering the theory, concept, setup, and execution of the installation.<br><br>
+{image 19}<br>
+The scale of this project was critical to give the viewer an immersive experience. Once I saw the setup with 8ft tall boards, I knew I was onto something special.<br>
 
 <br>{image 7}<br>
 Research and inspiration.<br>
@@ -40,7 +42,8 @@ Projection mapping in TouchDesigner.<br>
     <div grid-col="4" grid-pad="2">
 <b>When:</b> 2023<br>
 <b>Media:&nbsp;</b>transmedia, coding, installation<br>
-<b>Tools:</b> TouchDesigner, Python, projection mapping, model building, microphone<br><br>This interactive installation uses projection mapping to visually show the impact of our voice through generative graphics activated by microphone input. Applying graphic design foundations across media types has always interested me, this was the perfect opportunity to explore design in space.<br>
+<b>Tools:</b> TouchDesigner, Python, projection mapping, model building, microphone<br><br>
+<b>Goal:</b> design an installation to reflect on daily life.<br><br>This interactive installation uses projection mapping to visually show the impact of our voice through generative graphics activated by microphone input. Applying graphic design foundations across media types has always interested me, this was the perfect opportunity to explore design in space.<br>
 <br>
 I was inspired by Masuru Emoto’s research on what happens to water crystals based on what words or music they are exposed to before freezing. I watched his documentary as a child and totally forgotten about it until one day I remembered this reference.<br>
 <br>
@@ -58,22 +61,48 @@ This project is not done, but I am really pleased with my progress and hope to c
 
 ```html
 <div grid-row="" grid-pad="2" grid-gutter="4">
-    <div grid-col="8" grid-pad="2"><h2>Midjourney Strategic Rebrand (in progress)</h2></div>
+    <div grid-col="8" grid-pad="2"><h2>Midjourney Strategic Rebrand</h2></div>
     <div grid-col="4" grid-pad="2"></div>
 </div><br>
-<div grid-row="" grid-pad="2" grid-gutter="4" grid-responsive="">
-    <div grid-col="8" grid-pad="2">{image 5}<br>
+<div grid-row="" grid-pad="2" grid-gutter="4" grid-responsive=""><div grid-col="8" grid-pad="2">{image 1}<br>The new Midjourney logo is an evolution of the previous sailboat symbol. “The Sail” places focus on the most important part of a sailboat enabling navigation and speed, both for their team and users. This refined symbol is a reminder of the groundbreaking work they do.<br><br>{image 9}<br>Audit of current brand assets. Through my interviews, I was surprised how many users of Midjourney knew little to nothing about the brand, many had no idea their logo was a sailboat. Though I explored many forms, with Gerardo’s guidance I chose a brand evolution rather than revolution and continued the nautical theme based on interviews with the Founder, David Holz.
 <br>
-{image 1}<br><br>
-{image 7}<br><br>
-{image 6}<br><br>
+<br>{image 10}<br>There was little information about Midjourney existing brand given how new the company is. My research focused on Founder interviews to get a clear understanding of his mission.<br>
 <br>
-        
+{image 12}<br>The Sail. After an exhaustive exploration of logo designs, I found a beautiful compromise of abstraction while carrying forward the DNA of their existing logo. The sail is the simplest expression of the sailboat, which connects back to the above quote from David Holz.
+<br><br>
+{image 13}<br>The brand colors emerged from light refraction, symbolizing expansive creativity possible with their products.
+<br><br>
+{image 14}<br>These colors aim to connect with a broader audience across cultures, ages, and industries. The primary color palette helps Midjourney stand out from the majority of tech companies.<br><br>
+{image 15}<br><div style="text-align: left;">Logo family system expressed through all brand colors: vertical lockup, icon, wordmark.
 </div>
+<br>{image 16}<br>The abstract intelligence (AI) pattern.<br>
+<br>
+{image 17}<br>Midjourney stationery stystem.
+<br><br>
+{image 18}<br>Promotional posters displayed in the HQ as a reminder of company culture.
+<br><br>
+{image 19}<br>
+Though Midjourney has been a remote company, I wanted to imagine what their first HQ office space might look like. The HQ would feature a brushed stainless steel sculpture of the Midjourney sail outside.<br>
+<br>{image 20}<br>I also envisioned Midjourney launching a users conference called Midjourney Navigate, to be held in San Francisco.
+<br><br>
+{image 21}<br>Keynote stage and various conference merch. At Navigate, Midjourney would announce their new digital platform featuring an iOS app and image generation in browser (evolving from the Discord only experience).
+<br>
+<br>
+{image 5}<br>Promotional posters in context.
+<br>
+<br>
+{image 23}<br>Notable creative leaders would receive VIP invites to the conference, including customized VIP cards, access to 1:1 consultations with AI experts, and an invite to a celebration evening.
+<br><br>
+{image 24}<br>Midjourney VIP access cards would have digital integration and provide access to VIP lounge areas at the venues.
+<br><br>
+{image 25}<br>I also explored what form an interactive installation might look like at the conference. Attendees would be able to speak into microphones placed around the installation to generate images from their voice.<br><br>
+{image 11}<br>
+
+A selection of identity refinement from paper to digital sketches.</div>
     <div grid-col="4" grid-pad="2">
 <b>When:</b> 2023 (in progress)<br>
 <b>Media:</b> branding, strategy, website, motion, 3D, transmedia, augmented reality, website, mobile app, packaging, installation<br>
-<b>Tools:</b> InDesign, Illustrator, Figma, AfterEffects, Blender, Midjourney, Photoshop<br><br>
+<b>Tools:</b> InDesign, Illustrator, Figma, AfterEffects, Blender, Midjourney, Photoshop<br><br><b>Goal:</b> reimagine a brand to be more approachable and aligned with their mission through design.<br><br>
 <b>Typefaces:</b> Clash Display and Clash Grotesk from Indian Type Foundry.<br><br>
 Disclaimer: this is a work in progress student project at ArtCenter College of Design.<br><br>
 For more information, please reach out at: <b><a href="mailto:hello@shakeel.design">hello@shakeel.design</a></b>.<br><br>
@@ -147,13 +176,16 @@ Future work may include motion graphics, generative typography, 3D modeling, and
 <br>{image 17}<br><br>
 {image 21}<br>
 <br>
-{image 18}<br>
-        
-</div>
+{image 18}<br><br>
+{image 23}<br>
+
+I began designing the Arabic character set which has a different set of complexities. In this first draft I remained rigid to the same grid as the Latin character set (7x7 without letter-spacing since Arabic is a connected script). In doing so, I found some forms do not reduce down as nicely as I would like. The next revision I will try is on a 14x14 grid, subdividing the current grid in half.</div>
     <div grid-col="4" grid-pad="2">
 <b>When:</b> 2023 <br>
 <b>Media:&nbsp;</b>type design<br>
 <b>Tools:</b> Glyphs, Illustrator, InDesign, Figma<br><br>
+<b>Goal:</b> design a modular typeface, infused with personal meaning.<br><br>
+<b>Recognition:</b>&nbsp;Hoffmitz Milken Center for Typography (HMCT) Newsletter 2023 holiday greetings (featured typeface).<br><br>
 Referential Mono is built on a 5x5 grid, inspired by early computing and Islamic History. As a developer and Muslim, this project was an opportunity to combine many aspects of my identity in one.<br>
 <br><a href="https://hmctartcenter.org/" target="_blank">HMCT</a> graciously featured the typeface in their December 2023 holiday greeting email newsletter.<br><br>
 Ongoing work includes: an Arabic version, motion design, and generative typography.<br><br>
@@ -301,11 +333,14 @@ Special thanks to the National Gallery of Art for providing high quality images 
 </div><br>
 <div grid-row="" grid-pad="2" grid-gutter="4" grid-responsive="">
     <div grid-col="8" grid-pad="2">
-&nbsp;<br>
+ 
 {image 1}<br>
 <br>{image 10}<br>
 <br>
-<iframe src="https://www.youtube.com/embed/zuxlgM3-SFs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" style="aspect-ratio: 16 / 9; width: 100%;"></iframe><br><br>
+<video width="1920" height="1080" controls="" style="aspect-ratio: 16 / 9;">
+    <source src="https://files.cargocollective.com/c1603295/widescreen.mp4" type="video/mp4">
+</video>
+<br><br>
 {image 3}<br><br>
 {image 4}<br><br>
 {image 5}<br><br>
@@ -318,7 +353,7 @@ Special thanks to the National Gallery of Art for providing high quality images 
     <div grid-col="4" grid-pad="2">
 <b>When:</b> 2023<br>
 <b>Media:</b> branding, poster, t-shirt, augmented reality, motion<br>
-<b>Tools:</b> InDesign, Illustrator, Artivive, After Effects<br><br>
+<b>Tools:</b> InDesign, Illustrator, Artivive, After Effects<br><br><b>Goal:</b> design an identity for a typography conference, embracing the idea of a post-pandemic community building.<br><br>
 <b>Typefaces:</b>&nbsp;Yink from Eclectotype and Ofelia from Blackletra.<br>
 
 <br>
@@ -334,7 +369,7 @@ I envision conference organizers and staff wearing black shirts to not draw atte
 <br>
 
 <br>
-<b>Special thanks to:</b> <a href="http://morindesignoffice.com/" target="_blank">River</a> Jukes-Hudson, Noah Cousineau, Cheri Gray, Shuwen Ding, and Shengjie Wu, and the great audience at Type Thursday LA for additional critique.<br>
+<b>Special thanks to:</b> River Jukes-Hudson, Noah Cousineau, Cheri Gray, Shuwen Ding, and Shengjie Wu, and the great audience at Type Thursday LA for additional critique.<br>
 
 </div>
 </div>
@@ -359,7 +394,7 @@ I envision conference organizers and staff wearing black shirts to not draw atte
 <b>Media:</b> presentation
 <br>
 <b>Tools:</b> Keynote, InDesign, Photoshop, Illustrator<br><br>
-<b>Topic:</b> One Your Can Change Your Whole life.<br>
+<b>Topic:</b> One Year Can Change Your Whole life.<br>
 <br><b>Recognition:</b> I presented my portfolio live to all Festival attendees over Zoom, where I received valuable feedback from Louise Sandhaus.<br>
 <br>
 After my initial portfolio review at the 2021 AIGA Portfolio Festival, I recognized the need to improve my work to align with my career aspirations. One year later, at the 2022 Festival, I shared my growth journey, which ultimately led to my acceptance into ArtCenter's Graphic Design MFA program.<br>
@@ -373,7 +408,7 @@ The recording is available on <a href="https://youtu.be/HtRtGYQx480" target="_bl
 
 ```html
 <div grid-row="" grid-pad="2" grid-gutter="4">
-    <div grid-col="8" grid-pad="2"><h2>#Salgirah85 International Festival Identity</h2>
+    <div grid-col="8" grid-pad="2"><h2>Salgirah International Festival Identity</h2>
 </div>
     <div grid-col="4" grid-pad="2"></div>
 </div><br>
@@ -431,15 +466,16 @@ Exterior signage.<br><br>
 <br>
 </div>
     <div grid-col="4" grid-pad="2">
-<b></b><b>When:&nbsp;</b>2021 (6 weeks)<br>
+<b></b><b>When:&nbsp;</b>2021–present (annually)<br>
 <b>Organization:</b> <a href="https://the.ismaili/" target="_blank">The Ismaili Community</a> (globally)<br>
 <b>Media:</b> Branding, Motion<br>
-<b>Tools:</b> Illustrator, Photoshop, AfterEffects, InDesign<br><br><b>Goal:</b> Design a unified festival identity for the global Ismaili Muslim community in 21 countries.<br><br>
+<b>Tools:</b> Illustrator, InDesign, AfterEffects, Photoshop&nbsp;<br><br><b>Goal:</b> Design a unified festival identity for the global Ismaili Muslim community in 21 countries.<br><br>
 Salgirah is a religious festival observed by Ismaili Muslims every December. It marks the birthday of His Highness the Aga Khan, a descendant of Prophet Muhammad, the spiritual leader of 15 million Ismailis worldwide. December 13, 2021, marked his 85th birthday, or Salgirah.<br><br>The brief given to me by the Ismaili global communications team was to embrace the theme of shukr (gratitude in Arabic) while conveying 85 through (Islamic) geometry. This brand identity would be used worldwide by the Ismaili community to promote a sense of unity.
 <br>
 <br>This was by far the largest project I’ve worked on in terms of scale and one I will remember forever. The team only had two brief Zoom meetings over the six weeks of the project. I was impressed with our ability to collaborate across timezones through a Whatsapp group. Since this is a faith-based organization, all team members involved shared a common belief system about the festival.<br><br>
  
-One year later I was invited to refresh the identity for the Aga Khan’s 86th Salgirah festival.</div>
+One year later I was invited to refresh the identity for the Aga Khan’s 86th Salgirah festival. This became a flexible system to be used for the next three years.<br><br>
+<b>Special thanks to:</b> the dozens of volunteers who applied the identity system across many media types around the world.</div>
 </div><br>
 ```
 
@@ -492,7 +528,7 @@ After discussions with international marketing leadership, I was given permissio
 
 ## Hadhan Coffee Packaging
 
-```
+```html
 <div grid-row="" grid-pad="2" grid-gutter="4">
     <div grid-col="8" grid-pad="2"><h2>Hadhan Coffee Packaging (in progress)</h2></div>
     <div grid-col="4" grid-pad="2"></div>
@@ -524,7 +560,8 @@ Ongoing revisions:<br>
 ```
 
 ## SHE WILL: Malala Fund x Timex
-```
+
+```html
 <div grid-row="" grid-pad="2" grid-gutter="4">
     <div grid-col="8" grid-pad="2"><h2>SHE WILL: Malala Fund x Timex</h2></div>
     <div grid-col="4" grid-pad="2"></div>
@@ -535,17 +572,68 @@ Ongoing revisions:<br>
 <video width="1920" height="1080" controls="" style="aspect-ratio: 16 / 9;" poster="https://freight.cargo.site/t/original/i/c20db3454ad0ef53fd86635ce4d687ad5df94de6c773bf599ac2b14747b804d6/thumb.png">
     <source src="https://files.cargocollective.com/c1603295/HMCT_SHE_WILL_edit_01.mp4" type="video/mp4">
 </video>
-<div style="padding: 56.25% 0px 0px; position: relative;"><br><br>
-
 <br>
-</div>
+Two posters from the series were installed at the Hoffmitz Milken Center for Typography (HMCT) Billboards at ArtCenter College of Design.<br>
+<br>{image 10}<br>
+The full poster series.<br><br>
+{image 11}<br>
+Posters 2, 4, 6, and 8 tell the story of Simran, a young girl from Pakistan, in the smaller type available upon closer inspection.<br><br>
+{image 13}<br>Selected type as image explorations, done in positive and negative.&nbsp;<br><br>
+{image 12}<br>Plan view of the pop-up exhibition, inspired by the forms of infinity and a watch dial.
+<br><br>
+<video width="1920" height="1080" controls="" style="aspect-ratio: 16 / 9;">
+    <source src="https://files.cargocollective.com/c1603295/She_Will_flythrough_v2.mp4" type="video/mp4">
+</video>
+<br>A very rough fly through of the pop-up exhibition, designed in Blender. This was the biggest 3D project I’ve&nbsp; done, and want to keep exploring this area further.
 <br>
-        
 </div>
     <div grid-col="4" grid-pad="2">
 <b>When:</b> 2024 (in progress)<br>
-<b>Media:</b> posters, messaging, spatial<br>
-<b>Tools:</b> InDesign, Illustrator, p5.js, AfterEffects, Blender, Midjourney, Photoshop<br><br>Coming soon.<br><br><b>Special thanks to:</b> Tyrone Drake.<br>
+<b>Media:</b> posters, messaging, spatial, 3D modeling<br>
+<b>Tools:</b> InDesign, Illustrator, p5.js, AfterEffects, Blender, Midjourney, Photoshop<br><br><b>Goal:</b> reinterpret the message of a non-profit organization through the perspective of a lifestyle brand for a new audience.<br><br>
+<b>Recognition:</b> ArtCenter Student Gallery,&nbsp;Hoffmitz Milken Center for Typography (HMCT) Billboards<br><br>Tasked with imagining a collaboration between a lifestyle brand and non-profit organization, I chose Malala Fund and Timex. Malala Fund is an advocacy non-profit for girls’ education in middle-income and low-income counties (which they prefer to use instead of “third-world”) founded by Malala Yousafzai. Timex is one of the most ubiquitous watch brands. Together, this exhibition is targeting young professionals in SoCal with a key unifying factor of empowerment and time.<br><br>
+I chose to use Midjourney generated images to demonstrate how as visual communicators we can convey a message without putting someone in harm’s way. In particular,&nbsp;<a href="https://en.wikipedia.org/wiki/Afghan_Girl" target="_blank">Sharbat Gula</a> (the “Afghan Girl” from National Geographic) was put in danger after her photograph became so broadly known.<br><br>A key finding emerged through research: both organizations are united by the idea of 12.<br>– Malala Fund: “Twelve years of education”<br>– Timex: 12 hours per AM and PM<br>
+<br>
+Though very much in progress, this notion of 12 will inform the rest of the physical exhibition layout and perhaps two more posters.<br><br>
+<b>Future work includes:&nbsp;</b><br>
+– Improved content sequence and environmental design in the exhibit<br>
+– Placing the exhibit in space, I am considering venues around Washington D.C.<br>
+– A polished fly through video, there are several rough points<br>
+– More complete generative design integrations, and standalone gendesign experiences<br>
+– Custom watch dial design, I already have a base 3D model to work from. This 3D model can then be placed at the perimeter of the exhibit<br><br><b>Special thanks to:</b> Tyrone Drake.<br>
+</div>
+</div>
+```
+
+## Mindful Roman Typeface
+
+```html
+<div grid-row="" grid-pad="2" grid-gutter="4">
+    <div grid-col="8" grid-pad="2"><h2>Mindful Roman Typeface</h2></div>
+    <div grid-col="4" grid-pad="2"></div>
+</div><div grid-row="" grid-pad="2" grid-gutter="4" grid-responsive=""><div grid-col="8" grid-pad="2">{image 15}<br>
+<br>
+{image 9}<br>
+Poster concept: astrology chart for the birth date &amp; time of the typeface.<br>
+<br>
+{image 10}<br><br>
+{image 12}<br><br>
+{image 11}<br><br>
+{image 13}<br><br>
+{image 14}<br>
+<br>
+{image 8}<br>
+<br>
+{image 16}<br>
+WIP file in Glyphs 3.</div>
+    <div grid-col="4" grid-pad="2">
+<b>When:</b> 2024<br>
+<b>Media:&nbsp;</b>type design, posters<br>
+<b>Tools:</b> Glyphs, Illustrator, InDesign, Figma<br><br><b>Goal:</b> design typeface strongly informed by historical and contemporary references with a specific theme in mind.<br>
+<br>Mindful Roman is a rationally drawn transitional sans-serif typeface for those embarking on a spiritual journey.<br><br>
+Typeface references include: Ingeborg, Corporate A, Times New Roman, and Century Schoolbook.<br><br>I aim to replace Corporate A with Mindful Roman for my name in any identity pieces for my personal brand (website, resume, business cards, etc).&nbsp;<br><br>
+Future work includes: refined spacing, kerning pairs, sample print applications, and an italic variant.<br><br>
+<b>Special thanks to:</b> Greg Lindy of Lux Typo, Jose Caballer. Additional thanks to Co-Star Astrology for copy used on the poster.<br><br>
 </div>
 </div>
 ```
