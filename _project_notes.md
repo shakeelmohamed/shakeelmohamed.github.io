@@ -201,76 +201,63 @@ Ongoing work includes: an Arabic version, motion design, and generative typograp
 
 ```html
 <div grid-row="" grid-pad="2" grid-gutter="4">
-    <div grid-col="8" grid-pad="2"><h2>Mark Rothko Documentary Campaign</h2></div>
+    <div grid-col="8" grid-pad="2"><h2>Midjourney Strategic Rebrand</h2></div>
     <div grid-col="4" grid-pad="2"></div>
-</div><div grid-row="" grid-pad="2" grid-gutter="4" grid-responsive="">
-    <div grid-col="8" grid-pad="2">{image 11}<br>
-A poster series promoting the documentary episode.<br>
-<br><br>
-{image 2}<br>
-Sean Adams, the Department Chair of Graphic Design at ArtCenter, selected one poster from the set to display in his office.<br><br><br>
-<br>{image 7}<br>
-The final wordmark set on a purple inspired by the colors of Rothko’s paintings in the Rothko Chapel. The primitive forms for “Mark” tie back to the primitive emotions evoked by his work. While “Rothko” is set in all caps to symbolize the monolithic scale of his paintings.<br><br>
-<br>
-<br>
-{image 8}<br>During our midterm critique with some recent alumni, Erin Son suggested looking at the placement of “Mark” as a dynamic element which could create a logo system. Conceptually, this connects back to Mark Rothko’s many years of searching before finally settling on the style of art we know him for (and his legacy) as Rothko.<br>
-<br>{image 12}<br>Extending the identity to a booklet required a special consideration for messaging. I chose the title “Art for Mystics”, based on the following definition for mystical: inspiring a sense of spiritual mystery, awe, and fascination. This sense of awe is due partly to the scale of Rothko’s paintings.<br><br>    <iframe style="border: 1px solid rgb(119, 119, 119); aspect-ratio: 16 / 9; width: 100%;" src="https://indd.adobe.com/embed/0ce1fbfe-ae15-462d-b89c-fc8d21c9b685?startpage=1&amp;allowFullscreen=false" frameborder="0" allowfullscreen=""></iframe><br>The complete book is available for viewing above.<br>
-<br>
-{image 14}<br>Colors were inspired by the Rothko Chapel in Houston, Texas. The non-denominational Chapel was one of Rothko’s final projects which he never saw completed.<br><br>
-{image 15}{image 16}<br>
-{image 17}<br>Intro/outro: A few spreads guide the reader from from the everyday material world to that of the mystical, symbolized by a slow gray to purple gradient. The outro follows the sequence in reverse. This concept is based on an engawa, a Japanese architecture element to bridge the outside world to the home.<br><br>
-{image 18}<br>Recalling the definition of mysticism which inspired the publication title.<br><br>
-{image 19}<br>Each chapter begins with a full spread. The chapter title is large, paired with a relevant Rothko quote on the opposite page.<br>
-<br>
-{image 20}<br><div style="text-align: left;">Spread from chapter 3: Voice — a photo essay of his best known abstract works.<br>
-{image 21}</div><br>
-<div style="text-align: left;">Spread from chapter 4: Wisdom — his advice for new artists.</div><br>
-{image 22}<br>Spread from chapter 5: Legacy — an interview with Christopher Rothko, his son, which informed my overall design direction.<br>{image 23}<br>Special thanks to Architectural Digest for a beautiful photo of the Rothko Chapel.<br><br>
-{image 24}<br>
-Full pagination of the book, a tool I continue to return to in all editorial projects.<br>
-<br>{image 13}<br>This was the first editorial project that I shared on LinkedIn, and the post received some unexpected praise.<br><br><br>{image 9}<br>Envisioning the start of an opening title sequence for the documentary.<br>
-<br>
-{image 10}<br>Each poster has a call to action to stream the documentary at PBS.org.<br><br><br>
-{image 3}<br>Screenshots of the augmented reality experience created using Adobe Aero.
-<br><br>
-{image 4}<br>During my research I visited MOCA in Downtown Los Angeles for another Rothko experience.<br><br>
-{image 5}<br>My research included reading Johanna Drucker’s recently released book, <i>Inventing the Alphabet</i>, as I saught a deeper understanding for primitive letterforms. Conceptually, this aligned with Rothko’s ability to tap into the viewer’s primitive emotions with his artwork.<br>
-<br>{image 6}<br>Various sketches during the wordmark design process which ultimately led to me discovering the magic of this H-K ligature to minimize visual clutter.
-<br>
-</div>
-    <div grid-col="4" grid-pad="2">
-<b>When:</b> 2022&nbsp;<br>
-<b>Media:</b> Branding, Posters, Augmented Reality,<br>
-<b>Tools:</b> InDesign, Photoshop, Illustrator, AfterEffects, Aero<br><br><b>Goal:</b> design an identity, publication, and accompanying collateral to promote a documentary about the artist.<br>
-<br>
- 
-
-<b>Recognition:</b> One poster was selected for display in office of the Chair of Graphic Design at ArtCenter.<br>
-
-<br>
-Wordmark and posters for a campaign promoting a documentary about Mark Rothko, the abstract expressionist.<br>
-
-<br>
-We selected an episode of the PBS documentary series American Masters, and the individual featured as our subject.<br>
-
-<br>
-Design concept: in memoriam.<br>
-
-<br>
-Depth of research and critique helped me to clarify the forms and vocabulary used throughout the project. Once I let go of initial logo concepts focused on the negative aspect of Rothko’s life, I landed on a dynamic system.<br>
-
-<br>
-In my solution, “Mark” can be placed in numerous positions around “Rothko”, symbolizing the artist’s search among many styles of art. Big thanks to Erin Son for this idea during midterm guest critique!<br><br>
-As for the book, colors were inspired by the Rothko Chapel in Houston, Texas. The non-denominational Chapel was one of Rothko’s final projects which he never saw completed before his passing.<br>
-
-<br>Intro/outro: A few spreads guide the reader from from the everyday material world to that of the mystical, symbolized by a slow gray to purple gradient. The outro follows the sequence in reverse. This concept is based on an engawa, a Japanese architecture element to bridge the outside world to the home.<br><br>Each chapter begins with a full spread. The chapter title is large, paired with a relevant Rothko quote on the opposite page.<br>
-
-<br>
-<ol><li><b>Preface</b> — an introduction to Mark Rothko.<br></li><li><b>Search</b> — early explorations through his lesser known styles of art.<br></li><li><b>Voice</b> — a photo essay of his best known abstract works.<br></li><li><b>Wisdom</b> — his advice for new artists.<br></li><li><b>Legacy</b> — an interview with Christopher Rothko, his son, which informed my overall design direction.<br></li><li><b>Reflection</b> — my brief and emotional editorial capturing my thoughts as I completed the book.</li></ol><br>
-During a break in our final presentation, I pulled together a rough augmented reality experience with Adobe Aero.<br><br>
-<b>Future work:</b> I’m currently redrawing the R in the ROTHKO wordmark to adhere to type design best practices which I’ve recently learned. Before my Spring 2025 grad show, I plan to make some revisions and reprint the book.<br><br>
-<b>Special thanks to:</b> Christian Perez-Morin, Sean Adams, Michael Neal, Erin Son, Sean Shang, Brad Bartlett, and Greg Lindy  of Lux Typo. Additional thanks to the National Gallery of Art for high quality images of Rothko’s artwork, and to Architectural Digest for a beautiful photo of the Rothko Chapel.</div>
 </div><br>
+<div grid-row="" grid-pad="2" grid-gutter="4" grid-responsive=""><div grid-col="8" grid-pad="2">{image 1}<br>The new Midjourney logo is an evolution of the previous sailboat symbol. “The Sail” places focus on the most important part of a sailboat enabling navigation and speed, both for their team and users. This refined symbol is a reminder of the groundbreaking work they do.<br><br>{image 9}<br>Audit of current brand assets. Through my interviews, I was surprised how many users of Midjourney knew little to nothing about the brand, many had no idea their logo was a sailboat. Though I explored many forms, with Gerardo’s guidance I chose a brand evolution rather than revolution and continued the nautical theme based on interviews with the Founder, David Holz.
+<br>
+<br>{image 10}<br>There was little information about Midjourney existing brand given how new the company is. My research focused on Founder interviews to get a clear understanding of his mission.<br>
+<br>
+{image 12}<br>The Sail. After an exhaustive exploration of logo designs, I found a beautiful compromise of abstraction while carrying forward the DNA of their existing logo. The sail is the simplest expression of the sailboat, which connects back to the above quote from David Holz.
+<br><br>
+{image 13}<br>The brand colors emerged from light refraction, symbolizing expansive creativity possible with their products.
+<br><br>
+{image 14}<br>These colors aim to connect with a broader audience across cultures, ages, and industries. The primary color palette helps Midjourney stand out from the majority of tech companies.<br><br>
+{image 15}<br><div style="text-align: left;">Logo family system expressed through all brand colors: vertical lockup, icon, wordmark.
+</div>
+<br>{image 16}<br>The abstract intelligence (AI) pattern.<br>
+<br>
+{image 17}<br>Midjourney stationery stystem.
+<br><br>
+{image 18}<br>Promotional posters displayed in the HQ as a reminder of company culture.
+<br><br>
+{image 19}<br>
+Though Midjourney has been a remote company, I wanted to imagine what their first HQ office space might look like. The HQ would feature a brushed stainless steel sculpture of the Midjourney sail outside.<br>
+<br>{image 20}<br>I also envisioned Midjourney launching a users conference called Midjourney Navigate, to be held in San Francisco.
+<br><br>
+{image 21}<br>Keynote stage and various conference merch. At Navigate, Midjourney would announce their new digital platform featuring an iOS app and image generation in browser (evolving from the Discord only experience).
+<br>
+<br>
+{image 5}<br>Promotional posters in context.
+<br>
+<br>
+{image 23}<br>Notable creative leaders would receive VIP invites to the conference, including customized VIP cards, access to 1:1 consultations with AI experts, and an invite to a celebration evening.
+<br><br>
+{image 24}<br>Midjourney VIP access cards would have digital integration and provide access to VIP lounge areas at the venues.
+<br><br>
+{image 25}<br>I also explored what form an interactive installation might look like at the conference. Attendees would be able to speak into microphones placed around the installation to generate images from their voice.<br><br>
+{image 11}<br>
+
+A selection of identity refinement from paper to digital sketches.</div>
+    <div grid-col="4" grid-pad="2">
+<b>When:</b> 2023 (in progress)<br>
+<b>Media:</b> branding, strategy, website, motion, 3D, transmedia, augmented reality, website, mobile app, packaging, installation<br>
+<b>Tools:</b> InDesign, Illustrator, Figma, AfterEffects, Blender, Midjourney, Photoshop<br><br><b>Goal:</b> reimagine a brand to be more approachable and aligned with their mission through design.<br><br>
+<b>Typefaces:</b> Clash Display and Clash Grotesk from Indian Type Foundry.<br><br>
+Disclaimer: this is a work in progress student project at ArtCenter College of Design.<br><br>
+For more information, please reach out at: <b><a href="mailto:hello@shakeel.design">hello@shakeel.design</a></b>.<br><br>
+I re-imagined the identity of Midjourney across a wide range of touchpoints including digital, print, conference, wayfinding, a new corporate headquarters, and much more.<br><br>
+<b>“How do you build these boats that let them navigate and be empowered and sort of sail the ocean of imagination, instead of just drowning?”. 
+
+<br>
+(Founder, David Holz).</b><br>
+<br>
+The new Midjourney logo is an evolution of the previous sailboat symbol. This refined symbol is a reminder of the groundbreaking work they do within generative AI.<br>
+<br>
+The new brand colors are inspired by light refraction, symbolizing the expansive creativity possible with our products. These colors aim to connect with a broader audience across cultures, and industries.<br><br>
+The underlying strategy is rooted in remaining competitive with the many new generative AI companies emerging since 2021.&nbsp;<br><br><b>Special thanks to:</b> Gerardo Herrera and Miles Mazzie.<br>
+</div>
+</div>
 ```
 
 ## Mark Rothko: Art for Mystics
