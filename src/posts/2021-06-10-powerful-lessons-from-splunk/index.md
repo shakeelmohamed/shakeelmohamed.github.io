@@ -2,7 +2,7 @@
 layout: post
 date: 2021-06-10
 title: Powerful Lessons From Splunk I’ll Never Forget
-description: This is my attempt to codify the instinctive and intuitive approach I take to code reviews.
+description: While working at Splunk over the past eight years, I’ve had the opportunity to work with incredibly wise people.
 openGraphImage: ./header.png
 tags:
     - post
