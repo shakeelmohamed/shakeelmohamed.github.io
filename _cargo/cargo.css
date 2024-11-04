@@ -4,6 +4,23 @@
     }
 }
 
+@media screen and (min-width: 1600px) {
+    h2 {
+        font-size: 1rem !important;
+    }
+    bodycopy {
+        font-size: 1rem !important;
+    }
+    .thumbnails .title {
+        font-size: 1.25rem !important;
+        line-height: 1.0rem !important;
+        margin-top: 0.75rem !important;
+    }
+    .thumbnails .tags {
+        font-size: 1rem !important;
+    }
+}
+
 #toolset {
     display: none;
 }
@@ -88,7 +105,7 @@ hr {
     font-size: 1rem;
     font-weight: 500;
     color: rgba(0, 0, 0, 0.85);
-    font-family: Diatype, Icons;
+    font-family: tt-commons-pro, Icons;
     font-style: normal;
     line-height: 1.3;
     text-align: left;
@@ -149,7 +166,7 @@ bodycopy a.icon-link:hover {
 }
 
 [data-predefined-style="true"] h2 {
-    font-family:tt-commons-pro, Icons;
+    font-family: tt-commons-pro, Icons;
     font-style: normal;
     font-weight: 700;
     padding: 0;
@@ -325,7 +342,7 @@ body.mobile #site_menu_button {
  */
 
 #site_menu {
-    font-family: Diatype, Icons;
+    font-family: tt-commons-pro, Icons;
     background: rgba(20, 20, 20, 0.95);
     font-size: 20px;
     font-style: normal;
@@ -398,7 +415,7 @@ body.mobile #site_menu .close {
 }
 
 #shop_button.text {
-    font-family: Diatype, Icons;
+    font-family: tt-commons-pro, Icons;
     font-size: 1.2rem;
     padding: 0;
     font-weight: 500;
@@ -430,7 +447,7 @@ body.mobile #shop_button:not(.text) {
 }
 
 .shop_product .price {
-    font-family: Diatype, Icons;
+    font-family: tt-commons-pro, Icons;
     font-style: normal;
     font-weight: 500;
     margin-bottom: 1rem;
@@ -456,7 +473,7 @@ body.mobile #shop_button:not(.text) {
 }
 
 .shop_product .button {
-    font-family: Diatype, Icons;
+    font-family: tt-commons-pro, Icons;
     font-size: 1.2rem;
     background: rgba(0, 0, 0, 0.85);
     border-radius: 10rem;
@@ -503,7 +520,7 @@ body.mobile .quick-view {
 }
 
 .quick-view-caption {
-    font-family: Diatype, Icons;
+    font-family: tt-commons-pro, Icons;
     transition: 100ms opacity ease-in-out;
     position: absolute;
     bottom: 0;
@@ -642,7 +659,7 @@ body.mobile .quick-view {
     background: transparent;
     font-size: 1.2rem;
     line-height: 1.2;
-    font-family: "Neue Haas Grotesk", Icons;
+    font-family: tt-commons-pro, Icons;
     font-style: normal;
     font-weight: 500;
     text-align: left;
@@ -702,4 +719,3 @@ body.mobile .audio-player {
 .audio-player .total-time {
     padding-right: 1rem;
 }
-
