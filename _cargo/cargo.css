@@ -276,7 +276,7 @@ div[thumbnails] {
 }
 
 .thumbnails .title {
-    margin-top: 1.0rem;
+    margin-top: 0.4rem;
     margin-bottom: 0.4rem;
     font-size: 1.5rem;
     font-weight: 700;
@@ -290,7 +290,7 @@ div[thumbnails] {
     margin-top: .8rem;
     margin-bottom: 1.5rem;
     font-size: 1.25rem;
-    line-height: 1.1;
+    line-height: 1.25;
     font-family: tt-commons-pro, Icons; font-style: normal;
     font-weight: 400;
     color: rgba(0, 0, 0, 0.4);
