@@ -1,6 +1,8 @@
+<!-- TOP ROW -->
 <div class="myrow" style="display: grid; grid-template-columns:25% 75%; column-gap:2em">
+    <!-- LEFT: Headshot + inspo -->
     <div class="mycell" style="padding-right: 0em;">
-        {image 2 scale="23"}
+        <div class="image-gallery">{image 2}</div>
         <br>
         <p><b>“The best way to predict the future is to create it”</b><br>
         — Peter Drucker (attributed)</p>
@@ -22,30 +24,44 @@
         </ol>
         <br>
     </div>
+    <!-- RIGHT: About me + design heroes -->
     <div class="mycell" style="margin-right: 3rem;">
-        <b>I think inside, outside, and about the box itself.</b><br><br>I thrive at the intersection of cultures, translating across perspectives to discover new ideas. My elementary school was on a Native American reservation where I was “the other Indian.” Early in life, I understood the nuances of personal identity which primed me for my second career in graphic design.<br><br>The pursuit of mastery fuels everything I do. As a software engineer, I didn’t just write code; I crafted it to be efficient and elegantly formatted, making it intuitive for other developers. This attention to typography is now at the heart of my practice as a designer. My creative process is a synthesis of research, conversational insights, strategy, and empathy to connect with my audience.<br>
-        <br>
-        
-        <div class="myrow" style="display: grid; grid-template-columns:66% 33%; column-gap:2em">
-            <div class="image-gallery" gid="4">
-                {image 7}
-                {image 3}
-                {image 6}
-                {image 9}
-                {image 5}
-                {image 8}
+        <!-- Top row: about me -->
+        <div class="myrow" style="display: grid; grid-template-columns:33% 64%; column-gap:2em">
+            <div class="mycell" style="@media only screen and (min-width: 768px) {margin-right: 2rem;}">
+                <b>I think inside, outside, and about the box itself.</b>
             </div>
-            <div class="mycell">
-                <b>A few of my design heroes:</b><br>
-                Debbie Millman, Wael Morcos, Brian Collins, Louise Sandhaus, Chris Do, &amp; April Greiman.
+            <div class="mycell" style="@media only screen and (min-width: 768px) {margin-left: -2.5rem;}">
+                I thrive at the intersection of cultures, translating across perspectives to discover new ideas. My elementary school was on a Native American reservation where I was “the other Indian.” Early in life, I understood the nuances of personal identity which primed me for my second career in graphic design.
+                <br><br>The pursuit of mastery fuels everything I do. As a software engineer, I didn’t just write code; I crafted it to be efficient and elegantly formatted, making it intuitive for other developers. This attention to typography is now at the heart of my practice as a designer. My creative process is a synthesis of research, conversational insights, strategy, and empathy to connect with my audience.
+                <br>
+                <br>
+                <b><a href="https://files.cargocollective.com/c1603295/Shakeel_Mohamed_resume_2024.pdf" target="_blank">View my résumé here.</a></b>
+                <br><br>
             </div>
         </div>
-        <br>
+
+        <!-- Bottom row: design heroes-->
+        <div class="myrow" style="display: grid; grid-template-columns:33% 64%; column-gap:2em">
+            <div class="mycell">
+                <b>A few of my design heroes:</b><br>
+                Debbie Millman, Wael Morcos, Brian Collins, Louise Sandhaus, Chris Do, and April Greiman.
+                <br><br>
+            </div>
+            <div class="image-gallery" gid="4">
+{image 7}
+{image 3}
+{image 6}
+{image 9}
+{image 5}
+{image 8}
+</div>
+        </div>
     </div>
 </div>
 <br>
 <div class="myrow" style="display: grid; grid-template-columns:33% 67%;">
-    <div><h2>Résume</h2><br>
+    <div><h2>Résumé</h2><br>
        <a href="https://files.cargocollective.com/c1603295/Shakeel_Mohamed_resume_2024.pdf" target="_blank">A PDF version is available <b>here</b></a>.<br>
        <br>
    </div>
@@ -99,8 +115,8 @@
             <a href="https://www.youtube.com/watch?v=HtRtGYQx480" target="_blank"><b>AIGA Portfolio Festival</b><br>
                 Portfolio presentation to a live audience over Zoom.<br></a>
                 2022<br>
-            </div>
-            <div grid-col="9" grid-pad="2">
+        </div>
+        <div grid-col="9" grid-pad="2" style="@media only screen and (min-width: 768px) {margin-left: 2rem; margin-right:-2rem;}">
                 Experience<br>
                 <hr>
                 <div class="myrow" style="display: grid; grid-template-columns:33% 67%;">
