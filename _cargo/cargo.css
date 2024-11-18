@@ -19,7 +19,20 @@
     .thumbnails .tags {
         font-size: 1rem !important;
     }
+
+    img + div.caption {
+        max-width: 50%;
+    }
+
 }
+
+img + div.caption {
+    margin-top: 0.25rem;
+    color: rgba(0, 0, 0, 0.50);
+    width: 100%;
+}
+
+/* CUSTOM above */
 
 #toolset {
     display: none;
@@ -277,7 +290,7 @@ div[thumbnails] {
 
 .thumbnails .title {
     margin-top: 0.4rem;
-    margin-bottom: 0.4rem;
+/*     margin-bottom: 0.4rem; */
     font-size: 1.5rem;
     font-weight: 700;
     color: rgba(0, 0, 0, 0.85);
@@ -288,19 +301,19 @@ div[thumbnails] {
 
 .thumbnails .tags {
     margin-top: .8rem;
-    margin-bottom: 1.5rem;
-    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
     line-height: 1.25;
     font-family: tt-commons-pro, Icons; font-style: normal;
     font-weight: 400;
-    color: rgba(0, 0, 0, 0.4);
+    color: rgba(0, 0, 0, 0.5);
     font-variation-settings: 'slnt' 0, 'MONO' 1;
     text-transform: capitalize;
 }
 
 .thumbnails .tags a {
     border-bottom: 0;
-    color: rgba(0, 0, 0, 0.4);
+    color: rgba(0, 0, 0, 0.5);
     text-decoration: none;
 }
 
@@ -501,10 +514,10 @@ body.mobile #shop_button:not(.text) {
  */
 
 [data-css-preset] .quick-view {
-    padding-top: 2.5rem /*!quick_view_padding*/;
-    padding-bottom: 2.5rem /*!quick_view_padding*/;
-    padding-left: 2.5rem /*!quick_view_padding*/;
-    padding-right: 2.5rem /*!quick_view_padding*/;
+    padding-top: 1rem /*!quick_view_padding*/;
+    padding-bottom: 1rem /*!quick_view_padding*/;
+    padding-left: 1rem /*!quick_view_padding*/;
+    padding-right: 1rem /*!quick_view_padding*/;
     height: 100% /*!quick_view_height*/;
     width: 100% /*!quick_view_width*/;
 }
@@ -527,7 +540,7 @@ body.mobile .quick-view {
     left: 0;
     right: 0;
     margin: 3.5rem 0;
-    text-align: center;
+    text-align: left;
     font-size: 1rem;
     font-style: normal;
     font-weight: 500;
