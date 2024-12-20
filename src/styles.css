@@ -11,15 +11,87 @@
 
     html {
       @apply min-h-screen w-screen text-black font-sans p-0 m-0;
-        
-        /* TODO: this is carryover from cargo, factor it away please */
-        font-size: 90%;
     }
 
+    /* TODO: WHY am I still using tailwind? how does this help?*/
+    /* 2rem = m-8, WHY??? */
     body {
-        @apply p-4 md:p-8 overflow-x-hidden overscroll-none h-screen flex flex-col relative;
-        @apply text-base_sm md:text-base;
+        @apply m-8 overflow-x-hidden overscroll-none h-screen flex flex-col relative;
+/*         @apply text-base_sm md:text-base; */
     }
+
+    /* START: NEW */
+
+    .newheader, .newfooter {
+        font-weight: 700;
+
+        font-size: 1rem;
+        line-height: 2;
+    }
+
+    .newfooter {
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+    }
+
+    .newfooter > div:first-child {
+        font-weight: normal;
+    }
+
+    .newheader > div, .newfooter > div {
+        grid-row: 1;
+    }
+
+    .newheader > div:last-child, .newfooter > div:last-child {
+        text-align: right;
+    }
+
+    .grid-1 {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .grid-2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .grid-4 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+
+    h2 {
+        /* TODO: TAILWIND HELL */
+        padding: 0 !important;
+    }
+
+    .bigtype {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    /* TODO:  tailwind is ripping this out? */
+    @media only screen and (max-width: 860px) {
+        body {
+            margin: 1rem;
+        }
+
+        .grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6 {
+            grid-template-columns: repeat(1, 1fr) !important;
+            gap: 0.25rem;
+        }
+
+        h2 {
+            margin-bottom: 0.25rem;
+        }
+    }
+
+    /* END: NEW */
+
+
 
     header, footer {
         /* TODO: may only need md:flex here since children should have flex-grow:1 */

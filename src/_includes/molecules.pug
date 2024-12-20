@@ -16,91 +16,91 @@ mixin centeredPage()
     div.centered-page(class="mx-auto place-content-center self-center lg:w-1/2")
         block
 
-mixin headerBranding()
-    div(class="text-left flex-nowrap grow")
-        a.header-logo(href="/") Shakeel Mohamed
-        p.h2
-            span.bold Graphic Designer:&nbsp;
-            span Branding, Typography, Leadership
+//- mixin headerBranding()
+//-     div(class="text-left flex-nowrap grow")
+//-         a.header-logo(href="/") Shakeel Mohamed
+//-         p.h2
+//-             span.bold Graphic Designer:&nbsp;
+//-             span Branding, Typography, Leadership
 
-mixin navItem(href, label)
-    p
-        a(class="text-left ml-0 md:text-center md:inline-block md:mr-0 md:ml-8" href=href) #{label}
+//- mixin navItem(href, label)
+//-     p
+//-         a(class="text-left ml-0 md:text-center md:inline-block md:mr-0 md:ml-8" href=href) #{label}
 
-mixin header(bg="bg-white")
-    //- TODO: layout breaks below 320px width
-    header
-        +headerBranding()
-        //- TODO: figure out why this list has to be in reverse order, if not, nav will not float right
-        nav.grow
-            //- Email must always be first (last)
-            +navItem("mailto:hello@shakeel.design", "hello@shakeel.design")
-            +navItem("/about", "About")
-            //- TODO: temp hiding the blog because there is nothing recent there
-            +navItem("/blog", "Blog")
-            //- TODO: new category for design experiments, short projects
-            //- +navItem("/play", "Play")
-            +navItem("/projects", "Work")
-            //- +navItem("/contact", "Contact")
-        //- hr(class="md:invisible full-width")
+//- mixin header(bg="bg-white")
+//-     //- TODO: layout breaks below 320px width
+//-     header
+//-         +headerBranding()
+//-         //- TODO: figure out why this list has to be in reverse order, if not, nav will not float right
+//-         nav.grow
+//-             //- Email must always be first (last)
+//-             +navItem("mailto:hello@shakeel.design", "hello@shakeel.design")
+//-             +navItem("/about", "About")
+//-             //- TODO: temp hiding the blog because there is nothing recent there
+//-             +navItem("/blog", "Blog")
+//-             //- TODO: new category for design experiments, short projects
+//-             //- +navItem("/play", "Play")
+//-             +navItem("/projects", "Work")
+//-             //- +navItem("/contact", "Contact")
+//-         //- hr(class="md:invisible full-width")
 
 
 mixin hero()
     div(class="mt-2 md:mb-12 xl:mt-12 xl:mb-8")
         block
 
-mixin footerNavItem(href, label)
-    li
-        a.subhead(href=href) #{label}
+//- mixin footerNavItem(href, label)
+//-     li
+//-         a.subhead(href=href) #{label}
 
-mixin footer()
-    footer
-        hr(class="md:invisible full-width")
-        div.grow
-            div(class="md:w-1/3")
-                p.bold.h2 Subscribe
-                +mailingListForm()
-            div
-                p.bold.h2 Contact
-                +contact()
+//- mixin footer()
+//-     footer
+//-         hr(class="md:invisible full-width")
+//-         div.grow
+//-             div(class="md:w-1/3")
+//-                 p.bold.h2 Subscribe
+//-                 +mailingListForm()
+//-             div
+//-                 p.bold.h2 Contact
+//-                 +contact()
 
-mixin contact()
-    span.bold
-        +myEmail()
-    div
-        - var numLinks = 0;
-        each link, name in metadata.social
-            -- ++numLinks
-            span
-                a(class="social-link" href=link target="_blank") #{name} &nbsp;
-                if numLinks < (Object.keys(metadata.social).length)
-                    | | &nbsp;
-    br
-    div
-        p Designed and developed with ✨emotion✨.
-        p
-            script document.write("&copy; " + new Date().getFullYear() + " Shakeel Mohamed")   
+//- mixin contact()
+//-     span.bold
+//-         +myEmail()
+//-     div
+//-         - var numLinks = 0;
+//-         each link, name in metadata.social
+//-             -- ++numLinks
+//-             span
+//-                 a(class="social-link" href=link target="_blank") #{name} &nbsp;
+//-                 if numLinks < (Object.keys(metadata.social).length)
+//-                     | | &nbsp;
+//-     br
+//-     div
+//-         p Designed and developed with ✨emotion✨.
+//-         p
+//-             script document.write("&copy; " + new Date().getFullYear() + " Shakeel Mohamed")   
 
 //- TODO: remix so blog listing can reuse part of this
 mixin projectListing(project)
-    div.pb-8
+    div
         a(href=project.url)
             img.portfolio-cover.w-full(src=project.data.openGraphImage alt="Cover image for " + project.data.title + " project")
         div.pt-1
             div(class="text-sizeh2 font-bold")
-                h2.pb-1
+                h2
                     a(href=project.url) #{project.data.title}
             //- TODO: need a max-width here so the lines aren't super long
             div.project-meta
-                p.opacity-40.capitalize!= project.data.mediaLinks
+                p.opacity-40.capitalize(style="text-transform: lowercase;")!= project.data.mediaLinks
 
 //- TODO: this has been refactored away, delete once footer is final
-mixin copyright()
-    .mx-auto.text-center
-        //- TODO: link this next paragraph to the project/blog page about the website itself
-        p.caption.text-white Designed and developed with ✨emotion✨.
-        p.caption.text-white
-            script document.write("&copy; " + new Date().getFullYear() + " Shakeel Mohamed")
+//- mixin copyright()
+//-     .mx-auto.text-center
+//-         //- TODO: link this next paragraph to the project/blog page about the website itself
+//-         p.caption.text-white Designed and developed with ✨emotion✨.
+//-         p.caption.text-white
+//-             script document.write("&copy; " + new Date().getFullYear() + " Shakeel Mohamed")
     
 
 //- mixin projectSectionText()

@@ -64,10 +64,7 @@ html(lang="en")
     //- TODO: temp hack for BREAK, ideally this is applied on all pages
     body(class="bg-white")
         block body
-    script(src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous")
-    //- TODO: could optimize twemoji by pulling it at build time
-    script.
-        twemoji.parse(document.body);
+    
     script(async src="https://www.googletagmanager.com/gtag/js?id=UA-36907845-2")
     script.
         window.dataLayer = window.dataLayer || [];

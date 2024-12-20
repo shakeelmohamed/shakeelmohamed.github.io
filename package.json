@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "concurrently -k \"npm:start\" \"npm:postcss:w\"",
-    "start": "npm run-script build && npx @11ty/eleventy --serve --input=src --output=docs",
+    "start": "npm run-script postcss && npx @11ty/eleventy --serve --input=src --output=docs",
     "build": "npx @11ty/eleventy --input=src --output=docs && npm run-script postcss",
     "test": "alex --html ./docs/",
     "postcss": "postcss src/styles.css -o docs/dist/tailwind.css",

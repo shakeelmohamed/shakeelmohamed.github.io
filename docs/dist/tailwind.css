@@ -554,45 +554,95 @@ select {
   font-family: tt-commons-pro, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
-        
-        /* TODO: this is carryover from cargo, factor it away please */
-        font-size: 90%;
 }
 
+    /* TODO: WHY am I still using tailwind? how does this help?*/
+    /* 2rem = m-8, WHY??? */
     body {
   position: relative;
+  margin: 2rem;
   display: flex;
   height: 100vh;
   flex-direction: column;
   overflow-x: hidden;
   -ms-scroll-chaining: none;
       overscroll-behavior: none;
-  padding: 1rem;
+/*         @apply text-base_sm md:text-base; */
 }
 
-    @media (min-width: 768px) {
+    /* START: NEW */
 
-  body {
-    padding: 2rem;
-  }
-}
+    .newheader, .newfooter {
+        font-weight: 700;
 
-    body {
-  font-size: 1rem;
-  line-height: 1.1;
-}
+        font-size: 1rem;
+        line-height: 2;
+    }
 
-    @media (min-width: 768px) {
+    .newfooter {
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+    }
 
-  body {
-    font-size: 1.2rem;
-    line-height: 1.2;
-  }
-}
+    .newfooter > div:first-child {
+        font-weight: normal;
+    }
+
+    .newheader > div, .newfooter > div {
+        grid-row: 1;
+    }
+
+    .newheader > div:last-child, .newfooter > div:last-child {
+        text-align: right;
+    }
+
+    .grid-1 {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .grid-2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .grid-4 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+
+    h2 {
+        /* TODO: TAILWIND HELL */
+        padding: 0 !important;
+    }
+
+    /* TODO:  tailwind is ripping this out? */
+    @media only screen and (max-width: 860px) {
+        body {
+            margin: 1rem;
+        }
+
+        .grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6 {
+            grid-template-columns: repeat(1, 1fr) !important;
+            gap: 0.25rem;
+        }
+
+        h2 {
+            margin-bottom: 0.25rem;
+        }
+    }
+
+    /* END: NEW */
+
+
 
     header, footer {
         /* TODO: may only need md:flex here since children should have flex-grow:1 */
     }
+
+
 
     @media (min-width: 768px) {
 
@@ -1356,6 +1406,9 @@ select {
 .ml-8 {
   margin-left: 2rem;
 }
+.mt-4 {
+  margin-top: 1rem;
+}
 .mt-10 {
   margin-top: 2.5rem;
 }
@@ -1549,14 +1602,14 @@ select {
 .pb-12 {
   padding-bottom: 3rem;
 }
-.pb-8 {
-  padding-bottom: 2rem;
-}
 .pt-1 {
   padding-top: 0.25rem;
 }
 .pb-1 {
   padding-bottom: 0.25rem;
+}
+.pb-8 {
+  padding-bottom: 2rem;
 }
 .text-left {
   text-align: left;
@@ -1576,6 +1629,9 @@ select {
 }
 .font-bold {
   font-weight: 700;
+}
+.lowercase {
+  text-transform: lowercase;
 }
 .capitalize {
   text-transform: capitalize;

@@ -4,21 +4,35 @@ description: Shakeel Mohamed is a Graphic Design MFA Candidate at ArtCenter Coll
 
 extends _includes/layouts/base.pug
 
+//- TODO: logo in header
+//- TODO: logo in favicon set
+
 block content
-    +gridCols2()
+    .grid-2
         div
-            p.bold.h2 Hello, I’m Shakeel!
-            p I’m a Graphic Design MFA Candidate at ArtCenter College of Design. In my software career, I collaborated with designers so often I began to think like one. Before realizing my love of brand identity, I found design through streetwear fashion. During my graduate studies, I am exploring how graphic design can be applied across media and disciplines.
-            br
-            p If any of this sounds interesting, please reach out by email, LinkedIn, or Instagram. I enjoy discussing design and professional growth with people at any stage of their careers.
-            br
-            p.bold.h2
-                a(href="https://www.dropbox.com/s/gf84ls6cxxa65el/Shakeel_Mohamed_resume.pdf?dl=0") You can view my resume here.
-            br
+            p
+                strong Graphic Designer:&nbsp;
+                | Branding, Typography, Leadership
+        div
+            p
+                | Hello, I’m Shakeel, I’m a designer who thinks inside, outside, and about the box itself.
+                br
+                | Available starting April 2025 for opportunities in Los Angeles or remote.
+                br
+                | Please reach out by 
+                strong
+                    a(href="mailto:#{metadata.author.email}" target=_blank) email, 
+                strong
+                    a(href="#{metadata.social.LinkedIn}" target=_blank) LinkedIn, 
+                | or 
+                strong
+                    a(href="#{metadata.social.Instagram}" target=_blank) Instagram
+                | &nbsp;.
 
     //- TODO: rework this to collections.home or something; goal is to have multiple blocks of content.
     //- could be projects, videos, bio, etc.
+    
     if collections.portfolio
-        +gridCols2()
+        .grid-2.mt-4
             each project in collections.portfolio
                 +projectListing(project)
