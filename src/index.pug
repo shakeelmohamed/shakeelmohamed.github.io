@@ -17,6 +17,7 @@ block content
             p
                 | Hello, I’m Shakeel, I’m a designer who thinks inside, outside, and about the box itself.
                 br
+                br
                 | Available starting April 2025 for opportunities in Los Angeles or remote.
                 br
                 | Please reach out by 
@@ -33,6 +34,6 @@ block content
     //- could be projects, videos, bio, etc.
     
     if collections.portfolio
-        .grid-2.mt-4
+        .grid-2
             each project in collections.portfolio
                 +projectListing(project)

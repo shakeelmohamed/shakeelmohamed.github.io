@@ -2,9 +2,11 @@ extends ./super.pug
 
 block body
     +headernew()
-    main
+    main.my-4
         block content
     +footernew()
+
+//- TODO: mobile header
 
 mixin headernew()
     div.newheader.grid-4

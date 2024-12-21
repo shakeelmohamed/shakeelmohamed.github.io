@@ -54,7 +54,9 @@
     .grid-2 {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
+        gap: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 
     .grid-3 {
@@ -161,9 +163,9 @@
     }
 
     /* Body text style */
-    p, li {
-        @apply font-light;
-    }
+   /*  p, li {
+        @apply font-regular;
+    } */
     a {
         @apply transition hover:text-orange;
     }
@@ -206,18 +208,18 @@
     .prose {
         @apply text-base leading-normal;
     }
-    .prose h1 {
+   /*  .prose h1 {
         @apply font-serif font-light;
-    }
+    } */
     .prose h2, .prose h3, .prose h4, .prose h5 {
         @apply my-0.5;
     }
-    .prose p, .prose li {
+    /* .prose p, .prose li {
         @apply font-light;
-    }
+    } */
     .prose a {
         @apply transition hover:text-orange;
-        @apply font-light;
+/*         @apply font-light; */
     }
     .prose strong, .prose b {
 /*         @apply; */

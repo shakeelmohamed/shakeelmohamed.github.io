@@ -604,7 +604,9 @@ select {
     .grid-2 {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
+        gap: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 
     .grid-3 {
@@ -792,9 +794,9 @@ select {
 }
 
     /* Body text style */
-    p,  li {
-  font-weight: 300;
-}
+   /*  p, li {
+        @apply font-regular;
+    } */
     a {
   transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
@@ -1424,6 +1426,9 @@ select {
 .mt-2 {
   margin-top: 0.5rem;
 }
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
 .mt-24 {
   margin-top: 6rem;
 }
@@ -1682,20 +1687,19 @@ select {
 /* Typography plugin customization */
 /* TODO: align these with default headings... but scaled down a bit; */
 .prose {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 1.5;
 }
-.prose h1 {
-  font-family: corporate-a, ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  font-weight: 300;
-}
+/*  .prose h1 {
+        @apply font-serif font-light;
+    } */
 .prose h2,  .prose h3,  .prose h4,  .prose h5 {
   margin-top: 0.125rem;
   margin-bottom: 0.125rem;
 }
-.prose p,  .prose li {
-  font-weight: 300;
-}
+/* .prose p, .prose li {
+        @apply font-light;
+    } */
 .prose a {
   transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
@@ -1708,8 +1712,8 @@ select {
   color: rgb(255 92 10 / var(--tw-text-opacity));
 }
 .prose a {
-  font-weight: 300;
-}
+/*         @apply font-light; */
+    }
 .prose strong, .prose b {
 /*         @apply; */
     }
