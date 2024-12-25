@@ -626,6 +626,10 @@ select {
         padding: 0 !important;
     }
 
+    .labyrinth > img {
+        position: absolute !important;
+    }
+
     /* TODO:  tailwind is ripping this out? mobile is totally broken */
     @media only screen and (max-width: 860px) {
         body {

@@ -81,6 +81,16 @@
         margin-bottom: 1rem;
     }
 
+    .labyrinth {
+        min-height: 100vh;
+        overflow-x: visible;
+    }
+
+    .labyrinth > img {
+        position: absolute !important;
+        cursor: move;
+    }
+
     /* TODO:  tailwind is ripping this out? mobile is totally broken */
     @media only screen and (max-width: 860px) {
         body {
