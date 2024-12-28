@@ -328,6 +328,7 @@
     }
     .caption {
         @apply text-sm;
+        color: rgba(0, 0, 0, 0.5);
     }
 
     /* Body text style */

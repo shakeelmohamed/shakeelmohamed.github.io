@@ -880,14 +880,6 @@ select {
   }
 }
 
-    .header-logo {
-  padding-bottom: 1rem;
-  font-family: corporate-a, ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  font-weight: 500;
-  font-size: 2.4rem;
-  line-height: 1.2;
-}
-
     section {
   aspect-ratio: 16 / 9;
   width: 100%;
@@ -957,6 +949,7 @@ select {
     .caption {
   font-size: 0.875rem;
   line-height: 1.25rem;
+        color: rgba(0, 0, 0, 0.5);
 }
 
     /* Body text style */
@@ -1586,9 +1579,6 @@ select {
 .mb-5 {
   margin-bottom: 1.25rem;
 }
-.ml-0 {
-  margin-left: 0px;
-}
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -1679,9 +1669,6 @@ select {
 .flex-wrap {
   flex-wrap: wrap;
 }
-.flex-nowrap {
-  flex-wrap: nowrap;
-}
 .place-content-center {
   place-content: center;
 }
@@ -1766,6 +1753,9 @@ select {
 }
 .pt-4 {
   padding-top: 1rem;
+}
+.pt-0 {
+  padding-top: 0px;
 }
 .pt-8 {
   padding-top: 2rem;
@@ -2391,10 +2381,6 @@ h2.break {
     margin-left: 2rem;
   }
 
-  .md\:mr-0 {
-    margin-right: 0px;
-  }
-
   .md\:mb-12 {
     margin-bottom: 3rem;
   }
@@ -2418,10 +2404,6 @@ h2.break {
   .md\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
-  }
-
-  .md\:text-center {
-    text-align: center;
   }
 }
 @media (min-width: 1024px) {
