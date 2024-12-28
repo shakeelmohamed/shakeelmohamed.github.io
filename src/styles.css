@@ -20,6 +20,16 @@
 /*         @apply text-base_sm md:text-base; */
     }
 
+    /* Lightbox hacks     */
+    .gslide-description {
+        display: none !important;
+    }
+    /* TODO:  ugg, many many more CSS tweaks needed... punting for now */
+    /* .goverlay {
+        background: white !important;
+    } */
+
+
     /* START: ROUGH styles for labyrinth */
     * {
         box-sizing: border-box;

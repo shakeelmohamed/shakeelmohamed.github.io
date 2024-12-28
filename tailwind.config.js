@@ -9,7 +9,9 @@ module.exports = {
     'font-*',
     '.fixed',
     'img.image-zoom',
-    'gallery_card'
+    'gallery_card',
+    '.gslide-description',
+    '.goverlay'
   ],
   theme: {
     extend: {
