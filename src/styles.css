@@ -211,8 +211,14 @@
         }
 
         .grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6 {
-            grid-template-columns: repeat(1, 1fr) !important;
-            gap: 0.25rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        /* Bandage solution for mobile footer */
+        .newheader > div:last-child, .newfooter > div:last-child {
+            text-align: left;
         }
 
         h2 {
