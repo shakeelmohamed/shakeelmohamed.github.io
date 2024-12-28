@@ -26,9 +26,11 @@ include ../../_includes/molecules.pug
 //- TODO: cleanup all the old metatags
 
 //- TODO: figure out where this stuff can live...
-mixin portfolioImg(url, alt, caption)    
+mixin portfolioImg(url, alt, caption)
+    //- TODO: think about lightbox behavior, do I want a full gallery?
+    //- what is the behavior for single images?
     div
-        img(src=url, alt=alt)
+        img.lightbox(src=url, alt=alt)
         p.caption= caption
 
 block content
