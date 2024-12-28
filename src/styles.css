@@ -224,6 +224,11 @@
             gap: 0.5rem;
         }
 
+        .keepDesktop {
+            display: grid;
+            flex-direction: row;
+        }
+
         /* Bandage solution for mobile footer */
         .newheader > div:last-child, .newfooter > div:last-child {
             text-align: left;

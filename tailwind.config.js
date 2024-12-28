@@ -11,7 +11,8 @@ module.exports = {
     'img.image-zoom',
     'gallery_card',
     '.gslide-description',
-    '.goverlay'
+    '.goverlay',
+    'logo-wraper'
   ],
   theme: {
     extend: {

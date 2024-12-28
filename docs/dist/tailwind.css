@@ -661,6 +661,10 @@ select {
 
     /* START: NEW */
 
+    .logo-wraper {
+        height: 3.5rem;
+    }
+
     .newheader, .newfooter {
         font-weight: 700;
 
@@ -764,6 +768,11 @@ select {
             display: flex;
             flex-direction: column;
             gap: 0.5rem;
+        }
+
+        .keepDesktop {
+            display: grid;
+            flex-direction: row;
         }
 
         /* Bandage solution for mobile footer */
