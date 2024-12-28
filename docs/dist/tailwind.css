@@ -668,6 +668,19 @@ select {
         line-height: 2;
     }
 
+    .mobileHeader {
+        display: none;
+    }
+
+    .hamburgerIcon {
+        cursor: pointer;
+    }
+
+    .menuItems {
+        text-align: right;
+        font-weight:bold;
+    }
+
     .newfooter {
         padding-top: 2rem;
     }
@@ -731,24 +744,15 @@ select {
          object-fit: contain;
     }
 
-    
-
-    /* .labyrinth {
-        min-height: 100vh;
-        overflow-x: visible;
-        position: relative;
+    .labyrinth-icons {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
     }
 
-    .labyrinth > div {
-        position: absolute !important;
+    .labyrinth-icons > span.material-icons {
+        font-size: 2.5rem;
+        line-height: 1.2rem;
     }
-
-    .labyrinth > div > img {
-        cursor: move;
-        position: relative !important;
-        display: block;
-    } */
-
 
     /* TODO:  tailwind is ripping this out? mobile is totally broken */
     @media only screen and (max-width: 860px) {
@@ -765,6 +769,38 @@ select {
         /* Bandage solution for mobile footer */
         .newheader > div:last-child, .newfooter > div:last-child {
             text-align: left;
+        }
+
+        .newheader {
+            display: none;
+        }
+
+        .mobileHeader {
+            display: block;
+        }
+
+        .hamburgerIcon {
+            max-height: -moz-fit-content;
+            max-height: fit-content;
+            padding: 0.5rem;
+        }
+
+        .menuOpen {
+            min-width: 100vw;
+            min-height: 100vh;
+            margin: -1rem;
+            padding: 1rem;
+            background-color: rgba(0, 0, 0, .9);
+            color: rgba(255, 255, 255, 1);
+            z-index: 99999;
+        }
+
+        .menuItems {
+            display: none;
+        }
+
+        .logo-wraper {
+            height: auto;
         }
 
         h2 {

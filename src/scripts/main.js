@@ -1,3 +1,33 @@
+// Mobile hamburger menu
+
+let menuOpen = false;
+function makeMenu() {    
+    document.querySelector(".hamburgerIcon").addEventListener('click', function(e) {
+        e.preventDefault();
+
+        let mobileBranding = document.querySelector(".mobileBranding");
+        let mobileHeader = document.querySelector(".mobileHeader");
+        let menuItems = document.querySelector(".menuItems");
+
+        // TODO: this is not really elegant, but it is functional...
+        // cargo structure is definitely better
+        if (menuOpen) {
+            // remove class + show branding
+            mobileHeader.classList.remove("menuOpen");
+            mobileBranding.style.setProperty("display", "block");
+            menuItems.style.setProperty("display", "none");
+
+        } else {
+            // add class + hide branding
+            mobileHeader.classList.add("menuOpen");
+            mobileBranding.style.setProperty("display", "none");
+            menuItems.style.setProperty("display", "block");
+        }
+
+        menuOpen = !menuOpen;
+    });
+}
+
 // Customized behavior of the lightbox 
 
 const singleOptions = {
@@ -65,4 +95,9 @@ function lights() {
     // }
 }
 
-window.addEventListener('load', lights);
+function init() {
+    lights();
+    makeMenu();
+}
+
+window.addEventListener('load', init);

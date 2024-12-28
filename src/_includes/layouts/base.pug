@@ -6,14 +6,39 @@ block body
         block content
     +footernew()
 
-//- TODO: mobile header
 //- TODO: mobile footer
+//- TODO: eventually cleanup to use header and footer tags
 
 mixin headernew()
+    .mobileHeader
+        .grid-2(style="flex-direction: row; justify-content: space-between;")
+            //- TODO: logo sizing is WIP, find a better way to match the height of 2 header lines
+            div
+                div.mobileBranding
+                    a.logo-wrapper(href="/")
+                        <img src="/img/Shakeel_Mohamed_wordmark.svg" alt="Shakeel Mohamed wordmark logo set in the Mindful Roman typeface which he designed" />
+                    br
+                    strong
+                        <a href="mailto:#{metadata.author.email}" target=_blank>#{metadata.author.email}</a>
+            div.hamburgerIcon
+                span.material-icons(style="font-size: 2rem;") menu
+        .menuItems
+            h2
+                a(href="/") Work
+            h2
+                a(href="/thesis") Thesis
+            h2
+                a(href="/labyrinth") Labyrinth
+            h2
+                a(href="/about") About
+            h2
+                <a href="mailto:#{metadata.author.email}" target=_blank>#{metadata.author.email}</a>
     div.newheader.grid-4
-        //- TODO: logo here
         <div>
-            <div><a href="/">Shakeel Mohamed</a></div>
+            //- TODO: logo sizing is WIP, find a better way to match the height of 2 header lines
+            <div class="logo-wrapper">
+                <img src="/img/Shakeel_Mohamed_wordmark.svg" alt="Shakeel Mohamed wordmark logo set in the Mindful Roman typeface which he designed" />
+            </div>
         </div>
         <div>
         </div>
