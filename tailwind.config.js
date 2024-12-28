@@ -6,7 +6,10 @@ module.exports = {
     './src/**/*.{md,pug,json}'
   ],
   safelist: [
-    'font-*'
+    'font-*',
+    '.fixed',
+    'img.image-zoom',
+    'gallery_card'
   ],
   theme: {
     extend: {
