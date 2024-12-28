@@ -3,6 +3,7 @@ description: Shakeel Mohamed is a Graphic Design MFA Candidate at ArtCenter Coll
 ---
 
 extends _includes/layouts/base.pug
+include _includes/molecules.pug
 
 //- TODO: logo in header
 
@@ -21,12 +22,12 @@ block content
                 br
                 | Please reach out by 
                 strong
-                    a(href="mailto:#{metadata.author.email}" target=_blank) email, 
+                    a(href="mailto:" + metadata.author.email, target="_blank") email, 
                 strong
-                    a(href="#{metadata.social.LinkedIn}" target=_blank) LinkedIn, 
+                    a(href=metadata.social.LinkedIn, target="_blank") LinkedIn, 
                 | or 
                 strong
-                    a(href="#{metadata.social.Instagram}" target=_blank) Instagram
+                    a(href=metadata.social.Instagram, target="_blank") Instagram
                 | &nbsp;.
 
     //- TODO: rework this to collections.home or something; goal is to have multiple blocks of content.

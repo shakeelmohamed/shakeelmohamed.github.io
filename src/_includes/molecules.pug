@@ -16,35 +16,6 @@ mixin centeredPage()
     div.centered-page(class="mx-auto place-content-center self-center lg:w-1/2")
         block
 
-//- mixin headerBranding()
-//-     div(class="text-left flex-nowrap grow")
-//-         a.header-logo(href="/") Shakeel Mohamed
-//-         p.h2
-//-             span.bold Graphic Designer:&nbsp;
-//-             span Branding, Typography, Leadership
-
-//- mixin navItem(href, label)
-//-     p
-//-         a(class="text-left ml-0 md:text-center md:inline-block md:mr-0 md:ml-8" href=href) #{label}
-
-//- mixin header(bg="bg-white")
-//-     //- TODO: layout breaks below 320px width
-//-     header
-//-         +headerBranding()
-//-         //- TODO: figure out why this list has to be in reverse order, if not, nav will not float right
-//-         nav.grow
-//-             //- Email must always be first (last)
-//-             +navItem("mailto:hello@shakeel.design", "hello@shakeel.design")
-//-             +navItem("/about", "About")
-//-             //- TODO: temp hiding the blog because there is nothing recent there
-//-             +navItem("/blog", "Blog")
-//-             //- TODO: new category for design experiments, short projects
-//-             //- +navItem("/play", "Play")
-//-             +navItem("/projects", "Work")
-//-             //- +navItem("/contact", "Contact")
-//-         //- hr(class="md:invisible full-width")
-
-
 mixin hero()
     div(class="mt-2 md:mb-12 xl:mt-12 xl:mb-8")
         block
@@ -157,5 +128,5 @@ mixin getMentions(recent=false)
                     div(class="basis-1/4 pb-1")
                         p.whitespace-nowrap.text-left #{mention.date} &nbsp;
                     div(class="basis-3/4")
-                        a(href=mention.url, class="font-bold hover:text-orange") #{mention.title}
+                        a(href=mention.url, class="font-bold hover:text-orange" target="_blank") #{mention.title}
                     br

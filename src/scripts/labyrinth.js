@@ -1,4 +1,5 @@
 // TODO: the real challenge will be making this drag+drop editable when I want to edit the image set
+// TODO: another cool feature could be like soot.world, allow for different/random animated viewing of images
 
 var imgs = [
     {

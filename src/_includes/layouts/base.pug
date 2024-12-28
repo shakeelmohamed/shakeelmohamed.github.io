@@ -19,7 +19,7 @@ mixin headernew()
                         <img src="/img/Shakeel_Mohamed_wordmark.svg" alt="Shakeel Mohamed wordmark logo set in the Mindful Roman typeface which he designed" />
                     br
                     strong
-                        <a href="mailto:#{metadata.author.email}" target=_blank>#{metadata.author.email}</a>
+                        a(href="mailto:" + metadata.author.email, target="_blank") #{metadata.author.email}
             div.hamburgerIcon
                 span.material-icons(style="font-size: 2rem;") menu
         .menuItems
@@ -32,12 +32,13 @@ mixin headernew()
             h2
                 a(href="/about") About
             h2
-                <a href="mailto:#{metadata.author.email}" target=_blank>#{metadata.author.email}</a>
+                a(href="mailto:" + metadata.author.email, target="_blank") #{metadata.author.email}
     div.newheader.grid-4
         <div>
             //- TODO: logo sizing is WIP, find a better way to match the height of 2 header lines
             <div class="logo-wrapper">
-                <img src="/img/Shakeel_Mohamed_wordmark.svg" alt="Shakeel Mohamed wordmark logo set in the Mindful Roman typeface which he designed" />
+                a.logo-wrapper(href="/")
+                    <img src="/img/Shakeel_Mohamed_wordmark.svg" alt="Shakeel Mohamed wordmark logo set in the Mindful Roman typeface which he designed" />
             </div>
         </div>
         <div>
@@ -52,6 +53,7 @@ mixin headernew()
         </div>
 
 //- TODO: bring back +mailingListForm()
+//- TODO: bring back Designed and developed with ✨emotion✨.
 
 mixin footernew()
     div.newfooter.grid-4

@@ -5,6 +5,8 @@ description: Shakeel Mohamed is a candidate for an MFA in Graphic Design at ArtC
 
 extends ../_includes/layouts/base.pug
 include ../_includes/molecules.pug
+//- TODO: resume... think about JSON model?
+
 //- TODO: Maybe a separate services page?
 
 block content
@@ -50,27 +52,28 @@ block content
                 li Design is a spiritual practice.
                 li When in doubt, talk it out.
         div
+            //- TODO: can reoder this list for a better typographic rag
             p
                 strong A few of my design heroes
                 br
-                | Debbie Millman, Wael Morcos, Brian Collins, Louise Sandhaus, Chris Do, and April Greiman.
+                | Debbie&nbsp;Millman, Wael&nbsp;Morcos, Brian&nbsp;Collins, Louise&nbsp;Sandhaus, Chris&nbsp;Do, and April&nbsp;Greiman.
         //- TODO: fix file extensions, this is crazy
         div(style="grid-column: 3 / 5;")
             .grid-3.lightbox-album(style="gap: 1rem;")
                 img(src="./img/1.jpg")
-                img(src="./img/4.jpg")
                 img(src="./img/2.png")
-                img(src="./img/5.jpg")
                 img(src="./img/3.jpg")
+                img(src="./img/4.jpg")
+                img(src="./img/5.jpg")
                 img(src="./img/6.jpg")
     
     //- TODO: show grid of presentations - maybe document AIGA LA Graphic Content too
 
     if mentions.recent.length > 0
         br        
-        p.bold.h2 Mentions
-            .grid-2
-                +getMentions(true)
+        h2 Mentions
+        .grid-2
+            +getMentions(true)
         p.bold See the&nbsp;
             a(href="/mentions") full list here.
 

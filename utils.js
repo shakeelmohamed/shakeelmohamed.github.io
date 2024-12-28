@@ -22,6 +22,7 @@ module.exports = {
     buildOGImageURL: data => {
         if (!data.openGraphImage) {
             // TODO: this is where to generate the OG images, for now use the IDD template
+            // TODO: OR this should be the default OG image but its relative path may require work to compute
             console.warn(`buildOGImageURL is missing an OG image for ${data.title}`);
             return;
         }
