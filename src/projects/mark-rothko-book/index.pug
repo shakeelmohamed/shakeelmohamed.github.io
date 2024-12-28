@@ -1,9 +1,9 @@
 ---
 layout: project
-title: "Mark Rothko: Art For Mystics"
+title: "Mark Rothko Documentary Campaign"
 tagline: [todo]
 description: [todo]
-openGraphImage: "https://freight.cargo.site/w/1000/q/75/i/fb144efb21367703600a9335f2c2c2112974f1f0976b994dec7a6c8c165d9913/Rothko-booklet---cover-v2.png"
+openGraphImage: "https://freight.cargo.site/w/1920/q/75/i/6d68b76a4c4758c4ac456154544cf494ec60693af4ac70db0df9d57eda5eea65/Mark_Rothko_campaign_cover.png"
 when: 2023
 client: [todo]
 tools: InDesign, Illustrator, Photoshop
@@ -11,14 +11,66 @@ tags:
     - project
     - portfolio
 media: 
-    - editorial
-    - brand identity
+    - branding
     - posters
-    - augmented Reality
+    - book design
+    - augmented reality
 goal: [todo]
 position: 2
+
+recogition: "One poster was selected for display in office of the Chair of Graphic Design at ArtCenter."
+
 ---
 include ../../_includes/molecules.pug
 
+//- TODO: cleanup all the old metatags
+
+//- TODO: figure out where this stuff can live...
+mixin portfolioImg(url, alt, caption)    
+    div
+        img(src=url, alt=alt)
+        p.caption= caption
+
 block content
-    p coming soon.
+    .grid-2
+        div
+            p I designed a wordmark, posters, and accompanying booklet for a campaign promoting a PBS documentary about Mark Rothko, the abstract expressionist.  My design concept was: in memoriam.
+            br
+            p Special thanks to: Christian Perez-Morin, Sean Adams, Michael Neal, Erin Son, Sean Shang, Brad Bartlett, and Greg Lindy of Lux Typo. Additional thanks to the National Gallery of Art for high quality images of Rothko’s artwork, and to Architectural Digest for a beautiful photo of the Rothko Chapel.
+        div
+            p Depth of research and critique helped me to clarify the forms and vocabulary used throughout the project. Book colors were inspired by the Rothko Chapel in Houston, Texas. The non-denominational Chapel was one of Rothko’s final projects which he never saw completed before his passing.
+            br
+            p Each chapter begins with a full spread. The chapter title is large, paired with a relevant Rothko quote on the opposite page.
+            ol
+                li
+                    strong Preface 
+                    | — an introduction to Mark Rothko.
+                li 
+                    strong Search 
+                    | — early explorations through his lesser known styles of art.
+                li
+                    strong Voice 
+                    | — a photo essay of his best known abstract works.
+                li
+                    strong Wisdom 
+                    | — his advice for new artists.
+                li
+                    strong Legacy 
+                    | — an interview with Christopher Rothko, his son, which informed my overall design direction.
+                li
+                    strong Reflection 
+                    | — my brief and emotional editorial capturing my thoughts as I completed the book.
+
+            p I experimented with a rough augmented reality experience with Adobe Aero to view selected paintings when pointing a mobile device at the book cover.
+
+    .grid-1
+        +portfolioImg("https://freight.cargo.site/w/1920/q/94/i/6d68b76a4c4758c4ac456154544cf494ec60693af4ac70db0df9d57eda5eea65/Mark_Rothko_campaign_cover.png", "", "A poster series promoting the documentary episode.")
+    .grid-1
+        +portfolioImg("https://freight.cargo.site/w/1920/q/94/i/a99ed1cc506126d1e49a89d25267bae09ea1f30e40d35ef757ded0b3e161d424/Rothko---2.png", "", "Sean Adams, the former Department Chair of Graphic Design at ArtCenter, selected one poster from the set to display in his office.")
+
+    //- TODO: on mobile I don’t want this to flatten to 1 column
+    .grid-2
+        +portfolioImg("https://freight.cargo.site/w/1920/q/75/i/dfeb6d636794bc314c9736fef742f89db0784deebe10f97e76b0e8717f463645/Rothko---7.png", "", "The final wordmark set on a purple inspired by the colors of Rothko’s paintings in the Rothko Chapel. The primitive forms for “Mark” tie back to the primitive emotions evoked by his work. While “Rothko” is set in all caps to symbolize the monolithic scale of his paintings.")
+        +portfolioImg("https://freight.cargo.site/w/1920/q/75/i/b019c58ac246337c1658955a52631dc30097b632c618bd9a27749b8f1f6881b4/Rothko---8.png", "", "Varying the placement of “Mark” creates a dynamic element. Conceptually, this connects back to Mark Rothko’s many years of searching before finally settling on the style of art we know him for (and his legacy) as Rothko.")
+
+    //- TODO: bring in the rest of the project

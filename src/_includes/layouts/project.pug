@@ -1,6 +1,6 @@
 extends ./base.pug
 
-//- TODO: redesign me to match cargo
+//- TODO: redesign me to match cargo, needs quite a bit more help and flexibility
 
 block content
     .grid-1
@@ -17,6 +17,8 @@ block content
                 //- +projectMeta("Client", client)
                 +projectMeta("Tools", tools)
                 +projectMeta("Goal", goal)
+                if recognition
+                    +projectMeta("Recognition", recognition)
             p TODO: overview here
         div
              p TODO: audience here
