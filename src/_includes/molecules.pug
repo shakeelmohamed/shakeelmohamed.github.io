@@ -120,7 +120,7 @@ mixin getMentions(recent=false)
     - var source = mentions.recent;
     if !recent
         - source = mentions.all;
-    .flex.flex-wrap.items-baseline
+    .flex.flex-wrap.items-baseline(style="flex-direction:column")
         if source.length > 0
             ul
             each mention in source
