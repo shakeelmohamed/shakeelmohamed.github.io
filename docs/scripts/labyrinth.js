@@ -4,7 +4,7 @@ var imgs = [
     {
         src: "14682199_10154007887733435_7185986522188715313_o-copy.png",
         pos: {x: 60, y: 230, z: 28, width: 40}
-        // {"montessori":{"width":39.999745702370056,"x":59.326365578272814,"y":230.75475536568,"z":28}}
+        // "width":39.999745702370056,"x":59.326365578272814,"y":230.75475536568,"z":28
     },
     {
         src: "1_-fQH4MHdzfF1zeJkTtoFGg.png",
@@ -158,28 +158,88 @@ var imgs = [
     }
 ];
 
+// TODO: maybe temp hack... sort by top to avoid abs height mess?
+imgs.sort((a, b) => a.pos.y - b.pos.y);
+
 for (var i = 0; i < imgs.length; i++) {
-  var newImg = document.createElement('img');
-  newImg.setAttribute("src", "./img/" + imgs[i].src);
-  newImg.classList.add("draggable");
-  
-  newImg.style.width = `${imgs[i].pos.width}%`;
-  
-  // TODO: fixup my laziness in not renaming keys
-  newImg.style.left = `${imgs[i].pos.x}%`;
-  // TODO: EVERYTHING is off a bit vertically... like about 200px off, strange.
-  newImg.style.top = imgs[i].pos.y ? `${imgs[i].pos.y}%`: "200px";
-  newImg.style.zIndex = imgs[i].pos.z;
+  var wrapper = document.createElement('div');
 
   // TODO: onclick -> lightbox, with caption
+  // 
   
-  document.getElementById("labyrinth").appendChild(newImg);
+  wrapper.classList.add("gallery_card");
+  wrapper.style.width = `${imgs[i].pos.width}%`;
+  wrapper.style.left = `${imgs[i].pos.x}%`;
+  wrapper.style.top = `${imgs[i].pos.y}%`;
+
+  var innerWrapper = document.createElement('div');
+  innerWrapper.classList.add("gallery_card_image");
+
+  var newImg = document.createElement('img');
+  newImg.classList.add("image-zoom"); // TODO: this functionality is not there yt
+  newImg.setAttribute("src", "./img/" + imgs[i].src);
+  
+
+  innerWrapper.appendChild(newImg);
+  wrapper.appendChild(innerWrapper);
+
+
+  document.querySelector(".thumbnail_sizer").appendChild(wrapper);
 }
 
-var draggableElems = document.querySelectorAll('.draggable');
-var draggies = []
-for (var i = 0; i < draggableElems.length; i++) {
-  var draggableElem = draggableElems[i];
-  var draggie = new Draggabilly( draggableElem/*, {containment: '.labyrinth'}*/);
-  draggies.push(draggie);
+function convertRemToPixels(rem) {    
+    return rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
+}
+
+window.addEventListener('load', fixPaddingBottom);
+window.addEventListener('resize', fixPaddingBottom);
+
+gsap.registerPlugin(Draggable);
+Draggable.create('.gallery_card', {
+    allowContextMenu: true,
+    onDragEnd: function () {
+        console.log('Dragging');
+        // Calculate and set the final position using percentages
+        const element = this.target;
+        const container = element.parentElement;
+
+        // Get the bounding box of the parent element
+        const containerRect = container.getBoundingClientRect();
+        const elementRect = element.getBoundingClientRect();
+
+        // Calculate the top-left position in percentages
+        const xPercent = ((elementRect.left - containerRect.left) / containerRect.width) * 100;
+        const yPercent = ((elementRect.top - containerRect.top) / containerRect.height) * 100;
+
+        // Apply the percentage values to the element
+        element.style.left = `${xPercent}%`;
+        element.style.top = `${yPercent}%`;
+
+        // Clear the transform to ensure accurate placement
+        element.style.transform = "translate3d(0, 0, 0)";
+
+        // TODO: in theory recalculate here but its causing jumping bugs
+        // fixPaddingBottom();
+    }
+});
+
+function fixPaddingBottom() {
+    var cards = document.querySelectorAll('.gallery_card');
+    var imgs = [];
+    for (let i = 0; i < cards.length; i++) {
+        imgs.push(cards[i]);
+    }
+    // TODO: some bugs with this sort algorithm
+    // imgs.sort((a, b) => (a.getBoundingClientRect().y + a.getBoundingClientRect().height) - (b.getBoundingClientRect().y + b.getBoundingClientRect().height));
+    
+
+    // TODO: bug first call will shrink, then every subsequent call calculates correctly oops;
+    // might be same bug as onDragEnd() above
+
+    var lastImg = imgs[imgs.length - 1];
+    if (!lastImg) {return;}
+    var t1box = lastImg.getBoundingClientRect();
+    var newPaddingBottom = t1box.top + t1box.height + document.querySelector('.newfooter').getBoundingClientRect().height;
+    document.querySelector('.image-gallery').style.setProperty('padding-bottom', `${newPaddingBottom}px`);
+    // console.log('resized, new pb', newPaddingBottom);
 }

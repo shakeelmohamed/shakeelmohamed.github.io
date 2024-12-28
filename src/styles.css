@@ -16,9 +16,88 @@
     /* TODO: WHY am I still using tailwind? how does this help?*/
     /* 2rem = m-8, WHY??? */
     body {
-        @apply m-8 overflow-x-hidden overscroll-none h-screen flex flex-col relative;
+        @apply p-8 overflow-x-hidden overscroll-none min-h-screen flex flex-col relative;
 /*         @apply text-base_sm md:text-base; */
     }
+
+    /* START: ROUGH styles for labyrinth */
+    * {
+        box-sizing: border-box;
+    }
+
+    .preserve-3d {
+        transform-style: preserve-3d;
+    }
+
+    [image-gallery-row] {
+        align-items: flex-start;
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    [image-gallery="smgallery"][image-gallery-row] {
+        display: block;
+    }
+
+    [image-gallery="smgallery"] {
+        position: relative;
+        height: 0px;
+    }
+
+    .thumbnail_sizer {
+        height: 0px;
+        width: 100%;
+        position: relative;
+        padding-bottom: 100%;
+        pointer-events: none;
+    }
+
+    .content .page_content:not([contenteditable="true"]) [data-draggable] {
+        pointer-events: auto !important;
+        backface-visibility: hidden;
+    }
+
+    [data-draggable] {
+        visibility: visible;
+        background-color: rgba(0, 0, 0, 0.004);
+    }
+
+    .image-gallery .gallery_card {
+        transform-origin: center center;
+    }
+
+    a.gallery_card, div.gallery_card {
+        position: absolute;
+        pointer-events: auto;
+    }
+
+    .image-gallery .gallery_card_image {
+        width: 100%;
+        position: relative;
+    }
+
+    img {
+        border: 0px;
+        padding: 0px;
+    }
+
+    .content img {
+        float: none;
+        margin-bottom: 0rem;
+        vertical-align: bottom;
+    }
+
+    img.image-zoom {
+        cursor: zoom-in;
+    }
+
+    .image-gallery .gallery_card img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    /* END: ROUGH styles for labyrinth */
 
     /* START: NEW */
 
@@ -31,7 +110,6 @@
 
     .newfooter {
         padding-top: 2rem;
-        padding-bottom: 1rem;
     }
 
     .newfooter > div:first-child {
@@ -82,19 +160,44 @@
     }
 
     .labyrinth {
-        min-height: 100vh;
-        overflow-x: visible;
+      position: relative;
+      width: 100vw;
+      min-height: 100vh;
+/*       overflow-y: hidden; */
+      overflow: hidden;
+      transform-origin: 0 0; /* Ensure scaling happens from the top-left corner */
     }
 
     .labyrinth > img {
-        position: absolute !important;
-        cursor: move;
+      position: absolute;
+      cursor: grab;
+      z-index: 1; /* Default z-index */
+      object-fit: contain;
     }
+
+    
+
+    /* .labyrinth {
+        min-height: 100vh;
+        overflow-x: visible;
+        position: relative;
+    }
+
+    .labyrinth > div {
+        position: absolute !important;
+    }
+
+    .labyrinth > div > img {
+        cursor: move;
+        position: relative !important;
+        display: block;
+    } */
+
 
     /* TODO:  tailwind is ripping this out? mobile is totally broken */
     @media only screen and (max-width: 860px) {
         body {
-            margin: 1rem;
+            padding: 1rem !important;
         }
 
         .grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6 {
