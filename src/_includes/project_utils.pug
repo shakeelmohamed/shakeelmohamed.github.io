@@ -10,14 +10,18 @@ mixin portfolioImg(url, alt, caption)
     //- Cargo just puts them all into one gallery... except for carousel images
     //- 
     //- Can do something similar to how sliders work w/ fullpath()
-    div
-        img.lightbox(src=url, alt=alt)
-        p.caption= caption
+    
+    if url
+        div(style="padding-bottom: 1rem;")
+            img.lightbox(src=url, alt=alt)
+            if caption
+                p.caption= caption
 
-mixin imgNoSlider(url, alt, caption)
-    div
+mixin imgForSlider(url, alt, caption)
+    div(style="padding-bottom: 1rem;")
         img(src=url, alt=alt)
-        p.caption= caption
+        if caption
+            p.caption= caption
 
 mixin slider()
     .project-slider
@@ -25,13 +29,10 @@ mixin slider()
 
 
 //- TODO:
-//- text 2col
-//- 1img, ... 4img row
-//- gif
-//- video / youtube?
-//- slideshow/slider w/ unique ID, try Glightbox(this);
+//- video
 //- later...
 //- type specimen
+//- 3-4img row?
 //- p5.js sketch
 //- old list...
 //- full screen larger text, maybe a blockquote... thatline for inspo
@@ -40,5 +41,19 @@ mixin slider()
 mixin inDesign(url, caption)
     div
         iframe(style="aspect-ratio: 16 / 9; width: 100%;" src=url frameborder="0" allowfullscreen="")
-        p.caption= caption
+        if caption
+            p.caption= caption
 
+//- TODO: can share this CSS with above
+mixin youtube(url, caption)
+    div(style="padding-bottom: 1rem;")
+        iframe(src=url title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" style="aspect-ratio: 16 / 9; width: 100%;")
+        if caption
+            p.caption= caption
+
+mixin video(url, caption)
+    div(style="padding-bottom: 1rem;")
+        video(width="1920" height="1080" controls="" style="aspect-ratio: 16 / 9;" data-video="0")
+            source(src="https://files.cargocollective.com/c1603295/widescreen.mp4" type="video/mp4")
+        if caption
+            p.caption= caption

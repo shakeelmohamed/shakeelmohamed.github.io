@@ -116,6 +116,7 @@ function fullPath(el){
 let carousels = [];
 let carouselGalleries = [];
 
+// TODO: would be nice to add fade transitions, maybe a better way to do this
 // TODO: can allow an optional timer value, fallback to 2000ms
 function makeCarousel(selector) {
     console.log("makeCarousel", selector);
