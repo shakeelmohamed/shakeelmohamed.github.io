@@ -1,0 +1,44 @@
+mixin projectMeta(key, value)
+    p
+        span.bold #{key}:&nbsp;
+        | #{value}
+
+mixin portfolioImg(url, alt, caption)
+    //- TODO: think about lightbox behavior, do I want a full gallery?
+    //- what is the behavior for single images? need a unique id for each then...
+    //- 
+    //- Cargo just puts them all into one gallery... except for carousel images
+    //- 
+    //- Can do something similar to how sliders work w/ fullpath()
+    div
+        img.lightbox(src=url, alt=alt)
+        p.caption= caption
+
+mixin imgNoSlider(url, alt, caption)
+    div
+        img(src=url, alt=alt)
+        p.caption= caption
+
+mixin slider()
+    .project-slider
+        block
+
+
+//- TODO:
+//- text 2col
+//- 1img, ... 4img row
+//- gif
+//- video / youtube?
+//- slideshow/slider w/ unique ID, try Glightbox(this);
+//- later...
+//- type specimen
+//- p5.js sketch
+//- old list...
+//- full screen larger text, maybe a blockquote... thatline for inspo
+
+//- TODO: move this CSS where it belongs
+mixin inDesign(url, caption)
+    div
+        iframe(style="aspect-ratio: 16 / 9; width: 100%;" src=url frameborder="0" allowfullscreen="")
+        p.caption= caption
+

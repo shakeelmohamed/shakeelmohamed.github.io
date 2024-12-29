@@ -181,6 +181,13 @@
         padding: 0 !important;
     }
 
+    p {
+        font-size: 1.1rem;
+        line-height: 1.4rem;
+        font-family: tt-commons-pro, sans-serif;
+        font-weight: 400;
+    }
+
     .bigtype {
         font-size: 2rem;
         margin-bottom: 1rem;

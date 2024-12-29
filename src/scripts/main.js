@@ -94,10 +94,74 @@ function lights() {
     //     });
     // }
 }
+// https://stackoverflow.com/questions/4588119/get-elements-css-selector-when-it-doesnt-have-an-id
+function fullPath(el){
+  var names = [];
+  while (el.parentNode){
+    if (el.id){
+      names.unshift('#'+el.id);
+      break;
+    }else{
+      if (el==el.ownerDocument.documentElement) names.unshift(el.tagName);
+      else{
+        for (var c=1,e=el;e.previousElementSibling;e=e.previousElementSibling,c++);
+        names.unshift(el.tagName+":nth-child("+c+")");
+      }
+      el=el.parentNode;
+    }
+  }
+  return names.join(" > ");
+}
+
+let carousels = [];
+let carouselGalleries = [];
+
+// TODO: can allow an optional timer value, fallback to 2000ms
+function makeCarousel(selector) {
+    console.log("makeCarousel", selector);
+    let newGallery = makeGallery(fullPath(selector) + " > div > img");
+    carouselGalleries.push(newGallery);
+    if (!selector || !selector.children) {return;}
+    let newCarousel = {
+        slideIndex: 0,
+        slides: selector.children
+    };
+
+    newCarousel.next = function() {
+        console.log("next");
+        for (let i = 0; i < this.slides.length; i++) {
+            if (i === this.slideIndex) {
+                this.slides[i].style.display = "block";
+            }
+            else {
+                this.slides[i].style.display = "none";    
+            }
+        }
+        this.slideIndex = (++this.slideIndex % this.slides.length);
+    };
+
+    newCarousel.next();
+    carousels.push(newCarousel);
+}
+
+setInterval(function() {
+    for (var i = 0; i < carousels.length; i++) {
+        carousels[i].next();
+    }
+}, 2000);
+
+
+function makeSliders() {
+    let sliders = document.querySelectorAll(".project-slider");
+    for (var i = 0; i < sliders.length; i++) {
+        makeCarousel(sliders[i]);
+    }
+}
 
 function init() {
     lights();
     makeMenu();
+    makeSliders();
 }
 
 window.addEventListener('load', init);

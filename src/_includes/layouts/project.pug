@@ -1,34 +1,22 @@
 extends ./base.pug
+include ../project_utils.pug
 
-//- TODO: redesign me to match cargo, needs quite a bit more help and flexibility
-//- read https://stackoverflow.com/questions/72413793/how-to-use-a-block-inside-an-included-file-in-pug
-
+//- Think of the content as rows
 block content
     .grid-1
         h1 #{title}
-    .grid-2
-        //- TODO: all the metadata can go here; TBD
-        //- e.g.: role, team members
-        div
-            div.project-meta
-                if media
-                    +projectMeta("Media", mediaString)
-                //- +projectMeta("Client", client)
+        div.project-meta
+            if media
+                +projectMeta("Media", mediaString)
+            if client
+                +projectMeta("Client", client)
+            if tools
                 +projectMeta("Tools", tools)
+            if goal
                 +projectMeta("Goal", goal)
-                if recognition
-                    +projectMeta("Recognition", recognition)
-        div
+            if recognition
+                +projectMeta("Recognition", recognition)
+    !=content
 
-        //- TODO: I don’t always want this... the fallback is the site’s OG image, yikes!
-        //- img.w-full.py-2(src=openGraphImage)
-    div!= content
-
-
-//- TODO: design all possible layouts for a project
-//- full screen larger text, maybe a blockquote... thatline for inspo
-
-mixin projectMeta(key, value)
-    p
-        span.bold #{key}:&nbsp;
-        | #{value}
+//- TODO: I don’t always want this... the fallback is the site’s OG image, yikes!
+//- img.w-full.py-2(src=openGraphImage)
