@@ -40,20 +40,19 @@ mixin slider()
 //- TODO: move this CSS where it belongs
 mixin inDesign(url, caption)
     div
-        iframe(style="aspect-ratio: 16 / 9; width: 100%;" src=url frameborder="0" allowfullscreen="")
+        iframe.video16by9(src=url frameborder="0" allowfullscreen="")
         if caption
             p.caption= caption
 
-//- TODO: can share this CSS with above
 mixin youtube(url, caption)
     div(style="padding-bottom: 1rem;")
-        iframe(src=url title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" style="aspect-ratio: 16 / 9; width: 100%;")
+        iframe.video16by9(src=url title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="")
         if caption
             p.caption= caption
 
 mixin video(url, caption)
     div(style="padding-bottom: 1rem;")
-        video(width="1920" height="1080" controls="" style="aspect-ratio: 16 / 9;" data-video="0")
+        video.video16by9(width="1920" height="1080" controls="" data-video="0")
             source(src="https://files.cargocollective.com/c1603295/widescreen.mp4" type="video/mp4")
         if caption
             p.caption= caption

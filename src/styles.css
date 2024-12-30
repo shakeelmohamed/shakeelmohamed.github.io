@@ -362,6 +362,11 @@
         line-height: 1.8;
     }
 
+    .video16by9 {
+        aspect-ratio: 16 / 9;
+        width: 100%;
+    }
+
     /* Headings */
     h1 {
        @apply font-bold py-4 text-sizeh1 md:text-sizeh1;
@@ -408,6 +413,7 @@
     hr {
         @apply my-4;
         border-width: thin;
+        border-color: rgba(0, 0, 0, 0.25);
     }
 
     input {

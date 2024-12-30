@@ -62,24 +62,69 @@
                 <h1>Referential Mono Typeface</h1>
                 <div class="project-meta">
                     <p><span class="bold">Media:&nbsp;</span>type design</p>
-                    <p><span class="bold">Client:&nbsp;</span>todo</p>
                     <p><span class="bold">Tools:&nbsp;</span>Glyphs, Illustrator, InDesign, Figma</p>
-                    <p><span class="bold">Goal:&nbsp;</span>todo</p>
+                    <p><span class="bold">Goal:&nbsp;</span>design a modular typeface, infused with personal meaning.</p>
                     <p><span class="bold">Recognition:&nbsp;</span>Hoffmitz Milken Center for Typography (HMCT) Newsletter 2023 holiday greetings (featured typeface).</p>
                 </div>
             </div>
+<div class="grid-2">
+    <div>
+        <p>Referential Mono is built on a 5x5 grid, inspired by early computing and Islamic History. As a developer and Muslim, this project was an opportunity to combine many aspects of my identity in one.</p><br/>
+        <p>Special thanks to: Simon Johnston, Lavinia Lascaris, Noah Cousineau, with additional feedback from Milka Broukhim, Greg Lindy of Lux Typo, and Wael Morcos.</p>
+    </div>
+    <div>
+        <p>HMCT graciously featured the typeface in their December 2023 holiday greeting email newsletter.</p><br/>
+        <p>Ongoing work includes: an Arabic version, motion design, and generative typography.</p>
+    </div>
+</div>
 <div class="grid-1">
     <div style="padding-bottom: 1rem;"><img class="lightbox" src="https://freight.cargo.site/w/1920/q/94/i/8a800589d397450713e2deb7a4e58b442d0492ea4ae78713a2494c6617f92eb3/Referential-Mono---cargo---cover.png" alt=""/>
     </div>
 </div>
-<div class="grid-1">
+<div class="grid-2">
     <div style="padding-bottom: 1rem;"><img class="lightbox" src="https://freight.cargo.site/w/1920/q/94/i/0cf1e3fdf14c6fd94e9d215d76aed6b98e9328f3446959fe87a7d3e9913098df/Referential-Mono---cargo---1.png" alt=""/>
     </div>
-</div>
-<div class="grid-1">
     <div style="padding-bottom: 1rem;"><img class="lightbox" src="https://freight.cargo.site/w/1920/q/94/i/d15c7324107043c959702cbbeb10e649754fe0c9a0f91549d6fa307231f49140/Referential-Mono---cargo---2.png" alt=""/>
     </div>
+</div><script type="text/javascript" src="/scripts/fontsampler.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fontsampler-js@0.1.4/dist/fontsampler-skin.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontsampler-js@0.1.4/dist/fontsampler-skin.min.css">
+<hr/>
+<div class="grid-1 py-8">
+    <div class="fontDemo" id="referential-mono-tester"> </div>
+    <script>
+        function fontTester() {
+            var fonts = [
+                {
+                    "name": "Referential Mono",
+                    "files": ["./ReferentialMono0.970_2-Regular.woff2"]
+                }
+            ];
+            var options = {
+                initialText: "Start typing here!",
+                order: [["fontsize", "lineheight", "letterspacing", "alignment"], "tester"],
+                config: {
+                    fontsize: {
+                        min: 16,
+                        init: 48,
+                        max: 200
+                    },
+                    alignment: {
+                        init: "center"
+                    },
+                    letterspacing: {
+                        unit: "%"
+                    }
+                }
+            };
+            var fontDemo = new Fontsampler(document.getElementById("referential-mono-tester"), fonts, options);
+            FontsamplerSkin(fontDemo);
+            fontDemo.init();    
+        }
+        window.addEventListener('load', fontTester);
+    </script>
 </div>
+<hr/>
 <div class="grid-1">
     <div style="padding-bottom: 1rem;"><img class="lightbox" src="https://freight.cargo.site/w/1920/q/94/i/4530bfa34148c636ba077d327f517c5ec00983ad2a32674be28e2d923a24db05/Referential-Mono---cargo---3.png" alt=""/>
     </div>
@@ -105,39 +150,7 @@
     <div style="padding-bottom: 1rem;"><img class="lightbox" src="https://freight.cargo.site/w/1920/q/94/i/2a1568998be27e9306b5d7507e3ac0ee0871a875bcdd6bb3e065c798badb38ba/Referential-Mono---cargo---9.png" alt=""/>
         <p class="caption">Final classroom critique with Simon Johnston and Lavinia Lascaris</p>
     </div>
-</div><script type="text/javascript" src="/scripts/fontsampler.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/fontsampler-js@0.1.4/dist/fontsampler-skin.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontsampler-js@0.1.4/dist/fontsampler-skin.min.css">
-<hr/>
-<div class="grid-1 py-8">
-    <div class="fontDemo" id="referential-mono-tester">Start typing here!</div>
-    <script>
-        function fontthingy() {
-            var fonts = [
-                {
-                    "name": "Referential Mono",
-                    "files": ["./ReferentialMono0.970_2-Regular.woff2"],
-                    "fallback": undefined
-                }
-            ];
-            var options = {
-                order: [["fontsize", "lineheight", "letterspacing", "alignment"], "tester"],
-                config: {
-                    fontsize: {
-                        min: 16,
-                        init: 48,
-                        max: 200
-                    }
-                }
-            };
-            var fontDemo = new Fontsampler(document.getElementById("referential-mono-tester"), fonts, options);
-            FontsamplerSkin(fontDemo);
-            fontDemo.init();    
-        }
-        window.addEventListener('load', fontthingy);
-    </script>
 </div>
-<hr/>
 <div class="grid-1">
     <div style="padding-bottom: 1rem;"><img class="lightbox" src="https://freight.cargo.site/w/1920/q/94/i/1a208d5f909ca1399da00ea3b08fbf467796e28c7012ba61d6fde4cc0462994e/Referential-Mono---cargo---18.png" alt=""/>
         <p class="caption">I began designing the Arabic character set which has a different set of complexities. In this first draft I remained rigid to the same grid as the Latin character set (7x7 without letter-spacing since Arabic is a connected script). In doing so, I found some forms do not reduce down as nicely as I would like. The next revision I will try is on a 14x14 grid, subdividing the current grid in half.</p>
