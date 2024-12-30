@@ -20,6 +20,35 @@
 /*         @apply text-base_sm md:text-base; */
     }
 
+    /* FontSampler */
+    [data-fsjs="alignment"] {
+        display: flex;
+    }
+
+    .fsjs-label-text {
+        font-weight: 700;
+    }
+
+    .fsjs-skin > .fsjs-wrapper {
+        gap: 2rem;
+    }
+
+    .fsjs-block {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .fontSampler, .fsjs-block-tester {
+        margin: 1rem 0 !important;
+    }
+    .fsjs-button-selected {
+        color: white !important;
+        background-color: black !important;
+    }
+    .fsjs-block-type-buttongroup::nth-child(2) {
+        margin-top: 0.25rem !important;
+    }
+
+
     /* Lightbox hacks     */
     .gslide-description {
         display: none !important;
@@ -133,6 +162,10 @@
     .menuItems {
         text-align: right;
         font-weight:bold;
+    }
+
+    .project-meta {
+        padding-bottom: 1rem;
     }
 
     .newfooter {
@@ -274,6 +307,10 @@
 
         h2 {
             margin-bottom: 0.25rem;
+        }
+
+        .fsjs-wrapper {
+            flex-direction: column;
         }
     }
 

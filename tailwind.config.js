@@ -12,7 +12,16 @@ module.exports = {
     'gallery_card',
     '.gslide-description',
     '.goverlay',
-    'logo-wraper'
+    'logo-wraper',
+    // WOW this is so irritating!
+    'fsjs-label-text',
+    'fsjs-skin',
+    'fsjs-block',
+    'fontSampler',
+    'fsjs-block-tester',
+    'fsjs-wrapper',
+    'fsjs-button-selected',
+    'fsjs-block-type-buttongroup'
   ],
   theme: {
     extend: {

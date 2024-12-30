@@ -11,7 +11,9 @@ module.exports = function(eleventyConfig) {
 
         "webmanifest",
         "xml",
-        "txt"
+        "txt",
+
+        "woff2"
     ]);
     eleventyConfig.addPassthroughCopy("src/scripts");
     eleventyConfig.addPassthroughCopy("src/CNAME");

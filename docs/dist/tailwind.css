@@ -570,6 +570,35 @@ select {
 /*         @apply text-base_sm md:text-base; */
 }
 
+    /* FontSampler */
+    [data-fsjs="alignment"] {
+        display: flex;
+    }
+
+    .fsjs-label-text {
+        font-weight: 700;
+    }
+
+    .fsjs-skin > .fsjs-wrapper {
+        gap: 2rem;
+    }
+
+    .fsjs-block {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .fontSampler, .fsjs-block-tester {
+        margin: 1rem 0 !important;
+    }
+    .fsjs-button-selected {
+        color: white !important;
+        background-color: black !important;
+    }
+    .fsjs-block-type-buttongroup::nth-child(2) {
+        margin-top: 0.25rem !important;
+    }
+
+
     /* Lightbox hacks     */
     .gslide-description {
         display: none !important;
@@ -683,6 +712,10 @@ select {
     .menuItems {
         text-align: right;
         font-weight:bold;
+    }
+
+    .project-meta {
+        padding-bottom: 1rem;
     }
 
     .newfooter {
@@ -821,6 +854,10 @@ select {
 
         h2 {
             margin-bottom: 0.25rem;
+        }
+
+        .fsjs-wrapper {
+            flex-direction: column;
         }
     }
 
@@ -1766,6 +1803,10 @@ select {
 .py-12 {
   padding-top: 3rem;
   padding-bottom: 3rem;
+}
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 .pt-4 {
   padding-top: 1rem;
