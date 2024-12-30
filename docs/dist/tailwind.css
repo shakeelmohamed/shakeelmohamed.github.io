@@ -564,8 +564,7 @@ select {
   min-height: 100vh;
   flex-direction: column;
   overflow-x: hidden;
-  -ms-scroll-chaining: none;
-      overscroll-behavior: none;
+  overscroll-behavior-y: none;
   padding: 2rem;
 /*         @apply text-base_sm md:text-base; */
 }

@@ -16,7 +16,7 @@
     /* TODO: WHY am I still using tailwind? how does this help?*/
     /* 2rem = m-8, WHY??? */
     body {
-        @apply p-8 overflow-x-hidden overscroll-none min-h-screen flex flex-col relative;
+        @apply p-8 overflow-x-hidden overscroll-y-none min-h-screen flex flex-col relative;
 /*         @apply text-base_sm md:text-base; */
     }
 
