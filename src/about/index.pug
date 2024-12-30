@@ -6,6 +6,7 @@ description: Shakeel Mohamed is a candidate for an MFA in Graphic Design at ArtC
 extends ../_includes/layouts/base.pug
 include ../_includes/molecules.pug
 //- TODO: resume... think about JSON model?
+//-     COULD just be a list for now
 
 //- TODO: Maybe a separate services page?
 
@@ -67,7 +68,7 @@ block content
                 img(src="./img/5.jpg")
                 img(src="./img/6.jpg")
     
-    //- TODO: show grid of presentations - maybe document AIGA LA Graphic Content too
+    
 
     if mentions.recent.length > 0
         br        
@@ -77,4 +78,5 @@ block content
         p.bold See the&nbsp;
             a(href="/mentions") full list here.
 
+    //- TODO: show grid of presentations - maybe document AIGA LA Graphic Content too
     //- TOOD: can include thumbnails to presentations (AIGA PF, AIGA LA Graphic Content, etc)

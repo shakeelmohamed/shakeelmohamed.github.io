@@ -764,7 +764,7 @@ select {
     }
 
     p {
-        font-size: 1.1rem;
+        font-size: 1rem;
         line-height: 1.4rem;
         font-family: tt-commons-pro, sans-serif;
         font-weight: 400;
@@ -1004,10 +1004,9 @@ select {
   line-height: 1.75rem;
 }
     .caption {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+        font-size: 1rem;
         color: rgba(0, 0, 0, 0.5);
-}
+    }
 
     /* Body text style */
    /*  p, li {
@@ -1910,7 +1909,7 @@ select {
 /* Typography plugin customization */
 /* TODO: align these with default headings... but scaled down a bit; */
 .prose {
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.5;
 }
 /*  .prose h1 {
