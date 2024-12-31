@@ -10,6 +10,7 @@ module.exports = function(eleventyConfig) {
         "ico",
         "mp4",
         "gif",
+        "pdf",
 
         "webmanifest",
         "xml",

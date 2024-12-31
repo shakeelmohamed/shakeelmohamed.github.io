@@ -19,9 +19,6 @@ mixin hero()
     div(class="mt-2 md:mb-12 xl:mt-12 xl:mb-8")
         block
 
-//- mixin footerNavItem(href, label)
-//-     li
-//-         a.subhead(href=href) #{label}
 
 //- mixin footer()
 //-     footer
@@ -64,25 +61,6 @@ mixin projectListing(project)
             div.project-meta
                 p.opacity-40.capitalize(style="text-transform: lowercase;")!= project.data.mediaLinks
 
-//- TODO: this has been refactored away, delete once footer is final
-//- mixin copyright()
-//-     .mx-auto.text-center
-//-         //- TODO: link this next paragraph to the project/blog page about the website itself
-//-         p.caption.text-white Designed and developed with ✨emotion✨.
-//-         p.caption.text-white
-//-             script document.write("&copy; " + new Date().getFullYear() + " Shakeel Mohamed")
-    
-
-//- mixin projectSectionText()
-
-//- mixin projectSectionTextBig()
-    
-//- mixin projectSectionSplit()
-    
-//- mixin projectSectionFullWidth()
-//- images or videos most likely
-
-
 //- TODO: design this component
 mixin getPosts(recent=false)
     - var source = collections.recentPosts;
@@ -123,9 +101,8 @@ mixin getMentions(recent=false)
         if source.length > 0
             ul
             each mention in source
-                li.list-none
-                    div(class="basis-1/4 pb-1")
+                li.list-none.pb-2
+                    div(class="basis-1/4")
                         p.whitespace-nowrap.text-left #{mention.date} &nbsp;
                     div(class="basis-3/4")
                         a(href=mention.url, class="font-bold hover:text-orange" target="_blank") #{mention.title}
-                    br

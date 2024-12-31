@@ -15,17 +15,29 @@ block content
         div.headshot
             img.lightbox(src="../img/Shakeel_Mohamed_headshot.png" alt="Headshot of Shakeel Mohamed")
         div
-            h1.pt-0 I think inside, outside, and about the box itself.
+            p
+                strong I think inside, outside, and about the box itself.
         div(style="grid-column: 3 / 5;")
             p I thrive at the intersection of cultures, translating across perspectives to discover new ideas. My elementary school was on a Native American reservation where I was “the other Indian.” Early in life, I understood the nuances of personal identity which primed me for my second career in graphic design.
             br
             p The pursuit of mastery fuels everything I do. As a software engineer, I didn’t just write code; I crafted it to be efficient and elegantly formatted, making it intuitive for other developers. This attention to typography is now at the heart of my practice as a designer. My creative process is a synthesis of research, conversational insights, strategy, and empathy to connect with my audience.
             br
-            p Please reach out for freelance or full-time opportunities, I am available starting May 2025.
+            p Available starting May 2025. Please reach out for freelance or full-time opportunities in Los Angeles or remote.
+            br
+            p
+                | Please reach out by 
+                strong
+                    a(href="mailto:" + metadata.author.email, target="_blank") email, 
+                strong
+                    a(href=metadata.social.LinkedIn, target="_blank") LinkedIn, 
+                | or 
+                strong
+                    a(href=metadata.social.Instagram, target="_blank") Instagram
+                | .
             br
             p
                 strong
-                    a(href="" target=_blank) View my résumé here.  
+                    a(href="./Shakeel_Mohamed_resume.pdf" target="_blank") View my résumé here.  
 
     .grid-4.mt-4
         div
@@ -68,15 +80,96 @@ block content
                 img(src="./img/5.jpg")
                 img(src="./img/6.jpg")
     
-    
+    br
+    hr
 
-    if mentions.recent.length > 0
-        br        
-        h2 Recognition
-        .grid-2
-            +getMentions(true)
-        p.bold See the&nbsp;
-            a(href="/mentions") full list here.
+    .grid-4
+        div
+            p.caption Experience
+            br
+            +experience("Lead Graphic Designer (Annually)", "The Ismaili Muslim Community", "Remote", "10.2021–10.2024")
+            +experience("Freelance Graphic Designer", "TALISMAN", "Remote", "07.2024–08.2024")
+            +experience("Founder", "ntrsct designs", "Remote", "02.2018–12.2022")
+            +experience("Software Engineer", "Splunk, Inc.", "Seattle, Washington", "06.2015–04.2021")
+                
+        div
+            p.caption Skills
+            br
+            p
+                strong Strong working knowledge of:
+                br
+                | Illustrator, InDesign, Figma, Premiere Pro, Keynote, After Effects, Midjourney
+            br
+            p
+                strong Familiar with:
+                br
+                | Photoshop, Glyphs, TouchDesigner, MadMapper, Blender, LiveSurface, Artivive, Basecamp, Trello, Jira, Google Workspace, Dropbox, Slack
+            br
+            p
+                strong Presentation and facilitation:
+                br
+                | Strategic thinking, collaboration, copywriting, product management, project management, community building, agile facilitation, and scrum
+            br
+            p
+                strong Programming:
+                br
+                | JavaScript, p5.js, Node.js, HTML, CSS, React, Python, Java, C, C++, Git
+        div
+            p.caption Education
+            br
+            +experience("Candidate for a Master of Fine Arts in Graphic Design", "ArtCenter College of Design", "Pasadena, California", "2022–Present")
+            +experience("Bachelor of Science in Computer Science (Emphasis in Business)", "Seattle University", "Seattle, Washington", "2015")
+        div
+            p.caption Recognition
+            br
+            p
+                strong AIGA Los Angeles Graph*c Content Conference&nbsp;Speaker
+                br
+                | Deconstructing “Best”: Redefining Success for Designers
+                br
+                | 2024
+            br
+            p
+                a.underline(href="https://voyagela.com/interview/daily-inspiration-meet-shakeel-mohamed/" target="_blank")
+                    strong
+                        i Voyage LA Magazine 
+                        | Interview
+                br
+                | 2024
+            br
+            p
+                strong Type Thursday Los Angeles
+                br
+                | Presented my TYPO Mexico City branding project to 30 designers.
+                br
+                | 2023
+            br
+            p
+                strong AIGA Portfolio Festival
+                br
+                | Virtual portfolio presentation to a live audience.
+                br
+                | 2022
+
+    //- TODO: bring this back later when it makes sense, not right now.
+    //- if mentions.recent.length > 0
+    //-     br        
+    //-     h2 Recognition
+    //-     .grid-2
+    //-         +getMentions(true)
+    //-     p.bold See the&nbsp;
+    //-         a(href="/mentions") full list here.
 
     //- TODO: show grid of presentations - maybe document AIGA LA Graphic Content too
     //- TOOD: can include thumbnails to presentations (AIGA PF, AIGA LA Graphic Content, etc)
+
+mixin experience(title, org, loc, dates)
+    p
+        strong #{title}
+        br
+        | #{org}
+        br
+        | #{loc}
+        br
+        | #{dates}
+    br
