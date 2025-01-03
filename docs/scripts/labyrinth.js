@@ -1,7 +1,7 @@
 // TODO: the real challenge will be making this drag+drop editable when I want to edit the image set
 // TODO: another cool feature could be like soot.world, allow for different/random animated viewing of images
 
-var imgs = [
+const imgs = [
     {
         src: "14682199_10154007887733435_7185986522188715313_o-copy.png",
         pos: {x: 60, y: 230, z: 28, width: 40}
@@ -130,7 +130,7 @@ var imgs = [
     {
         src: "latest---07_cover_top-copy.png",
         pos: {x: 69, y: 288.71, z: 30, width: 30}
-        // width: 29.9995%; top: 288.716%; left: 69.0234%; z-index: 30; 
+        // width: 29.9995%; top: 288.716%; left: 69.0234%; z-index: 30;
     },
     {
         src: "logo-on-black-1500-square-centered.png",
@@ -145,7 +145,7 @@ var imgs = [
     {
         src: "n.png",
         pos: {x: 27.5, y: 285, z: 7, width: 30}
-        // width: 30%; top: 285%; left: 27.5%; z-index: 7; 
+        // width: 30%; top: 285%; left: 27.5%; z-index: 7;
     },
     {
         src: "t---updated-green-copy.png",
@@ -163,32 +163,32 @@ var imgs = [
 imgs.sort((a, b) => a.pos.y - b.pos.y);
 
 for (var i = 0; i < imgs.length; i++) {
-  var wrapper = document.createElement('div');
+    const wrapper = document.createElement('div');
 
-  // TODO: onclick -> lightbox, with caption
-  // 
-  
-  wrapper.classList.add("gallery_card");
-  wrapper.style.width = `${imgs[i].pos.width}%`;
-  wrapper.style.left = `${imgs[i].pos.x}%`;
-  wrapper.style.top = `${imgs[i].pos.y}%`;
+    // TODO: onclick -> lightbox, with caption
+    //
 
-  var innerWrapper = document.createElement('div');
-  innerWrapper.classList.add("gallery_card_image");
+    wrapper.classList.add("gallery_card");
+    wrapper.style.width = `${imgs[i].pos.width}%`;
+    wrapper.style.left = `${imgs[i].pos.x}%`;
+    wrapper.style.top = `${imgs[i].pos.y}%`;
 
-  var newImg = document.createElement('img');
-  newImg.classList.add("image-zoom"); // TODO: this functionality is not there yt
-  newImg.setAttribute("src", "./img/" + imgs[i].src);
-  
+    const innerWrapper = document.createElement('div');
+    innerWrapper.classList.add("gallery_card_image");
 
-  innerWrapper.appendChild(newImg);
-  wrapper.appendChild(innerWrapper);
+    const newImg = document.createElement('img');
+    newImg.classList.add("image-zoom"); // TODO: this functionality is not there yt
+    newImg.setAttribute("src", "./img/" + imgs[i].src);
 
 
-  document.querySelector(".thumbnail_sizer").appendChild(wrapper);
+    innerWrapper.appendChild(newImg);
+    wrapper.appendChild(innerWrapper);
+
+
+    document.querySelector(".thumbnail_sizer").appendChild(wrapper);
 }
 
-function convertRemToPixels(rem) {    
+function convertRemToPixels(rem) {
     return rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
 }
 
@@ -225,22 +225,24 @@ Draggable.create('.gallery_card', {
 });
 
 function fixPaddingBottom() {
-    var cards = document.querySelectorAll('.gallery_card');
-    var imgs = [];
+    const cards = document.querySelectorAll('.gallery_card');
+    const imgs = [];
     for (let i = 0; i < cards.length; i++) {
         imgs.push(cards[i]);
     }
     // TODO: some bugs with this sort algorithm
     // imgs.sort((a, b) => (a.getBoundingClientRect().y + a.getBoundingClientRect().height) - (b.getBoundingClientRect().y + b.getBoundingClientRect().height));
-    
+
 
     // TODO: bug first call will shrink, then every subsequent call calculates correctly oops;
     // might be same bug as onDragEnd() above
 
-    var lastImg = imgs[imgs.length - 1];
-    if (!lastImg) {return;}
-    var t1box = lastImg.getBoundingClientRect();
-    var newPaddingBottom = t1box.top + t1box.height + document.querySelector('.newfooter').getBoundingClientRect().height;
+    const lastImg = imgs[imgs.length - 1];
+    if (!lastImg) {
+        return;
+    }
+    const t1box = lastImg.getBoundingClientRect();
+    const newPaddingBottom = t1box.top + t1box.height + document.querySelector('.newfooter').getBoundingClientRect().height;
     document.querySelector('.image-gallery').style.setProperty('padding-bottom', `${newPaddingBottom}px`);
     // console.log('resized, new pb', newPaddingBottom);
 }
