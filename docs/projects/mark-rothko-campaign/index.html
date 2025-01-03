@@ -28,7 +28,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/material-icons@1.13.12/iconfont/material-icons.min.css">
     </head>
     <body class="bg-white">
-        <div class="mobileHeader">
+        <div class="mobile-only mobileHeader">
             <div class="grid-2" style="flex-direction: row; justify-content: space-between;">
                 <div>
                     <div class="mobileBranding"><a class="logo-wrapper" href="/"><img src="/img/Shakeel_Mohamed_wordmark.svg" alt="Shakeel Mohamed wordmark logo set in the Mindful Roman typeface which he designed" /></a><br/><strong><a href="mailto:hello@shakeel.design" target="_blank">hello@shakeel.design</a></strong></div>
@@ -37,44 +37,44 @@
             </div>
             <div class="menuItems">
                 <h2><a href="/">Work</a></h2>
-                <h2><a href="/thesis">Thesis</a></h2>
+                <h2><a href="/projects/thesis">Thesis</a></h2>
                 <h2><a href="/labyrinth">Labyrinth</a></h2>
-                <h2><a href="/about">About</a></h2>
+                <h2><a href="/about">About</a></h2><br/>
                 <h2><a href="mailto:hello@shakeel.design" target="_blank">hello@shakeel.design</a></h2>
             </div>
+            <hr class="mobile-only"/>
         </div>
-        <div class="newheader grid-4"><div>
-<div class="logo-wrapper"><a href="/"><img src="/img/Shakeel_Mohamed_wordmark.svg" alt="Shakeel Mohamed wordmark logo set in the Mindful Roman typeface which he designed" class="logosvg" /></a></div>
-</div>
-<div>
-</div>
-<div>
-<div><a href="/thesis">Thesis</a></div>
-<div><a href="/labyrinth">Labyrinth</a></div>
-</div>
-<div>
-<div><a href="mailto:hello@shakeel.design" target=_blank>hello@shakeel.design</a></div>
-<div><a href="/about">About</a></div>
-</div>
+        <div class="newheader grid-4">
+            <div>
+                <div class="logo-wrapper"><a href="/"><img class="logosvg" src="/img/Shakeel_Mohamed_wordmark.svg" alt="Shakeel Mohamed wordmark logo set in the Mindful Roman typeface which he designed"/></a></div>
+            </div>
+            <div></div>
+            <div>
+                <div><a href="/projects/thesis">Thesis</a></div>
+                <div><a href="/labyrinth">Labyrinth</a></div>
+            </div>
+            <div>
+                <div><a href="mailto:#{metadata.author.email}" target="_blank">hello@shakeel.design</a></div>
+                <div><a href="/about">About</a></div>
+            </div>
         </div>
         <main class="my-4">
             <div class="grid-1">
                 <h1>Mark Rothko Documentary Campaign</h1>
                 <div class="project-meta">
                     <p><span class="bold">Media:&nbsp;</span>augmented reality, book design, branding, posters</p>
-                    <p><span class="bold">Client:&nbsp;</span>todo</p>
                     <p><span class="bold">Tools:&nbsp;</span>InDesign, Illustrator, Photoshop</p>
-                    <p><span class="bold">Goal:&nbsp;</span>todo</p>
+                    <p><span class="bold">Goal:&nbsp;</span>invite the general public to learn about Mark Rothko’s life through the documentary</p>
                 </div>
             </div>
 <div class="grid-2">
     <div>
         <p>I designed a wordmark, posters, and accompanying booklet for a campaign promoting a PBS documentary about Mark Rothko, the abstract expressionist.  My design concept was: in memoriam.</p><br/>
-        <p>Special thanks to: Christian Perez-Morin, Sean Adams, Michael Neal, Erin Son, Sean Shang, Brad Bartlett, and Greg Lindy of Lux Typo. Additional thanks to the National Gallery of Art for high quality images of Rothko’s artwork, and to Architectural Digest for a beautiful photo of the Rothko Chapel.</p>
+        <p>Special thanks to: Christian Perez-Morin, Sean Adams, Michael Neal, Erin Son, Sean Shang, Brad Bartlett, and Greg Lindy of Lux Typo. Additional thanks to the National Gallery of Art for high quality images of Rothko’s artwork, and to Architectural Digest for a beautiful photo of the Rothko Chapel.</p><br/>
+        <p>Depth of research and critique helped me to clarify the forms and vocabulary used throughout the project. Book colors were inspired by the Rothko Chapel in Houston, Texas. The non-denominational Chapel was one of Rothko’s final projects which he never saw completed before his passing.</p>
     </div>
     <div>
-        <p>Depth of research and critique helped me to clarify the forms and vocabulary used throughout the project. Book colors were inspired by the Rothko Chapel in Houston, Texas. The non-denominational Chapel was one of Rothko’s final projects which he never saw completed before his passing.</p><br/>
-        <p>Each chapter begins with a full spread. The chapter title is large, paired with a relevant Rothko quote on the opposite page.</p>
+        <p>Each chapter begins with a full spread. The chapter title is large, paired with a relevant Rothko quote on the opposite&nbsp;page.</p><br/>
         <ol>
             <li><strong>Preface </strong>— an introduction to Mark Rothko.</li>
             <li> <strong>Search </strong>— early explorations through his lesser known styles of art.</li>
@@ -82,7 +82,7 @@
             <li><strong>Wisdom </strong>— his advice for new artists.</li>
             <li><strong>Legacy </strong>— an interview with Christopher Rothko, his son, which informed my overall design direction.</li>
             <li><strong>Reflection </strong>— my brief and emotional editorial capturing my thoughts as I completed the book.</li>
-        </ol>
+        </ol><br/>
         <p>I experimented with a rough augmented reality experience with Adobe Aero to view selected paintings when pointing a mobile device at the book cover.</p>
     </div>
 </div>
@@ -173,17 +173,13 @@
 </div>
         </main>
         <div class="newfooter grid-4">
-            <div>
+            <div style="font-weight: normal;">
+                <hr class="mobile-only"/>
                 <script>document.write("&copy; " + new Date().getFullYear() + " Shakeel Mohamed.")</script>
-            </div><div>
-<div><a href="https://instagram.com/shakeel.design" target=_blank>Instagram</a></div>
-</div>
-<div>
-<div><a href="https://linkedin.com/in/shakeelmohamed" target=_blank>LinkedIn</a></div>
-</div>
-<div>
-<div><a href="mailto:hello@shakeel.design" target=_blank>hello@shakeel.design</a></div>
-</div>
+            </div>
+            <div><a href="#{metadata.social.Instagram}" target="_blank">Instagram</a></div>
+            <div><a href="#{metadata.social.LinkedIn}" target="_blank">LinkedIn</a></div>
+            <div><a href="mailto:#{metadata.author.email}" target="_blank">hello@shakeel.design</a></div>
         </div>
     </body>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-36907845-2"></script>

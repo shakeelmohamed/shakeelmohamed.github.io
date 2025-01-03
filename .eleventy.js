@@ -20,6 +20,9 @@ module.exports = function(eleventyConfig) {
     ]);
     eleventyConfig.addPassthroughCopy("src/scripts");
     eleventyConfig.addPassthroughCopy("src/CNAME");
+
+    eleventyConfig.addWatchTarget("src/**/*");
+    eleventyConfig.setWatchThrottleWaitTime(300);
     
     // Custom markdown processor
     let markdownIt = require("markdown-it");

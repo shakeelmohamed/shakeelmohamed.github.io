@@ -11,7 +11,7 @@ include ../_includes/molecules.pug
 //- TODO: Maybe a separate services page?
 
 block content
-    .grid-4
+    .grid-4.mt-4
         div.headshot
             img.lightbox(src="../img/Shakeel_Mohamed_headshot.png" alt="Headshot of Shakeel Mohamed")
         div
@@ -37,7 +37,8 @@ block content
             br
             p
                 strong
-                    a(href="./Shakeel_Mohamed_resume.pdf" target="_blank") View my résumé here.  
+                    a(href="./Shakeel_Mohamed_resume.pdf" target="_blank") View my résumé here.
+            hr.mobile-only
 
     .grid-4.mt-4
         div
@@ -64,15 +65,16 @@ block content
                 li Explore more ideas than required.
                 li Design is a spiritual practice.
                 li When in doubt, talk it out.
+            br
         div
-            //- TODO: can reoder this list for a better typographic rag
+            //- TODO: can reorder this list for a better typographic rag
             p
                 strong A few of my design heroes
                 br
                 | Debbie&nbsp;Millman, Wael&nbsp;Morcos, Brian&nbsp;Collins, Louise&nbsp;Sandhaus, Chris&nbsp;Do, and April&nbsp;Greiman.
         //- TODO: fix file extensions, this is crazy
         div(style="grid-column: 3 / 5;")
-            .grid-3.lightbox-album(style="gap: 1rem;")
+            .grid-3.lightbox-album.keepDesktop(style="gap: 1rem;")
                 img(src="./img/1.jpg")
                 img(src="./img/2.png")
                 img(src="./img/3.jpg")
@@ -91,7 +93,7 @@ block content
             +experience("Freelance Graphic Designer", "TALISMAN", "Remote", "07.2024–08.2024")
             +experience("Founder", "ntrsct designs", "Remote", "02.2018–12.2022")
             +experience("Software Engineer", "Splunk, Inc.", "Seattle, Washington", "06.2015–04.2021")
-                
+            hr.mobile-only 
         div
             p.caption Skills
             br
@@ -114,11 +116,13 @@ block content
                 strong Programming:
                 br
                 | JavaScript, p5.js, Node.js, HTML, CSS, React, Python, Java, C, C++, Git
+            hr.mobile-only
         div
             p.caption Education
             br
             +experience("Candidate for a Master of Fine Arts in Graphic Design", "ArtCenter College of Design", "Pasadena, California", "2022–Present")
             +experience("Bachelor of Science in Computer Science (Emphasis in Business)", "Seattle University", "Seattle, Washington", "2015")
+            hr.mobile-only
         div
             p.caption Recognition
             br
@@ -145,11 +149,14 @@ block content
                 | 2023
             br
             p
-                strong AIGA Portfolio Festival
+                a.underline(href="https://youtu.be/HtRtGYQx480" target="_blank")
+                    strong AIGA Portfolio Festival
                 br
                 | Virtual portfolio presentation to a live audience.
                 br
                 | 2022
+            //- TODO: not having this here is a lil odd... but we have a rule right below otherwise
+            //- hr.mobile-only
 
     //- TODO: bring this back later when it makes sense, not right now.
     //- if mentions.recent.length > 0

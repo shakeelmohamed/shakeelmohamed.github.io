@@ -5,7 +5,6 @@ tagline: [todo]
 description: [todo]
 openGraphImage: "https://freight.cargo.site/w/1920/q/75/i/6d68b76a4c4758c4ac456154544cf494ec60693af4ac70db0df9d57eda5eea65/Mark_Rothko_campaign_cover.png"
 when: 2023
-client: [todo]
 tools: InDesign, Illustrator, Photoshop
 tags: 
     - project
@@ -15,13 +14,13 @@ media:
     - posters
     - book design
     - augmented reality
-goal: [todo]
+goal: invite the general public to learn about Mark Rothko’s life through the documentary
 position: 2
 
 recogition: "One poster was selected for display in office of the Chair of Graphic Design at ArtCenter."
 
 ---
-include ../../_includes/molecules.pug
+
 //- Don’t love that I need this include in every project... doable for now
 include ../../_includes/project_utils.pug
 
@@ -33,10 +32,11 @@ block content
             p I designed a wordmark, posters, and accompanying booklet for a campaign promoting a PBS documentary about Mark Rothko, the abstract expressionist.  My design concept was: in memoriam.
             br
             p Special thanks to: Christian Perez-Morin, Sean Adams, Michael Neal, Erin Son, Sean Shang, Brad Bartlett, and Greg Lindy of Lux Typo. Additional thanks to the National Gallery of Art for high quality images of Rothko’s artwork, and to Architectural Digest for a beautiful photo of the Rothko Chapel.
-        div
-            p Depth of research and critique helped me to clarify the forms and vocabulary used throughout the project. Book colors were inspired by the Rothko Chapel in Houston, Texas. The non-denominational Chapel was one of Rothko’s final projects which he never saw completed before his passing.
             br
-            p Each chapter begins with a full spread. The chapter title is large, paired with a relevant Rothko quote on the opposite page.
+            p Depth of research and critique helped me to clarify the forms and vocabulary used throughout the project. Book colors were inspired by the Rothko Chapel in Houston, Texas. The non-denominational Chapel was one of Rothko’s final projects which he never saw completed before his passing.
+        div
+            p Each chapter begins with a full spread. The chapter title is large, paired with a relevant Rothko quote on the opposite&nbsp;page.
+            br
             ol
                 li
                     strong Preface 
@@ -56,7 +56,7 @@ block content
                 li
                     strong Reflection 
                     | — my brief and emotional editorial capturing my thoughts as I completed the book.
-
+            br
             p I experimented with a rough augmented reality experience with Adobe Aero to view selected paintings when pointing a mobile device at the book cover.
 
     .grid-1
@@ -77,7 +77,6 @@ block content
     .grid-1
         +portfolioImg("https://freight.cargo.site/w/1920/q/94/i/ea0c1d006bf659cca9839097a1b042572caecfce4bf0107555e59735d55068a7/Mark-Rothko-Documentary-Campaign---20.png", "", "Extending the identity to a booklet required a special consideration for messaging. I chose the title “Art for Mystics”, based on the following definition for mystical: inspiring a sense of spiritual mystery, awe, and fascination. This sense of awe is due partly to the scale of Rothko’s paintings.")
 
-    //- TODO: indesign preview
     .grid-1
         +inDesign("https://indd.adobe.com/embed/0ce1fbfe-ae15-462d-b89c-fc8d21c9b685?startpage=1&amp;allowFullscreen=false", "The complete book is available for viewing above.")
 

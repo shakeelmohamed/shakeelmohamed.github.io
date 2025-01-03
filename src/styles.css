@@ -17,7 +17,6 @@
     /* 2rem = m-8, WHY??? */
     body {
         @apply p-8 overflow-x-hidden overscroll-y-none min-h-screen flex flex-col relative;
-/*         @apply text-base_sm md:text-base; */
     }
 
     /* FontSampler */
@@ -53,7 +52,7 @@
     .gslide-description {
         display: none !important;
     }
-    /* TODO:  ugg, many many more CSS tweaks needed... punting for now */
+    /* TODO:  ugg, many many more CSS tweaks needed to do this in the mobilemenu... punting for now */
     /* .goverlay {
         background: white !important;
     } */
@@ -152,7 +151,7 @@
         line-height: 2;
     }
 
-    .mobileHeader {
+    .mobile-only {
         display: none;
     }
 
@@ -171,10 +170,6 @@
 
     .newfooter {
         padding-top: 2rem;
-    }
-
-    .newfooter > div:first-child {
-        font-weight: normal;
     }
 
     .newheader > div, .newfooter > div {
@@ -259,6 +254,14 @@
             padding: 1rem !important;
         }
 
+        main {
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+
+            /* TODO: base padding-top should go away, and this rule too; */
+            padding-top: 0 !important;
+        }
+
         .grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6 {
             display: flex;
             flex-direction: column;
@@ -279,7 +282,11 @@
             display: none;
         }
 
-        .mobileHeader {
+        .newfooter {
+            padding-top: 0;
+        }
+
+        .mobile-only {
             display: block;
         }
 
@@ -388,6 +395,7 @@
 
 
     a {
+        /* TODO:  might be nice to do a different transition, box border trace? */
         @apply transition hover:text-orange;
     }
 
@@ -430,6 +438,7 @@
     }
 }
 
+/* TODO: this utilities layer will be so helpful... can re-roder and refactor above greatly */
 @layer utilities {
     /* Typography plugin customization */
     /* TODO: align these with default headings... but scaled down a bit; */
@@ -447,10 +456,6 @@
     } */
     .prose a {
         @apply transition hover:text-orange;
-/*         @apply font-light; */
-    }
-    .prose strong, .prose b {
-/*         @apply; */
     }
     
     /* Don't automatically add quotes to a blockquote (from markdown) */
