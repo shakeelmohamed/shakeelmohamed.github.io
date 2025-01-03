@@ -77,7 +77,7 @@ This project is not done, but I am really pleased with my progress and hope to c
 </div>
 <br>{image 16}<br>The abstract intelligence (AI) pattern.<br>
 <br>
-{image 17}<br>Midjourney stationery stystem.
+{image 17}<br>Midjourney stationery system.
 <br><br>
 {image 18}<br>Promotional posters displayed in the HQ as a reminder of company culture.
 <br><br>
