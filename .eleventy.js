@@ -8,14 +8,21 @@ module.exports = function(eleventyConfig) {
         "jpg",
         "svg",
         "ico",
+        "mp4",
+        "gif",
+        "pdf",
 
         "webmanifest",
         "xml",
-        "txt"
+        "txt",
+
+        "woff2"
     ]);
     eleventyConfig.addPassthroughCopy("src/scripts");
     eleventyConfig.addPassthroughCopy("src/CNAME");
-    eleventyConfig.addPassthroughCopy("src/break/styles.css");
+
+    eleventyConfig.addWatchTarget("src/**/*");
+    eleventyConfig.setWatchThrottleWaitTime(300);
     
     // Custom markdown processor
     let markdownIt = require("markdown-it");
@@ -38,6 +45,11 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addLayoutAlias('base', 'layouts/base.pug');
     eleventyConfig.addLayoutAlias('post', 'layouts/post.pug');
     eleventyConfig.addLayoutAlias('project', 'layouts/project.pug');
+
+    // TODO: currently hiding the BREAK microsite
+    eleventyConfig.ignores.add("src/break");
+    eleventyConfig.ignores.add("src/style-guide.pug");
+    // eleventyConfig.addPassthroughCopy("src/break/styles.css");
 
     // Sort all pages for sitemap
     eleventyConfig.addCollection("sitemap", function(collectionApi) {
@@ -80,10 +92,18 @@ module.exports = function(eleventyConfig) {
 
     // For "featured portfolio" projects, allow manual positioning
     eleventyConfig.addCollection("portfolio", function(collectionApi) {
+        // TODO: will need some filtering here I think
         return collectionApi.getFilteredByTag("portfolio").sort((a, b) => {
             return a.data.position - b.data.position;
         });
     });
+
+    /**
+     * tags for design projects:
+     *     - portfolio - shown on homepage
+     *     - project - this is a design project
+     *     - archive - TODO: do not show this project except by permalink?
+     */
 
     // TODO: Include speedlify score somewhere, maybe on the design system page
     // https://github.com/zachleat/speedlify-score

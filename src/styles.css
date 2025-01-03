@@ -11,15 +11,320 @@
 
     html {
       @apply min-h-screen w-screen text-black font-sans p-0 m-0;
-        
-        /* TODO: this is carryover from cargo, factor it away please */
-        font-size: 90%;
     }
 
+    /* TODO: WHY am I still using tailwind? how does this help?*/
+    /* 2rem = m-8, WHY??? */
     body {
-        @apply p-4 md:p-8 overflow-x-hidden overscroll-none h-screen flex flex-col relative;
-        @apply text-base_sm md:text-base;
+        @apply p-8 overflow-x-hidden overscroll-y-none min-h-screen flex flex-col relative;
     }
+
+    /* FontSampler */
+    [data-fsjs="alignment"] {
+        display: flex;
+    }
+
+    .fsjs-label-text {
+        font-weight: 700;
+    }
+
+    .fsjs-skin > .fsjs-wrapper {
+        gap: 2rem;
+    }
+
+    .fsjs-block {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .fontSampler, .fsjs-block-tester {
+        margin: 1rem 0 !important;
+    }
+    .fsjs-button-selected {
+        color: white !important;
+        background-color: black !important;
+    }
+    .fsjs-block-type-buttongroup::nth-child(2) {
+        margin-top: 0.25rem !important;
+    }
+
+
+    /* Lightbox hacks     */
+    .gslide-description {
+        display: none !important;
+    }
+    /* TODO:  ugg, many many more CSS tweaks needed to do this in the mobilemenu... punting for now */
+    /* .goverlay {
+        background: white !important;
+    } */
+
+
+    /* START: ROUGH styles for labyrinth */
+    * {
+        box-sizing: border-box;
+    }
+
+    .preserve-3d {
+        transform-style: preserve-3d;
+    }
+
+    [image-gallery-row] {
+        align-items: flex-start;
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    [image-gallery="smgallery"][image-gallery-row] {
+        display: block;
+    }
+
+    [image-gallery="smgallery"] {
+        position: relative;
+        height: 0px;
+    }
+
+    .thumbnail_sizer {
+        height: 0px;
+        width: 100%;
+        position: relative;
+        padding-bottom: 100%;
+        pointer-events: none;
+    }
+
+    .content .page_content:not([contenteditable="true"]) [data-draggable] {
+        pointer-events: auto !important;
+        backface-visibility: hidden;
+    }
+
+    [data-draggable] {
+        visibility: visible;
+        background-color: rgba(0, 0, 0, 0.004);
+    }
+
+    .image-gallery .gallery_card {
+        transform-origin: center center;
+    }
+
+    a.gallery_card, div.gallery_card {
+        position: absolute;
+        pointer-events: auto;
+    }
+
+    .image-gallery .gallery_card_image {
+        width: 100%;
+        position: relative;
+    }
+
+    img {
+        border: 0px;
+        padding: 0px;
+    }
+
+    .content img {
+        float: none;
+        margin-bottom: 0rem;
+        vertical-align: bottom;
+    }
+
+    img.image-zoom {
+        cursor: zoom-in;
+    }
+
+    .image-gallery .gallery_card img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    /* END: ROUGH styles for labyrinth */
+
+    /* START: NEW */
+
+    .logosvg {
+        height: 3.5rem;
+    }
+
+    .newheader, .newfooter {
+        padding-bottom: 1rem;
+
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 2;
+    }
+
+    .mobile-only {
+        display: none;
+    }
+
+    .hamburgerIcon {
+        cursor: pointer;
+    }
+
+    .menuItems {
+        text-align: right;
+        font-weight:bold;
+    }
+
+    .project-meta {
+        padding-bottom: 1rem;
+    }
+
+    .newfooter {
+        padding-top: 2rem;
+    }
+
+    .newheader > div, .newfooter > div {
+        grid-row: 1;
+    }
+
+    .newheader > div:last-child, .newfooter > div:last-child {
+        text-align: right;
+    }
+
+    .grid-1 {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .grid-2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .grid-4 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+
+    h2 {
+        /* TODO: TAILWIND HELL */
+        padding: 0 !important;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.4rem;
+        font-family: tt-commons-pro, sans-serif;
+        font-weight: 400;
+    }
+
+    .bigtype {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .labyrinth {
+      position: relative;
+      width: 100vw;
+      min-height: 100vh;
+/*       overflow-y: hidden; */
+      overflow: hidden;
+      transform-origin: 0 0; /* Ensure scaling happens from the top-left corner */
+    }
+
+    .labyrinth > img {
+      position: absolute;
+      cursor: grab;
+      z-index: 1; /* Default z-index */
+      object-fit: contain;
+    }
+
+    .labyrinth-icons {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .labyrinth-icons > span.material-icons {
+        font-size: 2.5rem;
+        line-height: 1.2rem;
+    }
+
+    /* TODO:  tailwind is ripping this out? mobile is totally broken */
+    @media only screen and (max-width: 860px) {
+        body {
+            padding: 1rem !important;
+        }
+
+        main {
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+
+            /* TODO: base padding-top should go away, and this rule too; */
+            padding-top: 0 !important;
+        }
+
+        .grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6 {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .keepDesktop {
+            display: grid;
+            flex-direction: row;
+        }
+
+        /* Bandage solution for mobile footer */
+        .newheader > div:last-child, .newfooter > div:last-child {
+            text-align: left;
+        }
+
+        .newheader {
+            display: none;
+        }
+
+        .newfooter {
+            padding-top: 0;
+        }
+
+        .mobile-only {
+            display: block;
+        }
+
+        .hamburgerIcon {
+            max-height: fit-content;
+            padding: 0.5rem;
+        }
+
+        .menuOpen {
+            min-width: 100vw;
+            min-height: 100vh;
+            margin: -1rem;
+            padding: 1rem;
+            background-color: rgba(0, 0, 0, .9);
+            color: rgba(255, 255, 255, 1);
+            z-index: 99999;
+        }
+
+        .menuItems {
+            display: none;
+        }
+
+        .logo-wraper {
+            height: auto;
+        }
+
+        h2 {
+            margin-bottom: 0.25rem;
+        }
+
+        .fsjs-wrapper {
+            flex-direction: column;
+        }
+    }
+
+    /* END: NEW */
+
+
 
     header, footer {
         /* TODO: may only need md:flex here since children should have flex-grow:1 */
@@ -47,7 +352,7 @@
     }
 
     .header-logo {
-        @apply font-normal font-serif pb-4;
+        @apply font-medium font-serif pb-4;
         @apply text-heading;
     }
 
@@ -65,12 +370,17 @@
         line-height: 1.8;
     }
 
+    .video16by9 {
+        aspect-ratio: 16 / 9;
+        width: 100%;
+    }
+
     /* Headings */
     h1 {
-       @apply font-bold py-4 text-4xl md:text-5xl;
+       @apply font-bold py-4 text-sizeh1 md:text-sizeh1;
     }
     h2 {
-        @apply font-bold py-4 text-2xl md:text-3xl;
+        @apply font-bold py-4 text-sizeh2 md:text-sizeh2;
     }
     h3 {
         @apply font-bold py-4 text-xl md:text-xl;
@@ -79,15 +389,19 @@
         @apply text-lg pb-4;
     }
     .caption {
-        @apply text-sm;
+        font-size: 1rem;
+        color: rgba(0, 0, 0, 0.5);
     }
 
-    /* Body text style */
-    p, li {
-        @apply font-normal;
-    }
+
     a {
+        /* TODO:  might be nice to do a different transition, box border trace? */
         @apply transition hover:text-orange;
+    }
+
+    a.underline {
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
     }
     
     /* p a {
@@ -110,6 +424,8 @@
     hr {
         @apply my-4;
         border-width: thin;
+        border-color: rgba(0, 0, 0, 0.25);
+        border-style: inset;
     }
 
     input {
@@ -122,27 +438,24 @@
     }
 }
 
+/* TODO: this utilities layer will be so helpful... can re-roder and refactor above greatly */
 @layer utilities {
     /* Typography plugin customization */
     /* TODO: align these with default headings... but scaled down a bit; */
     .prose {
         @apply text-base leading-normal;
     }
-    .prose h1 {
-        @apply font-serif font-normal;
-    }
+   /*  .prose h1 {
+        @apply font-serif font-light;
+    } */
     .prose h2, .prose h3, .prose h4, .prose h5 {
         @apply my-0.5;
     }
-    .prose p, .prose li {
-        @apply font-normal;
-    }
+    /* .prose p, .prose li {
+        @apply font-light;
+    } */
     .prose a {
         @apply transition hover:text-orange;
-        @apply font-normal;
-    }
-    .prose strong, .prose b {
-/*         @apply; */
     }
     
     /* Don't automatically add quotes to a blockquote (from markdown) */

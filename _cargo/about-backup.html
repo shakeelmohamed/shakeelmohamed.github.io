@@ -1,0 +1,369 @@
+<!-- This is a more ideal way to do this, but breaks mobile responsiveness for the grid (i.e. want to flow 4 columns down to to 2).
+    Better solution is just reverse engineer these grid-* attributes and go back to .myrow and .mycell for this whole page... and then can use that structure on every page.
+ -->
+
+<!--<div grid-row="" grid-pad="2" grid-gutter="4">
+    <div grid-col="3" grid-pad="2">
+        <div style="width 75%; height: auto; aspect-ratio: 1;"><img width="2000" height="2000" width_o="2000" height_o="2000" data-src="https://freight.cargo.site/t/original/i/9dd377727a6029833953e5f5fdec2942d72ffe24b36519a239a73fee1a199dda/Artboard-1.png" data-mid="204765810" border="0" /></div>
+    </div>
+    <div grid-col="3" grid-pad="2" style="margin-left: -0.5rem;">
+        &nbsp;
+    </div>
+    <div grid-col="6" grid-pad="2">
+        <b>I think inside, outside, and about the box itself.</b>
+        <br>
+        <br>
+        I thrive at the intersection of cultures, translating across perspectives to discover new ideas. My elementary school was on a Native American reservation where I was “the other Indian.” Early in life, I understood the nuances of personal identity which primed me for my second career in graphic design.
+        <br><br>The pursuit of mastery fuels everything I do. As a software engineer, I didn’t just write code; I crafted it to be efficient and elegantly formatted, making it intuitive for other developers. This attention to typography is now at the heart of my practice as a designer. My creative process is a synthesis of research, conversational insights, strategy, and empathy to connect with my audience.
+        <br>
+        <br>
+        <b><a href="https://files.cargocollective.com/c1603295/Shakeel_Mohamed_resume_2024.pdf" target="_blank">View my résumé here.</a></b>
+        <br>
+        <br>
+    </div>
+</div>
+
+<div grid-row="" grid-pad="2" grid-gutter="4">
+    <div grid-col="3" grid-pad="2">
+        <b>“The best way to predict the future is to create it”</b><br>
+        — Peter Drucker (attributed)
+        <br>
+        <br>
+        <b>I’m inspired by</b><br>
+        <ol style="padding-left: 3rem;">
+            <li>Underdogs</li>
+            <li>Walking</li>
+            <li>Conversations</li>
+            <li>Music</li>
+            <li>Warmth</li>
+        </ol>
+        <br>
+        <b>Reminders to myself</b><br>
+        <ol style="padding-left: 3rem;">
+            <li>Focus intensely, rest completely.</li>
+            <li>Take more (design) risks.</li><li>Explore more ideas than required.</li>
+            <li>Design is a spiritual practice.</li>
+            <li>When in doubt, talk it out.</li>
+        </ol>
+        <br>
+    </div>
+    <div grid-col="3" grid-pad="2" style="margin-left: -0.5rem;">
+        <b>A few of my design heroes:</b><br>
+        Debbie Millman, Wael Morcos, Brian Collins, Louise Sandhaus, Chris Do, and April Greiman.
+        <br>
+    </div>
+    <div grid-col="6" grid-pad="2">
+        <div class="image-gallery" gid="4">
+            <img width="1440" height="1440" width_o="1440" height_o="1440" data-src="https://freight.cargo.site/t/original/i/5ae7624dca08b05ffe14cf7e17e027d07aabfad3f76f196ffd076144e88abaf8/312642056_3438753149704049_4519838799123494255_n.jpg" data-mid="216654165" border="0" />
+            <img width="1080" height="1080" width_o="1080" height_o="1080" data-src="https://freight.cargo.site/t/original/i/68e32dcf219725f9e000378d77f23fffc43c4e4e853f0b1adaa8010065d59f85/Instagram-post---4.png" data-mid="216654056" border="0" />
+            <img width="1440" height="1440" width_o="1440" height_o="1440" data-src="https://freight.cargo.site/t/original/i/44de5c64cd9c9fe62f35fec1430db9fe5f7de75dcef7a0924305c98711458f6d/312500937_1306623886776809_3439352467039571109_n.jpg" data-mid="216654164" border="0" />
+            <img width="1440" height="1440" width_o="1440" height_o="1440" data-src="https://freight.cargo.site/t/original/i/0ca0ec8467cd21bcea18d8a9e20ed98707770218643ace58a182a7ac29f0f94a/312620812_559470212609821_4209243697407107832_n.jpg" data-mid="216654167" border="0" />
+            <img width="1440" height="1440" width_o="1440" height_o="1440" data-src="https://freight.cargo.site/t/original/i/a7d0deb823022de6edbd8fd988fdc30e6e55b486d32169f253768da5c52292d3/343599262_1407771109991579_8798420979878168476_n.jpg" data-mid="216654078" border="0" />
+            <img width="1440" height="1440" width_o="1440" height_o="1440" data-src="https://freight.cargo.site/t/original/i/dda7d138ac35b257766cea9f8c214019339da69428963d4749ea9abff5c9cede/312839808_2082983241909662_3262084803769949828_n.jpg" data-mid="216654166" border="0" />
+        </div>
+    </div>
+</div>
+
+<hr>
+<hr>-->
+
+<!-- TOP ROW -->
+<div class="myrow" style="display: grid; grid-template-columns:25% 75%; column-gap:1em">
+    <!-- LEFT: Headshot + inspo -->
+    <div class="mycell">
+        <div class="image-gallery" gid="6">
+{image 2}
+</div>
+        <br>
+        <p>
+        <b>“The best way to predict the future is to create it”</b><br>
+        — Peter Drucker (attributed)</p>
+        <b>I’m inspired by</b><br>
+        <ol style="padding-left: 3rem;">
+            <li>Underdogs</li>
+            <li>Walking</li>
+            <li>Conversations</li>
+            <li>Music</li>
+            <li>Warmth</li>
+        </ol>
+        <br>
+        <b>Reminders to myself</b><br>
+        <ol style="padding-left: 3rem;">
+            <li>Focus intensely, rest completely.</li>
+            <li>Take more (design) risks.</li><li>Explore more ideas than required.</li>
+            <li>Design is a spiritual practice.</li>
+            <li>When in doubt, talk it out.</li>
+        </ol>
+        <br>
+    </div>
+    <!-- RIGHT: About me + design heroes -->
+    <div class="mycell" style="margin-right: 3rem;">
+        <!-- Top row: about me -->
+        <div class="myrow" style="display: grid; grid-template-columns:33% 64%; column-gap:1em">
+            <div class="mycell" style="@media only screen and (min-width: 768px) {margin-right: 2rem;}">
+                <b>I think inside, outside, and about the box itself.</b>
+            </div>
+            <div class="mycell" style="@media only screen and (min-width: 768px) {margin-left: -2.5rem;}">
+                I thrive at the intersection of cultures, translating across perspectives to discover new ideas. My elementary school was on a Native American reservation where I was “the other Indian.” Early in life, I understood the nuances of personal identity which primed me for my second career in graphic design.
+                <br><br>The pursuit of mastery fuels everything I do. As a software engineer, I didn’t just write code; I crafted it to be efficient and elegantly formatted, making it intuitive for other developers. This attention to typography is now at the heart of my practice as a designer. My creative process is a synthesis of research, conversational insights, strategy, and empathy to connect with my audience.
+                <br>
+                <br>
+                <b><a href="https://files.cargocollective.com/c1603295/Shakeel_Mohamed_resume_2024.pdf" target="_blank">View my résumé here.</a></b>
+                <br><br>
+            </div>
+        </div>
+
+        <!-- Bottom row: design heroes-->
+        <div class="myrow" style="display: grid; grid-template-columns:33% 64%; column-gap:2em">
+            <div class="mycell">
+                <b>A few of my design heroes:</b><br>
+                Debbie Millman, Wael Morcos, Brian Collins, Louise Sandhaus, Chris Do, and April Greiman.
+                <br><br>
+            </div>
+            <div class="image-gallery" gid="5">
+{image 7}
+{image 3}
+{image 6}
+{image 9}
+{image 5}
+{image 8}
+</div>
+        </div>
+    </div>
+</div>
+<br>
+
+<!-- HIDING RESUME FOR NOW low priority
+<div class="myrow" style="display: grid; grid-template-columns:33% 67%;">
+    <div><h2>Résumé</h2><br>
+       <a href="https://files.cargocollective.com/c1603295/Shakeel_Mohamed_resume_2024.pdf" target="_blank">A PDF version is available <b>here</b></a>.<br>
+       <br>
+   </div>
+   <div></div>
+</div>
+<div grid-row="" grid-pad="2" grid-gutter="4" grid-responsive="">
+    <div grid-col="3" grid-pad="2">
+        Education<br>
+        <hr>
+        <b>Candidate for a Master of Fine Arts in Graphic Design</b><br>
+        ArtCenter College of Design<br>
+        Pasadena, California<br>
+        2022–Present<br>
+        <br>
+        <b>Bachelor of Science in Computer Science (Emphasis in Business)</b><br>
+        Seattle University<br>
+        Seattle, Washington<br>
+        2015<br>
+        <br>Recognition<br>
+        <hr>
+        <b>ArtCenter Portfolio Scholarship</b>
+        <br>
+        <b>ArtCenter Merit Scholarship</b><br> 2022–Present
+        <br>
+        <br>
+        <b>Hoffmitz Milken Center for Typography (HMCT) Gallery</b> <br>
+        Mindful Roman (Font Design Poster)<br> 2024<br>
+        <br>
+        <b>Hoffmitz Milken Center for Typography (HMCT) Billboards</b> <br>
+        She Will (Poster Series)<br> 2024<br>
+        <br>
+        <b>ArtCenter Student Gallery</b> <br>
+        She Will (Poster Series)<br> 2024<br>
+        <br>
+        <a href="https://voyagela.com/interview/daily-inspiration-meet-shakeel-mohamed/" target="_blank"><b><i>Voyage LA Magazine</i> Interview<br></b>
+            Daily Inspiration: Meet Shakeel Mohamed<br></a>
+            2024<br>
+            <b>Hoffmitz Milken Center for Typography (HMCT) Newsletter<br></b>
+            Featured Typeface: Referential Mono<br>
+            2023
+            <br>
+            <br>
+            <b>ArtCenter Graphic Design </b><b>Department Chair’s Office</b><br>
+            Mark Rothko Poster<br>
+            2023<br>
+            <br>
+            <b>Type Thursday Los Angeles</b><br>
+            Presented TYPO Mexico City branding project to 30 designers.<br>
+            2023<br>
+            <br>
+            <a href="https://www.youtube.com/watch?v=HtRtGYQx480" target="_blank"><b>AIGA Portfolio Festival</b><br>
+                Portfolio presentation to a live audience over Zoom.<br></a>
+                2022<br>
+        </div>
+        <div grid-col="9" grid-pad="2" style="@media only screen and (min-width: 768px) {margin-left: 2rem; margin-right:-2rem;}">
+                Experience<br>
+                <hr>
+                <div class="myrow" style="display: grid; grid-template-columns:33% 67%;">
+                    <div class="mycell" style="padding-right:2em;">
+                        <b>ArtCenter College of Design</b><br>
+                        Remote<br>
+                        2024<br>
+                    </div>
+                    <div class="mycell" style="padding-right:2em;">
+                        <b>Teaching Assistant</b>
+                        <br>
+                        Assisted Professor Gloria Kondrup in her Archetype Press course with group and individual student critiques. Helped students to hand-set wood and metal type for analog letterpress printing.
+                    </div>
+                </div>
+                <br>
+                <div class="myrow" style="display: grid; grid-template-columns:33% 67%;">
+                    <div class="mycell" style="padding-right:2em;">
+                        <b><a href="https://talismanco.com/" target="_blank">TALISMAN</a></b><br>
+                        Remote<br>
+                        2024–Present<br>
+                    </div>
+                    <div class="mycell" style="padding-right:2em;">
+                        <b>Freelance Graphic Designer</b>
+                        <br>
+                        Assisted a team of three designers with brand identity development. Created and refined presentation deck templates for a higher education client. Produced style guidelines and production files for a performing arts client. Analyzed, refined, and presented typographic choices for two clients.
+                    </div>
+                </div>
+                <br>
+                <div class="myrow" style="display: grid; grid-template-columns:33% 67%;">
+                    <div class="mycell" style="padding-right:2em;">
+                        <b>ArtCenter College of Design</b><br>
+                        Pasadena, California<br>
+                        2022–Present<br>
+                    </div>
+                    <div class="mycell" style="padding-right:2em;">
+                        <b>Graphic Designer and Research Assistant</b><br>
+                        Designed a wide array of print, digital, and video communications for events hosted by the Division of Professional Development and Industry Engagement. Researched the career status of 150 recent graduates based on their digital presence to inform the College’s annual curriculum planning.<br>
+                    </div>
+                </div>
+                <br>
+                <div class="myrow" style="display: grid; grid-template-columns:33% 67%;">
+                    <div class="mycell" style="padding-right:2em;">
+                        <b><a href="https://the.ismaili/" target="_blank">The Ismaili Muslim community</a></b><br>
+                        Remote<br>
+                        2021–2023<br>
+                    </div>
+                    <div class="mycell" style="padding-right:2em;">
+                        <b>Lead Graphic Designer</b><br>
+                        Designed the brand identity for Salgirah, an international religious festival across 21 countries in 11 languages, revised annually. Branded signage was displayed in multiple cities, notably at the Dubai World Trade Centre.<br>
+                    </div>
+                </div>
+                <br>
+                <div class="myrow" style="display: grid; grid-template-columns:33% 67%;">
+                    <div class="mycell" style="padding-right:2em;">
+                        <b>ArtCenter College of Design</b><br>
+                        Pasadena, California<br>
+                        2023<br>
+                    </div>
+                    <div class="mycell">
+                        <b>Student Orientation Leader</b><br>
+                        Led script development, directed shoots, and added motion graphics to a five-minute welcome video for new students, in collaboration with three student orientation leaders. Assisted orientation activities for over 600 incoming students and co-hosted a social event for 75 incoming graduate students.
+                    </div>
+                </div>
+                <br>
+                <div class="myrow" style="display: grid; grid-template-columns:33% 67%;">
+                    <div class="mycell" style="padding-right:2em;">
+                        <b>ntrsct designs</b><br>
+                        Remote<br>
+                        2018–2022
+                    </div>
+                    <div class="mycell">
+                        <b>Independent Designer and Founder</b><br>
+                        Operated an independent design studio offering branding, strategy, apparel, and social media design services. Designed deliverables for 12 clients, exploring a variety of visual solutions. Pivoted from operating as a B2C apparel brand to providing B2B design services across multiple industries.
+                    </div>
+                </div>
+                <br>
+                <div class="myrow" style="display: grid; grid-template-columns:33% 67%;">
+                    <div class="mycell" style="padding-right:2em;">
+                        <b>Splunk, Inc.</b><br>
+                        Seattle, Washington<br>
+                        2015–2021<br>
+                    </div>
+                    <div class="mycell">
+                        <b>Software Engineer</b><br>
+                        Led a team of three engineers to develop a data simulation engine for sales staff to demo products to prospective customers. Frequently collaborated across roles, teams, and departments to automate manual tasks. Presented three technical sessions and hosted interactive booths at two conferences.
+                    </div>
+                </div>
+                <div><br>
+                    Professional Development<br>
+                    <hr>
+                    <div class="myrow" style="display: grid; grid-template-columns:33% 67%;">
+                        <div class="mycell" style="padding-right:2em;">
+                            <b>Type Thursday Los Angeles</b><br>
+                            Los Angeles, California<br>
+                            2023–Present<br>
+                        </div>
+                        <div class="mycell">
+                            Facilitate inclusive community events for designers and coordinate venues for typography critiques throughout greater Los Angeles.
+                        </div>
+                    </div>
+                    <br>
+                    <div class="myrow" style="display: grid; grid-template-columns:33% 67%;">
+                        <div class="mycell" style="padding-right:2em;">
+                            <b>AIGA</b><br>
+                            Seattle, Washington<br>
+                            2022–Present<br>
+                        </div>
+                        <div class="mycell">
+                            Volunteered at the 2022 AIGA National Design Conference assisted with event registration, note taking, and supply management.
+                        </div>
+                    </div>
+                    <br>
+                    <div class="myrow" style="display: grid; grid-template-columns:33% 67%;">
+                        <div class="mycell" style="padding-right:2em;">
+                            <b>The Futur</b><br>
+                            Remote<br>
+                            2018–Present<br>
+                        </div>
+                        <div class="mycell">
+                            Courses and over 100 videos on industry insights, business, and the fundamentals of graphic design.
+                        </div>
+                    </div>
+                    <br>
+                    <div>
+                        <div>
+                            Skills<br>
+                            <hr>
+                        </div>
+                        <div class="myrow" style="display: grid; grid-template-columns:33% 67%;">
+                            <div class="mycell" style="padding-right:2em;">
+                                <b>
+                                    <b>Strong Working Knowledge</b><br>
+                                </b>
+                            </div>
+                            <div class="mycell">
+
+                                Illustrator, InDesign, Figma, Premiere Pro, Keynote, After Effects, Midjourney<br>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="myrow" style="display: grid; grid-template-columns:33% 67%;">
+                            <div class="mycell" style="padding-right:2em;">
+                                <b>Familar With</b><br>
+                            </div>
+                            <div class="mycell">
+
+                                Photoshop, Glyphs, TouchDesigner, MadMapper, Blender, LiveSurface, Artivive, Basecamp, Trello, Jira, Google Workspace, Dropbox, Slack<br>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="myrow" style="display: grid; grid-template-columns:33% 67%;">
+                            <div class="mycell" style="padding-right:2em;">
+                                <b>Presentation and Facilitation</b><br>
+                            </div>
+                            <div class="mycell">
+
+                                Strategic thinking, collaboration, copywriting, product management, project management, community building, scrum and agile facilitation<br>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="myrow" style="display: grid; grid-template-columns:33% 67%;">
+                            <div class="mycell" style="padding-right:2em;">
+                                <b>Programming</b>
+                                <br>
+                            </div>
+                            <div class="mycell">
+
+                                JavaScript, p5.js, Node.js, HTML, CSS, React, Python, Java, C, C++, Git<br>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        -->

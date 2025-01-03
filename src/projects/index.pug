@@ -1,0 +1,20 @@
+---
+title: Projects
+description: Shakeel Mohamed is a Graphic Design MFA Candidate at ArtCenter College of Design.
+---
+
+extends ../_includes/layouts/base.pug
+
+block content
+    //- TODO: bring back once play stuff is organized neatly
+    //- +gridCols2()
+    //-     div
+    //-         p
+    //-             a(href"/play")For unpolished work, visit the archives.
+    //- TODO: rework this to collections.home or something; goal is to have multiple blocks of content.
+    //- could be projects, videos, bio, etc.
+    if collections.portfolio
+        +gridCols2()
+            each project in collections.portfolio
+                //- if project not in collections.archive
+                +projectListing(project)

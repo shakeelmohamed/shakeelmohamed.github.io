@@ -2,8 +2,7 @@ https://shakeelmohamed.com/
 https://shakeelmohamed.com/about/
 https://shakeelmohamed.com/blog-archive/
 https://shakeelmohamed.com/blog/
-https://shakeelmohamed.com/break/
-https://shakeelmohamed.com/contact/
+https://shakeelmohamed.com/labyrinth/
 https://shakeelmohamed.com/links/
 https://shakeelmohamed.com/mentions/
 https://shakeelmohamed.com/posts/
@@ -21,6 +20,7 @@ https://shakeelmohamed.com/posts/2016-04-03-notice-the-colors-a-mindfulness-expe
 https://shakeelmohamed.com/posts/2016-04-10-changing-my-git-editor-on-the-fly/
 https://shakeelmohamed.com/posts/2016-04-18-productivity-hack-use-opposite-techniques/
 https://shakeelmohamed.com/posts/2016-05-23-share-solutions-to-your-problems/
+https://shakeelmohamed.com/posts/2017-10-26-reflecting-on-maintainer-burden-group-therapy-nodeinteractive/
 https://shakeelmohamed.com/posts/2017-11-27-how-to-love-yourself/
 https://shakeelmohamed.com/posts/2020-01-21-book-summary-adventures-johnny-bunko/
 https://shakeelmohamed.com/posts/2020-02-10-24-31-days-of-designing-lyric-posters/
@@ -35,8 +35,16 @@ https://shakeelmohamed.com/posts/2021-04-15-my-approach-to-code-reviews/
 https://shakeelmohamed.com/posts/2021-06-10-powerful-lessons-from-splunk/
 https://shakeelmohamed.com/posts/2021-09-08-my-new-hustle-manifesto/
 https://shakeelmohamed.com/posts/2022-05-23-one-year-can-change-your-whole-life/
+https://shakeelmohamed.com/projects/
 https://shakeelmohamed.com/projects/36-days-of-type-2021/
 https://shakeelmohamed.com/projects/BREAK/
 https://shakeelmohamed.com/projects/daily-lyric-posters/
 https://shakeelmohamed.com/projects/inclusion-tee/
-https://shakeelmohamed.com/style-guide/
+https://shakeelmohamed.com/projects/mark-rothko-campaign/
+https://shakeelmohamed.com/projects/midjourney-strategic-rebrand/
+https://shakeelmohamed.com/projects/mindful-roman/
+https://shakeelmohamed.com/projects/planetary-society/
+https://shakeelmohamed.com/projects/referential-mono/
+https://shakeelmohamed.com/projects/salgirah-festival-identity/
+https://shakeelmohamed.com/projects/thesis/
+https://shakeelmohamed.com/projects/typo-mexico-city/

@@ -1,5 +1,11 @@
 var all = [
     {
+        // TODO: need to support italics for magazine title
+        "date": "March 11, 2024",
+        "title": "Interview with Voyage LA Magazine",
+        "url": "https://voyagela.com/interview/daily-inspiration-meet-shakeel-mohamed/"
+    },
+    {
         "date": "June 16, 2023",
         "title": "A year in the life: Graduate Graphic Design student Shakeel Mohamed recaps his first chapter. - @artcenteredu on Instagram",
         "url": "https://www.instagram.com/p/CtjqybbxLWW/"
