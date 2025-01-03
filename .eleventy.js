@@ -48,6 +48,7 @@ module.exports = function(eleventyConfig) {
 
     // TODO: currently hiding the BREAK microsite
     eleventyConfig.ignores.add("src/break");
+    eleventyConfig.ignores.add("src/style-guide.pug");
     // eleventyConfig.addPassthroughCopy("src/break/styles.css");
 
     // Sort all pages for sitemap

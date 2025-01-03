@@ -2,7 +2,6 @@ https://shakeelmohamed.com/
 https://shakeelmohamed.com/about/
 https://shakeelmohamed.com/blog-archive/
 https://shakeelmohamed.com/blog/
-https://shakeelmohamed.com/contact/
 https://shakeelmohamed.com/labyrinth/
 https://shakeelmohamed.com/links/
 https://shakeelmohamed.com/mentions/
@@ -49,4 +48,3 @@ https://shakeelmohamed.com/projects/referential-mono/
 https://shakeelmohamed.com/projects/salgirah-festival-identity/
 https://shakeelmohamed.com/projects/thesis/
 https://shakeelmohamed.com/projects/typo-mexico-city/
-https://shakeelmohamed.com/style-guide/

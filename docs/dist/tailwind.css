@@ -1839,9 +1839,6 @@ select {
 .font-sans {
   font-family: tt-commons-pro, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
-.font-serif {
-  font-family: corporate-a, ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-}
 .text-sizeh2 {
   font-size: 1.5rem;
   line-height: 1.3;
@@ -2498,10 +2495,6 @@ h2.break {
     margin-bottom: 6rem;
   }
 
-  .lg\:mt-0 {
-    margin-top: 0px;
-  }
-
   .lg\:h-screen {
     height: 100vh;
   }
@@ -2517,10 +2510,6 @@ h2.break {
   .lg\:gap-x-8 {
     -moz-column-gap: 2rem;
          column-gap: 2rem;
-  }
-
-  .lg\:pt-0 {
-    padding-top: 0px;
   }
 }
 @media (min-width: 1280px) {

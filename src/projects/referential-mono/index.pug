@@ -41,7 +41,7 @@ block content
 
     +fontTesterImports()
     hr
-    .grid-1.py-8
+    .grid-1.py-8(style="background-color: #D3CFC6; margin: 0 -2rem; padding: 2rem; 2rem;")
         div.fontDemo(id="referential-mono-tester") 
         
         //- TODO: sliders handles are WAY too small for mobile right now
@@ -55,7 +55,7 @@ block content
                     }
                 ];
                 var options = {
-                    initialText: "Start typing here!",
+                    initialText: "<br><br>Start typing here!<br><br>",
                     order: [["fontsize", "lineheight", "letterspacing", "alignment"], "tester"],
                     config: {
                         fontsize: {

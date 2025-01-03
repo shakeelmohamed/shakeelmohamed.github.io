@@ -7,17 +7,18 @@ canonical: "/links"
 extends _includes/layouts/base.pug
 
 block content
-    +gridCols2()
-        div
-            h2 Links
-            +links()
+    .grid-1
+        h2 Links
+        br
+    .grid-2
+        +links()
 
-            //- TODO: bring these back once there’s a new mixin so they look like linktree buttons
-            //- h2 Recent Posts
-            //- +getPosts(true)
-            //- br
-            //- p.subhead Keep reading in the 
-            //-     a(href="/blog-archive") archive.
+    //- TODO: bring these back once there’s a new mixin so they look like linktree buttons
+    //- h2 Recent Posts
+    //- +getPosts(true)
+    //- br
+    //- p.subhead Keep reading in the 
+    //-     a(href="/blog-archive") archive.
 
 mixin links()
     each link in links
