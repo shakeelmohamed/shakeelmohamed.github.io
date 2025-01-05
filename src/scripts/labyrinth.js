@@ -162,7 +162,7 @@ const imgs = [
 // TODO: maybe temp hack... sort by top to avoid abs height mess?
 imgs.sort((a, b) => a.pos.y - b.pos.y);
 
-for (var i = 0; i < imgs.length; i++) {
+for (let i = 0; i < imgs.length; i++) {
     const wrapper = document.createElement('div');
 
     // TODO: onclick -> lightbox, with caption
