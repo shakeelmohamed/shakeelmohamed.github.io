@@ -9,6 +9,8 @@ if !pageTitle
 if !openGraphImage
     - openGraphImage = "/img/opengraph-default.png"
 
+//- TODO: move all libraries to run locally (bcz 100% offline development is the goal)
+
 doctype html
 html(lang="en")
     head
@@ -57,20 +59,23 @@ html(lang="en")
         link(rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png")
         link(rel="manifest" href="/site.webmanifest")
 
-        script(src="/scripts/main.js")
+        link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/material-icons@1.13.12/iconfont/material-icons.min.css")
     //- TODO: remove debug-screens for production
     //- body(class="debug-screens")
     
     //- TODO: temp hack for BREAK, ideally this is applied on all pages
     body(class="bg-white")
         block body
-    script(src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous")
-    //- TODO: could optimize twemoji by pulling it at build time
-    script.
-        twemoji.parse(document.body);
+    
     script(async src="https://www.googletagmanager.com/gtag/js?id=UA-36907845-2")
     script.
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'UA-36907845-2');
+
+    //- TODO: instead of manually creating sliders, might be better to 
+    //- rework https://splidejs.com/ for sliders and do a manual lightbox
+    link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css")
+    script(src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js")
+    script(src="/scripts/main.js")

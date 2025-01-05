@@ -32,7 +32,7 @@ html {
   -moz-tab-size: 4; /* 3 */
   -o-tab-size: 4;
      tab-size: 4; /* 3 */
-  font-family: proxima-nova, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
+  font-family: tt-commons-pro, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
 }
 
 /*
@@ -551,48 +551,332 @@ select {
   min-height: 100vh;
   width: 100vw;
   padding: 0px;
-  font-family: proxima-nova, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: tt-commons-pro, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --tw-text-opacity: 1;
-  color: rgb(17 17 17 / var(--tw-text-opacity));
-        
-        /* TODO: this is carryover from cargo, factor it away please */
-        font-size: 90%;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
+    /* TODO: WHY am I still using tailwind? how does this help?*/
+    /* 2rem = m-8, WHY??? */
     body {
   position: relative;
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   flex-direction: column;
   overflow-x: hidden;
-  -ms-scroll-chaining: none;
-      overscroll-behavior: none;
-  padding: 1rem;
+  overscroll-behavior-y: none;
+  padding: 2rem;
 }
 
-    @media (min-width: 768px) {
+    /* FontSampler */
+    [data-fsjs="alignment"] {
+        display: flex;
+    }
 
-  body {
-    padding: 2rem;
-  }
-}
+    .fsjs-label-text {
+        font-weight: 700;
+    }
 
-    body {
-  font-size: 1rem;
-  line-height: 1.1;
-}
+    .fsjs-skin > .fsjs-wrapper {
+        gap: 2rem;
+    }
 
-    @media (min-width: 768px) {
+    .fsjs-block {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .fontSampler, .fsjs-block-tester {
+        margin: 1rem 0 !important;
+    }
+    .fsjs-button-selected {
+        color: white !important;
+        background-color: black !important;
+    }
+    .fsjs-block-type-buttongroup::nth-child(2) {
+        margin-top: 0.25rem !important;
+    }
 
-  body {
-    font-size: 1.2rem;
-    line-height: 1.2;
-  }
-}
+
+    /* Lightbox hacks     */
+    .gslide-description {
+        display: none !important;
+    }
+    /* TODO:  ugg, many many more CSS tweaks needed to do this in the mobilemenu... punting for now */
+    /* .goverlay {
+        background: white !important;
+    } */
+
+
+    /* START: ROUGH styles for labyrinth */
+    * {
+        box-sizing: border-box;
+    }
+
+    .preserve-3d {
+        transform-style: preserve-3d;
+    }
+
+    [image-gallery-row] {
+        align-items: flex-start;
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    [image-gallery="smgallery"][image-gallery-row] {
+        display: block;
+    }
+
+    [image-gallery="smgallery"] {
+        position: relative;
+        height: 0px;
+    }
+
+    .thumbnail_sizer {
+        height: 0px;
+        width: 100%;
+        position: relative;
+        padding-bottom: 100%;
+        pointer-events: none;
+    }
+
+    .content .page_content:not([contenteditable="true"]) [data-draggable] {
+        pointer-events: auto !important;
+        backface-visibility: hidden;
+    }
+
+    [data-draggable] {
+        visibility: visible;
+        background-color: rgba(0, 0, 0, 0.004);
+    }
+
+    .image-gallery .gallery_card {
+        transform-origin: center center;
+    }
+
+    a.gallery_card, div.gallery_card {
+        position: absolute;
+        pointer-events: auto;
+    }
+
+    .image-gallery .gallery_card_image {
+        width: 100%;
+        position: relative;
+    }
+
+    img {
+        border: 0px;
+        padding: 0px;
+    }
+
+    .content img {
+        float: none;
+        margin-bottom: 0rem;
+        vertical-align: bottom;
+    }
+
+    img.image-zoom {
+        cursor: zoom-in;
+    }
+
+    .image-gallery .gallery_card img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    /* END: ROUGH styles for labyrinth */
+
+    /* START: NEW */
+
+    .logosvg {
+        height: 3.5rem;
+    }
+
+    .newheader, .newfooter {
+        padding-bottom: 1rem;
+
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 2;
+    }
+
+    .mobile-only {
+        display: none;
+    }
+
+    .hamburgerIcon {
+        cursor: pointer;
+    }
+
+    .menuItems {
+        text-align: right;
+        font-weight:bold;
+    }
+
+    .project-meta {
+        padding-bottom: 1rem;
+    }
+
+    .newfooter {
+        padding-top: 2rem;
+    }
+
+    .newheader > div, .newfooter > div {
+        grid-row: 1;
+    }
+
+    .newheader > div:last-child, .newfooter > div:last-child {
+        text-align: right;
+    }
+
+    .grid-1 {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .grid-2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .grid-4 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+
+    h2 {
+        /* TODO: TAILWIND HELL */
+        padding: 0 !important;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.4rem;
+        font-family: tt-commons-pro, sans-serif;
+        font-weight: 400;
+    }
+
+    .labyrinth {
+      position: relative;
+      width: 100vw;
+      min-height: 100vh;
+/*       overflow-y: hidden; */
+      overflow: hidden;
+      transform-origin: 0 0; /* Ensure scaling happens from the top-left corner */
+    }
+
+    .labyrinth > img {
+      position: absolute;
+      cursor: grab;
+      z-index: 1; /* Default z-index */
+      -o-object-fit: contain;
+         object-fit: contain;
+    }
+
+    .labyrinth-icons {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .labyrinth-icons > span.material-icons {
+        font-size: 2.5rem;
+        line-height: 1.2rem;
+    }
+
+    /* TODO:  tailwind is ripping this out? mobile is totally broken */
+    @media only screen and (max-width: 860px) {
+        body {
+            padding: 1rem !important;
+        }
+
+        main {
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+
+            /* TODO: base padding-top should go away, and this rule too; */
+            padding-top: 0 !important;
+        }
+
+        .grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6 {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .keepDesktop {
+            display: grid;
+            flex-direction: row;
+        }
+
+        /* Bandage solution for mobile footer */
+        .newheader > div:last-child, .newfooter > div:last-child {
+            text-align: left;
+        }
+
+        .newheader {
+            display: none;
+        }
+
+        .newfooter {
+            padding-top: 0;
+        }
+
+        .mobile-only {
+            display: block;
+        }
+
+        .hamburgerIcon {
+            max-height: -moz-fit-content;
+            max-height: fit-content;
+            padding: 0.5rem;
+        }
+
+        .menuOpen {
+            min-width: 100vw;
+            min-height: 100vh;
+            margin: -1rem;
+            padding: 1rem;
+            background-color: rgba(0, 0, 0, .9);
+            color: rgba(255, 255, 255, 1);
+            z-index: 99999;
+        }
+
+        .menuItems {
+            display: none;
+        }
+
+        .logo-wraper {
+            height: auto;
+        }
+
+        h2 {
+            margin-bottom: 0.25rem;
+        }
+
+        .fsjs-wrapper {
+            flex-direction: column;
+        }
+    }
+
+    /* END: NEW */
+
+
 
     header, footer {
         /* TODO: may only need md:flex here since children should have flex-grow:1 */
     }
+
+
 
     @media (min-width: 768px) {
 
@@ -656,14 +940,6 @@ select {
   }
 }
 
-    .header-logo {
-  padding-bottom: 1rem;
-  font-family: freight-display-pro, ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  font-weight: 400;
-  font-size: 2.4rem;
-  line-height: 1.2;
-}
-
     section {
   aspect-ratio: 16 / 9;
   width: 100%;
@@ -682,33 +958,38 @@ select {
         line-height: 1.8;
     }
 
+    .video16by9 {
+        aspect-ratio: 16 / 9;
+        width: 100%;
+    }
+
     /* Headings */
     h1 {
   padding-top: 1rem;
   padding-bottom: 1rem;
-  font-size: 2.25rem;
-  line-height: 2.5rem;
+  font-size: 2.5rem;
+  line-height: 1.2;
   font-weight: 700;
 }
     @media (min-width: 768px) {
 
   h1 {
-    font-size: 3rem;
-    line-height: 1;
+    font-size: 2.5rem;
+    line-height: 1.2;
   }
 }
     h2 {
   padding-top: 1rem;
   padding-bottom: 1rem;
   font-size: 1.5rem;
-  line-height: 2rem;
+  line-height: 1.3;
   font-weight: 700;
 }
     @media (min-width: 768px) {
 
   h2 {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
+    font-size: 1.5rem;
+    line-height: 1.3;
   }
 }
     h3 {
@@ -731,25 +1012,30 @@ select {
   line-height: 1.75rem;
 }
     .caption {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
+        font-size: 1rem;
+        color: rgba(0, 0, 0, 0.5);
+    }
 
-    /* Body text style */
-    p,  li {
-  font-weight: 400;
-}
+
     a {
-  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
+        /* TODO:  might be nice to do a different transition, box border trace? */
+        transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+        transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+        transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 150ms;
+    }
+
+
     a:hover {
   --tw-text-opacity: 1;
   color: rgb(255 92 10 / var(--tw-text-opacity));
 }
+
+    a.underline {
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+    }
     
     /* p a {
         @apply underline;
@@ -764,7 +1050,7 @@ select {
   width: 100%;
   border-radius: 0.375rem;
   --tw-bg-opacity: 1;
-  background-color: rgb(17 17 17 / var(--tw-bg-opacity));
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 
@@ -782,6 +1068,8 @@ select {
   margin-top: 1rem;
   margin-bottom: 1rem;
         border-width: thin;
+        border-color: rgba(0, 0, 0, 0.25);
+        border-style: inset;
 }
 
     input {
@@ -1307,6 +1595,9 @@ select {
 .static {
   position: static;
 }
+.fixed {
+  position: fixed;
+}
 .absolute {
   position: absolute;
 }
@@ -1353,26 +1644,23 @@ select {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
-.ml-8 {
-  margin-left: 2rem;
-}
 .mt-10 {
   margin-top: 2.5rem;
 }
 .mb-5 {
   margin-bottom: 1.25rem;
 }
-.ml-0 {
-  margin-left: 0px;
-}
 .mt-2 {
   margin-top: 0.5rem;
 }
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+.mt-4 {
+  margin-top: 1rem;
+}
 .mt-24 {
   margin-top: 6rem;
-}
-.mb-16 {
-  margin-bottom: 4rem;
 }
 .block {
   display: block;
@@ -1382,6 +1670,9 @@ select {
 }
 .flex {
   display: flex;
+}
+.table {
+  display: table;
 }
 .grid {
   display: grid;
@@ -1398,9 +1689,6 @@ select {
 .max-h-screen {
   max-height: 100vh;
 }
-.w-1\/3 {
-  width: 33.333333%;
-}
 .w-32 {
   width: 8rem;
 }
@@ -1415,9 +1703,6 @@ select {
 }
 .max-w-screen-xl {
   max-width: 1280px;
-}
-.flex-grow {
-  flex-grow: 1;
 }
 .grow {
   flex-grow: 1;
@@ -1449,9 +1734,6 @@ select {
 .flex-wrap {
   flex-wrap: wrap;
 }
-.flex-nowrap {
-  flex-wrap: nowrap;
-}
 .place-content-center {
   place-content: center;
 }
@@ -1472,10 +1754,6 @@ select {
 }
 .gap-y-2 {
   row-gap: 0.5rem;
-}
-.gap-x-8 {
-  -moz-column-gap: 2rem;
-       column-gap: 2rem;
 }
 .self-center {
   align-self: center;
@@ -1501,7 +1779,7 @@ select {
 }
 .bg-black {
   --tw-bg-opacity: 1;
-  background-color: rgb(17 17 17 / var(--tw-bg-opacity));
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 .bg-white {
   --tw-bg-opacity: 1;
@@ -1514,10 +1792,6 @@ select {
 .bg-navy {
   --tw-bg-opacity: 1;
   background-color: rgb(0 40 85 / var(--tw-bg-opacity));
-}
-.bg-\[\#ff6700\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 103 0 / var(--tw-bg-opacity));
 }
 .p-8 {
   padding: 2rem;
@@ -1534,11 +1808,15 @@ select {
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
-.pb-2 {
-  padding-bottom: 0.5rem;
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 .pt-4 {
   padding-top: 1rem;
+}
+.pt-0 {
+  padding-top: 0px;
 }
 .pt-8 {
   padding-top: 2rem;
@@ -1546,39 +1824,30 @@ select {
 .pb-12 {
   padding-bottom: 3rem;
 }
-.pb-8 {
-  padding-bottom: 2rem;
-}
-.pt-2 {
-  padding-top: 0.5rem;
-}
-.pb-0\.5 {
-  padding-bottom: 0.125rem;
-}
-.pb-0 {
-  padding-bottom: 0px;
+.pt-1 {
+  padding-top: 0.25rem;
 }
 .pb-1 {
   padding-bottom: 0.25rem;
 }
+.pb-2 {
+  padding-bottom: 0.5rem;
+}
 .text-left {
   text-align: left;
 }
-.text-center {
-  text-align: center;
-}
 .font-sans {
-  font-family: proxima-nova, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: tt-commons-pro, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
-.font-serif {
-  font-family: freight-display-pro, ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-}
-.text-2xl {
+.text-sizeh2 {
   font-size: 1.5rem;
-  line-height: 2rem;
+  line-height: 1.3;
 }
 .font-bold {
   font-weight: 700;
+}
+.lowercase {
+  text-transform: lowercase;
 }
 .capitalize {
   text-transform: capitalize;
@@ -1588,7 +1857,7 @@ select {
 }
 .text-black {
   --tw-text-opacity: 1;
-  color: rgb(17 17 17 / var(--tw-text-opacity));
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 .text-white {
   --tw-text-opacity: 1;
@@ -1602,6 +1871,13 @@ select {
   --tw-text-opacity: 1;
   color: rgb(0 40 85 / var(--tw-text-opacity));
 }
+.underline {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+.opacity-40 {
+  opacity: 0.4;
+}
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
@@ -1609,6 +1885,11 @@ select {
 }
 .outline {
   outline-style: solid;
+}
+.ring {
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
 .transition {
   transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
@@ -1626,20 +1907,19 @@ select {
 /* Typography plugin customization */
 /* TODO: align these with default headings... but scaled down a bit; */
 .prose {
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.5;
 }
-.prose h1 {
-  font-family: freight-display-pro, ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  font-weight: 400;
-}
+/*  .prose h1 {
+        @apply font-serif font-light;
+    } */
 .prose h2,  .prose h3,  .prose h4,  .prose h5 {
   margin-top: 0.125rem;
   margin-bottom: 0.125rem;
 }
-.prose p,  .prose li {
-  font-weight: 400;
-}
+/* .prose p, .prose li {
+        @apply font-light;
+    } */
 .prose a {
   transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
@@ -1651,12 +1931,6 @@ select {
   --tw-text-opacity: 1;
   color: rgb(255 92 10 / var(--tw-text-opacity));
 }
-.prose a {
-  font-weight: 400;
-}
-.prose strong, .prose b {
-/*         @apply; */
-    }
 /* Don't automatically add quotes to a blockquote (from markdown) */
 .prose blockquote p:first-of-type::before,  .prose blockquote p:last-of-type::after {
   --tw-content: none;
@@ -1720,6 +1994,8 @@ h2.break {
 h2.break {
         line-height: normal;
     }
+
+/* TODO: this utilities layer will be so helpful... can re-roder and refactor above greatly */
 
 /*********************************/
 /* Styles lifted from convertkit */
@@ -2165,10 +2441,6 @@ h2.break {
     margin-left: 2rem;
   }
 
-  .md\:mr-0 {
-    margin-right: 0px;
-  }
-
   .md\:mb-12 {
     margin-bottom: 3rem;
   }
@@ -2192,10 +2464,6 @@ h2.break {
   .md\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
-  }
-
-  .md\:text-center {
-    text-align: center;
   }
 }
 @media (min-width: 1024px) {
@@ -2227,10 +2495,6 @@ h2.break {
     margin-bottom: 6rem;
   }
 
-  .lg\:mt-0 {
-    margin-top: 0px;
-  }
-
   .lg\:h-screen {
     height: 100vh;
   }
@@ -2243,13 +2507,9 @@ h2.break {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .lg\:gap-x-16 {
-    -moz-column-gap: 4rem;
-         column-gap: 4rem;
-  }
-
-  .lg\:pt-0 {
-    padding-top: 0px;
+  .lg\:gap-x-8 {
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
   }
 }
 @media (min-width: 1280px) {

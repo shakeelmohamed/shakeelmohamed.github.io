@@ -1,0 +1,97 @@
+---
+layout: project
+title: "Referential Mono Typeface"
+description: [todo]
+openGraphImage: "https://freight.cargo.site/w/1920/q/75/i/8a800589d397450713e2deb7a4e58b442d0492ea4ae78713a2494c6617f92eb3/Referential-Mono---cargo---cover.png"
+when: 2023
+tools: Glyphs, Illustrator, InDesign, Figma
+tags:
+    - project
+    - portfolio
+media: 
+    - type design
+goal: design a modular typeface, infused with personal meaning.
+recognition: Hoffmitz Milken Center for Typography (HMCT) Newsletter 2023 holiday greetings (featured typeface).
+position: 8
+---
+
+include ../../_includes/molecules.pug
+include ../../_includes/project_utils.pug
+
+block content
+    //- TODO: modularize the font stuff
+
+    //- TODO: captions
+
+    .grid-2
+        div
+            p Referential Mono is built on a 5x5 grid, inspired by early computing and Islamic History. As a developer and Muslim, this project was an opportunity to combine many aspects of my identity in one.
+            br
+            p Special thanks to: Simon Johnston, Lavinia Lascaris, Noah Cousineau, with additional feedback from Milka Broukhim, Greg Lindy of Lux Typo, and Wael Morcos.
+        div
+            p HMCT graciously featured the typeface in their December 2023 holiday greeting email newsletter.
+            br
+            p Ongoing work includes: an Arabic version, motion design, and generative typography.
+    
+    .grid-1
+        +portfolioImg("https://freight.cargo.site/w/1920/q/94/i/8a800589d397450713e2deb7a4e58b442d0492ea4ae78713a2494c6617f92eb3/Referential-Mono---cargo---cover.png", "", "")
+    .grid-2
+        +portfolioImg("https://freight.cargo.site/w/1920/q/94/i/0cf1e3fdf14c6fd94e9d215d76aed6b98e9328f3446959fe87a7d3e9913098df/Referential-Mono---cargo---1.png", "", "")
+        +portfolioImg("https://freight.cargo.site/w/1920/q/94/i/d15c7324107043c959702cbbeb10e649754fe0c9a0f91549d6fa307231f49140/Referential-Mono---cargo---2.png", "", "")
+
+    +fontTesterImports()
+    hr
+    .grid-1.py-8(style="background-color: #D3CFC6; margin: 0 -2rem; padding: 2rem; 2rem;")
+        div.fontDemo(id="referential-mono-tester") 
+        
+        //- TODO: sliders handles are WAY too small for mobile right now
+        //- TODO: modularize this later for mindful roman also
+        script.
+            function fontTester() {
+                var fonts = [
+                    {
+                        "name": "Referential Mono",
+                        "files": ["./ReferentialMono0.970_2-Regular.woff2"]
+                    }
+                ];
+                var options = {
+                    initialText: "<br><br>Start typing here!<br><br>",
+                    order: [["fontsize", "lineheight", "letterspacing", "alignment"], "tester"],
+                    config: {
+                        fontsize: {
+                            min: 16,
+                            init: 48,
+                            max: 200
+                        },
+                        alignment: {
+                            init: "center"
+                        },
+                        letterspacing: {
+                            unit: "%"
+                        }
+                    }
+                };
+                var fontDemo = new Fontsampler(document.getElementById("referential-mono-tester"), fonts, options);
+                FontsamplerSkin(fontDemo);
+                fontDemo.init();    
+            }
+            window.addEventListener('load', fontTester);
+    hr
+
+    .grid-1
+        +portfolioImg("https://freight.cargo.site/w/1920/q/94/i/4530bfa34148c636ba077d327f517c5ec00983ad2a32674be28e2d923a24db05/Referential-Mono---cargo---3.png", "", "")
+    .grid-2
+        +portfolioImg("https://freight.cargo.site/w/1920/q/94/i/ff7beda2d6b7b3e5606c0c6faa82b32ce02ab03c45b41a461c0f9382e85b59ff/Referential-Mono---cargo---4.png", "", "")
+        +portfolioImg("https://freight.cargo.site/w/1920/q/94/i/7d2e882060498204ec2a8e1bd60dcd37af989b688bc07b3f10d412400768d0bf/Referential-Mono---cargo---5.png", "", "")
+    .grid-1
+        +portfolioImg("https://freight.cargo.site/w/1920/q/94/i/74201ee3c8b821b1b7c4f8acfc0fce9abf06cf02e31cbbb27dbca09fb42744a8/Referential-Mono---cargo---6.png", "", "")
+    .grid-1
+        +portfolioImg("https://freight.cargo.site/w/1920/q/94/i/6b1674272c9491c08d486d6c0c4831742d4e28400fd5cfcd2ed8f33b652e24a1/Referential-Mono---cargo---7.png", "", "")
+
+    //- TODO: HMCT image is 1080 / the other is 1200
+    .grid-2
+        +portfolioImg("https://freight.cargo.site/w/1920/q/94/i/ffa0043ee0c7636b374abfa55e6a40a1d3bb3ad0bc6357c50d1ff6bc2d892d70/HMCT_holiday_greetings.png", "", "Referential Mono was one of five typeface selected for HMCT’s 2023 holiday greetings email and social media posts")
+        +portfolioImg("https://freight.cargo.site/w/1920/q/94/i/2a1568998be27e9306b5d7507e3ac0ee0871a875bcdd6bb3e065c798badb38ba/Referential-Mono---cargo---9.png", "", "Final classroom critique with Simon Johnston and Lavinia Lascaris")
+
+    .grid-1
+        +portfolioImg("https://freight.cargo.site/w/1920/q/94/i/1a208d5f909ca1399da00ea3b08fbf467796e28c7012ba61d6fde4cc0462994e/Referential-Mono---cargo---18.png", "", "I began designing the Arabic character set which has a different set of complexities. In this first draft I remained rigid to the same grid as the Latin character set (7x7 without letter-spacing since Arabic is a connected script). In doing so, I found some forms do not reduce down as nicely as I would like. The next revision I will try is on a 14x14 grid, subdividing the current grid in half.")
