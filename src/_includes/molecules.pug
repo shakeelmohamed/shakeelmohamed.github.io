@@ -49,10 +49,11 @@ mixin hero()
 //-             script document.write("&copy; " + new Date().getFullYear() + " Shakeel Mohamed")   
 
 //- TODO: remix so blog listing can reuse part of this
+//- TODO: use coverImg instead of openGraphImage please
 mixin projectListing(project)
     div.mb-2
         a(href=project.url)
-            img.portfolio-cover.w-full(src=project.data.openGraphImage alt="Cover image for " + project.data.title + " project")
+            img.portfolio-cover.w-full(src=project.data.openGraphImage, alt="Cover image for " + project.data.title + " project")
         div.pt-1
             div(class="text-sizeh2 font-bold")
                 h2
