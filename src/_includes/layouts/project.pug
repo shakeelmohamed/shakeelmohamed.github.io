@@ -8,9 +8,10 @@ include ../project_utils.pug
 
 //- Think of the content as rows
 block content
-    //- TODO: show hero image at he top, many people do this (basically opengraph)
-    //- .grid-1
-    //-     +portfolioImg(openGraphImage, "", "")
+    if coverImg
+        .grid-1
+            +portfolioImg(coverImg, name + " cover image", "")
+            br
     .grid-1
         h1 #{title}
         div.project-meta
@@ -25,6 +26,3 @@ block content
             if recognition
                 +projectMeta("Recognition", recognition)
     !=content
-
-//- TODO: I don’t always want this... the fallback is the site’s OG image, yikes!
-//- img.w-full.py-2(src=openGraphImage)
