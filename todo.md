@@ -1,12 +1,13 @@
 # TODO
 
-- [ ] Add meta descriptions for all project pages 
-- [ ] Rework projects to have a cover.png shown at the top (ideally its the same image as the OG, just scaled up + higher res)
-- [ ] Perhaps use cover.png instead of opengraph for project thumbnails
 - [ ] Salgirah + others, fix weird images sizes + replace all content
+- [ ] Add meta descriptions for all project pages 
+- [ ] Rework projects to have a cover.png shown at the top (ideally its the same image as the OG, just scaled up + higher res) -> scale should be about 1920x1200, the OG size feels too wide for cover images
+- [ ] Perhaps use cover.png instead of opengraph for project thumbnails
 - [ ] add avif/etc optimized loadtime support
 - [ ] figure out how to generate the tag pages (e.g. .com/branding)
 - [ ] figure out how to show extra process (another slider, hidden section, etc.)
+- [ ] Fix issues with mobile font tester
 
 
 ## Done
