@@ -8,6 +8,8 @@
 - [ ] figure out how to generate the tag pages (e.g. .com/branding)
 - [ ] figure out how to show extra process (another slider, hidden section, etc.)
 - [ ] Fix issues with mobile font tester
+- [ ] Can include small images for AIGA talks on about page... BELOW the resume area
+- [ ] nice to have: setup a contact card button for grad show: https://vcard.link/card
 
 
 ## Done
