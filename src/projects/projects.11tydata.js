@@ -75,7 +75,7 @@ module.exports = {
                     
                     // console.dir(data.collections.portfolio[nextIdx]);
                 } catch (e) {
-                    console.error("prev", prevIdx ? prevIdx: "NULL", "cur", curIdx, "next", nextIdx);
+                    console.error("prev", prevIdx || "NULL", "cur", curIdx, "next", nextIdx);
                     console.error(e);
                     throw e;
                 }
