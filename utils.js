@@ -33,6 +33,9 @@ module.exports = {
             return data.openGraphImage;
         }
     },
+    capitalizeFirstLetter: function(val) {
+        return String(val).charAt(0).toUpperCase() + String(val).slice(1);
+    },
     gitDates: async function(path) {
         function epochToDate(epoch) {
             let ret = new Date(0);

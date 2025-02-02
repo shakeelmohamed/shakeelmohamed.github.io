@@ -164,12 +164,8 @@
         font-weight:bold;
     }
 
-    .project-meta {
+    .project-meta, .project-content {
         padding-bottom: 1rem;
-    }
-
-    .newfooter {
-        padding-top: 2rem;
     }
 
     .newheader > div, .newfooter > div {
@@ -391,6 +387,7 @@
     .caption {
         font-size: 1rem;
         color: rgba(0, 0, 0, 0.5);
+        margin-top: 0.25rem;
     }
 
 

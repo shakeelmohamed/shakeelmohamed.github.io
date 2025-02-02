@@ -26,3 +26,11 @@ block content
             if recognition
                 +projectMeta("Recognition", recognition)
     !=content
+
+    //- TODO: figure out how the design for mobile...
+    if relatedProjects.prev && relatedProjects.next
+        div
+            hr
+            .grid-2.keepDesktop
+                +prevProject(relatedProjects.prev)
+                +nextProject(relatedProjects.next)

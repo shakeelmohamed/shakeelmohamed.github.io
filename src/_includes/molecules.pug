@@ -60,7 +60,7 @@ mixin projectListing(project)
                     a(href=project.url) #{project.data.title}
             //- TODO: need a max-width here so the lines aren't super long
             div.project-meta
-                p.opacity-40.capitalize(style="text-transform: lowercase;")!= project.data.mediaLinks
+                p(style="opacity: 0.4;")!= project.data.mediaLinks
 
 //- TODO: design this component
 mixin getPosts(recent=false)

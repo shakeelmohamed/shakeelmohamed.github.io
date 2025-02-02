@@ -22,7 +22,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/CNAME");
 
     eleventyConfig.addWatchTarget("src/**/*");
-    eleventyConfig.setWatchThrottleWaitTime(300);
+    eleventyConfig.setWatchThrottleWaitTime(100);
     
     // Custom markdown processor
     let markdownIt = require("markdown-it");
