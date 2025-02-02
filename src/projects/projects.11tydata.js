@@ -44,7 +44,7 @@ module.exports = {
         mediaString: data => utils.capitalizeFirstLetter((data.media || []).sort().join(", ")),
         mediaLinks: data => utils.capitalizeFirstLetter((makeLinks(data.media))),
         relatedProjects: data => {
-            if (data.collections.portfolio.length === 0 || data.title === "Projects") {
+            if (data.collections.portfolio.length === 0 || data.title === "Projects") return;
             console.log("================================");
             // TODO: should be able to do some simple math now
             console.log("Total portfolio projects", data.collections.portfolio.length);
