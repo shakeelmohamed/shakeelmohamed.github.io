@@ -21,7 +21,6 @@ function makeLinks(media) {
 
 function nextIndex(cur, len) {
     return (cur + 1) % len;
-
 }
 
 function previousIndex(cur, len) {
