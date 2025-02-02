@@ -20,8 +20,8 @@ function makeLinks(media) {
 }
 
 function nextIndex(cur, len) {
-    let mod = ((cur + 1) % len);
-    return mod;
+    return (cur + 1) % len;
+
 }
 
 function previousIndex(cur, len) {
