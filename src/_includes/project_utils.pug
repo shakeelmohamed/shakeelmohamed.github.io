@@ -1,9 +1,14 @@
+//- TODO: there has to be a better way to do this...
 mixin projectMeta(key, value)
     p
         span.bold #{key}:&nbsp;
-        | #{value}
+        | #{(function(val){return String(val).charAt(0).toUpperCase() + String(val).slice(1);})(value)}
 
-mixin portfolioImg(url, alt, caption)
+mixin caption(cap)
+    if cap
+        p.caption !{cap}
+
+mixin portfolioImg(url, alt, cap)
     //- TODO: think about lightbox behavior, do I want a full gallery?
     //- what is the behavior for single images? need a unique id for each then...
     //- 
@@ -12,16 +17,14 @@ mixin portfolioImg(url, alt, caption)
     //- Can do something similar to how sliders work w/ fullpath()
     
     if url
-        div(style="padding-bottom: 1rem;")
+        .project-content
             img.lightbox(src=url, alt=alt)
-            if caption
-                p.caption= caption
+            +caption(cap)
 
-mixin imgForSlider(url, alt, caption)
-    div(style="padding-bottom: 1rem;")
+mixin imgForSlider(url, alt, cap)
+    .project-content
         img(src=url, alt=alt)
-        if caption
-            p.caption= caption
+        +caption(cap)
 
 mixin slider()
     .project-slider
@@ -35,24 +38,21 @@ mixin slider()
 //- full screen larger text, maybe a blockquote... thatline for inspo
 
 //- TODO: move this CSS where it belongs
-mixin inDesign(url, caption)
-    div
+mixin inDesign(url, cap)
+    .project-content
         iframe.video16by9(src=url frameborder="0" allowfullscreen="")
-        if caption
-            p.caption= caption
+        +caption(cap)
 
-mixin youtube(url, caption)
-    div(style="padding-bottom: 1rem;")
+mixin youtube(url, cap)
+    .project-content
         iframe.video16by9(src=url title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="")
-        if caption
-            p.caption= caption
+        +caption(cap)
 
-mixin video(url, caption)
-    div(style="padding-bottom: 1rem;")
+mixin video(url, cap)
+    .project-content
         video.video16by9(width="1920" height="1080" controls="" data-video="0")
             source(src=url type="video/mp4")
-        if caption
-            p.caption= caption
+        +caption(cap)
 
 
 mixin fontTesterImports()
@@ -62,3 +62,24 @@ mixin fontTesterImports()
 
 //- mixin fontTester()
 //-     
+
+mixin projectBreadcrumb(proj, direction)
+    - var align = direction == "Next" ? "right" : "left";
+    - var arrow_symbol = direction == "Next" ? "arrow_forward" : "arrow_back";
+
+    div
+        a(href=proj.url)
+            p.bold(style="text-align:"+align+";")
+                if direction == "Next"
+                    | #{proj.data.title} &nbsp;
+                    span.material-icons(style="vertical-align: text-bottom;") #{arrow_symbol}
+                else
+                    span.material-icons(style="vertical-align: text-bottom;") #{arrow_symbol}
+                    | &nbsp; #{proj.data.title}
+            p.caption(style="text-align:"+align+";") #{proj.data.mediaString}
+
+mixin prevProject(proj)
+    +projectBreadcrumb(proj, "Previous")
+
+mixin nextProject(proj)
+    +projectBreadcrumb(proj, "Next")

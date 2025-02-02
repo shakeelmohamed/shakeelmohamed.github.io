@@ -4,6 +4,7 @@ block body
     +headernew()
     main.my-4
         block content
+        hr(style="margin-bottom:0 !important;")
     +footernew()
 
 //- TODO: mobile footer
@@ -58,10 +59,11 @@ mixin headernew()
 //- TODO: bring back Designed and developed with ✨emotion✨.
 
 mixin footernew()
-    .newfooter.grid-4
-        div(style="font-weight: normal;")
-            hr.mobile-only
-            script document.write("&copy; " + new Date().getFullYear() + " Shakeel Mohamed.")
+    .newfooter.grid-4(style="padding-bottom: 0 !important;")
+        div
+            br.mobile-only
+            a.logo-wrapper(href="/")
+                script document.write("&copy; " + new Date().getFullYear() + " Shakeel Mohamed.")
         div
             a(href=metadata.social.Instagram, target="_blank") Instagram
         div
