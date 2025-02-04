@@ -48,7 +48,6 @@ module.exports = function(eleventyConfig) {
 
     // TODO: currently hiding the BREAK microsite
     eleventyConfig.ignores.add("src/break");
-    eleventyConfig.ignores.add("src/style-guide.pug");
     // eleventyConfig.addPassthroughCopy("src/break/styles.css");
 
     // Sort all pages for sitemap
@@ -98,10 +97,12 @@ module.exports = function(eleventyConfig) {
         });
     });
 
+    // TODO: media “tags”, basically want to create a collection per data.media value
+
     /**
      * tags for design projects:
-     *     - portfolio - shown on homepage
-     *     - project - this is a design project
+     *     - portfolio - shown on homepage [done]
+     *     - project - this is a design project [I think done]
      *     - archive - TODO: do not show this project except by permalink?
      */
 
