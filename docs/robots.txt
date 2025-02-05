@@ -6,6 +6,7 @@ Disallow: /beta
 Disallow: /src
 Disallow: /angular-geocoding-demo
 Disallow: /htmlslyde
+Disallow: /projects/salgirah-festival-identity
 
 
 Sitemap: https://www.shakeelmohamed.com/sitemap.txt

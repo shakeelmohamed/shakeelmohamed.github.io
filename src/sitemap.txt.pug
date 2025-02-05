@@ -5,5 +5,6 @@ eleventyExcludeFromCollections: true
 ---
 
 each page in collections.sitemap
-    | #{metadata.baseurl + page.url}
-    |
+    unless page.url == "/projects/salgirah-festival-identity/"
+        | #{metadata.baseurl + page.url}
+        |
