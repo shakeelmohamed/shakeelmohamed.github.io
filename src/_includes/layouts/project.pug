@@ -27,6 +27,12 @@ block content
                 +projectMeta("Recognition", recognition)
     !=content
 
+    if thanks
+        .grid-2
+            div
+                p.bold Acknowledgements
+                p #{thanks}
+
     //- TODO: figure out how the design for mobile...
     if relatedProjects.prev && relatedProjects.next
         div

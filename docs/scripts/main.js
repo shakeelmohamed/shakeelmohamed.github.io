@@ -159,7 +159,7 @@ function makeSliders() {
 // TODO: would be nice to add fade transitions, maybe a better way to do this
 // TODO: can allow an optional timer value, fallback to 2000ms
 function makeCarousel(selector) {
-    console.log("makeCarousel", selector);
+    // console.log("makeCarousel", selector);
     let newGallery = makeGallery(fullPath(selector) + " > div > img");
     carouselGalleries.push(newGallery);
     if (!selector || !selector.children) {
@@ -171,7 +171,7 @@ function makeCarousel(selector) {
     };
 
     newCarousel.next = function () {
-        console.log("next");
+        // console.log("next");
         for (let i = 0; i < this.slides.length; i++) {
             if (i === this.slideIndex) {
                 this.slides[i].style.display = "block";
