@@ -75,13 +75,15 @@ block content
         //- TODO: fix file extensions, this is crazy
         //- TODO: bring in Sean Adams img here instead; Cheryl Miller
         div(style="grid-column: 3 / 5;")
-            .grid-3.lightbox-album.keepDesktop(style="gap: 1rem;")
-                img(src="./img/1.jpg")
-                img(src="./img/2.png")
-                img(src="./img/3.jpg")
-                img(src="./img/4.jpg")
-                img(src="./img/5.jpg")
-                img(src="./img/6.jpg")
+            .grid-4.lightbox-album.keepDesktop(style="gap: 1rem;")
+                img(src="./img/Debbie_Millman.png")
+                img(src="./img/Wael_Morcos.png")
+                img(src="./img/Brian_Collins.png")
+                img(src="./img/Louise_Sandhaus.png")
+                img(src="./img/Chris_Do.png")
+                img(src="./img/April_Greiman.png")
+                img(src="./img/Cheryl_Miller.png")
+                img(src="./img/Iddris_Sandu.png")
     
     br
     hr
@@ -90,7 +92,8 @@ block content
         div
             p.caption Experience
             br
-            +experience("Lead Graphic Designer (Annually)", "The Ismaili Muslim Community", "Remote", "10.2021–10.2024")
+            //- TODO: how can I combine all freelance with multiple sub-sections per client?
+            +experience("Freelance Graphic Designer (Annually)", "The Ismaili Muslim Community", "Remote", "10.2021–10.2024")
             +experience("Freelance Graphic Designer", "TALISMAN", "Remote", "07.2024–08.2024")
             +experience("Founder", "ntrsct designs", "Remote", "02.2018–12.2022")
             +experience("Software Engineer", "Splunk, Inc.", "Seattle, Washington", "06.2015–04.2021")
