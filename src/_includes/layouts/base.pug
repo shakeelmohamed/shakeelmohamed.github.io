@@ -2,7 +2,7 @@ extends ./super.pug
 
 block body
     +headernew()
-    main.my-4
+    main.mb-4
         block content
         hr(style="margin-bottom:0 !important;")
     +footernew()
@@ -29,31 +29,92 @@ mixin headernew()
             h2
                 a(href="/projects/thesis") Thesis
             h2
-                a(href="/labyrinth") Labyrinth
+                a(href="/labyrinth") Experiments
             h2
                 a(href="/about") About
             br
             h2
                 a(href="mailto:" + metadata.author.email, target="_blank") #{metadata.author.email}
         hr.mobile-only
-    div.newheader.grid-4
-        div
-            //- TODO: logo sizing is WIP, find a better way to match the height of 2 header lines
-            .logo-wrapper
-                a(href="/")
-                    img.logosvg(src="/img/Shakeel_Mohamed_wordmark.svg" alt="Shakeel Mohamed wordmark logo set in the Mindful Roman typeface which he designed")
-        //- spacer div
-        div.
-        div
+    div.newheader.sticky.top-0
+        .grid-4
             div
-                a(href="/projects/thesis") Thesis
+                //- TODO: logo sizing is WIP, find a better way to match the height of 2 header lines
+                .logo-wrapper
+                    a(href="/")
+                        img.logosvg(src="/img/Shakeel_Mohamed_wordmark.svg" alt="Shakeel Mohamed wordmark logo set in the Mindful Roman typeface which he designed")
+            //- div
+            //-     br
+            //-     p
+            //-         strong Graphic Designer:&nbsp;
+            //-         | Branding, typography, leadership
+            div.
             div
-                a(href="/labyrinth") Labyrinth
-        div
-            div
-                a(href="mailto:" + metadata.author.email, target="_blank") #{metadata.author.email}
-            div
-                a(href="/about") About
+                div.pb-4
+                    p
+                        strong Graphic Designer:&nbsp;
+                        | Branding, typography, leadership
+                div
+                    //- TODO: how can I avoid breaking between the icon and word?
+                    p
+                        strong
+                            a(href="/projects" style="margin-right: 4rem;")
+                                span.material-icons(style="font-size: 1rem; padding-right: 0.25rem;") public
+                                | Work
+                            | &nbsp;
+                            a(href="/labyrinth")
+                                span.material-icons(style="font-size: 1rem; padding-right: 0.25rem;") swap_calls
+                                | Experiments
+                        
+            div(style="text-align:right;")
+                div.pb-4
+                    p
+                        strong
+                            a(href="mailto:" + metadata.author.email, target="_blank") #{metadata.author.email}
+                div
+                    p
+                        strong
+                            a(href="/about") About
+        hr(style="margin-bottom: 0.5rem;")
+        //- div(style="grid-column: 3 / 5;")
+        //-     .grid-2(style="margin-bottom:0;")
+        //-         div
+        //-             div
+        //-                 strong
+        //-                     a(href="/projects") Work
+        //-             div
+        //-                 strong
+        //-                     a(href="/labyrinth") Experiments
+        //-         div(style="text-align:right;")
+        //-             div
+        //-                 strong
+        //-                     a(href="mailto:" + metadata.author.email, target="_blank") #{metadata.author.email}
+        //-             div
+        //-                 strong
+        //-                     a(href="/about") About
+        //- div(style="grid-column: 3 / 5;")
+        //-     .grid-2(style="margin-bottom:0;")
+        //-         div
+        //-             strong
+        //-                 a(href="/labyrinth") Experiments
+        //-         div(style="text-align:right;")
+        //-             div
+        //-                 strong
+        //-                     a(href="mailto:" + metadata.author.email, target="_blank") #{metadata.author.email}
+        //-             div
+        //-                 strong
+        //-                     a(href="/about") About
+        //-     .grid-1
+        //-         p
+        //-             //- TODO: thesis should become a project soon
+        //-             //- a(href="/projects/thesis") Thesis
+        //-             strong Work:&nbsp;
+        //-             each project in collections.portfolio
+        //-                 span
+        //-                     a(href=project.url) #{project.data.short}
+        //-                 span ,&nbsp;
+        //-             span
+        //-                 a(href="/projects/thesis") Thesis
 
 //- TODO: bring back +mailingListForm()
 //- TODO: bring back Designed and developed with ✨emotion✨.
@@ -68,5 +129,5 @@ mixin footernew()
             a(href=metadata.social.Instagram, target="_blank") Instagram
         div
             a(href=metadata.social.LinkedIn, target="_blank") LinkedIn
-        div
+        div(style="text-align:right;")
             a(href="mailto:" + metadata.author.email, target="_blank") #{metadata.author.email}

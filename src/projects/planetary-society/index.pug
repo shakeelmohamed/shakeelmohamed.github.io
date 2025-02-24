@@ -1,6 +1,7 @@
 ---
 layout: project
 title: "Planetary Society Rebrand"
+short: Planetary Society
 tagline: [todo]
 description: "Bringing a philosophical and meditative approach to space exploration"
 openGraphImage: "./img/Planetary Society - opengraph.png"
@@ -8,32 +9,43 @@ when: 2024
 tools: Illustrator, Photoshop, InDesign, After Effects, Glyphs, three.js, Houdini, Keynote, Figma
 tags:
     - project
+    - portfolio
 media: 
     - branding
     - strategy
     - motion graphics
     - type design
     - creative coding
-goal: "bring a philosophical and meditative approach to space exploration"
-position: 5
+goal: "Bring philosophical and meditative ideas into the visual language of space exploration"
+recognition: "ArtCenter student gallery"
+thanks: "Special thanks to instructors Stephen Serrato and Jack McEntee, Andrew Pauly of The Planetary Society, and alumni Carolina Uscategui"
+position: 3
 ---
 include ../../_includes/project_utils.pug
 
-//- TODO: add portfolio tag once remaining content is added
 
 block content
     .grid-2
         div
             p Planetary Society is a non-profit organization focused on advocacy for space exploration and based in Pasadena, California. Bill Nye is currently their CEO.
-            br
-            p Special thanks to: Andrew Pauly of The Planetary Society, Stephen Serrato, Carolina Uscategui, and Jack McEntee.
-        div
             p Though the Planetary Society focused on space enthusiasts in general, I wanted to expand that a bit. By exploring the profound human experience of our relationship to the massive scale of the cosmos. 
-            p I also created a special brand style for the Society’s 45th anniversary including a custom modular and variable typeface inspired by planetary orbits. For the 45th anniversary I envisioned a weekend celebration event on Catalina Island.
+            p Using a primary serif typeface, all brand touchpoints take on an elevated feeling.
+        div
+            p Removing “The” from the organization’s name allowed for a more recognizable shorthand.
+            p I also designed a special brand style for the Society’s 45th anniversary including a custom modular and variable typeface inspired by planetary orbits. For the 45th anniversary I envisioned a weekend celebration event on Catalina Island.
 
     //- TODO: production work to resize all images for this project
     //- TODO: need jacket mockups somehow in context
     .grid-1
-        +portfolioImg("./img/Planetary_Society_posters_Paseo_Colorado.png", "Planetary Society posters at Paseo Colorado outdoor mall in Pasadena, California", "Planetary Society posters at Paseo Colorado outdoor mall")
+        +portfolioImg("./img/TPS - 1.png", "Planetary Society posters at Paseo Colorado outdoor mall in Pasadena, California", "Planetary Society posters at Paseo Colorado outdoor mall.")
+        +portfolioImg("./img/Planetary_Society_logo_reveal.gif", "", "Logo reveal animation inspired by the big bang and invention of Lightsail—a member-funded invention by The Planetary Society, enabling spacecraft to propel using only sunlight.")
+        +portfolioImg("./img/TPS - 2.png", "", "Two-tone business card system.")
+        +portfolioImg("./img/TPS - 8.png", "", "A manifesto poster for Planetary Society HQ, serving as an inspirational reminder for employees.")
+        //- +video("./img/Planetary_Society_logo_reveal.mp4", "Logo reveal animation inspired by the big bang and invention of Lightsail")
     .grid-1
-        +video("./img/Planetary_Society_logo_reveal.mp4", "Logo reveal animation inspired by the big bang and invention of Lightsail")
+        //- TOD: can I mock up the metallic poster that I wanted to print? (yes)
+        +portfolioImg("./img/TPS - 4.png", "", "Promotional posters for a 45th anniversary retreat on Catalina Island. The 45th anniversary identity takes on a distinct color palette and typographic voice.")
+        +portfolioImg("./img/TPS - 3.png", "", "Modular typeface inspired by planetary orbits. The new colors are inspired by lush seascapes on Catalina Island.")
+        +portfolioImg("./img/TPS - 9.png", "", "Event tickets for general admission and Planetary Support (VIP) levels of donors.")
+        
+        
