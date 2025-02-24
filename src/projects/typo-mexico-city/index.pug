@@ -1,12 +1,11 @@
 ---
 layout: project
 title: "TYPO Mexico City Conference Identity"
-short: TYPO Mexico City
-tagline: [todo]
-description: Identity design for a fictional design conference in Mexico City.
+short: "TYPO Mexico City"
+description: "Identity design for a fictional design conference in Mexico City."
 openGraphImage: "./img/TYPO - opengraph.png"
 when: 2023
-tools: InDesign, Illustrator, Photoshop
+tools: InDesign, Illustrator, Photoshop, Artivive, After Effects
 tags:
     - project
     - portfolio
@@ -15,12 +14,13 @@ media:
     - posters
     - merchandise
     - augmented reality
-    - motion
-goal: "To embrace the idea of post-pandemic community building through a design conference."
+    - motion graphics
+goal: "To express the idea of post-pandemic community building for a design conference identity."
 recognition: "Selected to present this project at a Type Thursday LA meetup."
 thanks: "Special thanks to instructors River Jukes-Hudson and Cheri Gray, fellow students Shuwen Ding and Shengjie Wu, and the great audience at Type Thursday LA for additional critique."
 position: 4
 ---
+
 include ../../_includes/project_utils.pug
 
 block content
@@ -34,14 +34,16 @@ block content
             br
             p I also designed stickers and an augmented reality motion poster with a direct call to action to register for the conference.
 
-    //- TODO: add captions
+    //- TODO: need some process
     .grid-1
-        +portfolioImg("./img/TYPO---cover.png", "", "")
-        +portfolioImg("./img/TYPO---1.png", "", "")
-        +video("./img/typo-AR.mp4", "")
-        +portfolioImg("./img/TYPO---3.png", "", "")
-        +portfolioImg("./img/TYPO---4.png", "", "")
-        +portfolioImg("./img/TYPO---5.png", "", "")
-        +portfolioImg("./img/TYPO---6.png", "", "")
-        +portfolioImg("./img/TYPO---7.png", "", "")
-        +portfolioImg("./img/TYPO---8.png", "", "")
+        +portfolioImg("./img/TYPO---cover.png", "", "Promotional signage for the event.")
+        +portfolioImg("./img/TYPO---1.png", "", "Large format banners, 3' x 6' featuring the names of all conference speakers.")
+        +video("./img/typo-AR.mp4", "Augmented reality poster triggered using Artivive. Motion graphics created in After Effects. The venue, Museo Tamayo Arte Contemporáneo, is in the background.")
+    .grid-2
+        +portfolioImg("./img/TYPO---4.png", "", "The identity applied on shirts at large scale.")
+        +portfolioImg("./img/TYPO---3.png", "", "White t-shirts for conference attendees, black t-shirts for event staff.")
+    .grid-1
+        +portfolioImg("./img/TYPO---5.png", "", "Name badges for conference attendees, speakers, and panelists.")
+        +portfolioImg("./img/TYPO---6.png", "", "TYPO stickers!")
+        +portfolioImg("./img/TYPO---8.png", "", "The primary identity lockup.")
+        //- +portfolioImg("./img/TYPO---7.png", "", "")

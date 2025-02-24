@@ -15,7 +15,7 @@ block content
     .grid-1
         h1 #{title}
         div.project-meta
-            if media
+            if media && mediaString
                 +projectMeta("Media", mediaString)
             if client
                 +projectMeta("Client", client)
