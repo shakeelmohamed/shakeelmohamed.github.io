@@ -21,7 +21,11 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/scripts");
     eleventyConfig.addPassthroughCopy("src/CNAME");
 
-    eleventyConfig.addWatchTarget("src/**/*");
+    // TODO: switch to the new 11ty server: https://www.11ty.dev/docs/dev-server/
+    eleventyConfig.addWatchTarget("**.pug");
+    eleventyConfig.addWatchTarget("src/**");
+    eleventyConfig.addWatchTarget("src/_includes/**");
+    eleventyConfig.addWatchTarget("src/styles.css");
     eleventyConfig.setWatchThrottleWaitTime(100);
     
     // Custom markdown processor

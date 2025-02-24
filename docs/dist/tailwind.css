@@ -692,6 +692,20 @@ select {
         height: 3.5rem;
     }
 
+    .newheader {
+        position: sticky !important;
+        top: 0rem;
+        z-index: 999;
+        background: rgba(255, 255, 255, 0.9);
+        -webkit-backdrop-filter: blur(1rem);
+                backdrop-filter: blur(1rem);
+
+        margin-top: -2rem;
+        padding-top: 2rem;
+        left: 0;
+        right: 0;
+    }
+
     .newheader, .newfooter {
         padding-bottom: 1rem;
 
@@ -719,10 +733,6 @@ select {
 
     .newheader > div, .newfooter > div {
         grid-row: 1;
-    }
-
-    .newheader > div:last-child, .newfooter > div:last-child {
-        text-align: right;
     }
 
     .grid-1 {
