@@ -70,10 +70,8 @@ block content
             p
                 strong Community Building
                 br
-                | I have dedicated the past 4 years to involving myself in design communities, sharing my experiences with others, and building towards design leadership experience. Over this time I’m grateful to have met several designers who have inspired me throughout my career.
-                //- | Debbie&nbsp;Millman, Wael&nbsp;Morcos, Brian&nbsp;Collins, Louise&nbsp;Sandhaus, Chris&nbsp;Do, and April&nbsp;Greiman.
-        //- TODO: fix file extensions, this is crazy
-        //- TODO: bring in Sean Adams img here instead; Cheryl Miller
+                | I have dedicated the past 4 years to involving myself in design communities, sharing my experiences with others, and building towards design leadership experience. Over this time I’m grateful to have met several designers who have inspired me throughout my&nbsp;career.
+        //- TODO: bring in Sean Adams img here instead
         div(style="grid-column: 3 / 5;")
             .grid-4.lightbox-album.keepDesktop(style="gap: 1rem;")
                 img(src="./img/Debbie_Millman.png")
@@ -84,32 +82,49 @@ block content
                 img(src="./img/April_Greiman.png")
                 img(src="./img/Cheryl_Miller.png")
                 img(src="./img/Iddris_Sandu.png")
-    
     br
     hr
 
     .grid-4
         div
+            p.caption Education
+            br
+            +experience("Candidate for a Master of Fine Arts in Graphic Design", "ArtCenter College of Design", "Pasadena, California", "2022–Present")
+            +experience("Bachelor of Science in Computer Science (Emphasis in Business)", "Seattle University", "Seattle, Washington", "2015")
+            hr.mobile-only
+        div(style="grid-column: 2 / 5;")
             p.caption Experience
             br
             //- TODO: how can I combine all freelance with multiple sub-sections per client?
-            +experience("Freelance Graphic Designer (Annually)", "The Ismaili Muslim Community", "Remote", "10.2021–10.2024")
-            +experience("Freelance Graphic Designer", "TALISMAN", "Remote", "07.2024–08.2024")
-            +experience("Founder", "ntrsct designs", "Remote", "02.2018–12.2022")
-            +experience("Software Engineer", "Splunk, Inc.", "Seattle, Washington", "06.2015–04.2021")
-            hr.mobile-only 
+            .grid-3
+                +experience("Freelance Graphic Designer (Annually)", "The Ismaili Muslim Community", "Remote", "10.2021–10.2024")
+                //- TODO: add link to Salgirah project page
+                p(style="grid-column: 2 / 4;") Designed the brand identity for Salgirah, an international religious festival across 21 countries in 11 languages, revised annually. Branded signage was displayed in multiple cities, notably at the Dubai World Trade Centre.
+            .grid-3
+                +experience("Freelance Graphic Designer", "TALISMAN", "Remote", "07.2024–08.2024")
+                p(style="grid-column: 2 / 4;") Supported a team of three designers with identity development for clients in a variety of industries. Designed presentation decks, style guidelines, and press ready files for client delivery. Analyzed, refined, and presented typographic choices to align with overall art direction.
+            .grid-3
+                +experience("Founder", "ntrsct designs", "Remote", "02.2018–12.2022")
+                p(style="grid-column: 2 / 4;") Operated an independent design studio offering branding, strategy, apparel, and social media design services. Designed deliverables for 12 clients, exploring a variety of visual solutions. Evolved from operating as a B2C apparel brand to providing B2B design services across multiple industries.
+            .grid-3
+                +experience("Software Engineer", "Splunk, Inc.", "Seattle, Washington", "06.2015–04.2021")
+                p(style="grid-column: 2 / 4;") Led a team of three engineers to develop a data simulation engine for sales staff to demo products to prospective customers. Frequently collaborated across roles, teams, and departments to automate manual tasks. Presented technical sessions and hosted interactive booths at two conferences.
+            hr.mobile-only
+    hr.desktop-only
+
+    .grid-4
         div
             p.caption Skills
             br
             p
                 strong Strong working knowledge of:
                 br
-                | Illustrator, InDesign, Figma, Premiere Pro, Keynote, After Effects, Midjourney
+                | Illustrator, InDesign, Figma, Premiere Pro, Keynote, Glyphs, After Effects
             br
             p
                 strong Familiar with:
                 br
-                | Photoshop, Glyphs, TouchDesigner, MadMapper, Blender, LiveSurface, Artivive, Basecamp, Trello, Jira, Google Workspace, Dropbox, Slack
+                | Photoshop, Midjourney, TouchDesigner, MadMapper, Blender, LiveSurface, Artivive, Basecamp, Trello, Jira, Google Workspace, Dropbox, Slack
             br
             p
                 strong Presentation and facilitation:
@@ -121,12 +136,7 @@ block content
                 br
                 | JavaScript, p5.js, Node.js, HTML, CSS, React, Python, Java, C, C++, Git
             hr.mobile-only
-        div
-            p.caption Education
-            br
-            +experience("Candidate for a Master of Fine Arts in Graphic Design", "ArtCenter College of Design", "Pasadena, California", "2022–Present")
-            +experience("Bachelor of Science in Computer Science (Emphasis in Business)", "Seattle University", "Seattle, Washington", "2015")
-            hr.mobile-only
+        div.
         div
             p.caption Recognition
             br
@@ -159,6 +169,8 @@ block content
                 | Virtual portfolio presentation to a live&nbsp;audience.
                 br
                 | 2022
+
+
             //- TODO: not having this here is a lil odd... but we have a rule right below otherwise
             //- hr.mobile-only
 
@@ -175,12 +187,13 @@ block content
     //- TOOD: can include thumbnails to presentations (AIGA PF, AIGA LA Graphic Content, etc)
 
 mixin experience(title, org, loc, dates)
-    p
-        strong #{title}
+    div
+        p
+            strong #{title}
+            br
+            | #{org}
+            br
+            | #{loc}
+            br
+            | #{dates}
         br
-        | #{org}
-        br
-        | #{loc}
-        br
-        | #{dates}
-    br

@@ -693,21 +693,21 @@ select {
     }
 
     .newheader {
-        position: sticky !important;
-        top: 0rem;
+        /* position: sticky !important;
+        top: 0rem; */
         z-index: 999;
         background: rgba(255, 255, 255, 0.9);
         -webkit-backdrop-filter: blur(1rem);
                 backdrop-filter: blur(1rem);
 
         margin-top: -2rem;
-        padding-top: 2rem;
+        padding-top: 1.5rem;
         left: 0;
         right: 0;
     }
 
     .newheader, .newfooter {
-        padding-bottom: 1rem;
+        padding-bottom: 0.5rem;
 
         font-weight: 700;
         font-size: 1rem;
@@ -716,6 +716,9 @@ select {
 
     .mobile-only {
         display: none;
+    }
+    .desktop-only {
+        display: block;
     }
 
     .hamburgerIcon {
@@ -840,6 +843,10 @@ select {
         .mobile-only {
             display: block;
         }
+        
+        .desktop-only {
+            display: none;
+        }
 
         .hamburgerIcon {
             max-height: -moz-fit-content;
@@ -896,7 +903,7 @@ select {
     main {
   position: relative;
   flex: 1 1 auto;
-  padding-top: 1rem;
+/*        pt-4; */
 }
 
     footer {
@@ -1666,6 +1673,9 @@ select {
 .mt-24 {
   margin-top: 6rem;
 }
+.mb-4 {
+  margin-bottom: 1rem;
+}
 .block {
   display: block;
 }
@@ -1824,6 +1834,9 @@ select {
 }
 .pb-2 {
   padding-bottom: 0.5rem;
+}
+.pb-4 {
+  padding-bottom: 1rem;
 }
 .text-left {
   text-align: left;
