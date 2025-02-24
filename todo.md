@@ -1,20 +1,33 @@
 # TODO
 
-## In progress
+## Urgent
 
-- [ ] All projects: restructure the special thanks to (remove colon, say “instructors... ”) for those people so we know who there. [Done: MJ, TODO: thesis, Rothko, TYPO, Salgirah, RM, MR]
-- [ ] MJ: David Holz on blue conf poster is larger type than others... well he’s the CEO but maybe they should just be the same size
+- [ ] wait 3 days; get DNS working, then add DMARC policy for gmail
+- [X] Good to hide the Salgirah project from website now...
+- [X] opengraph image: remove colon, lowercase T and L
+- [ ] wget all images from cargo, bring them into the repo... its risky right now [Done: Rothko, MJ] [WIP:]
+
+
+## In progress (DO ASAP)
+
+- [X] Sticky header: https://tw-elements.com/docs/standard/extended/sticky-header/
+- [X] About: build out fuller resume like before, include descriptions of each position at least
+- [X] TYPO: maybe the goal is too ambitious lol
+- [X] TYPO: needs captions + design decisions for why black and white
 - [ ] Thesis: overall clean it up ASAP and remove the note about it...
 - [ ] Thesis: what are the points of my talk? some high level ideas, or takeaways... still unclear what I am bringing to expand the perceived value of designers
-- [ ] About page heroes: “how much I have dedicated the paste 4 years to involving myself in design communities to enrich my experience + share the experiences with others, building my design leadership experiences”; currently it is too much just hero worship... dedication to me and to the people I work with to bring communities together (one of the more valuable things that I do together)
-- [ ] TYPO: maybe the goal is too ambitious lol
-- [ ] TYPO: needs captions + design decisions for why black and white
+
+- [ ] Salgirah + others, fix weird images sizes + replace all content, can make it flatter + break up the carousels so it reads cleanly
 - [ ] Salgirah: can move it into labyrinth if I want to keep it anywhere (I’d rather keep it as a hidden page)
 - [ ] ALL CAPTIONS: add periods at the end check emmmmm
+- [ ] Labyrinth: include more things like WHP, community photos, etc.
+- [ ] Labyrinth description: value is my intelligent approach to work, skillful ability to work in simplicity and complexity, dedication to community, learning in formal/informal/digital settings - one of my biggest strengths
+
+LATER
+- [ ]  All through MFA I was working on typefaces because they did X for me; the result is I can see comms symbols/forms in a whole new way. I understand the rigor of what it takes to find mastery of craft. [In interviews, speak about myself vs. describing the fonts themselves, consider speaking to hiring manager as non-designers.] How will it benefit a team?
+
 
 ## My notes
-
-- [ ] Salgirah + others, fix weird images sizes + replace all content
 - [ ] Add meta descriptions for all project pages 
 - [ ] Rework projects to have a cover.png shown at the top (ideally its the same image as the OG, just scaled up + higher res) -> scale should be about 1920x1200, the OG size feels too wide for cover images
 - [ ] on large screens, images max out in size at 1920 and have a huge right margin sometimes
@@ -23,14 +36,18 @@
 - [ ] Can include small images for AIGA talks on about page... BELOW the resume area
 - [ ] Mindful Roman - poster has kinda tight leading on the 3 paragraphs, I think... need to check at full scale
 - [ ] Overall, I need to clean up all overview descriptions, there are a bit loose at the moment. Writing center is a good move there.
+- [ ] Revisit footer design, some inspo: https://www.footer.design/, https://www.footer.design/styles/typographic
+
 
 ## Low priority
 
+- [ ] JS to prevent bad breaks (widows / orphans)
 - [ ] nice to have: setup a contact card button for grad show: https://vcard.link/card
 - [ ] add avif/etc optimized loadtime support
 - [ ] figure out how to generate the tag pages (e.g. .com/branding)
 - [ ] figure out how to show extra process (another slider, hidden section, etc.)
 - [ ] ALL CAPTIONS: automate check for periods at the end
+- [ ] Might as well do a custom 404: https://www.404s.design/
 
 ## Consider Revisiting
 
@@ -39,8 +56,18 @@
 - [ ] Capitalize first letter of first tag (homepage under each project, and thesis page), within a project page, capitalize like “Media: Poster”; and then lowercase homepage “Branding, typography, leadership” to be consistent
 
 
-
 ## DONE
+
+
+### Week 4
+
+- [X] About page heroes: “how much I have dedicated the past 4 years to involving myself in design communities to enrich my experience + share the experiences with others, building my design leadership experiences”; currently it is too much just hero worship... dedication to me and to the people I work with to bring communities together (one of the more valuable things that I do together)
+- [X] Break out special thanks, render it at the bottom of those projects
+- [X] MJ: David Holz on blue conf poster is larger type than others... well he’s the CEO but maybe they should just be the same size
+- [X] All projects: restructure the special thanks to (remove colon, say “instructors... ”) for those people so we know who there. [Done: MJ, TODO: thesis, Rothko, TYPO, Salgirah, RM, MR]
+- [X] Header: rename labyrinth to experiments, but keep the header on that page
+
+### Week 2
 
 - [X] About: Period after “the” in PD quote
 - [X] Rothko: Can just say “table of contents” above on right column
