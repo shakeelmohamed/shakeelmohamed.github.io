@@ -144,8 +144,6 @@
     }
 
     .newheader {
-        /* position: sticky !important;
-        top: 0rem; */
         z-index: 999;
         background: rgba(255, 255, 255, 0.9);
         backdrop-filter: blur(1rem);
@@ -154,6 +152,12 @@
         padding-top: 1.5rem;
         left: 0;
         right: 0;
+
+        /* Go full-width with sticky header */
+        margin-left: -2rem;
+        padding-left: 2rem;
+        margin-right: -2rem;
+        padding-right: 2rem;
     }
 
     .newheader, .newfooter {
