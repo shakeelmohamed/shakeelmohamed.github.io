@@ -880,6 +880,10 @@ select {
             margin-bottom: 0.25rem;
         }
 
+        .caption { 
+            max-width: 100%;
+        }
+
         .fsjs-wrapper {
             flex-direction: column;
         }
@@ -1032,6 +1036,7 @@ select {
         font-size: 1rem;
         color: rgba(0, 0, 0, 0.5);
         margin-top: 0.25rem;
+        max-width: 50%;
     }
 
 

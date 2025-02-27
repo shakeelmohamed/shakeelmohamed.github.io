@@ -333,6 +333,10 @@
             margin-bottom: 0.25rem;
         }
 
+        .caption { 
+            max-width: 100%;
+        }
+
         .fsjs-wrapper {
             flex-direction: column;
         }
@@ -407,8 +411,10 @@
     }
     .caption {
         font-size: 1rem;
+        line-height: 1.25rem;
         color: rgba(0, 0, 0, 0.5);
         margin-top: 0.25rem;
+        max-width: 50%;
     }
 
 
