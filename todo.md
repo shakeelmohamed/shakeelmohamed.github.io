@@ -5,26 +5,26 @@
 - [ ] wait 3 days; get DNS working, then add DMARC policy for gmail
 - [X] Good to hide the Salgirah project from website now...
 - [X] opengraph image: remove colon, lowercase T and L
-- [ ] wget all images from cargo, bring them into the repo... its risky right now [Done: Rothko, MJ] [WIP:]
+- [ ] wget all images from cargo, bring them into the repo... its risky right now [Done: Rothko, MJ, TPS] [WIP:]
 
 
 ## In progress (DO ASAP)
 
-- [X] Sticky header: https://tw-elements.com/docs/standard/extended/sticky-header/
-- [X] About: build out fuller resume like before, include descriptions of each position at least
-- [X] TYPO: maybe the goal is too ambitious lol
-- [X] TYPO: needs captions + design decisions for why black and white
+- [ ] Rothko: update all book imgs
+- [ ] Rothko: try to match background colors to the brand gray tone
+- [ ] Rothko: why is the book cover so piexelated, esp PBS logo? investigate
+- [ ] APS: show identity system overview for macro and micro (type, color, logo lockups) --- just make it like a slide hehehehehehehehehehehehehehehehehehehe
 - [ ] Thesis: overall clean it up ASAP and remove the note about it...
 - [ ] Thesis: what are the points of my talk? some high level ideas, or takeaways... still unclear what I am bringing to expand the perceived value of designers
 
-- [ ] Salgirah + others, fix weird images sizes + replace all content, can make it flatter + break up the carousels so it reads cleanly
 - [ ] Salgirah: can move it into labyrinth if I want to keep it anywhere (I’d rather keep it as a hidden page)
 - [ ] ALL CAPTIONS: add periods at the end check emmmmm
-- [ ] Labyrinth: include more things like WHP, community photos, etc.
-- [ ] Labyrinth description: value is my intelligent approach to work, skillful ability to work in simplicity and complexity, dedication to community, learning in formal/informal/digital settings - one of my biggest strengths
 
 LATER
 - [ ]  All through MFA I was working on typefaces because they did X for me; the result is I can see comms symbols/forms in a whole new way. I understand the rigor of what it takes to find mastery of craft. [In interviews, speak about myself vs. describing the fonts themselves, consider speaking to hiring manager as non-designers.] How will it benefit a team?
+- [ ] Salgirah + others, fix weird images sizes + replace all content, can make it flatter + break up the carousels so it reads cleanly
+- [ ] Labyrinth: include more things like WHP, community photos, etc.
+- [ ] Labyrinth description: value is my intelligent approach to work, skillful ability to work in simplicity and complexity, dedication to community, learning in formal/informal/digital settings - one of my biggest strengths
 
 
 ## My notes
@@ -57,6 +57,24 @@ LATER
 
 
 ## DONE
+
+### Week 6
+
+- [X] Sticky header: https://tw-elements.com/docs/standard/extended/sticky-header/
+- [X] About: build out fuller resume like before, include descriptions of each position at least
+- [X] TYPO: maybe the goal is too ambitious lol
+- [X] TYPO: needs captions + design decisions for why black and white
+- [X] Make the sticky header full-width, silly that it is not esp for Labyrtinth!!!
+      Quick fix is add the following on `.newHeader` 
+
+```css
+.newHeader {
+    margin-left: -2rem;
+    padding-left: 2rem;
+    margin-right: -2rem;
+    padding-right: 2rem;  
+}  
+```
 
 
 ### Week 4
