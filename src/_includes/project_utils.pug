@@ -48,9 +48,9 @@ mixin youtube(url, cap)
         iframe.video16by9(src=url title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="")
         +caption(cap)
 
-mixin video(url, cap)
+mixin video(url, cap, autoplay=false)
     .project-content
-        video.video16by9(width="1920" height="1080" controls="" data-video="0")
+        video.video16by9(width="1920" height="1080" controls="" data-video="0" autoplay=autoplay)
             source(src=url type="video/mp4")
         +caption(cap)
 
