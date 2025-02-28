@@ -18,7 +18,7 @@
 - [ ] Rothko: update all book imgs, missing some stills instead of all gifs
 - [ ] Rothko TV bug: optimize as a gif or add some music
 - [ ] Rothko: try to match background colors to the brand gray tone
-- [ ] Rothko: why is the book cover so piexelated, esp PBS logo? investigate
+- [ ] Rothko: why is the book cover so pixelated, esp PBS logo? investigate
 - [ ] APS: show identity system overview for macro and micro (type, color, logo lockups) --- just make it like a slide hehehehehehehehehehehehehehehehehehehe
 - [ ] MJ: spend 1 hour, see if I can salvage some of the motion
 - [ ] Thesis: overall clean it up ASAP and remove the note about it... [easier once midterm deck is done]
