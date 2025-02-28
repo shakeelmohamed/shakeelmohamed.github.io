@@ -14,25 +14,27 @@
 - [ ] Rothko: try to match background colors to the brand gray tone
 - [ ] Rothko: why is the book cover so piexelated, esp PBS logo? investigate
 - [ ] APS: show identity system overview for macro and micro (type, color, logo lockups) --- just make it like a slide hehehehehehehehehehehehehehehehehehehe
-- [ ] Thesis: overall clean it up ASAP and remove the note about it...
+- [ ] MJ: spend 1 hour, see if I can salvage some of the motion
+- [ ] Thesis: overall clean it up ASAP and remove the note about it... [easier once midterm deck is done]
 - [ ] Thesis: what are the points of my talk? some high level ideas, or takeaways... still unclear what I am bringing to expand the perceived value of designers
-
-- [ ] Salgirah: can move it into labyrinth if I want to keep it anywhere (I’d rather keep it as a hidden page)
 - [ ] ALL CAPTIONS: add periods at the end check emmmmm
 
 LATER
+
+- [ ] Fix issues with mobile font tester
 - [ ]  All through MFA I was working on typefaces because they did X for me; the result is I can see comms symbols/forms in a whole new way. I understand the rigor of what it takes to find mastery of craft. [In interviews, speak about myself vs. describing the fonts themselves, consider speaking to hiring manager as non-designers.] How will it benefit a team?
 - [ ] Salgirah + others, fix weird images sizes + replace all content, can make it flatter + break up the carousels so it reads cleanly
+- [ ] Salgirah: can move it into labyrinth if I want to keep it anywhere (I’d rather keep it as a hidden page)
 - [ ] Labyrinth: include more things like WHP, community photos, etc.
 - [ ] Labyrinth description: value is my intelligent approach to work, skillful ability to work in simplicity and complexity, dedication to community, learning in formal/informal/digital settings - one of my biggest strengths
 
 
 ## My notes
+- [ ] add JS or CSS tick for email obfuscation
 - [ ] Add meta descriptions for all project pages 
 - [ ] Rework projects to have a cover.png shown at the top (ideally its the same image as the OG, just scaled up + higher res) -> scale should be about 1920x1200, the OG size feels too wide for cover images
 - [ ] on large screens, images max out in size at 1920 and have a huge right margin sometimes
 - [ ] Perhaps use cover.png instead of opengraph for project thumbnails
-- [ ] Fix issues with mobile font tester
 - [ ] Can include small images for AIGA talks on about page... BELOW the resume area
 - [ ] Mindful Roman - poster has kinda tight leading on the 3 paragraphs, I think... need to check at full scale
 - [ ] Overall, I need to clean up all overview descriptions, there are a bit loose at the moment. Writing center is a good move there.
@@ -41,9 +43,11 @@ LATER
 
 ## Low priority
 
+- [ ] learn about noreferrer, etc: https://linkbuilder.io/rel-noopener-noreferrer/
+- [ ] Rework semantics for SEO for: h1/h2/etc
 - [ ] JS to prevent bad breaks (widows / orphans)
 - [ ] nice to have: setup a contact card button for grad show: https://vcard.link/card
-- [ ] add avif/etc optimized loadtime support
+- [ ] - [ ] Respnsive image laoding... add avif/etc optimized loadtime support
 - [ ] figure out how to generate the tag pages (e.g. .com/branding)
 - [ ] figure out how to show extra process (another slider, hidden section, etc.)
 - [ ] ALL CAPTIONS: automate check for periods at the end
@@ -54,6 +58,7 @@ LATER
 - [ ] Footer: need a home link (rough added to my name, can it be more obvious)
 - [ ] Footer: on project pages, can have a next/prev project (need some logic for that)
 - [ ] Capitalize first letter of first tag (homepage under each project, and thesis page), within a project page, capitalize like “Media: Poster”; and then lowercase homepage “Branding, typography, leadership” to be consistent
+- [ ] HSTS support via cloudflare? Not sure if this still works with github pages
 
 
 ## DONE
