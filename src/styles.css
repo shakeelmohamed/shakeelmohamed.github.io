@@ -468,6 +468,7 @@
     /* TODO: align these with default headings... but scaled down a bit; */
     .prose {
         @apply text-base leading-normal;
+        max-width: 100%;
     }
    /*  .prose h1 {
         @apply font-serif font-light;

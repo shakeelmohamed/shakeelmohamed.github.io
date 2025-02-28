@@ -1918,6 +1918,7 @@ select {
 .prose {
   font-size: 1rem;
   line-height: 1.5;
+        max-width: 100%;
 }
 /*  .prose h1 {
         @apply font-serif font-light;

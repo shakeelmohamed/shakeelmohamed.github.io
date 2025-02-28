@@ -5,9 +5,10 @@ block content
     .grid-4
         div
             p #{cleanDate}
-            h1 #{title}
-            p #{description}
-        div(style="grid-column: 2 / 5;")
+            //- p #{description}
+        div
+            strong #{title}
+        div(style="grid-column: 3 / 5;")
             //- TODO: display categories
             //- TODO: need to redo all these prose styles
             div(class="prose")!= content
