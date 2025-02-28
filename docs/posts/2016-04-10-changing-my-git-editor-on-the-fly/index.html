@@ -70,11 +70,12 @@
             <hr style="margin-bottom: 0.5rem;"/>
         </div>
         <main class="mb-4">
-            <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-8 gap-y-2">
+            <div class="grid-4">
                 <div>
                     <p>2016-04-10</p>
-                    <h1>Changing My Git Editor On The Fly</h1>
-                    <p class="bold">I love using Sublime Text as do many developers these days, but I just can't use it regularly for git commit messages.</p><br>
+                </div>
+                <div><strong>Changing My Git Editor On The Fly</strong></div>
+                <div style="grid-column: 3 / 5;">
                     <div class="prose"><p>I love using Sublime Text as do many developers these days, but I just can’t use it regularly for git commit messages.</p>
 <p>When I learned git 4 years ago I always used the default editor - vim. I don’t particularly enjoy using vim, but it’s the command-line editor I know best. For the longest time I would write inline commit messages, ie: <code>git commit -m &quot;hello world&quot;</code>.</p>
 <h2>Then one day something crazy happened…</h2>
@@ -121,7 +122,6 @@ Since these are the only 2 editors, I’ve hardcoded 2 bash functions that will 
 <li>run <code>gitvim</code> to go back to normal</li>
 </ul>
 </div>
-                    <hr>
                 </div>
             </div>
             <hr style="margin-bottom:0 !important;">

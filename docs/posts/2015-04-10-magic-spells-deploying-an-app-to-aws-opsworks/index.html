@@ -71,11 +71,12 @@
             <hr style="margin-bottom: 0.5rem;"/>
         </div>
         <main class="mb-4">
-            <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-8 gap-y-2">
+            <div class="grid-4">
                 <div>
                     <p>2015-04-10</p>
-                    <h1>Magic Spells: Deploying an app to AWS OpsWorks</h1>
-                    <p class="bold">My goal with this post is to walk you through the mind-bending procedures required to setup a new app on AWS using OpsWorks.</p><br>
+                </div>
+                <div><strong>Magic Spells: Deploying an app to AWS OpsWorks</strong></div>
+                <div style="grid-column: 3 / 5;">
                     <div class="prose"><p>Newcomers to <a href="http://git-scm.com/">Git</a> often struggle with the unintuitive verbiage and workflows, often referred to as “incantations”. I endured a similarly convoluted process (hence, “Magic Spells”) after setting up 4 applications on AWS OpsWorks for my senior project, Exbedia (more on that <a href="../2015-03-19-hackers-first-logo-designing-in-powerpoint">here</a>). My goal with this post is to walk you through the mind-bending procedures required to setup a new app on AWS using OpsWorks.</p>
 <blockquote>
 <h2>“I don’t know what these commands do, they’re incantations I use every time I make changes to this project.” — Hypothetical novice Git user</h2>
@@ -124,7 +125,6 @@
 <p>As a casual <a href="https://www.heroku.com/">Heroku</a> user, this process was significantly more painful and I can understand why many developers are using it. Once your initial OpsWork stack is setup, you can literally do a one click “Deploy App”, then AWS will pull the latest bits from GitHub and try to deploy your app.</p>
 <p>Very soon I’ll be setting up continuous deployment with a private GitHub repository, and hope to write about that process as well.</p>
 </div>
-                    <hr>
                 </div>
             </div>
             <hr style="margin-bottom:0 !important;">

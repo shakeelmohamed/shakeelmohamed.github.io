@@ -880,6 +880,10 @@ select {
             margin-bottom: 0.25rem;
         }
 
+        .grid-1 > project-content > p.caption {
+            max-width: 100%;
+        }
+
         .fsjs-wrapper {
             flex-direction: column;
         }
@@ -1030,8 +1034,14 @@ select {
 }
     .caption {
         font-size: 1rem;
+        line-height: 1.25rem;
         color: rgba(0, 0, 0, 0.5);
         margin-top: 0.25rem;
+/*         max-width: 50%; */
+    }
+
+    .grid-1 > .project-content > p.caption {
+        max-width: 50%;
     }
 
 
@@ -1912,6 +1922,7 @@ select {
 .prose {
   font-size: 1rem;
   line-height: 1.5;
+        max-width: 100%;
 }
 /*  .prose h1 {
         @apply font-serif font-light;

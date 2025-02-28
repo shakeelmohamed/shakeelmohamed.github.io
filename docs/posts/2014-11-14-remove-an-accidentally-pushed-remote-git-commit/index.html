@@ -70,11 +70,12 @@
             <hr style="margin-bottom: 0.5rem;"/>
         </div>
         <main class="mb-4">
-            <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-8 gap-y-2">
+            <div class="grid-4">
                 <div>
                     <p>2014-11-14</p>
-                    <h1>Remove an accidentally pushed remote git commit</h1>
-                    <p class="bold">A quick set of commands for removing a commit once it's been pushed to a remote</p><br>
+                </div>
+                <div><strong>Remove an accidentally pushed remote git commit</strong></div>
+                <div style="grid-column: 3 / 5;">
                     <div class="prose"><!-- TODO: need to style code blocks with some better vertical padding -->
 <pre><code class="language-bash">git checkout &lt;branch name&gt;
 git checkout &lt;commit sha&gt;
@@ -82,7 +83,6 @@ git push -f -n # Do a dry run
 git push -f # Do the damn thing
 </code></pre>
 </div>
-                    <hr>
                 </div>
             </div>
             <hr style="margin-bottom:0 !important;">

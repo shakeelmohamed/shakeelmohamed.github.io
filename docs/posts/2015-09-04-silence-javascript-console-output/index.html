@@ -70,11 +70,12 @@
             <hr style="margin-bottom: 0.5rem;"/>
         </div>
         <main class="mb-4">
-            <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-8 gap-y-2">
+            <div class="grid-4">
                 <div>
                     <p>2015-09-04</p>
-                    <h1>Silence JavaScript console output</h1>
-                    <p class="bold">This is super helpful for unit testing with 100% code coverage, while maintaining a clean test output on the console!</p><br>
+                </div>
+                <div><strong>Silence JavaScript console output</strong></div>
+                <div style="grid-column: 3 / 5;">
                     <div class="prose"><p>This is super helpful for unit testing with 100% code coverage, while maintaining a clean test output on the console!</p>
 <p>First you need some basic setup code:</p>
 <pre><code class="language-js">// Backup console.log so we can restore it later
@@ -99,7 +100,6 @@ MyClass.functionThatPrintsOutput();
 unmute();
 </code></pre>
 </div>
-                    <hr>
                 </div>
             </div>
             <hr style="margin-bottom:0 !important;">

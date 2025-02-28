@@ -6,6 +6,9 @@ module.exports = {
     formatDate: function(date) {
         return date.toISOString().split("T")[0];
     },
+    // displayDate: function(data) {
+    // TODO: desired format is January 01, 2025
+    // },
     // TODO: actually this is for Atom/RSS feeds, not sitemaps
     formatDateForAtomFeed: function(date) {
         let dateObj = new Date(date);

@@ -2,12 +2,13 @@ extends ./base.pug
 
 //- TODO: use article markup
 block content
-    +gridCols2()
+    .grid-4
         div
             p #{cleanDate}
-            h1 #{title}
-            p.bold #{description}
-            br
+            //- p #{description}
+        div
+            strong #{title}
+        div(style="grid-column: 3 / 5;")
             //- TODO: display categories
+            //- TODO: need to redo all these prose styles
             div(class="prose")!= content
-            hr
