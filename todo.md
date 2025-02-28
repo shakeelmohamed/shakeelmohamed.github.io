@@ -8,7 +8,12 @@
 - [ ] wget all images from cargo, bring them into the repo... its risky right now [Done: Rothko, MJ, TPS] [WIP:]
 
 
-## In progress (DO ASAP)
+## Blocking
+
+- [x] Rothko: crop the video to avoid black bars + optimize as a gif or add some music
+- [ ] Rothko: update all book imgs with gifs
+
+## ASAP
 
 - [ ] Rothko: update all book imgs
 - [ ] Rothko: try to match background colors to the brand gray tone
@@ -18,8 +23,9 @@
 - [ ] Thesis: overall clean it up ASAP and remove the note about it... [easier once midterm deck is done]
 - [ ] Thesis: what are the points of my talk? some high level ideas, or takeaways... still unclear what I am bringing to expand the perceived value of designers
 - [ ] ALL CAPTIONS: add periods at the end check emmmmm
+- [ ] Update resume ASAP once approved
 
-LATER
+## LATER
 
 - [ ] Fix issues with mobile font tester
 - [ ]  All through MFA I was working on typefaces because they did X for me; the result is I can see comms symbols/forms in a whole new way. I understand the rigor of what it takes to find mastery of craft. [In interviews, speak about myself vs. describing the fonts themselves, consider speaking to hiring manager as non-designers.] How will it benefit a team?
@@ -30,6 +36,7 @@ LATER
 
 
 ## My notes
+- [ ] Start posting on Behance!
 - [ ] add JS or CSS tick for email obfuscation
 - [ ] Add meta descriptions for all project pages 
 - [ ] Rework projects to have a cover.png shown at the top (ideally its the same image as the OG, just scaled up + higher res) -> scale should be about 1920x1200, the OG size feels too wide for cover images
