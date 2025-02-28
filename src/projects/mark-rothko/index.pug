@@ -72,7 +72,7 @@ block content
     .grid-1
         +portfolioImg("./img/Rothko_art_for_mystics_book_cover.png", "", "Extending the identity to a booklet required a special consideration for messaging. I chose the title “Art for Mystics”, based on the following definition for mystical: inspiring a sense of spiritual mystery, awe, and fascination. This sense of awe is due partly to the scale of Rothko’s paintings.")
 
-    //- TODO: bring ti back once this is updated
+    //- TODO: bring back once this is updated
     //- .grid-1
     //-     +inDesign("https://indd.adobe.com/embed/0ce1fbfe-ae15-462d-b89c-fc8d21c9b685?startpage=1&amp;allowFullscreen=false", "The complete book is available for viewing above.")
 
@@ -80,6 +80,7 @@ block content
         +portfolioImg("./img/Mark-Rothko-Documentary-Campaign---21.png", "", "Colors were inspired by the Rothko Chapel in Houston, Texas. The non-denominational Chapel was one of Rothko’s final projects which he never saw completed.")
 
     .grid-2
+        //- TODO: these images should be re-comped with a purple cover trim
         +slider()
             +portfolioImg("./img/Mark-Rothko-Documentary-Campaign---22.png", "Intro/outro: A few spreads guide the reader from from the everyday material world to that of the mystical, symbolized by a slow gray to purple gradient. The outro follows the sequence in reverse. This concept is based on an engawa, a Japanese architecture element to bridge the outside world to the home.")
             +portfolioImg("./img/Mark-Rothko-Documentary-Campaign---23.png", "Intro/outro: A few spreads guide the reader from from the everyday material world to that of the mystical, symbolized by a slow gray to purple gradient. The outro follows the sequence in reverse. This concept is based on an engawa, a Japanese architecture element to bridge the outside world to the home.")
@@ -92,7 +93,15 @@ block content
     .grid-1
         //- +portfolioImg("./img/Rothko---9.png", "", "Envisioning the start of an opening title sequence for the documentary.")
         //- TODO: this should be a gif since there is no sound right now... could bring in sound tho..
+        //- TODO: EITHER WAY... need to precomp this, black bars are baked in rn
         +video("./img/Rothko_TV_bug.mp4", "Displaying the identity lockup as an on-screen graphic (bug) during the documentary.", true)
+        //- TODO: not sure if I really want plyr...
+        //- link(rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css")
+        //- script(src="https://cdn.plyr.io/3.7.8/plyr.js")
+        //- video(id="player" playsinline controls autoplay)
+        //-     source(src="./img/Rothko_TV_bug.mp4" type="video/mp4")
+        //- script.
+        //-   const player = new Plyr('#player', {ratio: "4096:2730"});
 
     //- TODO: move this img to Labyrinth
     //- .grid-1
