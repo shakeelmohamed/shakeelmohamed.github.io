@@ -71,11 +71,13 @@
             <hr style="margin-bottom: 0.5rem;"/>
         </div>
         <main class="mb-4">
-            <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-8 gap-y-2">
+            <div class="grid-4">
                 <div>
                     <p>2015-04-21</p>
                     <h1>An actually helpful git diff of your uncommitted changes</h1>
-                    <p class="bold">So you just made a bunch of changes to a git project, good job. Now you want to review your changes before committing, even better.</p><br>
+                    <p>So you just made a bunch of changes to a git project, good job. Now you want to review your changes before committing, even better.</p>
+                </div>
+                <div style="grid-column: 2 / 5;">
                     <div class="prose"><p>TL;DR</p>
 <pre><code class="language-bash">git diff -w --patience
 </code></pre>
@@ -97,7 +99,6 @@
 <pre><code class="language-bash">git commit -m &quot;Use git diff -w --patience if you're diffing this&quot;
 </code></pre>
 </div>
-                    <hr>
                 </div>
             </div>
             <hr style="margin-bottom:0 !important;">

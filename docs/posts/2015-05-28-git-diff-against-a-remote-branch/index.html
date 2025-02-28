@@ -70,17 +70,18 @@
             <hr style="margin-bottom: 0.5rem;"/>
         </div>
         <main class="mb-4">
-            <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-8 gap-y-2">
+            <div class="grid-4">
                 <div>
                     <p>2015-05-28</p>
                     <h1>git diff against a remote branch</h1>
-                    <p class="bold">This is equivalent to previewing a pull request, and it works great across remotes!</p><br>
+                    <p>This is equivalent to previewing a pull request, and it works great across remotes!</p>
+                </div>
+                <div style="grid-column: 2 / 5;">
                     <div class="prose"><p>This is equivalent to previewing a pull request, and it works great across remotes!</p>
 <pre><code class="language-bash">git diff -w --patience HEAD...origin/master
 </code></pre>
 <p>But, what are those crazy arguments? read my other <a href="../2015-04-21-an-actually-helpful-git-diff-of-your-uncommitted-changes">protip</a> for an explanation.</p>
 </div>
-                    <hr>
                 </div>
             </div>
             <hr style="margin-bottom:0 !important;">
