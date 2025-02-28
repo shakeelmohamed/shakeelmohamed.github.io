@@ -10,12 +10,13 @@
 
 ## Blocking
 
-- [x] Rothko: crop the video to avoid black bars + optimize as a gif or add some music
-- [ ] Rothko: update all book imgs with gifs
+- [x] Rothko: crop the video to avoid black bars
+- [x] Rothko: update all book imgs with gifs
 
 ## ASAP
 
-- [ ] Rothko: update all book imgs
+- [ ] Rothko: update all book imgs, missing some stills instead of all gifs
+- [ ] Rothko TV bug: optimize as a gif or add some music
 - [ ] Rothko: try to match background colors to the brand gray tone
 - [ ] Rothko: why is the book cover so piexelated, esp PBS logo? investigate
 - [ ] APS: show identity system overview for macro and micro (type, color, logo lockups) --- just make it like a slide hehehehehehehehehehehehehehehehehehehe

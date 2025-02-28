@@ -333,7 +333,7 @@
             margin-bottom: 0.25rem;
         }
 
-        .caption { 
+        .grid-1 > project-content > p.caption {
             max-width: 100%;
         }
 
@@ -414,6 +414,9 @@
         line-height: 1.25rem;
         color: rgba(0, 0, 0, 0.5);
         margin-top: 0.25rem;
+    }
+
+    .grid-1 > .project-content > p.caption {
         max-width: 50%;
     }
 
