@@ -61,7 +61,16 @@
                 </div>
                 <div style="text-align:right;">
                     <div class="pb-4">
-                        <p><strong><a href="mailto:hello@shakeel.design" target="_blank">hello@shakeel.design</a></strong></p>
+                        <p><strong><span class="mailto">
+                                    <script type="text/javascript">
+                                        function gen_mail_to_link(lhs, rhs, subject, text) {
+                                            const rhs_subj = subject ? `${rhs}?subject=${subject}` : rhs;
+                                            const _txt = text ? text : `${lhs}@${rhs}`;
+                                            const generated = `<a class="mailto" href="mailto:${lhs}@${rhs_subj}" target=_blank>${_txt}</a>`;
+                                            document.write(generated);
+                                        }
+                                        gen_mail_to_link("hello", "shakeel.design", "", "")
+                                    </script></span></strong></p>
                     </div>
                     <div>
                         <p><strong><a href="/about">About</a></strong></p>
@@ -108,7 +117,16 @@
                     <script>document.write("&copy; " + new Date().getFullYear() + " Shakeel Mohamed.")</script></a></div>
             <div><a href="https://instagram.com/shakeel.design" target="_blank">Instagram</a></div>
             <div><a href="https://linkedin.com/in/shakeelmohamed" target="_blank">LinkedIn</a></div>
-            <div style="text-align:right;"><a href="mailto:hello@shakeel.design" target="_blank">hello@shakeel.design</a></div>
+            <div style="text-align:right;"><a href="mailto:hello@shakeel.design" target="_blank"><span class="mailto">
+                        <script type="text/javascript">
+                            function gen_mail_to_link(lhs, rhs, subject, text) {
+                                const rhs_subj = subject ? `${rhs}?subject=${subject}` : rhs;
+                                const _txt = text ? text : `${lhs}@${rhs}`;
+                                const generated = `<a class="mailto" href="mailto:${lhs}@${rhs_subj}" target=_blank>${_txt}</a>`;
+                                document.write(generated);
+                            }
+                            gen_mail_to_link("hello", "shakeel.design", "", "")
+                        </script></span></a></div>
         </div>
     </body>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-36907845-2"></script>

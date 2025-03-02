@@ -1037,7 +1037,6 @@ select {
         line-height: 1.25rem;
         color: rgba(0, 0, 0, 0.5);
         margin-top: 0.25rem;
-/*         max-width: 50%; */
     }
 
     .grid-1 > .project-content > p.caption {
@@ -1871,13 +1870,13 @@ select {
 .italic {
   font-style: italic;
 }
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 .text-orange {
   --tw-text-opacity: 1;
@@ -2451,16 +2450,8 @@ h2.break {
     grid-column: span 12 / span 12;
   }
 
-  .md\:ml-8 {
-    margin-left: 2rem;
-  }
-
   .md\:mb-12 {
     margin-bottom: 3rem;
-  }
-
-  .md\:inline-block {
-    display: inline-block;
   }
 
   .md\:grid {
