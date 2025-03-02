@@ -48,6 +48,7 @@ mixin youtube(url, cap)
         iframe.video16by9(src=url title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="")
         +caption(cap)
 
+//- TODO: play with plyr.io and skin the video player a bit nicer
 mixin video(url, cap, autoplay=false)
     .project-content
         video.video16by9(width="1920" height="1080" controls="" data-video="0" autoplay=autoplay)
@@ -76,8 +77,7 @@ mixin projectBreadcrumb(proj, direction)
                 else
                     span.material-icons(style="vertical-align: text-bottom;") #{arrow_symbol}
                     | &nbsp; #{proj.data.title}
-            //- TODO: better css compositing, the max-width is 50% on .caption
-            p.caption(style="text-align:"+align+"; max-width: 100%;") #{proj.data.mediaString}
+            p.caption(style="text-align:"+align+";") #{proj.data.mediaString}
 
 mixin prevProject(proj)
     +projectBreadcrumb(proj, "Previous")

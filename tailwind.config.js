@@ -14,6 +14,7 @@ module.exports = {
     '.goverlay',
     'logo-wraper',
     // WOW this is so irritating!
+    'fsjs-*',
     'fsjs-label-text',
     'fsjs-skin',
     'fsjs-block',

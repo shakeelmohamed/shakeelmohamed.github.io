@@ -3,28 +3,20 @@ mixin fullWidth(bgClass, textClass)
         .main
             block
 
-mixin myEmail()
-    +mailto("hello", "shakeel.design", "Hey Shakeel, let’s talk")
+mixin myEmail(text)
+    +mailto("hello", "shakeel.design", "", text)
 
-mixin mailto(user, domain, subject)
+mixin mailto(user, domain, subject, text)
     //- See: http://lists.evolt.org/archive/Week-of-Mon-20040202/154813.html
     span.mailto
         script(type="text/javascript").
-            function gen_mail_to_link(lhs, rhs, subject) {
-                document.write("<a class=\"mailto\" href=\"mailto");
-                document.write(":" + lhs + "@");
-                document.write(rhs + "?subject=" + subject + "\">" + lhs + "@" + rhs + "<\/a>");
+            function gen_mail_to_link(lhs, rhs, subject, text) {
+                const rhs_subj = subject ? `${rhs}?subject=${subject}` : rhs;
+                const _txt = text ? text : `${lhs}@${rhs}`;
+                const generated = `<a class="mailto" href="mailto:${lhs}@${rhs_subj}" target=_blank>${_txt}</a>`;
+                document.write(generated);
             }
-            gen_mail_to_link("#{user}", "#{domain}", "#{subject}")
-
-
-//- mixin xnavItem(href, label)
-//-     a(class="font-sans font-bold text-white md:inline-block md:ml-8" href=href) #{label}
-
-//- mixin footerNavItem(href, label)
-//-     li
-//-         a.subhead(href=href) #{label}
-
+            gen_mail_to_link("#{user}", "#{domain}", "#{subject}", "#{text}")
 //- TODO: every section has a gridWithBigColumn(), tidy up many places
 
 mixin sectionWhite()

@@ -47,6 +47,23 @@
         margin-top: 0.25rem !important;
     }
 
+    /* Make the sliders more usable */
+    /* TODO: test cross-platform */
+    .fsjs-skin .fsjs-block-type-slider [type='range']::-webkit-slider-thumb {
+        height: 1rem !important;
+        width: 1rem !important;
+        margin-top: -0.5rem !important;
+    }
+    .fsjs-skin .fsjs-block-type-slider [type='range']::-moz-range-thumb {
+        height: 1rem !important;
+        width: 1rem !important;
+        margin-top: -0.5rem !important;
+    }
+    .fsjs-skin .fsjs-block-type-slider [type='range']::-ms-thumb {
+        height: 1rem !important;
+        width: 1rem !important;
+        margin-top: -0.5rem !important;
+    }
 
     /* Lightbox hacks     */
     .gslide-description {
