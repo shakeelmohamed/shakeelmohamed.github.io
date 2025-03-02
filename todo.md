@@ -7,18 +7,22 @@
 
 ## ASAP
 
+- [ ] Update resume ASAP
 - [ ] APS: show identity system overview for macro and micro (type, color, logo lockups) --- just make it like 2 slides
 - [ ] Thesis: overall clean it up ASAP and remove the note about it... [easier once midterm deck is done]
 
 ## P2
+
 - [ ] MJ: spend 3 hours on motion (new storyboard, logo decomposition into layers, production), goal should be 10 seconds max
 - [ ] Thesis: what are the points of my talk? some high level ideas, or takeaways... still unclear what I am bringing to expand the perceived value of designers
 - [ ] Social media ~~~~ need it in portfolio now!
+- [ ] Update all website meta descriptions (Graphic Design MFA Candidate at ArtCenter College of Design.)
+- [ ] Design 404 page; https://www.404s.design/; consider an opportunity for generative design
 - [ ] Rothko: update all book imgs, missing some stills instead of all gifs
 - [ ] Rothko: try to match background colors to the brand gray tone
 - [ ] Rothko: why is the book cover so pixelated, esp PBS logo? investigate
 - [ ] ALL CAPTIONS: add periods at the end check emmmmm
-- [ ] Update resume ASAP once approved
+
 
 ## LATER
 
@@ -28,12 +32,13 @@
 - [ ] Salgirah: can move it into labyrinth if I want to keep it anywhere (I’d rather keep it as a hidden page)
 - [ ] Labyrinth: include more things like WHP, community photos, etc.
 - [ ] Labyrinth description: value is my intelligent approach to work, skillful ability to work in simplicity and complexity, dedication to community, learning in formal/informal/digital settings - one of my biggest strengths
+- [ ] TODO: optimize email obfuscation: https://github.com/shakeelmohamed/shakeelmohamed.github.io/pull/161#discussion_r1976589880; and https://github.com/shakeelmohamed/shakeelmohamed.github.io/pull/161#discussion_r1976589879
+- [ ] overall tailwind class exceptions need to be optimized: https://github.com/shakeelmohamed/shakeelmohamed.github.io/pull/161#discussion_r1976589881
 
 
 ## My notes
 - [ ] Start posting on Behance!
-- [X] add JS or CSS tick for email obfuscation
-- [X] Add meta descriptions for all project pages 
+- [ ] Tests would be nice
 - [ ] Rework projects to have a cover.png shown at the top (ideally its the same image as the OG, just scaled up + higher res) -> scale should be about 1920x1200, the OG size feels too wide for cover images
 - [ ] on large screens, images max out in size at 1920 and have a huge right margin sometimes
 - [ ] Perhaps use cover.png instead of opengraph for project thumbnails
@@ -54,7 +59,6 @@
 - [ ] figure out how to generate the tag pages (e.g. .com/branding)
 - [ ] figure out how to show extra process (another slider, hidden section, etc.)
 - [ ] ALL CAPTIONS: automate check for periods at the end
-- [ ] Might as well do a custom 404: https://www.404s.design/
 
 ## Consider Revisiting
 
@@ -68,6 +72,8 @@
 
 ### Week 6
 
+- [X] add JS or CSS tick for email obfuscation
+- [X] Add meta descriptions for all project pages 
 - [X] Good to hide the Salgirah project from website now...
 - [X] opengraph image: remove colon, lowercase T and L
 - [X] wget all images from cargo, bring them into the repo... its risky right now [Done: Rothko, MJ, TPS, MR, RM, Salgirah]
