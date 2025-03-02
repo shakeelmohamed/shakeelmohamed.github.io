@@ -27,7 +27,8 @@ block content
             p
                 | Please reach out by 
                 strong
-                    a(href="mailto:" + metadata.author.email, target="_blank") email, 
+                    +myEmail("email")
+                    | ,&nbsp;
                 strong
                     a(href=metadata.social.LinkedIn, target="_blank") LinkedIn, 
                 | or 

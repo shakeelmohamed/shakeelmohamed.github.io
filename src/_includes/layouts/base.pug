@@ -72,7 +72,8 @@ mixin headernew()
                 div.pb-4
                     p
                         strong
-                            a(href="mailto:" + metadata.author.email, target="_blank") #{metadata.author.email}
+                            +myEmail()
+                            //- a(href="mailto:" + metadata.author.email, target="_blank")
                 div
                     p
                         strong
@@ -132,4 +133,6 @@ mixin footernew()
         div
             a(href=metadata.social.LinkedIn, target="_blank") LinkedIn
         div(style="text-align:right;")
-            a(href="mailto:" + metadata.author.email, target="_blank") #{metadata.author.email}
+            //- a(href="mailto:" + metadata.author.email, target="_blank") #{metadata.author.email}
+            a(href="mailto:" + metadata.author.email, target="_blank")
+                +myEmail()
