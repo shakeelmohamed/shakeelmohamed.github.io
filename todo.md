@@ -7,14 +7,16 @@
 
 ## ASAP
 
-- [ ] Update resume ASAP
 - [ ] APS: show identity system overview for macro and micro (type, color, logo lockups) --- just make it like 2 slides
 - [ ] Thesis: overall clean it up ASAP and remove the note about it... [easier once midterm deck is done]
+- [ ] Address mobile layout issues - see March 02, 2025 in notes app
 
 ## P2
 
 - [ ] MJ: spend 3 hours on motion (new storyboard, logo decomposition into layers, production), goal should be 10 seconds max
 - [ ] Thesis: what are the points of my talk? some high level ideas, or takeaways... still unclear what I am bringing to expand the perceived value of designers
+- [ ] Overall positioning through leadership, technical expertise, and economy design
+- [ ] How can symbol make it onto the about page? ugh
 - [ ] Social media ~~~~ need it in portfolio now!
 - [ ] Update all website meta descriptions (Graphic Design MFA Candidate at ArtCenter College of Design.)
 - [ ] Design 404 page; https://www.404s.design/; consider an opportunity for generative design
@@ -72,6 +74,7 @@
 
 ### Week 6
 
+- [X] Update resume ASAP
 - [X] add JS or CSS tick for email obfuscation
 - [X] Add meta descriptions for all project pages 
 - [X] Good to hide the Salgirah project from website now...
