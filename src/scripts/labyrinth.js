@@ -156,6 +156,11 @@ const imgs = [
         src: "v.png",
         pos: {x: 75, y: 360, z: 8, width: 25}
         // width: 25%; top: 360%; left: 75%; z-index: 8;
+    },
+    {
+        src: "Severance_gala_cubes.png",
+        pos: {x: 4, y: 35, z: 40, width: 40}
+        // style="width: 40%; left: 3.87933%; top: 35.2939%; translate: none; rotate: none; scale: none; touch-action: none; cursor: grab; user-select: none; transform: translate3d(0px, 0px, 0px); z-index: 1006;"
     }
 ];
 
@@ -165,25 +170,21 @@ imgs.sort((a, b) => a.pos.y - b.pos.y);
 for (let i = 0; i < imgs.length; i++) {
     const wrapper = document.createElement('div');
 
-    // TODO: onclick -> lightbox, with caption
-    //
-
     wrapper.classList.add("gallery_card");
     wrapper.style.width = `${imgs[i].pos.width}%`;
     wrapper.style.left = `${imgs[i].pos.x}%`;
     wrapper.style.top = `${imgs[i].pos.y}%`;
+    wrapper.style.zIndex = `${imgs[i].pos.z}`
 
     const innerWrapper = document.createElement('div');
     innerWrapper.classList.add("gallery_card_image");
 
     const newImg = document.createElement('img');
-    newImg.classList.add("image-zoom"); // TODO: this functionality is not there yt
+    // newImg.classList.add("image-zoom"); // TODO: this functionality is not there yt
     newImg.setAttribute("src", "./img/" + imgs[i].src);
-
 
     innerWrapper.appendChild(newImg);
     wrapper.appendChild(innerWrapper);
-
 
     document.querySelector(".thumbnail_sizer").appendChild(wrapper);
 }
