@@ -18,7 +18,7 @@ mixin headernew()
             div
                 div.mobileBranding
                     a.logo-wrapper(href="/")
-                        <img src="/img/Shakeel_Mohamed_wordmark.svg" alt="Shakeel Mohamed wordmark logo set in the Mindful Roman typeface which he designed" />
+                        img(src="/img/Shakeel_Mohamed_wordmark.svg", alt="Shakeel Mohamed wordmark logo set in the Mindful Roman typeface which he designed")
                     br
                     strong
                         a(href="mailto:" + metadata.author.email, target="_blank") #{metadata.author.email}
@@ -68,12 +68,11 @@ mixin headernew()
                                 span.material-icons(style="font-size: 1rem; padding-right: 0.25rem;") swap_calls
                                 | Experiments
                         
-            div(style="text-align:right;")
+            div.deskright-mobileleft
                 div.pb-4
                     p
                         strong
                             +myEmail()
-                            //- a(href="mailto:" + metadata.author.email, target="_blank")
                 div
                     p
                         strong
@@ -132,7 +131,6 @@ mixin footernew()
             a(href=metadata.social.Instagram, target="_blank") Instagram
         div
             a(href=metadata.social.LinkedIn, target="_blank") LinkedIn
-        div(style="text-align:right;")
-            //- a(href="mailto:" + metadata.author.email, target="_blank") #{metadata.author.email}
+        div.deskright-mobileleft
             a(href="mailto:" + metadata.author.email, target="_blank")
                 +myEmail()

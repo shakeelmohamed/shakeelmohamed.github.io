@@ -1,0 +1,18 @@
+---
+description: Shakeel Mohamed is a Graphic Design MFA Candidate at ArtCenter College of Design.
+---
+
+extends _includes/layouts/base.pug
+include _includes/molecules.pug
+
+block content
+
+    div
+        h1(style="text-align: center;") Oh no, that page doesn’t exist!
+        img(src="/img/kendrick-lamar-super-bowl.gif" style="max-width: 450px; margin: 0 auto;")
+
+    script.
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          "event" : "404 - page not found"
+        });
