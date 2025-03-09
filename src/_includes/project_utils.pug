@@ -77,7 +77,7 @@ mixin projectBreadcrumb(proj, direction)
                 else
                     span.material-icons(style="vertical-align: text-bottom;") #{arrow_symbol}
                     | &nbsp; #{proj.data.title}
-            p.caption(style="text-align:"+align+";") #{proj.data.mediaString}
+            p.caption.desktop-only(style="text-align:"+align+";") #{proj.data.mediaString}
 
 mixin prevProject(proj)
     +projectBreadcrumb(proj, "Previous")

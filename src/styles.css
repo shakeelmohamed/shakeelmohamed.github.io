@@ -185,6 +185,10 @@
         line-height: 2;
     }
 
+    .mobileBranding {
+        max-width: 75%;
+    }
+
     .mobile-only {
         display: none;
     }
@@ -199,6 +203,10 @@
     .menuItems {
         text-align: right;
         font-weight:bold;
+    }
+
+    .deskright-mobileleft {
+        text-align: right;
     }
 
     .project-meta, .project-content {
@@ -302,6 +310,10 @@
             flex-direction: row;
         }
 
+        .deskright-mobileleft {
+            text-align: left;
+        }
+
         /* Bandage solution for mobile footer */
         .newheader > div:last-child, .newfooter > div:last-child {
             text-align: left;
@@ -350,8 +362,12 @@
             margin-bottom: 0.25rem;
         }
 
-        .grid-1 > project-content > p.caption {
+        .grid-1 > .project-content > p.caption {
             max-width: 100%;
+        }
+
+        .position {
+            padding-bottom: 1rem;
         }
 
         .fsjs-wrapper {

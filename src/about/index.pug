@@ -91,24 +91,24 @@ block content
             p.caption Education
             br
             +experience("Candidate for a Master of Fine Arts in Graphic Design", "ArtCenter College of Design", "Pasadena, California", "2022–Present")
+            br.mobile-only
             +experience("Bachelor of Science in Computer Science (Emphasis in Business)", "Seattle University", "Seattle, Washington", "2015")
             hr.mobile-only
         div(style="grid-column: 2 / 5;")
             p.caption Experience
             br
-            //- TODO: how can I combine all freelance with multiple sub-sections per client?
-            .grid-3
+            .grid-3.position
                 a(href="/projects/salgirah-festival-identity/")
                     +experience("Freelance Graphic Designer (Annually)", "The Ismaili Muslim Community", "Remote", "10.2021–10.2024")
                 //- TODO: add link to Salgirah project page
                 p(style="grid-column: 2 / 4;") Designed the brand identity for Salgirah, an annual international religious festival across 21 countries in 11 languages. Branded signage was displayed in multiple cities, notably at the Dubai World Trade Centre in 2021.
-            .grid-3
+            .grid-3.position
                 +experience("Freelance Graphic Designer", "TALISMAN", "Remote", "07.2024–08.2024")
                 p(style="grid-column: 2 / 4;") Supported a team of three designers with identity development for clients in a variety of industries including higher education and performing arts. Designed presentation decks, style guidelines, and press ready files. Analyzed, refined, and presented typographic choices to align with overall art&nbsp;direction.
-            .grid-3
+            .grid-3.position
                 +experience("Founder", "ntrsct designs", "Remote", "02.2018–12.2022")
                 p(style="grid-column: 2 / 4;") Operated an independent design studio offering branding, strategy, apparel, and social media design services. Designed deliverables for 12 clients, exploring a variety of visual solutions. Evolved from operating as a B2C apparel brand to providing B2B design services across multiple industries.
-            .grid-3
+            .grid-3.position
                 +experience("Software Engineer", "Splunk, Inc.", "Seattle, Washington", "06.2015–04.2021")
                 p(style="grid-column: 2 / 4;") Led a team of three engineers to develop a data simulation engine for sales staff to demo products to prospective customers. Frequently collaborated across roles, teams, and departments to automate manual tasks. Presented technical sessions and hosted interactive booths at two conferences.
             hr.mobile-only
@@ -198,4 +198,4 @@ mixin experience(title, org, loc, dates)
             | #{loc}
             br
             | #{dates}
-        br
+        br.desktop-only

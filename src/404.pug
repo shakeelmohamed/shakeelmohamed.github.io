@@ -1,0 +1,36 @@
+---
+description: Shakeel Mohamed is a Graphic Design MFA Candidate at ArtCenter College of Design.
+---
+
+extends _includes/layouts/base.pug
+include _includes/molecules.pug
+
+block content
+    .grid-2
+        div
+            p Hello I’m Shakeel, a designer who thinks inside, outside, and about the box&nbsp;itself!
+            //- Copy is larger, since its my voice its feels like it should have
+            //- more presence than regular body copy
+            //- p.pt-0(style="font-weight:400; font-size: 2rem; line-height: 2.6rem;") Hello I’m Shakeel, a designer who thinks inside, outside, and about the box&nbsp;itself!
+        div
+            p
+                | Available starting May 2025 for opportunities in Los Angeles or remote.
+            p
+                | Please reach out by 
+                strong
+                    a(href="mailto:" + metadata.author.email, target="_blank") email, 
+                strong
+                    a(href=metadata.social.LinkedIn, target="_blank") LinkedIn, 
+                | or 
+                strong
+                    a(href=metadata.social.Instagram, target="_blank") Instagram
+                | .
+        
+
+    //- TODO: rework this to collections.home or something; goal is to have multiple blocks of content.
+    //- could be projects, videos, bio, etc. -- MAYBE
+    
+    if collections.portfolio
+        .grid-2
+            each project in collections.portfolio
+                +projectListing(project)
