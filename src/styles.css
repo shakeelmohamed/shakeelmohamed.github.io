@@ -285,6 +285,14 @@
         line-height: 1.2rem;
     }
 
+    /* larger screens only */
+    @media only screen and (min-width: 1920px) {
+        img.lightbox, video {
+            /* max-width: auto !important;
+            width: auto; */
+        }
+    }
+
     /* TODO:  tailwind is ripping this out? mobile is totally broken */
     @media only screen and (max-width: 860px) {
         body {
