@@ -7,27 +7,45 @@
 
 ## ASAP
 
+- [ ] large screen issue: R margin does not match; image/videos are not full width (e.g. they are smaller resolution than the screen)
+- [ ] check colors on planetary society images, might need to export the variable font still as RGB (e.g. font outline image... also make it 1920x1080 or make the video 1920x1200 idk)
+- [ ] bring all JS files into the repo, all remote libraries!
 - [ ] APS: show identity system overview for macro and micro (type, color, logo lockups) --- just make it like 2 slides
-- [ ] Thesis: overall clean it up ASAP and remove the note about it... [easier once midterm deck is done]
-- [ ] Address mobile layout issues - see March 02, 2025 in notes app
+- [ ] Thesis: overall clean it up ASAP and remove the note about it... [easier once midterm deck is done]; Can set this up in my bio a bit to speak more maturely as being an advocate and helping others to become advocates.
 
 ## P2
 
+- [ ] MJ: update project summary
 - [ ] MJ: spend 3 hours on motion (new storyboard, logo decomposition into layers, production), goal should be 10 seconds max
 - [ ] Thesis: what are the points of my talk? some high level ideas, or takeaways... still unclear what I am bringing to expand the perceived value of designers
 - [ ] Overall positioning through leadership, technical expertise, and economy design
 - [ ] How can symbol make it onto the about page? ugh
 - [ ] Social media ~~~~ need it in portfolio now!
-- [ ] Update all website meta descriptions (Graphic Design MFA Candidate at ArtCenter College of Design.)
-- [ ] Design 404 page; https://www.404s.design/; consider an opportunity for generative design
+- [ ] Update all website meta descriptions without CANDIDATE (Graphic Design MFA Candidate at ArtCenter College of Design.)
 - [ ] Rothko: update all book imgs, missing some stills instead of all gifs
 - [ ] Rothko: try to match background colors to the brand gray tone
 - [ ] Rothko: why is the book cover so pixelated, esp PBS logo? investigate
 - [ ] ALL CAPTIONS: add periods at the end check emmmmm
 
 
+## Grad show options
+
+- [ ] can setup a thin sticky banner at the top -> grad show modal maybe
+    - [ ] list all grad show details + link to grad show website
+    - [ ] Can show a 3D model of the wall too, host on sketchfab w/ annotations: https://support.fab.com/s/article/Annotations
+- [ ] setup a contact card button for grad show: https://vcard.link/card
+- [ ] Spinning 3D model of biz card would be so cool
+- [ ] grad show logistics
+- [ ] note from me
+- [ ] Apple Invite link to RSVP: https://www.icloud.com/invites/073mzZ3mToW9eku77lcZsJI6g
+
+
+
 ## LATER
 
+- [ ] Look at some SEO tricks for primary featured images, could be nice to get my whole portfolio showing in search results: https://stackoverflow.com/questions/32577999/how-can-i-add-schema-org-primaryimageofpage-in-my-site
+- [ ] Setup 404 tracking w/ GA: https://www.analyticsmania.com/post/track-404-errors-with-google-analytics-google-tag-manager/#ga4-gtm
+- [ ] Design 404 page; https://www.404s.design/; consider an opportunity for generative design
 - [ ] Fix issues with mobile font tester [WIP might be okay now]
 - [ ] All through MFA I was working on typefaces because they did X for me; the result is I can see comms symbols/forms in a whole new way. I understand the rigor of what it takes to find mastery of craft. [In interviews, speak about myself vs. describing the fonts themselves, consider speaking to hiring manager as non-designers.] How will it benefit a team?
     - [ ] ...(related) I have been modifying type for identity projects (Rothko and MJ) which began my interest in type design
@@ -56,7 +74,6 @@
 - [ ] learn about noreferrer, etc: https://linkbuilder.io/rel-noopener-noreferrer/
 - [ ] Rework semantics for SEO for: h1/h2/etc
 - [ ] JS to prevent bad breaks (widows / orphans)
-- [ ] nice to have: setup a contact card button for grad show: https://vcard.link/card
 - [ ] - [ ] Responsive image loading... add avif/etc optimized loadtime support
 - [ ] figure out how to generate the tag pages (e.g. .com/branding)
 - [ ] figure out how to show extra process (another slider, hidden section, etc.)
@@ -71,6 +88,9 @@
 
 
 ## DONE
+
+### Week 7
+- [X] Address mobile layout issues - see March 02, 2025 in notes app
 
 ### Week 6
 
