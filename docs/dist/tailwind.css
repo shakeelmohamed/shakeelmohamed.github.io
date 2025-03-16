@@ -834,8 +834,8 @@ select {
     /* larger screens only */
     @media only screen and (min-width: 1920px) {
         img.lightbox, video {
-            max-width: auto !important;
-            width: 100%;
+            /* max-width: auto !important;
+            width: auto; */
         }
     }
 
