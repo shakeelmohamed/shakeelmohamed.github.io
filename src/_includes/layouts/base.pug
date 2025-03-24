@@ -4,15 +4,24 @@ block body
     +headernew()
     main.mb-4
         block content
-        hr(style="margin-bottom:0 !important;")
     +footernew()
 
 //- TODO: mobile footer
 //- TODO: eventually cleanup to use header and footer tags
 //- TODO: can make a really cool banner for grad week...
 
+mixin gradshowdesktop()
+    .full-width.mb-4.py-1(style="background-color: #e9e8dd; text-align: center; margin-top: -1.5rem;")
+        a(href="/gradshow") 🎓 &nbsp;Graduation show details here: April 26, 2025 &nbsp;🎉
+
+mixin gradshowmobile()
+    .full-width.mb-4.py-2(style="background-color: #e9e8dd; text-align: center; margin-top: -1rem;")
+        strong
+            a(href="/gradshow") 🎓 &nbsp;Graduation show details here: April 26, 2025 &nbsp;🎉
+
 mixin headernew()
     .mobile-only.mobileHeader
+        //- +gradshowmobile()
         .grid-2(style="flex-direction: row; justify-content: space-between;")
             //- TODO: logo sizing is WIP, find a better way to match the height of 2 header lines
             div
@@ -38,6 +47,7 @@ mixin headernew()
                 a(href="mailto:" + metadata.author.email, target="_blank") #{metadata.author.email}
         hr.mobile-only
     div.newheader.sticky.top-0
+        //- +gradshowdesktop()
         .grid-4
             div
                 //- TODO: logo sizing is WIP, find a better way to match the height of 2 header lines
@@ -122,6 +132,7 @@ mixin headernew()
 //- TODO: bring back Designed and developed with ✨emotion✨.
 
 mixin footernew()
+    hr(style="margin-bottom:0.5 !important;")
     .newfooter.grid-4(style="padding-bottom: 0 !important;")
         div
             br.mobile-only
