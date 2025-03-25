@@ -833,9 +833,10 @@ select {
 
     /* larger screens only */
     @media only screen and (min-width: 1920px) {
-        img.lightbox, video {
+        img.lightbox, video, .project-content > img {
             /* max-width: auto !important;
             width: auto; */
+            width: 100%;
         }
     }
 
@@ -1863,6 +1864,10 @@ select {
 .py-12 {
   padding-top: 3rem;
   padding-bottom: 3rem;
+}
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 .py-8 {
   padding-top: 2rem;
