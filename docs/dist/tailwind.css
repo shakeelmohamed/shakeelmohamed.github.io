@@ -831,6 +831,13 @@ select {
         line-height: 1.2rem;
     }
 
+    /* larger screens only */
+    @media only screen and (min-width: 1920px) {
+        img.lightbox, video, .project-content > img {
+            width: 100%;
+        }
+    }
+
     /* TODO:  tailwind is ripping this out? mobile is totally broken */
     @media only screen and (max-width: 860px) {
         body {
@@ -944,7 +951,6 @@ select {
     main {
   position: relative;
   flex: 1 1 auto;
-/*        pt-4; */
 }
 
     footer {
@@ -1855,6 +1861,10 @@ select {
 .py-12 {
   padding-top: 3rem;
   padding-bottom: 3rem;
+}
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 .py-8 {
   padding-top: 2rem;
