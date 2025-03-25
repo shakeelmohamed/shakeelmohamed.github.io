@@ -7,42 +7,64 @@
 
 ## ASAP
 
-- [ ] large screen issue: R margin does not match; image/videos are not full width (e.g. they are smaller resolution than the screen)
-- [ ] check colors on planetary society images, might need to export the variable font still as RGB (e.g. font outline image... also make it 1920x1080 or make the video 1920x1200 idk)
-- [ ] bring all JS files into the repo, all remote libraries!
-- [ ] APS: show identity system overview for macro and micro (type, color, logo lockups) --- just make it like 2 slides
+- [ ] cleanup grad show portfolio to basically match website
+
+- [ ] APS: show micro ID system overview
+- [ ] APS: all micro posters has to be updated with new font adjustments (esp. the s change)
+- [ ] APS: + and the cover / OG photo
 - [ ] Thesis: overall clean it up ASAP and remove the note about it... [easier once midterm deck is done]; Can set this up in my bio a bit to speak more maturely as being an advocate and helping others to become advocates.
+
+- [ ] Need a new tagline! 3 key ideas: advocate/community for designers, cross-disciplinary approach, and typography is central to everything I do.
+- [ ] ...(longer form about me could build) ... this began in my past career as a software engineer where I built my analytical thinking skills, while understanding the need for clearer communication about the technologies I was building...
 
 ## P2
 
+- [ ] MJ: why am I not showing the brand guidelines?
 - [ ] MJ: update project summary
 - [ ] MJ: spend 3 hours on motion (new storyboard, logo decomposition into layers, production), goal should be 10 seconds max
 - [ ] Thesis: what are the points of my talk? some high level ideas, or takeaways... still unclear what I am bringing to expand the perceived value of designers
 - [ ] Overall positioning through leadership, technical expertise, and economy design
-- [ ] How can symbol make it onto the about page? ugh
-- [ ] Social media ~~~~ need it in portfolio now!
-- [ ] Update all website meta descriptions without CANDIDATE (Graphic Design MFA Candidate at ArtCenter College of Design.)
+- [ ] Social media design ~~~~ need it in portfolio now!
 - [ ] Rothko: update all book imgs, missing some stills instead of all gifs
 - [ ] Rothko: try to match background colors to the brand gray tone
 - [ ] Rothko: why is the book cover so pixelated, esp PBS logo? investigate
 - [ ] ALL CAPTIONS: add periods at the end check emmmmm
+- [ ] add more 3D stuff to labyrinth
+
+## Thesis
+
+- [ ] Thesis website: overall clean it up ASAP and remove the note about it... [easier once midterm deck is done]
+- thesis imagery
 
 
 ## Grad show options
 
-- [ ] can setup a thin sticky banner at the top -> grad show modal maybe
-    - [ ] list all grad show details + link to grad show website
-    - [ ] Can show a 3D model of the wall too, host on sketchfab w/ annotations: https://support.fab.com/s/article/Annotations
+- [ ] Enable the sticky header in base.pug when ready to go live
+- [ ] list all grad show details + link to grad show website
+- [ ] Can show a 3D model of the wall too, host on sketchfab w/ annotations: https://support.fab.com/s/article/Annotations
+    - [ ] See also: https://github.com/sketchfab/blender-plugin/releases/tag/1.6.1
 - [ ] setup a contact card button for grad show: https://vcard.link/card
 - [ ] Spinning 3D model of biz card would be so cool
 - [ ] grad show logistics
 - [ ] note from me
-- [ ] Apple Invite link to RSVP: https://www.icloud.com/invites/073mzZ3mToW9eku77lcZsJI6g
+- [X] can setup a thin sticky banner at the top -> grad show modal maybe
+- [X] Apple Invite link to RSVP: https://www.icloud.com/invites/073mzZ3mToW9eku77lcZsJI6g
 
+# P3
+
+- [ ] TPS show lightsail itself in the motion review
+- [ ] TPS make the 30s trailer idea I’ve been thinking about
+- [ ] digital signage motion posters
+- [ ] more micro touchpoints
+- [ ] merch - where’s the jacket + hat?
+- [ ] process
 
 
 ## LATER
 
+- [ ] How can symbol make it onto the about page? ugh
+- [ ] Update all website meta descriptions, “holds an MFA” is not so interesting
+- [ ] check favicon colors against printed materials
 - [ ] Look at some SEO tricks for primary featured images, could be nice to get my whole portfolio showing in search results: https://stackoverflow.com/questions/32577999/how-can-i-add-schema-org-primaryimageofpage-in-my-site
 - [ ] Setup 404 tracking w/ GA: https://www.analyticsmania.com/post/track-404-errors-with-google-analytics-google-tag-manager/#ga4-gtm
 - [ ] Design 404 page; https://www.404s.design/; consider an opportunity for generative design
@@ -60,7 +82,6 @@
 - [ ] Start posting on Behance!
 - [ ] Tests would be nice
 - [ ] Rework projects to have a cover.png shown at the top (ideally its the same image as the OG, just scaled up + higher res) -> scale should be about 1920x1200, the OG size feels too wide for cover images
-- [ ] on large screens, images max out in size at 1920 and have a huge right margin sometimes
 - [ ] Perhaps use cover.png instead of opengraph for project thumbnails
 - [ ] Can include small images for AIGA talks on about page... BELOW the resume area
 - [ ] Mindful Roman - poster has kinda tight leading on the 3 paragraphs, I think... need to check at full scale
@@ -77,7 +98,6 @@
 - [ ] - [ ] Responsive image loading... add avif/etc optimized loadtime support
 - [ ] figure out how to generate the tag pages (e.g. .com/branding)
 - [ ] figure out how to show extra process (another slider, hidden section, etc.)
-- [ ] ALL CAPTIONS: automate check for periods at the end
 
 ## Consider Revisiting
 
@@ -85,9 +105,20 @@
 - [ ] Footer: on project pages, can have a next/prev project (need some logic for that)
 - [ ] Capitalize first letter of first tag (homepage under each project, and thesis page), within a project page, capitalize like “Media: Poster”; and then lowercase homepage “Branding, typography, leadership” to be consistent
 - [ ] HSTS support via cloudflare? Not sure if this still works with github pages
+- [ ] ALL CAPTIONS: automate check for periods at the end
 
 
 ## DONE
+
+## week 10
+- [X] check colors on planetary society images, might need to export the variable font still as RGB (e.g. font outline image... also make it 1920x1080 or make the video 1920x1200 idk)
+- [X] APS: have to rebuild ticket mockups FML -- AND THE AI FILES WITH UPDATED TYPE WOW.
+- [X] APS: show identity system overview for macro and micro (type, color, logo lockups)
+- [X] move rule into the footer and out of the bottom of body
+- [X] large screen issue: R margin does not match; image/videos are not full width (e.g. they are smaller resolution than the screen)
+- [x] bring all JS files into the repo, all remote libraries!
+- [X] on large screens, images max out in size at 1920 and have a huge right margin sometimes
+- [X] ALL CAPTIONS: check for periods at the end
 
 ### Week 7
 - [X] Address mobile layout issues - see March 02, 2025 in notes app
