@@ -10,7 +10,7 @@
 - [ ] cleanup grad show portfolio to basically match website
 
 - [ ] APS: show micro ID system overview
-- [ ] APS: all micro posters has to be updated with new font adjustments (esp. the s change)
+- [ ] APS: all micro posters have to be updated with new font adjustments (esp. the s change)
 - [ ] APS: + and the cover / OG photo
 - [ ] Thesis: overall clean it up ASAP and remove the note about it... [easier once midterm deck is done]; Can set this up in my bio a bit to speak more maturely as being an advocate and helping others to become advocates.
 
