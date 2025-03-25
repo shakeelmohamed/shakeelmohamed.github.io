@@ -9,11 +9,7 @@
 
 - [ ] cleanup grad show portfolio to basically match website
 
-- [ ] APS: show micro ID system overview
-- [ ] APS: all micro posters have to be updated with new font adjustments (esp. the s change)
-- [ ] APS: + and the cover / OG photo
 - [ ] Thesis: overall clean it up ASAP and remove the note about it... [easier once midterm deck is done]; Can set this up in my bio a bit to speak more maturely as being an advocate and helping others to become advocates.
-
 - [ ] Need a new tagline! 3 key ideas: advocate/community for designers, cross-disciplinary approach, and typography is central to everything I do.
 - [ ] ...(longer form about me could build) ... this began in my past career as a software engineer where I built my analytical thinking skills, while understanding the need for clearer communication about the technologies I was building...
 
@@ -24,6 +20,7 @@
 - [ ] MJ: spend 3 hours on motion (new storyboard, logo decomposition into layers, production), goal should be 10 seconds max
 - [ ] Thesis: what are the points of my talk? some high level ideas, or takeaways... still unclear what I am bringing to expand the perceived value of designers
 - [ ] Overall positioning through leadership, technical expertise, and economy design
+- [ ] APS: show micro ID system overview
 - [ ] Social media design ~~~~ need it in portfolio now!
 - [ ] Rothko: update all book imgs, missing some stills instead of all gifs
 - [ ] Rothko: try to match background colors to the brand gray tone
@@ -46,7 +43,7 @@
 - [ ] setup a contact card button for grad show: https://vcard.link/card
 - [ ] Spinning 3D model of biz card would be so cool
 - [ ] grad show logistics
-- [ ] note from me
+- [ ] personal note from me
 - [X] can setup a thin sticky banner at the top -> grad show modal maybe
 - [X] Apple Invite link to RSVP: https://www.icloud.com/invites/073mzZ3mToW9eku77lcZsJI6g
 
@@ -55,7 +52,8 @@
 - [ ] TPS show lightsail itself in the motion review
 - [ ] TPS make the 30s trailer idea I’ve been thinking about
 - [ ] digital signage motion posters
-- [ ] more micro touchpoints
+- [ ] more micro touchpoints, so many beautiful print materials - especially the vellum and metallic stuff. Play with Blender renders on this
+    - [ ] https://blender.stackexchange.com/questions/131930/translucent-material-a-sheet-of-paper-with-image-texture
 - [ ] merch - where’s the jacket + hat?
 - [ ] process
 
@@ -92,6 +90,7 @@
 
 ## Low priority
 
+- [ ] Redo mockups for TPS tickets, start from a clean INDD file -> PSD, maybe even do Blender mockups
 - [ ] learn about noreferrer, etc: https://linkbuilder.io/rel-noopener-noreferrer/
 - [ ] Rework semantics for SEO for: h1/h2/etc
 - [ ] JS to prevent bad breaks (widows / orphans)
@@ -111,6 +110,9 @@
 ## DONE
 
 ## week 10
+
+- [X] APS: all micro posters have to be updated with new font adjustments (esp. the s change)
+- [X] APS: + and the cover / OG photo
 - [X] check colors on planetary society images, might need to export the variable font still as RGB (e.g. font outline image... also make it 1920x1080 or make the video 1920x1200 idk)
 - [X] APS: have to rebuild ticket mockups FML -- AND THE AI FILES WITH UPDATED TYPE WOW.
 - [X] APS: show identity system overview for macro and micro (type, color, logo lockups)
