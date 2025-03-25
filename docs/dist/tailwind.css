@@ -834,8 +834,6 @@ select {
     /* larger screens only */
     @media only screen and (min-width: 1920px) {
         img.lightbox, video, .project-content > img {
-            /* max-width: auto !important;
-            width: auto; */
             width: 100%;
         }
     }
@@ -953,7 +951,6 @@ select {
     main {
   position: relative;
   flex: 1 1 auto;
-/*        pt-4; */
 }
 
     footer {
