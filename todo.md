@@ -9,7 +9,6 @@
 
 - [ ] cleanup grad show portfolio to basically match website
 
-- [ ] APS: show micro ID system overview
 - [ ] Thesis: overall clean it up ASAP and remove the note about it... [easier once midterm deck is done]; Can set this up in my bio a bit to speak more maturely as being an advocate and helping others to become advocates.
 - [ ] Need a new tagline! 3 key ideas: advocate/community for designers, cross-disciplinary approach, and typography is central to everything I do.
 - [ ] ...(longer form about me could build) ... this began in my past career as a software engineer where I built my analytical thinking skills, while understanding the need for clearer communication about the technologies I was building...
@@ -21,6 +20,7 @@
 - [ ] MJ: spend 3 hours on motion (new storyboard, logo decomposition into layers, production), goal should be 10 seconds max
 - [ ] Thesis: what are the points of my talk? some high level ideas, or takeaways... still unclear what I am bringing to expand the perceived value of designers
 - [ ] Overall positioning through leadership, technical expertise, and economy design
+- [ ] APS: show micro ID system overview
 - [ ] Social media design ~~~~ need it in portfolio now!
 - [ ] Rothko: update all book imgs, missing some stills instead of all gifs
 - [ ] Rothko: try to match background colors to the brand gray tone
@@ -52,7 +52,8 @@
 - [ ] TPS show lightsail itself in the motion review
 - [ ] TPS make the 30s trailer idea I’ve been thinking about
 - [ ] digital signage motion posters
-- [ ] more micro touchpoints
+- [ ] more micro touchpoints, so many beautiful print materials - especially the vellum and metallic stuff. Play with Blender renders on this
+    - [ ] https://blender.stackexchange.com/questions/131930/translucent-material-a-sheet-of-paper-with-image-texture
 - [ ] merch - where’s the jacket + hat?
 - [ ] process
 
