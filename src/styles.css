@@ -287,9 +287,8 @@
 
     /* larger screens only */
     @media only screen and (min-width: 1920px) {
-        img.lightbox, video {
-            /* max-width: auto !important;
-            width: auto; */
+        img.lightbox, video, .project-content > img {
+            width: 100%;
         }
     }
 
@@ -394,7 +393,6 @@
 
     main {
       @apply relative flex-auto;
-/*        pt-4; */
     }
 
     footer {
