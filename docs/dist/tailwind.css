@@ -916,8 +916,8 @@ select {
             margin-bottom: 0.25rem;
         }
 
-        .grid-1 > .project-content > p.caption {
-            max-width: 100%;
+        .project-content > p.caption {
+            max-width: 100% !important;
         }
 
         .position {
