@@ -11,7 +11,7 @@ block body
 //- TODO: can make a really cool banner for grad week...
 
 mixin gradshowdesktop()
-    .full-width.mb-4.py-1(style="background-color: #e9e8dd; text-align: center; margin-top: -1.5rem;")
+    .full-width.mb-4.py-1(style="background-color: #e9e8dd; text-align: center; margin-top: -1.5rem; margin-bottom: 1.5rem")
         a(href="/gradshow") 🎓 &nbsp;Graduation show details here: April 26, 2025 &nbsp;🎉
 
 mixin gradshowmobile()
@@ -21,7 +21,7 @@ mixin gradshowmobile()
 
 mixin headernew()
     .mobile-only.mobileHeader
-        //- +gradshowmobile()
+        +gradshowmobile()
         .grid-2(style="flex-direction: row; justify-content: space-between;")
             //- TODO: logo sizing is WIP, find a better way to match the height of 2 header lines
             div
@@ -47,7 +47,7 @@ mixin headernew()
                 a(href="mailto:" + metadata.author.email, target="_blank") #{metadata.author.email}
         hr.mobile-only
     div.newheader.sticky.top-0
-        //- +gradshowdesktop()
+        +gradshowdesktop()
         .grid-4
             div
                 //- TODO: logo sizing is WIP, find a better way to match the height of 2 header lines
