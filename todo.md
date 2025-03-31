@@ -38,16 +38,16 @@
 
 ## Grad show options
 
-- [ ] Enable the sticky header in base.pug when ready to go live
-- [ ] list all grad show details + link to grad show website
+- [ ] list all grad show details
 - [ ] Can show a 3D model of the wall too, host on sketchfab w/ annotations: https://support.fab.com/s/article/Annotations
     - [ ] See also: https://github.com/sketchfab/blender-plugin/releases/tag/1.6.1
 - [ ] setup a contact card button for grad show: https://vcard.link/card
 - [ ] Spinning 3D model of biz card would be so cool
 - [ ] grad show logistics
-- [ ] personal note from me
+- [X] personal note from me
 - [X] can setup a thin sticky banner at the top -> grad show modal maybe
 - [X] Apple Invite link to RSVP: https://www.icloud.com/invites/073mzZ3mToW9eku77lcZsJI6g
+- [X] Enable the sticky header in base.pug when ready to go live
 
 # P3
 
