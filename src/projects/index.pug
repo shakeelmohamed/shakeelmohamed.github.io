@@ -6,6 +6,10 @@ description: Shakeel Mohamed is a Graphic Designer in Los Angeles, specializing 
 extends ../_includes/layouts/base.pug
 
 block content
+    if collections.portfolio
+        .grid-2
+            each project in collections.portfolio
+                +projectListing(project)
     //- TODO: bring back once play stuff is organized neatly
     //- +gridCols2()
     //-     div
