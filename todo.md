@@ -29,6 +29,7 @@
 - [ ] Rothko: why is the book cover so pixelated, esp PBS logo? investigate
 - [ ] ALL CAPTIONS: add periods at the end check emmmmm
 - [ ] add more 3D stuff to labyrinth
+- [ ] Can update bio to speak about trained as a designer all along (clearly explain why I changed careers)
 
 ## Thesis
 
