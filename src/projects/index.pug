@@ -17,8 +17,3 @@ block content
     //-             a(href"/play")For unpolished work, visit the archives.
     
     //- TODO: can include non-portfolio projects one day...
-    if collections.portfolio
-        +gridCols2()
-            each project in collections.portfolio
-                //- if project not in collections.archive
-                +projectListing(project)
