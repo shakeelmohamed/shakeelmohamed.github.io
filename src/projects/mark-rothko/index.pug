@@ -29,9 +29,31 @@ include ../../_includes/project_utils.pug
 block content
     .grid-2
         div
-            p I designed a wordmark, posters, and accompanying booklet for a campaign promoting a PBS documentary about Mark Rothko, the abstract expressionist.  My design concept was: in memoriam.
-            br
+            p I designed a wordmark, posters, and accompanying booklet for a campaign promoting a PBS documentary about Mark Rothko, the abstract expressionist. My design concept was: in memoriam.
+        div
             p Depth of research and critique helped me to clarify the forms and vocabulary used throughout the project. Book colors were inspired by the Rothko Chapel in Houston, Texas. The non-denominational Chapel was one of Rothko’s final projects which he never saw completed before his passing.
+        
+
+    .grid-1
+        +portfolioImg("./img/Mark_Rothko_campaign_cover.png", "", "A poster series promoting the documentary episode. By placing content over the paintings, the reader is required to view the painting more intimately.")
+    
+    //- TODO: move to about page under heroes section
+    //- .grid-1
+    //-     +portfolioImg("./img/Rothko---2.png", "", "Sean Adams, the former Department Chair of Graphic Design at ArtCenter, selected one poster from the set to display in his office.")
+
+    //- Example, on mobile I don’t want this to flatten to 1 column
+    //- .grid-2.keepDesktop
+    //-     +portfolioImg("./img/Rothko---7.png", "", "The final wordmark set on a purple inspired by the colors of Rothko’s paintings in the Rothko Chapel. The primitive forms for “Mark” tie back to the primitive emotions evoked by his work. While “Rothko” is set in all caps to symbolize the monolithic scale of his paintings.")
+    //-     +portfolioImg("./img/Rothko---8.png", "", "Varying the placement of “Mark” creates a dynamic element. Conceptually, this connects back to Mark Rothko’s many years of searching before finally settling on the style of art we know him for (and his legacy) as Rothko.")
+
+    .grid-1
+        +portfolioImg("./img/Rothko_wordmark_motion.gif", "", "Varying the placement of “Mark” creates a dynamic element. Conceptually, this connects back to Mark Rothko’s many years of searching before finally settling on the style of art we know him for (and his legacy) as Rothko.")
+    .grid-1
+        +portfolioImg("./img/Rothko_art_for_mystics_book_cover.png", "", "")
+    //- TODO: find a better solution here
+    .grid-2(style="margin-top: -0.25rem")
+        div
+            p Extending the identity to a booklet required a special consideration for messaging. I chose the title “Art for Mystics”, based on the following definition for mystical: inspiring a sense of spiritual mystery, awe, and fascination. This sense of awe is due partly to the scale of Rothko’s paintings.
         div
             p Table of Contents
             br
@@ -54,23 +76,6 @@ block content
                 li
                     strong Reflection 
                     | — my brief and emotional editorial capturing my thoughts as I completed the book.
-
-    .grid-1
-        +portfolioImg("./img/Mark_Rothko_campaign_cover.png", "", "A poster series promoting the documentary episode. By placing content over the paintings, the reader is required to view the painting more intimately.")
-    
-    //- TODO: move to about page under heroes section
-    //- .grid-1
-    //-     +portfolioImg("./img/Rothko---2.png", "", "Sean Adams, the former Department Chair of Graphic Design at ArtCenter, selected one poster from the set to display in his office.")
-
-    //- Example, on mobile I don’t want this to flatten to 1 column
-    //- .grid-2.keepDesktop
-    //-     +portfolioImg("./img/Rothko---7.png", "", "The final wordmark set on a purple inspired by the colors of Rothko’s paintings in the Rothko Chapel. The primitive forms for “Mark” tie back to the primitive emotions evoked by his work. While “Rothko” is set in all caps to symbolize the monolithic scale of his paintings.")
-    //-     +portfolioImg("./img/Rothko---8.png", "", "Varying the placement of “Mark” creates a dynamic element. Conceptually, this connects back to Mark Rothko’s many years of searching before finally settling on the style of art we know him for (and his legacy) as Rothko.")
-
-    .grid-1
-        +portfolioImg("./img/Rothko_wordmark_motion.gif", "", "Varying the placement of “Mark” creates a dynamic element. Conceptually, this connects back to Mark Rothko’s many years of searching before finally settling on the style of art we know him for (and his legacy) as Rothko.")
-    .grid-1
-        +portfolioImg("./img/Rothko_art_for_mystics_book_cover.png", "", "Extending the identity to a booklet required a special consideration for messaging. I chose the title “Art for Mystics”, based on the following definition for mystical: inspiring a sense of spiritual mystery, awe, and fascination. This sense of awe is due partly to the scale of Rothko’s paintings.")
 
     //- TODO: bring back once this is updated
     //- .grid-1

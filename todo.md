@@ -18,7 +18,7 @@
 ## P2
 
 - [ ] MJ: start with logo (or motion), can move the HQ down a bit
-- [ ] Rothko: move the TOC listing down a bit (leverage the grid-2 structure below to explain the editorial)
+- [X] Rothko: move the TOC listing down a bit (leverage the grid-2 structure below to explain the editorial)
 - [ ] MJ: why am I not showing the brand guidelines?
 - [ ] MJ: update project summary
 - [ ] MJ: spend 3 hours on motion (new storyboard, logo decomposition into layers, production), goal should be 10 seconds max
