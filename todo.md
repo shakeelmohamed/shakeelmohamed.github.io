@@ -8,6 +8,8 @@
 ## ASAP
 
 - [ ] cleanup grad show portfolio to basically match website
+- [ ] Rothko, many things are different in the book (esp. animation of spreads in the mockup)
+- [ ] Rothko, update special thanks
 
 - [ ] Thesis: overall clean it up ASAP and remove the note about it... [easier once midterm deck is done]; Can set this up in my bio a bit to speak more maturely as being an advocate and helping others to become advocates.
 - [ ] Need a new tagline! 3 key ideas: advocate/community for designers, cross-disciplinary approach, and typography is central to everything I do.
