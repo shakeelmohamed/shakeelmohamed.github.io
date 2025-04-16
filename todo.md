@@ -4,10 +4,11 @@
 
 - [ ] Add DMARC policy for gmail
 
-
 ## ASAP
 
 - [ ] cleanup grad show portfolio to basically match website
+- [ ] Rothko, many things are different in the book (esp. animation of spreads in the mockup)
+- [ ] Rothko, update special thanks
 
 - [ ] Thesis: overall clean it up ASAP and remove the note about it... [easier once midterm deck is done]; Can set this up in my bio a bit to speak more maturely as being an advocate and helping others to become advocates.
 - [ ] Need a new tagline! 3 key ideas: advocate/community for designers, cross-disciplinary approach, and typography is central to everything I do.
@@ -16,7 +17,7 @@
 ## P2
 
 - [ ] MJ: start with logo (or motion), can move the HQ down a bit
-- [ ] Rothko: move the TOC listing down a bit (leverage the grid-2 structure below to explain the editorial)
+- [X] Rothko: move the TOC listing down a bit (leverage the grid-2 structure below to explain the editorial)
 - [ ] MJ: why am I not showing the brand guidelines?
 - [ ] MJ: update project summary
 - [ ] MJ: spend 3 hours on motion (new storyboard, logo decomposition into layers, production), goal should be 10 seconds max
@@ -52,6 +53,8 @@
 
 # P3
 
+- [ ] Remove react from resume
+- [ ] MJ: keep working on lighting in the installation scene, renders have some odd ghosting on the left side from the HDR
 - [ ] TPS show lightsail itself in the motion review
 - [ ] TPS make the 30s trailer idea I’ve been thinking about
 - [ ] digital signage motion posters
@@ -63,6 +66,7 @@
 
 ## LATER
 
+- [ ] How might I reframe all projects to speak to expertise vs. the project… (e.g. More about me… through Rothko….. vs. about Rothko)
 - [ ] How can symbol make it onto the about page? ugh
 - [ ] Update all website meta descriptions, “holds an MFA” is not so interesting
 - [ ] check favicon colors against printed materials

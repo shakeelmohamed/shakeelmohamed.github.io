@@ -3,38 +3,61 @@ layout: project
 title: "MFA Thesis: Applied Designer"
 description: Applied Designer seeks to empower graphic designers to use their skills in other jobs and industries.
 //- TODO: update OG so stroke weight matches perfectly (make the comp in Processing probably)
-openGraphImage: "./img/Thesis - opengraph.gif"
+openGraphImage: "./img/Thesis - opengraph.png"
 when: 2024–2025
-tools: InDesign, Illustrator, Figma, p5.js, Processing
+tools: InDesign, Illustrator, three.js, p5.js, Processing, basil.js, Blender, Photoshop, Figma
 tags:
     - project
+    - portfolio
 media: 
     - research
     - creative coding
+    - book design
+    - branding
+    - installation
+    - 3D modeling
 goal: Expand the perceived value of designers.
 recognition: Presented initial thesis research at Graph*c Content, a conference hosted by AIGA Los Angeles.
-thanks: Special thanks to my thesis advisor Michael&nbsp;Neal, instructors Sheharazad&nbsp;Fleming, Petrula&nbsp;Vrontikis, and Cheri&nbsp;Gray.
+thanks: Thesis advisor Michael Neal, my thesis pod group (Hayley (Haowen) An, Ana Gwyn Wilson, Avantika (Yajing) Wu, Jen (Geyuzhen) Zhu), Sheharazad Fleming, Cheri Gray, Petrula Vrontikis, Martin Grasser, Robbie Nock, Simon Johnston, Paul Mendoza, Rubina Chadha, Dr. Cheryl D. Miller, Greg Lindy, Milka Broukhim, Gloria Kondrup, Jose Caballer, Eilís Russell, Dr. Dori Tunstall, Erika Abrams, Ali Torbati, Ivan J. Cruz, Amanda Mei, Reuben Merringer, Carolina Uscategui, Vy Huynh, the ArtCenter Gx Grind Club, and staff members of AIGA Los Angeles who supported the Graph*c Content design conference.
 position: 3
 ---
-
-//- TODO: add portfolio tag above once this page is flushed out
-
 include ../../_includes/project_utils.pug
 
 block content
     .grid-2
         div
-            p Please reach out by email, I would love to discuss my project with you!
-            br
-            p This page will get an overhaul in the coming weeks, until then follow along on 
-                strong
-                    a(href="https://instagram.com/applieddesigner" target="_blank") Instagram @applieddesigner.
-            p
-                strong Last Updated: February 03, 2025
+            p My thesis explores looking at new career possibilities for early and mid-career graphic designers. I created Applied Designer, part hiring agency, part advocacy platform, to support designers looking to make career changes. As we face economic uncertainty and rapid technological advancements, I believe Applied Designer is an opportunity to build a sustainable community of designers with meaningful creative careers.
 
         div
-            p The true power of graphic designers is realized when we apply our thinking to more than just visual problems. Our industry’s obsession with “the best” is suffocating our creativity through a linear process. It’s time for a new way to understand creative projects, one which allows for room to meander. Design is a labyrinth, not a maze, a mindful creative exploration through skills, projects, collaborators, and insights.
-
-            p I recently gave a talk titled “Deconstructing ‘Best’: Redefining Success for Designers” at a conference hosted by AIGA Los Angeles in November 2024.
+            p Follow along on Instagram
+                strong &nbsp;
+                    a(href="https://instagram.com/applieddesigner" target="_blank") @applieddesigner.
+            p The microsite is available at
+                strong &nbsp;
+                    a(href="https://applieddesigner.com", target="_blank") applieddesigner.com
     .grid-1
-        img(src="./img/SM_AIGA_LA_01.jpg" alt="Shakeel Mohamed speaking at AIGA Los Angeles")
+        +portfolioImg("./img/Thesis - 1 - logo.png", "", "At the heart of my thesis is the Applied Designer identity. The wireframe aesthetic conveys the transparency I aim to bring to the design industry. The wordmark is created from <a href=\"/projects/referential-mono\">Referential Mono</a>, my first typeface")
+        +portfolioImg("./img/Thesis - trade show booth 2.png", "", "As a hiring agency, Applied Designer can meet early and mid-career designers at industry events like the AIGA national conference. This begins with a trade show booth.")
+    .grid-2
+        +portfolioImg("./img/Thesis - 3 - brochure.png", "", "Designers approaching the booth can access a number of training materials I created.")
+        +portfolioImg("./img/Thesis - 3 - brochure spreads.png", "", "The career stages brochure maps out the 5 stages of a designer’s career, and lists other services Applied Designer offers, like personalized coaching.")
+
+    .grid-1
+        +portfolioImg("./img/Thesis - 4 - nametags.png", "", "At networking events, Applied Designers can create name tags based on their relevant career stage.")
+        +portfolioImg("./img/Thesis - microsite.gif", "", "After engaging with the booth, designers can explore the 12 career archetypes on the microsite. Here, the logo comes to life as a 3 dimensional interface.")
+        +portfolioImg("./img/Applied_Designer_processing_sketch.gif", "", "I believe the design industry has no fixed position, so why should the logo for my thesis be a fixed form?")
+        //- +portfolioImg("./img/Applied_Designer_thesis_loader.gif", "Wireframe animation of a dodecahedron, the Applied Designer logo, slowly rotating on a gray background.", "")
+
+
+
+    //- TODO: process section is not complete, hiding for now
+    //- 
+    //- TODO: long list of thanks, should get the “instructor ___” format I think
+    //- TODO: pod photos would be so nice at the end after/before special thanks
+    //- 
+    //- .grid-2
+    //-     h2 Process
+    //-     div &nbsp;
+    //- .grid-2
+    //-     p In November 2024, near the mid-point of my thesis, I gave a talk titled “Deconstructing ‘Best’: Redefining Success for Designers” at Graph*c Content, a conference hosted by AIGA Los Angeles.
+    //-     +portfolioImg("./img/SM_AIGA_LA_01.jpg", "Shakeel Mohamed speaking at AIGA Los Angeles", "")
