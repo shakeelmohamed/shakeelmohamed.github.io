@@ -4,7 +4,6 @@
 
 - [ ] Add DMARC policy for gmail
 
-
 ## ASAP
 
 - [ ] cleanup grad show portfolio to basically match website
@@ -54,6 +53,8 @@
 
 # P3
 
+- [ ] Remove react from resume
+- [ ] MJ: keep working on lighting in the installation scene, renders have some odd ghosting on the left side from the HDR
 - [ ] TPS show lightsail itself in the motion review
 - [ ] TPS make the 30s trailer idea I’ve been thinking about
 - [ ] digital signage motion posters
@@ -65,6 +66,7 @@
 
 ## LATER
 
+- [ ] How might I reframe all projects to speak to expertise vs. the project… (e.g. More about me… through Rothko….. vs. about Rothko)
 - [ ] How can symbol make it onto the about page? ugh
 - [ ] Update all website meta descriptions, “holds an MFA” is not so interesting
 - [ ] check favicon colors against printed materials
