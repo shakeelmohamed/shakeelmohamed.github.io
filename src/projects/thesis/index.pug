@@ -5,7 +5,7 @@ description: Applied Designer seeks to empower graphic designers to use their sk
 //- TODO: update OG so stroke weight matches perfectly (make the comp in Processing probably)
 openGraphImage: "./img/Thesis - opengraph.png"
 when: 2024–2025
-tools: InDesign, Illustrator, Photoshop, Figma, p5.js, Processing, basil.js, Blender
+tools: InDesign, Illustrator, three.js, p5.js, Processing, basil.js, Blender, Photoshop, Figma
 tags:
     - project
     - portfolio
@@ -14,14 +14,14 @@ media:
     - creative coding
     - book design
     - branding
+    - installation
+    - 3D modeling
 goal: Expand the perceived value of designers.
 recognition: Presented initial thesis research at Graph*c Content, a conference hosted by AIGA Los Angeles.
 thanks: Thesis advisor Michael Neal, my thesis pod group (Hayley (Haowen) An, Ana Gwyn Wilson, Avantika (Yajing) Wu, Jen (Geyuzhen) Zhu), Sheharazad Fleming, Cheri Gray, Petrula Vrontikis, Martin Grasser, Robbie Nock, Simon Johnston, Paul Mendoza, Rubina Chadha, Dr. Cheryl D. Miller, Greg Lindy, Milka Broukhim, Gloria Kondrup, Jose Caballer, Eilís Russell, Dr. Dori Tunstall, Erika Abrams, Ali Torbati, Ivan J. Cruz, Amanda Mei, Reuben Merringer, Carolina Uscategui, Vy Huynh, the ArtCenter Gx Grind Club, and staff members of AIGA Los Angeles who supported the Graph*c Content design conference.
 position: 3
 ---
 include ../../_includes/project_utils.pug
-
-//- TODO: mention the identity design using ref mono + link to it
 
 block content
     .grid-2
@@ -32,8 +32,11 @@ block content
             p Follow along on Instagram
                 strong &nbsp;
                     a(href="https://instagram.com/applieddesigner" target="_blank") @applieddesigner.
+            p The microsite is available at
+                strong &nbsp;
+                    a(href="https://applieddesigner.com", target="_blank") applieddesigner.com
     .grid-1
-        +portfolioImg("./img/Thesis - 1 - logo.png", "", "At the heart of my thesis is the Applied Designer identity. The wireframe aesthetic conveys the transparency I aim to bring to the design industry.")
+        +portfolioImg("./img/Thesis - 1 - logo.png", "", "At the heart of my thesis is the Applied Designer identity. The wireframe aesthetic conveys the transparency I aim to bring to the design industry. The wordmark is created from <a href=\"/projects/referential-mono\">Referential Mono</a>, my first typeface")
         +portfolioImg("./img/Thesis - trade show booth 2.png", "", "As a hiring agency, Applied Designer can meet early and mid-career designers at industry events like the AIGA national conference. This begins with a trade show booth.")
     .grid-2
         +portfolioImg("./img/Thesis - 3 - brochure.png", "", "Designers approaching the booth can access a number of training materials I created.")
