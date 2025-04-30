@@ -21,7 +21,6 @@ mixin gradshowmobile()
 
 mixin headernew()
     .mobile-only.mobileHeader
-        +gradshowmobile()
         .grid-2(style="flex-direction: row; justify-content: space-between;")
             //- TODO: logo sizing is WIP, find a better way to match the height of 2 header lines
             div
@@ -47,7 +46,6 @@ mixin headernew()
                 a(href="mailto:" + metadata.author.email, target="_blank") #{metadata.author.email}
         hr.mobile-only
     div.newheader.sticky.top-0
-        +gradshowdesktop()
         .grid-4
             div
                 //- TODO: logo sizing is WIP, find a better way to match the height of 2 header lines
