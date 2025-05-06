@@ -6,23 +6,15 @@
 
 ## ASAP
 
-- [ ] cleanup grad show portfolio to basically match website
 - [ ] Rothko, many things are different in the book (esp. animation of spreads in the mockup)
-- [ ] Rothko, update special thanks
-
-- [ ] Thesis: overall clean it up ASAP and remove the note about it... [easier once midterm deck is done]; Can set this up in my bio a bit to speak more maturely as being an advocate and helping others to become advocates.
-- [ ] Need a new tagline! 3 key ideas: advocate/community for designers, cross-disciplinary approach, and typography is central to everything I do.
-- [ ] ...(longer form about me could build) ... this began in my past career as a software engineer where I built my analytical thinking skills, while understanding the need for clearer communication about the technologies I was building...
 
 ## P2
 
 - [ ] MJ: start with logo (or motion), can move the HQ down a bit
-- [X] Rothko: move the TOC listing down a bit (leverage the grid-2 structure below to explain the editorial)
 - [ ] MJ: why am I not showing the brand guidelines?
 - [ ] MJ: update project summary
 - [ ] MJ: spend 3 hours on motion (new storyboard, logo decomposition into layers, production), goal should be 10 seconds max
 - [ ] Thesis: what are the points of my talk? some high level ideas, or takeaways... still unclear what I am bringing to expand the perceived value of designers
-- [ ] Overall positioning through leadership, technical expertise, and economy design
 - [ ] APS: show micro ID system overview
 - [ ] Social media design ~~~~ need it in portfolio now!
 - [ ] Rothko: update all book imgs, missing some stills instead of all gifs
@@ -32,24 +24,26 @@
 - [ ] add more 3D stuff to labyrinth
 - [ ] Can update bio to speak about trained as a designer all along (clearly explain why I changed careers)
 
-## Thesis
 
-- [ ] Thesis website: overall clean it up ASAP and remove the note about it... [easier once midterm deck is done]
-- thesis imagery
+## Grad show
 
-
-## Grad show options
-
-- [ ] list all grad show details
-- [ ] Can show a 3D model of the wall too, host on sketchfab w/ annotations: https://support.fab.com/s/article/Annotations
+- [ ] Link to to graduation walk, maybe make a YT clip: https://youtu.be/SASQKIg3VY4?t=5040
+- [ ] I am running into lots of issues here... Can show a 3D model of the wall too, host on sketchfab w/ annotations: https://support.fab.com/s/article/Annotations
     - [ ] See also: https://github.com/sketchfab/blender-plugin/releases/tag/1.6.1
 - [ ] setup a contact card button for grad show: https://vcard.link/card
 - [ ] Spinning 3D model of biz card would be so cool
-- [ ] grad show logistics
+- [ ] Include thesis process images + public speaking
 - [X] personal note from me
 - [X] can setup a thin sticky banner at the top -> grad show modal maybe
 - [X] Apple Invite link to RSVP: https://www.icloud.com/invites/073mzZ3mToW9eku77lcZsJI6g
 - [X] Enable the sticky header in base.pug when ready to go live
+
+## Bio revision
+
+- [ ] Can set up thesis in my bio a bit to speak more maturely as being an advocate and helping others to become advocates.
+- [ ] Need a new tagline! 3 key ideas: advocate/community for designers, cross-disciplinary approach, and typography is central to everything I do.
+- [ ] ...(longer form about me could build) ... this began in my past career as a software engineer where I built my analytical thinking skills, while understanding the need for clearer communication about the technologies I was building...
+- [ ] Overall positioning through leadership, technical expertise, and economy design
 
 # P3
 
@@ -116,8 +110,19 @@
 
 ## DONE
 
+## week 13
+
+- [X] grad show logistics
+- [X] Thesis: overall clean it up ASAP and remove the note about it... [easier once midterm deck is done];
+- [X] cleanup grad show portfolio to basically match website
+- [X] Thesis website: overall clean it up ASAP and remove the note about it... [easier once midterm deck is done]
+- [X] thesis imagery
+- [x] Rothko, update special thanks from book
+
 ## week 10
 
+
+- [X] Rothko: move the TOC listing down a bit (leverage the grid-2 structure below to explain the editorial)
 - [X] APS: all micro posters have to be updated with new font adjustments (esp. the s change)
 - [X] APS: + and the cover / OG photo
 - [X] check colors on planetary society images, might need to export the variable font still as RGB (e.g. font outline image... also make it 1920x1080 or make the video 1920x1200 idk)
