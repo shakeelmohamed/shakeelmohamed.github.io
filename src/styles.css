@@ -29,7 +29,8 @@
     }
 
     .fsjs-skin > .fsjs-wrapper {
-        gap: 2rem;
+        column-gap: 2rem;
+        row-gap: 1rem;
     }
 
     .fsjs-block {
@@ -225,7 +226,8 @@
     .grid-2 {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
+        column-gap: 2rem;
+        row-gap: 1rem;
         margin-top: 1rem;
         margin-bottom: 1rem;
     }
@@ -233,13 +235,15 @@
     .grid-3 {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
+        column-gap: 2rem;
+        row-gap: 1rem;
     }
 
     .grid-4 {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        gap: 2rem;
+        column-gap: 2rem;
+        row-gap: 1rem;
     }
 
     h2 {
