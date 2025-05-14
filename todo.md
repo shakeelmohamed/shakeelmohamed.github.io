@@ -6,16 +6,15 @@
 
 ## ASAP
 
-- [ ] Rothko, many things are different in the book (esp. animation of spreads in the mockup)
-
-## P2
+## P1
 
 - [ ] MJ: start with logo (or motion), can move the HQ down a bit
-- [ ] MJ: why am I not showing the brand guidelines?
+- [ ] MJ: why am I not showing the brand guidelines? NEED THIS in a slide overview off-axis angle format
 - [ ] MJ: update project summary
 - [ ] MJ: spend 3 hours on motion (new storyboard, logo decomposition into layers, production), goal should be 10 seconds max
 - [ ] Thesis: what are the points of my talk? some high level ideas, or takeaways... still unclear what I am bringing to expand the perceived value of designers
 - [ ] APS: show micro ID system overview
+- [ ] Rothko: photoshoot outside of my holding fabric poster(s) https://www.instagram.com/p/CxGUOs_rMTE/?img_index=1
 - [ ] Social media design ~~~~ need it in portfolio now!
 - [ ] Rothko: update all book imgs, missing some stills instead of all gifs
 - [ ] Rothko: try to match background colors to the brand gray tone
@@ -47,7 +46,6 @@
 
 # P3
 
-- [ ] Remove react from resume
 - [ ] MJ: keep working on lighting in the installation scene, renders have some odd ghosting on the left side from the HDR
 - [ ] TPS show lightsail itself in the motion review
 - [ ] TPS make the 30s trailer idea I’ve been thinking about
@@ -109,6 +107,12 @@
 
 
 ## DONE
+
+## New done lol...
+
+- [X] Remove react from resume
+- [X] Rothko front cover mockup is looking dark
+- [X] Rothko, many things are different in the book (esp. animation of spreads in the mockup)
 
 ## week 13
 
