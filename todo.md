@@ -6,6 +6,12 @@
 
 ## ASAP
 
+- [ ] Need to show:
+- [ ]   brand guidelines document (MJ)
+- [ ]   social media (Thesis)
+- [ ]   website (Thesis, TPS, MJ)
+- [ ]   MJ motion (logo reveal, 15-30s piece, product UI features)
+
 ## P1
 
 - [ ] MJ: start with logo (or motion), can move the HQ down a bit
@@ -32,10 +38,6 @@
 - [ ] setup a contact card button for grad show: https://vcard.link/card
 - [ ] Spinning 3D model of biz card would be so cool
 - [ ] Include thesis process images + public speaking
-- [X] personal note from me
-- [X] can setup a thin sticky banner at the top -> grad show modal maybe
-- [X] Apple Invite link to RSVP: https://www.icloud.com/invites/073mzZ3mToW9eku77lcZsJI6g
-- [X] Enable the sticky header in base.pug when ready to go live
 
 ## Bio revision
 
@@ -113,6 +115,10 @@
 - [X] Remove react from resume
 - [X] Rothko front cover mockup is looking dark
 - [X] Rothko, many things are different in the book (esp. animation of spreads in the mockup)
+- [X] personal note from me
+- [X] can setup a thin sticky banner at the top -> grad show modal maybe
+- [X] Apple Invite link to RSVP: https://www.icloud.com/invites/073mzZ3mToW9eku77lcZsJI6g
+- [X] Enable the sticky header in base.pug when ready to go live
 
 ## week 13
 
