@@ -35,7 +35,6 @@
 - [ ] Link to to graduation walk, maybe make a YT clip: https://youtu.be/SASQKIg3VY4?t=5040
 - [ ] I am running into lots of issues here... Can show a 3D model of the wall too, host on sketchfab w/ annotations: https://support.fab.com/s/article/Annotations
     - [ ] See also: https://github.com/sketchfab/blender-plugin/releases/tag/1.6.1
-- [ ] setup a contact card button for grad show: https://vcard.link/card
 - [ ] Spinning 3D model of biz card would be so cool
 - [ ] Include thesis process images + public speaking
 
