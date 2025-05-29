@@ -6,6 +6,7 @@ include ../project_utils.pug
 //- Easy to do here: https://v2-0-1.11ty.dev/docs/quicktips/tag-pages/
 
 //- TODO: add structured markup for SEO
+//- TODO: standardize the process markup, maybe 3 blocks: content, process, thanks?
 
 block content
     if coverImg
@@ -14,6 +15,7 @@ block content
             br
     .grid-1
         h1 #{title}
+    .grid-2
         div.project-meta
             if media && mediaString
                 +projectMeta("Media", mediaString)
@@ -25,6 +27,7 @@ block content
                 +projectMeta("Goal", goal)
             if recognition
                 +projectMeta("Recognition", recognition)
+        div &nbsp;
     !=content
 
     if thanks

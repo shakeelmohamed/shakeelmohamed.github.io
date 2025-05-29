@@ -4,6 +4,12 @@
 
 - [ ] Add DMARC policy for gmail
 
+For conversion from mp4 to avif (eventually, phase out all gifs):
+
+```shell
+ffmpeg -i ontology_cover.mp4 -c:v libaom-av1 -crf 20 -b:v 0 -still-picture 0 ontology_cover.avif
+```
+
 ## ASAP
 
 - [ ] Need to show:
@@ -13,6 +19,7 @@
 - [ ]   website (Thesis, TPS, MJ)
 - [ ]   MJ motion (logo reveal, 15-30s piece, product UI features)
 - [ ]   thesis book
+- [ ]   thesis slide form graduation walk
 
 ## P1
 
@@ -49,6 +56,7 @@
 
 # P3
 
+- [ ] Labyrinth: bring src/projects/mark-rothko/img/Rothko-AR-demo.png over
 - [ ] MJ: keep working on lighting in the installation scene, renders have some odd ghosting on the left side from the HDR
 - [ ] TPS maybe show lightsail itself in the motion reveal?
 - [ ] TPS make the 30s trailer idea I’ve been thinking about with music, etc.
