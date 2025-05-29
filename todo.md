@@ -12,14 +12,18 @@ ffmpeg -i ontology_cover.mp4 -c:v libaom-av1 -crf 20 -b:v 0 -still-picture 0 ont
 
 ## ASAP
 
+- Thesis:
+- [ ] social media
+- [ ] process book
+- [ ] AIGA talk photo(s)
+- [ ] thesis slide form graduation walk
+- [ ] thesis slide form graduation walk
+
 - [ ] Need to show:
     - [ ] SM spelled out in Mindful Roman... duh
 - [ ]   brand guidelines document (MJ)
-- [ ]   social media (Thesis)
 - [ ]   website (Thesis, TPS, MJ)
 - [ ]   MJ motion (logo reveal, 15-30s piece, product UI features)
-- [ ]   thesis book
-- [ ]   thesis slide form graduation walk
 
 ## P1
 
