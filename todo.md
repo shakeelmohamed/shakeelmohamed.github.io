@@ -16,8 +16,7 @@ ffmpeg -i ontology_cover.mp4 -c:v libaom-av1 -crf 20 -b:v 0 -still-picture 0 ont
 - [ ] social media
 - [ ] process book
 - [ ] AIGA talk photo(s)
-- [ ] thesis slide form graduation walk
-- [ ] thesis slide form graduation walk
+- [ ] thesis slide from graduation walk
 
 - [ ] Need to show:
     - [ ] SM spelled out in Mindful Roman... duh
@@ -60,6 +59,7 @@ ffmpeg -i ontology_cover.mp4 -c:v libaom-av1 -crf 20 -b:v 0 -still-picture 0 ont
 
 # P3
 
+- [ ] hmm (security) Add rel="noopener noreferrer" to external links
 - [ ] Labyrinth: bring src/projects/mark-rothko/img/Rothko-AR-demo.png over
 - [ ] MJ: keep working on lighting in the installation scene, renders have some odd ghosting on the left side from the HDR
 - [ ] TPS maybe show lightsail itself in the motion reveal?
@@ -70,6 +70,7 @@ ffmpeg -i ontology_cover.mp4 -c:v libaom-av1 -crf 20 -b:v 0 -still-picture 0 ont
 - [ ] merch - where’s the jacket + hat?
 - [ ] process
 - [ ] Type design list page (ideally I have all the tag-specific pages auto generated, otherwise I can curate the ones I need by skill (type design, branding, motion, editorial, web))
+- [ ] maybe add a spacer for empty grid divs... https://github.com/shakeelmohamed/shakeelmohamed.github.io/pull/181#discussion_r2114879681; see also https://github.com/shakeelmohamed/shakeelmohamed.github.io/pull/181#discussion_r2114880664
 
 
 ## LATER
