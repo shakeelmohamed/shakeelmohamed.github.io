@@ -11,6 +11,7 @@
 - [ ]   social media (Thesis)
 - [ ]   website (Thesis, TPS, MJ)
 - [ ]   MJ motion (logo reveal, 15-30s piece, product UI features)
+- [ ]   thesis book
 
 ## P1
 
@@ -48,7 +49,7 @@
 # P3
 
 - [ ] MJ: keep working on lighting in the installation scene, renders have some odd ghosting on the left side from the HDR
-- [ ] TPS show lightsail itself in the motion reveal
+- [ ] TPS maybe show lightsail itself in the motion reveal?
 - [ ] TPS make the 30s trailer idea I’ve been thinking about with music, etc.
 - [ ] digital signage motion posters
 - [ ] more micro touchpoints, so many beautiful print materials - especially the vellum and metallic stuff. Play with Blender renders on this

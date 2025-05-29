@@ -1,6 +1,6 @@
 ---
 layout: project
-title: "Ontology Typeface"
+title: "Ontology Typeface (WIP)"
 short: Ontology
 description: Ontology is a full-flavored sans font family.
 openGraphImage: "./img/Ontology - OG.png"
@@ -8,27 +8,42 @@ when: 2025
 tools: Glyphs, Illustrator, InDesign, Figma
 tags:
     - project
+    - portfolio
 media: 
     - type design
     - research
-goal: Design a bilingual typeface, inspired by Arabic. (The Arabic is currently being revisited.)
-thanks: "Special thanks to instructor Greg Lindy, and HMCT Typographer-in-Residence Yara Khoury Nammour."
+goal: Design a bilingual typeface, where the Latin letterforms are inspired by Arabic.
+thanks: "Special thanks to instructor Greg Lindy and Yara Khoury Nammour for her instruction on the Arabic script while visiting ArtCenter as the 2025 HMCT Typographer-in-Residence. Additional thanks to Duolingo for helping me to learn the Arabic alphabet!"
 position: 8
 ---
 
 include ../../_includes/molecules.pug
 include ../../_includes/project_utils.pug
 
-block content
-    //- TODO: add portfolio tag when ready
-    
+block content    
     .grid-2
         div
-            p Ontology is a full-flavored sans font family. The project began by intent began by learning the anatomy of Arabic script through connected and positional letterforms. I was inspired by how the calligraphic gesture still influences modern Arabic type design, and wanted to bring that influence into the Latin character set. Typically, the Arabic letterforms for a font are designed after the Latin. However, through consultation with native Arabic speakers and type designers, I recognized the need to pause and revisit the Arabic letterforms after a break. However, in doing so I had already brought some of the Arabic influence into my Latin letters and hope to continue the process as time permits.
+            p Ontology is a full-flavored sans font family. The project began by learning the anatomy of Arabic script through connected and positional letterforms. I was inspired by how the calligraphic gesture still influences modern Arabic type design, and wanted to bring that influence into the Latin character set. Typically, the Arabic letterforms for a font are designed after the Latin. I was attempting the reverse.
+            br
+            p After consultation with native Arabic speakers and type designers, I recognized the need to pause and revisit the Arabic letterforms after a break. However, in doing so I had already brought some of the Arabic influence into my Latin letters and hope to continue the process as time permits.
         div
-            p Future work includes: refined spacing, kerning pairs, sample print applications, and properly drawn weights for black and regular instead of relying on interpolation from bold to thin.
-    .grid-2
-        +portfolioImg("./img/Ontology - 1.png", "", "")
-        +portfolioImg("./img/Ontology - 2.png", "", "")
+            p During the semester I designed three font weights (thin, regular, bold) with three interpolated weights (extra light, light, medium), along with six specimen posters, and a twelve page newsprint typeface specimen.
+            br
+            p Future work includes: refined spacing, kerning pairs, sample print applications, and properly drawn weights for black and regular instead of relying on interpolation from bold to thin, and revisiting the Arabic script.
     .grid-1
-        +portfolioImg("./img/Ontology - 3.png", "", "")
+        +portfolioImg("./img/Ontology - 10.png", "", "Posters to promote the typeface.")
+    //- these poster images are boring... maybe I can mock them up in Blender?
+    //- .grid-2
+    //-     +portfolioImg("./img/Ontology - 1.png", "", "")
+    //-     +portfolioImg("./img/Ontology - 2.png", "", "")
+
+    h2 Process
+    .grid-2
+        +portfolioImg("./img/Ontology - 4.png", "", "The typeface was inspired by my coffee packaging project, Hadhan (since changed to Hadaan).")
+        +portfolioImg("./img/Ontology - 5.png", "", "I thought about this becoming the brand font for Hadhan, perhaps even on a coffee menu.")
+    .grid-2
+        +portfolioImg("./img/Ontology - 8.png", "", "Though the Arabic is very incomplete, the design and critique has taught me a lot about the script.")
+        +portfolioImg("./img/Ontology - 6.png", "", "I intend to revisit the Arabic letterforms soon, with a fresh perspective.")
+    .grid-2
+        +portfolioImg("./img/Ontology - 3.png", "", "My final final at ArtCenter! In my presentation I reflected on the four (!!!!) typefaces that I designed during design school.")
+        +portfolioImg("./img/Ontology - 7.png", "", "A last meeting with Yara Khoury Nammour during the last week of her HMCT residence.")
