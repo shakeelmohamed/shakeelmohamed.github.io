@@ -6,16 +6,21 @@
 
 ## ASAP
 
-- [ ] Rothko, many things are different in the book (esp. animation of spreads in the mockup)
+- [ ] Need to show:
+- [ ]   brand guidelines document (MJ)
+- [ ]   social media (Thesis)
+- [ ]   website (Thesis, TPS, MJ)
+- [ ]   MJ motion (logo reveal, 15-30s piece, product UI features)
 
-## P2
+## P1
 
 - [ ] MJ: start with logo (or motion), can move the HQ down a bit
-- [ ] MJ: why am I not showing the brand guidelines?
+- [ ] MJ: why am I not showing the brand guidelines? NEED THIS in a slide overview off-axis angle format
 - [ ] MJ: update project summary
 - [ ] MJ: spend 3 hours on motion (new storyboard, logo decomposition into layers, production), goal should be 10 seconds max
 - [ ] Thesis: what are the points of my talk? some high level ideas, or takeaways... still unclear what I am bringing to expand the perceived value of designers
 - [ ] APS: show micro ID system overview
+- [ ] Rothko: photoshoot outside of my holding fabric poster(s) https://www.instagram.com/p/CxGUOs_rMTE/?img_index=1
 - [ ] Social media design ~~~~ need it in portfolio now!
 - [ ] Rothko: update all book imgs, missing some stills instead of all gifs
 - [ ] Rothko: try to match background colors to the brand gray tone
@@ -30,13 +35,8 @@
 - [ ] Link to to graduation walk, maybe make a YT clip: https://youtu.be/SASQKIg3VY4?t=5040
 - [ ] I am running into lots of issues here... Can show a 3D model of the wall too, host on sketchfab w/ annotations: https://support.fab.com/s/article/Annotations
     - [ ] See also: https://github.com/sketchfab/blender-plugin/releases/tag/1.6.1
-- [ ] setup a contact card button for grad show: https://vcard.link/card
 - [ ] Spinning 3D model of biz card would be so cool
 - [ ] Include thesis process images + public speaking
-- [X] personal note from me
-- [X] can setup a thin sticky banner at the top -> grad show modal maybe
-- [X] Apple Invite link to RSVP: https://www.icloud.com/invites/073mzZ3mToW9eku77lcZsJI6g
-- [X] Enable the sticky header in base.pug when ready to go live
 
 ## Bio revision
 
@@ -47,15 +47,15 @@
 
 # P3
 
-- [ ] Remove react from resume
 - [ ] MJ: keep working on lighting in the installation scene, renders have some odd ghosting on the left side from the HDR
-- [ ] TPS show lightsail itself in the motion review
-- [ ] TPS make the 30s trailer idea I’ve been thinking about
+- [ ] TPS show lightsail itself in the motion reveal
+- [ ] TPS make the 30s trailer idea I’ve been thinking about with music, etc.
 - [ ] digital signage motion posters
 - [ ] more micro touchpoints, so many beautiful print materials - especially the vellum and metallic stuff. Play with Blender renders on this
     - [ ] https://blender.stackexchange.com/questions/131930/translucent-material-a-sheet-of-paper-with-image-texture
 - [ ] merch - where’s the jacket + hat?
 - [ ] process
+- [ ] Type design list page (ideally I have all the tag-specific pages auto generated, otherwise I can curate the ones I need by skill (type design, branding, motion, editorial, web))
 
 
 ## LATER
@@ -109,6 +109,16 @@
 
 
 ## DONE
+
+## New done lol...
+
+- [X] Remove react from resume
+- [X] Rothko front cover mockup is looking dark
+- [X] Rothko, many things are different in the book (esp. animation of spreads in the mockup)
+- [X] personal note from me
+- [X] can setup a thin sticky banner at the top -> grad show modal maybe
+- [X] Apple Invite link to RSVP: https://www.icloud.com/invites/073mzZ3mToW9eku77lcZsJI6g
+- [X] Enable the sticky header in base.pug when ready to go live
 
 ## week 13
 
