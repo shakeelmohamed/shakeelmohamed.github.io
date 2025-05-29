@@ -7,6 +7,7 @@
 ## ASAP
 
 - [ ] Need to show:
+    - [ ] SM spelled out in Mindful Roman... duh
 - [ ]   brand guidelines document (MJ)
 - [ ]   social media (Thesis)
 - [ ]   website (Thesis, TPS, MJ)
