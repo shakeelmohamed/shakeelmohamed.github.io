@@ -14,8 +14,8 @@ ffmpeg -i ontology_cover.mp4 -c:v libaom-av1 -crf 20 -b:v 0 -still-picture 0 ont
 
 - Thesis:
 - [ ] social media, re-do it
+- [ ] the quiz!
 - [ ] process book
-- [ ] Blender model process
 - [ ] other sketches, ideation from fall
 - [ ] thesis slide from graduation walk?
 
@@ -129,6 +129,7 @@ ffmpeg -i ontology_cover.mp4 -c:v libaom-av1 -crf 20 -b:v 0 -still-picture 0 ont
 
 ## New done lol...
 
+- [X] thesis: Blender model process
 - [X] thesis: AIGA talk photo(s)
 - [X] Ontology: crit close-up on the Latin
 - [X] Remove react from resume
