@@ -21,15 +21,16 @@ ffmpeg -i ontology_cover.mp4 -c:v libaom-av1 -crf 20 -b:v 0 -still-picture 0 ont
 - [ ] thesis slide from graduation walk?
 
 - [ ] Need to show:
-    - [ ] SM spelled out in Mindful Roman... duh
-- [ ]   brand guidelines document (MJ)
+- [ ] referential mono: crit/printed process, kashida/Eid motion, what about the posters?
+- [ ] RM: show research kufic chart also
+- [ ]   brand guidelines document (MJ) - great 1920x1080 mockup, just need to design the images now
 - [ ]   website (Thesis, TPS, MJ)
 - [ ]   MJ motion (logo reveal, 15-30s piece, product UI features)
 
 ## P1
 
-- [ ] MJ: start with logo (or motion), can move the HQ down a bit
 - [ ] MJ: why am I not showing the brand guidelines? NEED THIS in a slide overview off-axis angle format
+- [ ] MJ: motion
 - [ ] MJ: update project summary
 - [ ] MJ: spend 3 hours on motion (new storyboard, logo decomposition into layers, production), goal should be 10 seconds max
 - [ ] Thesis: what are the points of my talk? some high level ideas, or takeaways... still unclear what I am bringing to expand the perceived value of designers
@@ -71,10 +72,12 @@ ffmpeg -i ontology_cover.mp4 -c:v libaom-av1 -crf 20 -b:v 0 -still-picture 0 ont
 - [ ] more micro touchpoints, so many beautiful print materials - especially the vellum and metallic stuff. Play with Blender renders on this
     - [ ] https://blender.stackexchange.com/questions/131930/translucent-material-a-sheet-of-paper-with-image-texture
 - [ ] merch - where’s the jacket + hat?
-- [ ] process
+- [ ] MR: some ephemera like all 12 astrology sign info cards or stickers idk
+- [ ] MR: lifestyle brand packaging mockups
 - [ ] Type design list page (ideally I have all the tag-specific pages auto generated, otherwise I can curate the ones I need by skill (type design, branding, motion, editorial, web))
 - [ ] Ontology: re-export all the gif/avif spread-mockups at higher res, the small type is a bit pixelated
 - [ ] maybe add a spacer for empty grid divs... https://github.com/shakeelmohamed/shakeelmohamed.github.io/pull/181#discussion_r2114879681; see also https://github.com/shakeelmohamed/shakeelmohamed.github.io/pull/181#discussion_r2114880664
+- [ ] multi-column text settings for all fonts would be helpful to see
 
 
 ## LATER
@@ -106,6 +109,7 @@ ffmpeg -i ontology_cover.mp4 -c:v libaom-av1 -crf 20 -b:v 0 -still-picture 0 ont
 - [ ] Overall, I need to clean up all overview descriptions, there are a bit loose at the moment. Writing center is a good move there.
 - [ ] Salgirah + others, fix weird images sizes + replace all content, can make it flatter + break up the carousels so it reads cleanly
 - [ ] Revisit footer design, some inspo: https://www.footer.design/, https://www.footer.design/styles/typographic
+- [ ] Do I need avif fallback? Ontology is using them and it’s really nice... can I get away with no gifs on the website?
 
 
 ## Low priority
@@ -131,6 +135,9 @@ ffmpeg -i ontology_cover.mp4 -c:v libaom-av1 -crf 20 -b:v 0 -still-picture 0 ont
 
 ## New done lol...
 
+- [X] MJ: start with logo (or motion), can move the HQ down a bit
+- [X] SM spelled out in Mindful Roman... duh
+- [X] HMCT gallery / my final photo w/ Greg maybe
 - [X] thesis: Blender model process
 - [X] thesis: AIGA talk photo(s)
 - [X] Ontology: crit close-up on the Latin
