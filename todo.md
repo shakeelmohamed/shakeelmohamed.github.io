@@ -15,11 +15,7 @@ ffmpeg -i ontology_cover.mp4 -c:v libaom-av1 -crf 20 -b:v 0 -still-picture 0 ont
 - Thesis:
 - [ ] social media
 - [ ] process book
-- [ ] AIGA talk photo(s)
 - [ ] thesis slide from graduation walk
-
-- Ontology
-- [ ] 2-up crit close-up on the Latin
 
 - [ ] Need to show:
     - [ ] SM spelled out in Mindful Roman... duh
@@ -51,7 +47,7 @@ ffmpeg -i ontology_cover.mp4 -c:v libaom-av1 -crf 20 -b:v 0 -still-picture 0 ont
 - [ ] I am running into lots of issues here... Can show a 3D model of the wall too, host on sketchfab w/ annotations: https://support.fab.com/s/article/Annotations
     - [ ] See also: https://github.com/sketchfab/blender-plugin/releases/tag/1.6.1
 - [ ] Spinning 3D model of biz card would be so cool
-- [ ] Include thesis process images + public speaking
+- [ ] Include thesis process images
 
 ## Bio revision
 
@@ -131,6 +127,8 @@ ffmpeg -i ontology_cover.mp4 -c:v libaom-av1 -crf 20 -b:v 0 -still-picture 0 ont
 
 ## New done lol...
 
+- [X] thesis: AIGA talk photo(s)
+- [X] Ontology: crit close-up on the Latin
 - [X] Remove react from resume
 - [X] Rothko front cover mockup is looking dark
 - [X] Rothko, many things are different in the book (esp. animation of spreads in the mockup)

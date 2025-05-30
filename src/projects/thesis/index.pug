@@ -45,19 +45,25 @@ block content
     .grid-1
         +portfolioImg("./img/Thesis - 4 - nametags.png", "", "At networking events, Applied Designers can create name tags based on their relevant career stage.")
         +portfolioImg("./img/Thesis - microsite.gif", "", "After engaging with the booth, designers can explore the 12 career archetypes on the microsite. Here, the logo comes to life as a 3 dimensional interface.")
-        +portfolioImg("./img/Applied_Designer_processing_sketch.gif", "", "I believe the design industry has no fixed position, so why should the logo for my thesis be a fixed form? The logo was created with, and came to life from my code written in Processing.")
         //- +portfolioImg("./img/Applied_Designer_thesis_loader.gif", "Wireframe animation of a dodecahedron, the Applied Designer logo, slowly rotating on a gray background.", "")
 
+    .grid-1
+        +portfolioImg("./img/thesis_social.png", "", "Instagram posts became a tool to inform the design community about Applied Designer methodologies and research.")
 
 
-    //- TODO: process section is not complete, hiding for now
-    //- 
-    //- TODO: long list of thanks, should get the “instructor ___” format I think
-    //- TODO: pod photos would be so nice at the end after/before special thanks
-    //- 
-    //- .grid-2
-    //-     h2 Process
-    //-     div &nbsp;
-    //- .grid-2
-    //-     p In November 2024, near the mid-point of my thesis, I gave a talk titled “Deconstructing ‘Best’: Redefining Success for Designers” at Graph*c Content, a conference hosted by AIGA Los Angeles.
-    //-     +portfolioImg("./img/SM_AIGA_LA_01.jpg", "Shakeel Mohamed speaking at AIGA Los Angeles", "")
+
+    //- TODO: process section is not complete
+    hr
+    h2 Process
+    //- TODO: I should not need this br (see how Ontology is done), might be a CSS issue with .grid-1 vs grid-2
+    br
+    .grid-1
+        +portfolioImg("./img/Applied_Designer_processing_sketch.gif", "", "I believe the design industry has no fixed position, so why should the logo for my thesis be a fixed form? The logo was created with, and came to life from my code written in Processing.")
+    .grid-2
+        +portfolioImg("./img/AIGA_LA_01.png", "Shakeel Mohamed speaking at AIGA Los Angeles", "In November 2024, near the mid-point of my thesis, I gave a talk titled “Deconstructing ‘Best’: Redefining Success for Designers” at Graph*c Content, a conference hosted by AIGA Los Angeles.")
+        +portfolioImg("./img/AIGA_LA_02.png", "", "119 slides of reflection, gratitude, and inspiration!")
+
+    h2 Thank you Michael and PB &amp; Magick!
+    .grid-2
+        +portfolioImg("./img/thesis_pod.png", "", "My amazing thesis pod! Led by our advisor, professor Michael Neal. At the halfway point, after our fall semester final&nbsp;presentation.")
+        +portfolioImg("./img/thesis_pod_final.png", "", "After our final presentation! Thank you is not enough to Michael and my incredibly supportive peers.")
