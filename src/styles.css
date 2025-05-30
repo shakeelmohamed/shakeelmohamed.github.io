@@ -221,6 +221,7 @@
     .grid-1 {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
+        /* TODO:  why is there no margin top/bottom of 1rem?; */
     }
 
     .grid-2 {

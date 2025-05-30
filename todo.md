@@ -13,6 +13,7 @@ ffmpeg -i ontology_cover.mp4 -c:v libaom-av1 -crf 20 -b:v 0 -still-picture 0 ont
 ## ASAP
 
 - Thesis:
+- [ ] fix the website mockup/video, hard color blocking top/bottom
 - [ ] social media, re-do it
 - [ ] the quiz!
 - [ ] process book
@@ -40,6 +41,7 @@ ffmpeg -i ontology_cover.mp4 -c:v libaom-av1 -crf 20 -b:v 0 -still-picture 0 ont
 - [ ] Rothko: why is the book cover so pixelated, esp PBS logo? investigate
 - [ ] ALL CAPTIONS: add periods at the end check emmmmm
 - [ ] add more 3D stuff to labyrinth
+- [ ] TPS: process is missing
 - [ ] Can update bio to speak about trained as a designer all along (clearly explain why I changed careers)
 
 
