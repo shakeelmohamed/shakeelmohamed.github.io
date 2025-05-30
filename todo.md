@@ -13,9 +13,11 @@ ffmpeg -i ontology_cover.mp4 -c:v libaom-av1 -crf 20 -b:v 0 -still-picture 0 ont
 ## ASAP
 
 - Thesis:
-- [ ] social media
+- [ ] social media, re-do it
 - [ ] process book
-- [ ] thesis slide from graduation walk
+- [ ] Blender model process
+- [ ] other sketches, ideation from fall
+- [ ] thesis slide from graduation walk?
 
 - [ ] Need to show:
     - [ ] SM spelled out in Mindful Roman... duh
