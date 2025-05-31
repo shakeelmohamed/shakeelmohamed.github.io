@@ -14,7 +14,7 @@ Figure out how to CLI automate spell check like this app: https://www.spl.ing/re
 
 ## ASAP
 
-- [ ] check all the media types for each project, maybe replace posters with print hmm
+- [ ] check all opengraph images
 
 
 - Thesis:
@@ -24,7 +24,7 @@ Figure out how to CLI automate spell check like this app: https://www.spl.ing/re
 - [ ] other sketches, ideation from fall
 - [ ] thesis slide from graduation walk?
 
-- [ ] Need to show:
+Others
 - [ ] referential mono: crit/printed process, kashida/Eid motion, what about the posters?
 - [ ] RM: show research kufic chart also
 - [ ]   brand guidelines document (MJ) - great 1920x1080 mockup, just need to design the images now
@@ -141,6 +141,7 @@ Figure out how to CLI automate spell check like this app: https://www.spl.ing/re
 
 ## New done lol...
 
+- [X] check all the media types for each project, maybe replace posters with print hmm
 - [x] fix the website mockup/video, hard color blocking top/bottom
 - [X] MJ: start with logo (or motion), can move the HQ down a bit
 - [X] SM spelled out in Mindful Roman... duh
