@@ -105,7 +105,8 @@ Figure out how to CLI automate spell check like this app: https://www.spl.ing/re
 
 
 ## My notes
-- [ ] Start posting on Behance!
+- [X] Start posting on Behance!
+- [ ] MJ: could 3D model the exterior facade for the conf, and make a wayfinding program with a clear system + grid
 - [ ] Tests would be nice
 - [ ] Rework projects to have a cover.png shown at the top (ideally its the same image as the OG, just scaled up + higher res) -> scale should be about 1920x1200, the OG size feels too wide for cover images
 - [ ] Perhaps use cover.png instead of opengraph for project thumbnails
