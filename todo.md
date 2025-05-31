@@ -28,6 +28,7 @@ Figure out how to CLI automate spell check like this app: https://www.spl.ing/re
 - [ ]   brand guidelines document (MJ) - great 1920x1080 mockup, just need to design the images now
 - [ ]   website (Thesis, TPS, MJ)
 - [ ]   MJ motion (logo reveal, 15-30s piece, product UI features)
+- [ ]   fix composition for "Ontology - 15.png", the leading is not right
 
 ## P1
 
