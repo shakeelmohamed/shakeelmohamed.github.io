@@ -10,6 +10,8 @@ For conversion from mp4 to avif (eventually, phase out all gifs):
 ffmpeg -i ontology_cover.mp4 -c:v libaom-av1 -crf 20 -b:v 0 -still-picture 0 ontology_cover.avif
 ```
 
+Figure out how to CLI automate spell check like this app: https://www.spl.ing/report-card?website=shakeelmohamed.com&uuid=e4e2c283-6e32-4327-97f6-955a0a38ef2d
+
 ## ASAP
 
 - Thesis:
