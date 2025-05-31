@@ -14,8 +14,10 @@ Figure out how to CLI automate spell check like this app: https://www.spl.ing/re
 
 ## ASAP
 
+- [ ] check all the media types for each project, maybe replace posters with print hmm
+
+
 - Thesis:
-- [ ] fix the website mockup/video, hard color blocking top/bottom
 - [ ] social media, re-do it
 - [ ] the quiz!
 - [ ] process book
@@ -138,6 +140,7 @@ Figure out how to CLI automate spell check like this app: https://www.spl.ing/re
 
 ## New done lol...
 
+- [x] fix the website mockup/video, hard color blocking top/bottom
 - [X] MJ: start with logo (or motion), can move the HQ down a bit
 - [X] SM spelled out in Mindful Roman... duh
 - [X] HMCT gallery / my final photo w/ Greg maybe
