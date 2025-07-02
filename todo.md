@@ -31,6 +31,7 @@ Others
 - [ ]   website (Thesis, TPS, MJ)
 - [ ]   MJ motion (logo reveal, 15-30s piece, product UI features)
 - [ ]   fix composition for "Ontology - 15.png", the leading is not right
+- [ ] Rough out some UI/web case study (maybe Digital Anarchy)
 
 ## P1
 
@@ -68,6 +69,7 @@ Others
 
 # P3
 
+
 - [ ] hmm (security) Add rel="noopener noreferrer" to external links
 - [ ] Labyrinth: bring src/projects/mark-rothko/img/Rothko-AR-demo.png over
 - [ ] MJ: keep working on lighting in the installation scene, renders have some odd ghosting on the left side from the HDR
@@ -80,6 +82,7 @@ Others
 - [ ] MR: some ephemera like all 12 astrology sign info cards or stickers idk
 - [ ] MR: lifestyle brand packaging mockups
 - [ ] Type design list page (ideally I have all the tag-specific pages auto generated, otherwise I can curate the ones I need by skill (type design, branding, motion, editorial, web))
+- [ ] MJ: show prompts
 - [ ] Ontology: re-export all the gif/avif spread-mockups at higher res, the small type is a bit pixelated
 - [ ] maybe add a spacer for empty grid divs... https://github.com/shakeelmohamed/shakeelmohamed.github.io/pull/181#discussion_r2114879681; see also https://github.com/shakeelmohamed/shakeelmohamed.github.io/pull/181#discussion_r2114880664
 - [ ] multi-column text settings for all fonts would be helpful to see
@@ -87,6 +90,9 @@ Others
 
 ## LATER
 
+- [ ] Explore using fluid typography... how does this fit w/ Tailwind?
+    - [ ] https://fluidtypography.com/#usarusFluidTypographyGetStarted
+    - [ ] https://codepen.io/iamryanyu/pen/gbpWGYQ
 - [ ] How might I reframe all projects to speak to expertise vs. the project… (e.g. More about me… through Rothko….. vs. about Rothko)
 - [ ] How can symbol make it onto the about page? ugh
 - [ ] Update all website meta descriptions, “holds an MFA” is not so interesting
@@ -99,6 +105,7 @@ Others
     - [ ] ...(related) I have been modifying type for identity projects (Rothko and MJ) which began my interest in type design
 - [ ] Salgirah: can move it into labyrinth if I want to keep it anywhere (I’d rather keep it as a hidden page)
 - [ ] Labyrinth: include more things like WHP, community photos, etc.
+- [ ] WHP: maybe rename since Studio Matthews had a show called “your words have power”
 - [ ] Labyrinth description: value is my intelligent approach to work, skillful ability to work in simplicity and complexity, dedication to community, learning in formal/informal/digital settings - one of my biggest strengths
 - [ ] TODO: optimize email obfuscation: https://github.com/shakeelmohamed/shakeelmohamed.github.io/pull/161#discussion_r1976589880; and https://github.com/shakeelmohamed/shakeelmohamed.github.io/pull/161#discussion_r1976589879
 - [ ] overall tailwind class exceptions need to be optimized: https://github.com/shakeelmohamed/shakeelmohamed.github.io/pull/161#discussion_r1976589881
@@ -112,6 +119,8 @@ Others
 - [ ] Perhaps use cover.png instead of opengraph for project thumbnails
 - [ ] Can include small images for AIGA talks on about page... BELOW the resume area
 - [ ] Mindful Roman - poster has kinda tight leading on the 3 paragraphs, I think... need to check at full scale
+- [ ] Mindful Roman - do some motion gifs/stills of the font2 specimen sheets I made, fun play on the day/night concept
+- [ ] Mindful Roman - gendesign whole astrology chart... oh yeah
 - [ ] Overall, I need to clean up all overview descriptions, there are a bit loose at the moment. Writing center is a good move there.
 - [ ] Salgirah + others, fix weird images sizes + replace all content, can make it flatter + break up the carousels so it reads cleanly
 - [ ] Revisit footer design, some inspo: https://www.footer.design/, https://www.footer.design/styles/typographic
