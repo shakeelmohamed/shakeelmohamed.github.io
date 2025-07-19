@@ -133,7 +133,7 @@ Others
 - [ ] learn about noreferrer, etc: https://linkbuilder.io/rel-noopener-noreferrer/
 - [ ] Rework semantics for SEO for: h1/h2/etc
 - [ ] JS to prevent bad breaks (widows / orphans)
-- [ ] - [ ] Responsive image loading... add avif/etc optimized loadtime support
+- [ ] - [ ] Responsive image loading... add avif/etc optimized loadtime support; see https://github.com/saneef/eleventy-plugin-img2picture
 - [ ] figure out how to generate the tag pages (e.g. .com/branding)
 - [ ] figure out how to show extra process (another slider, hidden section, etc.)
 
