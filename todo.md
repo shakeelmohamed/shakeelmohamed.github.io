@@ -15,6 +15,7 @@ Figure out how to CLI automate spell check like this app: https://www.spl.ing/re
 ## ASAP
 
 - [ ] check all opengraph images
+- [ ] move all logo family / kit of parts stuff to the bottom of each project (before process)
 
 
 - Thesis:
@@ -25,6 +26,8 @@ Figure out how to CLI automate spell check like this app: https://www.spl.ing/re
 - [ ] thesis slide from graduation walk?
 
 Others
+- [ ] Make an overview gif for each project cover (still fallback to still for OG)
+- [ ] MJ is not optimized for skimming, missing all the good stuff with the slideshows
 - [ ] referential mono: crit/printed process, kashida/Eid motion, what about the posters?
 - [ ] RM: show research kufic chart also
 - [ ]   brand guidelines document (MJ) - great 1920x1080 mockup, just need to design the images now
@@ -32,6 +35,7 @@ Others
 - [ ]   MJ motion (logo reveal, 15-30s piece, product UI features)
 - [ ]   fix composition for "Ontology - 15.png", the leading is not right
 - [ ] Rough out some UI/web case study (maybe Digital Anarchy)
+- [ ] TPS: use this for website partical physics (better than three.js): https://github.com/naughtyduk/particlesGL
 
 ## P1
 
