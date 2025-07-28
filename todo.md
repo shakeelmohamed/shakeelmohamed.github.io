@@ -17,6 +17,14 @@ Figure out how to CLI automate spell check like this app: https://www.spl.ing/re
 - [ ] check all opengraph images
 - [ ] move all logo family / kit of parts stuff to the bottom of each project (before process)
 
+## Bio revision
+
+- [ ] Future bio update: I’m interested in environmental design, creative technology, and Arabic type design.
+- [ ] Can set up thesis in my bio a bit to speak more maturely as being an advocate and helping others to become advocates.
+- [ ] Need a new tagline! 3 key ideas: advocate/community for designers, cross-disciplinary approach, and typography is central to everything I do.
+- [ ] ...(longer form about me could build) ... this began in my past career as a software engineer where I built my analytical thinking skills, while understanding the need for clearer communication about the technologies I was building...
+- [ ] Overall positioning through leadership, technical expertise, and economy design
+
 
 - Thesis:
 - [ ] social media, re-do it
@@ -26,8 +34,12 @@ Figure out how to CLI automate spell check like this app: https://www.spl.ing/re
 - [ ] thesis slide from graduation walk?
 
 Others
+- [ ] CTA on homepage: desktop 2rem on 3rem lead, TBD mobile
+- [ ] CTA footer on all pages?
 - [ ] Make an overview gif for each project cover (still fallback to still for OG)
-- [ ] MJ is not optimized for skimming, missing all the good stuff with the slideshows
+- [ ] Make a separate landing page for freelance/contract work, e.g.: /services or something
+- [ ] Slideshows need arrow icons to be visible that there is more there (vs. looking like a gif)
+    - [ ] MJ is not optimized for skimming, missing all the good stuff with the slideshows
 - [ ] referential mono: crit/printed process, kashida/Eid motion, what about the posters?
 - [ ] RM: show research kufic chart also
 - [ ]   brand guidelines document (MJ) - great 1920x1080 mockup, just need to design the images now
@@ -36,6 +48,7 @@ Others
 - [ ]   fix composition for "Ontology - 15.png", the leading is not right
 - [ ] Rough out some UI/web case study (maybe Digital Anarchy)
 - [ ] TPS: use this for website partical physics (better than three.js): https://github.com/naughtyduk/particlesGL
+- [ ] Think about cursor or other interaction/moiton points using the icon logo
 
 ## P1
 
@@ -44,6 +57,7 @@ Others
 - [ ] MJ: update project summary
 - [ ] MJ: spend 3 hours on motion (new storyboard, logo decomposition into layers, production), goal should be 10 seconds max
 - [ ] Thesis: what are the points of my talk? some high level ideas, or takeaways... still unclear what I am bringing to expand the perceived value of designers
+- [ ] MR: update colors to match personal ID system
 - [ ] APS: show micro ID system overview
 - [ ] Rothko: photoshoot outside of my holding fabric poster(s) https://www.instagram.com/p/CxGUOs_rMTE/?img_index=1
 - [ ] Social media design ~~~~ need it in portfolio now!
@@ -63,13 +77,6 @@ Others
     - [ ] See also: https://github.com/sketchfab/blender-plugin/releases/tag/1.6.1
 - [ ] Spinning 3D model of biz card would be so cool
 - [ ] Include thesis process images
-
-## Bio revision
-
-- [ ] Can set up thesis in my bio a bit to speak more maturely as being an advocate and helping others to become advocates.
-- [ ] Need a new tagline! 3 key ideas: advocate/community for designers, cross-disciplinary approach, and typography is central to everything I do.
-- [ ] ...(longer form about me could build) ... this began in my past career as a software engineer where I built my analytical thinking skills, while understanding the need for clearer communication about the technologies I was building...
-- [ ] Overall positioning through leadership, technical expertise, and economy design
 
 # P3
 
@@ -97,6 +104,7 @@ Others
 - [ ] Explore using fluid typography... how does this fit w/ Tailwind?
     - [ ] https://fluidtypography.com/#usarusFluidTypographyGetStarted
     - [ ] https://codepen.io/iamryanyu/pen/gbpWGYQ
+- [ ] Overall, consider bringing in on-scroll animations just really get them clean - or just use those tools for projects... see https://motion.dev/
 - [ ] How might I reframe all projects to speak to expertise vs. the project… (e.g. More about me… through Rothko….. vs. about Rothko)
 - [ ] How can symbol make it onto the about page? ugh
 - [ ] Update all website meta descriptions, “holds an MFA” is not so interesting
