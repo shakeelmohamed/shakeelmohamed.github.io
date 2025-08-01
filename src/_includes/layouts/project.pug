@@ -1,10 +1,6 @@
 extends ./base.pug
 include ../project_utils.pug
 
-//- TODO: clickable media types as tags -> pages for those tags
-//- Doing one will make the other easy so should be ~1 day job
-//- Easy to do here: https://v2-0-1.11ty.dev/docs/quicktips/tag-pages/
-
 //- TODO: add structured markup for SEO
 //- TODO: standardize the process markup, maybe 5 blocks: main, process, recognition, Acknowledgements, next related projects
 
@@ -14,11 +10,11 @@ block content
             +portfolioImg(coverImg, name + " cover image", "")
             br
     .grid-1
-        h1 #{title}
+        h1.pb-0 #{title}
+        div.project-meta
+            p(style="color: #999999")!= mediaLinks
     .grid-2
         div.project-meta
-            if media && mediaString
-                +projectMeta("Media", mediaString)
             if client
                 +projectMeta("Client", client)
             if tools
