@@ -5,7 +5,6 @@
 - [ ] Add DMARC policy for gmail
 
 For conversion from mp4 to avif (eventually, phase out all gifs):
-
 ```shell
 ffmpeg -i ontology_cover.mp4 -c:v libaom-av1 -crf 20 -b:v 0 -still-picture 0 ontology_cover.avif
 ```
@@ -39,12 +38,15 @@ Others
 - [ ] CTA on homepage: desktop 2rem on 3rem lead, TBD mobile
 - [ ] CTA footer on all pages?
 - [ ] Make an overview gif for each project cover (still fallback to still for OG)
+- [ ] Can make a clearer
 - [ ] Make a separate landing page for freelance/contract work, e.g.: /services or something
     - [ ]  copy on this page should be something like "clarify brand, build trust" - basically speaking to the outcomes and results of design
 - [ ] Slideshows need arrow icons to be visible that there is more there (vs. looking like a gif)
     - [ ] MJ is not optimized for skimming, missing all the good stuff with the slideshows
 - [ ] referential mono: crit/printed process, kashida/Eid motion, what about the posters?
 - [ ] RM: show research kufic chart also
+- [ ]   show stickers from grad show
+- [ ]   motion, like Kashida, etc.
 - [ ]   brand guidelines document (MJ) - great 1920x1080 mockup, just need to design the images now
 - [ ]   website (Thesis, TPS, MJ)
 - [ ]   MJ motion (logo reveal, 15-30s piece, product UI features)

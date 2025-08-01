@@ -1904,6 +1904,9 @@ select {
 .pb-4 {
   padding-bottom: 1rem;
 }
+.pb-0 {
+  padding-bottom: 0px;
+}
 .text-left {
   text-align: left;
 }
