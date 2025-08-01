@@ -12,6 +12,8 @@ ffmpeg -i ontology_cover.mp4 -c:v libaom-av1 -crf 20 -b:v 0 -still-picture 0 ont
 
 Figure out how to CLI automate spell check like this app: https://www.spl.ing/report-card?website=shakeelmohamed.com&uuid=e4e2c283-6e32-4327-97f6-955a0a38ef2d
 
+Good reference for pug x 11ty: https://cardiff.marketing/pug-in-eleventy-making-it-work/
+
 ## ASAP
 
 - [ ] check all opengraph images
@@ -38,6 +40,7 @@ Others
 - [ ] CTA footer on all pages?
 - [ ] Make an overview gif for each project cover (still fallback to still for OG)
 - [ ] Make a separate landing page for freelance/contract work, e.g.: /services or something
+    - [ ]  copy on this page should be something like "clarify brand, build trust" - basically speaking to the outcomes and results of design
 - [ ] Slideshows need arrow icons to be visible that there is more there (vs. looking like a gif)
     - [ ] MJ is not optimized for skimming, missing all the good stuff with the slideshows
 - [ ] referential mono: crit/printed process, kashida/Eid motion, what about the posters?
@@ -72,6 +75,7 @@ Others
 
 ## Grad show
 
+- [ ] Can turn this into a project page for branding / personal ID with lots of documentation, grad show, EGD, motion, 3D models, etc.
 - [ ] Link to to graduation walk, maybe make a YT clip: https://youtu.be/SASQKIg3VY4?t=5040
 - [ ] I am running into lots of issues here... Can show a 3D model of the wall too, host on sketchfab w/ annotations: https://support.fab.com/s/article/Annotations
     - [ ] See also: https://github.com/sketchfab/blender-plugin/releases/tag/1.6.1
@@ -91,8 +95,9 @@ Others
     - [ ] https://blender.stackexchange.com/questions/131930/translucent-material-a-sheet-of-paper-with-image-texture
 - [ ] merch - where’s the jacket + hat?
 - [ ] MR: some ephemera like all 12 astrology sign info cards or stickers idk
-- [ ] MR: lifestyle brand packaging mockups
-- [ ] Type design list page (ideally I have all the tag-specific pages auto generated, otherwise I can curate the ones I need by skill (type design, branding, motion, editorial, web))
+- [ ] MR: lifestyle brand packaging mockups (actually, can just make a whole pkg lifestyle brand)
+- [ ] Media-specific pages could have more detail/context, scrollable images... TBD
+    - [x] Type design list page (ideally I have all the tag-specific pages auto generated, otherwise I can curate the ones I need by skill (type design, branding, motion, editorial, web))
 - [ ] MJ: show prompts
 - [ ] Ontology: re-export all the gif/avif spread-mockups at higher res, the small type is a bit pixelated
 - [ ] maybe add a spacer for empty grid divs... https://github.com/shakeelmohamed/shakeelmohamed.github.io/pull/181#discussion_r2114879681; see also https://github.com/shakeelmohamed/shakeelmohamed.github.io/pull/181#discussion_r2114880664
@@ -151,7 +156,7 @@ Others
 
 ## Consider Revisiting
 
-- [ ] Footer: need a home link (rough added to my name, can it be more obvious)
+- [ ] Footer: need a home link (rough added to my name, can it be more obvious) + headshot and clear CTA
 - [ ] Footer: on project pages, can have a next/prev project (need some logic for that)
 - [ ] Capitalize first letter of first tag (homepage under each project, and thesis page), within a project page, capitalize like “Media: Poster”; and then lowercase homepage “Branding, typography, leadership” to be consistent
 - [ ] HSTS support via cloudflare? Not sure if this still works with github pages

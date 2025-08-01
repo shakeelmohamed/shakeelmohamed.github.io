@@ -23,11 +23,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/CNAME");
 
     // TODO: switch to the new 11ty server: https://www.11ty.dev/docs/dev-server/
-    eleventyConfig.addWatchTarget("**.pug");
-    eleventyConfig.addWatchTarget("src/**");
-    eleventyConfig.addWatchTarget("src/_includes/**");
-    eleventyConfig.addWatchTarget("src/styles.css");
-    eleventyConfig.setWatchThrottleWaitTime(100);
+    eleventyConfig.setWatchThrottleWaitTime(200);
     
     // Custom markdown processor
     let markdownIt = require("markdown-it");
@@ -68,7 +64,6 @@ module.exports = function(eleventyConfig) {
         });
     });
 
-
     // Reverse sort posts, only show this and last year's posts
     eleventyConfig.addCollection("recentPosts", function(collectionApi) {
         return collectionApi.getFilteredByTag("post").reverse().filter(post => {
@@ -87,22 +82,82 @@ module.exports = function(eleventyConfig) {
         return collectionApi.getFilteredByTag("featured").reverse();
     });
 
+    function upsertPosition(project) {
+        if (!project.data.position) {
+            project.data.position = 999;
+        }
+        return project;
+    }
+
+    function fillInPositionData(projects) {
+        for (let i = 0; i < projects.length; i++) {
+          projects[i] = upsertPosition(projects[i]);
+        }
+        projects.sort((a, b) => {
+          return a.data.position - b.data.position;
+        });
+
+        return projects;
+    }
+
     // Omit archived projects, sort remaining in reverse order
     eleventyConfig.addCollection("project", function(collectionApi) {
         return collectionApi.getFilteredByTag("project").reverse().filter(post => {
             return !post.data.tags.includes("archive");
+        }).sort((a, b) => {
+            let _a = upsertPosition(a);
+            let _b = upsertPosition(b);
+            return _a.data.position - _b.data.position;
         });
     });
+
+    // Simple collection that returns media type data for pagination
+    eleventyConfig.addCollection("mediaTypes", function(collectionApi) {
+        console.log('=== MEDIA TYPES COLLECTION DEBUG ===');
+        const projects = collectionApi.getFilteredByTag("project");
+        console.log(`Found ${projects.length} projects`);
+        
+        const mediaTypes = new Set();
+        
+        projects.forEach(project => {
+          if (project.data.media && Array.isArray(project.data.media) && !project.data.tags.includes("archive")) {
+            project.data.media.forEach(type => mediaTypes.add(type));
+          }
+        });
+        
+        // Return array of objects for pagination with CLEAN project data
+        const result = Array.from(mediaTypes).map(type => {
+          const slug = type.replace(/\s+/g, '-').toLowerCase();
+          let projectsForType = projects.filter(project => 
+            project.data.media && project.data.media.includes(type)
+          );
+          
+          projectsForType = fillInPositionData(projectsForType);
+
+          console.log(`Media type "${type}" (${slug}): ${projectsForType.length} projects`);
+          
+          return {
+            name: type,
+            slug: slug,
+            permalink: `/${slug}/`,  // Add permalink directly to the data
+            projects: projectsForType
+          };
+        });
+        
+        console.log(`Generated ${result.length} media type pages`);
+        console.log('=== END DEBUG ===');
+        
+        return result;
+      });
 
     // For "featured portfolio" projects, allow manual positioning
     eleventyConfig.addCollection("portfolio", function(collectionApi) {
-        // TODO: will need some filtering here I think
         return collectionApi.getFilteredByTag("portfolio").sort((a, b) => {
-            return a.data.position - b.data.position;
+            let _a = upsertPosition(a);
+            let _b = upsertPosition(b);
+            return _a.data.position - _b.data.position;
         });
     });
-
-    // TODO: media “tags”, basically want to create a collection per data.media value
 
     /**
      * tags for design projects:

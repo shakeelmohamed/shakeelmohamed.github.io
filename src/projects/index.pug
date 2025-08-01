@@ -8,7 +8,7 @@ extends ../_includes/layouts/base.pug
 block content
     if collections.portfolio
         .grid-2
-            each project in collections.portfolio
+            each project in collections.project
                 +projectListing(project)
     //- TODO: bring back once play stuff is organized neatly
     //- +gridCols2()
