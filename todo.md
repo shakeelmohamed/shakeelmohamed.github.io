@@ -15,11 +15,11 @@ Good reference for pug x 11ty: https://cardiff.marketing/pug-in-eleventy-making-
 
 ## ASAP
 
-- [ ] check all opengraph images
 - [ ] move all logo family / kit of parts stuff to the bottom of each project (before process)
 
 ## Bio revision
 
+- [ ] new OG images to match: Strategic Brand Designer (projects, then posts, etc.)
 - [ ] MUST leverage more of tech experience as experience which led to design, not starting form zero.
 - [ ]   Clear narrative is more important than anything, especially on ATS and designed resume
 - [ ]   Parenthetical titles or in 1 line summary at the top: Product Manager (Funcitonally leading roadmap without formal title)
