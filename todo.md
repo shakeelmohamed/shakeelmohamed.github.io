@@ -20,6 +20,10 @@ Good reference for pug x 11ty: https://cardiff.marketing/pug-in-eleventy-making-
 
 ## Bio revision
 
+- [ ] MUST leverage more of tech experience as experience which led to design, not starting form zero.
+- [ ]   Clear narrative is more important than anything, especially on ATS and designed resume
+- [ ]   Parenthetical titles or in 1 line summary at the top: Product Manager (Funcitonally leading roadmap without formal title)
+- [ ] Build at least the homepage in Figma before tweaking the scale
 - [ ] Future bio update: I’m interested in environmental design, creative technology, and Arabic type design.
 - [ ] Can set up thesis in my bio a bit to speak more maturely as being an advocate and helping others to become advocates.
 - [ ] Need a new tagline! 3 key ideas: advocate/community for designers, cross-disciplinary approach, and typography is central to everything I do.
