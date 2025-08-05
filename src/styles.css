@@ -259,9 +259,10 @@
         font-weight: 400;
     }
 
-    .bigtype {
-        font-size: 2rem;
-        margin-bottom: 1rem;
+    .bigType {
+        font-size: 3.0rem;
+        font-weight: 400;
+        line-height: 3.8rem;
     }
 
     .labyrinth {

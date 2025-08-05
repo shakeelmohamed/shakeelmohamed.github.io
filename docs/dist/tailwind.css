@@ -813,6 +813,12 @@ select {
         font-weight: 400;
     }
 
+    .bigType {
+        font-size: 3.0rem;
+        font-weight: 400;
+        line-height: 3.8rem;
+    }
+
     .labyrinth {
       position: relative;
       width: 100vw;
@@ -1860,13 +1866,13 @@ select {
 .p-8 {
   padding: 2rem;
 }
-.py-2 {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 .py-12 {
   padding-top: 3rem;
@@ -1882,9 +1888,6 @@ select {
 }
 .pt-4 {
   padding-top: 1rem;
-}
-.pt-0 {
-  padding-top: 0px;
 }
 .pt-8 {
   padding-top: 2rem;
