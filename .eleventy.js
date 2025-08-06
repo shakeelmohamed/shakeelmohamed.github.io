@@ -1,3 +1,5 @@
+const utils = require("./utils");
+
 module.exports = function(eleventyConfig) {
     // File extensions to passthrough copy
     eleventyConfig.setTemplateFormats([
@@ -138,6 +140,7 @@ module.exports = function(eleventyConfig) {
           
           return {
             name: type,
+            display: utils.titleCase(type),
             slug: slug,
             permalink: `/${slug}/`,  // Add permalink directly to the data
             projects: projectsForType

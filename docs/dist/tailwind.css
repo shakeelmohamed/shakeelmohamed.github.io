@@ -816,13 +816,13 @@ select {
     .bigType {
         font-size: 2.0rem;
         font-weight: 400;
-        line-height: 2.4rem;
+        line-height: 2.6rem;
     }
 
     .bigIcon {
         font-size: 2.0rem;
         font-weight: 400;
-        line-height: 2.4rem;
+        line-height: 2.6rem;
         vertical-align: bottom;
     }
 

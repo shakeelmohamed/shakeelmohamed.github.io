@@ -1,5 +1,6 @@
 ---
-title: "| #{mediaType.name} | Shakeel Mohamed — Strategic Brand Designer"
+eleventyComputed:
+    title: "| #{mediaType.display} | Shakeel Mohamed – Strategic Brand Designer"
 pagination:
   data: collections.mediaTypes
   size: 1
@@ -12,7 +13,7 @@ extends _includes/layouts/base
 
 block content
     if mediaType && mediaType.projects
-        h1(style="text-transform: capitalize") #{mediaType.name}
+        h1 #{mediaType.display}
         .grid-2
             each project in mediaType.projects
                 +projectListing(project)

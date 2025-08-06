@@ -1,5 +1,9 @@
 const gitDateExtractor = require('git-date-extractor');
 
+const cfs = function(val) {
+    return String(val).charAt(0).toUpperCase() + String(val).slice(1);
+};
+
 module.exports = {
     // The date returned may be off by 1 day due to UTC Offset
     // This split on T is probably not ideal, but good enough for now
@@ -36,8 +40,18 @@ module.exports = {
             return data.openGraphImage;
         }
     },
-    capitalizeFirstLetter: function(val) {
-        return String(val).charAt(0).toUpperCase() + String(val).slice(1);
+    capitalizeFirstLetter: cfs,
+    titleCase: function(str) {
+        const words = str.split(" ");
+
+        if (words.length < 2) {
+            return cfs(str);
+        }
+
+        for (let i = 0; i < words.length; i++) {
+            words[i] = cfs(words[i]);
+        }
+        return words.join(" ");
     },
     gitDates: async function(path) {
         function epochToDate(epoch) {
