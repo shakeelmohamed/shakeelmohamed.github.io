@@ -24,7 +24,7 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 
 - [ ] check OG images for projects, then posts, etc. Consider gif/video versions
 - [ ] 
-- [ ] Experience... consider Parenthetical titles or in 1 line summary at the top: Product Manager (Funcitonally leading roadmap without formal title)
+- [ ] Experience... consider Parenthetical titles or in 1 line summary at the top: Product Manager (Functionally leading roadmap without formal title)
 - [ ] Future bio update: I’m interested in environmental design, creative technology, and Arabic type design.
 - [ ] Can set up thesis in my bio a bit to speak more maturely as being an advocate and helping others to become advocates.
 - [ ] Need a new tagline! 3 key ideas: advocate/community for designers, cross-disciplinary approach, and typography is central to everything I do.
@@ -57,8 +57,8 @@ Others
 - [ ]   MJ motion (logo reveal, 15-30s piece, product UI features)
 - [ ]   fix composition for "Ontology - 15.png", the leading is not right
 - [ ] Rough out some UI/web case study (maybe Digital Anarchy)
-- [ ] TPS: use this for website partical physics (better than three.js): https://github.com/naughtyduk/particlesGL
-- [ ] Think about cursor or other interaction/moiton points using the icon logo
+- [ ] TPS: use this for website particle physics (better than three.js): https://github.com/naughtyduk/particlesGL
+- [ ] Think about cursor or other interaction/motion points using the icon logo
 
 ## P1
 
@@ -174,7 +174,7 @@ Others
 
 ## New done lol...
 
-- [X] MUST leverage more of tech experience as experience which led to design, not starting form zero.
+- [X] MUST leverage more of tech experience as experience which led to design, not starting from zero.
 - [X]   Clear narrative is more important than anything, especially on ATS and designed resume
 - [X] Build at least the homepage in Figma before tweaking the scale
 - [X] check all the media types for each project, maybe replace posters with print hmm
