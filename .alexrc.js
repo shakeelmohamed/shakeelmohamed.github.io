@@ -13,6 +13,16 @@ module.exports = {
         "yank",
         "boy-girl",
         "aunt-uncle",
-        "savage"
+        // Below were mostly known warnings
+        "savage",
+        "daughter-son",
+        "gal-guy",
+        "obvious",
+        "dad-mom",
+        "gals-man",
+        "straightforward",
+        "clearly",
+        "prince-princess"
+        "deaf-to"
     ]
 };
