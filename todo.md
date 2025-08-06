@@ -16,6 +16,8 @@ Good reference for pug x 11ty: https://cardiff.marketing/pug-in-eleventy-making-
 ## ASAP
 
 - [ ] move all logo family / kit of parts stuff to the bottom of each project (before process)
+- [ ] MJ: brand guidelines
+- [ ] MJ: brand inspiration book (better name)
 
 ## Bio revision
 
