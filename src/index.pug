@@ -1,31 +1,22 @@
 ---
-description: Shakeel Mohamed is a Graphic Designer in Los Angeles, specializing in branding, typography and leadership. He holds an MFA in Graphic Design from ArtCenter College of Design.
+description: Strategic brand designer in Los Angeles specializing in identity design, typography, and systems thinking. Available for freelance and full-time opportunities.
 ---
 
 extends _includes/layouts/base.pug
 include _includes/molecules.pug
 
 block content
-    .grid-2
-        div
-            p Hello I’m Shakeel, a designer who thinks inside, outside, and about the box&nbsp;itself!
-            //- Copy is larger, since its my voice its feels like it should have
-            //- more presence than regular body copy
-            //- p.pt-0(style="font-weight:400; font-size: 2rem; line-height: 2.6rem;") Hello I’m Shakeel, a designer who thinks inside, outside, and about the box&nbsp;itself!
-        div
-            p
-                | Available for freelance or full-time opportunities on-site in Los Angeles or&nbsp;remote.
-            p
-                | Please reach out by 
-                strong
-                    a(href="mailto:" + metadata.author.email, target="_blank") email, 
-                strong
-                    a(href=metadata.social.LinkedIn, target="_blank") LinkedIn, 
-                | or 
-                strong
-                    a(href=metadata.social.Instagram, target="_blank") Instagram
+    .grid-1
+        div.py-4
+            p.bigType
+                | Strategic brand designer in Los Angeles specializing in identity design, typography, and systems thinking. Available for freelance and full&#8209;time&nbsp;opportunities.
+            div(style="height:1.0rem;")
+            p.bigType
+                span.material-icons.bigIcon arrow_right_alt
+                | &nbsp;Ready to work together?&nbsp;
+                br.mobile-only
+                a(href="mailto:" + metadata.author.email, target="_blank") #{metadata.author.email}
                 | .
-        
 
     //- TODO: rework this to collections.home or something; goal is to have multiple blocks of content.
     //- could be projects, videos, bio, etc. -- MAYBE

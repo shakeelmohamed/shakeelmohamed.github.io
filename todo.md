@@ -5,16 +5,31 @@
 - [ ] Add DMARC policy for gmail
 
 For conversion from mp4 to avif (eventually, phase out all gifs):
-
 ```shell
 ffmpeg -i ontology_cover.mp4 -c:v libaom-av1 -crf 20 -b:v 0 -still-picture 0 ontology_cover.avif
 ```
 
 Figure out how to CLI automate spell check like this app: https://www.spl.ing/report-card?website=shakeelmohamed.com&uuid=e4e2c283-6e32-4327-97f6-955a0a38ef2d
 
+Good reference for pug x 11ty:
+https://cardiff.marketing/pug-in-eleventy-making-it-work/
+
 ## ASAP
 
-- [ ] check all opengraph images
+- [ ] move all logo family / kit of parts stuff to the bottom of each project (before process)
+- [ ] MJ: brand guidelines
+- [ ] MJ: brand inspiration book (better name)
+
+## Bio revision
+
+- [ ] check OG images for projects, then posts, etc. Consider gif/video versions
+- [ ] 
+- [ ] Experience... consider Parenthetical titles or in 1 line summary at the top: Product Manager (Functionally leading roadmap without formal title)
+- [ ] Future bio update: I’m interested in environmental design, creative technology, and Arabic type design.
+- [ ] Can set up thesis in my bio a bit to speak more maturely as being an advocate and helping others to become advocates.
+- [ ] Need a new tagline! 3 key ideas: advocate/community for designers, cross-disciplinary approach, and typography is central to everything I do.
+- [ ] ...(longer form about me could build) ... this began in my past career as a software engineer where I built my analytical thinking skills, while understanding the need for clearer communication about the technologies I was building...
+- [ ] Overall positioning through leadership, technical expertise, and economy design
 
 
 - Thesis:
@@ -25,13 +40,25 @@ Figure out how to CLI automate spell check like this app: https://www.spl.ing/re
 - [ ] thesis slide from graduation walk?
 
 Others
+- [ ] CTA on homepage: desktop 2rem on 3rem lead, TBD mobile
+- [ ] CTA footer on all pages?
+- [ ] Make an overview gif for each project cover (still fallback to still for OG)
+- [ ] Can make a clearer
+- [ ] Make a separate landing page for freelance/contract work, e.g.: /services or something
+    - [ ]  copy on this page should be something like "clarify brand, build trust" - basically speaking to the outcomes and results of design
+- [ ] Slideshows need arrow icons to be visible that there is more there (vs. looking like a gif)
+    - [ ] MJ is not optimized for skimming, missing all the good stuff with the slideshows
 - [ ] referential mono: crit/printed process, kashida/Eid motion, what about the posters?
 - [ ] RM: show research kufic chart also
+- [ ]   show stickers from grad show
+- [ ]   motion, like Kashida, etc.
 - [ ]   brand guidelines document (MJ) - great 1920x1080 mockup, just need to design the images now
 - [ ]   website (Thesis, TPS, MJ)
 - [ ]   MJ motion (logo reveal, 15-30s piece, product UI features)
 - [ ]   fix composition for "Ontology - 15.png", the leading is not right
 - [ ] Rough out some UI/web case study (maybe Digital Anarchy)
+- [ ] TPS: use this for website particle physics (better than three.js): https://github.com/naughtyduk/particlesGL
+- [ ] Think about cursor or other interaction/motion points using the icon logo
 
 ## P1
 
@@ -40,6 +67,7 @@ Others
 - [ ] MJ: update project summary
 - [ ] MJ: spend 3 hours on motion (new storyboard, logo decomposition into layers, production), goal should be 10 seconds max
 - [ ] Thesis: what are the points of my talk? some high level ideas, or takeaways... still unclear what I am bringing to expand the perceived value of designers
+- [ ] MR: update colors to match personal ID system
 - [ ] APS: show micro ID system overview
 - [ ] Rothko: photoshoot outside of my holding fabric poster(s) https://www.instagram.com/p/CxGUOs_rMTE/?img_index=1
 - [ ] Social media design ~~~~ need it in portfolio now!
@@ -54,18 +82,12 @@ Others
 
 ## Grad show
 
+- [ ] Can turn this into a project page for branding / personal ID with lots of documentation, grad show, EGD, motion, 3D models, etc.
 - [ ] Link to to graduation walk, maybe make a YT clip: https://youtu.be/SASQKIg3VY4?t=5040
 - [ ] I am running into lots of issues here... Can show a 3D model of the wall too, host on sketchfab w/ annotations: https://support.fab.com/s/article/Annotations
     - [ ] See also: https://github.com/sketchfab/blender-plugin/releases/tag/1.6.1
 - [ ] Spinning 3D model of biz card would be so cool
 - [ ] Include thesis process images
-
-## Bio revision
-
-- [ ] Can set up thesis in my bio a bit to speak more maturely as being an advocate and helping others to become advocates.
-- [ ] Need a new tagline! 3 key ideas: advocate/community for designers, cross-disciplinary approach, and typography is central to everything I do.
-- [ ] ...(longer form about me could build) ... this began in my past career as a software engineer where I built my analytical thinking skills, while understanding the need for clearer communication about the technologies I was building...
-- [ ] Overall positioning through leadership, technical expertise, and economy design
 
 # P3
 
@@ -80,8 +102,9 @@ Others
     - [ ] https://blender.stackexchange.com/questions/131930/translucent-material-a-sheet-of-paper-with-image-texture
 - [ ] merch - where’s the jacket + hat?
 - [ ] MR: some ephemera like all 12 astrology sign info cards or stickers idk
-- [ ] MR: lifestyle brand packaging mockups
-- [ ] Type design list page (ideally I have all the tag-specific pages auto generated, otherwise I can curate the ones I need by skill (type design, branding, motion, editorial, web))
+- [ ] MR: lifestyle brand packaging mockups (actually, can just make a whole pkg lifestyle brand)
+- [ ] Media-specific pages could have more detail/context, scrollable images... TBD
+    - [x] Type design list page (ideally I have all the tag-specific pages auto generated, otherwise I can curate the ones I need by skill (type design, branding, motion, editorial, web))
 - [ ] MJ: show prompts
 - [ ] Ontology: re-export all the gif/avif spread-mockups at higher res, the small type is a bit pixelated
 - [ ] maybe add a spacer for empty grid divs... https://github.com/shakeelmohamed/shakeelmohamed.github.io/pull/181#discussion_r2114879681; see also https://github.com/shakeelmohamed/shakeelmohamed.github.io/pull/181#discussion_r2114880664
@@ -93,6 +116,7 @@ Others
 - [ ] Explore using fluid typography... how does this fit w/ Tailwind?
     - [ ] https://fluidtypography.com/#usarusFluidTypographyGetStarted
     - [ ] https://codepen.io/iamryanyu/pen/gbpWGYQ
+- [ ] Overall, consider bringing in on-scroll animations just really get them clean - or just use those tools for projects... see https://motion.dev/
 - [ ] How might I reframe all projects to speak to expertise vs. the project… (e.g. More about me… through Rothko….. vs. about Rothko)
 - [ ] How can symbol make it onto the about page? ugh
 - [ ] Update all website meta descriptions, “holds an MFA” is not so interesting
@@ -133,13 +157,13 @@ Others
 - [ ] learn about noreferrer, etc: https://linkbuilder.io/rel-noopener-noreferrer/
 - [ ] Rework semantics for SEO for: h1/h2/etc
 - [ ] JS to prevent bad breaks (widows / orphans)
-- [ ] - [ ] Responsive image loading... add avif/etc optimized loadtime support
+- [ ] - [ ] Responsive image loading... add avif/etc optimized loadtime support; see https://github.com/saneef/eleventy-plugin-img2picture
 - [ ] figure out how to generate the tag pages (e.g. .com/branding)
 - [ ] figure out how to show extra process (another slider, hidden section, etc.)
 
 ## Consider Revisiting
 
-- [ ] Footer: need a home link (rough added to my name, can it be more obvious)
+- [ ] Footer: need a home link (rough added to my name, can it be more obvious) + headshot and clear CTA
 - [ ] Footer: on project pages, can have a next/prev project (need some logic for that)
 - [ ] Capitalize first letter of first tag (homepage under each project, and thesis page), within a project page, capitalize like “Media: Poster”; and then lowercase homepage “Branding, typography, leadership” to be consistent
 - [ ] HSTS support via cloudflare? Not sure if this still works with github pages
@@ -150,6 +174,9 @@ Others
 
 ## New done lol...
 
+- [X] MUST leverage more of tech experience as experience which led to design, not starting from zero.
+- [X]   Clear narrative is more important than anything, especially on ATS and designed resume
+- [X] Build at least the homepage in Figma before tweaking the scale
 - [X] check all the media types for each project, maybe replace posters with print hmm
 - [x] fix the website mockup/video, hard color blocking top/bottom
 - [X] MJ: start with logo (or motion), can move the HQ down a bit

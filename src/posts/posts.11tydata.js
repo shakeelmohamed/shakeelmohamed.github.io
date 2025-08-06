@@ -3,7 +3,7 @@ const utils = require('../../utils');
 
 module.exports = {
     eleventyComputed: {
-        pageTitle: data => data.title + " by Shakeel Mohamed",
+        pageTitle: data => data.title + " | Shakeel Mohamed — Strategic Brand Designer",
         // Reformat the date in ISO format
         cleanDate: data => utils.formatDate(data.page.date),
         atomFeedDate: data => utils.formatDateForAtomFeed(data.page.date),
