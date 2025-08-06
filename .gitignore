@@ -5,3 +5,9 @@ npm-debug.log
 .idea/
 
 *.idlk
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
