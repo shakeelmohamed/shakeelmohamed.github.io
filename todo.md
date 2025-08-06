@@ -21,11 +21,9 @@ Good reference for pug x 11ty: https://cardiff.marketing/pug-in-eleventy-making-
 
 ## Bio revision
 
-- [ ] new OG images to match: Strategic Brand Designer (projects, then posts, etc.)
-- [ ] MUST leverage more of tech experience as experience which led to design, not starting form zero.
-- [ ]   Clear narrative is more important than anything, especially on ATS and designed resume
-- [ ]   Parenthetical titles or in 1 line summary at the top: Product Manager (Funcitonally leading roadmap without formal title)
-- [ ] Build at least the homepage in Figma before tweaking the scale
+- [ ] check OG images for projects, then posts, etc. Consider gif/video versions
+- [ ] 
+- [ ] Experience... consider Parenthetical titles or in 1 line summary at the top: Product Manager (Funcitonally leading roadmap without formal title)
 - [ ] Future bio update: I’m interested in environmental design, creative technology, and Arabic type design.
 - [ ] Can set up thesis in my bio a bit to speak more maturely as being an advocate and helping others to become advocates.
 - [ ] Need a new tagline! 3 key ideas: advocate/community for designers, cross-disciplinary approach, and typography is central to everything I do.
@@ -175,6 +173,9 @@ Others
 
 ## New done lol...
 
+- [X] MUST leverage more of tech experience as experience which led to design, not starting form zero.
+- [X]   Clear narrative is more important than anything, especially on ATS and designed resume
+- [X] Build at least the homepage in Figma before tweaking the scale
 - [X] check all the media types for each project, maybe replace posters with print hmm
 - [x] fix the website mockup/video, hard color blocking top/bottom
 - [X] MJ: start with logo (or motion), can move the HQ down a bit
