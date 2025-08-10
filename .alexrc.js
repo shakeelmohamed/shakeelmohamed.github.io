@@ -22,7 +22,7 @@ module.exports = {
         "gals-man",
         "straightforward",
         "clearly",
-        "prince-princess"
+        "prince-princess",
         "deaf-to"
     ]
 };
