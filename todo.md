@@ -23,7 +23,6 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 ## Bio revision
 
 - [ ] check OG images for projects, then posts, etc. Consider gif/video versions
-- [ ] 
 - [ ] Experience... consider Parenthetical titles or in 1 line summary at the top: Product Manager (Functionally leading roadmap without formal title)
 - [ ] Future bio update: I’m interested in environmental design, creative technology, and Arabic type design.
 - [ ] Can set up thesis in my bio a bit to speak more maturely as being an advocate and helping others to become advocates.
