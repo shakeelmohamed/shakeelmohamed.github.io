@@ -1,15 +1,12 @@
 # TODO
 
-## Important, not urgent
-
-- [ ] Add DMARC policy for gmail
-
 For conversion from mp4 to avif (eventually, phase out all gifs):
 ```shell
 ffmpeg -i ontology_cover.mp4 -c:v libaom-av1 -crf 20 -b:v 0 -still-picture 0 ontology_cover.avif
 ```
 
 Figure out how to CLI automate spell check like this app: https://www.spl.ing/report-card?website=shakeelmohamed.com&uuid=e4e2c283-6e32-4327-97f6-955a0a38ef2d
+- Need a custom dictionary for cspell: https://cspell.org/docs/dictionaries#dictionary-definition
 
 Good reference for pug x 11ty:
 https://cardiff.marketing/pug-in-eleventy-making-it-work/
@@ -157,7 +154,6 @@ Others
 - [ ] Rework semantics for SEO for: h1/h2/etc
 - [ ] JS to prevent bad breaks (widows / orphans)
 - [ ] - [ ] Responsive image loading... add avif/etc optimized loadtime support; see https://github.com/saneef/eleventy-plugin-img2picture
-- [ ] figure out how to generate the tag pages (e.g. .com/branding)
 - [ ] figure out how to show extra process (another slider, hidden section, etc.)
 
 ## Consider Revisiting
@@ -173,6 +169,8 @@ Others
 
 ## New done lol...
 
+- [x] figure out how to generate the tag pages (e.g. .com/branding)
+- [x] Add DMARC policy for gmail
 - [X] MUST leverage more of tech experience as experience which led to design, not starting from zero.
 - [X]   Clear narrative is more important than anything, especially on ATS and designed resume
 - [X] Build at least the homepage in Figma before tweaking the scale

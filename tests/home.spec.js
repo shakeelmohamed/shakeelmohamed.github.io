@@ -14,6 +14,14 @@ test("Build generates pages", async () => {
 });
  */
 
+// TODO: check that all media links work
+// - list dirs in ./docs
+// - filter known dirs (.idea, about, blog, blog-archive, dist, gradshow, img, labyrinth, links, mentions, posts, projects, scripts)
+// - remaining list is all media types
+// ...
+// - go through all projects, add mediatypes to a Set
+// - check Set against media types form disk
+
 test('homepage has title', async ({ page }) => {
   await page.goto('http://localhost:8080');
   await expect(page).toHaveTitle("Shakeel Mohamed – Strategic Brand Designer in Los Angeles");
