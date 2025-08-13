@@ -21,6 +21,7 @@ module.exports = function(eleventyConfig) {
 
         "woff2"
     ]);
+    
     eleventyConfig.addPassthroughCopy("src/scripts");
     eleventyConfig.addPassthroughCopy("src/CNAME");
 
