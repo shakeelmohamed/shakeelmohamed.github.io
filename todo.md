@@ -13,12 +13,16 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 
 ## ASAP
 
+- [ ] update resume with Talisman Freelance Senior designer
 - [ ] move all logo family / kit of parts stuff to the bottom of each project (before process)
 - [ ] MJ: brand guidelines
 - [ ] MJ: brand inspiration book (better name)
+- [ ] secret/hidden landing pages for video editing, tech, etc.
 
 ## Bio revision
 
+- [ ] TPS: wristband motion... there is not face between inside/outside oops!
+- [ ] TPS: show motion design system (3x vertical social posts, LT, slates/bumpers) - show the system/grid, adaptive resizing
 - [ ] check OG images for projects, then posts, etc. Consider gif/video versions
 - [ ] Experience... consider Parenthetical titles or in 1 line summary at the top: Product Manager (Functionally leading roadmap without formal title)
 - [ ] Future bio update: I’m interested in environmental design, creative technology, and Arabic type design.
@@ -33,7 +37,6 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 - [ ] the quiz!
 - [ ] process book
 - [ ] other sketches, ideation from fall
-- [ ] thesis slide from graduation walk?
 
 Others
 - [ ] CTA on homepage: desktop 2rem on 3rem lead, TBD mobile
@@ -55,6 +58,7 @@ Others
 - [ ] Rough out some UI/web case study (maybe Digital Anarchy)
 - [ ] TPS: use this for website particle physics (better than three.js): https://github.com/naughtyduk/particlesGL
 - [ ] Think about cursor or other interaction/motion points using the icon logo
+- [ ] accessibility check, definitely needs help: https://www.accessibilitychecker.org/audit/?website=shakeelmohamed.com&flag=ww#
 
 ## P1
 
@@ -66,7 +70,7 @@ Others
 - [ ] MR: update colors to match personal ID system
 - [ ] APS: show micro ID system overview
 - [ ] Rothko: photoshoot outside of my holding fabric poster(s) https://www.instagram.com/p/CxGUOs_rMTE/?img_index=1
-- [ ] Social media design ~~~~ need it in portfolio now!
+- [ ] Social media design ~~~~ need it in portfolio now! (thesis so far)
 - [ ] Rothko: update all book imgs, missing some stills instead of all gifs
 - [ ] Rothko: try to match background colors to the brand gray tone
 - [ ] Rothko: why is the book cover so pixelated, esp PBS logo? investigate
@@ -93,7 +97,8 @@ Others
 - [ ] MJ: keep working on lighting in the installation scene, renders have some odd ghosting on the left side from the HDR
 - [ ] TPS maybe show lightsail itself in the motion reveal?
 - [ ] TPS make the 30s trailer idea I’ve been thinking about with music, etc.
-- [ ] digital signage motion posters
+- [ ] TPS: digital signage motion posters
+    - [ ] may be easier in p5.js 2.0 instead of vibe coding... https://beta.p5js.org/reference/p5/worldtoscreen/; and custom shaders https://beta.p5js.org/tutorials/intro-to-glsl/; https://beta.p5js.org/examples/advanced-canvas-rendering-shader-as-a-texture/
 - [ ] more micro touchpoints, so many beautiful print materials - especially the vellum and metallic stuff. Play with Blender renders on this
     - [ ] https://blender.stackexchange.com/questions/131930/translucent-material-a-sheet-of-paper-with-image-texture
 - [ ] merch - where’s the jacket + hat?
@@ -155,6 +160,7 @@ Others
 - [ ] JS to prevent bad breaks (widows / orphans)
 - [ ] - [ ] Responsive image loading... add avif/etc optimized loadtime support; see https://github.com/saneef/eleventy-plugin-img2picture
 - [ ] figure out how to show extra process (another slider, hidden section, etc.)
+- [ ] do I need to do anything with artsthread profile? recognition? https://www.artsthread.com/portfolios/applied-designer-mfa-thesis
 
 ## Consider Revisiting
 
@@ -164,6 +170,12 @@ Others
 - [ ] HSTS support via cloudflare? Not sure if this still works with github pages
 - [ ] ALL CAPTIONS: automate check for periods at the end
 
+
+## Ontology notes re: Arabic
+
+- [ ] Kourosh Beigpour’s typeface was Arabic, then Latin also!
+      Lots of testing proofing info https://github.com/Tarobish/Mirza
+      https://kbstudio.net/works/fonts/
 
 ## DONE
 
