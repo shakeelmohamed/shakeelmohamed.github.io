@@ -13,7 +13,8 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 
 ## ASAP
 
-- [ ] update resume with Talisman Freelance Senior designer
+- [X] update resume with Talisman Freelance Senior designer
+- [ ] skills to add: Google Analytics, Notion
 - [ ] move all logo family / kit of parts stuff to the bottom of each project (before process)
 - [ ] MJ: brand guidelines
 - [ ] MJ: brand inspiration book (better name)
