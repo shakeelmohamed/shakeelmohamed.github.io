@@ -14,7 +14,7 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 ## ASAP
 
 - [X] update resume with Talisman Freelance Senior designer
-- [ ] skills to add: Google Analytics, Notion
+- [ ] update skills on resume PDF: Google Analytics, Notion, Affinity (and match order)
 - [ ] move all logo family / kit of parts stuff to the bottom of each project (before process)
 - [ ] MJ: brand guidelines
 - [ ] MJ: brand inspiration book (better name)
@@ -22,7 +22,7 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 
 ## Bio revision
 
-- [ ] TPS: wristband motion... there is not face between inside/outside oops!
+- [ ] TPS: wristband motion... there is not face between inside/outside oops! Also make it loop perfectly
 - [ ] TPS: show motion design system (3x vertical social posts, LT, slates/bumpers) - show the system/grid, adaptive resizing
 - [ ] check OG images for projects, then posts, etc. Consider gif/video versions
 - [ ] Experience... consider Parenthetical titles or in 1 line summary at the top: Product Manager (Functionally leading roadmap without formal title)
@@ -79,6 +79,34 @@ Others
 - [ ] add more 3D stuff to labyrinth
 - [ ] TPS: process is missing
 - [ ] Can update bio to speak about trained as a designer all along (clearly explain why I changed careers)
+
+## From Petrula
+
+don’t say microsite
+- hiring + creative talent
+- less spreads for Rothko, less motion on egawa just make it stills
+- say documentary
+- better transition between projects
+- thesis at the end + lead in with speaking
+- research was informed by deep research, the next project is also a deep exploration of that + includes my work for Mark Rothko
+
+## Positioning reflection @ graduation
+
+I have the rest of my life to prove this thesis - this is my design philosophy
+
+There’s nothing left to prove, I already did that throughout my entire MFA before this
+
+like PV said “I’m already over-qualified to speak about my thesis”
+
+I need to claim my expertise, balance with humility
+
+I didn’t come to accd to become a GD, but edu limits that scope + industry definition of GD…. 
+——> would be more respected in 20 years
+— > I never wanted to be the BEST GD
+
+Teaching would be rly good for me, but need to find a better fit
+
+Hermes - highest vis sponsored studio ever, and being the TA is the validation fs
 
 
 ## Grad show
