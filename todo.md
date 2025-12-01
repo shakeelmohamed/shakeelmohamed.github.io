@@ -92,7 +92,7 @@ don’t say microsite
 
 ## Positioning reflection @ graduation
 
-I have the rest of my life to prove this thesis - this is my design philosphy
+I have the rest of my life to prove this thesis - this is my design philosophy
 
 There’s nothing left to prove, I already did that throughout my entire MFA before this
 
