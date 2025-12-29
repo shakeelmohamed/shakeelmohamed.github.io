@@ -15,6 +15,7 @@
     "critical:css": "node scripts/critical-css.js",
     "analyze:css": "node scripts/analyze-css.js",
     "optimize:videos": "node scripts/optimize-videos.js",
+    "perf": "node scripts/performance.js",
     "clean": "rimraf docs"
   },
   "repository": {
@@ -44,6 +45,7 @@
     "cssnano": "^7.1.2",
     "git-date-extractor": "^4.0.1",
     "jstransformer-markdown-it": "^3.0.0",
+    "lighthouse": "^12.8.2",
     "markdown-it": "^13.0.0",
     "postcss": "^8.5.6",
     "postcss-cli": "^9.1.0",
