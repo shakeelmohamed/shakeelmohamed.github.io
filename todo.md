@@ -19,6 +19,7 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 - [ ] MJ: brand guidelines
 - [ ] MJ: brand inspiration book (better name)
 - [ ] secret/hidden landing pages for video editing, tech, etc.
+- [ ] NEED some logo grid diagrams like I did for TRC. Relevant for: TPS, Rothko, Salgirah 2025
 
 ## Bio revision
 
