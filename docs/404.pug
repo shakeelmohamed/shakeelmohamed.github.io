@@ -1,0 +1,24 @@
+---
+description: Strategic brand designer in Los Angeles specializing in identity design, typography, and systems thinking. Available for freelance and full-time opportunities.
+permalink: "/404.html"
+dynamicPermalink: false
+eleventyExcludeFromCollections: true
+---
+
+extends _includes/layouts/base.pug
+include _includes/molecules.pug
+
+block content
+
+    div
+        h1(style="text-align: center;") Oh no, that page doesn’t exist!
+        //- TODO: replace this gif with a stitch of these, or something more related to my name
+        //- - https://giphy.com/gifs/nba-basketball-shaq-shaquille-oneal-3oGNDyldXaMAzqks80
+        //- - https://giphy.com/gifs/hbo-whats-my-name-documentary-hrvHU8XsoGufEvcDr3
+        img(src="/img/kendrick-lamar-super-bowl.gif" style="max-width: 450px; margin: 0 auto;")
+
+    script.
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          "event" : "404 - page not found"
+        });

@@ -1,0 +1,298 @@
+---
+title: About | Shakeel Mohamed — Strategic Brand Designer
+description: Strategic brand designer in Los Angeles specializing in identity design, typography, and systems thinking. Available for freelance and full-time opportunities.
+---
+
+extends ../_includes/layouts/base.pug
+include ../_includes/molecules.pug
+//- TODO: resume... think about JSON model?
+//-     COULD just be a list for now
+
+//- TODO: Maybe a separate services page?
+
+
+block content
+    .grid-4.mt-4
+        //- TODO: this will overflow x on tablet scale
+        div.headshot
+            img.lightbox(src="../img/Shakeel_Mohamed_headshot.png" alt="Headshot of Shakeel Mohamed")
+        div
+            //- TODO: a little sad to let this go, but its not converting
+            //- p
+            //-     strong I think inside, outside, and about the box itself.
+            p
+                strong
+                    |“The best way to predict the future is to create it.”
+                br
+                |— Peter Drucker (attributed)
+        div(style="grid-column: 3 / 5;")
+            p My name is Shakeel, I’m a strategic brand designer specializing in identity design, typography, and systems thinking. I approach projects systematically by understanding the brief, audience, and constraints to create brands that work seamlessly across every&nbsp;touchpoint.
+            br
+            p During my graduate studies at ArtCenter College of Design I designed four typefaces, which gave me a deep appreciation for the power of typography across media types. Designing fonts requires rigorous refinement over minute details, I bring this same attention to craft through form, layout, typesetting, and print&nbsp;production.
+            br
+            p At Splunk, I was known as “the glue” for my ability to coordinate across teams and translate complex ideas for different audiences from technical to non-technical, from interns to vice presidents. Many of these projects were demonstrated on stage at technology conferences and used by several Fortune 500 companies.
+            br
+            //- p Available for freelance or full-time opportunities on-site in Los Angeles or&nbsp;remote.
+            p Available for freelance opportunities on-site in Los Angeles or&nbsp;remote.
+            br
+            p
+                | Please reach out by 
+                strong
+                    +myEmail("email")
+                    | ,&nbsp;
+                strong
+                    a(href=metadata.social.LinkedIn, target="_blank") LinkedIn, 
+                | or 
+                strong
+                    a(href=metadata.social.Instagram, target="_blank") Instagram
+                | .
+            br
+            p
+                strong
+                    a(href="./Shakeel_Mohamed_resume.pdf" target="_blank") View my résumé here.
+            hr.mobile-only
+
+    .grid-4.mt-4
+        div
+            p
+                strong I’m inspired by
+            ol(style="padding-left: 3rem;")
+                li Underdogs
+                li Walking
+                li Conversations
+                li Music
+                li Warmth
+            br
+            p
+                strong Reminders to myself
+            ol(style="padding-left: 3rem;")
+                li Focus intensely, rest completely.
+                li Take more (design) risks.
+                li Explore more ideas than required.
+                li Design is a spiritual practice.
+                li When in doubt, talk it out.
+            br
+        div
+            p
+                strong Community Building
+                br
+                | I have dedicated the past four years to involving myself in design communities, sharing my experiences with others, and building towards design leadership experience. Over this time I’m grateful to have met several designers who have inspired me throughout my&nbsp;career.
+        //- TODO: bring in Sean Adams img here instead
+        div(style="grid-column: 3 / 5;")
+            .grid-4.lightbox-album.keepDesktop(style="gap: 1rem;")
+                img(src="./img/Debbie_Millman.png")
+                img(src="./img/Wael_Morcos.png")
+                img(src="./img/Brian_Collins.png")
+                img(src="./img/Louise_Sandhaus.png")
+                img(src="./img/Chris_Do.png")
+                img(src="./img/April_Greiman.png")
+                img(src="./img/Cheryl_Miller.png")
+                img(src="./img/Iddris_Sandu.png")
+    br
+    hr
+
+    .grid-4
+        div
+            p.caption Education
+            br
+            +experience("Master of Fine Arts in Graphic Design", "ArtCenter College of Design", "Pasadena, California", "2022–2025")
+            br.mobile-only
+            +experience("Bachelor of Science in Computer Science (Emphasis in Business)", "Seattle University", "Seattle, Washington", "2012–2015")
+            hr.mobile-only
+        div(style="grid-column: 2 / 5;")
+            p.caption Experience
+            br
+            .grid-3.position
+                +experience("Freelance Senior Designer", "TALISMAN", "Remote", "08.2025–Present")
+                p(style="grid-column: 2 / 4;") Collaborated with the creative director and a senior designer on brand strategy and visual identity development for a performing arts&nbsp;organization. Researched historical brand references, competitor visual brands, and designed presentations systems with Figma Slides. Led design critiques and provided constructive feedback to help junior designers refine their conceptual thinking and technical skills.
+            .grid-3.position
+                +experience("Freelance Brand Designer", "shakeel.design", "Remote", "05.2025–Present")
+                p(style="grid-column: 2 / 4;") Designed brand identities and motion design systems for cultural organizations, creative agencies, and emerging companies. Collaborated directly with clients to develop design solutions from strategy and concept through implementation across multiple touchpoints including print, digital, and&nbsp;environmental.
+            .grid-3.position
+                a(href="/projects/salgirah-festival-identity/")
+                    +experience("Freelance Graphic Designer (Annually)", "The Ismaili Muslim Community", "Remote", "10.2021–10.2024")
+                p(style="grid-column: 2 / 4;") Designed and refreshed the brand identity for Salgirah, an annual international religious festival across 21 countries in 11 languages. Collaborated with national marketing teams to ensure brand consistency. Branded signage was displayed in multiple cities, notably at the Dubai World Trade&nbsp;Centre.
+            .grid-3.position
+                +experience("Freelance Graphic Designer", "TALISMAN", "Remote", "07.2024–08.2024")
+                p(style="grid-column: 2 / 4;") Collaborated with a team of three designers on brand identity development for higher education and performing arts clients. Designed presentation decks, brand guidelines, and print production-ready files. Analyzed typographic choices to align with overall art&nbsp;direction.
+            .grid-3.position
+                +experience("Founder", "ntrsct designs", "Remote", "02.2018–12.2022")
+                p(style="grid-column: 2 / 4;") Operated an independent design studio providing brand strategy, identity, apparel design, and social media services for 12 clients across multiple industries. Evolved the business from B2C apparel brand to B2B consultancy, leading client relationships, project management, and art&nbsp;direction.
+            .grid-3.position
+                +experience("Software Engineer", "Splunk, Inc.", "Seattle, Washington", "06.2015–04.2021")
+                p(style="grid-column: 2 / 4;") Led a team of three engineers to develop a data simulation engine for sales staff to demonstrate products for prospective customers. Collaborated across roles, teams, and departments to automate manual processes. Designed slides for and presented technical sessions at two major industry conferences. Maintained dozens of open-source software projects and incorporating customer feedback. Designed highly performant technical solutions for large-scale data processing used by several Fortune 500&nbsp;companies.
+            hr.mobile-only
+    hr.desktop-only
+
+    //- TODO: can set these columns like so: services, skills, recognition, speaking
+    .grid-4
+        div
+            p.caption Skills
+            br
+            p
+                strong Strong working knowledge of:
+                br
+                | Illustrator, InDesign, Photoshop, Figma, Premiere Pro, After Effects, Keynote, Glyphs, Blender
+            br
+            p
+                strong Familiar with:
+                br
+                | Affinity, Midjourney, TouchDesigner, MadMapper, LiveSurface, Webflow, Squarespace, Cargo, WordPress, Artivive, Basecamp, Trello, Jira, Google Workspace, Microsoft Office, Dropbox, Slack, Notion, Google Analytics, Twinmotion, Rhino, SketchUp
+            br
+            p
+                strong Presentation and facilitation:
+                br
+                | Strategic thinking, collaboration, copywriting, product management, project management, community building, agile facilitation, scrum
+            br
+            p
+                strong Programming:
+                br
+                | JavaScript, p5.js, Processing, Node.js, HTML, CSS, Python, Java, C, C++, Git
+            hr.mobile-only
+        div.
+        div
+            p.caption Recognition
+            br
+            p
+                strong
+                    a.underline(href="https://www.wallofportfolios.in/portfolios/shakeel-mohamed/" target="_blank") Wall of Portfolios
+                br
+                | Featured Portfolio
+                br
+                | 2025
+            br
+            p
+                strong
+                    a.underline(href="https://www.bestfolios.com/portfolio/shakeelmohamed" target="_blank") Bestfolios
+                br
+                | Editor’s Pick: Portfolio
+                br
+                | 2025
+            br
+            p
+                strong
+                    a.underline(href="https://www.linkedin.com/posts/lithographix_artcentergx-activity-7333914789993160705-A71a" target="_blank") Lithographix ArtCenter Alumni Gallery
+                br
+                a.underline(href="../projects/mark-rothko") Mark Rothko Documentary Poster
+                br
+                | 2025
+            br
+            p
+                strong The Planetary Society
+                br
+                | Two&nbsp;
+                a.underline(href="../projects/planetary-society") Planetary Society Rebrand
+                | &nbsp; posters selected for display in their headquarters.
+                br
+                | 2025
+            br
+            p
+                strong
+                    a.underline(href="https://voyagela.com/interview/daily-inspiration-meet-shakeel-mohamed/" target="_blank")
+                        i Voyage LA Magazine 
+                        | Interview
+                br
+                | Daily Inspiration: Meet Shakeel Mohamed
+                br
+                | 2024
+            br
+            p
+                strong
+                    a.underline(href="https://www.instagram.com/p/DAZU65AyOXr/?img_index=3" target="_blank") Hoffmitz Milken Center for Typography (HMCT) Gallery
+                br
+                | Font Design Poster:&nbsp;
+                a.underline(href="../projects/mindful-roman") Mindful Roman
+                br
+                | 2024
+            br
+            p
+                strong
+                    a.underline(href="https://mailchi.mp/117a680829f1/in-verbis-artis-opens-feb-22-hmct-south-campus-gallery-13898412?e=e7fd6756bb" target="_blank")
+                        | Hoffmitz Milken Center for Typography (HMCT) Newsletter
+                br
+                | Featured Typeface:&nbsp;
+                a.underline(href="../projects/referential-mono") Referential Mono
+                br
+                | 2023
+
+
+            //- TODO: not having this here is a lil odd... but we have a rule right below otherwise
+            //- hr.mobile-only
+        div
+            p.caption Speaking
+            br
+            p
+                strong 
+                    a.underline(href="https://www.linkedin.com/feed/update/urn:li:activity:7405072210052182016/" target="_blank") The George Washington University (GWU)
+                br
+                | Guest Lecture: Design Fundamentals II
+                br
+                | 2025
+            br
+            p
+                strong
+                    a.underline(href="https://www.linkedin.com/posts/activity-7376647120025694208-nPWb/" target="_blank") AIGA Design Conference (national)
+                br
+                | Ask Us Anything 3.0: Dr. Cheryl D. Miller and Invited West Coast BIPOC Best Performing Designers
+                br
+                | 2025
+            br
+            p
+                strong
+                    a.underline(href="https://www.instagram.com/p/DKiB81WBxfX/" target="_blank") Work in Progress
+                br
+                | Presented my&nbsp;
+                a.underline(href="../projects/ontology/") Ontology
+                | &nbsp;typeface project to 30&nbsp;designers.
+                br
+                | 2025
+            br
+            p
+                strong
+                    a.underline(href="https://www.instagram.com/p/DBzlhkMtHik/?img_index=2" target="_blank") AIGA Los Angeles: Graphic Content&nbsp;(conference)
+                br
+                | Deconstructing “Best”: Redefining Success for&nbsp;Designers
+                br
+                | 2024
+            br
+            p
+                strong
+                    a.underline(href="https://www.instagram.com/p/CqJdQNfPx1P/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank") Type Thursday Los Angeles
+                br
+                | Presented my&nbsp;
+                a.underline(href="../projects/typo-mexico-city/") TYPO Mexico City
+                | &nbsp;branding project to 30&nbsp;designers.
+                br
+                | 2023
+            br
+            p
+                
+                strong
+                    a.underline(href="https://youtu.be/HtRtGYQx480" target="_blank") AIGA Portfolio Festival
+                br
+                | Virtual portfolio presentation to a live&nbsp;audience.
+                br
+                | 2022
+    //- TODO: bring this back later when it makes sense, not right now.
+    //- if mentions.recent.length > 0
+    //-     br        
+    //-     h2 Recognition
+    //-     .grid-2
+    //-         +getMentions(true)
+    //-     p.bold See the&nbsp;
+    //-         a(href="/mentions") full list here.
+
+    //- TODO: show grid of presentations - maybe document AIGA LA Graphic Content too
+    //- TOOD: can include thumbnails to presentations (AIGA PF, AIGA LA Graphic Content, etc)
+
+mixin experience(title, org, loc, dates)
+    div
+        p
+            strong #{title}
+            br
+            | #{org}
+            br
+            | #{loc}
+            br
+            | #{dates}
+        br.desktop-only

@@ -1,0 +1,70 @@
+---
+layout: project
+title: Inclusion Tee
+description: A t-shirt graphic emphasizing that you (ü) are at the center of inclusion
+openGraphImage: "open graph - inclusion tee.png"
+tags:
+    - project
+    - archive
+when: 2018 (2 months)
+tools: Illustrator, Photoshop
+goal: Through apparel, express one’s individual responsibility for creating an inclusive environment.
+---
+include ../../_includes/project_utils.pug
+
+block content
+    .grid-3
+        div
+            h2 Inspiration
+            p In 2018 I started a clothing brand called&nbsp;
+                a(href="https://ntrsct.com") ntrsct
+                | , which has evolved into my independent design business.
+            br
+            p The logomark emerged from my fascination with the numerous aspects of one’s identity and finding ways to embrace them. An X is the simplest expression of an intersection, symbolizing the point where the many elements of our identity&nbsp;meet.
+            br
+            p Black and white in the graphic symbolize the (illusion of) maximum contrast of our differences. While Virgil Abloh’s brand Off-White stands for the grey area between black and white, I see it differently. To me, black is&nbsp;white.
+            br
+            p The Inclüsion Tee was the best-selling product while running the clothing&nbsp;brand.
+            br
+        div
+            != await optimizedImage("./off-white-tag.jpg", "Clothing tag from Off-white", 800, 600, "py-4")
+        div
+            
+            != await responsiveImage("./hbz-virgil-611450214-1522065262.jpg", "The late Virgil Abloh with his hands in prayer", "py-4 w-2/3", [800, 1200, 1600], "66.666vw")
+            p.caption The late Virgil Abloh was the catalyst for my interest in design. One person can change your whole life.
+                br
+                | RIP Virgil Abloh (1980–2021)
+            br
+    .grid-1
+        //- TODO: refactor out as a utility for vertical + horizontal centering
+        div(class="flex justify-center items-center lg:h-screen" style="background-color: black;")
+            != await optimizedImage("./ntrsct-logo-white.png", "The ntrsct designs logo, and X with ntrsct written out horizontally", 600, 600, "mx-auto w-1/2") 
+            p.caption The ntrsct designs logo
+    .grid-2
+        div
+            h1 It starts with yoü.
+            div
+                p I chose the German character, ü (u-umlaut), to symbolize the viewer (you) being the source of an inclusive environment—an ode to the reunification of East and West Germany after WWII. It also looks like a smiley face!
+                br
+                p This graphic resonated with me at a time when political and social issues were polarizing the American people.
+                br
+        div
+    .grid-3
+        div
+            != await optimizedImage("./inclusion-sketch.png", "An early sketch of the inclusion tee graphic from the Procreate app for iPad", 800, 600, "py-4 w-1/2")
+            p.caption From sketch to reality. The figure-ground ambiguity of the X was a happy accident while working in Adobe Illustrator.
+        div
+            div(style="background-color: black;")
+                != await optimizedImage("./inclusion-white.png", "The inclusion tee graphic, spelling out inclusion with an X in the negative space", 800, 600, "p-8")
+            p.caption.text-white The final graphic
+        div
+            != await responsiveImage("./inclusion-tee-mockup.png", "A digital mockup of the inclusion graphic in black ink on a white t-shirt", "mx-auto max-h-screen", [800, 1200, 1600], "80vw")
+            p.caption Applied to a shirt
+    br
+    h2 Art Directed Photographs
+    .grid-3
+        != await optimizedImage("./inclusion-tee-model-1.jpg", "Model wearing inclusion tee shirt - photo 1", 800, 1200)
+        != await optimizedImage("./inclusion-tee-model-2.jpg", "Model wearing inclusion tee shirt - photo 2", 800, 1200)
+        //- TODO: need this image to match the aspect ratio of others
+        != await optimizedImage("./inclusion-tee-model-3.jpg", "Model wearing inclusion tee shirt - photo 3", 800, 1200)
+    //- TODO: show DSC07070.jpg, needs cropping or a different photo

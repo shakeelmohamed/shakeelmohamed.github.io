@@ -1,0 +1,24 @@
+---
+title: Projects
+description: Strategic brand designer in Los Angeles specializing in identity design, typography, and systems thinking. Available for freelance and full-time opportunities.
+---
+
+extends ../_includes/layouts/base.pug
+
+block content
+    if collections.portfolio
+        .grid-2
+            each project in collections.project
+                +projectListing(project)
+    //- TODO: bring back once play stuff is organized neatly
+    //- +gridCols2()
+    //-     div
+    //-         p
+    //-             a(href"/play")For unpolished work, visit the archives.
+    
+    //- TODO: can include non-portfolio projects one day, perhaps a small grid
+    //- if collections.archive
+    //-     .grid-4
+    //-         each project in collections.archive
+    //-             TODO: may need new styling for 4-up grid
+    //-             +projectListing(project)

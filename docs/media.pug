@@ -1,0 +1,19 @@
+---
+eleventyComputed:
+    title: "| #{mediaType.display} | Shakeel Mohamed – Strategic Brand Designer"
+pagination:
+  data: collections.mediaTypes
+  size: 1
+  alias: mediaType
+eleventyExcludeFromCollections: true
+permalink: "| #{mediaType.slug}/"
+---
+
+extends _includes/layouts/base
+
+block content
+    if mediaType && mediaType.projects
+        h1 #{mediaType.display}
+        .grid-2
+            each project in mediaType.projects
+                +projectListing(project)

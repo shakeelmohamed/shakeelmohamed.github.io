@@ -1,0 +1,28 @@
+---
+description: Strategic brand designer in Los Angeles specializing in identity design, typography, and systems thinking. Available for freelance and full-time opportunities.
+---
+
+extends _includes/layouts/base.pug
+include _includes/molecules.pug
+
+block content
+    .grid-1
+        div.py-4
+            p.bigType
+                //- | Strategic brand designer in Los Angeles specializing in identity design, typography, and systems thinking. Available for freelance and full&#8209;time&nbsp;opportunities.
+                | Strategic brand designer in Los Angeles specializing in identity design, typography, and systems thinking. Available for freelance&nbsp;opportunities.
+            div(style="height:1.0rem;")
+            p.bigType
+                span.material-icons.bigIcon arrow_right_alt
+                | &nbsp;Ready to work together?&nbsp;
+                br.mobile-only
+                a(href="mailto:" + metadata.author.email, target="_blank") #{metadata.author.email}
+                | .
+
+    //- TODO: rework this to collections.home or something; goal is to have multiple blocks of content.
+    //- could be projects, videos, bio, etc. -- MAYBE
+    
+    if collections.portfolio
+        .grid-2
+            each project in collections.portfolio
+                +projectListing(project)

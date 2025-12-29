@@ -1,0 +1,79 @@
+---
+layout: project
+title: "Midjourney Rebrand"
+short: Midjourney
+description: My take on reimagining the visual language for Midjourney.
+openGraphImage: "./img/Midjourney - opengraph.png"
+when: 2023
+tools: Midjourney, Runway, Illustrator, Photoshop, InDesign, Keynote, Figma
+tags:
+    - project
+    - portfolio
+media: 
+    - branding
+    - strategy
+    - environmental
+    - motion
+goal: "Make generative AI tools more approachable."
+thanks: Special thanks to instructors Gerardo Herrera and Miles Mazzie.
+position: 1
+---
+include ../../_includes/project_utils.pug
+
+block content
+    .grid-2
+        div
+            p Midjourney as a company has received tremendous amounts of press since their founding in 2021, however non-technical audiences could be discouraged from using it based on their visual communication. I aimed to help them remain competitive with the rapidly growing AI landscape by making the brand more approachable.
+            br
+            p I was inspired by the Founder’s quotes, the mission statement, and light refraction as a metaphor for groundbreaking work they do within generative AI. The new brand colors are inspired by light refraction, symbolizing the expansive creativity possible with our products. These colors aim to connect with a broader audience across cultures, and industries.
+        div
+            p The new Midjourney logo is an evolution of the previous sailboat symbol.
+            br
+            p The underlying strategy is rooted in remaining competitive with the many new generative AI companies emerging since 2021.
+
+    .grid-1
+        +portfolioImg("./img/midjourney-003.png", "", "The Sail. Through my extensive identity exploration, this was the simplest abstraction of their sailboat logo.")
+
+    .grid-2
+        +portfolioImg("./img/midjourney-007.png", "", "The brand colors emerged from light refraction, symbolizing expansive creativity possible with their&nbsp;products.")
+        +portfolioImg("./img/midjourney-008.png", "", "These colors aim to connect with a broader audience across cultures, ages, and industries. The primary color palette helps Midjourney stand out from the majority of tech companies.")
+
+    .grid-1
+        +portfolioImg("./img/midjourney-009.png", "", "Logo family system expressed through all brand colors: vertical lockup, icon, wordmark.")
+
+    .grid-2
+        +portfolioImg("./img/MJ_pattern_loop_v1-20309.gif", "", "The active imagination (AI) pattern.")
+        +video("./img/Midjourney_motion.mp4", "Expressing brand elements through motion.")
+
+    .grid-1
+        +portfolioImg("./img/midjourney-013.png", "", "Though Midjourney has been a remote company, I wanted to imagine what their first HQ office space might look like. The HQ would feature a brushed stainless steel sculpture of the Midjourney sail outside.")
+
+    .grid-1
+        +slider()
+            +imgForSlider("./img/midjourney-014.png", "", "I also envisioned Midjourney launching a user conference called Midjourney Navigate, to be held in San Francisco.") 
+            +imgForSlider("./img/midjourney-017.png", "", "I also envisioned Midjourney launching a user conference called Midjourney Navigate, to be held in San Francisco.") 
+            +imgForSlider("./img/midjourney-018.png", "", "I also envisioned Midjourney launching a user conference called Midjourney Navigate, to be held in San Francisco.") 
+            +imgForSlider("./img/midjourney-015.png", "", "I also envisioned Midjourney launching a user conference called Midjourney Navigate, to be held in San Francisco.") 
+            +imgForSlider("./img/midjourney-016.png", "", "I also envisioned Midjourney launching a user conference called Midjourney Navigate, to be held in San Francisco.")        
+    .grid-2
+        +portfolioImg("./img/MJ_digital_signage.png", "", "Conference wayfinding on digital LED boards.")
+        +portfolioImg("./img/MJ_egd_wall_render.png", "", "Sample entry wall environmental graphics.")
+    .grid-2
+        +portfolioImg("./img/Midjourney_installation_loading.gif", "", "An interactive installation the conference in a shape inspired by the sail symbol. With a height of 10ft, the display creates an immersive viewing&nbsp;experience.")
+        +portfolioImg("./img/Midjourney_installation_generating.png", "", "Conference attendees could use microphones surrounding the installation to speak generative AI prompts in real-time.")
+
+    //- TODO: missing process, and there was so much! Transmemdia final video stills + madmapper, 3D printed form
+    hr
+    h2 Process
+    br 
+    //- TODO: fix this need for br... 
+    .grid-1
+        +portfolioImg("./img/midjourney-002.png", "", "An exhaustive identity exploration of logo refinement with paper and digital sketches.")
+    //- TODO: crop these to the same aspect ratio, then make this a grid-2
+    .grid-1
+        +portfolioImg("./img/MJ_installation_sketch.png", "", "Initial installation sketching and prototyping with physical materials.")
+        +portfolioImg("./img/Midjourney - blender.png", "", "Modeling and UV mapping workflow in Blender.")
+    .grid-3
+        +portfolioImg("./img/MJ_egd_walls.png", "", "Elevation diagrams of sample environmental wall graphics.")
+        +portfolioImg("./img/MJ_digital_signage_diagram.png", "", "Elevation diagrams of digital LED signboards.")
+        +portfolioImg("./img/MJ_installation_diagram.png", "", "Elevation diagrams of the interactive installation.")

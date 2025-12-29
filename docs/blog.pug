@@ -1,0 +1,19 @@
+---
+title: Blog | Shakeel Mohamed — Strategic Brand Designer
+description: Thoughts on strategic thinking, creative collaboration, and lessons learned along the way.
+canonical: "/blog"
+---
+
+extends _includes/layouts/base.pug
+
+//- Temporary workaround: this file is blog.pug, symlinked to posts.pug for legacy SEO
+
+block content
+    +getFeaturedPosts()
+    //- TODO: might want to a) write more or b) just link to the archive
+    +gridCols2()
+        div.pt-4
+            //- p.bold.h2 Recent Posts
+            +getPosts()
+            //- p.bold.pt-4
+            //-     a(href="/blog-archive") Keep reading in the archive.

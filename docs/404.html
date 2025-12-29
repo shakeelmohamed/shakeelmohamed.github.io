@@ -77,7 +77,11 @@
         </div>
         <main class="mb-4">
             <div>
-                <h1 style="text-align: center;">Oh no, that page doesn’t exist!</h1><img src="/img/kendrick-lamar-super-bowl.gif" style="max-width: 450px; margin: 0 auto;">
+                <h1 style="text-align: center;">Oh no, that page doesn’t exist!</h1>
+                <picture>
+                    <source srcset="/assets/img/kendrick-lamar-super-bowl.webp" type="image/webp">
+                    <source srcset="/assets/img/kendrick-lamar-super-bowl.jpeg" type="image/jpeg"><img src="/assets/img/kendrick-lamar-super-bowl.jpeg" alt="Kendrick Lamar Super Bowl GIF" style="max-width: 450px; margin: 0 auto;" loading="lazy" decoding="async">
+                </picture>
             </div>
             <script>
                 window.dataLayer = window.dataLayer || [];

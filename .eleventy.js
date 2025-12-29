@@ -1,4 +1,6 @@
 const utils = require("./utils");
+const Image = require("@11ty/eleventy-img");
+const path = require("path");
 
 module.exports = function(eleventyConfig) {
     // File extensions to passthrough copy
@@ -169,6 +171,18 @@ module.exports = function(eleventyConfig) {
      *     - project - this is a design project [I think done]
      *     - archive - TODO: do not show this project except by permalink?
      */
+
+    // Image optimization using HTML transform (synchronous approach)
+    eleventyConfig.addTransform("image-optimizer", function(content, outputPath) {
+        // Only process HTML files
+        if (!outputPath || !outputPath.endsWith('.html')) {
+            return content;
+        }
+
+        // For now, skip image optimization to get build working
+        // We'll implement this manually for critical images first
+        return content;
+    });
 
     // TODO: Include speedlify score somewhere, maybe on the design system page
     // https://github.com/zachleat/speedlify-score

@@ -1,0 +1,10 @@
+---
+permalink: "/sitemap.txt"
+dynamicPermalink: false
+eleventyExcludeFromCollections: true
+---
+
+each page in collections.sitemap
+    unless (page.url == "/projects/salgirah-festival-identity/" || page.url == "/404/")
+        | #{metadata.baseurl + page.url}
+        |

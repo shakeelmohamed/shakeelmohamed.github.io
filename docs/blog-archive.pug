@@ -1,0 +1,15 @@
+---
+title: Blog Archive | Shakeel Mohamed — Strategic Brand Designer
+description: "The archive of all blog posts I’ve written in the past"
+canonical: "/blog-archive"
+---
+
+extends _includes/layouts/base.pug
+
+block content
+    +gridCols2()
+        div
+            h1 Blog Archive
+            p #{description}
+            h2 All Posts
+            +getPosts()

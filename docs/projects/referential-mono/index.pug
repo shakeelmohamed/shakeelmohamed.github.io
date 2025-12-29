@@ -1,0 +1,101 @@
+---
+layout: project
+title: "Referential Mono Typeface"
+short: Referential Mono
+description: A modular typeface built on a 5x5 grid, inspired by early computing and Islamic History.
+openGraphImage: "./img/Referential Mono - cargo - opengraph.png"
+when: 2023
+tools: Glyphs, Illustrator, InDesign, Figma
+tags:
+    - project
+    - portfolio
+media: 
+    - type design
+goal: "Design a modular typeface, infused with personal meaning."
+recognition: Hoffmitz Milken Center for Typography (HMCT) Newsletter 2023 holiday greetings (featured typeface).
+thanks: "Special thanks to instructors Simon Johnston, Lavinia Lascaris, and Greg Lindy with additional feedback from mentors Milka Broukhim and Wael Morcos."
+position: 7
+---
+
+include ../../_includes/molecules.pug
+include ../../_includes/project_utils.pug
+
+block content
+    //- TODO: modularize the font stuff
+
+    //- TODO: captions
+
+    .grid-2
+        div
+            p Referential Mono is built on a 5x5 grid, inspired by early computing and Islamic History. As a developer and Muslim, this typeface was an opportunity to combine many aspects of my identity in one project.
+        div
+            p Ongoing work includes: an Arabic version, motion design, and generative typography.
+            p Currently in use:
+                a(href="/projects/thesis") &nbsp;Applied Designer (my MFA Thesis)
+    
+    .grid-1
+        +portfolioImg("./img/Referential-Mono---cargo---cover.png", "", "")
+    .grid-2
+        +portfolioImg("./img/Referential-Mono---cargo---1.png", "", "")
+        +portfolioImg("./img/Referential-Mono---cargo---2.png", "", "")
+
+    +fontTesterImports()
+    hr
+    .grid-1.py-8(style="background-color: #D3CFC6; margin: 0 -2rem; padding: 2rem; 2rem;")
+        div.fontDemo(id="referential-mono-tester") 
+        
+        //- TODO: sliders handles are WAY too small for mobile right now
+        //- TODO: modularize this later for mindful roman also
+        script.
+            function fontTester() {
+                var fonts = [
+                    {
+                        "name": "Referential Mono",
+                        "files": ["./ReferentialMono0.970_2-Regular.woff2"]
+                    }
+                ];
+                var options = {
+                    initialText: "<br><br>Start typing here!<br><br>",
+                    order: [["fontsize", "lineheight", "letterspacing", "alignment"], "tester"],
+                    config: {
+                        fontsize: {
+                            min: 16,
+                            init: 48,
+                            max: 200
+                        },
+                        alignment: {
+                            init: "center"
+                        },
+                        letterspacing: {
+                            unit: "em",
+                            min: -0.25,
+                            max: 1,
+                            step: 0.05
+                        }
+                    }
+                };
+                var fontDemo = new Fontsampler(document.getElementById("referential-mono-tester"), fonts, options);
+                FontsamplerSkin(fontDemo);
+                fontDemo.init();    
+            }
+            window.addEventListener('load', fontTester);
+    hr
+
+    .grid-1
+        +portfolioImg("./img/Referential-Mono---cargo---3.png", "", "")
+    .grid-2
+        +portfolioImg("./img/Referential-Mono---cargo---4.png", "", "A scale change shows the legibility of the letterforms.")
+        +portfolioImg("./img/Referential-Mono---cargo---5.png", "", "History often overlooks the contributions of non-European mathematicians, so this was an important reference.")
+    .grid-1
+        +portfolioImg("./img/Referential-Mono---cargo---6.png", "", "")
+    .grid-1
+        +portfolioImg("./img/Referential-Mono---cargo---7.png", "", "")
+
+    hr
+    h2 Process
+    br
+    .grid-1
+        +portfolioImg("./img/Referential-Mono---cargo---9.png", "", "Final classroom critique with Simon Johnston and Lavinia&nbsp;Lascaris.")
+    .grid-2
+        +portfolioImg("./img/HMCT_holiday_greetings.png", "", "Referential Mono was one of five typefaces selected for HMCT’s 2023 holiday greetings email and social media&nbsp;posts.")
+        +portfolioImg("./img/Referential-Mono---cargo---18.png", "", "I began designing the Arabic character set which has a different set of complexities. In this first draft I remained rigid to the same grid as the Latin character set (7x7 without letter-spacing since Arabic is a connected script). In doing so, I found some forms do not reduce down as nicely as I would like. The next revision I will try is on a 14x14 grid, subdividing the current grid in half.")

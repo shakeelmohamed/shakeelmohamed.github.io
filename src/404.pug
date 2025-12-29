@@ -15,7 +15,14 @@ block content
         //- TODO: replace this gif with a stitch of these, or something more related to my name
         //- - https://giphy.com/gifs/nba-basketball-shaq-shaquille-oneal-3oGNDyldXaMAzqks80
         //- - https://giphy.com/gifs/hbo-whats-my-name-documentary-hrvHU8XsoGufEvcDr3
-        img(src="/img/kendrick-lamar-super-bowl.gif" style="max-width: 450px; margin: 0 auto;")
+        picture
+            source(srcset="/assets/img/kendrick-lamar-super-bowl.webp" type="image/webp")
+            source(srcset="/assets/img/kendrick-lamar-super-bowl.jpeg" type="image/jpeg")
+            img(src="/assets/img/kendrick-lamar-super-bowl.jpeg" 
+                alt="Kendrick Lamar Super Bowl GIF"
+                style="max-width: 450px; margin: 0 auto;"
+                loading="lazy"
+                decoding="async")
 
     script.
         window.dataLayer = window.dataLayer || [];
