@@ -14,7 +14,10 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 ## ASAP
 
 - [X] update resume with Talisman Freelance Senior designer
-- [ ] update skills on resume PDF: Google Analytics, Notion, Affinity (and match order)
+- [ ] update skills on resume PDF: Google Analytics, Notion, Affinity, Grasshopper (and match order)
+- [ ] Add AIGA talk link: https://www.youtube.com/watch?v=7PPGcU47IWs
+- [ ] Fix right margin issues on tablet / half-width desktop size
+- [ ] Lots of strange layout issues on mobile
 - [ ] move all logo family / kit of parts stuff to the bottom of each project (before process)
 - [ ] MJ: brand guidelines
 - [ ] MJ: brand inspiration book (better name)
