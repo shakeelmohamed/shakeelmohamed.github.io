@@ -13,7 +13,6 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 
 ## ASAP
 
-- [X] update resume with Talisman Freelance Senior designer
 - [ ] update skills on resume PDF: Google Analytics, Notion, Affinity, Grasshopper (and match order)
 - [ ] Add AIGA talk link: https://www.youtube.com/watch?v=7PPGcU47IWs
 - [ ] Fix right margin issues on tablet / half-width desktop size
@@ -169,7 +168,7 @@ Hermes - highest vis sponsored studio ever, and being the TA is the validation f
 
 
 ## My notes
-- [X] Start posting on Behance!
+- [ ] Start posting on Behance!
 - [ ] MJ: could 3D model the exterior facade for the conf, and make a wayfinding program with a clear system + grid
 - [ ] Tests would be nice
 - [ ] Rework projects to have a cover.png shown at the top (ideally its the same image as the OG, just scaled up + higher res) -> scale should be about 1920x1200, the OG size feels too wide for cover images
@@ -209,110 +208,3 @@ Hermes - highest vis sponsored studio ever, and being the TA is the validation f
       Lots of testing proofing info https://github.com/Tarobish/Mirza
       https://kbstudio.net/works/fonts/
 
-## DONE
-
-## New done lol...
-
-- [x] figure out how to generate the tag pages (e.g. .com/branding)
-- [x] Add DMARC policy for gmail
-- [X] MUST leverage more of tech experience as experience which led to design, not starting from zero.
-- [X]   Clear narrative is more important than anything, especially on ATS and designed resume
-- [X] Build at least the homepage in Figma before tweaking the scale
-- [X] check all the media types for each project, maybe replace posters with print hmm
-- [x] fix the website mockup/video, hard color blocking top/bottom
-- [X] MJ: start with logo (or motion), can move the HQ down a bit
-- [X] SM spelled out in Mindful Roman... duh
-- [X] HMCT gallery / my final photo w/ Greg maybe
-- [X] thesis: Blender model process
-- [X] thesis: AIGA talk photo(s)
-- [X] Ontology: crit close-up on the Latin
-- [X] Remove react from resume
-- [X] Rothko front cover mockup is looking dark
-- [X] Rothko, many things are different in the book (esp. animation of spreads in the mockup)
-- [X] personal note from me
-- [X] can setup a thin sticky banner at the top -> grad show modal maybe
-- [X] Apple Invite link to RSVP: https://www.icloud.com/invites/073mzZ3mToW9eku77lcZsJI6g
-- [X] Enable the sticky header in base.pug when ready to go live
-
-## week 13
-
-- [X] grad show logistics
-- [X] Thesis: overall clean it up ASAP and remove the note about it... [easier once midterm deck is done];
-- [X] cleanup grad show portfolio to basically match website
-- [X] Thesis website: overall clean it up ASAP and remove the note about it... [easier once midterm deck is done]
-- [X] thesis imagery
-- [x] Rothko, update special thanks from book
-
-## week 10
-
-
-- [X] Rothko: move the TOC listing down a bit (leverage the grid-2 structure below to explain the editorial)
-- [X] APS: all micro posters have to be updated with new font adjustments (esp. the s change)
-- [X] APS: + and the cover / OG photo
-- [X] check colors on planetary society images, might need to export the variable font still as RGB (e.g. font outline image... also make it 1920x1080 or make the video 1920x1200 idk)
-- [X] APS: have to rebuild ticket mockups FML -- AND THE AI FILES WITH UPDATED TYPE WOW.
-- [X] APS: show identity system overview for macro and micro (type, color, logo lockups)
-- [X] move rule into the footer and out of the bottom of body
-- [X] large screen issue: R margin does not match; image/videos are not full width (e.g. they are smaller resolution than the screen)
-- [x] bring all JS files into the repo, all remote libraries!
-- [X] on large screens, images max out in size at 1920 and have a huge right margin sometimes
-- [X] ALL CAPTIONS: check for periods at the end
-
-### Week 7
-- [X] Address mobile layout issues - see March 02, 2025 in notes app
-
-### Week 6
-
-- [X] Update resume ASAP
-- [X] add JS or CSS tick for email obfuscation
-- [X] Add meta descriptions for all project pages 
-- [X] Good to hide the Salgirah project from website now...
-- [X] opengraph image: remove colon, lowercase T and L
-- [X] wget all images from cargo, bring them into the repo... its risky right now [Done: Rothko, MJ, TPS, MR, RM, Salgirah]
-- [x] Rothko: crop the video to avoid black bars
-- [x] Rothko: update all book imgs with gifs
-- [X] Rothko TV bug: optimize as a gif or add some music
-- [X] Sticky header: https://tw-elements.com/docs/standard/extended/sticky-header/
-- [X] About: build out fuller resume like before, include descriptions of each position at least
-- [X] TYPO: maybe the goal is too ambitious lol
-- [X] TYPO: needs captions + design decisions for why black and white
-- [X] Make the sticky header full-width, silly that it is not esp for Labyrtinth!!!
-      Quick fix is add the following on `.newHeader` 
-
-```css
-.newHeader {
-    margin-left: -2rem;
-    padding-left: 2rem;
-    margin-right: -2rem;
-    padding-right: 2rem;  
-}  
-```
-
-
-### Week 4
-
-- [X] About page heroes: “how much I have dedicated the past 4 years to involving myself in design communities to enrich my experience + share the experiences with others, building my design leadership experiences”; currently it is too much just hero worship... dedication to me and to the people I work with to bring communities together (one of the more valuable things that I do together)
-- [X] Break out special thanks, render it at the bottom of those projects
-- [X] MJ: David Holz on blue conf poster is larger type than others... well he’s the CEO but maybe they should just be the same size
-- [X] All projects: restructure the special thanks to (remove colon, say “instructors... ”) for those people so we know who there. [Done: MJ, TODO: thesis, Rothko, TYPO, Salgirah, RM, MR]
-- [X] Header: rename labyrinth to experiments, but keep the header on that page
-
-### Week 2
-
-- [X] About: Period after “the” in PD quote
-- [X] Rothko: Can just say “table of contents” above on right column
-- [X] Rothko: can move Sean Adams photo out, can move to about me page instead [also the description of former chair... ya not great]
-- [X] Rothko: OOPS there’s a repetition of carousel w/ the 2-up grid
-- [X] Rothko: What was the AR experience? Might be moved to labyrinth
-- [X] Rothko: caption for Inventing the Alphabet - does that go italics or something? check it + just run it by her if changing it
-- [X] SLIGHLTLY more margin above captions, ~4pt equivelent
-- [X] About me: “on site in Los Angeles”, not super critical but an easy fix to update everywhere
-- [X] Thesis: month+year for AIGA conf
-- [X] Thesis: crazy line breaks on right column, whyyyy
-- [X] Salgirah: remove portfolio festival video. Maybe just keep it linked from about page in the mini-resume thing
-- [X] Footer: need a home link (rough added to my name, can it be more obvious)
-- [X] Footer: on project pages, can have a next/prev project (need some logic for that)
-- [X] Capitalize first letter of first tag (homepage under each project, and thesis page), within a project page, capitalize like “Media: Poster”; and then lowercase homepage “Branding, typography, leadership” to be consistent
-
-- [X] Test DNS origin rule with subdomains... this might solve the 2 domain issue: https://developers.cloudflare.com/rules/origin-rules/examples/change-uri-path-and-host-header/ (solved with simple redirect of shakeel.design to shakeelmohamed.com)
-- [X] Update all opengraph images (1200 x 630) [Done: Mindful Roman, Referential Mono, TYPO, Salgirah, Thesis, Rothko, MJ, TPS, inclusion tee, Lyric posters]
