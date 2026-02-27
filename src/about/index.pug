@@ -9,17 +9,16 @@ include ../_includes/molecules.pug
 //-     COULD just be a list for now
 
 //- TODO: Maybe a separate services page?
+//- TODO: Collaborators include: The Planetary Society, TXM clients?, Splunk, The Ismaili, Hermés, Expedia
 
 
 block content
+    h1 About Me
     .grid-4.mt-4
         //- TODO: this will overflow x on tablet scale
         div.headshot
             img.lightbox(src="../img/Shakeel_Mohamed_headshot.png" alt="Headshot of Shakeel Mohamed")
         div
-            //- TODO: a little sad to let this go, but its not converting
-            //- p
-            //-     strong I think inside, outside, and about the box itself.
             p
                 strong
                     |“The best way to predict the future is to create it.”
@@ -50,8 +49,83 @@ block content
             p
                 strong
                     a(href="./Shakeel_Mohamed_resume.pdf" target="_blank") View my résumé here.
-            hr.mobile-only
+    br
+    hr
 
+    h2 Capabilities
+
+    //- TODO: additional services for studio
+    //- - Art Direction - Creative leadership role, not just execution
+    //- - Copywriting / Content Strategy
+    //- - Project Management - handling timelines and client coordination
+    //- - Consulting / Advisory - Strategic guidance beyond design execution
+    //- - Vendor Management - Coordinating with printers, developers, etc.
+    
+    //- TODO: new possible category headings
+    //- - Branding (strategy + identity)
+    //- - Art Direction (creative leadership across media)
+    //- - Production (execution + delivery)
+    //- - Technical (development)
+
+    //- | Category | Top LA Studios Offer |
+    //- |----------|---------------------|
+    //- | Branding | Brand strategy, identity, positioning, naming, guidelines, audits |
+    //- | Art Direction | Creative direction, campaign development, concepting, visual storytelling |
+    //- | Media | Web/digital, print, packaging, motion, video production, photography, social |
+    //- | Production | Implementation, file prep, vendor management |
+
+
+    //- TODO: flow to 2 columns on mobile
+    .grid-4.mt-4
+        div
+            p.bold.mb-2 Branding
+            p Logo design
+            p Pattern development
+            p Campaign design
+            p Brand extensions and sub-brands
+            p Font pairing
+            p Typeface customization
+            p Brand audits
+            p Brand system development
+            p Brand strategy + user research
+            p Competitive analysis
+            p Workshop facilitation / training
+            p Brand guidelines
+        div
+            p.bold.mb-2 Media
+            p Books + publications
+            p Print + stationery
+            p Web, social, email
+            p Motion / animation
+            p Video editing
+            p Environmental + signage
+            p Merchandise + apparel
+            p Presentation design
+        div
+            p.bold.mb-2 Production
+            p Template design
+            p Print production
+            p Design systems
+            p Pre-press checks
+            p Color matching (RGB, CMYK, Pantone)
+            p Pixel-precise implementation
+            p Responsive layouts
+            p File conversion, compression, optimization
+        div
+            p.bold.mb-2 Technical
+            p Creative coding
+            p API design
+            p Full-stack software engineering
+            p Version control
+            p Open source software
+            p Website audits
+            p Technical writing + documentation
+            p Custom plugin development
+            p Developer tooling
+    br
+    hr
+
+    h2 In real life...
     .grid-4.mt-4
         div
             p
@@ -76,7 +150,7 @@ block content
             p
                 strong Community Building
                 br
-                | I have dedicated the past four years to involving myself in design communities, sharing my experiences with others, and building towards design leadership experience. Over this time I’m grateful to have met several designers who have inspired me throughout my&nbsp;career.
+                | I have dedicated the past five years to involving myself in design communities, sharing my experiences with others, and building towards design leadership experience. Over this time I’m grateful to have met several designers who have inspired me throughout my&nbsp;career.
         div(style="grid-column: 3 / 5;")
             .grid-4.lightbox-album.keepDesktop(style="gap: 1rem;")
                 img(src="./img/Debbie_Millman.png")
@@ -89,7 +163,6 @@ block content
                 img(src="./img/Iddris_Sandu.png")
     br
     hr
-
     .grid-4
         div
             p.caption Education
