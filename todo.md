@@ -13,20 +13,21 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 
 ## ASAP
 
-- [ ] update skills on resume PDF: Google Analytics, Notion, Affinity, Grasshopper (and match order)
-- [ ] Add AIGA talk link: https://www.youtube.com/watch?v=7PPGcU47IWs
+- [ ] add XML sitemap
+- [ ] add schema.org structured data
+- [ ] add identity schema: https://www.seoptimer.com/blog/schema-markup-for-ai-search/
 - [ ] Fix right margin issues on tablet / half-width desktop size
 - [ ] Lots of strange layout issues on mobile
 - [ ] move all logo family / kit of parts stuff to the bottom of each project (before process)
 - [ ] MJ: brand guidelines
 - [ ] MJ: brand inspiration book (better name)
 - [ ] secret/hidden landing pages for video editing, tech, etc.
-
-## Bio revision
-
 - [ ] TPS: wristband motion... there is not face between inside/outside oops! Also make it loop perfectly
 - [ ] TPS: show motion design system (3x vertical social posts, LT, slates/bumpers) - show the system/grid, adaptive resizing
 - [ ] check OG images for projects, then posts, etc. Consider gif/video versions
+
+## Bio revision
+
 - [ ] Experience... consider Parenthetical titles or in 1 line summary at the top: Product Manager (Functionally leading roadmap without formal title)
 - [ ] Future bio update: I’m interested in environmental design, creative technology, and Arabic type design.
 - [ ] Can set up thesis in my bio a bit to speak more maturely as being an advocate and helping others to become advocates.
