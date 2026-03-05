@@ -1,0 +1,42 @@
+version: 0.2
+language: en
+ignorePaths:
+  - node_modules
+  - .idea
+  - .github
+dictionaries:
+  - en_US
+files:
+  - docs/**/*.html
+useGitignore: true
+ignoreWords:
+  - Shakeel
+  - Mohamed
+  - wordmark
+  - Headshot
+  - ntrsct
+  - AIGA
+  - HMCT
+  - résumé
+  - Ismaili
+  - Ismailis
+  - touchpoint
+  - touchpoints
+  - applieddesigner
+  - Salgirah
+  - opengraph
+  - microsite
+  - letterform
+  - letterforms
+  - letterspacing
+  - lineheight
+  - shukr
+  - logomark
+  - Journaling
+  - moodboard
+  - duplicative
+  - pushback
+  - overcommitted
+  - deprioritizing
+  - reimagining
+  - wayfinding
