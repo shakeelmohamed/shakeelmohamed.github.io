@@ -13,10 +13,17 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 
 ## ASAP
 
+- [ ] about page service list looks messy, too many things listed
 - [ ] add XML sitemap
 - [ ] add schema.org structured data
+- [ ] referential mono - fix mobile alignment issues with center or right align
+- [ ] use <footer>, etc structured markup; rename newheader, newfooter accordingly
+- [ ] resolve rules and tighten up spacing when header comes after a rule; probably remove rule from the header markup if possible
+- [ ] eliminate all the pug atomic design junk
 - [ ] add identity schema: https://www.seoptimer.com/blog/schema-markup-for-ai-search/
 - [ ] Fix right margin issues on tablet / half-width desktop size
+- [ ] Rework about page layout, everything is too dense as is
+- [ ] Update labyrinth with new content + build editor so the JSON can be updated while dragging locally
 - [ ] Lots of strange layout issues on mobile
 - [ ] move all logo family / kit of parts stuff to the bottom of each project (before process)
 - [ ] MJ: brand guidelines
