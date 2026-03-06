@@ -60,7 +60,7 @@ mixin projectListing(project)
                     a(href=project.url) #{project.data.title}
             //- TODO: need a max-width here so the lines aren't super long
             div.project-meta
-                p(style="color: #999999")!= project.data.mediaLinks
+                p.text-gray-meta!= project.data.mediaLinks
 
 //- TODO: design this component
 mixin getPosts(recent=false)
@@ -98,7 +98,7 @@ mixin getMentions(recent=false)
     - var source = mentions.recent;
     if !recent
         - source = mentions.all;
-    .flex.flex-wrap.items-baseline(style="flex-direction:column")
+    .flex.flex-wrap.items-baseline.flex-col
         if source.length > 0
             ul
             each mention in source

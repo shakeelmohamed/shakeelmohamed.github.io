@@ -30,11 +30,11 @@
     </head>
     <body class="bg-white">
         <div class="mobile-only mobileHeader">
-            <div class="grid-2" style="flex-direction: row; justify-content: space-between;">
+            <div class="grid-2 flex-row justify-between">
                 <div>
                     <div class="mobileBranding"><a class="logo-wrapper" href="/"><img src="/img/Shakeel_Mohamed_wordmark.svg" alt="Shakeel Mohamed wordmark logo set in the Mindful Roman typeface which he designed"/></a><br/><strong><a href="mailto:hello@shakeel.design" target="_blank">hello@shakeel.design</a></strong></div>
                 </div>
-                <div class="hamburgerIcon"><span class="material-icons" style="font-size: 2rem;">menu</span></div>
+                <div class="hamburgerIcon"><span class="material-icons text-2xl">menu</span></div>
             </div>
             <div class="menuItems">
                 <h2><a href="/">Work</a></h2>
@@ -56,7 +56,7 @@
                         <p><strong>Strategic Brand Designer</strong></p>
                     </div>
                     <div>
-                        <p><strong><a href="/projects" style="margin-right: 4rem;"><span class="material-icons headerIcon">public</span>Work</a>&nbsp;<a href="/labyrinth"><span class="material-icons headerIcon">swap_calls</span>Experiments</a></strong></p>
+                        <p><strong><a class="mr-16" href="/projects"><span class="material-icons headerIcon">public</span>Work</a>&nbsp;<a href="/labyrinth"><span class="material-icons headerIcon">swap_calls</span>Experiments</a></strong></p>
                     </div>
                 </div>
                 <div class="deskright-mobileleft">
@@ -77,7 +77,7 @@
                     </div>
                 </div>
             </div>
-            <hr style="margin-bottom: 0.5rem;"/>
+            <hr class="mb-2"/>
         </div>
         <main class="mb-4">
             <div class="grid-4">
@@ -85,7 +85,7 @@
                     <p>2021-04-15</p>
                 </div>
                 <div><strong>My Approach to Code Reviews</strong></div>
-                <div style="grid-column: 3 / 5;">
+                <div class="col-start-3 col-end-5">
                     <div class="prose"><p>One of my first code reviews was when I had a student job in the web development office at Bellevue College. I’d cobbled together a mess of PHP code as a WordPress “plugin” with horrendous variable names like <code>$sillyMe</code>, no exaggeration.</p>
 <p>Over the years I’ve learned a lot about software design and don’t make <em>sillyMe-stakes</em> anymore. In fact, after having my code reviewed dozens of times over the years I became known to give thorough code reviews by knowing what to look for.</p>
 <p>This is my attempt to codify the instinctive and intuitive approach I take to code reviews. These are prompts that you can ask yourself as a reviewer or when writing and self-reviewing code. The process may seem very drawn out, but often the steps happen in a matter of seconds.</p>
@@ -150,8 +150,8 @@ I don’t have any hard and fast rules on simplifying code, I approach this step
                 </div>
             </div>
         </main>
-        <hr style="margin-bottom:0.5 !important;"/>
-        <div class="newfooter grid-4" style="padding-bottom: 0 !important;">
+        <hr class="mb-0-5-important"/>
+        <div class="newfooter grid-4 pb-0">
             <div><br class="mobile-only"/><a class="logo-wrapper" href="/">
                     <script>document.write("&copy; " + new Date().getFullYear() + " Shakeel Mohamed.")</script></a></div>
             <div><a href="https://instagram.com/shakeel.design" target="_blank">Instagram</a></div>

@@ -11,17 +11,17 @@ block body
 //- TODO: can make a really cool banner for grad week...
 
 mixin gradshowdesktop()
-    .full-width.mb-4.py-1(style="background-color: #e9e8dd; text-align: center; margin-top: -1.5rem; margin-bottom: 1.5rem")
+    .full-width.mb-4.py-1.bg-cream.text-center.mt--6.mb-6
         a(href="/gradshow") 🎓 &nbsp;Graduation show details here: April 26, 2025 &nbsp;🎉
 
 mixin gradshowmobile()
-    .full-width.mb-4.py-2(style="background-color: #e9e8dd; text-align: center; margin-top: -1rem;")
+    .full-width.mb-4.py-2.bg-cream.text-center.mt--4
         strong
             a(href="/gradshow") 🎓 &nbsp;Graduation show details here: April 26, 2025 &nbsp;🎉
 
 mixin headernew()
     .mobile-only.mobileHeader
-        .grid-2(style="flex-direction: row; justify-content: space-between;")
+        .grid-2.flex-row.justify-between
             //- TODO: logo sizing is WIP, find a better way to match the height of 2 header lines
             div
                 div.mobileBranding
@@ -31,7 +31,7 @@ mixin headernew()
                     strong
                         a(href="mailto:" + metadata.author.email, target="_blank") #{metadata.author.email}
             div.hamburgerIcon
-                span.material-icons(style="font-size: 2rem;") menu
+                span.material-icons.text-2xl menu
         .menuItems
             h2
                 a(href="/") Work
@@ -62,7 +62,7 @@ mixin headernew()
                     //- TODO: can add a blog link here after grad + seeings 3-4 new posts
                     p
                         strong
-                            a(href="/projects" style="margin-right: 4rem;")
+                            a(href="/projects" class="mr-16")
                                 span.material-icons.headerIcon public
                                 | Work
                             | &nbsp;
@@ -79,7 +79,7 @@ mixin headernew()
                     p
                         strong
                             a(href="/about") About
-        hr(style="margin-bottom: 0.5rem;")
+        hr.mb-2
         //- div(style="grid-column: 3 / 5;")
         //-     .grid-2(style="margin-bottom:0;")
         //-         div
@@ -124,8 +124,8 @@ mixin headernew()
 //- TODO: bring back Designed and developed with ✨emotion✨.
 
 mixin footernew()
-    hr(style="margin-bottom:0.5 !important;")
-    .newfooter.grid-4(style="padding-bottom: 0 !important;")
+    hr(class="mb-0-5-important")
+    .newfooter.grid-4.pb-0
         div
             br.mobile-only
             a.logo-wrapper(href="/")
