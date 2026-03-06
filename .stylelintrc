@@ -1,0 +1,38 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-recess-order"
+  ],
+  "rules": {
+    "media-feature-range-notation": null,
+    "rule-empty-line-before": null,
+    "color-hex-length": null,
+    "selector-class-pattern": null,
+    "selector-id-pattern": null,
+    "property-no-deprecated": null,
+    "color-function-alias-notation": null,
+    "color-function-notation": null,
+    "alpha-value-notation": null,
+    "at-rule-no-vendor-prefix": null,
+    "selector-max-id": 0,
+    "declaration-no-important": null,
+    "at-rule-no-unknown": [true, { "ignoreAtRules": ["tailwind", "apply", "layer"] }],
+    "comment-empty-line-before": null,
+    "shorthand-property-no-redundant-values": null,
+    "property-no-vendor-prefix": null,
+    "selector-pseudo-element-no-unknown": null,
+    "no-descending-specificity": null,
+    "length-zero-no-unit": null,
+    "declaration-block-no-duplicate-properties": null,
+    "selector-no-vendor-prefix": null,
+    "order/properties-order": null,
+    "declaration-empty-line-before": null,
+    "no-duplicate-selectors": null,
+    "value-no-vendor-prefix": null,
+    "comment-whitespace-inside": null,
+    "keyframes-name-pattern": null,
+    "at-rule-empty-line-before": null,
+    "declaration-property-value-no-unknown": null,
+    "declaration-block-no-redundant-longhand-properties": null
+  }
+}
