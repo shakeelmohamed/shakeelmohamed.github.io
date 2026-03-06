@@ -4,9 +4,9 @@
   "description": "My personal website",
   "private": true,
   "scripts": {
-    "dev": "concurrently -k \"npm:start\" \"npm:postcss:w\"",
+    "dev": "bun run postcss && concurrently -k \"npm:postcss:w\" \"npm:start\"",
     "start": "bun run postcss && bunx @11ty/eleventy --serve --incremental --input=src --output=docs",
-    "build": "bunx @11ty/eleventy --input=src --output=docs && bun run postcss",
+    "build": "bun run postcss && bunx @11ty/eleventy --input=src --output=docs",
     "posttest": "bunx cspell lint 'docs/**/*.html' --no-progress --no-summary --quiet && alex --html --quiet ./docs/ && echo 'posttest: clean'",
     "test": "bunx playwright test",
     "postcss": "postcss src/styles.css -o docs/dist/tailwind.css",
