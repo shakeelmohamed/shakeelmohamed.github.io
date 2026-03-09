@@ -16,7 +16,6 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 - [ ] referential mono - fix mobile alignment issues with center or right align
 - [ ] use <footer>, etc structured markup; rename newheader, newfooter accordingly
 - [ ] resolve rules and tighten up spacing when header comes after a rule; probably remove rule from the header markup if possible
-- [ ] eliminate all the pug atomic design junk
 - [ ] add identity schema: https://www.seoptimer.com/blog/schema-markup-for-ai-search/
 - [ ] Fix right margin issues on tablet / half-width desktop size
 - [ ] Rework about page layout, everything is too dense as is

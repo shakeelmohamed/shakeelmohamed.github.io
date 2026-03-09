@@ -1,4 +1,22 @@
-include ./atoms.pug
+mixin fullWidth(bgClass, textClass)
+    div.pt-8.pb-12(class="full-width " + bgClass + " " + textClass)
+        .main
+            block
+
+mixin myEmail(text)
+    +mailto("hello", "shakeel.design", "", text)
+
+mixin mailto(user, domain, subject, text)
+    //- See: http://lists.evolt.org/archive/Week-of-Mon-20040202/154813.html
+    span.mailto
+        script(type="text/javascript").
+            function gen_mail_to_link(lhs, rhs, subject, text) {
+                const rhs_subj = subject ? `${rhs}?subject=${subject}` : rhs;
+                const _txt = text ? text : `${lhs}@${rhs}`;
+                const generated = `<a class="mailto" href="mailto:${lhs}@${rhs_subj}" target=_blank>${_txt}</a>`;
+                document.write(generated);
+            }
+            gen_mail_to_link("#{user}", "#{domain}", "#{subject}", "#{text}")
 
 //- TODO: featured content (projects or posts)
 //- TODO: list of projects / blog posts; should be reusable
@@ -9,12 +27,12 @@ mixin gridCols2()
 
 //- TODO: This should go away very soon, currently used on: projects, links - both need redesigns
 mixin centeredPage()
-    //- 
+    //-
     //- DO NOT TOUCH THIS FOR NOW!
     //- *** Blog posts are looking perfect on desktop. ***
     //- Other pages,not so much...
     //- Regular pages needs feel cohesive with the homepage
-    //- 
+    //-
     div.centered-page(class="mx-auto place-content-center self-center lg:w-1/2")
         block
 
@@ -45,7 +63,7 @@ mixin centeredPage()
 //-     div
 //-         p Designed and developed with ✨emotion✨.
 //-         p
-//-             script document.write("&copy; " + new Date().getFullYear() + " Shakeel Mohamed")   
+//-             script document.write("&copy; " + new Date().getFullYear() + " Shakeel Mohamed")
 
 //- TODO: remix so blog listing can reuse part of this
 //- TODO: use coverImg instead of openGraphImage please
@@ -85,7 +103,7 @@ mixin featuredPost(post)
             p.bold.h2 #{post.data.title}
         p #{post.data.description}
         //- p #{post.data.categories}
-            
+
 
 mixin getFeaturedPosts()
     //- TODO: this might be nice as a 4 column grid on desktop, once cover photos are nice
