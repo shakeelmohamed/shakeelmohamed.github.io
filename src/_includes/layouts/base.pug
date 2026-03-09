@@ -1,10 +1,10 @@
 extends ./super.pug
 
 block body
-    +headernew()
+    +header()
     main.mb-4
         block content
-    +footernew()
+    +footer()
 
 //- TODO: mobile footer
 //- TODO: eventually cleanup to use header and footer tags
@@ -20,7 +20,7 @@ block body
 //-         strong
 //-             a(href="/gradshow") 🎓 &nbsp;Graduation show details here: April 26, 2025 &nbsp;🎉
 
-mixin headernew()
+mixin header()
     .mobile-only.mobileHeader
         .grid-2.flex-row.justify-between
             //- TODO: logo sizing is WIP, find a better way to match the height of 2 header lines
@@ -124,7 +124,7 @@ mixin headernew()
 //- TODO: bring back +mailingListForm()
 //- TODO: bring back Designed and developed with ✨emotion✨.
 
-mixin footernew()
+mixin footer()
     hr(class="mb-0-5-important")
     .newfooter.grid-4.pb-0
         div

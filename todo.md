@@ -5,23 +5,22 @@ For conversion from mp4 to avif (eventually, phase out all gifs):
 ffmpeg -i ontology_cover.mp4 -c:v libaom-av1 -crf 20 -b:v 0 -still-picture 0 ontology_cover.avif
 ```
 
-Figure out how to CLI automate spell check like this app: https://www.spl.ing/report-card?website=shakeelmohamed.com&uuid=e4e2c283-6e32-4327-97f6-955a0a38ef2d
-- Need a custom dictionary for cspell: https://cspell.org/docs/dictionaries#dictionary-definition
-
 Good reference for pug x 11ty:
 https://cardiff.marketing/pug-in-eleventy-making-it-work/
 
 ## ASAP
 
-- [ ] referential mono - fix mobile alignment issues with center or right align
 - [ ] use <footer>, etc structured markup; rename newheader, newfooter accordingly
 - [ ] resolve rules and tighten up spacing when header comes after a rule; probably remove rule from the header markup if possible
-- [ ] add identity schema: https://www.seoptimer.com/blog/schema-markup-for-ai-search/
 - [ ] Fix right margin issues on tablet / half-width desktop size
 - [ ] Rework about page layout, everything is too dense as is
 - [ ] Update labyrinth with new content + build editor so the JSON can be updated while dragging locally
 - [ ] Lots of strange layout issues on mobile
 - [ ] move all logo family / kit of parts stuff to the bottom of each project (before process)
+
+# Projects 
+
+- [ ] referential mono - fix mobile alignment issues with center or right align
 - [ ] MJ: brand guidelines
 - [ ] MJ: brand inspiration book (better name)
 - [ ] secret/hidden landing pages for video editing, tech, etc.
