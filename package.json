@@ -17,8 +17,9 @@
     "postcss": "postcss src/styles.css -o docs/dist/tailwind.css",
     "postcss:w": "postcss -w src/styles.css -o docs/dist/tailwind.css --poll",
     "clean": "rimraf docs",
-    "pretest": "bun run lint:css",
-    "lint:css": "stylelint src/**/*.css"
+    "pretest": "bun run lint:css && bun run lint:pug",
+    "lint:css": "stylelint src/**/*.css",
+    "lint:pug": "node lint-pug.js"
   },
   "repository": {
     "type": "git",
