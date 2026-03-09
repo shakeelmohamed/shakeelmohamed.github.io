@@ -8,24 +8,25 @@ body {
     background-color: #FF5C0A !important;
 }
 
-.header-logo:hover, nav > a:hover, .mailto:hover {
+.header-logo:hover, nav > a:hover {
     color: white !important;
 }
 
 h1, h2, h3, h4, h5, .prose h1, .prose h2, .prose h3, .prose h4, .prose h5 {
-    color: #002855 !important;
-    font-family: Inter;
+    font-family: Inter, Arial, sans-serif;
     font-weight: 700;
+    color: #002855 !important;
 }
 
 p, .prose p {
+    font-family: Inter, Arial, sans-serif;
     color: #002855 !important;
-    font-family: Inter, sans-serif;
 }
 
 .social-link, .mailto {
     color: white !important;
 }
+
 .social-link:hover, .mailto:hover {
     color: #002855 !important;
 }
