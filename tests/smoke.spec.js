@@ -1,4 +1,24 @@
 const { test, expect } = require('@playwright/test');
+const fs = require('fs');
+const path = require('path');
+
+function getFilesRecursively(dirPath, filterFn) {
+  const entries = fs.readdirSync(dirPath, { withFileTypes: true });
+  const files = [];
+
+  for (const entry of entries) {
+    const fullPath = path.join(dirPath, entry.name);
+    if (entry.isDirectory()) {
+      files.push(...getFilesRecursively(fullPath, filterFn));
+      continue;
+    }
+    if (!filterFn || filterFn(fullPath)) {
+      files.push(fullPath);
+    }
+  }
+
+  return files;
+}
 
 const CORE_ROUTES = [
   '/',
@@ -75,4 +95,63 @@ test('internal links on core pages resolve', async ({ page, request, baseURL }) 
   }
 
   expect(brokenLinks, brokenLinks.join('\n')).toEqual([]);
+});
+
+test('sitemap lastmod values are valid ISO dates', async () => {
+  const sitemapPath = path.resolve(__dirname, '..', 'docs', 'sitemap.xml');
+  const xml = fs.readFileSync(sitemapPath, 'utf8');
+  const matches = [...xml.matchAll(/<lastmod>([^<]*)<\/lastmod>/g)];
+
+  expect(matches.length, 'Expected at least one <lastmod> in sitemap.xml').toBeGreaterThan(0);
+
+  for (const [, rawValue] of matches) {
+    const value = rawValue.trim();
+    expect(value, 'Each <lastmod> must be non-empty').toBeTruthy();
+    expect(value, `<lastmod> must be YYYY-MM-DD, got: ${value}`).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+
+    const parsed = new Date(`${value}T00:00:00Z`);
+    expect(Number.isNaN(parsed.getTime()), `Invalid date in <lastmod>: ${value}`).toBeFalsy();
+
+    const normalized = parsed.toISOString().slice(0, 10);
+    expect(normalized, `Invalid calendar date in <lastmod>: ${value}`).toBe(value);
+  }
+});
+
+test('post listing dates are present and ISO-formatted', async () => {
+  const listingPaths = [
+    path.resolve(__dirname, '..', 'docs', 'posts', 'index.html'),
+    path.resolve(__dirname, '..', 'docs', 'blog', 'index.html'),
+    path.resolve(__dirname, '..', 'docs', 'blog-archive', 'index.html'),
+  ];
+
+  for (const listingPath of listingPaths) {
+    const html = fs.readFileSync(listingPath, 'utf8');
+    const matches = [...html.matchAll(/<p class="whitespace-nowrap">\s*([^<]*)\s*&nbsp;<\/p>/g)];
+
+    expect(matches.length, `Expected listing date rows in ${listingPath}`).toBeGreaterThan(0);
+
+    for (const [, rawDate] of matches) {
+      const date = (rawDate || '').trim();
+      expect(date, `Date is empty in ${listingPath}`).toBeTruthy();
+      expect(date, `Date must be YYYY-MM-DD in ${listingPath}, got: ${date}`).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+    }
+  }
+});
+
+test('post pages include non-empty og:article:published_time', async () => {
+  const postsDir = path.resolve(__dirname, '..', 'docs', 'posts');
+  const postFiles = getFilesRecursively(postsDir, (filePath) => filePath.endsWith('index.html') && !filePath.endsWith(path.join('posts', 'index.html')));
+
+  expect(postFiles.length, 'Expected generated post HTML files').toBeGreaterThan(0);
+
+  for (const postFile of postFiles) {
+    const html = fs.readFileSync(postFile, 'utf8');
+    const match = html.match(/<meta property="og:article:published_time"(?:\s+content="([^"]*)")?\s*\/?>(?:<\/meta>)?/i);
+
+    expect(match, `Missing og:article:published_time in ${postFile}`).toBeTruthy();
+
+    const value = (match[1] || '').trim();
+    expect(value, `Empty og:article:published_time in ${postFile}`).toBeTruthy();
+    expect(value, `og:article:published_time must be YYYY-MM-DD in ${postFile}, got: ${value}`).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+  }
 });

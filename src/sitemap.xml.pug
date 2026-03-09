@@ -1,0 +1,13 @@
+---
+permalink: "/sitemap.xml"
+dynamicPermalink: false
+eleventyExcludeFromCollections: true
+---
+
+<?xml version="1.0" encoding="UTF-8"?>
+urlset(xmlns="http://www.sitemaps.org/schemas/sitemap/0.9")
+    each item in sitemapEntries
+        url
+            loc #{item.loc}
+            lastmod #{item.lastmod}
+
