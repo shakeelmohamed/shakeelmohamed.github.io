@@ -43,6 +43,35 @@ html(lang="en")
         else
             link(href=metadata.baseurl + page.url, rel="canonical")
 
+        -
+            var sameAsProfiles = [
+                metadata.social.LinkedIn,
+                metadata.social.Instagram,
+                metadata.social_unused && metadata.social_unused.GitHub
+            ].filter(Boolean);
+            var personSchema = {
+                '@type': 'Person',
+                '@id': metadata.baseurl + '/#person',
+                name: metadata.author.name,
+                url: metadata.baseurl,
+                email: 'mailto:' + metadata.author.email,
+                jobTitle: 'Strategic Brand Designer',
+                sameAs: sameAsProfiles
+            };
+            var websiteSchema = {
+                '@type': 'WebSite',
+                '@id': metadata.baseurl + '/#website',
+                url: metadata.baseurl,
+                name: metadata.author.name,
+                description: description,
+                inLanguage: 'en'
+            };
+            var structuredData = {
+                '@context': 'https://schema.org',
+                '@graph': [personSchema, websiteSchema]
+            };
+        script(type="application/ld+json")!= JSON.stringify(structuredData)
+
         link(rel="stylesheet" href="https://use.typekit.net/rgm5cfh.css")
         link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/material-icons@1.13.12/iconfont/material-icons.min.css")
         link(rel="stylesheet" href="/dist/tailwind.css")
