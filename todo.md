@@ -13,7 +13,6 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 
 ## ASAP
 
-- [ ] about page service list looks messy, too many things listed
 - [ ] add XML sitemap
 - [ ] add schema.org structured data
 - [ ] referential mono - fix mobile alignment issues with center or right align
