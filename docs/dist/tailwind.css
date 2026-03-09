@@ -790,6 +790,12 @@ select {
         height: 3.5rem;
     }
 
+    /* Keep desktop header logo size stable even if class names change. */
+    .newheader .logo-wrapper img {
+        height: 3.5rem;
+        width: auto;
+    }
+
     .newheader {
         z-index: 999;
         background: rgba(255, 255, 255, 0.9);
@@ -1804,9 +1810,6 @@ select {
 }
 .mb-6 {
   margin-bottom: 1.5rem;
-}
-.mr-16 {
-  margin-right: 4rem;
 }
 .-mt-4 {
   margin-top: -1rem;

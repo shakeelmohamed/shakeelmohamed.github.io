@@ -54,75 +54,26 @@ mixin header()
                     a(href="/")
                         img.logosvg(src="/img/Shakeel_Mohamed_wordmark.svg" alt="Shakeel Mohamed wordmark logo set in the Mindful Roman typeface which he designed")
             div.
-            div
-                div.pb-4
+            div.col-start-3.col-end-5
+                div.pb-4.flex.justify-between.items-baseline
                     p
                         strong Strategic Brand Designer
-                div
-                    //- TODO: how can I avoid breaking between the icon and word?
-                    //- TODO: can add a blog link here after grad + seeings 3-4 new posts
-                    p
-                        strong
-                            a(href="/projects" class="mr-16")
-                                span.material-icons.headerIcon public
-                                | Work
-                            | &nbsp;
-                            a(href="/labyrinth")
-                                span.material-icons.headerIcon swap_calls
-                                | Experiments
-                        
-            div.deskright-mobileleft
-                div.pb-4
                     p
                         strong
                             +myEmail()
-                div
+                div.flex.justify-between.items-baseline
+                    p
+                        strong
+                            a(href="/projects") Work
+                    p
+                        strong
+                            a(href="/labyrinth") Experiments
                     p
                         strong
                             a(href="/about") About
         hr.mb-2
-        //- div(style="grid-column: 3 / 5;")
-        //-     .grid-2(style="margin-bottom:0;")
-        //-         div
-        //-             div
-        //-                 strong
-        //-                     a(href="/projects") Work
-        //-             div
-        //-                 strong
-        //-                     a(href="/labyrinth") Experiments
-        //-         div(style="text-align:right;")
-        //-             div
-        //-                 strong
-        //-                     a(href="mailto:" + metadata.author.email, target="_blank") #{metadata.author.email}
-        //-             div
-        //-                 strong
-        //-                     a(href="/about") About
-        //- div(style="grid-column: 3 / 5;")
-        //-     .grid-2(style="margin-bottom:0;")
-        //-         div
-        //-             strong
-        //-                 a(href="/labyrinth") Experiments
-        //-         div(style="text-align:right;")
-        //-             div
-        //-                 strong
-        //-                     a(href="mailto:" + metadata.author.email, target="_blank") #{metadata.author.email}
-        //-             div
-        //-                 strong
-        //-                     a(href="/about") About
-        //-     .grid-1
-        //-         p
-        //-             //- TODO: thesis should become a project soon
-        //-             //- a(href="/projects/thesis") Thesis
-        //-             strong Work:&nbsp;
-        //-             each project in collections.portfolio
-        //-                 span
-        //-                     a(href=project.url) #{project.data.short}
-        //-                 span ,&nbsp;
-        //-             span
-        //-                 a(href="/projects/thesis") Thesis
 
 //- TODO: bring back +mailingListForm()
-//- TODO: bring back Designed and developed with ✨emotion✨.
 
 mixin footer()
     hr(class="mb-0-5-important")

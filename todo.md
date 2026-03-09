@@ -10,13 +10,12 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 
 ## ASAP
 
-- [ ] use <footer>, etc structured markup; rename newheader, newfooter accordingly
-- [ ] resolve rules and tighten up spacing when header comes after a rule; probably remove rule from the header markup if possible
+- [ ] use <footer>, etc structured markup; rename newheader, newfooter CSS classes accordingly
+- [ ] resolve rules and tighten up spacing when header comes after a rule; probably remove rule from the header markup if possible; (Started with hr.rule class)
 - [ ] Fix right margin issues on tablet / half-width desktop size
 - [ ] Rework about page layout, everything is too dense as is
 - [ ] Update labyrinth with new content + build editor so the JSON can be updated while dragging locally
 - [ ] Lots of strange layout issues on mobile
-- [ ] move all logo family / kit of parts stuff to the bottom of each project (before process)
 
 # Projects 
 
@@ -27,6 +26,7 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 - [ ] TPS: wristband motion... there is not face between inside/outside oops! Also make it loop perfectly
 - [ ] TPS: show motion design system (3x vertical social posts, LT, slates/bumpers) - show the system/grid, adaptive resizing
 - [ ] check OG images for projects, then posts, etc. Consider gif/video versions
+- [ ] move all logo family / kit of parts stuff to the bottom of each project (before process)
 
 ## Bio revision
 
