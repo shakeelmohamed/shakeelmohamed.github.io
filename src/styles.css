@@ -199,6 +199,8 @@
         grid-template-columns: repeat(3, 1fr);
         column-gap: 2rem;
         row-gap: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 
     .grid-4 {
