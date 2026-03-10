@@ -16,10 +16,9 @@ mixin portfolioImg(url, alt, cap)
     //- 
     //- Can do something similar to how sliders work w/ fullpath()
     
-    if url
-        .project-content
-            img.lightbox(src=url, alt=alt)
-            +caption(cap)
+    .project-content
+        img.lightbox(src=url, alt=alt)
+        +caption(cap)
 
 mixin imgForSlider(url, alt, cap)
     .project-content
