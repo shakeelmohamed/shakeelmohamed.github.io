@@ -24,14 +24,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shakeelmohamed/beta.git"
+    "url": "git+https://github.com/shakeelmohamed/shakeelmohamed.github.io.git"
   },
   "author": "Shakeel Mohamed<iam@shakeel.xyz>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/shakeelmohamed/beta/issues"
+    "url": "https://github.com/shakeelmohamed/shakeelmohamed.github.io/issues"
   },
-  "homepage": "https://github.com/shakeelmohamed/beta#readme",
+  "homepage": "https://github.com/shakeelmohamed/shakeelmohamed.github.io#readme",
   "dependencies": {
     "bun": "^1.3.10"
   },
