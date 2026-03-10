@@ -7,6 +7,7 @@
     "dev": "concurrently -k \"npm:postcss:w\" \"npm:start\"",
     "start": "bunx @11ty/eleventy --serve --incremental --input=src --output=docs",
     "build": "node scripts/build.js",
+    "optimize": "node scripts/optimize.js",
     "posttest": "bunx cspell lint 'docs/**/*.html' --no-progress --no-summary --quiet && alex --html --quiet ./docs/ && echo 'posttest: clean'",
     "test:words": "bunx cspell lint 'docs/**/*.html' --no-progress --no-summary --quiet && bunx alex --html --quiet ./docs/ && echo 'test:words: clean'",
     "test:smoke": "bunx playwright test tests/smoke --project=chromium",
@@ -36,6 +37,7 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-img": "^6.0.4",
     "@playwright/test": "^1.58.2",
     "@tailwindcss/forms": "^0.4.1",
     "@tailwindcss/typography": "^0.5.19",
