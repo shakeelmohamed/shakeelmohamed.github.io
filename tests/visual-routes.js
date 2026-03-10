@@ -1,4 +1,3 @@
-const { test, expect } = require('@playwright/test');
 const { createHash } = require('node:crypto');
 const { readFileSync } = require('node:fs');
 const { resolve } = require('node:path');
@@ -34,14 +33,14 @@ function snapshotNameForRoute(route) {
   return `${short}--${hash}.png`;
 }
 
-test.describe('Visual baseline snapshots', () => {
-  for (const { route, name } of VISUAL_ROUTES) {
-    test(`${name} page snapshot`, async ({ page }) => {
-      await page.goto(route, { waitUntil: 'networkidle' });
-      await expect(page).toHaveScreenshot(`${name}.png`, {
-        fullPage: true,
-        maxDiffPixelRatio: 0.01,
-      });
-    });
-  }
-});
+const PROJECT_ROUTES = VISUAL_ROUTES.filter(({ route }) => route.includes('/projects/'));
+const POST_ROUTES = VISUAL_ROUTES.filter(({ route }) => route.includes('/posts/'));
+const PAGE_ROUTES = VISUAL_ROUTES.filter(
+  ({ route }) => !route.includes('/projects/') && !route.includes('/posts/'),
+);
+
+module.exports = {
+  PROJECT_ROUTES,
+  POST_ROUTES,
+  PAGE_ROUTES,
+};

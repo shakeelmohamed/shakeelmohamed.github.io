@@ -12,5 +12,4 @@ package-lock.json
 /playwright-report/
 /blob-report/
 /playwright/.cache/
-tests/visual.spec.js-snapshots/
-tests/visual-comparison.spec.js-snapshots/
+tests/*.spec.js-snapshots/

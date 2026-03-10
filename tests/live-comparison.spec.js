@@ -1,7 +1,7 @@
 const { test, expect } = require('@playwright/test');
 const { createHash } = require('node:crypto');
-const { readFileSync, writeFileSync } = require('node:fs');
-const { resolve } = require('node:path');
+const { readFileSync, writeFileSync, mkdirSync } = require('node:fs');
+const { resolve, dirname } = require('node:path');
 
 const SITE_ORIGIN = 'https://shakeelmohamed.com';
 const LOCAL_ORIGIN = 'http://localhost:8080';
@@ -104,6 +104,7 @@ test.describe('Local vs live visual comparison', () => {
 
         const snapshotName = snapshotNameForRoute(route);
         const expectedPath = testInfo.snapshotPath(snapshotName);
+        mkdirSync(dirname(expectedPath), { recursive: true });
         writeFileSync(expectedPath, liveImage);
 
         try {
