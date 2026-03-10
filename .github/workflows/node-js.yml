@@ -26,4 +26,4 @@ jobs:
         bun-version: latest
     - run: bun install
     - run: bun run build --if-present
-    - run: bun test
+    - run: bun test:spec

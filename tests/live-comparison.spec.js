@@ -80,7 +80,7 @@ test.describe('Local vs live visual comparison', () => {
     test(`compare ${route}`, async ({ browser }, testInfo) => {
       test.setTimeout(60_000);
 
-      const localContext = await browser.newContext();
+      const localContext = await bLrowser.newContext();
       const liveContext = await browser.newContext();
 
       try {
