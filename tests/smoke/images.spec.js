@@ -1,8 +1,9 @@
 const { test, expect } = require('@playwright/test');
 const { readdirSync, readFileSync, existsSync } = require('node:fs');
-const { resolve, dirname, join } = require('node:path');
+const { resolve, dirname, join, relative } = require('node:path');
 
 const DOCS_DIR = resolve(process.cwd(), 'docs');
+const SRC_DIR = resolve(process.cwd(), 'src');
 
 function listHtmlFilesRecursively(dirPath) {
   const entries = readdirSync(dirPath, { withFileTypes: true });
@@ -16,6 +17,25 @@ function listHtmlFilesRecursively(dirPath) {
     }
 
     if (entry.isFile() && fullPath.endsWith('.html')) {
+      files.push(fullPath);
+    }
+  }
+
+  return files;
+}
+
+function listSourceImageFilesRecursively(dirPath) {
+  const entries = readdirSync(dirPath, { withFileTypes: true });
+  const files = [];
+
+  for (const entry of entries) {
+    const fullPath = join(dirPath, entry.name);
+    if (entry.isDirectory()) {
+      files.push(...listSourceImageFilesRecursively(fullPath));
+      continue;
+    }
+
+    if (entry.isFile() && /\.(png|jpg|jpeg|gif|svg)$/i.test(fullPath)) {
       files.push(fullPath);
     }
   }
@@ -105,4 +125,23 @@ test('all linked local images exist in repo', async () => {
   }
 
   expect(missing, `Missing image assets:\n${missing.join('\n')}`).toEqual([]);
+});
+
+test('all source image files in docs map to src', async () => {
+  const docsImageFiles = listSourceImageFilesRecursively(DOCS_DIR);
+  expect(docsImageFiles.length, 'No image files found under docs').toBeGreaterThan(0);
+
+  const missing = [];
+
+  for (const docsFile of docsImageFiles) {
+    const docsRel = relative(DOCS_DIR, docsFile);
+    const expectedSrcPath = resolve(SRC_DIR, docsRel);
+
+    if (!existsSync(expectedSrcPath)) {
+      const srcRel = relative(SRC_DIR, expectedSrcPath);
+      missing.push(`${docsRel} -> ${srcRel}`);
+    }
+  }
+
+  expect(missing, `Missing docs->src image mappings:\n${missing.join('\n')}`).toEqual([]);
 });

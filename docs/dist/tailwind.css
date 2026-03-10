@@ -2019,9 +2019,6 @@ select {
 .text-center {
   text-align: center;
 }
-.text-right {
-  text-align: right;
-}
 .align-text-bottom {
   vertical-align: text-bottom;
 }
@@ -2173,9 +2170,6 @@ h2.break {
 /* Inline style migrations */
 .bg-cream {
         background-color: #e9e8dd;
-    }
-.text-gray-meta {
-        color: #999999;
     }
 .bg-bisque {
         background-color: #D3CFC6;
