@@ -62,8 +62,6 @@ async function stabilizePage(page, url) {
 }
 
 test.describe('Local vs live visual comparison', () => {
-  test.describe.configure({ mode: 'serial' });
-
   test.afterAll(() => {
     if (mismatchedRoutes.length === 0) {
       console.log('\n[visual-compare] No visual differences detected.');
@@ -80,7 +78,7 @@ test.describe('Local vs live visual comparison', () => {
     test(`compare ${route}`, async ({ browser }, testInfo) => {
       test.setTimeout(60_000);
 
-      const localContext = await bLrowser.newContext();
+      const localContext = await browser.newContext();
       const liveContext = await browser.newContext();
 
       try {
