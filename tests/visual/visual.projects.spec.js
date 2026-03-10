@@ -1,7 +1,7 @@
 const { test, expect } = require('@playwright/test');
 const { PROJECT_ROUTES } = require('./visual-routes');
 
-test.describe('Visual baseline snapshots: Projects', () => {
+test.describe('Projects', () => {
   for (const { route, name } of PROJECT_ROUTES) {
     test(`${name} page snapshot`, async ({ page }) => {
       await page.goto(route, { waitUntil: 'networkidle' });
