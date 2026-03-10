@@ -65,6 +65,8 @@ Others
 - [ ] TPS: use this for website particle physics (better than three.js): https://github.com/naughtyduk/particlesGL
 - [ ] Think about cursor or other interaction/motion points using the icon logo
 - [ ] accessibility check, definitely needs help: https://www.accessibilitychecker.org/audit/?website=shakeelmohamed.com&flag=ww#
+- [ ] Move the giant inline form/CSS payload out of src/break/index.pug:85 into a partial or external asset.
+
 
 ## P1
 
