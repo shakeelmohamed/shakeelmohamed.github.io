@@ -43,7 +43,7 @@ var all = [
     {
         "date": "August 8, 2020",
         "title": "Spotifaves (Codeday Labs 2020 mentor project)",
-        "utl": "https://showcase.codeday.org/project/ckkh1rouo20550711o548ws85h8"
+        "url": "https://showcase.codeday.org/project/ckkh1rouo20550711o548ws85h8"
     },
     {
         "date": "May 21, 2020",
