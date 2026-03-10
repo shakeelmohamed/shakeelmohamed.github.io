@@ -1,4 +1,5 @@
 const gitDateExtractor = require('git-date-extractor');
+const DEFAULT_OG_IMAGE = '/img/opengraph-default.png';
 
 const cfs = function(val) {
     return String(val).charAt(0).toUpperCase() + String(val).slice(1);
@@ -31,7 +32,7 @@ module.exports = {
             // TODO: this is where to generate the OG images, for now use the IDD template
             // TODO: OR this should be the default OG image but its relative path may require work to compute
             console.warn(`buildOGImageURL is missing an OG image for ${data.title}`);
-            return;
+            return DEFAULT_OG_IMAGE;
         }
         else if (!data.openGraphImage.startsWith("https:")) {
             return data.page.filePathStem.replace("index", "") + data.openGraphImage;

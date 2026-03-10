@@ -14,7 +14,7 @@ module.exports = {
             return !(val.toLowerCase() == "post" || val.toLowerCase() == "featured");
         }).join(", "),
         openGraphImage: data => {
-            return utils.buildOGImageURL(data) || 'https://placehold.co/1200x630';
+            return utils.buildOGImageURL(data);
         }
     }
 };
