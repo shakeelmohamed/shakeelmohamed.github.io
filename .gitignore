@@ -13,4 +13,8 @@ package-lock.json
 /blob-report/
 /playwright/.cache/
 
+# Omit live snapshots
+/tests/live-comparison.spec.js-snapshots/
+
 .cache/
+
