@@ -10,9 +10,8 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 
 ## ASAP
 
-- [ ] optimization: use webp for all images, webm for gifs
 - [ ] Replace all avif files with webm and .mp4
-- [ ] ditto for jpg/jpegs
+- [ ] replace all jpeg/jpg with png
 - [ ] use <footer>, etc structured markup; rename newheader, newfooter CSS classes accordingly
 - [ ] resolve rules and tighten up spacing when header comes after a rule; probably remove rule from the header markup if possible; (Started with hr.rule class)
 - [ ] Fix right margin issues on tablet / half-width desktop size
@@ -20,7 +19,7 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 - [ ] Update labyrinth with new content + build editor so the JSON can be updated while dragging locally
 - [ ] Lots of strange layout issues on mobile
 
-# Projects 
+# Projects
 
 - [ ] referential mono - fix mobile alignment issues with center or right align
 - [ ] MJ: brand guidelines
@@ -41,11 +40,12 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 - [ ] Overall positioning through leadership, technical expertise, and economy design
 
 
-- Thesis:
+Thesis:
 - [ ] social media, re-do it
 - [ ] the quiz!
-- [ ] process book
+- [ ] process book, more spreads
 - [ ] other sketches, ideation from fall
+- [ ] Include thesis process images
 
 Others
 - [ ] CTA on homepage: desktop 2rem on 3rem lead, TBD mobile
@@ -74,7 +74,6 @@ Others
 ## P1
 
 - [ ] MJ: why am I not showing the brand guidelines? NEED THIS in a slide overview off-axis angle format
-- [ ] MJ: motion
 - [ ] MJ: update project summary
 - [ ] MJ: spend 3 hours on motion (new storyboard, logo decomposition into layers, production), goal should be 10 seconds max
 - [ ] Thesis: what are the points of my talk? some high level ideas, or takeaways... still unclear what I am bringing to expand the perceived value of designers
@@ -126,7 +125,6 @@ Hermes - highest vis sponsored studio ever, and being the TA is the validation f
 - [ ] I am running into lots of issues here... Can show a 3D model of the wall too, host on sketchfab w/ annotations: https://support.fab.com/s/article/Annotations
     - [ ] See also: https://github.com/sketchfab/blender-plugin/releases/tag/1.6.1
 - [ ] Spinning 3D model of biz card would be so cool
-- [ ] Include thesis process images
 
 # P3
 
