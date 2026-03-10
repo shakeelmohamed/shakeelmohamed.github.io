@@ -98,7 +98,7 @@ test('internal links on core pages resolve', async ({ page, request, baseURL }) 
 });
 
 test('sitemap lastmod values are valid ISO dates', async () => {
-  const sitemapPath = path.resolve(__dirname, '..', 'docs', 'sitemap.xml');
+  const sitemapPath = path.resolve(process.cwd(), 'docs', 'sitemap.xml');
   const xml = fs.readFileSync(sitemapPath, 'utf8');
   const matches = [...xml.matchAll(/<lastmod>([^<]*)<\/lastmod>/g)];
 
@@ -119,9 +119,9 @@ test('sitemap lastmod values are valid ISO dates', async () => {
 
 test('post listing dates are present and ISO-formatted', async () => {
   const listingPaths = [
-    path.resolve(__dirname, '..', 'docs', 'posts', 'index.html'),
-    path.resolve(__dirname, '..', 'docs', 'blog', 'index.html'),
-    path.resolve(__dirname, '..', 'docs', 'blog-archive', 'index.html'),
+    path.resolve(process.cwd(), 'docs', 'posts', 'index.html'),
+    path.resolve(process.cwd(), 'docs', 'blog', 'index.html'),
+    path.resolve(process.cwd(), 'docs', 'blog-archive', 'index.html'),
   ];
 
   for (const listingPath of listingPaths) {
@@ -139,7 +139,7 @@ test('post listing dates are present and ISO-formatted', async () => {
 });
 
 test('post pages include non-empty og:article:published_time', async () => {
-  const postsDir = path.resolve(__dirname, '..', 'docs', 'posts');
+  const postsDir = path.resolve(process.cwd(), 'docs', 'posts');
   const postFiles = getFilesRecursively(postsDir, (filePath) => filePath.endsWith('index.html') && !filePath.endsWith(path.join('posts', 'index.html')));
 
   expect(postFiles.length, 'Expected generated post HTML files').toBeGreaterThan(0);
