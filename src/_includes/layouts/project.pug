@@ -4,6 +4,50 @@ include ../project_utils.pug
 //- TODO: add structured markup for SEO
 //- TODO: standardize the process markup, maybe 5 blocks: main, process, recognition, Acknowledgements, next related projects
 
+block append pageScripts
+    //- TODO: instead of manually creating sliders, might be better to 
+    //- rework https://splidejs.com/ for sliders and do a manual lightbox
+    //- Load GLightbox only on project pages and defer work until idle.
+    script.
+        window.addEventListener('load', function () {
+            const hasLightboxContent = document.querySelector('.lightbox, .lightbox-album, .project-slider');
+            if (!hasLightboxContent) {
+                return;
+            }
+
+            function loadGlightbox() {
+                if (!document.getElementById('glightbox-css')) {
+                    const css = document.createElement('link');
+                    css.id = 'glightbox-css';
+                    css.rel = 'stylesheet';
+                    css.href = '/scripts/glightbox/glightbox.min.css';
+                    document.head.appendChild(css);
+                }
+
+                if (window.GLightbox) {
+                    window.dispatchEvent(new Event('glightbox:ready'));
+                    return;
+                }
+
+                if (!document.getElementById('glightbox-js')) {
+                    const js = document.createElement('script');
+                    js.id = 'glightbox-js';
+                    js.src = '/scripts/glightbox/glightbox.min.js';
+                    js.defer = true;
+                    js.onload = function () {
+                        window.dispatchEvent(new Event('glightbox:ready'));
+                    };
+                    document.body.appendChild(js);
+                }
+            }
+
+            if ('requestIdleCallback' in window) {
+                requestIdleCallback(loadGlightbox, { timeout: 2000 });
+            } else {
+                setTimeout(loadGlightbox, 1);
+            }
+        });
+
 block content
     if coverImg
         .grid-1
