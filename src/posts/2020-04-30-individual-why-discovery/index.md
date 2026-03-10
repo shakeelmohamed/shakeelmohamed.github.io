@@ -29,7 +29,8 @@ After my individual WHY discovery session, I came out with a draft of my WHY sta
 
 ## Golden Circle Theory
 
-![Golden Circle Theory](https://simonsinek.com/wp-content/uploads/2019/02/GC_slide-2.jpg)
+<!-- Source: https://simonsinek.com/wp-content/uploads/2019/02/GC_slide-2.jpg -->
+![Golden Circle Theory](GC_slide-2.jpg)
 
 I could try to explain the concept in depth but, there’s no replacement for Simon’s explanation in his original TED talk! The core idea is that we should all start with WHY we do what we do. Our HOWs are our strengths, and the filters we use to decide WHAT we do.
 
