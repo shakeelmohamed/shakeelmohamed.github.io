@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "bun run postcss && concurrently -k \"npm:postcss:w\" \"npm:start\"",
     "start": "bun run postcss && bunx @11ty/eleventy --serve --incremental --input=src --output=docs",
-    "build": "bun run postcss && bunx @11ty/eleventy --input=src --output=docs",
+    "prebuild": "node scripts/build-gate.js --check",
+    "build": "if [ -f .cache/build.skip ]; then echo 'build: no changes detected, skipping'; rm -f .cache/build.skip .cache/build.next.json; else bun run postcss && bunx @11ty/eleventy --input=src --output=docs && node scripts/build-gate.js --commit; fi",
     "posttest": "bunx cspell lint 'docs/**/*.html' --no-progress --no-summary --quiet && alex --html --quiet ./docs/ && echo 'posttest: clean'",
     "test:words": "bunx cspell lint 'docs/**/*.html' --no-progress --no-summary --quiet && bunx alex --html --quiet ./docs/ && echo 'test:words: clean'",
     "test:spec": "bunx playwright test tests/smoke.spec.js --project=chromium",
@@ -16,10 +17,10 @@
     "test": "bun run build && bun run test:spec && bun run test:content && bun run test:compare",
     "postcss": "postcss src/styles.css -o docs/dist/tailwind.css",
     "postcss:w": "postcss -w src/styles.css -o docs/dist/tailwind.css --poll",
-    "clean": "rimraf docs",
+    "clean": "rimraf docs .cache/build.skip .cache/build.next.json .cache/build-fingerprint.json",
     "pretest": "bun run lint:css && bun run lint:pug",
     "lint:css": "stylelint src/**/*.css",
-    "lint:pug": "node lint-pug.js"
+    "lint:pug": "node scripts/lint-pug.js"
   },
   "repository": {
     "type": "git",

@@ -13,3 +13,5 @@ package-lock.json
 /blob-report/
 /playwright/.cache/
 tests/*.spec.js-snapshots/
+
+.cache/
