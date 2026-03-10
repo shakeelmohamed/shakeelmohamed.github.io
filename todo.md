@@ -10,8 +10,9 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 
 ## ASAP
 
-- [ ] optimization: use webp opfor all images, webm for gifs
-- [ ] Replace all avif files with webm
+- [ ] optimization: use webp for all images, webm for gifs
+- [ ] Replace all avif files with webm and .mp4
+- [ ] ditto for jpg/jpegs
 - [ ] use <footer>, etc structured markup; rename newheader, newfooter CSS classes accordingly
 - [ ] resolve rules and tighten up spacing when header comes after a rule; probably remove rule from the header markup if possible; (Started with hr.rule class)
 - [ ] Fix right margin issues on tablet / half-width desktop size
