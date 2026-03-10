@@ -8,15 +8,11 @@ function makeLinks(data) {
     let links = [];
     for (let m of data.media) {
         if (m.length > 0) {
-            // Capitalize only the first letter of the first media type
-            if (links.length === 0) {
-                m = utils.capitalizeFirstLetter(m);
-            }
-            
+            const mediaName = utils.titleCase(m);
             if (data.tags.includes("archive")) {
-                links.push(m);
+                links.push(mediaName);
             } else {
-                links.push(`<a href="/${m.replace(/\s+/g, '-').toLowerCase()}">${m}</a>`);
+                links.push(`<a href="/${mediaName.replace(/\s+/g, '-').toLowerCase()}">${mediaName}</a>`);
                 // TODO: ideally we are matching against existing tags to avoid broken links, worst case write tests for this
                 // let matched; 
                 // data.collections.mediaTypes.find(mediaData => {
@@ -57,7 +53,7 @@ module.exports = {
         //      (e.g.: I could make a "tag" view for projects /media/experimental-typography)
         
         // TODO: can insert an nbsp; before n-1 words to prevent widows... might need that everywhere tho ugh
-        mediaString: data => utils.capitalizeFirstLetter((data.media || []).sort().join(", ")),
+        mediaString: data => utils.titleCase((data.media || []).sort().join(", ")),
         mediaLinks: data => makeLinks(data),
         relatedProjects: data => {
             if (data.collections.portfolio.length === 0 || data.title === "Projects") return;

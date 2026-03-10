@@ -876,6 +876,8 @@ select {
         -moz-column-gap: 2rem;
              column-gap: 2rem;
         row-gap: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 
     .grid-4 {
