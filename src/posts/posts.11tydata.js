@@ -4,7 +4,6 @@ const utils = require('../../utils');
 module.exports = {
     eleventyComputed: {
         pageTitle: data => data.title + " | Shakeel Mohamed — Strategic Brand Designer",
-        // Reformat the date in ISO format
         cleanDate: data => utils.formatDate(data.page.date),
         atomFeedDate: data => utils.formatDateForAtomFeed(data.page.date),
         atomUpdatedDate: data => utils.gitDates(data.page.inputPath).then(dates => utils.formatDateForAtomFeed(dates.modified)),
@@ -15,7 +14,7 @@ module.exports = {
             return !(val.toLowerCase() == "post" || val.toLowerCase() == "featured");
         }).join(", "),
         openGraphImage: data => {
-            return utils.buildOGImageURL(data) || 'https://placehold.co/1200x630';
+            return utils.buildOGImageURL(data);
         }
     }
 };

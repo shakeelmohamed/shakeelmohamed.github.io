@@ -1,0 +1,19 @@
+version: 0.2
+language: en
+ignoreCase: true
+ignorePaths:
+  - node_modules
+  - .idea
+  - .github
+dictionaries:
+  - en_US
+  - softwareTerms
+  - companies
+  - misc
+  - personal
+dictionaryDefinitions:
+  - name: personal
+    path: ./cspell.txt
+files:
+  - docs/**/*.html
+useGitignore: true

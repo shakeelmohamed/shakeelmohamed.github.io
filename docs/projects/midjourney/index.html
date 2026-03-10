@@ -14,6 +14,7 @@
         <meta property="og:type" content="website">
         <meta property="twitter:card" content="summary_large_image">
         <link href="https://shakeelmohamed.com/projects/midjourney/" rel="canonical">
+        <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://shakeelmohamed.com/#person","name":"Shakeel Mohamed","url":"https://shakeelmohamed.com","email":"mailto:hello@shakeel.design","jobTitle":"Strategic Brand Designer","sameAs":["https://linkedin.com/in/shakeelmohamed","https://instagram.com/shakeel.design","https://github.com/shakeelmohamed"]},{"@type":"WebSite","@id":"https://shakeelmohamed.com/#website","url":"https://shakeelmohamed.com","name":"Shakeel Mohamed","description":"My take on reimagining the visual language for Midjourney.","inLanguage":"en"}]}</script>
         <link rel="stylesheet" href="https://use.typekit.net/rgm5cfh.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/material-icons@1.13.12/iconfont/material-icons.min.css">
         <link rel="stylesheet" href="/dist/tailwind.css">
@@ -26,11 +27,11 @@
     </head>
     <body class="bg-white">
         <div class="mobile-only mobileHeader">
-            <div class="grid-2" style="flex-direction: row; justify-content: space-between;">
+            <div class="grid-2 flex-row justify-between">
                 <div>
                     <div class="mobileBranding"><a class="logo-wrapper" href="/"><img src="/img/Shakeel_Mohamed_wordmark.svg" alt="Shakeel Mohamed wordmark logo set in the Mindful Roman typeface which he designed"/></a><br/><strong><a href="mailto:hello@shakeel.design" target="_blank">hello@shakeel.design</a></strong></div>
                 </div>
-                <div class="hamburgerIcon"><span class="material-icons" style="font-size: 2rem;">menu</span></div>
+                <div class="hamburgerIcon"><span class="material-icons text-2xl">menu</span></div>
             </div>
             <div class="menuItems">
                 <h2><a href="/">Work</a></h2>
@@ -47,16 +48,9 @@
                     <div class="logo-wrapper"><a href="/"><img class="logosvg" src="/img/Shakeel_Mohamed_wordmark.svg" alt="Shakeel Mohamed wordmark logo set in the Mindful Roman typeface which he designed"/></a></div>
                 </div>
                 <div></div>
-                <div>
-                    <div class="pb-4">
+                <div class="col-start-3 col-end-5">
+                    <div class="pb-4 flex justify-between items-baseline">
                         <p><strong>Strategic Brand Designer</strong></p>
-                    </div>
-                    <div>
-                        <p><strong><a href="/projects" style="margin-right: 4rem;"><span class="material-icons headerIcon">public</span>Work</a>&nbsp;<a href="/labyrinth"><span class="material-icons headerIcon">swap_calls</span>Experiments</a></strong></p>
-                    </div>
-                </div>
-                <div class="deskright-mobileleft">
-                    <div class="pb-4">
                         <p><strong><span class="mailto">
                                     <script type="text/javascript">
                                         function gen_mail_to_link(lhs, rhs, subject, text) {
@@ -66,20 +60,23 @@
                                             document.write(generated);
                                         }
                                         gen_mail_to_link("hello", "shakeel.design", "", "")
+                                        
                                     </script></span></strong></p>
                     </div>
-                    <div>
+                    <div class="flex justify-between items-baseline">
+                        <p><strong><a href="/projects">Work</a></strong></p>
+                        <p><strong><a href="/labyrinth">Experiments</a></strong></p>
                         <p><strong><a href="/about">About</a></strong></p>
                     </div>
                 </div>
             </div>
-            <hr style="margin-bottom: 0.5rem;"/>
+            <hr class="mb-2"/>
         </div>
         <main class="mb-4">
             <div class="grid-1">
                 <h1 class="pb-0">Midjourney Rebrand</h1>
                 <div class="project-meta">
-                    <p style="color: #999999"><a href="/branding">Branding</a>, <a href="/environmental">environmental</a>, <a href="/motion">motion</a>, <a href="/strategy">strategy</a></p>
+                    <p class="text-gray-meta"><a href="/branding">Branding</a>, <a href="/environmental">environmental</a>, <a href="/motion">motion</a>, <a href="/strategy">strategy</a></p>
                 </div>
             </div>
             <div class="grid-2">
@@ -100,20 +97,36 @@
     </div>
 </div>
 <div class="grid-1">
-    <div class="project-content"><img class="lightbox" src="./img/midjourney-003.png" alt=""/>
+    <div class="project-content">
+        <picture>
+            <source srcset="./img/midjourney-003.avif" type="image/avif"/>
+            <source srcset="./img/midjourney-003.webp" type="image/webp"/><img class="lightbox" src="./img/midjourney-003.png" alt=""/>
+        </picture>
         <p class="caption">The Sail. Through my extensive identity exploration, this was the simplest abstraction of their sailboat logo.</p>
     </div>
 </div>
 <div class="grid-2">
-    <div class="project-content"><img class="lightbox" src="./img/midjourney-007.png" alt=""/>
+    <div class="project-content">
+        <picture>
+            <source srcset="./img/midjourney-007.avif" type="image/avif"/>
+            <source srcset="./img/midjourney-007.webp" type="image/webp"/><img class="lightbox" src="./img/midjourney-007.png" alt=""/>
+        </picture>
         <p class="caption">The brand colors emerged from light refraction, symbolizing expansive creativity possible with their&nbsp;products.</p>
     </div>
-    <div class="project-content"><img class="lightbox" src="./img/midjourney-008.png" alt=""/>
+    <div class="project-content">
+        <picture>
+            <source srcset="./img/midjourney-008.avif" type="image/avif"/>
+            <source srcset="./img/midjourney-008.webp" type="image/webp"/><img class="lightbox" src="./img/midjourney-008.png" alt=""/>
+        </picture>
         <p class="caption">These colors aim to connect with a broader audience across cultures, ages, and industries. The primary color palette helps Midjourney stand out from the majority of tech companies.</p>
     </div>
 </div>
 <div class="grid-1">
-    <div class="project-content"><img class="lightbox" src="./img/midjourney-009.png" alt=""/>
+    <div class="project-content">
+        <picture>
+            <source srcset="./img/midjourney-009.avif" type="image/avif"/>
+            <source srcset="./img/midjourney-009.webp" type="image/webp"/><img class="lightbox" src="./img/midjourney-009.png" alt=""/>
+        </picture>
         <p class="caption">Logo family system expressed through all brand colors: vertical lockup, icon, wordmark.</p>
     </div>
 </div>
@@ -129,34 +142,66 @@
     </div>
 </div>
 <div class="grid-1">
-    <div class="project-content"><img class="lightbox" src="./img/midjourney-013.png" alt=""/>
+    <div class="project-content">
+        <picture>
+            <source srcset="./img/midjourney-013.avif" type="image/avif"/>
+            <source srcset="./img/midjourney-013.webp" type="image/webp"/><img class="lightbox" src="./img/midjourney-013.png" alt=""/>
+        </picture>
         <p class="caption">Though Midjourney has been a remote company, I wanted to imagine what their first HQ office space might look like. The HQ would feature a brushed stainless steel sculpture of the Midjourney sail outside.</p>
     </div>
 </div>
 <div class="grid-1">
     <div class="project-slider">
-        <div class="project-content"><img src="./img/midjourney-014.png" alt=""/>
+        <div class="project-content">
+            <picture>
+                <source srcset="./img/midjourney-014.avif" type="image/avif"/>
+                <source srcset="./img/midjourney-014.webp" type="image/webp"/><img src="./img/midjourney-014.png" alt=""/>
+            </picture>
             <p class="caption">I also envisioned Midjourney launching a user conference called Midjourney Navigate, to be held in San Francisco.</p>
         </div>
-        <div class="project-content"><img src="./img/midjourney-017.png" alt=""/>
+        <div class="project-content">
+            <picture>
+                <source srcset="./img/midjourney-017.avif" type="image/avif"/>
+                <source srcset="./img/midjourney-017.webp" type="image/webp"/><img src="./img/midjourney-017.png" alt=""/>
+            </picture>
             <p class="caption">I also envisioned Midjourney launching a user conference called Midjourney Navigate, to be held in San Francisco.</p>
         </div>
-        <div class="project-content"><img src="./img/midjourney-018.png" alt=""/>
+        <div class="project-content">
+            <picture>
+                <source srcset="./img/midjourney-018.avif" type="image/avif"/>
+                <source srcset="./img/midjourney-018.webp" type="image/webp"/><img src="./img/midjourney-018.png" alt=""/>
+            </picture>
             <p class="caption">I also envisioned Midjourney launching a user conference called Midjourney Navigate, to be held in San Francisco.</p>
         </div>
-        <div class="project-content"><img src="./img/midjourney-015.png" alt=""/>
+        <div class="project-content">
+            <picture>
+                <source srcset="./img/midjourney-015.avif" type="image/avif"/>
+                <source srcset="./img/midjourney-015.webp" type="image/webp"/><img src="./img/midjourney-015.png" alt=""/>
+            </picture>
             <p class="caption">I also envisioned Midjourney launching a user conference called Midjourney Navigate, to be held in San Francisco.</p>
         </div>
-        <div class="project-content"><img src="./img/midjourney-016.png" alt=""/>
+        <div class="project-content">
+            <picture>
+                <source srcset="./img/midjourney-016.avif" type="image/avif"/>
+                <source srcset="./img/midjourney-016.webp" type="image/webp"/><img src="./img/midjourney-016.png" alt=""/>
+            </picture>
             <p class="caption">I also envisioned Midjourney launching a user conference called Midjourney Navigate, to be held in San Francisco.</p>
         </div>
     </div>
 </div>
 <div class="grid-2">
-    <div class="project-content"><img class="lightbox" src="./img/MJ_digital_signage.png" alt=""/>
+    <div class="project-content">
+        <picture>
+            <source srcset="./img/MJ_digital_signage.avif" type="image/avif"/>
+            <source srcset="./img/MJ_digital_signage.webp" type="image/webp"/><img class="lightbox" src="./img/MJ_digital_signage.png" alt=""/>
+        </picture>
         <p class="caption">Conference wayfinding on digital LED boards.</p>
     </div>
-    <div class="project-content"><img class="lightbox" src="./img/MJ_egd_wall_render.png" alt=""/>
+    <div class="project-content">
+        <picture>
+            <source srcset="./img/MJ_egd_wall_render.avif" type="image/avif"/>
+            <source srcset="./img/MJ_egd_wall_render.webp" type="image/webp"/><img class="lightbox" src="./img/MJ_egd_wall_render.png" alt=""/>
+        </picture>
         <p class="caption">Sample entry wall environmental graphics.</p>
     </div>
 </div>
@@ -164,33 +209,61 @@
     <div class="project-content"><img class="lightbox" src="./img/Midjourney_installation_loading.gif" alt=""/>
         <p class="caption">An interactive installation the conference in a shape inspired by the sail symbol. With a height of 10ft, the display creates an immersive viewing&nbsp;experience.</p>
     </div>
-    <div class="project-content"><img class="lightbox" src="./img/Midjourney_installation_generating.png" alt=""/>
+    <div class="project-content">
+        <picture>
+            <source srcset="./img/Midjourney_installation_generating.avif" type="image/avif"/>
+            <source srcset="./img/Midjourney_installation_generating.webp" type="image/webp"/><img class="lightbox" src="./img/Midjourney_installation_generating.png" alt=""/>
+        </picture>
         <p class="caption">Conference attendees could use microphones surrounding the installation to speak generative AI prompts in real-time.</p>
     </div>
 </div>
 <hr/>
 <h2>Process</h2><br/>
 <div class="grid-1">
-    <div class="project-content"><img class="lightbox" src="./img/midjourney-002.png" alt=""/>
+    <div class="project-content">
+        <picture>
+            <source srcset="./img/midjourney-002.avif" type="image/avif"/>
+            <source srcset="./img/midjourney-002.webp" type="image/webp"/><img class="lightbox" src="./img/midjourney-002.png" alt=""/>
+        </picture>
         <p class="caption">An exhaustive identity exploration of logo refinement with paper and digital sketches.</p>
     </div>
 </div>
 <div class="grid-1">
-    <div class="project-content"><img class="lightbox" src="./img/MJ_installation_sketch.png" alt=""/>
+    <div class="project-content">
+        <picture>
+            <source srcset="./img/MJ_installation_sketch.avif" type="image/avif"/>
+            <source srcset="./img/MJ_installation_sketch.webp" type="image/webp"/><img class="lightbox" src="./img/MJ_installation_sketch.png" alt=""/>
+        </picture>
         <p class="caption">Initial installation sketching and prototyping with physical materials.</p>
     </div>
-    <div class="project-content"><img class="lightbox" src="./img/Midjourney - blender.png" alt=""/>
+    <div class="project-content">
+        <picture>
+            <source srcset="./img/Midjourney%20-%20blender.avif" type="image/avif"/>
+            <source srcset="./img/Midjourney%20-%20blender.webp" type="image/webp"/><img class="lightbox" src="./img/Midjourney%20-%20blender.png" alt=""/>
+        </picture>
         <p class="caption">Modeling and UV mapping workflow in Blender.</p>
     </div>
 </div>
 <div class="grid-3">
-    <div class="project-content"><img class="lightbox" src="./img/MJ_egd_walls.png" alt=""/>
+    <div class="project-content">
+        <picture>
+            <source srcset="./img/MJ_egd_walls.avif" type="image/avif"/>
+            <source srcset="./img/MJ_egd_walls.webp" type="image/webp"/><img class="lightbox" src="./img/MJ_egd_walls.png" alt=""/>
+        </picture>
         <p class="caption">Elevation diagrams of sample environmental wall graphics.</p>
     </div>
-    <div class="project-content"><img class="lightbox" src="./img/MJ_digital_signage_diagram.png" alt=""/>
+    <div class="project-content">
+        <picture>
+            <source srcset="./img/MJ_digital_signage_diagram.avif" type="image/avif"/>
+            <source srcset="./img/MJ_digital_signage_diagram.webp" type="image/webp"/><img class="lightbox" src="./img/MJ_digital_signage_diagram.png" alt=""/>
+        </picture>
         <p class="caption">Elevation diagrams of digital LED signboards.</p>
     </div>
-    <div class="project-content"><img class="lightbox" src="./img/MJ_installation_diagram.png" alt=""/>
+    <div class="project-content">
+        <picture>
+            <source srcset="./img/MJ_installation_diagram.avif" type="image/avif"/>
+            <source srcset="./img/MJ_installation_diagram.webp" type="image/webp"/><img class="lightbox" src="./img/MJ_installation_diagram.png" alt=""/>
+        </picture>
         <p class="caption">Elevation diagrams of the interactive installation.</p>
     </div>
 </div>
@@ -204,18 +277,18 @@
                 <hr>
                 <div class="grid-2 keepDesktop">
                     <div><a href="/projects/typo-mexico-city/">
-                            <p class="bold" style="text-align:left;"><span class="material-icons" style="vertical-align: text-bottom;">arrow_back</span>&nbsp; TYPO Mexico City Conference Identity
+                            <p class="bold text-left"><span class="material-icons align-text-bottom">arrow_back</span>&nbsp; TYPO Mexico City Conference Identity
                             </p>
-                            <p class="caption desktop-only" style="text-align:left;">Branding, motion, print</p></a></div>
+                            <p class="caption desktop-only text-left">Branding, motion, print</p></a></div>
                     <div><a href="/projects/mark-rothko/">
-                            <p class="bold" style="text-align:right;">Mark Rothko Documentary Campaign &nbsp;<span class="material-icons" style="vertical-align: text-bottom;">arrow_forward</span>
+                            <p class="bold text-right">Mark Rothko Documentary Campaign &nbsp;<span class="material-icons align-text-bottom">arrow_forward</span>
                             </p>
-                            <p class="caption desktop-only" style="text-align:right;">Book design, branding, print, research</p></a></div>
+                            <p class="caption desktop-only text-right">Book design, branding, print, research</p></a></div>
                 </div>
             </div>
         </main>
-        <hr style="margin-bottom:0.5 !important;"/>
-        <div class="newfooter grid-4" style="padding-bottom: 0 !important;">
+        <hr class="mb-0-5-important"/>
+        <div class="newfooter grid-4 pb-0">
             <div><br class="mobile-only"/><a class="logo-wrapper" href="/">
                     <script>document.write("&copy; " + new Date().getFullYear() + " Shakeel Mohamed.")</script></a></div>
             <div><a href="https://instagram.com/shakeel.design" target="_blank">Instagram</a></div>
@@ -229,6 +302,7 @@
                                 document.write(generated);
                             }
                             gen_mail_to_link("hello", "shakeel.design", "", "")
+                            
                         </script></span></a></div>
         </div>
     </body>
@@ -240,7 +314,46 @@
         gtag('config', 'UA-36907845-2');
         
     </script>
-    <link rel="stylesheet" href="/scripts/glightbox/glightbox.min.css">
-    <script src="/scripts/glightbox/glightbox.min.js"></script>
-    <script src="/scripts/main.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            const hasLightboxContent = document.querySelector('.lightbox, .lightbox-album, .project-slider');
+            if (!hasLightboxContent) {
+                return;
+            }
+        
+            function loadGlightbox() {
+                if (!document.getElementById('glightbox-css')) {
+                    const css = document.createElement('link');
+                    css.id = 'glightbox-css';
+                    css.rel = 'stylesheet';
+                    css.href = '/scripts/glightbox/glightbox.min.css';
+                    document.head.appendChild(css);
+                }
+        
+                if (window.GLightbox) {
+                    window.dispatchEvent(new Event('glightbox:ready'));
+                    return;
+                }
+        
+                if (!document.getElementById('glightbox-js')) {
+                    const js = document.createElement('script');
+                    js.id = 'glightbox-js';
+                    js.src = '/scripts/glightbox/glightbox.min.js';
+                    js.defer = true;
+                    js.onload = function () {
+                        window.dispatchEvent(new Event('glightbox:ready'));
+                    };
+                    document.body.appendChild(js);
+                }
+            }
+        
+            if ('requestIdleCallback' in window) {
+                requestIdleCallback(loadGlightbox, { timeout: 2000 });
+            } else {
+                setTimeout(loadGlightbox, 1);
+            }
+        });
+        
+    </script>
+    <script defer src="/scripts/main.js"></script>
 </html>

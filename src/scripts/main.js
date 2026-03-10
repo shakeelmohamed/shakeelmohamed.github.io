@@ -3,7 +3,12 @@
 let menuOpen = false;
 
 function makeMenu() {
-    document.querySelector(".hamburgerIcon").addEventListener('click', function (e) {
+    const hamburgerIcon = document.querySelector('.hamburgerIcon');
+    if (!hamburgerIcon) {
+        return;
+    }
+
+    hamburgerIcon.addEventListener('click', function (e) {
         e.preventDefault();
 
         let mobileBranding = document.querySelector(".mobileBranding");
@@ -81,8 +86,17 @@ function makeGallery(selector) {
 
 let lightbox;
 let lightboxAlbum;
+let glightboxInitialized = false;
 
 function lights() {
+    if (!window.GLightbox) {
+        return;
+    }
+
+    if (!document.querySelector('.lightbox') && !document.querySelector('.lightbox-album')) {
+        return;
+    }
+
     lightbox = makeLightbox(".lightbox");
 
     lightboxAlbum = makeGallery('.lightbox-album > img');
@@ -118,6 +132,7 @@ function fullPath(el) {
 
 let carousels = [];
 let carouselGalleries = [];
+let carouselTimer = null;
 
 /*
 TODO: make this a class, no reason not to
@@ -186,24 +201,50 @@ function makeCarousel(selector) {
     carousels.push(newCarousel);
 }
 
-setInterval(function () {
-    for (let i = 0; i < carousels.length; i++) {
-        carousels[i].next();
+function startCarouselLoop() {
+    if (carouselTimer || carousels.length === 0) {
+        return;
     }
-}, 2000);
+
+    carouselTimer = setInterval(function () {
+        for (let i = 0; i < carousels.length; i++) {
+            carousels[i].next();
+        }
+    }, 2000);
+}
 
 
 function makeSliders() {
+    if (!window.GLightbox) {
+        return;
+    }
+
     let sliders = document.querySelectorAll(".project-slider");
     for (let i = 0; i < sliders.length; i++) {
         makeCarousel(sliders[i]);
     }
+
+    startCarouselLoop();
+}
+
+function initProjectLightboxFeatures() {
+    if (glightboxInitialized || !window.GLightbox) {
+        return;
+    }
+
+    if (!document.querySelector('.lightbox, .lightbox-album, .project-slider')) {
+        return;
+    }
+
+    lights();
+    makeSliders();
+    glightboxInitialized = true;
 }
 
 function init() {
-    lights();
     makeMenu();
-    makeSliders();
+    initProjectLightboxFeatures();
 }
 
 window.addEventListener('load', init);
+window.addEventListener('glightbox:ready', initProjectLightboxFeatures);

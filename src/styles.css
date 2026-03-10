@@ -19,53 +19,6 @@
         @apply p-8 overflow-x-hidden overscroll-y-none min-h-screen flex flex-col relative;
     }
 
-    /* FontSampler */
-    [data-fsjs="alignment"] {
-        display: flex;
-    }
-
-    .fsjs-label-text {
-        font-weight: 700;
-    }
-
-    .fsjs-skin > .fsjs-wrapper {
-        column-gap: 2rem;
-        row-gap: 1rem;
-    }
-
-    .fsjs-block {
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-    .fontSampler, .fsjs-block-tester {
-        margin: 1rem 0 !important;
-    }
-    .fsjs-button-selected {
-        color: white !important;
-        background-color: black !important;
-    }
-    .fsjs-block-type-buttongroup::nth-child(2) {
-        margin-top: 0.25rem !important;
-    }
-
-    /* Make the sliders more usable */
-    /* TODO: test cross-platform */
-    .fsjs-skin .fsjs-block-type-slider [type='range']::-webkit-slider-thumb {
-        height: 1rem !important;
-        width: 1rem !important;
-        margin-top: -0.5rem !important;
-    }
-    .fsjs-skin .fsjs-block-type-slider [type='range']::-moz-range-thumb {
-        height: 1rem !important;
-        width: 1rem !important;
-        margin-top: -0.5rem !important;
-    }
-    .fsjs-skin .fsjs-block-type-slider [type='range']::-ms-thumb {
-        height: 1rem !important;
-        width: 1rem !important;
-        margin-top: -0.5rem !important;
-    }
-
     /* Lightbox hacks     */
     .gslide-description {
         display: none !important;
@@ -138,6 +91,7 @@
         padding: 0px;
     }
 
+
     .content img {
         float: none;
         margin-bottom: 0rem;
@@ -159,6 +113,12 @@
 
     .logosvg {
         height: 3.5rem;
+    }
+
+    /* Keep desktop header logo size stable even if class names change. */
+    .newheader .logo-wrapper img {
+        height: 3.5rem;
+        width: auto;
     }
 
     .newheader {
@@ -193,6 +153,7 @@
     .mobile-only {
         display: none;
     }
+    
     .desktop-only {
         display: block;
     }
@@ -238,6 +199,8 @@
         grid-template-columns: repeat(3, 1fr);
         column-gap: 2rem;
         row-gap: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 
     .grid-4 {
@@ -245,6 +208,10 @@
         grid-template-columns: repeat(4, 1fr);
         column-gap: 2rem;
         row-gap: 1rem;
+    }
+
+    address {
+        font-style: normal;
     }
 
     h2 {
@@ -526,6 +493,11 @@
         border-style: inset;
     }
 
+    /* Slightly tighter margins */
+    hr.rule {
+        @apply my-2;
+    }
+
     input {
 /* TODO: figure out why this border class is not compiling in */
 /*         @apply rounded border-gray-300; */
@@ -598,7 +570,80 @@
         @apply lg:text-8xl text-4xl;
         line-height: normal;
     }
+
+    /* Inline style migrations */
+    .bg-cream {
+        background-color: #e9e8dd;
+    }
+
+    .text-gray-meta {
+        color: #999999;
+    }
+
+    .bg-bisque {
+        background-color: #D3CFC6;
+    }
+
+    .text-white-important {
+        color: white !important;
+    }
+
 }
+
+
+/*********************************/
+/* Styles for fontSampler        */
+/*********************************/
+[data-fsjs="alignment"] {
+    display: flex;
+}
+
+.fsjs-label {
+    padding-bottom: 1rem;
+}
+
+.fsjs-label-text {
+    font-weight: 700;
+}
+
+.fsjs-skin > .fsjs-wrapper {
+    column-gap: 2rem;
+    row-gap: 1rem;
+}
+
+.fsjs-block {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.fontSampler, .fsjs-block-tester {
+    margin: 1rem 0 !important;
+}
+.fsjs-button-selected {
+    color: white !important;
+    background-color: black !important;
+}
+.fsjs-block-type-buttongroup::nth-child(2) {
+    margin-top: 0.25rem !important;
+}
+
+/* Make the sliders more usable */
+/* TODO: test cross-platform */
+.fsjs-skin .fsjs-block-type-slider [type='range']::-webkit-slider-thumb {
+    height: 1rem !important;
+    width: 1rem !important;
+    margin-top: -0.5rem !important;
+}
+.fsjs-skin .fsjs-block-type-slider [type='range']::-moz-range-thumb {
+    height: 1rem !important;
+    width: 1rem !important;
+    margin-top: -0.5rem !important;
+}
+.fsjs-skin .fsjs-block-type-slider [type='range']::-ms-thumb {
+    height: 1rem !important;
+    width: 1rem !important;
+    margin-top: -0.5rem !important;
+}
+
 
 /*********************************/
 /* Styles lifted from convertkit */

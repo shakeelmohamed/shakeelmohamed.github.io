@@ -6,16 +6,16 @@ eleventyExcludeFromCollections: true
 ---
 
 extends _includes/layouts/base.pug
-include _includes/molecules.pug
+include _includes/blocks.pug
 
 block content
 
     div
-        h1(style="text-align: center;") Oh no, that page doesn’t exist!
+        h1.text-center Oh no, that page doesn’t exist!
         //- TODO: replace this gif with a stitch of these, or something more related to my name
         //- - https://giphy.com/gifs/nba-basketball-shaq-shaquille-oneal-3oGNDyldXaMAzqks80
         //- - https://giphy.com/gifs/hbo-whats-my-name-documentary-hrvHU8XsoGufEvcDr3
-        img(src="/img/kendrick-lamar-super-bowl.gif" style="max-width: 450px; margin: 0 auto;")
+        img(src="/img/kendrick-lamar-super-bowl.gif" class="max-w-[450px] mx-auto")
 
     script.
         window.dataLayer = window.dataLayer || [];

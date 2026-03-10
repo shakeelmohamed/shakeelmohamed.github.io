@@ -1,4 +1,4 @@
-include ../organisms.pug
+include ../blocks.pug
 
 if !pageTitle
     if title
@@ -43,6 +43,35 @@ html(lang="en")
         else
             link(href=metadata.baseurl + page.url, rel="canonical")
 
+        -
+            var sameAsProfiles = [
+                metadata.social.LinkedIn,
+                metadata.social.Instagram,
+                metadata.social_unused && metadata.social_unused.GitHub
+            ].filter(Boolean);
+            var personSchema = {
+                '@type': 'Person',
+                '@id': metadata.baseurl + '/#person',
+                name: metadata.author.name,
+                url: metadata.baseurl,
+                email: 'mailto:' + metadata.author.email,
+                jobTitle: 'Strategic Brand Designer',
+                sameAs: sameAsProfiles
+            };
+            var websiteSchema = {
+                '@type': 'WebSite',
+                '@id': metadata.baseurl + '/#website',
+                url: metadata.baseurl,
+                name: metadata.author.name,
+                description: description,
+                inLanguage: 'en'
+            };
+            var structuredData = {
+                '@context': 'https://schema.org',
+                '@graph': [personSchema, websiteSchema]
+            };
+        script(type="application/ld+json")!= JSON.stringify(structuredData)
+
         link(rel="stylesheet" href="https://use.typekit.net/rgm5cfh.css")
         link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/material-icons@1.13.12/iconfont/material-icons.min.css")
         link(rel="stylesheet" href="/dist/tailwind.css")
@@ -73,8 +102,6 @@ html(lang="en")
         gtag('js', new Date());
         gtag('config', 'UA-36907845-2');
 
-    //- TODO: instead of manually creating sliders, might be better to 
-    //- rework https://splidejs.com/ for sliders and do a manual lightbox
-    link(rel="stylesheet" href="/scripts/glightbox/glightbox.min.css")
-    script(src="/scripts/glightbox/glightbox.min.js")
-    script(src="/scripts/main.js")
+    block pageScripts
+
+    script(defer src="/scripts/main.js")

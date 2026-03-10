@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>Shakeel Mohamed’s blog posts</title>
-    <subtitle>Recent blog posts from Shakeel Mohamed, visual designer based in the greater Seattle area</subtitle>
+    <subtitle>Recent blog posts from Shakeel Mohamed, strategic brand designer based in Los Angeles</subtitle>
     <link href="https://shakeelmohamed.com/feed.xml" rel="self"/>
     <link href="https://shakeelmohamed.com"/>
     <updated>2022-05-23T00:00:00Z</updated>
@@ -14,7 +14,7 @@
         <title>One Year Can Change Your Whole Life (Accepted to ArtCenter)</title>
         <link href="https://shakeelmohamed.com/posts/2022-05-23-one-year-can-change-your-whole-life/"/>
         <published>2022-05-23T00:00:00Z</published>
-        <updated>2022-10-20T06:02:09Z</updated>
+        <updated>2026-03-06T10:54:54Z</updated>
         <id>https://shakeelmohamed.com/posts/2022-05-23-one-year-can-change-your-whole-life/</id>
         <summary>type="text" For me, a career in design and creativity is a worthy lifelong pursuit.</summary>
     </entry>
@@ -24,7 +24,7 @@
         <published>2021-09-08T00:00:00Z</published>
         <updated>2023-07-01T08:23:59Z</updated>
         <id>https://shakeelmohamed.com/posts/2021-09-08-my-new-hustle-manifesto/</id>
-        <summary>type="text" After a great deal of reflection during the pandemic, I‘ve begun to rethink how I want work.</summary>
+        <summary>type="text" After a great deal of reflection during the pandemic, I‘ve begun to rethink how I want to work.</summary>
     </entry>
     <entry>
         <title>Powerful Lessons From Splunk I’ll Never Forget</title>
@@ -86,7 +86,7 @@
         <title>Finding Your Individual Why Statement (Golden Circle Theory, part 1)</title>
         <link href="https://shakeelmohamed.com/posts/2020-04-30-individual-why-discovery/"/>
         <published>2020-04-30T00:00:00Z</published>
-        <updated>2023-06-30T08:11:27Z</updated>
+        <updated>2026-03-10T11:36:03Z</updated>
         <id>https://shakeelmohamed.com/posts/2020-04-30-individual-why-discovery/</id>
         <summary>type="text" I’ve been intrigued by Simon Sinek’s work for many years. I knew his Golden Circle Theory is an incredible idea but, I didn’t know how to apply it in my daily life.</summary>
     </entry>
@@ -126,7 +126,7 @@
         <title>Reflecting on Maintainer Burden Group Therapy @ #NodeInteractive</title>
         <link href="https://shakeelmohamed.com/posts/2017-10-26-reflecting-on-maintainer-burden-group-therapy-nodeinteractive/"/>
         <published>2017-10-26T00:00:00Z</published>
-        <updated>2023-07-11T08:08:02Z</updated>
+        <updated>2026-03-06T10:54:54Z</updated>
         <id>https://shakeelmohamed.com/posts/2017-10-26-reflecting-on-maintainer-burden-group-therapy-nodeinteractive/</id>
         <summary>type="text" When your group discussion ends up on YouTube… you might as well write a blog post about it!</summary>
     </entry>

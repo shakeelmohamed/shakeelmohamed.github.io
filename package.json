@@ -4,42 +4,57 @@
   "description": "My personal website",
   "private": true,
   "scripts": {
-    "dev": "concurrently -k \"npm:start\" \"npm:postcss:w\"",
-    "start": "npm run-script postcss && npx @11ty/eleventy --serve --incremental --input=src --output=docs",
-    "build": "npx @11ty/eleventy --input=src --output=docs && npm run-script postcss",
-    "posttest": "npx cspell 'docs/**/*.html' && alex --html ./docs/",
-    "test": "npx playwright test",
+    "dev": "concurrently -k \"npm:postcss:w\" \"npm:start\"",
+    "start": "bunx @11ty/eleventy --serve --incremental --input=src --output=docs",
+    "build": "node scripts/build.js",
+    "optimize": "node scripts/optimize.js",
+    "posttest": "bunx cspell lint 'docs/**/*.html' --no-progress --no-summary --quiet && alex --html --quiet ./docs/ && echo 'posttest: clean'",
+    "test:words": "bunx cspell lint 'docs/**/*.html' --no-progress --no-summary --quiet && bunx alex --html --quiet ./docs/ && echo 'test:words: clean'",
+    "test:smoke": "bunx playwright test tests/smoke --project=chromium",
+    "test:content": "bunx playwright test tests/visual --project=chromium",
+    "test:update": "bunx playwright test tests/visual --project=chromium --update-snapshots",
+    "test:compare": "bunx playwright test tests/live-comparison.spec.js --project=chromium --reporter=line,html || true",
+    "test": "bun run build && bun run test:smoke && bun run test:content && bun run test:compare",
     "postcss": "postcss src/styles.css -o docs/dist/tailwind.css",
     "postcss:w": "postcss -w src/styles.css -o docs/dist/tailwind.css --poll",
-    "clean": "rimraf docs"
+    "clean": "rimraf docs/ .cache/ test-results/",
+    "pretest": "bun run lint:css && bun run lint:pug",
+    "lint:css": "stylelint src/**/*.css",
+    "lint:pug": "node scripts/lint-pug.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shakeelmohamed/beta.git"
+    "url": "git+https://github.com/shakeelmohamed/shakeelmohamed.github.io.git"
   },
   "author": "Shakeel Mohamed<iam@shakeel.xyz>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/shakeelmohamed/beta/issues"
+    "url": "https://github.com/shakeelmohamed/shakeelmohamed.github.io/issues"
   },
-  "homepage": "https://github.com/shakeelmohamed/beta#readme",
+  "homepage": "https://github.com/shakeelmohamed/shakeelmohamed.github.io#readme",
+  "dependencies": {
+    "bun": "^1.3.10"
+  },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
-    "@playwright/test": "^1.54.2",
-    "@tailwindcss/forms": "^0.4.0",
-    "@tailwindcss/typography": "^0.5.2",
-    "@types/node": "^24.2.0",
-    "alex": "^11.0.0",
-    "autoprefixer": "^10.4.2",
-    "concurrently": "^7.2.2",
-    "cspell": "^9.2.0",
+    "@11ty/eleventy-img": "^6.0.4",
+    "@playwright/test": "^1.58.2",
+    "@tailwindcss/forms": "^0.4.1",
+    "@tailwindcss/typography": "^0.5.19",
+    "alex": "^11.0.1",
+    "autoprefixer": "^10.4.27",
+    "concurrently": "^7.6.0",
+    "cspell": "^9.7.0",
     "git-date-extractor": "^4.0.1",
     "jstransformer-markdown-it": "^3.0.0",
-    "markdown-it": "^13.0.0",
-    "postcss": "^8.4.49",
+    "markdown-it": "^14.1.1",
+    "postcss": "^8.5.8",
     "postcss-cli": "^9.1.0",
-    "rimraf": "^6.0.1",
-    "tailwindcss": "^3.1.3",
+    "rimraf": "^6.1.3",
+    "stylelint": "^17.4.0",
+    "stylelint-config-recess-order": "^7.6.1",
+    "stylelint-config-standard": "^40.0.0",
+    "tailwindcss": "^3.4.19",
     "tailwindcss-debug-screens": "^2.2.1"
   }
 }

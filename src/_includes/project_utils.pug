@@ -8,6 +8,23 @@ mixin caption(cap)
     if cap
         p.caption !{cap}
 
+mixin optimizedImage(url, alt, className)
+    - var safeUrl = url || '';
+    - var isRaster = /\.(png|jpe?g)$/i.test(safeUrl);
+    - var avifUrl = isRaster ? safeUrl.replace(/\.(png|jpe?g)$/i, '.avif') : '';
+    - var webpUrl = isRaster ? safeUrl.replace(/\.(png|jpe?g)$/i, '.webp') : '';
+    - var encodedUrl = safeUrl ? encodeURI(safeUrl) : '';
+    - var encodedAvifUrl = avifUrl ? encodeURI(avifUrl) : '';
+    - var encodedWebpUrl = webpUrl ? encodeURI(webpUrl) : '';
+
+    if isRaster
+        picture
+            source(srcset=encodedAvifUrl, type='image/avif')
+            source(srcset=encodedWebpUrl, type='image/webp')
+            img(class=className, src=encodedUrl, alt=alt)
+    else
+        img(class=className, src=encodedUrl, alt=alt)
+
 mixin portfolioImg(url, alt, cap)
     //- TODO: think about lightbox behavior, do I want a full gallery?
     //- what is the behavior for single images? need a unique id for each then...
@@ -16,14 +33,13 @@ mixin portfolioImg(url, alt, cap)
     //- 
     //- Can do something similar to how sliders work w/ fullpath()
     
-    if url
-        .project-content
-            img.lightbox(src=url, alt=alt)
-            +caption(cap)
+    .project-content
+        +optimizedImage(url, alt, 'lightbox')
+        +caption(cap)
 
 mixin imgForSlider(url, alt, cap)
     .project-content
-        img(src=url, alt=alt)
+        +optimizedImage(url, alt, '')
         +caption(cap)
 
 mixin slider()
@@ -59,25 +75,28 @@ mixin video(url, cap, autoplay=false)
 mixin fontTesterImports()
     <script type="text/javascript" src="/scripts/fontsampler/fontsampler.min.js"></script>
     <script src="/scripts/fontsampler/fontsampler-skin.js"></script>
+    //- TODO: temporary patch for mobile to update values ondrag instead of onrelease
+    <script src="/scripts/fontsampler/fontsampler-patch.js"></script>
     <link rel="stylesheet" href="/scripts/fontsampler/fontsampler-skin.min.css">
 
 //- mixin fontTester()
 //-     
 
+//- TODO: mobile wrap issues here
 mixin projectBreadcrumb(proj, direction)
     - var align = direction == "Next" ? "right" : "left";
     - var arrow_symbol = direction == "Next" ? "arrow_forward" : "arrow_back";
 
     div
         a(href=proj.url)
-            p.bold(style="text-align:"+align+";")
+            p.bold(class="text-" + align)
                 if direction == "Next"
                     | #{proj.data.title} &nbsp;
-                    span.material-icons(style="vertical-align: text-bottom;") #{arrow_symbol}
+                    span.material-icons.align-text-bottom #{arrow_symbol}
                 else
-                    span.material-icons(style="vertical-align: text-bottom;") #{arrow_symbol}
+                    span.material-icons.align-text-bottom #{arrow_symbol}
                     | &nbsp; #{proj.data.title}
-            p.caption.desktop-only(style="text-align:"+align+";") #{proj.data.mediaString}
+            p.caption.desktop-only(class="text-" + align) #{proj.data.mediaString}
 
 mixin prevProject(proj)
     +projectBreadcrumb(proj, "Previous")

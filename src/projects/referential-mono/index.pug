@@ -17,7 +17,7 @@ thanks: "Special thanks to instructors Simon Johnston, Lavinia Lascaris, and Gre
 position: 7
 ---
 
-include ../../_includes/molecules.pug
+include ../../_includes/blocks.pug
 include ../../_includes/project_utils.pug
 
 block content
@@ -41,7 +41,7 @@ block content
 
     +fontTesterImports()
     hr
-    .grid-1.py-8(style="background-color: #D3CFC6; margin: 0 -2rem; padding: 2rem; 2rem;")
+    .grid-1.py-8.bg-bisque.-mx-8.p-8
         div.fontDemo(id="referential-mono-tester") 
         
         //- TODO: sliders handles are WAY too small for mobile right now

@@ -1,27 +1,28 @@
 extends ./super.pug
 
 block body
-    +headernew()
+    +header()
     main.mb-4
         block content
-    +footernew()
+    +footer()
 
 //- TODO: mobile footer
 //- TODO: eventually cleanup to use header and footer tags
-//- TODO: can make a really cool banner for grad week...
 
-mixin gradshowdesktop()
-    .full-width.mb-4.py-1(style="background-color: #e9e8dd; text-align: center; margin-top: -1.5rem; margin-bottom: 1.5rem")
-        a(href="/gradshow") 🎓 &nbsp;Graduation show details here: April 26, 2025 &nbsp;🎉
 
-mixin gradshowmobile()
-    .full-width.mb-4.py-2(style="background-color: #e9e8dd; text-align: center; margin-top: -1rem;")
-        strong
-            a(href="/gradshow") 🎓 &nbsp;Graduation show details here: April 26, 2025 &nbsp;🎉
+//- TODO: archival example for announcement bars
+//- mixin gradshowdesktop()
+//-     .full-width.mb-4.py-1.bg-cream.text-center.mt--6.mb-6
+//-         a(href="/gradshow") 🎓 &nbsp;Graduation show details here: April 26, 2025 &nbsp;🎉
 
-mixin headernew()
+//- mixin gradshowmobile()
+//-     .full-width.mb-4.py-2.bg-cream.text-center.mt--4
+//-         strong
+//-             a(href="/gradshow") 🎓 &nbsp;Graduation show details here: April 26, 2025 &nbsp;🎉
+
+mixin header()
     .mobile-only.mobileHeader
-        .grid-2(style="flex-direction: row; justify-content: space-between;")
+        .grid-2.flex-row.justify-between
             //- TODO: logo sizing is WIP, find a better way to match the height of 2 header lines
             div
                 div.mobileBranding
@@ -31,7 +32,7 @@ mixin headernew()
                     strong
                         a(href="mailto:" + metadata.author.email, target="_blank") #{metadata.author.email}
             div.hamburgerIcon
-                span.material-icons(style="font-size: 2rem;") menu
+                span.material-icons.text-2xl menu
         .menuItems
             h2
                 a(href="/") Work
@@ -53,79 +54,30 @@ mixin headernew()
                     a(href="/")
                         img.logosvg(src="/img/Shakeel_Mohamed_wordmark.svg" alt="Shakeel Mohamed wordmark logo set in the Mindful Roman typeface which he designed")
             div.
-            div
-                div.pb-4
+            div.col-start-3.col-end-5
+                div.pb-4.flex.justify-between.items-baseline
                     p
                         strong Strategic Brand Designer
-                div
-                    //- TODO: how can I avoid breaking between the icon and word?
-                    //- TODO: can add a blog link here after grad + seeings 3-4 new posts
-                    p
-                        strong
-                            a(href="/projects" style="margin-right: 4rem;")
-                                span.material-icons.headerIcon public
-                                | Work
-                            | &nbsp;
-                            a(href="/labyrinth")
-                                span.material-icons.headerIcon swap_calls
-                                | Experiments
-                        
-            div.deskright-mobileleft
-                div.pb-4
                     p
                         strong
                             +myEmail()
-                div
+                div.flex.justify-between.items-baseline
+                    p
+                        strong
+                            a(href="/projects") Work
+                    p
+                        strong
+                            a(href="/labyrinth") Experiments
                     p
                         strong
                             a(href="/about") About
-        hr(style="margin-bottom: 0.5rem;")
-        //- div(style="grid-column: 3 / 5;")
-        //-     .grid-2(style="margin-bottom:0;")
-        //-         div
-        //-             div
-        //-                 strong
-        //-                     a(href="/projects") Work
-        //-             div
-        //-                 strong
-        //-                     a(href="/labyrinth") Experiments
-        //-         div(style="text-align:right;")
-        //-             div
-        //-                 strong
-        //-                     a(href="mailto:" + metadata.author.email, target="_blank") #{metadata.author.email}
-        //-             div
-        //-                 strong
-        //-                     a(href="/about") About
-        //- div(style="grid-column: 3 / 5;")
-        //-     .grid-2(style="margin-bottom:0;")
-        //-         div
-        //-             strong
-        //-                 a(href="/labyrinth") Experiments
-        //-         div(style="text-align:right;")
-        //-             div
-        //-                 strong
-        //-                     a(href="mailto:" + metadata.author.email, target="_blank") #{metadata.author.email}
-        //-             div
-        //-                 strong
-        //-                     a(href="/about") About
-        //-     .grid-1
-        //-         p
-        //-             //- TODO: thesis should become a project soon
-        //-             //- a(href="/projects/thesis") Thesis
-        //-             strong Work:&nbsp;
-        //-             each project in collections.portfolio
-        //-                 span
-        //-                     a(href=project.url) #{project.data.short}
-        //-                 span ,&nbsp;
-        //-             span
-        //-                 a(href="/projects/thesis") Thesis
+        hr.mb-2
 
 //- TODO: bring back +mailingListForm()
-//- TODO: bring back Designed and developed with ✨emotion✨.
 
-mixin footernew()
-    hr(style="margin-bottom:0.5 !important;")
-    .newfooter.grid-4(style="padding-bottom: 0 !important;")
+mixin footer()
+    hr(class="mb-0-5-important")
+    .newfooter.grid-4.pb-0
         div
             br.mobile-only
             a.logo-wrapper(href="/")

@@ -1,0 +1,126 @@
+mixin fullWidth(bgClass, textClass)
+    div.pt-8.pb-12(class="full-width " + bgClass + " " + textClass)
+        .main
+            block
+
+mixin myEmail(text)
+    +mailto("hello", "shakeel.design", "", text)
+
+mixin mailto(user, domain, subject, text)
+    //- See: http://lists.evolt.org/archive/Week-of-Mon-20040202/154813.html
+    span.mailto
+        script(type="text/javascript").
+            function gen_mail_to_link(lhs, rhs, subject, text) {
+                const rhs_subj = subject ? `${rhs}?subject=${subject}` : rhs;
+                const _txt = text ? text : `${lhs}@${rhs}`;
+                const generated = `<a class="mailto" href="mailto:${lhs}@${rhs_subj}" target=_blank>${_txt}</a>`;
+                document.write(generated);
+            }
+            gen_mail_to_link("#{user}", "#{domain}", "#{subject}", "#{text}")
+
+//- TODO: featured content (projects or posts)
+//- TODO: list of projects / blog posts; should be reusable
+
+mixin gridCols2()
+    div(class="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-8 gap-y-2")
+        block
+
+//- TODO: This should go away very soon, currently used on: projects, links - both need redesigns
+mixin centeredPage()
+    //-
+    //- DO NOT TOUCH THIS FOR NOW!
+    //- *** Blog posts are looking perfect on desktop. ***
+    //- Other pages,not so much...
+    //- Regular pages needs feel cohesive with the homepage
+    //-
+    div.centered-page(class="mx-auto place-content-center self-center lg:w-1/2")
+        block
+
+
+//- mixin footer()
+//-     footer
+//-         hr(class="md:invisible full-width")
+//-         div.grow
+//-             div(class="md:w-1/3")
+//-                 p.bold.h2 Subscribe
+//-                 +mailingListForm()
+//-             div
+//-                 p.bold.h2 Contact
+//-                 +contact()
+
+//- mixin contact()
+//-     span.bold
+//-         +myEmail()
+//-     div
+//-         - var numLinks = 0;
+//-         each link, name in metadata.social
+//-             -- ++numLinks
+//-             span
+//-                 a(class="social-link" href=link target="_blank") #{name} &nbsp;
+//-                 if numLinks < (Object.keys(metadata.social).length)
+//-                     | | &nbsp;
+//-     br
+//-     div
+//-         p Designed and developed with ✨emotion✨.
+//-         p
+//-             script document.write("&copy; " + new Date().getFullYear() + " Shakeel Mohamed")
+
+//- TODO: remix so blog listing can reuse part of this
+//- TODO: use coverImg instead of openGraphImage please
+mixin projectListing(project)
+    div.mb-2
+        a(href=project.url)
+            img.portfolio-cover.w-full(src=project.data.openGraphImage, alt="Cover image for " + project.data.title + " project", width="1200", height="630")
+        div.pt-1
+            div(class="text-sizeh2 font-bold")
+                h2
+                    a(href=project.url) #{project.data.title}
+            //- TODO: need a max-width here so the lines aren't super long
+            div.project-meta
+                p.text-gray-meta!= project.data.mediaLinks
+
+//- TODO: design this component
+mixin getPosts(recent=false)
+    - var source = collections.recentPosts;
+    if !recent
+        - source = collections.post;
+    ul.list-none
+        each post in source
+            li.flex.flex-wrap.items-baseline.py-2
+                div(class="basis-1/4")
+                    p.whitespace-nowrap #{post.data.cleanDate} &nbsp;
+                div(class="basis-3/4")
+                    p.bold.pb-1
+                        a(href=post.url) #{post.data.title}
+                    //- TODO: make tags clickable
+                    p #{post.data.categories}
+
+mixin featuredPost(post)
+    div.py-4
+        a(href=post.url)
+            //- TODO: Once I have beautiful cover images (not branded OG images), utilize those here
+            //- img.portfolio-cover.w-full.pb-1(src=post.data.openGraphImage alt="Cover image for " + post.data.title)
+            p.bold.h2 #{post.data.title}
+        p #{post.data.description}
+        //- p #{post.data.categories}
+
+
+mixin getFeaturedPosts()
+    //- TODO: this might be nice as a 4 column grid on desktop, once cover photos are nice
+    +gridCols2()
+        each post in collections.featured
+            +featuredPost(post)
+
+mixin getMentions(recent=false)
+    - var source = mentions.recent;
+    if !recent
+        - source = mentions.all;
+    .flex.flex-wrap.items-baseline.flex-col
+        if source.length > 0
+            ul
+            each mention in source
+                li.list-none.pb-2
+                    div(class="basis-1/4")
+                        p.whitespace-nowrap.text-left #{mention.date} &nbsp;
+                    div(class="basis-3/4")
+                        a(href=mention.url, class="font-bold hover:text-orange" target="_blank") #{mention.title}

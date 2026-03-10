@@ -12,12 +12,12 @@ extends ../_includes/layouts/break.pug
 //- TODO: solve the whole alignment mess via this guy: https://codepen.io/shakeelmohamed-the-vuer/pen/OJQBEKy?editors=1000
 //- I think body gets a flex basis which is kinda interesting...
 mixin bigBreak()
-    div.flex.flex-col.justify-between(style="min-height:100vh")
+    div.flex.flex-col.justify-between.min-h-screen
         div
         img.self-center(src="./down-arrow.svg" alt="Downward arrow")
         .bottom-0.inset-x-0
             img.full-width(src="./BREAK-large-type.svg" alt="BREAK logo in navy at full page width")
-    hr.text-navy.mt-24.full-width(style="border-width: 0.125em;")
+    hr.text-navy.mt-24.full-width.border-2
 
 
 block content
@@ -67,7 +67,7 @@ mixin section(num, text)
     div(class="flex flex-col items-start py-12")
         if num
             //- TODO: fix left flush alignment on the heading AND all content within the section
-            h2.break(style="color:white !important;") #{num}. #{text}
+            h2.break.text-white-important #{num}. #{text}
         else
             h2.break #{text}
         div(class="my-8 mx-auto lg:my-24")
@@ -75,7 +75,7 @@ mixin section(num, text)
         //- TODO: this is really hacky, and easier way is to
         //- a) decrease the parent x-margin AND
         //- b) add a padding to the section content
-        hr.text-navy.my-4(style="border-width: 0.065rem; min-width: 110%; position: relative; left: 50%; transform: translateX(-50%);")
+        hr.text-navy.my-4.border.min-w-[110%].relative.left-1/2.-translate-x-1/2
 
 mixin subhead(text)
     h3 #{text}

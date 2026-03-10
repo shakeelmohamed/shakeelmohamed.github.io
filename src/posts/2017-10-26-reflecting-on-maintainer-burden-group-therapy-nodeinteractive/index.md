@@ -59,4 +59,4 @@ The Maintainer Burden Group Therapy session was held in the largest hall used fo
 
 Only 9 months since my last one 🎉
 
-PS: Special thanks to those not mentioned above: Itay Neeman (who hired me as a young scrappy intern), Tedd Hellmann (for being an awesome PM), and jory burson for facilitating our small group discussion!
+PS: Special thanks to those not mentioned above: Itay Neeman (who hired me as a young scrappy intern), Tedd Hellmann (for being an awesome PM), and Jory Burson for facilitating our small group discussion!

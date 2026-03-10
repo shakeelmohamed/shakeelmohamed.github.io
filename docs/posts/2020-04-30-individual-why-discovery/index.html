@@ -18,6 +18,7 @@
         <meta property="og:article:tag" content="book review">
         <meta property="twitter:card" content="summary_large_image">
         <link href="https://shakeelmohamed.com/posts/2020-04-30-individual-why-discovery/" rel="canonical">
+        <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://shakeelmohamed.com/#person","name":"Shakeel Mohamed","url":"https://shakeelmohamed.com","email":"mailto:hello@shakeel.design","jobTitle":"Strategic Brand Designer","sameAs":["https://linkedin.com/in/shakeelmohamed","https://instagram.com/shakeel.design","https://github.com/shakeelmohamed"]},{"@type":"WebSite","@id":"https://shakeelmohamed.com/#website","url":"https://shakeelmohamed.com","name":"Shakeel Mohamed","description":"I’ve been intrigued by Simon Sinek’s work for many years. I knew his Golden Circle Theory is an incredible idea but, I didn’t know how to apply it in my daily life.","inLanguage":"en"}]}</script>
         <link rel="stylesheet" href="https://use.typekit.net/rgm5cfh.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/material-icons@1.13.12/iconfont/material-icons.min.css">
         <link rel="stylesheet" href="/dist/tailwind.css">
@@ -30,11 +31,11 @@
     </head>
     <body class="bg-white">
         <div class="mobile-only mobileHeader">
-            <div class="grid-2" style="flex-direction: row; justify-content: space-between;">
+            <div class="grid-2 flex-row justify-between">
                 <div>
                     <div class="mobileBranding"><a class="logo-wrapper" href="/"><img src="/img/Shakeel_Mohamed_wordmark.svg" alt="Shakeel Mohamed wordmark logo set in the Mindful Roman typeface which he designed"/></a><br/><strong><a href="mailto:hello@shakeel.design" target="_blank">hello@shakeel.design</a></strong></div>
                 </div>
-                <div class="hamburgerIcon"><span class="material-icons" style="font-size: 2rem;">menu</span></div>
+                <div class="hamburgerIcon"><span class="material-icons text-2xl">menu</span></div>
             </div>
             <div class="menuItems">
                 <h2><a href="/">Work</a></h2>
@@ -51,16 +52,9 @@
                     <div class="logo-wrapper"><a href="/"><img class="logosvg" src="/img/Shakeel_Mohamed_wordmark.svg" alt="Shakeel Mohamed wordmark logo set in the Mindful Roman typeface which he designed"/></a></div>
                 </div>
                 <div></div>
-                <div>
-                    <div class="pb-4">
+                <div class="col-start-3 col-end-5">
+                    <div class="pb-4 flex justify-between items-baseline">
                         <p><strong>Strategic Brand Designer</strong></p>
-                    </div>
-                    <div>
-                        <p><strong><a href="/projects" style="margin-right: 4rem;"><span class="material-icons headerIcon">public</span>Work</a>&nbsp;<a href="/labyrinth"><span class="material-icons headerIcon">swap_calls</span>Experiments</a></strong></p>
-                    </div>
-                </div>
-                <div class="deskright-mobileleft">
-                    <div class="pb-4">
                         <p><strong><span class="mailto">
                                     <script type="text/javascript">
                                         function gen_mail_to_link(lhs, rhs, subject, text) {
@@ -70,14 +64,17 @@
                                             document.write(generated);
                                         }
                                         gen_mail_to_link("hello", "shakeel.design", "", "")
+                                        
                                     </script></span></strong></p>
                     </div>
-                    <div>
+                    <div class="flex justify-between items-baseline">
+                        <p><strong><a href="/projects">Work</a></strong></p>
+                        <p><strong><a href="/labyrinth">Experiments</a></strong></p>
                         <p><strong><a href="/about">About</a></strong></p>
                     </div>
                 </div>
             </div>
-            <hr style="margin-bottom: 0.5rem;"/>
+            <hr class="mb-2"/>
         </div>
         <main class="mb-4">
             <div class="grid-4">
@@ -85,7 +82,7 @@
                     <p>2020-04-30</p>
                 </div>
                 <div><strong>Finding Your Individual Why Statement (Golden Circle Theory, part 1)</strong></div>
-                <div style="grid-column: 3 / 5;">
+                <div class="col-start-3 col-end-5">
                     <div class="prose"><p>I’ve been intrigued by Simon Sinek’s work for many years. I knew his Golden Circle Theory is an incredible idea but, I didn’t know how to apply it in my daily life.</p>
 <h2>What are WHY statements?</h2>
 <p>A WHY statement is not aspirational. That’s a vision statement.</p>
@@ -99,7 +96,8 @@
 <p><strong>To relentlessly pursue being world-class, so that we can experience beyond what’s possible.</strong></p>
 </blockquote>
 <h2>Golden Circle Theory</h2>
-<p><img src="https://simonsinek.com/wp-content/uploads/2019/02/GC_slide-2.jpg" alt="Golden Circle Theory"></p>
+<!-- Source: https://simonsinek.com/wp-content/uploads/2019/02/GC_slide-2.jpg -->
+<p><img src="GC_slide-2.jpg" alt="Golden Circle Theory"></p>
 <p>I could try to explain the concept in depth but, there’s no replacement for Simon’s explanation in his original TED talk! The core idea is that we should all start with WHY we do what we do. Our HOWs are our strengths, and the filters we use to decide WHAT we do.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/qp0HIF3SfI4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <h2>How did we get here?</h2>
@@ -198,8 +196,8 @@
                 </div>
             </div>
         </main>
-        <hr style="margin-bottom:0.5 !important;"/>
-        <div class="newfooter grid-4" style="padding-bottom: 0 !important;">
+        <hr class="mb-0-5-important"/>
+        <div class="newfooter grid-4 pb-0">
             <div><br class="mobile-only"/><a class="logo-wrapper" href="/">
                     <script>document.write("&copy; " + new Date().getFullYear() + " Shakeel Mohamed.")</script></a></div>
             <div><a href="https://instagram.com/shakeel.design" target="_blank">Instagram</a></div>
@@ -213,6 +211,7 @@
                                 document.write(generated);
                             }
                             gen_mail_to_link("hello", "shakeel.design", "", "")
+                            
                         </script></span></a></div>
         </div>
     </body>
@@ -224,7 +223,5 @@
         gtag('config', 'UA-36907845-2');
         
     </script>
-    <link rel="stylesheet" href="/scripts/glightbox/glightbox.min.css">
-    <script src="/scripts/glightbox/glightbox.min.js"></script>
-    <script src="/scripts/main.js"></script>
+    <script defer src="/scripts/main.js"></script>
 </html>
