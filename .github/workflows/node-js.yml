@@ -25,5 +25,11 @@ jobs:
       with:
         bun-version: latest
     - run: bun install
-    - run: bun run build --if-present
+    - name: Build (if script is present)
+      run: |
+        if [ -f package.json ] && node -e "const pkg=require('./package.json'); process.exit(pkg.scripts && pkg.scripts.build ? 0 : 1);" ; then
+          bun run build
+        else
+          echo \"No build script defined in package.json, skipping build.\"
+        fi
     - run: bun run test:smoke
