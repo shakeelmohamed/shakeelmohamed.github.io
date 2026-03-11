@@ -64,11 +64,27 @@ mixin youtube(url, cap)
         iframe.video16by9(src=url title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="")
         +caption(cap)
 
+mixin animation(url, cap)
+    - var safeUrl = url || '';
+    - var webmUrl = safeUrl.replace(/\.mp4$/i, '.webm');
+    - var encodedMp4Url = safeUrl ? encodeURI(safeUrl) : '';
+    - var encodedWebmUrl = safeUrl ? encodeURI(webmUrl) : '';
+    .project-content
+        video.video16by9(width="1920" height="1080" autoplay="" loop="" muted="" playsinline="" preload="metadata")
+            source(src=encodedWebmUrl type="video/webm")
+            source(src=encodedMp4Url type="video/mp4")
+        +caption(cap)
+
 //- TODO: play with plyr.io and skin the video player a bit nicer
 mixin video(url, cap, autoplay=false)
+    - var safeUrl = url || '';
+    - var webmUrl = safeUrl.replace(/\.mp4$/i, '.webm');
+    - var encodedMp4Url = safeUrl ? encodeURI(safeUrl) : '';
+    - var encodedWebmUrl = safeUrl ? encodeURI(webmUrl) : '';
     .project-content
         video.video16by9(width="1920" height="1080" controls="" data-video="0" autoplay=autoplay)
-            source(src=url type="video/mp4")
+            source(src=encodedWebmUrl type="video/webm")
+            source(src=encodedMp4Url type="video/mp4")
         +caption(cap)
 
 

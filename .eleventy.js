@@ -11,8 +11,11 @@ module.exports = function(eleventyConfig) {
         "svg",
         "ico",
         "mp4",
+        
+        // TODO: once all are replaced, remove these
         "avif",
         "gif",
+        
         "pdf",
 
         "webmanifest",

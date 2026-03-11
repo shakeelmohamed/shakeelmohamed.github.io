@@ -1,29 +1,63 @@
 const Image = require('@11ty/eleventy-img');
+const crypto = require('node:crypto');
 const fs = require('node:fs');
 const path = require('node:path');
+const { spawnSync } = require('node:child_process');
 
 const ROOT = process.cwd();
 const DOCS_ROOT = path.resolve(ROOT, 'docs');
 const CACHE_PATH = path.resolve(ROOT, '.cache/optimize-media.json');
 const TARGET_EXTENSIONS = new Set(['.png', '.jpg', '.jpeg']);
+const VIDEO_EXTENSIONS = new Set(['.mp4']);
+const VIDEO_ENCODER_SIGNATURE = 'vp9-crf33-b0-rowmt1-opus-v1';
 
 async function main() {
-  const files = collectImageFiles(DOCS_ROOT).filter((file) => {
+  const allFiles = collectFiles(DOCS_ROOT);
+  const imageFiles = allFiles.filter((file) => {
     const ext = path.extname(file).toLowerCase();
     return TARGET_EXTENSIONS.has(ext);
   });
+  const videoFiles = allFiles.filter((file) => {
+    const ext = path.extname(file).toLowerCase();
+    return VIDEO_EXTENSIONS.has(ext);
+  });
 
-  const cache = readJson(CACHE_PATH) || {};
+  const cache = readCache(CACHE_PATH);
+  const imageResult = await optimizeImages(imageFiles, cache.images);
+  const videoResult = await optimizeVideos(videoFiles, cache.videos);
+
+  fs.mkdirSync(path.dirname(CACHE_PATH), { recursive: true });
+  fs.writeFileSync(
+    CACHE_PATH,
+    `${JSON.stringify(
+      {
+        version: 2,
+        images: imageResult.cache,
+        videos: videoResult.cache,
+      },
+      null,
+      2,
+    )}\n`,
+  );
+
+  console.log(
+    `optimize:image completed optimized=${imageResult.optimizedCount} skipped=${imageResult.skippedCount} failed=${imageResult.failedCount} total=${imageFiles.length}`,
+  );
+  console.log(
+    `optimize:video completed optimized=${videoResult.optimizedCount} skipped=${videoResult.skippedCount} failed=${videoResult.failedCount} total=${videoFiles.length}`,
+  );
+}
+
+async function optimizeImages(files, imageCache) {
   const nextCache = {};
-
-  if (files.length === 0) {
-    console.log('optimize: no qualifying image files found');
-    return;
-  }
-
   let optimizedCount = 0;
   let skippedCount = 0;
   let failedCount = 0;
+
+  if (files.length === 0) {
+    console.log('optimize:image no qualifying files found');
+    return { optimizedCount, skippedCount, failedCount, cache: nextCache };
+  }
 
   for (const file of files) {
     const relative = normalizePath(path.relative(DOCS_ROOT, file));
@@ -31,7 +65,7 @@ async function main() {
     const sourceStats = fs.statSync(file);
     const avifPath = file.replace(/\.(png|jpe?g)$/i, '.avif');
     const webpPath = file.replace(/\.(png|jpe?g)$/i, '.webp');
-    const cached = cache[relative];
+    const cached = imageCache[relative];
 
     const outputsExist = fs.existsSync(avifPath) && fs.existsSync(webpPath);
     const outputsInSync = outputsExist && outputsAreInSync(sourceStats.mtimeMs, avifPath, webpPath);
@@ -67,7 +101,7 @@ async function main() {
       });
 
       optimizedCount += 1;
-      console.log(`optimize: generated avif/webp for ${relative}`);
+      console.log(`optimize:image generated avif/webp for ${relative}`);
 
       const firstAvif = metadata.avif && metadata.avif[0];
       const firstWebp = metadata.webp && metadata.webp[0];
@@ -85,19 +119,83 @@ async function main() {
       };
     } catch (error) {
       failedCount += 1;
-      console.error(`optimize: failed for ${relative}: ${error.message}`);
+      console.error(`optimize:image failed for ${relative}: ${error.message}`);
     }
   }
 
-  fs.mkdirSync(path.dirname(CACHE_PATH), { recursive: true });
-  fs.writeFileSync(CACHE_PATH, `${JSON.stringify(nextCache, null, 2)}\n`);
-
-  console.log(
-    `optimize: completed optimized=${optimizedCount} skipped=${skippedCount} failed=${failedCount} total=${files.length}`,
-  );
+  return { optimizedCount, skippedCount, failedCount, cache: nextCache };
 }
 
-function collectImageFiles(dir) {
+async function optimizeVideos(files, videoCache) {
+  const nextCache = {};
+  let optimizedCount = 0;
+  let skippedCount = 0;
+  let failedCount = 0;
+
+  if (files.length === 0) {
+    console.log('optimize:video no qualifying files found');
+    return { optimizedCount, skippedCount, failedCount, cache: nextCache };
+  }
+
+  ensureFfmpegAvailable();
+
+  for (const file of files) {
+    const relative = normalizePath(path.relative(DOCS_ROOT, file));
+    const sourceStats = fs.statSync(file);
+    const sourceFingerprint = await fingerprintFile(file);
+    const webmPath = file.replace(/\.mp4$/i, '.webm');
+    const webmRelativePath = normalizePath(path.relative(DOCS_ROOT, webmPath));
+    const cached = videoCache[relative];
+
+    const outputExists = fs.existsSync(webmPath);
+    const outputInSync = outputExists && fs.statSync(webmPath).mtimeMs >= sourceStats.mtimeMs;
+    const cacheInSync =
+      cached
+      && cached.sourceFingerprint === sourceFingerprint
+      && cached.encoderSignature === VIDEO_ENCODER_SIGNATURE;
+
+    if (outputExists && cacheInSync && outputInSync) {
+      skippedCount += 1;
+      nextCache[relative] = {
+        sourceFingerprint,
+        sourceSize: sourceStats.size,
+        sourceMtimeMs: sourceStats.mtimeMs,
+        encoderSignature: VIDEO_ENCODER_SIGNATURE,
+        optimizedAt: cached && cached.optimizedAt ? cached.optimizedAt : Date.now(),
+        output: {
+          webm: webmRelativePath,
+        },
+      };
+      continue;
+    }
+
+    try {
+      transcodeVideoToWebm(file, webmPath);
+      optimizedCount += 1;
+      console.log(`optimize:video generated webm for ${relative}`);
+
+      const webmStats = fs.statSync(webmPath);
+      nextCache[relative] = {
+        sourceFingerprint,
+        sourceSize: sourceStats.size,
+        sourceMtimeMs: sourceStats.mtimeMs,
+        encoderSignature: VIDEO_ENCODER_SIGNATURE,
+        optimizedAt: Date.now(),
+        output: {
+          webm: webmRelativePath,
+        },
+        outputSize: webmStats.size,
+      };
+    } catch (error) {
+      failedCount += 1;
+      console.error(`optimize:video failed for ${relative}: ${error.message}`);
+    }
+  }
+
+  return { optimizedCount, skippedCount, failedCount, cache: nextCache };
+}
+
+function collectFiles(dir) {
   const result = [];
   const entries = fs.readdirSync(dir, { withFileTypes: true });
 
@@ -105,7 +203,7 @@ function collectImageFiles(dir) {
     const fullPath = path.join(dir, entry.name);
 
     if (entry.isDirectory()) {
-      result.push(...collectImageFiles(fullPath));
+      result.push(...collectFiles(fullPath));
       continue;
     }
 
@@ -121,6 +219,60 @@ function normalizePath(value) {
   return value.split('\\').join('/');
 }
 
+function ensureFfmpegAvailable() {
+  const versionCheck = spawnSync('ffmpeg', ['-version'], { stdio: 'ignore' });
+  if (versionCheck.status === 0) {
+    return;
+  }
+
+  throw new Error('ffmpeg CLI is required for MP4 to WebM optimization.');
+}
+
+function transcodeVideoToWebm(inputPath, outputPath) {
+  const result = spawnSync(
+    'ffmpeg',
+    [
+      '-y',
+      '-i',
+      inputPath,
+      '-c:v',
+      'libvpx-vp9',
+      '-crf',
+      '33',
+      '-b:v',
+      '0',
+      '-row-mt',
+      '1',
+      '-pix_fmt',
+      'yuv420p',
+      '-c:a',
+      'libopus',
+      outputPath,
+    ],
+    { stdio: 'pipe' },
+  );
+
+  if (result.status !== 0) {
+    const stderr = (result.stderr || '').toString().trim();
+    const detail = stderr.length > 0 ? ` ${stderr}` : '';
+    throw new Error(`ffmpeg failed with status ${result.status}.${detail}`);
+  }
+}
+
+async function fingerprintFile(filePath) {
+  const hash = crypto.createHash('sha256');
+
+  await new Promise((resolve, reject) => {
+    const stream = fs.createReadStream(filePath);
+
+    stream.on('data', (chunk) => hash.update(chunk));
+    stream.on('error', reject);
+    stream.on('end', resolve);
+  });
+
+  return hash.digest('hex');
+}
+
 function outputsAreInSync(sourceMtimeMs, avifPath, webpPath) {
   const avifStats = fs.statSync(avifPath);
   const webpStats = fs.statSync(webpPath);
@@ -134,6 +286,26 @@ function readJson(filePath) {
   }
   
   return JSON.parse(fs.readFileSync(filePath, 'utf8'));
+}
+
+function readCache(filePath) {
+  const cache = readJson(filePath);
+
+  if (!cache) {
+    return { images: {}, videos: {} };
+  }
+
+  if (cache.images || cache.videos) {
+    return {
+      images: cache.images || {},
+      videos: cache.videos || {},
+    };
+  }
+
+  return {
+    images: cache,
+    videos: {},
+  };
 }
 
 main().catch((error) => {
