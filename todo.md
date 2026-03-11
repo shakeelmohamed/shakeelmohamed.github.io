@@ -12,7 +12,6 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 ## Cleanup
 
 - [ ] Replace all avif files with webm and .mp4
-- [ ] replace all jpeg/jpg with png
 - [ ] use <footer>, etc structured markup; rename newheader, newfooter CSS classes accordingly
 - [ ] resolve rules and tighten up spacing when header comes after a rule; probably remove rule from the header markup if possible; (Started with hr.rule class)
 - [ ] Fix right margin issues on tablet / half-width desktop size

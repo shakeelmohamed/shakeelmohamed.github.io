@@ -14,7 +14,7 @@ Below I present two contrasting productivity techniques I’ve learned over the 
 Below I present two contrasting productivity techniques I’ve learned over the years, and show how they can be used to complete a specific task.
 
 <figure>
-<img src="./mac.jpg" alt="MacBook on a desk"/>
+<img src="./mac.png" alt="MacBook on a desk"/>
 <figcaption>After you read this post, you’ll know why I included this random photo :)</figcaption>
 </figure>
 

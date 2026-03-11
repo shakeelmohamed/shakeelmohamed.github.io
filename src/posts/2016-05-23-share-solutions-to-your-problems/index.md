@@ -14,7 +14,7 @@ As a programmer, it can be really hard to do some things that seem incredibly si
 Once I had a working solution I did the next logical thing, make an example and share with the world! (Check it out on [GitHub](https://github.com/shakeelmohamed/angular-geocoding-demo).) Maybe nobody will ever use the code, or even see it — but that doesn’t matter. What really matters is that I’ll already have a working solution if I need to accomplish this task again. More importantly though, I’ve exercised the “deep thinking” part of my brain; the next time I face any problem I’ll be more equipped to analyze it and determine a solution in less time.
 
 <figure>
-<img src="./forest.jpg" alt="forest"/>
+<img src="./forest.png" alt="forest"/>
 <figcaption>When looking for a tree, it’s easy to get lost in the forest.</figcaption>
 </figure>
 

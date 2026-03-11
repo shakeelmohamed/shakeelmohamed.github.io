@@ -23,7 +23,7 @@ Here's a potential solution:
 8. Make sure none of the offending SHAs exist, you can just `grep` inside the `.git` directory of your local repo.
 9. Run `git push --all -f` to push all the branches, assuming you've already fetched them in step 4.
 
-![Push all the branches](./push-all-the-branches.jpg)
+![Push all the branches](./push-all-the-branches.png)
 
 ## Preventing this in the future
 
@@ -31,4 +31,4 @@ Here's a potential solution:
 * More importantly, try to figure out why it happened, maybe they were under a tight deadline and got a bit sloppy - it happens to the best of us.
 * Try to store credentials in environment variables, config files that are added to your `.gitignore`, or any way you can keep them out of your code.
 
-![Insanity Wolf](./insanity-wolf.jpg)
+![Insanity Wolf](./insanity-wolf.png)

@@ -23,7 +23,7 @@ const imgs = [
         // width: 25%; top: 64.905%; left: 72.5359%; z-index: 16; cursor: move;
     },
     {
-        src: "52764681_2414447898567717_469558075708145664_o.jpg",
+        src: "52764681_2414447898567717_469558075708145664_o.png",
         pos: {x: 40, y: 140, z: 11, width: 45}
         // width: 45%; top: 140%; left: 40%; z-index: 11; cursor: move;
     },
@@ -33,7 +33,7 @@ const imgs = [
         // width: 29.9995%; top: 310.755%; left: 67.4772%; z-index: 31; cursor: move;
     },
     {
-        src: "B.jpg",
+        src: "B.png",
         pos: {x: 7.5, y: 265, z: 6, width: 25}
         // width: 25%; top: 265%; left: 7.5%; z-index: 6; cursor: move;
     },
@@ -43,7 +43,7 @@ const imgs = [
         // width: 30%; top: 197.5%; left: 2.5%; z-index: 4; cursor: move;
     },
     {
-        src: "CS15.3-projects-day-photo.jpg",
+        src: "CS15.3-projects-day-photo.png",
         pos: {x: 32.4185, y: 200, z: 25, width: 40}
         // width: 39.9997%; top: 199.29%; left: 32.4185%; z-index: 25; cursor: move;
     },
@@ -58,7 +58,7 @@ const imgs = [
         // width: 40%; top: 165%; left: 52.5%; z-index: 10; cursor: move;
     },
     {
-        src: "IMG_3707.jpg",
+        src: "IMG_3707.png",
         pos: {x: 1.9, y: 366.645, z: 22, width: 50}
         // width: 50%; top: 366.645%; left: 1.98861%; z-index: 22; cursor: move;
     },
@@ -93,7 +93,7 @@ const imgs = [
         // width: 29.9995%; top: 298.933%; left: 0.244126%; z-index: 26;
     },
     {
-        src: "crazy-timeline---04132079-8bdc-4857-82cf-f356bcaf402c.jpg",
+        src: "crazy-timeline---04132079-8bdc-4857-82cf-f356bcaf402c.png",
         pos: {x: 0, y: 52.5, z: 1, width: 40}
         // width: 40%; top: 52.5%; left: 0%; z-index: 1;
     },

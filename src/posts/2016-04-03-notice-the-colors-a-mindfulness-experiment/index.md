@@ -9,7 +9,7 @@ tags:
 ---
 
 <figure>
-<img src="./clouds.jpg" alt="The sky is very blue. Those clouds are creamy white."/>
+<img src="./clouds.png" alt="The sky is very blue. Those clouds are creamy white."/>
 <figcaption>The sky is very blue.<br> Those clouds are creamy white.</figcaption>
 </figure>
 

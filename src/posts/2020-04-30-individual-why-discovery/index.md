@@ -29,8 +29,8 @@ After my individual WHY discovery session, I came out with a draft of my WHY sta
 
 ## Golden Circle Theory
 
-<!-- Source: https://simonsinek.com/wp-content/uploads/2019/02/GC_slide-2.jpg -->
-![Golden Circle Theory](GC_slide-2.jpg)
+<!-- Source: https://simonsinek.com/wp-content/uploads/2019/02/GC_slide-2.png -->
+![Golden Circle Theory](GC_slide-2.png)
 
 I could try to explain the concept in depth but, there’s no replacement for Simon’s explanation in his original TED talk! The core idea is that we should all start with WHY we do what we do. Our HOWs are our strengths, and the filters we use to decide WHAT we do.
 
@@ -79,7 +79,7 @@ Methods for finding stories
     - What have you accomplished that you’re really proud of? With anyone?
 * Peaks/valleys over your life on a timeline, the more extreme ones will have more impact. Pick those because they’ll most clearly lead to your WHY due to the strong emotions tied to them.
 
-![Peaks and Valleys, image from Find Your Why by Simon Sinek](./2020-04-30-life-events.jpg)
+![Peaks and Valleys, image from Find Your Why by Simon Sinek](./2020-04-30-life-events.png)
 
 ## For Facilitators
 * Watch [Simon’s TED talk (20 mins)](https://www.youtube.com/watch?v=qp0HIF3SfI4)
