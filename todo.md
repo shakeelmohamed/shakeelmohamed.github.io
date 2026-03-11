@@ -8,7 +8,12 @@ ffmpeg -i ontology_cover.mp4 -c:v libaom-av1 -crf 20 -b:v 0 -still-picture 0 ont
 Good reference for pug x 11ty:
 https://cardiff.marketing/pug-in-eleventy-making-it-work/
 
-## ASAP
+# ASAP
+
+- [ ] Update labyrinth with new content + build editor so the JSON can be updated while dragging locally
+
+
+## Cleanup
 
 - [ ] Replace all avif files with webm and .mp4
 - [ ] replace all jpeg/jpg with png
@@ -16,7 +21,6 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 - [ ] resolve rules and tighten up spacing when header comes after a rule; probably remove rule from the header markup if possible; (Started with hr.rule class)
 - [ ] Fix right margin issues on tablet / half-width desktop size
 - [ ] Rework about page layout, everything is too dense as is
-- [ ] Update labyrinth with new content + build editor so the JSON can be updated while dragging locally
 - [ ] Lots of strange layout issues on mobile
 
 # Projects
@@ -48,10 +52,8 @@ Thesis:
 - [ ] Include thesis process images
 
 Others
-- [ ] CTA on homepage: desktop 2rem on 3rem lead, TBD mobile
 - [ ] CTA footer on all pages?
-- [ ] Make an overview gif for each project cover (still fallback to still for OG)
-- [ ] Can make a clearer
+- [ ] Make an overview gif for each project cover (fallback to still for OG)
 - [ ] Make a separate landing page for freelance/contract work, e.g.: /services or something
     - [ ]  copy on this page should be something like "clarify brand, build trust" - basically speaking to the outcomes and results of design
 - [ ] Slideshows need arrow icons to be visible that there is more there (vs. looking like a gif)
@@ -91,7 +93,6 @@ Others
 
 ## From Petrula
 
-don’t say microsite
 - hiring + creative talent
 - less spreads for Rothko, less motion on egawa just make it stills
 - say documentary
