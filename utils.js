@@ -41,7 +41,8 @@ module.exports = {
             return data.openGraphImage;
         }
     },
-    capitalizeFirstLetter: cfs,
+    // TODO: currently unused since mediaTags are now titlecased
+    // capitalizeFirstLetter: cfs,
     titleCase: function(str) {
         const words = str.split(" ");
 
