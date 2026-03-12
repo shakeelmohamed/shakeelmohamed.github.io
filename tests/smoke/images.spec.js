@@ -1,9 +1,12 @@
 const { test, expect } = require('@playwright/test');
 const { readdirSync, readFileSync, existsSync } = require('node:fs');
-const { resolve, dirname, join, relative } = require('node:path');
+const { resolve, dirname, join, relative, extname } = require('node:path');
 
 const DOCS_DIR = resolve(process.cwd(), 'docs');
 const SRC_DIR = resolve(process.cwd(), 'src');
+const SOURCE_REFERENCE_FILE_EXTENSIONS = new Set(['.pug', '.js', '.json', '.md', '.txt', '.webmanifest', '.xml', '.yml', '.yaml']);
+const UNUSED_SOURCE_IMAGE_ALLOWLIST = new Set([]);
+const SOURCE_IMAGE_EXTENSION_PATTERN = '(?:png|jpg|jpeg|gif|svg)';
 
 function listHtmlFilesRecursively(dirPath) {
   const entries = readdirSync(dirPath, { withFileTypes: true });
@@ -43,6 +46,25 @@ function listSourceImageFilesRecursively(dirPath) {
   return files;
 }
 
+function listSourceReferenceFilesRecursively(dirPath) {
+  const entries = readdirSync(dirPath, { withFileTypes: true });
+  const files = [];
+
+  for (const entry of entries) {
+    const fullPath = join(dirPath, entry.name);
+    if (entry.isDirectory()) {
+      files.push(...listSourceReferenceFilesRecursively(fullPath));
+      continue;
+    }
+
+    if (entry.isFile() && SOURCE_REFERENCE_FILE_EXTENSIONS.has(extname(fullPath).toLowerCase())) {
+      files.push(fullPath);
+    }
+  }
+
+  return files;
+}
+
 function isLocalAssetUrl(value) {
   if (!value) {
     return false;
@@ -74,12 +96,75 @@ function normalizeAssetUrl(urlValue) {
   }
 }
 
+function normalizeSourceAssetReference(rawValue) {
+  return normalizeAssetUrl(rawValue).replace(/^['"]|['"]$/g, '');
+}
+
 function resolveAssetPath(htmlFile, assetUrl) {
   if (assetUrl.startsWith('/')) {
     return resolve(DOCS_DIR, `.${assetUrl}`);
   }
 
   return resolve(dirname(htmlFile), assetUrl);
+}
+
+function resolveSourceAssetPath(sourceFile, assetUrl) {
+  if (assetUrl.startsWith('/')) {
+    return resolve(SRC_DIR, `.${assetUrl}`);
+  }
+
+  return resolve(dirname(sourceFile), assetUrl);
+}
+
+function extractDynamicSourceImageReferences(content, sourceFile) {
+  const refs = [];
+  const labyrinthFilenameMatches = content.matchAll(/\bsrc\s*:\s*["']([^"']+?\.(?:png|jpg|jpeg|gif|svg))["']/gi);
+  const hasLabyrinthJoinPattern = /["']\.\/img\/["']\s*\+\s*imgs\[[^\]]+\]\.src/.test(content);
+
+  if (hasLabyrinthJoinPattern) {
+    for (const match of labyrinthFilenameMatches) {
+      refs.push(resolve(dirname(sourceFile), '../labyrinth/img', match[1]));
+    }
+  }
+
+  return refs;
+}
+
+function extractSourceImageReferences(content) {
+  const refs = [];
+  const quotedPathMatches = content.matchAll(
+    /["'`](\.{1,2}\/[^"'`]+?\.(?:png|jpg|jpeg|gif|svg)(?:[?#][^"'`]*)?|\/(?!\/)[^"'`]+?\.(?:png|jpg|jpeg|gif|svg)(?:[?#][^"'`]*)?|[A-Za-z0-9_./ -]+?\.(?:png|jpg|jpeg|gif|svg)(?:[?#][^"'`]*)?)["'`]/gi,
+  );
+  const frontmatterPathMatches = content.matchAll(
+    new RegExp(
+      `^\\s*(?:openGraphImage|image|img|thumbnail|headerImage|socialImage|icon|logo)\\s*:\\s*["']?([^"'\\n]+?\\.${SOURCE_IMAGE_EXTENSION_PATTERN}(?:[?#][^"'\\s]+)?)["']?\\s*$`,
+      'gim',
+    ),
+  );
+  const markdownImageMatches = content.matchAll(
+    /!\[[^\]]*\]\(([^)\n]+?\.(?:png|jpg|jpeg|gif|svg)(?:[?#][^)\n]+)?)\)/gi,
+  );
+  const unquotedPathMatches = content.matchAll(
+    /(?:^|[\s(=:,])((?:\.{1,2}\/)?[A-Za-z0-9_./ -]+?\.(?:png|jpg|jpeg|gif|svg)(?:[?#][^\s)"']+)?)(?=$|[\s),])/gim,
+  );
+
+  for (const match of quotedPathMatches) {
+    refs.push(match[1]);
+  }
+
+  for (const match of frontmatterPathMatches) {
+    refs.push(match[1]);
+  }
+
+  for (const match of markdownImageMatches) {
+    refs.push(match[1]);
+  }
+
+  for (const match of unquotedPathMatches) {
+    refs.push(match[1]);
+  }
+
+  return refs;
 }
 
 test('all linked local images exist in repo', async () => {
@@ -144,4 +229,43 @@ test('all source image files in docs map to src', async () => {
   }
 
   expect(missing, `Missing docs->src image mappings:\n${missing.join('\n')}`).toEqual([]);
+});
+
+test('all source image files are referenced in source files', async () => {
+  const sourceImageFiles = listSourceImageFilesRecursively(SRC_DIR);
+  expect(sourceImageFiles.length, 'No image files found under src').toBeGreaterThan(0);
+
+  const sourceReferenceFiles = listSourceReferenceFilesRecursively(SRC_DIR);
+  expect(sourceReferenceFiles.length, 'No source files found under src').toBeGreaterThan(0);
+
+  const referencedSourceImages = new Set();
+
+  for (const sourceFile of sourceReferenceFiles) {
+    const content = readFileSync(sourceFile, 'utf8');
+    const rawRefs = extractSourceImageReferences(content);
+    const dynamicRefs = extractDynamicSourceImageReferences(content, sourceFile);
+
+    for (const rawRef of rawRefs) {
+      const assetRef = normalizeSourceAssetReference(rawRef);
+      if (!isLocalAssetUrl(assetRef)) {
+        continue;
+      }
+
+      referencedSourceImages.add(resolveSourceAssetPath(sourceFile, assetRef));
+    }
+
+    for (const resolvedRef of dynamicRefs) {
+      referencedSourceImages.add(resolvedRef);
+    }
+  }
+
+  const unreferenced = sourceImageFiles
+    .filter((sourceImagePath) => {
+      const sourceRel = relative(SRC_DIR, sourceImagePath).replace(/\\/g, '/');
+      return !referencedSourceImages.has(sourceImagePath) && !UNUSED_SOURCE_IMAGE_ALLOWLIST.has(sourceRel);
+    })
+    .map((sourceImagePath) => relative(SRC_DIR, sourceImagePath).replace(/\\/g, '/'))
+    .sort((a, b) => a.localeCompare(b));
+
+  expect(unreferenced, `Unused source images:\n${unreferenced.join('\n')}`).toEqual([]);
 });

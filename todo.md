@@ -48,6 +48,7 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 
 - [ ] wristband motion... there is not face between inside/outside oops! Also make it loop perfectly
 - [ ] show motion design system (3x vertical social posts, LT, slates/bumpers) - show the system/grid, adaptive resizing
+- [ ] re-do social media mockup, looks a bit low saturation, dark mode UI would help
 
 # Mindful Roman
 

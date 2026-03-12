@@ -3,6 +3,7 @@ layout: post
 date: 2020-01-21
 title: "Book Summary: The Adventures of Johnny Bunko 🥢"
 description: To start the year off, I read The Adventures of Johnny Bunko by Daniel Pink.
+openGraphImage: bunko.png
 tags:
     - post
     - book summary

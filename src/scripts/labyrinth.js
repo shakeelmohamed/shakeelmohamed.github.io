@@ -161,6 +161,11 @@ const imgs = [
         src: "Severance_gala_cubes.png",
         pos: {x: 4, y: 35, z: 40, width: 40}
         // style="width: 40%; left: 3.87933%; top: 35.2939%; translate: none; rotate: none; scale: none; touch-action: none; cursor: grab; user-select: none; transform: translate3d(0px, 0px, 0px); z-index: 1006;"
+    },
+    {
+        src: "Rothko-AR-demo.png",
+        pos: {x: 6, y: 76, z: 100, width: 25}
+        // width: 25%; left: 64.7291%; top: 43.8288%; z-index: 1001; translate: none; rotate: none; scale: none; touch-action: none; cursor: grab; user-select: none; transform: translate3d(0px, 0px, 0px);
     }
 ];
 
