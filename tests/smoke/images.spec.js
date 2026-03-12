@@ -211,6 +211,18 @@ function extractDynamicSourceImageReferences(content, sourceFile) {
   const labyrinthFilenameMatches = content.matchAll(/\bsrc\s*:\s*["']([^"']+?\.(?:png|jpg|jpeg|gif|svg))["']/gi);
   const hasLabyrinthJoinPattern = /["']\.\/img\/["']\s*\+\s*imgs\[[^\]]+\]\.src/.test(content);
 
+  if (sourceFile.endsWith(join('_data', 'labyrinth.json'))) {
+      const labyrinthItems = JSON.parse(content);
+
+      for (const item of labyrinthItems) {
+        if (!item || typeof item.src !== 'string') {
+          continue;
+        }
+
+        refs.push(resolve(SRC_DIR, 'labyrinth', 'img', item.src));
+      }
+  }
+
   if (hasLabyrinthJoinPattern) {
     for (const match of labyrinthFilenameMatches) {
       refs.push(resolve(dirname(sourceFile), '../labyrinth/img', match[1]));

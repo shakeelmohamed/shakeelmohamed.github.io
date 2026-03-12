@@ -44,6 +44,34 @@ function validateMetadataJson(data, fileName) {
   }
 }
 
+function validateLabyrinthJson(data, fileName) {
+  expect(Array.isArray(data), `${fileName} must export an array`).toBe(true);
+
+  for (let i = 0; i < data.length; i++) {
+    const img = data[i];
+    expect(isPlainObject(img), `${fileName}[${i}] must be an object`).toBe(true);
+
+    const keys = Object.keys(img).sort();
+    expect(keys, `${fileName}[${i}] must only contain pos + src`).toEqual(['pos', 'src']);
+
+    assertStringField(img, 'src', fileName, i);
+    expect(isPlainObject(img.pos), `${fileName}[${i}].pos must be an object`).toBe(true);
+
+    const posKeys = Object.keys(img.pos).sort();
+    expect(posKeys, `${fileName}[${i}].pos must only contain width + x + y + z`).toEqual(['width', 'x', 'y', 'z']);
+
+    for (const fieldName of ['x', 'y', 'z', 'width']) {
+      const value = img.pos[fieldName];
+      expect(
+        typeof value === 'number' && Number.isFinite(value),
+        `${fileName}[${i}].pos.${fieldName} must be a finite number`,
+      ).toBe(true);
+    }
+
+    expect(img.pos.width > 0 && img.pos.width <= 100, `${fileName}[${i}].pos.width must be in (0, 100]`).toBe(true);
+  }
+}
+
 function validateMentionsJs(data, fileName) {
   expect(isPlainObject(data), `${fileName} must export an object`).toBe(true);
   expect(Array.isArray(data.all), `${fileName}.all must be an array`).toBe(true);
@@ -79,6 +107,7 @@ function validateEleventyComputedJs(data, fileName) {
 const validators = {
   'links.json': validateLinksJson,
   'metadata.json': validateMetadataJson,
+  'labyrinth.json': validateLabyrinthJson,
   'mentions.js': validateMentionsJs,
   'eleventyComputed.js': validateEleventyComputedJs,
 };
