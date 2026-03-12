@@ -704,107 +704,6 @@ select {
     } */
 
 
-    /* START: ROUGH styles for labyrinth */
-    * {
-        box-sizing: border-box;
-    }
-
-    .preserve-3d {
-        transform-style: preserve-3d;
-    }
-
-    [image-gallery-row] {
-        align-items: flex-start;
-        box-sizing: border-box;
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    [image-gallery="smgallery"][image-gallery-row] {
-        display: block;
-    }
-
-    [image-gallery="smgallery"] {
-        position: relative;
-        height: 0px;
-    }
-
-    .thumbnail_sizer {
-        height: 0px;
-        width: 100%;
-        position: relative;
-        padding-bottom: 100%;
-        pointer-events: none;
-    }
-
-    .content .page_content:not([contenteditable="true"]) [data-draggable] {
-        pointer-events: auto !important;
-        backface-visibility: hidden;
-    }
-
-    [data-draggable] {
-        visibility: visible;
-        background-color: rgba(0, 0, 0, 0.004);
-    }
-
-    .image-gallery .gallery_card {
-        transform-origin: center center;
-    }
-
-    a.gallery_card, div.gallery_card {
-        position: absolute;
-        pointer-events: none;
-        touch-action: none;
-        cursor: default;
-    }
-
-    .image-gallery .gallery_card.is-dragging {
-        cursor: grabbing;
-    }
-
-    .image-gallery .gallery_card.is-dragging .gallery_card_image {
-        cursor: grabbing;
-    }
-
-    .image-gallery .gallery_card.is-resizing {
-        cursor: default;
-    }
-
-    .image-gallery .gallery_card_image {
-        width: 100%;
-        position: relative;
-        pointer-events: auto;
-        cursor: grab;
-    }
-
-    img {
-        border: 0px;
-        padding: 0px;
-    }
-
-
-    .content img {
-        float: none;
-        margin-bottom: 0rem;
-        vertical-align: bottom;
-    }
-
-    img.image-zoom {
-        cursor: zoom-in;
-    }
-
-    .image-gallery .gallery_card img {
-        display: block;
-        width: 100%;
-        height: auto;
-        pointer-events: none;
-        -webkit-user-select: none;
-           -moz-user-select: none;
-                user-select: none;
-        -webkit-user-drag: none;
-    }
-    /* END: ROUGH styles for labyrinth */
-
     /* START: NEW */
 
     .logosvg {
@@ -852,6 +751,10 @@ select {
     
     .desktop-only {
         display: block;
+    }
+
+    .\!hamburgerIcon {
+        cursor: pointer !important;
     }
 
     .hamburgerIcon {
@@ -1074,6 +977,26 @@ select {
         .fsjs-wrapper {
             flex-direction: column;
         }
+
+        /* Bandage solution for mobile footer */
+
+        .\!hamburgerIcon {
+            max-height: -moz-fit-content !important;
+            max-height: fit-content !important;
+            padding: 0.5rem !important;
+        }
+
+        /* Bandage solution for mobile footer */
+
+        .\!menuOpen {
+            min-width: 100vw !important;
+            min-height: 100vh !important;
+            margin: -1rem !important;
+            padding: 1rem !important;
+            background-color: rgba(0, 0, 0, .9) !important;
+            color: rgba(255, 255, 255, 1) !important;
+            z-index: 99999 !important;
+        }
     }
 
     /* END: NEW */
@@ -1294,6 +1217,39 @@ select {
     ol {
   list-style-position: inside;
   list-style-type: decimal;
+}
+.container {
+  width: 100%;
+}
+@media (min-width: 640px) {
+
+  .container {
+    max-width: 640px;
+  }
+}
+@media (min-width: 768px) {
+
+  .container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+
+  .container {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1280px) {
+
+  .container {
+    max-width: 1280px;
+  }
+}
+@media (min-width: 1536px) {
+
+  .container {
+    max-width: 1536px;
+  }
 }
 .prose {
   color: var(--tw-prose-body);
@@ -1759,6 +1715,9 @@ select {
 .visible {
   visibility: visible;
 }
+.collapse {
+  visibility: collapse;
+}
 .static {
   position: static;
 }
@@ -1847,8 +1806,14 @@ select {
 .mt-4 {
   margin-top: 1rem;
 }
+.\!block {
+  display: block !important;
+}
 .block {
   display: block;
+}
+.inline-block {
+  display: inline-block;
 }
 .inline {
   display: inline;
@@ -1867,6 +1832,9 @@ select {
 }
 .list-item {
   display: list-item;
+}
+.hidden {
+  display: none;
 }
 .h-4 {
   height: 1rem;
@@ -1903,6 +1871,9 @@ select {
 }
 .-translate-x-1\/2 {
   --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .resize {
@@ -2092,6 +2063,10 @@ select {
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
+.blur {
+  --tw-blur: blur(8px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
@@ -2206,6 +2181,117 @@ h2.break {
 .text-white-important {
         color: white !important;
     }
+/* START: ROUGH styles for labyrinth */
+* {
+        box-sizing: border-box;
+    }
+.preserve-3d {
+        transform-style: preserve-3d;
+    }
+[image-gallery-row] {
+        align-items: flex-start;
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap;
+    }
+[image-gallery="smgallery"][image-gallery-row] {
+        display: block;
+    }
+[image-gallery="smgallery"] {
+        position: relative;
+        height: 0px;
+    }
+.thumbnail_sizer {
+        height: 0px;
+        width: 100%;
+        position: relative;
+        padding-bottom: 100%;
+        pointer-events: none;
+    }
+.content .page_content:not([contenteditable="true"]) [data-draggable] {
+        pointer-events: auto !important;
+        backface-visibility: hidden;
+    }
+[data-draggable] {
+        visibility: visible;
+        background-color: rgba(0, 0, 0, 0.004);
+    }
+.image-gallery .gallery_card {
+        transform-origin: center center;
+    }
+a.gallery_card, div.gallery_card {
+        position: absolute;
+        pointer-events: none;
+        touch-action: none;
+        cursor: default;
+    }
+.image-gallery .gallery_card.is-dragging {
+        cursor: grabbing;
+    }
+.image-gallery .gallery_card.is-dragging .gallery_card_image {
+        cursor: grabbing;
+    }
+.image-gallery .gallery_card.is-resizing {
+        cursor: default;
+    }
+.image-gallery .gallery_card_image {
+        width: 100%;
+        position: relative;
+        pointer-events: auto;
+        cursor: grab;
+    }
+img {
+        border: 0px;
+        padding: 0px;
+    }
+.content img {
+        float: none;
+        margin-bottom: 0rem;
+        vertical-align: bottom;
+    }
+img.image-zoom {
+        cursor: zoom-in;
+    }
+.image-gallery .gallery_card img {
+        display: block;
+        width: 100%;
+        height: auto;
+        pointer-events: none;
+        -webkit-user-select: none;
+           -moz-user-select: none;
+                user-select: none;
+        -webkit-user-drag: none;
+    }
+.gallery_card--editable .gallery_resize_handle {
+        -webkit-appearance: none;
+           -moz-appearance: none;
+                appearance: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        background: transparent;
+        border-radius: 999px;
+        opacity: 0;
+        z-index: 12;
+        pointer-events: auto;
+    }
+#labyrinth-copy {
+        position: fixed;
+        bottom: 16px;
+        right: 16px;
+        z-index: 9999;
+        padding: 8px 12px;
+        background: #000000;
+        color: #ffffff;
+        border: none;
+        cursor: pointer;
+        font-size: 13px;
+        font-weight: bold;
+    }
+/* END: ROUGH styles for labyrinth */
 
 /* TODO: this utilities layer will be so helpful... can re-roder and refactor above greatly */
 
