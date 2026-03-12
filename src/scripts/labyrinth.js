@@ -14,7 +14,6 @@ let paddingBottomFrame = null;
 let resizeState = null;
 let draggablesInitialized = false;
 
-// TODO: maybe temp hack... sort by top to avoid abs height mess?
 imgs.sort((a, b) => a.pos.y - b.pos.y);
 
 for (let i = 0; i < imgs.length; i++) {
@@ -29,7 +28,7 @@ for (let i = 0; i < imgs.length; i++) {
     innerWrapper.classList.add('gallery_card_image');
 
     const newImg = document.createElement('img');
-    // newImg.classList.add("image-zoom"); // TODO: this functionality is not there yt
+    // newImg.classList.add("image-zoom"); // TODO: this functionality is not there yet
     newImg.setAttribute('src', './img/' + imgs[i].src);
     newImg.setAttribute('alt', '');
     newImg.addEventListener('load', scheduleFixPaddingBottom, { once: true });
@@ -291,12 +290,8 @@ function initializeDraggables() {
                     return;
                 }
 
-                const element = this.target;
-                persistCardPosition(element, true);
+                persistCardPosition(this.target, true);
                 scheduleFixPaddingBottom();
-
-                // TODO: in theory recalculate here but its causing jumping bugs
-                // fixPaddingBottom();
             }
         });
     }

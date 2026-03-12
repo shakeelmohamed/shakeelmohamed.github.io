@@ -6,7 +6,7 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 
 # ASAP
 
-- [ ] Update labyrinth with new content + build editor so the JSON can be updated while dragging locally
+- [ ] Update labyrinth with new content
 
 
 ## Cleanup
@@ -159,7 +159,6 @@ Hermes - highest vis sponsored studio ever, and being the TA is the validation f
 
 - [ ] secret/hidden landing pages for video editing, tech, etc.
 - [ ] hmm (security) Add rel="noopener noreferrer" to external links
-- [ ] Labyrinth: bring src/projects/mark-rothko/img/Rothko-AR-demo.png over
 - [ ] Midjourney: keep working on lighting in the installation scene, renders have some odd ghosting on the left side from the HDR
 - [ ] TPS maybe show lightsail itself in the motion reveal?
 - [ ] TPS make the 30s trailer idea I’ve been thinking about with music, etc.
