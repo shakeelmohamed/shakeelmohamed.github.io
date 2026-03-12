@@ -3,7 +3,7 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 module.exports = {
   mode: 'jit',
   content: [
-    './src/**/*.{md,pug,json}',
+    './src/**/*.{md,pug,json,js}',
     './docs/**/*.html'
   ],
   safelist: [
@@ -23,7 +23,8 @@ module.exports = {
     'fsjs-block-tester',
     'fsjs-wrapper',
     'fsjs-button-selected',
-    'fsjs-block-type-buttongroup'
+    'fsjs-block-type-buttongroup',
+    '#labyrinth-copy'
   ],
   theme: {
     extend: {

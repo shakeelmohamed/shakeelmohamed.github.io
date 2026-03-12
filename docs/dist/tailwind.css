@@ -753,12 +753,28 @@ select {
 
     a.gallery_card, div.gallery_card {
         position: absolute;
-        pointer-events: auto;
+        pointer-events: none;
+        touch-action: none;
+        cursor: default;
+    }
+
+    .image-gallery .gallery_card.is-dragging {
+        cursor: grabbing;
+    }
+
+    .image-gallery .gallery_card.is-dragging .gallery_card_image {
+        cursor: grabbing;
+    }
+
+    .image-gallery .gallery_card.is-resizing {
+        cursor: default;
     }
 
     .image-gallery .gallery_card_image {
         width: 100%;
         position: relative;
+        pointer-events: auto;
+        cursor: grab;
     }
 
     img {
@@ -781,6 +797,11 @@ select {
         display: block;
         width: 100%;
         height: auto;
+        pointer-events: none;
+        -webkit-user-select: none;
+           -moz-user-select: none;
+                user-select: none;
+        -webkit-user-drag: none;
     }
     /* END: ROUGH styles for labyrinth */
 
@@ -921,8 +942,8 @@ select {
       position: relative;
       width: 100vw;
       min-height: 100vh;
-/*       overflow-y: hidden; */
-      overflow: hidden;
+      overflow-x: clip;
+      overflow-y: visible;
       transform-origin: 0 0; /* Ensure scaling happens from the top-left corner */
     }
 

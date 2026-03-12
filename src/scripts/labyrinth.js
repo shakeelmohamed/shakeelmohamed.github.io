@@ -1,12 +1,18 @@
-// TODO: the real challenge will be making this drag+drop editable when I want to edit the image set
 // TODO: another cool feature could be like soot.world, allow for different/random animated viewing of images
-// Image positions are defined in src/_data/labyrinthImages.json
-// To update layout: drag images locally, click "Copy layout JSON", paste the output back into labyrinthImages.json
+// Image positions are defined in src/_data/labyrinth.json
+// To update layout: drag images locally, click "Copy layout JSON", paste the output back into labyrinth.json
 
 const imgs = JSON.parse(document.getElementById('labyrinth-images-data').textContent);
-
+const thumbnailSizer = document.querySelector('.thumbnail_sizer');
+const imageGallery = document.querySelector('.image-gallery');
 const isLocal = ['localhost', '127.0.0.1'].includes(window.location.hostname);
+const resizeHandleDirections = ['nw', 'ne', 'sw', 'se'];
+const imageLoadPromises = [];
+
 let latestJson = null;
+let paddingBottomFrame = null;
+let resizeState = null;
+let draggablesInitialized = false;
 
 // TODO: maybe temp hack... sort by top to avoid abs height mess?
 imgs.sort((a, b) => a.pos.y - b.pos.y);
@@ -14,82 +20,295 @@ imgs.sort((a, b) => a.pos.y - b.pos.y);
 for (let i = 0; i < imgs.length; i++) {
     const wrapper = document.createElement('div');
 
-    wrapper.classList.add("gallery_card");
-    wrapper.style.width = `${imgs[i].pos.width}%`;
-    wrapper.style.left = `${imgs[i].pos.x}%`;
-    wrapper.style.top = `${imgs[i].pos.y}%`;
-    wrapper.style.zIndex = `${imgs[i].pos.z}`;
+    wrapper.classList.add('gallery_card', 'gallery_card--editable');
+    applyCardPosition(wrapper, imgs[i].pos);
     wrapper.dataset.imgSrc = imgs[i].src;
+    wrapper.dataset.imgIndex = `${i}`;
 
     const innerWrapper = document.createElement('div');
-    innerWrapper.classList.add("gallery_card_image");
+    innerWrapper.classList.add('gallery_card_image');
 
     const newImg = document.createElement('img');
     // newImg.classList.add("image-zoom"); // TODO: this functionality is not there yt
-    newImg.setAttribute("src", "./img/" + imgs[i].src);
+    newImg.setAttribute('src', './img/' + imgs[i].src);
+    newImg.setAttribute('alt', '');
+    newImg.addEventListener('load', scheduleFixPaddingBottom, { once: true });
+
+    const imageReadyPromise = new Promise(resolve => {
+        if (newImg.complete) {
+            resolve();
+            return;
+        }
+
+        newImg.addEventListener('load', resolve, { once: true });
+        newImg.addEventListener('error', resolve, { once: true });
+    });
+    imageLoadPromises.push(imageReadyPromise);
 
     innerWrapper.appendChild(newImg);
     wrapper.appendChild(innerWrapper);
-
-    document.querySelector(".thumbnail_sizer").appendChild(wrapper);
+    addResizeHandles(wrapper);
+    thumbnailSizer.appendChild(wrapper);
 }
+
+updateLatestJson();
+initializeWhenReady();
 
 function convertRemToPixels(rem) {
     return rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
 }
 
-window.addEventListener('load', fixPaddingBottom);
-window.addEventListener('resize', fixPaddingBottom);
+function roundPositionValue(value) {
+    return Math.round(value * 1000) / 1000;
+}
+
+function clamp(value, min, max) {
+    return Math.min(Math.max(value, min), max);
+}
+
+function updateLatestJson() {
+    latestJson = JSON.stringify([...imgs].sort((a, b) => a.pos.y - b.pos.y), null, 4);
+}
+
+function updateDumpOutput() {
+    updateLatestJson();
+    if (isLocal) {
+        console.log('labyrinth layout JSON:', latestJson);
+    }
+}
+
+function scheduleFixPaddingBottom() {
+    if (paddingBottomFrame !== null) {
+        window.cancelAnimationFrame(paddingBottomFrame);
+    }
+
+    paddingBottomFrame = window.requestAnimationFrame(() => {
+        paddingBottomFrame = null;
+        fixPaddingBottom();
+    });
+}
+
+function initializeWhenReady() {
+    Promise.all(imageLoadPromises).then(() => {
+        initializeDraggables();
+        scheduleFixPaddingBottom();
+    });
+}
+
+function applyCardPosition(element, pos) {
+    element.style.width = `${pos.width}%`;
+    element.style.left = `${pos.x}%`;
+    element.style.top = `${pos.y}%`;
+    element.style.zIndex = `${pos.z}`;
+}
+
+function getImgRecord(element) {
+    return imgs.find(img => img.src === element.dataset.imgSrc);
+}
+
+function bringCardToFront(element) {
+    const item = getImgRecord(element);
+    if (!item) {
+        return;
+    }
+
+    const maxZ = imgs.reduce((acc, img) => Math.max(acc, img.pos.z), 0);
+    item.pos.z = maxZ + 1;
+    element.style.zIndex = `${item.pos.z}`;
+    updateLatestJson();
+}
+
+function persistCardPosition(element, shouldLog = true) {
+    if (!thumbnailSizer) {
+        return;
+    }
+
+    const containerRect = thumbnailSizer.getBoundingClientRect();
+    if (!containerRect.width || !containerRect.height) {
+        return;
+    }
+
+    const elementRect = element.getBoundingClientRect();
+    const item = getImgRecord(element);
+    if (!item) {
+        return;
+    }
+
+    const xPercent = clamp(((elementRect.left - containerRect.left) / containerRect.width) * 100, 0, 100);
+    const yPercent = Math.max(0, ((elementRect.top - containerRect.top) / containerRect.height) * 100);
+    const widthPercent = clamp((elementRect.width / containerRect.width) * 100, 5, 100);
+
+    item.pos.x = roundPositionValue(xPercent);
+    item.pos.y = roundPositionValue(yPercent);
+    item.pos.width = roundPositionValue(widthPercent);
+
+    applyCardPosition(element, item.pos);
+
+    if (shouldLog && isLocal) {
+        updateDumpOutput();
+    } else {
+        updateLatestJson();
+    }
+}
+
+function getResizeCursor(direction) {
+    return direction === 'nw' || direction === 'se' ? 'nwse-resize' : 'nesw-resize';
+}
+
+function handleResizeMove(event) {
+    if (!resizeState || !thumbnailSizer) {
+        return;
+    }
+
+    const containerRect = thumbnailSizer.getBoundingClientRect();
+    if (!containerRect.width) {
+        return;
+    }
+
+    const deltaX = event.clientX - resizeState.startClientX;
+    const minWidthPx = Math.max(containerRect.width * 0.05, 48);
+
+    let nextWidthPx = resizeState.startWidthPx;
+    let nextLeftPx = resizeState.startLeftPx;
+
+    if (resizeState.direction.endsWith('e')) {
+        nextWidthPx = clamp(
+            resizeState.startWidthPx + deltaX,
+            minWidthPx,
+            containerRect.width - resizeState.startLeftPx
+        );
+    } else {
+        nextWidthPx = clamp(
+            resizeState.startWidthPx - deltaX,
+            minWidthPx,
+            resizeState.startRightPx
+        );
+        nextLeftPx = resizeState.startRightPx - nextWidthPx;
+    }
+
+    const item = getImgRecord(resizeState.element);
+    if (!item) {
+        return;
+    }
+
+    item.pos.width = roundPositionValue((nextWidthPx / containerRect.width) * 100);
+    item.pos.x = roundPositionValue((nextLeftPx / containerRect.width) * 100);
+    applyCardPosition(resizeState.element, item.pos);
+    scheduleFixPaddingBottom();
+}
+
+function stopResize() {
+    if (!resizeState) {
+        return;
+    }
+
+    resizeState.element.classList.remove('is-resizing');
+    document.body.style.cursor = '';
+    window.removeEventListener('pointermove', handleResizeMove);
+    window.removeEventListener('pointerup', stopResize);
+    window.removeEventListener('pointercancel', stopResize);
+
+    persistCardPosition(resizeState.element, true);
+    scheduleFixPaddingBottom();
+    resizeState = null;
+}
+
+function startResize(event, element, direction) {
+    if (!thumbnailSizer) {
+        return;
+    }
+
+    event.preventDefault();
+    event.stopPropagation();
+
+    bringCardToFront(element);
+
+    const containerRect = thumbnailSizer.getBoundingClientRect();
+    const elementRect = element.getBoundingClientRect();
+
+    resizeState = {
+        direction,
+        element,
+        startClientX: event.clientX,
+        startLeftPx: elementRect.left - containerRect.left,
+        startRightPx: elementRect.right - containerRect.left,
+        startWidthPx: elementRect.width
+    };
+
+    element.classList.add('is-resizing');
+    document.body.style.cursor = getResizeCursor(direction);
+    window.addEventListener('pointermove', handleResizeMove);
+    window.addEventListener('pointerup', stopResize);
+    window.addEventListener('pointercancel', stopResize);
+}
+
+function addResizeHandles(wrapper) {
+    for (let i = 0; i < resizeHandleDirections.length; i++) {
+        const direction = resizeHandleDirections[i];
+        const handle = document.createElement('button');
+
+        handle.type = 'button';
+        handle.classList.add('gallery_resize_handle', `gallery_resize_handle--${direction}`);
+        handle.setAttribute('aria-label', `Resize ${wrapper.dataset.imgSrc} from ${direction} corner`);
+        handle.addEventListener('pointerdown', event => startResize(event, wrapper, direction));
+        wrapper.appendChild(handle);
+    }
+}
+
+window.addEventListener('load', scheduleFixPaddingBottom);
+window.addEventListener('resize', scheduleFixPaddingBottom);
 
 gsap.registerPlugin(Draggable);
-Draggable.create('.gallery_card', {
-    allowContextMenu: true,
-    onDragEnd: function () {
-        // Calculate and set the final position using percentages
-        const element = this.target;
-        const container = element.parentElement;
 
-        // Get the bounding box of the parent element
-        const containerRect = container.getBoundingClientRect();
-        const elementRect = element.getBoundingClientRect();
-
-        // Calculate the top-left position in percentages
-        const xPercent = ((elementRect.left - containerRect.left) / containerRect.width) * 100;
-        const yPercent = ((elementRect.top - containerRect.top) / containerRect.height) * 100;
-
-        // Apply the percentage values to the element
-        element.style.left = `${xPercent}%`;
-        element.style.top = `${yPercent}%`;
-
-        // Clear the transform to ensure accurate placement
-        element.style.transform = "translate3d(0, 0, 0)";
-
-        if (isLocal) {
-            const item = imgs.find(img => img.src === element.dataset.imgSrc);
-            if (item) {
-                item.pos.x = Math.round(xPercent * 1000) / 1000;
-                item.pos.y = Math.round(yPercent * 1000) / 1000;
-            }
-            const sorted = [...imgs].sort((a, b) => a.pos.y - b.pos.y);
-            latestJson = JSON.stringify(sorted, null, 4);
-            console.log('labyrinth layout JSON:', latestJson);
-        }
-
-        // TODO: in theory recalculate here but its causing jumping bugs
-        // fixPaddingBottom();
+function initializeDraggables() {
+    if (draggablesInitialized) {
+        return;
     }
-});
+
+    const cards = document.querySelectorAll('.gallery_card');
+    for (let i = 0; i < cards.length; i++) {
+        const card = cards[i];
+        const dragTrigger = card.querySelector('.gallery_card_image') || card;
+
+        Draggable.create(card, {
+            type: 'left,top',
+            trigger: dragTrigger,
+            allowContextMenu: true,
+            minimumMovement: 3,
+            onPress: function () {
+                if (resizeState && resizeState.element === this.target) {
+                    return;
+                }
+
+                bringCardToFront(this.target);
+                this.target.classList.add('is-dragging');
+            },
+            onRelease: function () {
+                this.target.classList.remove('is-dragging');
+            },
+            onDragEnd: function () {
+                if (resizeState && resizeState.element === this.target) {
+                    return;
+                }
+
+                const element = this.target;
+                persistCardPosition(element, true);
+                scheduleFixPaddingBottom();
+
+                // TODO: in theory recalculate here but its causing jumping bugs
+                // fixPaddingBottom();
+            }
+        });
+    }
+
+    draggablesInitialized = true;
+}
 
 if (isLocal) {
     const btn = document.createElement('button');
-    btn.id = 'labyrinth-copy-btn';
+    btn.id = 'labyrinth-copy';
     btn.textContent = 'Copy layout JSON';
-    btn.style.cssText = 'position:fixed;bottom:16px;right:16px;z-index:9999;padding:8px 12px;background:#000;color:#fff;border:none;cursor:pointer;font-family:monospace;font-size:13px;';
     btn.addEventListener('click', () => {
-        if (!latestJson) {
-            console.log('No layout changes yet — drag an image first');
-            return;
-        }
         navigator.clipboard.writeText(latestJson).then(() => {
             btn.textContent = 'Copied!';
             setTimeout(() => { btn.textContent = 'Copy layout JSON'; }, 2000);
@@ -102,27 +321,22 @@ if (isLocal) {
 }
 
 function fixPaddingBottom() {
-    const cards = document.querySelectorAll('.gallery_card');
-    const cardList = [];
-    for (let i = 0; i < cards.length; i++) {
-        cardList.push(cards[i]);
-    }
-    // TODO: some bugs with this sort algorithm
-    // cardList.sort((a, b) => (a.getBoundingClientRect().y + a.getBoundingClientRect().height) - (b.getBoundingClientRect().y + b.getBoundingClientRect().height));
-
-    // TODO: bug first call will shrink, then every subsequent call calculates correctly oops;
-    // might be same bug as onDragEnd() above
-
-    const lastCard = cardList[cardList.length - 1];
-    if (!lastCard) {
+    if (!thumbnailSizer || !imageGallery) {
         return;
     }
-    const t1box = lastCard.getBoundingClientRect();
-    const footer = document.querySelector('.newfooter');
-    if (!footer) return;
-    const gallery = document.querySelector('.image-gallery');
-    if (!gallery) return;
-    const newPaddingBottom = t1box.top + t1box.height + footer.getBoundingClientRect().height;
-    gallery.style.setProperty('padding-bottom', `${newPaddingBottom}px`);
-    // console.log('resized, new pb', newPaddingBottom);
+
+    const cards = document.querySelectorAll('.gallery_card');
+    const gutter = convertRemToPixels(2);
+
+    let maxBottom = 0;
+
+    for (let i = 0; i < cards.length; i++) {
+        const cardBottom = cards[i].offsetTop + cards[i].offsetHeight;
+        if (Number.isFinite(cardBottom)) {
+            maxBottom = Math.max(maxBottom, cardBottom);
+        }
+    }
+
+    const newPaddingBottom = Math.max(gutter, maxBottom + gutter);
+    imageGallery.style.setProperty('padding-bottom', `${newPaddingBottom}px`);
 }
