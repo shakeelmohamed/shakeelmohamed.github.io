@@ -100,6 +100,96 @@ function normalizeSourceAssetReference(rawValue) {
   return normalizeAssetUrl(rawValue).replace(/^['"]|['"]$/g, '');
 }
 
+function extractDocsLocalImageUrls(html) {
+  const candidates = [];
+  const imgSrcMatches = [...html.matchAll(/<img\b[^>]*\bsrc=["']([^"']+)["'][^>]*>/gi)];
+  const imgSrcsetMatches = [...html.matchAll(/<img\b[^>]*\bsrcset=["']([^"']+)["'][^>]*>/gi)];
+  const sourceSrcsetMatches = [...html.matchAll(/<source\b[^>]*\bsrcset=["']([^"']+)["'][^>]*>/gi)];
+  const metaImageMatches = [
+    ...html.matchAll(/<meta\b[^>]*\b(?:property|name)=["'](?:og:image|twitter:image)["'][^>]*\bcontent=["']([^"']+)["'][^>]*>/gi),
+  ];
+
+  for (const match of imgSrcMatches) {
+    candidates.push(match[1]);
+  }
+
+  for (const match of imgSrcsetMatches) {
+    candidates.push(...splitSrcsetValues(match[1]));
+  }
+
+  for (const match of sourceSrcsetMatches) {
+    candidates.push(...splitSrcsetValues(match[1]));
+  }
+
+  for (const match of metaImageMatches) {
+    candidates.push(match[1]);
+  }
+
+  return candidates
+    .map((rawValue) => normalizeAssetUrl(rawValue))
+    .filter((assetUrl) => isLocalAssetUrl(assetUrl));
+}
+
+function extractDocsLocalAssetUrls(html) {
+  const candidates = [];
+  const imgSrcMatches = [...html.matchAll(/<img\b[^>]*\bsrc=["']([^"']+)["'][^>]*>/gi)];
+  const imgSrcsetMatches = [...html.matchAll(/<img\b[^>]*\bsrcset=["']([^"']+)["'][^>]*>/gi)];
+  const sourceSrcMatches = [...html.matchAll(/<source\b[^>]*\bsrc=["']([^"']+)["'][^>]*>/gi)];
+  const sourceSrcsetMatches = [...html.matchAll(/<source\b[^>]*\bsrcset=["']([^"']+)["'][^>]*>/gi)];
+  const videoSrcMatches = [...html.matchAll(/<video\b[^>]*\bsrc=["']([^"']+)["'][^>]*>/gi)];
+  const videoPosterMatches = [...html.matchAll(/<video\b[^>]*\bposter=["']([^"']+)["'][^>]*>/gi)];
+  const scriptSrcMatches = [...html.matchAll(/<script\b[^>]*\bsrc=["']([^"']+)["'][^>]*>/gi)];
+  const linkHrefMatches = [...html.matchAll(/<link\b[^>]*\bhref=["']([^"']+)["'][^>]*>/gi)];
+  const metaAssetMatches = [
+    ...html.matchAll(/<meta\b[^>]*\b(?:property|name)=["'](?:og:image|twitter:image)["'][^>]*\bcontent=["']([^"']+)["'][^>]*>/gi),
+  ];
+
+  for (const match of imgSrcMatches) {
+    candidates.push(match[1]);
+  }
+
+  for (const match of imgSrcsetMatches) {
+    candidates.push(...splitSrcsetValues(match[1]));
+  }
+
+  for (const match of sourceSrcMatches) {
+    candidates.push(match[1]);
+  }
+
+  for (const match of sourceSrcsetMatches) {
+    candidates.push(...splitSrcsetValues(match[1]));
+  }
+
+  for (const match of videoSrcMatches) {
+    candidates.push(match[1]);
+  }
+
+  for (const match of videoPosterMatches) {
+    candidates.push(match[1]);
+  }
+
+  for (const match of scriptSrcMatches) {
+    candidates.push(match[1]);
+  }
+
+  for (const match of linkHrefMatches) {
+    candidates.push(match[1]);
+  }
+
+  for (const match of metaAssetMatches) {
+    candidates.push(match[1]);
+  }
+
+  return candidates
+    .map((rawValue) => normalizeAssetUrl(rawValue))
+    .filter((assetUrl) => isLocalAssetUrl(assetUrl));
+}
+
+function extractOpenGraphImageValues(content) {
+  const matches = content.matchAll(/^\s*openGraphImage\s*:\s*["']?([^"'\n]+)["']?\s*$/gim);
+  return [...matches].map((match) => match[1].trim()).filter(Boolean);
+}
+
 function resolveAssetPath(htmlFile, assetUrl) {
   if (assetUrl.startsWith('/')) {
     return resolve(DOCS_DIR, `.${assetUrl}`);
@@ -175,33 +265,7 @@ test('all linked local images exist in repo', async () => {
 
   for (const htmlFile of htmlFiles) {
     const html = readFileSync(htmlFile, 'utf8');
-
-    const imgSrcMatches = [...html.matchAll(/<img\b[^>]*\bsrc=["']([^"']+)["'][^>]*>/gi)];
-    const sourceSrcsetMatches = [...html.matchAll(/<source\b[^>]*\bsrcset=["']([^"']+)["'][^>]*>/gi)];
-    const metaImageMatches = [
-      ...html.matchAll(/<meta\b[^>]*\b(?:property|name)=["'](?:og:image|twitter:image)["'][^>]*\bcontent=["']([^"']+)["'][^>]*>/gi),
-    ];
-
-    const candidates = [];
-
-    for (const match of imgSrcMatches) {
-      candidates.push(match[1]);
-    }
-
-    for (const match of sourceSrcsetMatches) {
-      candidates.push(...splitSrcsetValues(match[1]));
-    }
-
-    for (const match of metaImageMatches) {
-      candidates.push(match[1]);
-    }
-
-    for (const rawValue of candidates) {
-      const assetUrl = normalizeAssetUrl(rawValue);
-      if (!isLocalAssetUrl(assetUrl)) {
-        continue;
-      }
-
+    for (const assetUrl of extractDocsLocalImageUrls(html)) {
       const filePath = resolveAssetPath(htmlFile, assetUrl);
       if (!existsSync(filePath)) {
         missing.push(`${htmlFile} -> ${assetUrl}`);
@@ -314,4 +378,44 @@ test('all og:image links in docs are valid and normalized', async () => {
   }
 
   expect(invalid, `Invalid og:image links:\n${invalid.join('\n')}`).toEqual([]);
+});
+
+test('openGraphImage frontmatter values use normalized source-relative paths', async () => {
+  const sourceReferenceFiles = listSourceReferenceFilesRecursively(SRC_DIR);
+  expect(sourceReferenceFiles.length, 'No source files found under src').toBeGreaterThan(0);
+
+  const invalid = [];
+
+  for (const sourceFile of sourceReferenceFiles) {
+    const content = readFileSync(sourceFile, 'utf8');
+    const openGraphImages = extractOpenGraphImageValues(content);
+
+    for (const openGraphImage of openGraphImages) {
+      if (openGraphImage.startsWith('./')) {
+        invalid.push(`${relative(SRC_DIR, sourceFile).replace(/\\/g, '/')} -> ${openGraphImage}`);
+      }
+    }
+  }
+
+  expect(invalid, `Non-normalized openGraphImage source paths:\n${invalid.join('\n')}`).toEqual([]);
+});
+
+test('all linked local assets in docs exist in repo', async () => {
+  const htmlFiles = listHtmlFilesRecursively(DOCS_DIR);
+  expect(htmlFiles.length, 'No generated HTML files found under docs').toBeGreaterThan(0);
+
+  const missing = [];
+
+  for (const htmlFile of htmlFiles) {
+    const html = readFileSync(htmlFile, 'utf8');
+
+    for (const assetUrl of extractDocsLocalAssetUrls(html)) {
+      const filePath = resolveAssetPath(htmlFile, assetUrl);
+      if (!existsSync(filePath)) {
+        missing.push(`${htmlFile} -> ${assetUrl}`);
+      }
+    }
+  }
+
+  expect(missing, `Missing local docs assets:\n${missing.join('\n')}`).toEqual([]);
 });
