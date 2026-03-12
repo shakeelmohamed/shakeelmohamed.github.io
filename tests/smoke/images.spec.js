@@ -269,3 +269,49 @@ test('all source image files are referenced in source files', async () => {
 
   expect(unreferenced, `Unused source images:\n${unreferenced.join('\n')}`).toEqual([]);
 });
+
+test('all og:image links in docs are valid and normalized', async () => {
+  const htmlFiles = listHtmlFilesRecursively(DOCS_DIR);
+  expect(htmlFiles.length, 'No generated HTML files found under docs').toBeGreaterThan(0);
+
+  const invalid = [];
+
+  for (const htmlFile of htmlFiles) {
+    const html = readFileSync(htmlFile, 'utf8');
+    const ogImageMatches = [...html.matchAll(/<meta\b[^>]*\bproperty=["']og:image["'][^>]*\bcontent=["']([^"']+)["'][^>]*>/gi)];
+
+    for (const match of ogImageMatches) {
+      const rawValue = match[1].trim();
+      if (!rawValue) {
+        invalid.push(`${htmlFile} -> empty og:image`);
+        continue;
+      }
+
+      let parsed;
+      try {
+        parsed = new URL(rawValue);
+      } catch {
+        invalid.push(`${htmlFile} -> invalid URL: ${rawValue}`);
+        continue;
+      }
+
+      if (parsed.protocol !== 'http:' && parsed.protocol !== 'https:') {
+        invalid.push(`${htmlFile} -> unsupported protocol (${parsed.protocol}): ${rawValue}`);
+        continue;
+      }
+
+      const normalizedPathname = decodeURI(parsed.pathname);
+      if (normalizedPathname.includes('/./') || normalizedPathname.includes('/../')) {
+        invalid.push(`${htmlFile} -> non-normalized og:image path: ${rawValue}`);
+        continue;
+      }
+
+      const docsPath = resolve(DOCS_DIR, `.${normalizedPathname}`);
+      if (!existsSync(docsPath)) {
+        invalid.push(`${htmlFile} -> og:image file missing in docs: ${normalizedPathname}`);
+      }
+    }
+  }
+
+  expect(invalid, `Invalid og:image links:\n${invalid.join('\n')}`).toEqual([]);
+});
