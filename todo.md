@@ -7,7 +7,7 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 # ASAP
 
 - [ ] Update labyrinth with new content
-
+- [ ] add cssnano
 
 ## Cleanup
 
