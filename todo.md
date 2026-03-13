@@ -9,6 +9,11 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 - [ ] Update labyrinth with new content
 - [ ] add cssnano
 
+# Post styling
+
+- [ ] fix inline code blocks, type size is too big, etc.
+- [ ] 
+
 ## Cleanup
 
 - [ ] Replace all avif/gif files with .mp4

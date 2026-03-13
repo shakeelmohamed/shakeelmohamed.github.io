@@ -1184,14 +1184,17 @@ main {
 }
 .block-grid-cols-2 {
     display: grid;
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-    row-gap: var(--space-2);
+    grid-template-columns: repeat(2, 1fr);
+    -moz-column-gap: 2rem;
+    column-gap: 2rem;
+    row-gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 .block-centered-page {
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
-    place-content: center;
-    align-self: center;
 }
 .block-post-list-item {
     display: flex;
@@ -1214,12 +1217,11 @@ main {
     list-style-type: none;
 }
 .block-featured-post {
-    padding-top: var(--space-4);
-    padding-bottom: var(--space-4);
+    padding-top: var(--space-2);
+    padding-bottom: var(--space-2);
 }
 .block-featured-title {
     font-weight: 700;
-    letter-spacing: 0.01em;
     line-height: 1.8;
 }
 .block-project-listing {
@@ -1433,8 +1435,10 @@ main {
     grid-column-start: 3;
     grid-column-end: 5;
 }
-.post-content {
-    max-width: 100%;
+/* SMNOTE: do note touch this */
+.post-body .post-content img {
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
 }
 .post-content p,
 .post-content ul,
@@ -1460,16 +1464,14 @@ main {
 .post-content h2,
 .post-content h3,
 .post-content h4,
+.post-content h2,
+.post-content h3,
+.post-content h4,
 .post-content h5 {
     padding-top: 0;
     padding-bottom: 0;
-    margin-top: var(--space-8);
-    margin-bottom: var(--space-3);
-}
-.post-content img,
-.post-content video {
-    margin-top: var(--space-6);
-    margin-bottom: var(--space-6);
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 .post-content pre {
     max-width: 100%;
@@ -1490,6 +1492,7 @@ main {
     width: 66.666667%;
 }
 .inclusion-hero-panel {
+    min-height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1513,11 +1516,23 @@ main {
     margin-top: var(--space-4);
     margin-bottom: var(--space-4);
 }
+/* Match production: row-gap and margin for .grid-2 */
+.grid-2 {
+    row-gap: var(--space-4);
+    margin-top: var(--space-4);
+    margin-bottom: var(--space-4);
+}
 .grid-3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     -moz-column-gap: var(--space-8);
          column-gap: var(--space-8);
+    row-gap: var(--space-4);
+    margin-top: var(--space-4);
+    margin-bottom: var(--space-4);
+}
+/* Match production: row-gap and margin for .grid-3 */
+.grid-3 {
     row-gap: var(--space-4);
     margin-top: var(--space-4);
     margin-bottom: var(--space-4);
@@ -1556,7 +1571,6 @@ nav {
     font-weight: 700;
 }
 nav > p {
-    letter-spacing: 0.01em;
     line-height: 1.8;
     font-weight: 700;
     text-align: left;
@@ -1576,7 +1590,6 @@ section {
     margin-right: auto;
 }
 .h2 {
-    letter-spacing: 0.01em;
     line-height: 1.8;
 }
 .video16by9 {
@@ -1627,7 +1640,6 @@ a:hover {
 }
 a.underline {
     text-decoration: underline;
-    text-decoration-thickness: 1px;
 }
 strong,
 b,
@@ -1809,16 +1821,17 @@ ol {
 }
 .underline {
     text-decoration-line: underline;
+    text-underline-offset: 0.125rem;
 }
 /* TODO: I don't think I'm using twemoji,
 *      an even better option might be noto emoji:
 *      https://fonts.google.com/noto/specimen/Noto+Emoji            
 */
 img.emoji {
-    height: 1em;
-    width: 1em;
-    margin: 0 .05em 0 .1em;
-    vertical-align: -0.1em;
+    height: 1rem;
+    width: 1rem;
+    margin: 0 .05em 0 .1rem;
+    vertical-align: -0.1rem;
     display: inline;
 }
 .full-width {
@@ -2005,7 +2018,7 @@ video,
         z-index: 99999 !important;
     }
 }
-/* TODO: technically tabled styles below but ignore that fact until we can solidify desktop and mobile */
+/* TODO: technically tablet styles below but ignore that fact until we can solidify desktop and mobile */
 header,
 footer {
     display: flex;
@@ -2034,4 +2047,44 @@ h2 {
 h3 {
     font-size: 1.25rem;
     line-height: 1.75rem;
+}
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, "Courier New", monospace;
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+  font-size: 1rem;
+}
+/* Production-matching code block styling (no .prose) */
+pre {
+    background-color: #24292f;
+    color: #f6f8fa;
+    overflow-x: auto;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.75;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+pre code {
+    background-color: transparent;
+    border-width: 0;
+    border-radius: 0;
+    padding: 0;
+    font-weight: inherit;
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    line-height: inherit;
+}
+pre code::before,
+pre code::after {
+    content: none;
+}
+/* Fix for inline code block */
+code {
+    padding-left: .25rem;
+    padding-right: .25rem;
 }
