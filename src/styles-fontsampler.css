@@ -16,6 +16,10 @@
     row-gap: 1rem;
 }
 
+.fsjs-wrapper {
+    flex-direction: column;
+}
+
 .fsjs-block {
     margin: 0 !important;
     padding: 0 !important;

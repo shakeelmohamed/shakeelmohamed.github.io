@@ -903,6 +903,20 @@ video,
         margin-bottom: 0 !important;
         padding-top: 0 !important;
     }
+
+    .block-grid-cols-2 {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        
+    }
+
+    .block-featured-post {
+        padding-top: 0;
+        padding-bottom: 1.5rem;
+    }
+
+    .block-post-list-item {
+        flex-wrap: nowrap;
+    }
     
     .grid-1,
     .grid-2,
@@ -980,9 +994,6 @@ video,
         padding-bottom: var(--space-4);
     }
     
-    .fsjs-wrapper {
-        flex-direction: column;
-    }
     
     .\!hamburgerIcon {
         max-height: fit-content !important;
