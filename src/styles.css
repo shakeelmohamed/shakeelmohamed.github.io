@@ -184,15 +184,6 @@ main {
 
 /* Semantic element and layout rules — replaces utility classes in shared layouts */
 
-.mobile-header-row {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: var(--space-8);
-    row-gap: var(--space-4);
-    margin-top: var(--space-4);
-    margin-bottom: var(--space-4);
-}
-
 .desktop-header-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -890,11 +881,9 @@ video,
         gap: var(--space-2);
     }
 
-    .mobile-header-row {
-        grid-template-columns: 1fr auto;
-        column-gap: var(--space-2);
-        margin-top: 0;
-        margin-bottom: 0;
+    .mobileHeader .mobile-header-row {
+        flex-direction: row;
+        justify-content: space-between;
     }
 
     .about-community-gallery {
