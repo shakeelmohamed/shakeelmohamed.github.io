@@ -178,6 +178,7 @@ Hermes - highest vis sponsored studio ever, and being the TA is the validation f
 
 ## LATER
 
+- [ ] Pick an intentional typeface for code blocks, maybe TT Commons Mono?
 - [ ] Explore using fluid typography... how does this fit w/ Tailwind?
     - [ ] https://fluidtypography.com/#usarusFluidTypographyGetStarted
     - [ ] https://codepen.io/iamryanyu/pen/gbpWGYQ
