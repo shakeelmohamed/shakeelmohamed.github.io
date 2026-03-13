@@ -13,8 +13,8 @@ tags:
 I’m a senior computer science student at Seattle University. For my senior project I’m working with 3 CS classmates and Expedia, Inc. to prototype a new travel experience mobile app. Our project is conceptually similar to Airbnb. We mashed the word bed into Expedia and came up with Ex **bed** ia (pronounced: Ex-bed-ee-uh) as our project name. **For our app we needed to design a logo, so I thought I’d ask my coworker Brian for some help.**
 
 
-> ## “Oh, yeah. Let’s just do it in PowerPoint.” 
-> ####— Brian Reyes (Sr. UX Designer)
+> ## “Oh, yeah. Let’s just do it in PowerPoint.”
+> — Brian Reyes (Sr. UX Designer)
 
 
 Wait. PowerPoint for design!? He went on to explain how some people use PowerPoint for design mockups because it’s easily available, and people generally know how to use it.

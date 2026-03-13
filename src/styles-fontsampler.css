@@ -17,7 +17,7 @@
 }
 
 .fsjs-wrapper {
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .fsjs-block {

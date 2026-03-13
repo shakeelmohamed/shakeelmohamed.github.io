@@ -374,6 +374,14 @@ main {
     padding-top: 0.5rem;
 }
 
+blockquote {
+    font-style: italic;
+    padding-inline-start: 1rem;
+    border-inline-start-color: var(--color-cream);
+    border-inline-start-width: 0.25rem;
+    border-inline-style: solid;
+}
+
 .post-content p,
 .post-content ul,
 .post-content ol,
@@ -796,7 +804,6 @@ ol {
 }
 .underline {
     text-decoration-line: underline;
-    text-underline-offset: 0.125rem;
 }
 /* TODO: I don't think I'm using twemoji,
 *      an even better option might be noto emoji:
