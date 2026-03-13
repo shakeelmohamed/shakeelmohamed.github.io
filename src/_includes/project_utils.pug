@@ -100,19 +100,19 @@ mixin fontTesterImports()
 
 //- TODO: mobile wrap issues here
 mixin projectBreadcrumb(proj, direction)
-    - var align = direction == "Next" ? "right" : "left";
+    - var modifierClass = direction == "Next" ? "is-next" : "is-prev";
     - var arrow_symbol = direction == "Next" ? "arrow_forward" : "arrow_back";
 
     div
         a(href=proj.url)
-            p.bold(class="text-" + align)
+            p.bold.project-breadcrumb-title(class=modifierClass)
                 if direction == "Next"
                     | #{proj.data.title} &nbsp;
-                    span.material-icons.align-text-bottom #{arrow_symbol}
+                    span.material-icons.project-breadcrumb-icon #{arrow_symbol}
                 else
-                    span.material-icons.align-text-bottom #{arrow_symbol}
+                    span.material-icons.project-breadcrumb-icon #{arrow_symbol}
                     | &nbsp; #{proj.data.title}
-            p.caption.desktop-only(class="text-" + align) #{proj.data.mediaString}
+            p.caption.desktop-only.project-breadcrumb-caption(class=modifierClass) #{proj.data.mediaString}
 
 mixin prevProject(proj)
     +projectBreadcrumb(proj, "Previous")

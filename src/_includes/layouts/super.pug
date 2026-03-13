@@ -74,7 +74,7 @@ html(lang="en")
 
         link(rel="stylesheet" href="https://use.typekit.net/rgm5cfh.css")
         link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/material-icons@1.13.12/iconfont/material-icons.min.css")
-        link(rel="stylesheet" href="/dist/tailwind.css")
+        link(rel="stylesheet" href="/dist/styles.css")
         //- TODO: will need google fonts for Inter
         //- link(rel="preconnect" href="https://fonts.googleapis.com")
         //- link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
@@ -88,11 +88,8 @@ html(lang="en")
         link(rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png")
         link(rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png")
         link(rel="manifest" href="/site.webmanifest")
-    //- TODO: remove debug-screens for production
-    //- body(class="debug-screens")
     
-    //- TODO: temp hack for BREAK, ideally this is applied on all pages
-    body(class="bg-white")
+    body
         block body
     
     script(async src="https://www.googletagmanager.com/gtag/js?id=UA-36907845-2")

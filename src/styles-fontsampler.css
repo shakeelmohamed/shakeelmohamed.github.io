@@ -1,0 +1,54 @@
+[data-fsjs="alignment"] {
+    display: flex;
+}
+
+.fsjs-label {
+    padding-bottom: 1rem;
+}
+
+.fsjs-label-text {
+    font-weight: 700;
+}
+
+.fsjs-skin > .fsjs-wrapper {
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
+    row-gap: 1rem;
+}
+
+.fsjs-block {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.fontSampler,
+.fsjs-block-tester {
+    margin: 1rem 0 !important;
+}
+
+.fsjs-button-selected {
+    color: white !important;
+    background-color: black !important;
+}
+
+.fsjs-block-type-buttongroup::nth-child(2) {
+    margin-top: 0.25rem !important;
+}
+
+.fsjs-skin .fsjs-block-type-slider [type='range']::-webkit-slider-thumb {
+    height: 1rem !important;
+    width: 1rem !important;
+    margin-top: -0.5rem !important;
+}
+
+.fsjs-skin .fsjs-block-type-slider [type='range']::-moz-range-thumb {
+    height: 1rem !important;
+    width: 1rem !important;
+    margin-top: -0.5rem !important;
+}
+
+.fsjs-skin .fsjs-block-type-slider [type='range']::-ms-thumb {
+    height: 1rem !important;
+    width: 1rem !important;
+    margin-top: -0.5rem !important;
+}

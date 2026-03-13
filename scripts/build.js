@@ -10,7 +10,6 @@ const INPUT_PATHS = [
   'src',
   '.eleventy.js',
   'postcss.config.js',
-  'tailwind.config.js',
   'package.json',
   'utils.js',
 ];

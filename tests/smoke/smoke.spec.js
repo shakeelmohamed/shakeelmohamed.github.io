@@ -126,7 +126,11 @@ test('post listing dates are present and ISO-formatted', async () => {
 
   for (const listingPath of listingPaths) {
     const html = fs.readFileSync(listingPath, 'utf8');
-    const matches = [...html.matchAll(/<p class="whitespace-nowrap">\s*([^<]*)\s*&nbsp;<\/p>/g)];
+    const matches = [
+      ...html.matchAll(
+        /<div class="block-post-list-date">\s*<p(?: class="[^"]*")?>\s*([^<]*)\s*&nbsp;<\/p>/g,
+      ),
+    ];
 
     expect(matches.length, `Expected listing date rows in ${listingPath}`).toBeGreaterThan(0);
 

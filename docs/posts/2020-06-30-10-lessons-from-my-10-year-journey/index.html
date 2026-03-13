@@ -21,7 +21,7 @@
         <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://shakeelmohamed.com/#person","name":"Shakeel Mohamed","url":"https://shakeelmohamed.com","email":"mailto:hello@shakeel.design","jobTitle":"Strategic Brand Designer","sameAs":["https://linkedin.com/in/shakeelmohamed","https://instagram.com/shakeel.design","https://github.com/shakeelmohamed"]},{"@type":"WebSite","@id":"https://shakeelmohamed.com/#website","url":"https://shakeelmohamed.com","name":"Shakeel Mohamed","description":"It’s been a decade since I graduated from high school, here’s 10 highlights from the past 10 years","inLanguage":"en"}]}</script>
         <link rel="stylesheet" href="https://use.typekit.net/rgm5cfh.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/material-icons@1.13.12/iconfont/material-icons.min.css">
-        <link rel="stylesheet" href="/dist/tailwind.css">
+        <link rel="stylesheet" href="/dist/styles.css">
         <link rel="sitemap" type="text/plain" title="Sitemap" href="/sitemap.txt">
         <link href="/feed.xml" rel="alternate" type="application/rss+xml" title="Shakeel Mohamed’s blog posts">
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -29,13 +29,13 @@
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
         <link rel="manifest" href="/site.webmanifest">
     </head>
-    <body class="bg-white">
-        <div class="mobile-only mobileHeader">
-            <div class="grid-2 flex-row justify-between">
+    <body>
+        <header class="mobile-only mobileHeader">
+            <div class="mobile-header-row">
                 <div>
                     <div class="mobileBranding"><a class="logo-wrapper" href="/"><img src="/img/Shakeel_Mohamed_wordmark.svg" alt="Shakeel Mohamed wordmark logo set in the Mindful Roman typeface which he designed"/></a><br/><strong><a href="mailto:hello@shakeel.design" target="_blank">hello@shakeel.design</a></strong></div>
                 </div>
-                <div class="hamburgerIcon"><span class="material-icons text-2xl">menu</span></div>
+                <div class="hamburgerIcon"><span class="material-icons">menu</span></div>
             </div>
             <div class="menuItems">
                 <h2><a href="/">Work</a></h2>
@@ -45,7 +45,7 @@
                 <h2><a href="mailto:hello@shakeel.design" target="_blank">hello@shakeel.design</a></h2>
             </div>
             <hr class="mobile-only"/>
-        </div>
+        </header>
         <div class="newheader sticky top-0">
             <div class="grid-4">
                 <div>
@@ -76,14 +76,14 @@
             </div>
             <hr class="mb-2"/>
         </div>
-        <main class="mb-4">
-            <div class="grid-4">
+        <main>
+            <article class="post-layout">
                 <div>
                     <p>2020-06-30</p>
                 </div>
                 <div><strong>10 Lessons From My 10 Year Journey</strong></div>
-                <div class="col-start-3 col-end-5">
-                    <div class="prose"><p>June 2020. I had no idea where I would be 10 years ago when I graduated from high school. I remember the pain I felt that day after graduation when my new reality finally set in. I was not going to university, like all of my peers. I cried like a baby that day, but I made one decision: I had to get serious for the first time in my life.</p>
+                <div class="post-body">
+                    <div class="post-content"><p>June 2020. I had no idea where I would be 10 years ago when I graduated from high school. I remember the pain I felt that day after graduation when my new reality finally set in. I was not going to university, like all of my peers. I cried like a baby that day, but I made one decision: I had to get serious for the first time in my life.</p>
 <p>That summer of 2010 I began to teach myself to write C# code, which gave me a decent familiarity with object oriented programming before I began taking computer science courses at Bellevue College that fall.</p>
 <p>More importantly, I began an incredible journey of personal development. One day that summer I found this old book that my uncle had given me a few years ago. I read these words on the cover and felt like I had discovered buried treasure: <strong>“This book could be worth a million dollars to you”</strong>. I hadn’t even opened <a href="https://amzn.to/2YMBlV8"><em>Think and Grow Rich</em></a> until that moment, and it changed my life forever!</p>
 <blockquote>
@@ -125,15 +125,15 @@
 <p>You can check out the full KIT of these books below, or directly on <a href="https://kit.co/shakeelxyz/10-book-from-10-lessons-from-my-10-year-journey">KIT</a>.</p>
 <iframe src="https://kit.co/embed?url=https%3A%2F%2Fkit.co%2Fshakeelxyz%2F10-book-from-10-lessons-from-my-10-year-journey" style="display: block; border: 0px; margin: 0 auto; width: 100%; height: 100vw; max-width: 700px; max-height: 700px" scrolling="no"></iframe></div>
                 </div>
-            </div>
+            </article>
         </main>
-        <hr class="mb-0-5-important"/>
-        <div class="newfooter grid-4 pb-0">
+        <hr/>
+        <footer class="newfooter">
             <div><br class="mobile-only"/><a class="logo-wrapper" href="/">
                     <script>document.write("&copy; " + new Date().getFullYear() + " Shakeel Mohamed.")</script></a></div>
             <div><a href="https://instagram.com/shakeel.design" target="_blank">Instagram</a></div>
             <div><a href="https://linkedin.com/in/shakeelmohamed" target="_blank">LinkedIn</a></div>
-            <div class="deskright-mobileleft"><a href="mailto:hello@shakeel.design" target="_blank"><span class="mailto">
+            <div><a href="mailto:hello@shakeel.design" target="_blank"><span class="mailto">
                         <script type="text/javascript">
                             function gen_mail_to_link(lhs, rhs, subject, text) {
                                 const rhs_subj = subject ? `${rhs}?subject=${subject}` : rhs;
@@ -144,7 +144,7 @@
                             gen_mail_to_link("hello", "shakeel.design", "", "")
                             
                         </script></span></a></div>
-        </div>
+        </footer>
     </body>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-36907845-2"></script>
     <script>

@@ -1,0 +1,156 @@
+.labyrinth {
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: clip;
+    overflow-y: visible;
+    transform-origin: 0 0;
+}
+
+.labyrinth > img {
+    position: absolute;
+    cursor: grab;
+    z-index: 1;
+    -o-object-fit: contain;
+       object-fit: contain;
+}
+
+.labyrinth-icons {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.labyrinth-icons > span.material-icons {
+    font-size: 2.5rem;
+    line-height: 1.2rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.preserve-3d {
+    transform-style: preserve-3d;
+}
+
+[image-gallery-row] {
+    align-items: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+[image-gallery="smgallery"][image-gallery-row] {
+    display: block;
+}
+
+[image-gallery="smgallery"] {
+    position: relative;
+    height: 0px;
+}
+
+.thumbnail_sizer {
+    height: 0px;
+    width: 100%;
+    position: relative;
+    padding-bottom: 100%;
+    pointer-events: none;
+}
+
+.content .page_content:not([contenteditable="true"]) [data-draggable] {
+    pointer-events: auto !important;
+    backface-visibility: hidden;
+}
+
+[data-draggable] {
+    visibility: visible;
+    background-color: rgba(0, 0, 0, 0.004);
+}
+
+.image-gallery .gallery_card {
+    transform-origin: center center;
+}
+
+a.gallery_card,
+div.gallery_card {
+    position: absolute;
+    pointer-events: none;
+    touch-action: none;
+    cursor: default;
+}
+
+.image-gallery .gallery_card.is-dragging {
+    cursor: grabbing;
+}
+
+.image-gallery .gallery_card.is-dragging .gallery_card_image {
+    cursor: grabbing;
+}
+
+.image-gallery .gallery_card.is-resizing {
+    cursor: default;
+}
+
+.image-gallery .gallery_card_image {
+    width: 100%;
+    position: relative;
+    pointer-events: auto;
+    cursor: grab;
+}
+
+img {
+    border: 0px;
+    padding: 0px;
+}
+
+.content img {
+    float: none;
+    margin-bottom: 0rem;
+    vertical-align: bottom;
+}
+
+img.image-zoom {
+    cursor: zoom-in;
+}
+
+.image-gallery .gallery_card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+    -webkit-user-drag: none;
+}
+
+.gallery_card--editable .gallery_resize_handle {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    background: transparent;
+    border-radius: 999px;
+    opacity: 0;
+    z-index: 12;
+    pointer-events: auto;
+}
+
+#labyrinth-copy {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    z-index: 9999;
+    padding: 8px 12px;
+    background: #000000;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+}

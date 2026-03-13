@@ -17,7 +17,7 @@
         <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://shakeelmohamed.com/#person","name":"Shakeel Mohamed","url":"https://shakeelmohamed.com","email":"mailto:hello@shakeel.design","jobTitle":"Strategic Brand Designer","sameAs":["https://linkedin.com/in/shakeelmohamed","https://instagram.com/shakeel.design","https://github.com/shakeelmohamed"]},{"@type":"WebSite","@id":"https://shakeelmohamed.com/#website","url":"https://shakeelmohamed.com","name":"Shakeel Mohamed","description":"A t-shirt graphic emphasizing that you (ü) are at the center of inclusion","inLanguage":"en"}]}</script>
         <link rel="stylesheet" href="https://use.typekit.net/rgm5cfh.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/material-icons@1.13.12/iconfont/material-icons.min.css">
-        <link rel="stylesheet" href="/dist/tailwind.css">
+        <link rel="stylesheet" href="/dist/styles.css">
         <link rel="sitemap" type="text/plain" title="Sitemap" href="/sitemap.txt">
         <link href="/feed.xml" rel="alternate" type="application/rss+xml" title="Shakeel Mohamed’s blog posts">
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -25,13 +25,13 @@
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
         <link rel="manifest" href="/site.webmanifest">
     </head>
-    <body class="bg-white">
-        <div class="mobile-only mobileHeader">
-            <div class="grid-2 flex-row justify-between">
+    <body>
+        <header class="mobile-only mobileHeader">
+            <div class="mobile-header-row">
                 <div>
                     <div class="mobileBranding"><a class="logo-wrapper" href="/"><img src="/img/Shakeel_Mohamed_wordmark.svg" alt="Shakeel Mohamed wordmark logo set in the Mindful Roman typeface which he designed"/></a><br/><strong><a href="mailto:hello@shakeel.design" target="_blank">hello@shakeel.design</a></strong></div>
                 </div>
-                <div class="hamburgerIcon"><span class="material-icons text-2xl">menu</span></div>
+                <div class="hamburgerIcon"><span class="material-icons">menu</span></div>
             </div>
             <div class="menuItems">
                 <h2><a href="/">Work</a></h2>
@@ -41,7 +41,7 @@
                 <h2><a href="mailto:hello@shakeel.design" target="_blank">hello@shakeel.design</a></h2>
             </div>
             <hr class="mobile-only"/>
-        </div>
+        </header>
         <div class="newheader sticky top-0">
             <div class="grid-4">
                 <div>
@@ -72,14 +72,14 @@
             </div>
             <hr class="mb-2"/>
         </div>
-        <main class="mb-4">
-            <div class="grid-1">
-                <h1 class="pb-0">Inclusion Tee</h1>
+        <main>
+            <div class="project-header">
+                <h1>Inclusion Tee</h1>
                 <div class="project-meta">
                     <p class="text-gray-meta"></p>
                 </div>
             </div>
-            <div class="grid-2">
+            <div class="project-meta-grid">
                 <div class="project-meta">
                     <p><span class="bold">Tools:&nbsp;</span>Illustrator, Photoshop</p>
                     <p><span class="bold">Goal:&nbsp;</span>Through apparel, express one’s individual responsibility for creating an inclusive environment.</p>
@@ -95,12 +95,12 @@
         <p>The Inclüsion Tee was the best-selling product while running the clothing&nbsp;brand.</p><br/>
     </div>
     <div><img class="py-4" src="./off-white-tag.png" alt="Clothing tag from Off-white"/></div>
-    <div><img class="py-4 w-2/3" src="./hbz-virgil-611450214-1522065262.png" alt="The late Virgil Abloh with his hands in prayer"/>
+    <div><img class="py-4 inclusion-virgil-image" src="./hbz-virgil-611450214-1522065262.png" alt="The late Virgil Abloh with his hands in prayer"/>
         <p class="caption">The late Virgil Abloh was the catalyst for my interest in design. One person can change your whole life.<br/>RIP Virgil Abloh (1980–2021)</p><br/>
     </div>
 </div>
 <div class="grid-1">
-    <div class="flex justify-center items-center lg:h-screen bg-black"><img class="mx-auto w-1/2" src="./ntrsct-logo-white.png" alt="The ntrsct designs logo, and X with ntrsct written out horizontally"/>
+    <div class="inclusion-hero-panel"><img class="mx-auto w-1/2" src="./ntrsct-logo-white.png" alt="The ntrsct designs logo, and X with ntrsct written out horizontally"/>
         <p class="caption">The ntrsct designs logo</p>
     </div>
 </div>
@@ -122,20 +122,20 @@
         <div class="bg-black"><img class="p-8" src="./inclusion-white.png" alt="The inclusion tee graphic, spelling out inclusion with an X in the negative space"/></div>
         <p class="caption text-white">The final graphic</p>
     </div>
-    <div><img class="mx-auto max-h-screen" src="./inclusion-tee-mockup.png" alt="A digital mockup of the inclusion graphic in black ink on a white t-shirt"/>
+    <div><img class="inclusion-mockup-image" src="./inclusion-tee-mockup.png" alt="A digital mockup of the inclusion graphic in black ink on a white t-shirt"/>
         <p class="caption">Applied to a shirt</p>
     </div>
 </div><br/>
 <h2>Art Directed Photographs</h2>
 <div class="grid-3"><img src="./inclusion-tee-model-1.png" alt=""/><img src="./inclusion-tee-model-2.png" alt=""/><img src="./inclusion-tee-model-3.png" alt=""/></div>
         </main>
-        <hr class="mb-0-5-important"/>
-        <div class="newfooter grid-4 pb-0">
+        <hr/>
+        <footer class="newfooter">
             <div><br class="mobile-only"/><a class="logo-wrapper" href="/">
                     <script>document.write("&copy; " + new Date().getFullYear() + " Shakeel Mohamed.")</script></a></div>
             <div><a href="https://instagram.com/shakeel.design" target="_blank">Instagram</a></div>
             <div><a href="https://linkedin.com/in/shakeelmohamed" target="_blank">LinkedIn</a></div>
-            <div class="deskright-mobileleft"><a href="mailto:hello@shakeel.design" target="_blank"><span class="mailto">
+            <div><a href="mailto:hello@shakeel.design" target="_blank"><span class="mailto">
                         <script type="text/javascript">
                             function gen_mail_to_link(lhs, rhs, subject, text) {
                                 const rhs_subj = subject ? `${rhs}?subject=${subject}` : rhs;
@@ -146,7 +146,7 @@
                             gen_mail_to_link("hello", "shakeel.design", "", "")
                             
                         </script></span></a></div>
-        </div>
+        </footer>
     </body>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-36907845-2"></script>
     <script>

@@ -17,7 +17,7 @@
         <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://shakeelmohamed.com/#person","name":"Shakeel Mohamed","url":"https://shakeelmohamed.com","email":"mailto:hello@shakeel.design","jobTitle":"Strategic Brand Designer","sameAs":["https://linkedin.com/in/shakeelmohamed","https://instagram.com/shakeel.design","https://github.com/shakeelmohamed"]},{"@type":"WebSite","@id":"https://shakeelmohamed.com/#website","url":"https://shakeelmohamed.com","name":"Shakeel Mohamed","description":"Designing lyric posters with experimental typography for a month","inLanguage":"en"}]}</script>
         <link rel="stylesheet" href="https://use.typekit.net/rgm5cfh.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/material-icons@1.13.12/iconfont/material-icons.min.css">
-        <link rel="stylesheet" href="/dist/tailwind.css">
+        <link rel="stylesheet" href="/dist/styles.css">
         <link rel="sitemap" type="text/plain" title="Sitemap" href="/sitemap.txt">
         <link href="/feed.xml" rel="alternate" type="application/rss+xml" title="Shakeel Mohamed’s blog posts">
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -25,13 +25,13 @@
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
         <link rel="manifest" href="/site.webmanifest">
     </head>
-    <body class="bg-white">
-        <div class="mobile-only mobileHeader">
-            <div class="grid-2 flex-row justify-between">
+    <body>
+        <header class="mobile-only mobileHeader">
+            <div class="mobile-header-row">
                 <div>
                     <div class="mobileBranding"><a class="logo-wrapper" href="/"><img src="/img/Shakeel_Mohamed_wordmark.svg" alt="Shakeel Mohamed wordmark logo set in the Mindful Roman typeface which he designed"/></a><br/><strong><a href="mailto:hello@shakeel.design" target="_blank">hello@shakeel.design</a></strong></div>
                 </div>
-                <div class="hamburgerIcon"><span class="material-icons text-2xl">menu</span></div>
+                <div class="hamburgerIcon"><span class="material-icons">menu</span></div>
             </div>
             <div class="menuItems">
                 <h2><a href="/">Work</a></h2>
@@ -41,7 +41,7 @@
                 <h2><a href="mailto:hello@shakeel.design" target="_blank">hello@shakeel.design</a></h2>
             </div>
             <hr class="mobile-only"/>
-        </div>
+        </header>
         <div class="newheader sticky top-0">
             <div class="grid-4">
                 <div>
@@ -72,14 +72,14 @@
             </div>
             <hr class="mb-2"/>
         </div>
-        <main class="mb-4">
-            <div class="grid-1">
-                <h1 class="pb-0">Lyric Posters</h1>
+        <main>
+            <div class="project-header">
+                <h1>Lyric Posters</h1>
                 <div class="project-meta">
                     <p class="text-gray-meta">Experimental Typography</p>
                 </div>
             </div>
-            <div class="grid-2">
+            <div class="project-meta-grid">
                 <div class="project-meta">
                     <p><span class="bold">Client:&nbsp;</span>Self-initiated</p>
                     <p><span class="bold">Tools:&nbsp;</span>Illustrator, Photoshop</p>
@@ -88,7 +88,7 @@
                 <div>&nbsp;</div>
             </div>
 <section>
-    <div class="centered-page mx-auto place-content-center self-center lg:w-1/2">
+    <div class="centered-page block-centered-page">
         <div>
             <p>After buying a book by David Carson, I got interested in expressive typography. For my first attempt at this medium, I designed a poster every day in January 2020 to better understand expressive type. With a busy travel month, I designed some posters at airport gates and sketched on random scraps of paper. Each poster uses lyrics from my favorite hip hop songs.</p><br/>
             <p>During the month-long project, I learned about geometric compositions and types of grids used in typography. After completing the project, I wrote a blog post about my experience.</p>
@@ -97,32 +97,32 @@
     </div>
 </section>
 <section>
-    <div class="centered-page mx-auto place-content-center self-center lg:w-1/2">
+    <div class="centered-page block-centered-page">
         <h2>Exploring Grids</h2>
-        <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-8 gap-y-2">
+        <div class="block-grid-cols-2">
             <div><img class="py-2" src="./lyric-posters-sketch.png" alt="Notebook sketch of poster designs"/></div>
             <div><img class="py-2" src="./Typographic-Systems-by-Kimberly-Elam-book-cover.png" alt="The book cover for “Typographic Systems” by Kimberly Elam"/><img class="py-2" src="./Typographic-Systems-radial system.png" alt="A scan of the radial system from “Typographic Systems” by Kimberly Elam"/></div>
         </div>
-        <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-8 gap-y-2"><img class="py-2" src="./Kanye-West-poster-with-grid.png" alt="Kanye West poster with grid lines drawn over in Adobe Illustrator"/><img class="py-2" src="./6black-poster-with-grid.png" alt="6black poster with grid lines drawn over in Adobe Illustrator"/>
+        <div class="block-grid-cols-2"><img class="py-2" src="./Kanye-West-poster-with-grid.png" alt="Kanye West poster with grid lines drawn over in Adobe Illustrator"/><img class="py-2" src="./6black-poster-with-grid.png" alt="6black poster with grid lines drawn over in Adobe Illustrator"/>
         </div>
     </div>
 </section>
-<div class="pt-8 pb-12 full-width bg-black text-white">
+<div class="full-width block-full-width bg-black text-white">
     <div class="main">
-        <div class="centered-page mx-auto place-content-center self-center lg:w-1/2">
+        <div class="centered-page block-centered-page">
             <h2 class="text-white">Final Posters</h2>
             <section>
-                <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-8 gap-y-2"><img class="my-2 border-2 border-white" src="./Kid-Cudi-poster.png" alt="The poster I made using lyrics from the song ”Up Up &amp; Away” by Kid Cudi"/>
+                <div class="block-grid-cols-2"><img class="my-2 border-2 border-white" src="./Kid-Cudi-poster.png" alt="The poster I made using lyrics from the song ”Up Up &amp; Away” by Kid Cudi"/>
                     <div>
                         <p class="text-white">This poster of a Kid Cudi song from 2009 borrows colors from a Post Malone album cover from 2018.</p><img class="py-2" src="./Post-Malone-album-cover.png" alt="The album cover for “Beerbongs and Bentleys” by Post Malone"/>
                     </div>
                 </div>
-                <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-8 gap-y-2"><img class="my-2 border-2 border-white" src="./Juice-WRLD-poster.png" alt="The poster I made using lyrics from the song ”Robbery” by Juice WRLD"/>
+                <div class="block-grid-cols-2"><img class="my-2 border-2 border-white" src="./Juice-WRLD-poster.png" alt="The poster I made using lyrics from the song ”Robbery” by Juice WRLD"/>
                     <div>
                         <p class="text-white">As an avid reader, book cover designs live in my subconscious. After completing the month of poster designs, I realized this poster mimics the book cover for Power vs. Force by David Hawkins.</p><img class="py-2" src="./Power-vs-Force-book-cover.png" alt="The book cover for “Power vs. Force” by David Hawkins"/>
                     </div>
                 </div>
-                <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-8 gap-y-2"><img class="my-2 border-2 border-white" src="./Frank-Ocean-poster.png" alt="The poster I made using lyrics from the song ”Seigfried” by Frank Ocean"/>
+                <div class="block-grid-cols-2"><img class="my-2 border-2 border-white" src="./Frank-Ocean-poster.png" alt="The poster I made using lyrics from the song ”Seigfried” by Frank Ocean"/>
                     <div>
                         <p class="text-white">This poster uses my favorite painting by the Chinese artist Xue Jiye, reminiscent of the album cover for this song. He has permitted me to use his artwork for personal and commercial use.</p><img class="py-2" src="./Blonde-album-cover.png" alt="The album cover for ”Blonde” by Frank Ocean"/>
                     </div>
@@ -132,13 +132,13 @@
     </div>
 </div>
         </main>
-        <hr class="mb-0-5-important"/>
-        <div class="newfooter grid-4 pb-0">
+        <hr/>
+        <footer class="newfooter">
             <div><br class="mobile-only"/><a class="logo-wrapper" href="/">
                     <script>document.write("&copy; " + new Date().getFullYear() + " Shakeel Mohamed.")</script></a></div>
             <div><a href="https://instagram.com/shakeel.design" target="_blank">Instagram</a></div>
             <div><a href="https://linkedin.com/in/shakeelmohamed" target="_blank">LinkedIn</a></div>
-            <div class="deskright-mobileleft"><a href="mailto:hello@shakeel.design" target="_blank"><span class="mailto">
+            <div><a href="mailto:hello@shakeel.design" target="_blank"><span class="mailto">
                         <script type="text/javascript">
                             function gen_mail_to_link(lhs, rhs, subject, text) {
                                 const rhs_subj = subject ? `${rhs}?subject=${subject}` : rhs;
@@ -149,7 +149,7 @@
                             gen_mail_to_link("hello", "shakeel.design", "", "")
                             
                         </script></span></a></div>
-        </div>
+        </footer>
     </body>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-36907845-2"></script>
     <script>

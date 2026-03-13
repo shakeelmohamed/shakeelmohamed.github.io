@@ -1,15 +1,13 @@
 extends ./base.pug
 
 //- TODO: just use center 2 columns for this layout
-//- TODO: use article markup
 block content
-    .grid-4
+    article.post-layout
         div
             p #{cleanDate}
             //- p #{description}
         div
             strong #{title}
-        div.col-start-3.col-end-5
+        div.post-body
             //- TODO: display categories
-            //- TODO: need to redo all these prose styles
-            div(class="prose")!= content
+            div.post-content!= content

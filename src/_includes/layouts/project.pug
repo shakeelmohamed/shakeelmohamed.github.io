@@ -50,14 +50,14 @@ block append pageScripts
 
 block content
     if coverImg
-        .grid-1
+        .project-cover-section
             +portfolioImg(coverImg, name + " cover image", "")
             br
-    .grid-1
-        h1.pb-0 #{title}
+    .project-header
+        h1 #{title}
         div.project-meta
             p.text-gray-meta!= mediaLinks
-    .grid-2
+    .project-meta-grid
         div.project-meta
             if client
                 +projectMeta("Client", client)
@@ -71,7 +71,7 @@ block content
     !=content
 
     if thanks
-        .grid-2
+        .project-thanks-grid
             div
                 p.bold Acknowledgements
                 p !{thanks}
@@ -80,6 +80,6 @@ block content
     if relatedProjects.prev && relatedProjects.next
         div
             hr
-            .grid-2.keepDesktop
+            .project-nav-grid
                 +prevProject(relatedProjects.prev)
                 +nextProject(relatedProjects.next)
