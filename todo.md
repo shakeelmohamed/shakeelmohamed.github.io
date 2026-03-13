@@ -8,6 +8,7 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 
 - [ ] Update labyrinth with new content
 - [ ] add cssnano
+- [ ] fix broken link to break presentation (on project page)
 
 # Post styling
 

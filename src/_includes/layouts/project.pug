@@ -57,7 +57,7 @@ block content
         h1 #{title}
         div.project-meta
             p.text-gray-meta!= mediaLinks
-    .project-meta-grid
+    .grid-2
         div.project-meta
             if client
                 +projectMeta("Client", client)
@@ -67,7 +67,6 @@ block content
                 +projectMeta("Goal", goal)
             if recognition
                 +projectMeta("Recognition", recognition)
-        div &nbsp;
     !=content
 
     if thanks

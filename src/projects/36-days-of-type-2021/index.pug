@@ -15,21 +15,21 @@ include ../../_includes/project_utils.pug
 block content
     .grid-2
         div
-            img(src="./HEADER-36DAYS-2560X1440-black.png" alt="The 36 Days of Type logo")
-            p.caption The 36 Days of Type logo
+            +portfolioImg("./HEADER-36DAYS-2560X1440-black.png", "The 36 Days of Type logo", "The 36 Days of Type logo")
         div
             p 36 Days of Type is a project that invites designers, illustrators and graphic artists to express their particular interpretation of the letters and numbers of the Latin alphabet. Every year it’s an opportunity for creatives worldwide to come together on Instagram, sharing their creations of the same letterform.
             br
             p After exploring poster compositions with my previous daily challenge, I participated in the challenge to focus on individual letterforms. Further, I challenged myself to use unfamiliar techniques and graphic styles.
+    br
     .grid-1
         div
             h2 Sketches
-            img.my-2(src="./36-days-of-type-sketches.png" alt="A grid of 9 pencil and Procreate sketches of various letterforms")
+            +portfolioImg("./36-days-of-type-sketches.png", "A grid of 9 pencil and Procreate sketches of various letterforms", "")
 
+    br 
     //- TODO: show a 4-up grid of my favorites
     .grid-1
         div
-            h1 The Complete Set
+            h2 The Complete Set
             div
-                img(src="./36-days-of-type-full-grid.png" alt="A six by six grid of all 36 letterforms designed during the project")
-                p.caption During the challenge I designed these letterforms using a variety of styles, software, and media.
+                +portfolioImg("./36-days-of-type-full-grid.png", "A six by six grid of all 36 letterforms designed during the project", "During the challenge I designed these letterforms using a variety of styles, software, and media.")
