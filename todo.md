@@ -185,7 +185,7 @@ Hermes - highest vis sponsored studio ever, and being the TA is the validation f
 ## LATER
 
 - [ ] Pick an intentional typeface for code blocks, maybe TT Commons Mono?
-- [ ] Explore using fluid typography... how does this fit w/ Tailwind?
+- [ ] Explore using fluid typography...
     - [ ] https://fluidtypography.com/#usarusFluidTypographyGetStarted
     - [ ] https://codepen.io/iamryanyu/pen/gbpWGYQ
 - [ ] Overall, consider bringing in on-scroll animations just really get them clean - or just use those tools for projects... see https://motion.dev/
@@ -204,7 +204,6 @@ Hermes - highest vis sponsored studio ever, and being the TA is the validation f
 - [ ] WHP: maybe rename since Studio Matthews had a show called “your words have power”
 - [ ] Labyrinth description: value is my intelligent approach to work, skillful ability to work in simplicity and complexity, dedication to community, learning in formal/informal/digital settings - one of my biggest strengths
 - [ ] TODO: optimize email obfuscation: https://github.com/shakeelmohamed/shakeelmohamed.github.io/pull/161#discussion_r1976589880; and https://github.com/shakeelmohamed/shakeelmohamed.github.io/pull/161#discussion_r1976589879
-- [ ] overall tailwind class exceptions need to be optimized: https://github.com/shakeelmohamed/shakeelmohamed.github.io/pull/161#discussion_r1976589881
 
 
 ## My notes
