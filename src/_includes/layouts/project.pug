@@ -71,7 +71,7 @@ block content
     !=content
 
     if thanks
-        .project-thanks-grid
+        .grid-2
             div
                 p.bold Acknowledgements
                 p !{thanks}
@@ -80,6 +80,6 @@ block content
     if relatedProjects.prev && relatedProjects.next
         div
             hr
-            .project-nav-grid
+            .grid-2
                 +prevProject(relatedProjects.prev)
                 +nextProject(relatedProjects.next)

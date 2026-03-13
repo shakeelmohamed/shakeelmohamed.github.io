@@ -334,8 +334,6 @@ main {
     padding-bottom: 0;
 }
 
-.project-meta-grid,
-.project-thanks-grid,
 .project-nav-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -916,6 +914,10 @@ video,
 
     .block-post-list-item {
         flex-wrap: nowrap;
+    }
+
+    .project-meta {
+        padding-top: 0.5rem;
     }
     
     .grid-1,
