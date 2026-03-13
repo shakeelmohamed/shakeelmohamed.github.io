@@ -36,14 +36,16 @@ block content
         +portfolioImg("./Kanye-West-poster-with-grid.png", "Kanye West poster with grid lines drawn over in Adobe Illustrator", "")
         +portfolioImg("./6black-poster-with-grid.png", "6black poster with grid lines drawn over in Adobe Illustrator", "")
     
-    .full-width(style="background-color: black; color: white; padding: 1rem")
-        h2.text-white Final Posters
-        .grid-2
-            +portfolioImg("./Kid-Cudi-poster.png", "The poster I made using lyrics from the song ”Up Up & Away” by Kid Cudi", "")
-            +portfolioImg("./Post-Malone-album-cover.png", "The album cover for “Beerbongs and Bentleys” by Post Malone", "This poster of a Kid Cudi song from 2009 borrows colors from a Post Malone album cover from 2018.")
-        .grid-2
-            +portfolioImg("./Juice-WRLD-poster.png", "The poster I made using lyrics from the song ”Robbery” by Juice WRLD", "")
-            +portfolioImg("./Power-vs-Force-book-cover.png", "The book cover for “Power vs. Force” by David Hawkins", "As an avid reader, book cover designs live in my subconscious. After completing the month of poster designs, I realized this poster mimics the book cover for Power vs. Force by David Hawkins.")
-        .grid-2
-            +portfolioImg("./Frank-Ocean-poster.png", "The poster I made using lyrics from the song ”Seigfried” by Frank Ocean", "")
-            +portfolioImg("./Blonde-album-cover.png", "The album cover for ”Blonde” by Frank Ocean", "This poster uses my favorite painting by the Chinese artist Xue Jiye, reminiscent of the album cover for this song. He has permitted me to use his artwork for personal and commercial use.")
+    //- +fullWidth("bg-black", "text-white")
+    div(class="full-width block-full-width bg-black text-white")
+        div(style="padding: 1rem")
+            h2.text-white Final Posters
+            .grid-2
+                +portfolioImg("./Kid-Cudi-poster.png", "The poster I made using lyrics from the song ”Up Up & Away” by Kid Cudi", "")
+                +portfolioImg("./Post-Malone-album-cover.png", "The album cover for “Beerbongs and Bentleys” by Post Malone", "This poster of a Kid Cudi song from 2009 borrows colors from a Post Malone album cover from 2018.")
+            .grid-2
+                +portfolioImg("./Juice-WRLD-poster.png", "The poster I made using lyrics from the song ”Robbery” by Juice WRLD", "")
+                +portfolioImg("./Power-vs-Force-book-cover.png", "The book cover for “Power vs. Force” by David Hawkins", "As an avid reader, book cover designs live in my subconscious. After completing the month of poster designs, I realized this poster mimics the book cover for Power vs. Force by David Hawkins.")
+            .grid-2
+                +portfolioImg("./Frank-Ocean-poster.png", "The poster I made using lyrics from the song ”Seigfried” by Frank Ocean", "")
+                +portfolioImg("./Blonde-album-cover.png", "The album cover for ”Blonde” by Frank Ocean", "This poster uses my favorite painting by the Chinese artist Xue Jiye, reminiscent of the album cover for this song. He has permitted me to use his artwork for personal and commercial use.")
