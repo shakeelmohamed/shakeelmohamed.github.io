@@ -1,5 +1,3 @@
-// Mobile hamburger menu
-
 let menuOpen = false;
 
 function makeMenu() {
@@ -98,7 +96,6 @@ function lights() {
     }
 
     lightbox = makeLightbox(".lightbox");
-
     lightboxAlbum = makeGallery('.lightbox-album > img');
 
     // TODO: add click handler on image to close also
@@ -133,43 +130,6 @@ function fullPath(el) {
 let carousels = [];
 let carouselGalleries = [];
 let carouselTimer = null;
-
-/*
-TODO: make this a class, no reason not to
-
-class Carousel {
-  constructor(selector, interval = 2000) {
-    this.element = document.querySelector(selector);
-    this.slideIndex = 0;
-    this.interval = interval;
-    this.slides = this.element.children;
-    this.gallery = GLightbox({
-      ...galleryOptions,
-      selector: `${selector} > div > img`
-    });
-
-    this.start();
-  }
-
-  next() {
-    Array.from(this.slides).forEach((slide, i) => {
-      slide.style.display = i === this.slideIndex ? "block" : "none";
-    });
-    this.slideIndex = (this.slideIndex + 1) % this.slides.length;
-  }
-
-  start() {
-    this.next();
-    setInterval(() => this.next(), this.interval);
-  }
-}
-
-// Usage
-function makeSliders() {
-  document.querySelectorAll(".project-slider")
-    .forEach(slider => new Carousel(".project-slider"));
-}
- */
 
 // TODO: would be nice to add fade transitions, maybe a better way to do this
 // TODO: can allow an optional timer value, fallback to 2000ms
