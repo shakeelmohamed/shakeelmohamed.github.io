@@ -1,8 +1,26 @@
 const { test, expect } = require('@playwright/test');
-const { readdirSync, statSync } = require('node:fs');
-const { resolve, extname } = require('node:path');
+const { readdirSync, statSync, readFileSync } = require('node:fs');
+const { resolve, extname, join } = require('node:path');
 
 const DATA_DIR = resolve(process.cwd(), 'src/_data');
+
+function getFilesRecursively(dirPath, filterFn) {
+  const entries = readdirSync(dirPath, { withFileTypes: true });
+  const files = [];
+
+  for (const entry of entries) {
+    const fullPath = join(dirPath, entry.name);
+    if (entry.isDirectory()) {
+      files.push(...getFilesRecursively(fullPath, filterFn));
+      continue;
+    }
+    if (!filterFn || filterFn(fullPath)) {
+      files.push(fullPath);
+    }
+  }
+
+  return files;
+}
 
 function isPlainObject(value) {
   return value !== null && typeof value === 'object' && !Array.isArray(value);
@@ -129,4 +147,52 @@ test('all src/_data files match schema', async () => {
 
     validator(value, fileName);
   }
+});
+
+function validateMediaTypesPages() {
+  const PROJECTS_DIR = resolve(process.cwd(), 'src', 'projects');
+  const DOCS_DIR = resolve(process.cwd(), 'docs');
+  const mediaTypeCounts = new Map();
+
+  const projectFiles = getFilesRecursively(PROJECTS_DIR, (f) => f.endsWith('index.pug'));
+
+  for (const file of projectFiles) {
+    const content = readFileSync(file, 'utf8');
+
+    if (/^\s*-\s*archive\s*$/m.test(content)) continue;
+
+    const mediaMatch = content.match(/^media:\s*\n((?:\s*-\s*.+\n?)+)/m);
+    if (mediaMatch) {
+      const types = mediaMatch[1].match(/(?<=\s*-\s*).+/g) || [];
+      const uniqueTypes = [...new Set(types.map((t) => t.trim()))];
+
+      for (const mediaType of uniqueTypes) {
+        mediaTypeCounts.set(mediaType, (mediaTypeCounts.get(mediaType) || 0) + 1);
+      }
+    }
+  }
+
+  expect(mediaTypeCounts.size, 'Should discover at least one media type').toBeGreaterThan(0);
+
+  for (const [mediaType, expectedCount] of mediaTypeCounts) {
+    const slug = mediaType.replace(/\s+/g, '-').toLowerCase();
+    const pagePath = resolve(DOCS_DIR, slug, 'index.html');
+
+    expect(statSync(pagePath).isFile(), `Media type "${mediaType}" should generate /${slug}/`).toBe(true);
+
+    const html = readFileSync(pagePath, 'utf8');
+    const projectLinks = html.match(/<div class="block-project-listing"><a href="\/projects\/[^"]+"/g) || [];
+    const uniqueProjectUrls = new Set(
+      projectLinks
+        .map(m => m.match(/href="([^"]+)"/)[1])
+        .map(url => url.endsWith('/') ? url : url + '/')
+    );
+    const actualCount = uniqueProjectUrls.size;
+
+    expect(actualCount, `/${slug}/ should have ${expectedCount} projects, found ${actualCount}`).toBe(expectedCount);
+  }
+}
+
+test('mediaTypes collection generates correct pages with correct project counts', async () => {
+  validateMediaTypesPages();
 });
