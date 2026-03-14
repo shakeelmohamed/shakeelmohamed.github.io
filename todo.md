@@ -1,13 +1,11 @@
 # TODO
 
-
 Good reference for pug x 11ty:
 https://cardiff.marketing/pug-in-eleventy-making-it-work/
 
 # ASAP
 
 - [ ] Update labyrinth with new content
-- [ ] add cssnano
 - [ ] fix broken link to break presentation (on project page)
 
 ## Cleanup
@@ -29,6 +27,10 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 - [ ] SIMPLE web and mobile UI screens / scroll motion
 - [ ] motion (logo reveal, 15-30s piece, product UI features)
 - [ ] brand inspiration book (better name)
+- [ ] Midjourney: keep working on lighting in the installation scene, renders have some odd ghosting on the left side from the HDR
+- [ ] Midjourney: show prompts
+- [ ] Midjourney: could 3D model the exterior facade for the conf, and make a wayfinding program with a clear system + grid
+
 
 # Rothko
 
@@ -51,10 +53,26 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 - [ ] wristband motion... there is not face between inside/outside oops! Also make it loop perfectly
 - [ ] show motion design system (3x vertical social posts, LT, slates/bumpers) - show the system/grid, adaptive resizing
 - [ ] re-do social media mockup, looks a bit low saturation, dark mode UI would help
+- [ ] Redo mockups for TPS tickets, start from a clean INDD file -> PSD, maybe even do Blender mockups
+- [ ] use this for website particle physics (better than three.js): https://github.com/naughtyduk/particlesGL
+- [ ] process is missing
+- [ ] maybe show lightsail itself in the motion reveal?
+- [ ] make the 30s trailer idea I’ve been thinking about with music, etc.
+- [ ] digital signage motion posters
+    - [ ] may be easier in p5.js 2.0 instead of vibe coding... https://beta.p5js.org/reference/p5/worldtoscreen/; and custom shaders https://beta.p5js.org/tutorials/intro-to-glsl/; https://beta.p5js.org/examples/advanced-canvas-rendering-shader-as-a-texture/
+- [ ] more micro touchpoints, so many beautiful print materials - especially the vellum and metallic stuff. Play with Blender renders on this
+    - [ ] https://blender.stackexchange.com/questions/131930/translucent-material-a-sheet-of-paper-with-image-texture
+- [ ] Social media design ~~~~ need it in portfolio now! (thesis so far)
+- [ ] merch - where’s the jacket + hat?
 
 # Mindful Roman
 
-- [ ]
+- [ ] update colors to match personal ID system
+- [ ] poster has kinda tight leading on the 3 paragraphs, I think... need to check at full scale
+- [ ] do some motion gifs/stills of the font2 specimen sheets I made, fun play on the day/night concept
+- [ ] gendesign whole astrology chart... oh yeah
+- [ ] some ephemera like all 12 astrology sign info cards or stickers idk
+- [ ] lifestyle brand packaging mockups (actually, can just make a whole pkg lifestyle brand)
 
 # Ontology
 
@@ -73,20 +91,22 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 - [ ] show stickers from grad show
 - [ ] motion, like Kashida, etc.
 
-# TYPO
-
-- [ ]
-
 # Salgirah
 
-- [ ]
+- [ ] Salgirah + others, fix weird images sizes + replace all content, can make it flatter + break up the carousels so it reads cleanly
+
+
+# Digital Anarchy
+
+- [ ] Rough out some UI/web case study (maybe Digital Anarchy)
 
 # Projects
 
+- [ ] Make an overview gif for each project cover (fallback to still for OG)
 - [ ] check OG images for projects, then posts, etc. Consider gif/video versions
 - [ ] move all logo family / kit of parts stuff to the bottom of each project (before process)
 
-## Bio revision
+## About / Bio revision
 
 - [ ] Experience... consider Parenthetical titles or in 1 line summary at the top: Product Manager (Functionally leading roadmap without formal title)
 - [ ] Future bio update: I’m interested in environmental design, creative technology, and Arabic type design.
@@ -98,27 +118,23 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 
 Others
 - [ ] CTA footer on all pages?
-- [ ] Make an overview gif for each project cover (fallback to still for OG)
 - [ ] Make a separate landing page for freelance/contract work, e.g.: /services or something
     - [ ]  copy on this page should be something like "clarify brand, build trust" - basically speaking to the outcomes and results of design
 - [ ] Slideshows need arrow icons to be visible that there is more there (vs. looking like a gif)
 - [ ]   website (Thesis, TPS, Midjourney)
-- [ ] Rough out some UI/web case study (maybe Digital Anarchy)
-- [ ] TPS: use this for website particle physics (better than three.js): https://github.com/naughtyduk/particlesGL
 - [ ] Think about cursor or other interaction/motion points using the icon logo
 - [ ] accessibility check, definitely needs help: https://www.accessibilitychecker.org/audit/?website=shakeelmohamed.com&flag=ww#
+
+## Labyrinth
+
+- [ ] add more 3D stuff to labyrinth
+- [ ] Can update bio to speak about trained as a designer all along (clearly explain why I changed careers)
+- [ ] Labyrinth: include more things like WHP, community photos, etc.
+
+## Break
+
 - [ ] Move the giant inline form/CSS payload out of src/break/index.pug:85 into a partial or external asset.
 
-
-## P1
-
-- [ ] Mindful Roman: update colors to match personal ID system
-- [ ] APS: show micro ID system overview
-- [ ] Social media design ~~~~ need it in portfolio now! (thesis so far)
-- [ ] ALL CAPTIONS: add periods at the end check emmmmm
-- [ ] add more 3D stuff to labyrinth
-- [ ] TPS: process is missing
-- [ ] Can update bio to speak about trained as a designer all along (clearly explain why I changed careers)
 
 ## From Petrula
 
@@ -158,22 +174,10 @@ Hermes - highest vis sponsored studio ever, and being the TA is the validation f
 
 # P3
 
-
 - [ ] secret/hidden landing pages for video editing, tech, etc.
 - [ ] hmm (security) Add rel="noopener noreferrer" to external links
-- [ ] Midjourney: keep working on lighting in the installation scene, renders have some odd ghosting on the left side from the HDR
-- [ ] TPS maybe show lightsail itself in the motion reveal?
-- [ ] TPS make the 30s trailer idea I’ve been thinking about with music, etc.
-- [ ] TPS: digital signage motion posters
-    - [ ] may be easier in p5.js 2.0 instead of vibe coding... https://beta.p5js.org/reference/p5/worldtoscreen/; and custom shaders https://beta.p5js.org/tutorials/intro-to-glsl/; https://beta.p5js.org/examples/advanced-canvas-rendering-shader-as-a-texture/
-- [ ] more micro touchpoints, so many beautiful print materials - especially the vellum and metallic stuff. Play with Blender renders on this
-    - [ ] https://blender.stackexchange.com/questions/131930/translucent-material-a-sheet-of-paper-with-image-texture
-- [ ] merch - where’s the jacket + hat?
-- [ ] Mindful Roman: some ephemera like all 12 astrology sign info cards or stickers idk
-- [ ] Mindful Roman: lifestyle brand packaging mockups (actually, can just make a whole pkg lifestyle brand)
 - [ ] Media-specific pages could have more detail/context, scrollable images... TBD
     - [x] Type design list page (ideally I have all the tag-specific pages auto generated, otherwise I can curate the ones I need by skill (type design, branding, motion, editorial, web))
-- [ ] Midjourney: show prompts
 - [ ] maybe add a spacer for empty grid divs... https://github.com/shakeelmohamed/shakeelmohamed.github.io/pull/181#discussion_r2114879681; see also https://github.com/shakeelmohamed/shakeelmohamed.github.io/pull/181#discussion_r2114880664
 - [ ] multi-column text settings for all fonts would be helpful to see
 
@@ -195,8 +199,6 @@ Hermes - highest vis sponsored studio ever, and being the TA is the validation f
 - [ ] Fix issues with mobile font tester [WIP might be okay now]
 - [ ] All through MFA I was working on typefaces because they did X for me; the result is I can see comms symbols/forms in a whole new way. I understand the rigor of what it takes to find mastery of craft. [In interviews, speak about myself vs. describing the fonts themselves, consider speaking to hiring manager as non-designers.] How will it benefit a team?
     - [ ] ...(related) I have been modifying type for identity projects (Rothko and Midjourney) which began my interest in type design
-- [ ] Salgirah: can move it into labyrinth if I want to keep it anywhere (I’d rather keep it as a hidden page)
-- [ ] Labyrinth: include more things like WHP, community photos, etc.
 - [ ] WHP: maybe rename since Studio Matthews had a show called “your words have power”
 - [ ] Labyrinth description: value is my intelligent approach to work, skillful ability to work in simplicity and complexity, dedication to community, learning in formal/informal/digital settings - one of my biggest strengths
 - [ ] TODO: optimize email obfuscation: https://github.com/shakeelmohamed/shakeelmohamed.github.io/pull/161#discussion_r1976589880; and https://github.com/shakeelmohamed/shakeelmohamed.github.io/pull/161#discussion_r1976589879
@@ -204,22 +206,15 @@ Hermes - highest vis sponsored studio ever, and being the TA is the validation f
 
 ## My notes
 - [ ] Start posting on Behance!
-- [ ] Midjourney: could 3D model the exterior facade for the conf, and make a wayfinding program with a clear system + grid
-- [ ] Tests would be nice
 - [ ] Rework projects to have a cover.png shown at the top (ideally its the same image as the OG, just scaled up + higher res) -> scale should be about 1920x1200, the OG size feels too wide for cover images
 - [ ] Perhaps use cover.png instead of opengraph for project thumbnails
 - [ ] Can include small images for AIGA talks on about page... BELOW the resume area
-- [ ] Mindful Roman - poster has kinda tight leading on the 3 paragraphs, I think... need to check at full scale
-- [ ] Mindful Roman - do some motion gifs/stills of the font2 specimen sheets I made, fun play on the day/night concept
-- [ ] Mindful Roman - gendesign whole astrology chart... oh yeah
 - [ ] Overall, I need to clean up all overview descriptions, there are a bit loose at the moment. Writing center is a good move there.
-- [ ] Salgirah + others, fix weird images sizes + replace all content, can make it flatter + break up the carousels so it reads cleanly
 - [ ] Revisit footer design, some inspo: https://www.footer.design/, https://www.footer.design/styles/typographic
 
 
 ## Low priority
 
-- [ ] Redo mockups for TPS tickets, start from a clean INDD file -> PSD, maybe even do Blender mockups
 - [ ] learn about noreferrer, etc: https://linkbuilder.io/rel-noopener-noreferrer/
 - [ ] Rework semantics for SEO for: h1/h2/etc
 - [ ] JS to prevent bad breaks (widows / orphans)
@@ -230,8 +225,6 @@ Hermes - highest vis sponsored studio ever, and being the TA is the validation f
 ## Consider Revisiting
 
 - [ ] Footer: need a home link (rough added to my name, can it be more obvious) + headshot and clear CTA
-- [ ] Footer: on project pages, can have a next/prev project (need some logic for that)
-- [ ] Capitalize first letter of first tag (homepage under each project, and thesis page), within a project page, capitalize like “Media: Poster”; and then lowercase homepage “Branding, typography, leadership” to be consistent
 - [ ] HSTS support via cloudflare? Not sure if this still works with github pages
 - [ ] ALL CAPTIONS: automate check for periods at the end
-
+- [ ] add &nbsp; automatically between the last word gap to prevent widows
