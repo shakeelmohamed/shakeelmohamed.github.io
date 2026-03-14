@@ -21,7 +21,7 @@ const hasOutput = fs.existsSync(OUTPUT_SENTINEL);
 if (shouldSkipBuild()) {
   console.log('build: no changes detected, skipping');
 } else {
-  run('bun', ['run', 'postcss']);
+  run('bun', ['run', 'postcss'], { env: { NODE_ENV: 'production' } });
   run('bunx', ['@11ty/eleventy', '--input=src', '--output=docs']);
 }
 
@@ -69,10 +69,11 @@ function findNewestMtime(paths) {
   return maxMtime;
 }
 
-function run(command, args) {
+function run(command, args, options = {}) {
   const result = spawnSync(command, args, {
     stdio: 'inherit',
     cwd: ROOT,
+    env: { ...process.env, ...options.env },
   });
 
   if (result.status !== 0) {
