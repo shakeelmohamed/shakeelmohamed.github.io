@@ -10,11 +10,6 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 - [ ] add cssnano
 - [ ] fix broken link to break presentation (on project page)
 
-# Post styling
-
-- [ ] fix inline code blocks, type size is too big, etc.
-- [ ] 
-
 ## Cleanup
 
 - [ ] Replace all avif/gif files with .mp4
@@ -23,6 +18,7 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 - [ ] Fix right margin issues on tablet / half-width desktop size
 - [ ] Rework about page layout, everything is too dense as is
 - [ ] Lots of strange layout issues on mobile
+- [ ] Remove all backwards compat CSS after full semantic HTMl re-organization
 
 # Midjourney
 
