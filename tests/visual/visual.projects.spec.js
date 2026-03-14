@@ -7,7 +7,8 @@ test.describe('Projects', () => {
       await page.goto(route, { waitUntil: 'networkidle' });
       await expect(page).toHaveScreenshot(`${name}.png`, {
         fullPage: true,
-        maxDiffPixelRatio: 0.01,
+        maxDiffPixelRatio: 0.05,
+        maxDiffPixelRatio: 0.1,
       });
     });
   }

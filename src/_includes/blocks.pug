@@ -90,7 +90,7 @@ mixin featuredPost(post)
 
 mixin getFeaturedPosts()
     //- TODO: this might be nice as a 4 column grid on desktop, once cover photos are nice
-    .grid-2
+    .grid-2(style="margin-top:0rem; row-gap: 0.5rem;")
         each post in collections.featured
             +featuredPost(post)
 

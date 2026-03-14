@@ -108,7 +108,7 @@ test.describe('Local vs live visual comparison', () => {
         try {
           expect(localImage).toMatchSnapshot(snapshotName, {
             maxDiffPixelRatio: 0.05,
-            threshold: 0.25,
+            threshold: 0.1,
           });
         } catch (error) {
           mismatchedRoutes.push(route);
