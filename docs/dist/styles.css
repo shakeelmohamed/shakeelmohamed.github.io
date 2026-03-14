@@ -1122,6 +1122,11 @@ img.image-zoom {
     width: 1rem !important;
     margin-top: -0.5rem !important;
 }
+@media only screen and (max-width: 768px) {
+    .fsjs-wrapper {
+        flex-direction: column;
+    }
+}
 :root {
     --color-black: #000000;
     --color-white: #ffffff;
@@ -1889,7 +1894,7 @@ video,
     width: 100%;
 }
 /* Mobile styles only (no overlap with tablet/desktop min-width: 768px rules). */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
     .desktop-header-grid,
     .newfooter,
     .post-layout,

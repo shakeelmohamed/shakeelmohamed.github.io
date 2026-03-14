@@ -56,3 +56,10 @@
     width: 1rem !important;
     margin-top: -0.5rem !important;
 }
+
+
+@media only screen and (max-width: 768px) {
+    .fsjs-wrapper {
+        flex-direction: column;
+    }
+}
