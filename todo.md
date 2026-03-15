@@ -17,6 +17,7 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 - [ ] Rework about page layout, everything is too dense as is
 - [ ] Lots of strange layout issues on mobile
 - [ ] Remove all backwards compat CSS after full semantic HTMl re-organization
+- [ ] Add size optimization for og/cover images, can save lots of bandwidth on mobile
 
 # Midjourney
 
