@@ -1,3 +1,5 @@
+include blocks.pug
+
 //- TODO: there has to be a better way to do this...
 mixin projectMeta(key, value)
     p
@@ -8,22 +10,6 @@ mixin caption(cap)
     if cap
         p.caption !{cap}
 
-mixin optimizedImage(url, alt, className)
-    - var safeUrl = url || '';
-    - var isRaster = /\.(png|jpe?g)$/i.test(safeUrl);
-    - var avifUrl = isRaster ? safeUrl.replace(/\.(png|jpe?g)$/i, '.avif') : '';
-    - var webpUrl = isRaster ? safeUrl.replace(/\.(png|jpe?g)$/i, '.webp') : '';
-    - var encodedUrl = safeUrl ? encodeURI(safeUrl) : '';
-    - var encodedAvifUrl = avifUrl ? encodeURI(avifUrl) : '';
-    - var encodedWebpUrl = webpUrl ? encodeURI(webpUrl) : '';
-
-    if isRaster
-        picture
-            source(srcset=encodedAvifUrl, type='image/avif')
-            source(srcset=encodedWebpUrl, type='image/webp')
-            img(class=className, src=encodedUrl, alt=alt)
-    else
-        img(class=className, src=encodedUrl, alt=alt)
 
 mixin portfolioImg(url, alt, cap)
     //- TODO: think about lightbox behavior, do I want a full gallery?

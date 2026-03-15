@@ -48,12 +48,31 @@ mixin gridCols2()
 //-         p
 //-             script document.write("&copy; " + new Date().getFullYear() + " Shakeel Mohamed")
 
+
+mixin optimizedImage(url, alt, className)
+    - var safeUrl = url || '';
+    - var isRaster = /\.(png|jpe?g)$/i.test(safeUrl);
+    - var avifUrl = isRaster ? safeUrl.replace(/\.(png|jpe?g)$/i, '.avif') : '';
+    - var webpUrl = isRaster ? safeUrl.replace(/\.(png|jpe?g)$/i, '.webp') : '';
+    - var encodedUrl = safeUrl ? encodeURI(safeUrl) : '';
+    - var encodedAvifUrl = avifUrl ? encodeURI(avifUrl) : '';
+    - var encodedWebpUrl = webpUrl ? encodeURI(webpUrl) : '';
+
+    if isRaster
+        picture
+            source(srcset=encodedAvifUrl, type='image/avif')
+            source(srcset=encodedWebpUrl, type='image/webp')
+            img(class=className, src=encodedUrl, alt=alt)
+    else
+        img(class=className, src=encodedUrl, alt=alt)
+
 //- TODO: remix so blog listing can reuse part of this
 //- TODO: use coverImg instead of openGraphImage please
 mixin projectListing(project)
     div.block-project-listing
         a(href=project.url)
-            img.portfolio-cover.block-project-cover(src=project.data.openGraphImage, alt="Cover image for " + project.data.title + " project", width="1200", height="630")
+            //- img.portfolio-cover.block-project-cover(src=project.data.openGraphImage, alt="Cover image for " + project.data.title + " project", width="1200", height="630")
+            +optimizedImage(project.data.openGraphImage, "Cover image for " + project.data.title + " project", "")
         div.block-project-copy
             div.block-project-title
                 h2
