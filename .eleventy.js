@@ -11,8 +11,11 @@ module.exports = function(eleventyConfig) {
         "svg",
         "ico",
         "mp4",
+        
+        // TODO: once all are replaced, remove these
         "avif",
         "gif",
+        
         "pdf",
 
         "webmanifest",
@@ -116,10 +119,7 @@ module.exports = function(eleventyConfig) {
 
     // Simple collection that returns media type data for pagination
     eleventyConfig.addCollection("mediaTypes", function(collectionApi) {
-        console.log('=== MEDIA TYPES COLLECTION DEBUG ===');
-        const projects = collectionApi.getFilteredByTag("project");
-        console.log(`Found ${projects.length} projects`);
-        
+        const projects = collectionApi.getFilteredByTag("project");        
         const mediaTypes = new Set();
         
         projects.forEach(project => {
@@ -137,7 +137,7 @@ module.exports = function(eleventyConfig) {
           
           projectsForType = fillInPositionData(projectsForType);
 
-          console.log(`Media type "${type}" (${slug}): ${projectsForType.length} projects`);
+          // console.log(`Media type "${type}" (${slug}): ${projectsForType.length} projects`);
           
           return {
             name: type,
@@ -147,10 +147,7 @@ module.exports = function(eleventyConfig) {
             projects: projectsForType
           };
         });
-        
-        console.log(`Generated ${result.length} media type pages`);
-        console.log('=== END DEBUG ===');
-        
+                
         return result;
       });
 

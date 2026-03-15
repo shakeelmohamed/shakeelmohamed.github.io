@@ -1,32 +1,117 @@
-/* TODO: figure out the correct way to do this w/ Tailwind */
-
 /* BREAK specific styles */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
 
 body {
-    background-color: #FF5C0A !important;
+    background-color: var(--color-orange) !important;
 }
 
 .header-logo:hover, nav > a:hover {
-    color: white !important;
+    color: var(--color-white) !important;
 }
 
-h1, h2, h3, h4, h5, .prose h1, .prose h2, .prose h3, .prose h4, .prose h5 {
-    color: #002855 !important;
+h1, h2, h3, h4, h5 {
+    color: var(--color-navy) !important;
     font-family: Inter, Arial, sans-serif;
     font-weight: 700;
 }
 
-p, .prose p {
+p {
     font-family: Inter, Arial, sans-serif;
-    color: #002855 !important;
+    color: var(--color-navy) !important;
 }
 
 .social-link, .mailto {
-    color: white !important;
+    color: var(--color-white) !important;
 }
 
 .social-link:hover, .mailto:hover {
-    color: #002855 !important;
+    color: var(--color-navy) !important;
+}
+
+h2.break {
+    font-size: 2.25rem;
+    line-height: normal;
+}
+
+@media (min-width: 1024px) {
+    h2.break {
+        font-size: 6rem;
+        line-height: 1;
+    }
+}
+
+.break-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+.break-hero-arrow {
+    align-self: center;
+}
+
+.break-hero-logo {
+    inset-inline: 0;
+}
+
+.break-hero-mark {
+    width: 100%;
+}
+
+.break-hero-divider {
+    width: 100%;
+    margin-top: 6rem;
+    border: 2px solid var(--color-navy);
+}
+
+.break-content-shell {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+@media (min-width: 1024px) {
+    .break-content-shell {
+        margin-left: 12rem;
+        margin-right: 12rem;
+    }
+}
+
+.break-section-content {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.break-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.break-section-heading.is-numbered {
+    color: var(--color-white) !important;
+}
+
+.break-section-divider {
+    width: 110%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    position: relative;
+    left: 50%;
+    border: 1px solid var(--color-navy);
+    transform: translateX(-50%);
+}
+
+@media (min-width: 1024px) {
+    .break-section-content {
+        margin-top: 6rem;
+        margin-bottom: 6rem;
+    }
 }

@@ -1,8 +1,3 @@
-mixin fullWidth(bgClass, textClass)
-    div.pt-8.pb-12(class="full-width " + bgClass + " " + textClass)
-        .main
-            block
-
 mixin myEmail(text)
     +mailto("hello", "shakeel.design", "", text)
 
@@ -22,20 +17,8 @@ mixin mailto(user, domain, subject, text)
 //- TODO: list of projects / blog posts; should be reusable
 
 mixin gridCols2()
-    div(class="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-8 gap-y-2")
+    div.block-grid-cols-2
         block
-
-//- TODO: This should go away very soon, currently used on: projects, links - both need redesigns
-mixin centeredPage()
-    //-
-    //- DO NOT TOUCH THIS FOR NOW!
-    //- *** Blog posts are looking perfect on desktop. ***
-    //- Other pages,not so much...
-    //- Regular pages needs feel cohesive with the homepage
-    //-
-    div.centered-page(class="mx-auto place-content-center self-center lg:w-1/2")
-        block
-
 
 //- mixin footer()
 //-     footer
@@ -65,49 +48,68 @@ mixin centeredPage()
 //-         p
 //-             script document.write("&copy; " + new Date().getFullYear() + " Shakeel Mohamed")
 
+
+mixin optimizedImage(url, alt, className)
+    - var safeUrl = url || '';
+    - var isRaster = /\.(png|jpe?g)$/i.test(safeUrl);
+    - var avifUrl = isRaster ? safeUrl.replace(/\.(png|jpe?g)$/i, '.avif') : '';
+    - var webpUrl = isRaster ? safeUrl.replace(/\.(png|jpe?g)$/i, '.webp') : '';
+    - var encodedUrl = safeUrl ? encodeURI(safeUrl) : '';
+    - var encodedAvifUrl = avifUrl ? encodeURI(avifUrl) : '';
+    - var encodedWebpUrl = webpUrl ? encodeURI(webpUrl) : '';
+
+    if isRaster
+        picture
+            source(srcset=encodedAvifUrl, type='image/avif')
+            source(srcset=encodedWebpUrl, type='image/webp')
+            img(class=className, src=encodedUrl, alt=alt)
+    else
+        img(class=className, src=encodedUrl, alt=alt)
+
 //- TODO: remix so blog listing can reuse part of this
 //- TODO: use coverImg instead of openGraphImage please
 mixin projectListing(project)
-    div.mb-2
+    div.block-project-listing
         a(href=project.url)
-            img.portfolio-cover.w-full(src=project.data.openGraphImage, alt="Cover image for " + project.data.title + " project", width="1200", height="630")
-        div.pt-1
-            div(class="text-sizeh2 font-bold")
+            //- img.portfolio-cover.block-project-cover(src=project.data.openGraphImage, alt="Cover image for " + project.data.title + " project", width="1200", height="630")
+            +optimizedImage(project.data.openGraphImage, "Cover image for " + project.data.title + " project", "")
+        div.block-project-copy
+            div.block-project-title
                 h2
                     a(href=project.url) #{project.data.title}
             //- TODO: need a max-width here so the lines aren't super long
             div.project-meta
-                p.text-gray-meta!= project.data.mediaLinks
+                p.block-project-meta!= project.data.mediaLinks
 
 //- TODO: design this component
 mixin getPosts(recent=false)
     - var source = collections.recentPosts;
     if !recent
         - source = collections.post;
-    ul.list-none
+    ul.block-list-reset
         each post in source
-            li.flex.flex-wrap.items-baseline.py-2
-                div(class="basis-1/4")
-                    p.whitespace-nowrap #{post.data.cleanDate} &nbsp;
-                div(class="basis-3/4")
-                    p.bold.pb-1
+            li.block-post-list-item
+                div.block-post-list-date
+                    p.block-nowrap #{post.data.cleanDate} &nbsp;
+                div.block-post-list-content
+                    p.block-post-title
                         a(href=post.url) #{post.data.title}
                     //- TODO: make tags clickable
                     p #{post.data.categories}
 
 mixin featuredPost(post)
-    div.py-4
+    div.block-featured-post
         a(href=post.url)
             //- TODO: Once I have beautiful cover images (not branded OG images), utilize those here
             //- img.portfolio-cover.w-full.pb-1(src=post.data.openGraphImage alt="Cover image for " + post.data.title)
-            p.bold.h2 #{post.data.title}
+            p.block-featured-title #{post.data.title}
         p #{post.data.description}
         //- p #{post.data.categories}
 
 
 mixin getFeaturedPosts()
     //- TODO: this might be nice as a 4 column grid on desktop, once cover photos are nice
-    +gridCols2()
+    .grid-2(style="margin-top:0rem; row-gap: 0.5rem;")
         each post in collections.featured
             +featuredPost(post)
 
@@ -115,12 +117,12 @@ mixin getMentions(recent=false)
     - var source = mentions.recent;
     if !recent
         - source = mentions.all;
-    .flex.flex-wrap.items-baseline.flex-col
+    .block-mentions-container
         if source.length > 0
             ul
             each mention in source
-                li.list-none.pb-2
-                    div(class="basis-1/4")
-                        p.whitespace-nowrap.text-left #{mention.date} &nbsp;
-                    div(class="basis-3/4")
-                        a(href=mention.url, class="font-bold hover:text-orange" target="_blank") #{mention.title}
+                li.block-mention-item
+                    div.block-post-list-date
+                        p.block-nowrap.block-text-left #{mention.date} &nbsp;
+                    div.block-post-list-content
+                        a(href=mention.url, class="block-link-strong" target="_blank") #{mention.title}

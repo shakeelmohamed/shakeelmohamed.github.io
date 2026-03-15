@@ -50,11 +50,11 @@ block append pageScripts
 
 block content
     if coverImg
-        .grid-1
+        .project-cover-section
             +portfolioImg(coverImg, name + " cover image", "")
             br
-    .grid-1
-        h1.pb-0 #{title}
+    .project-header
+        h1 #{title}
         div.project-meta
             p.text-gray-meta!= mediaLinks
     .grid-2
@@ -80,6 +80,6 @@ block content
     if relatedProjects.prev && relatedProjects.next
         div
             hr
-            .grid-2.keepDesktop
+            .grid-2
                 +prevProject(relatedProjects.prev)
                 +nextProject(relatedProjects.next)

@@ -3,6 +3,7 @@ layout: post
 date: 2021-04-15
 title: My Approach to Code Reviews
 description: This is my attempt to codify the instinctive and intuitive approach I take to code reviews.
+openGraphImage: "header.png"
 tags:
     - post
     - development

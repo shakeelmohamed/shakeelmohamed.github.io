@@ -9,7 +9,7 @@
         <meta name="author" content="Shakeel Mohamed">
         <meta property="og:url" content="https://shakeelmohamed.com/projects/thesis/">
         <meta property="og:title" content="MFA Thesis: Applied Designer | Shakeel Mohamed — Strategic Brand Designer">
-        <meta property="og:image" content="https://shakeelmohamed.com/projects/thesis/./img/Thesis - opengraph.png">
+        <meta property="og:image" content="https://shakeelmohamed.com/projects/thesis/img/Thesis - opengraph.png">
         <meta property="og:description" content="Applied Designer seeks to empower graphic designers to use their skills in other jobs and industries.">
         <meta property="og:type" content="website">
         <meta property="twitter:card" content="summary_large_image">
@@ -17,7 +17,7 @@
         <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://shakeelmohamed.com/#person","name":"Shakeel Mohamed","url":"https://shakeelmohamed.com","email":"mailto:hello@shakeel.design","jobTitle":"Strategic Brand Designer","sameAs":["https://linkedin.com/in/shakeelmohamed","https://instagram.com/shakeel.design","https://github.com/shakeelmohamed"]},{"@type":"WebSite","@id":"https://shakeelmohamed.com/#website","url":"https://shakeelmohamed.com","name":"Shakeel Mohamed","description":"Applied Designer seeks to empower graphic designers to use their skills in other jobs and industries.","inLanguage":"en"}]}</script>
         <link rel="stylesheet" href="https://use.typekit.net/rgm5cfh.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/material-icons@1.13.12/iconfont/material-icons.min.css">
-        <link rel="stylesheet" href="/dist/tailwind.css">
+        <link rel="stylesheet" href="/dist/styles.css">
         <link rel="sitemap" type="text/plain" title="Sitemap" href="/sitemap.txt">
         <link href="/feed.xml" rel="alternate" type="application/rss+xml" title="Shakeel Mohamed’s blog posts">
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -25,13 +25,13 @@
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
         <link rel="manifest" href="/site.webmanifest">
     </head>
-    <body class="bg-white">
-        <div class="mobile-only mobileHeader">
-            <div class="grid-2 flex-row justify-between">
+    <body>
+        <header class="mobile-only mobileHeader">
+            <div class="grid-2 mobile-header-row">
                 <div>
                     <div class="mobileBranding"><a class="logo-wrapper" href="/"><img src="/img/Shakeel_Mohamed_wordmark.svg" alt="Shakeel Mohamed wordmark logo set in the Mindful Roman typeface which he designed"/></a><br/><strong><a href="mailto:hello@shakeel.design" target="_blank">hello@shakeel.design</a></strong></div>
                 </div>
-                <div class="hamburgerIcon"><span class="material-icons text-2xl">menu</span></div>
+                <div class="hamburgerIcon"><span class="material-icons">menu</span></div>
             </div>
             <div class="menuItems">
                 <h2><a href="/">Work</a></h2>
@@ -41,7 +41,7 @@
                 <h2><a href="mailto:hello@shakeel.design" target="_blank">hello@shakeel.design</a></h2>
             </div>
             <hr class="mobile-only"/>
-        </div>
+        </header>
         <div class="newheader sticky top-0">
             <div class="grid-4">
                 <div>
@@ -72,9 +72,9 @@
             </div>
             <hr class="mb-2"/>
         </div>
-        <main class="mb-4">
-            <div class="grid-1">
-                <h1 class="pb-0">MFA Thesis: Applied Designer</h1>
+        <main>
+            <div class="project-header">
+                <h1>MFA Thesis: Applied Designer</h1>
                 <div class="project-meta">
                     <p class="text-gray-meta"><a href="/book-design">Book Design</a>, <a href="/branding">Branding</a>, <a href="/environmental">Environmental</a>, <a href="/print">Print</a>, <a href="/research">Research</a></p>
                 </div>
@@ -83,7 +83,7 @@
                 <div class="project-meta">
                     <p><span class="bold">Tools:&nbsp;</span>InDesign, Illustrator, three.js, p5.js, Processing, basil.js, Blender, Photoshop, Figma</p>
                     <p><span class="bold">Goal:&nbsp;</span>Expand the perceived value of designers.</p>
-                    <p><span class="bold">Recognition:&nbsp;</span>Presented initial thesis research at Graph*c Content, a conference hosted by AIGA Los Angeles.</p>
+                    <p><span class="bold">Recognition:&nbsp;</span>Presented at the 2025 AIGA Design Conference and 2024 AIGA Los Angeles Graph*c Content.</p>
                 </div>
                 <div>&nbsp;</div>
             </div>
@@ -134,9 +134,13 @@
             <source srcset="./img/Thesis%20-%204%20-%20nametags.avif" type="image/avif"/>
             <source srcset="./img/Thesis%20-%204%20-%20nametags.webp" type="image/webp"/><img class="lightbox" src="./img/Thesis%20-%204%20-%20nametags.png" alt=""/>
         </picture>
-        <p class="caption">At networking events, Applied Designers can create name tags based on their relevant career stage.</p>
+        <p class="caption">At networking events, Applied Designers can create name tags based on their relevant career&nbsp;stage.</p>
     </div>
-    <div class="project-content"><img class="lightbox" src="./img/Thesis%20-%20microsite.gif" alt=""/>
+    <div class="project-content">
+        <video class="video16by9" width="1920" height="1080" autoplay="" loop="" muted="" playsinline="" preload="metadata">
+            <source src="./img/Thesis%20-%20microsite.webm" type="video/webm"/>
+            <source src="./img/Thesis%20-%20microsite.mp4" type="video/mp4"/>
+        </video>
         <p class="caption">After engaging with the booth, designers can explore the 12 career archetypes on the microsite. Here, the logo comes to life as a 3 dimensional interface.</p>
     </div>
 </div>
@@ -178,7 +182,7 @@
 <h2>Process</h2><br/>
 <div class="grid-1">
     <div class="project-content"><img class="lightbox" src="./img/Applied_Designer_processing_sketch.gif" alt=""/>
-        <p class="caption">I believe the design industry has no fixed position, so why should the logo for my thesis be a fixed form? The logo was created with, and came to life from my code written in Processing.</p>
+        <p class="caption">I believe the design industry has no fixed position, so why should the logo for my thesis be a fixed form? The logo was created with, and came to life from my code written in&nbsp;Processing.</p>
     </div>
 </div>
 <div class="grid-1">
@@ -235,25 +239,25 @@
 </div>
             <div>
                 <hr>
-                <div class="grid-2 keepDesktop">
+                <div class="grid-2">
                     <div><a href="/projects/mark-rothko/">
-                            <p class="bold text-left"><span class="material-icons align-text-bottom">arrow_back</span>&nbsp; Mark Rothko Documentary Campaign
+                            <p class="bold project-breadcrumb-title is-prev"><span class="material-icons project-breadcrumb-icon">arrow_back</span>&nbsp; Mark Rothko Documentary Campaign
                             </p>
-                            <p class="caption desktop-only text-left">Book Design, Branding, Print, Research</p></a></div>
+                            <p class="caption desktop-only project-breadcrumb-caption is-prev">Book Design, Branding, Print, Research</p></a></div>
                     <div><a href="/projects/planetary-society/">
-                            <p class="bold text-right">Planetary Society Rebrand &nbsp;<span class="material-icons align-text-bottom">arrow_forward</span>
+                            <p class="bold project-breadcrumb-title is-next">Planetary Society Rebrand &nbsp;<span class="material-icons project-breadcrumb-icon">arrow_forward</span>
                             </p>
-                            <p class="caption desktop-only text-right">Branding, Motion, Print, Research, Strategy, Type Design</p></a></div>
+                            <p class="caption desktop-only project-breadcrumb-caption is-next">Branding, Motion, Print, Research, Strategy, Type Design</p></a></div>
                 </div>
             </div>
         </main>
-        <hr class="mb-0-5-important"/>
-        <div class="newfooter grid-4 pb-0">
+        <hr/>
+        <footer class="newfooter">
             <div><br class="mobile-only"/><a class="logo-wrapper" href="/">
                     <script>document.write("&copy; " + new Date().getFullYear() + " Shakeel Mohamed.")</script></a></div>
             <div><a href="https://instagram.com/shakeel.design" target="_blank">Instagram</a></div>
             <div><a href="https://linkedin.com/in/shakeelmohamed" target="_blank">LinkedIn</a></div>
-            <div class="deskright-mobileleft"><a href="mailto:hello@shakeel.design" target="_blank"><span class="mailto">
+            <div><a href="mailto:hello@shakeel.design" target="_blank"><span class="mailto">
                         <script type="text/javascript">
                             function gen_mail_to_link(lhs, rhs, subject, text) {
                                 const rhs_subj = subject ? `${rhs}?subject=${subject}` : rhs;
@@ -264,7 +268,7 @@
                             gen_mail_to_link("hello", "shakeel.design", "", "")
                             
                         </script></span></a></div>
-        </div>
+        </footer>
     </body>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-36907845-2"></script>
     <script>

@@ -20,7 +20,7 @@
         <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://shakeelmohamed.com/#person","name":"Shakeel Mohamed","url":"https://shakeelmohamed.com","email":"mailto:hello@shakeel.design","jobTitle":"Strategic Brand Designer","sameAs":["https://linkedin.com/in/shakeelmohamed","https://instagram.com/shakeel.design","https://github.com/shakeelmohamed"]},{"@type":"WebSite","@id":"https://shakeelmohamed.com/#website","url":"https://shakeelmohamed.com","name":"Shakeel Mohamed","description":"Designing the logo for my team's senior project, Exbedia, sponsored by Expedia","inLanguage":"en"}]}</script>
         <link rel="stylesheet" href="https://use.typekit.net/rgm5cfh.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/material-icons@1.13.12/iconfont/material-icons.min.css">
-        <link rel="stylesheet" href="/dist/tailwind.css">
+        <link rel="stylesheet" href="/dist/styles.css">
         <link rel="sitemap" type="text/plain" title="Sitemap" href="/sitemap.txt">
         <link href="/feed.xml" rel="alternate" type="application/rss+xml" title="Shakeel Mohamed’s blog posts">
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -28,13 +28,13 @@
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
         <link rel="manifest" href="/site.webmanifest">
     </head>
-    <body class="bg-white">
-        <div class="mobile-only mobileHeader">
-            <div class="grid-2 flex-row justify-between">
+    <body>
+        <header class="mobile-only mobileHeader">
+            <div class="grid-2 mobile-header-row">
                 <div>
                     <div class="mobileBranding"><a class="logo-wrapper" href="/"><img src="/img/Shakeel_Mohamed_wordmark.svg" alt="Shakeel Mohamed wordmark logo set in the Mindful Roman typeface which he designed"/></a><br/><strong><a href="mailto:hello@shakeel.design" target="_blank">hello@shakeel.design</a></strong></div>
                 </div>
-                <div class="hamburgerIcon"><span class="material-icons text-2xl">menu</span></div>
+                <div class="hamburgerIcon"><span class="material-icons">menu</span></div>
             </div>
             <div class="menuItems">
                 <h2><a href="/">Work</a></h2>
@@ -44,7 +44,7 @@
                 <h2><a href="mailto:hello@shakeel.design" target="_blank">hello@shakeel.design</a></h2>
             </div>
             <hr class="mobile-only"/>
-        </div>
+        </header>
         <div class="newheader sticky top-0">
             <div class="grid-4">
                 <div>
@@ -75,20 +75,20 @@
             </div>
             <hr class="mb-2"/>
         </div>
-        <main class="mb-4">
-            <div class="grid-4">
+        <main>
+            <article class="post-layout">
                 <div>
                     <p>2015-03-19</p>
                 </div>
                 <div><strong>Hacker’s First Logo, Designing with PowerPoint</strong></div>
-                <div class="col-start-3 col-end-5">
-                    <div class="prose"><blockquote>
+                <div class="post-body">
+                    <div class="post-content"><blockquote>
 <p>Disclaimer: The contents of this post are for informational purposes only. No brand, trademark, or copyright infringement is intended.</p>
 </blockquote>
 <p>I’m a senior computer science student at Seattle University. For my senior project I’m working with 3 CS classmates and Expedia, Inc. to prototype a new travel experience mobile app. Our project is conceptually similar to Airbnb. We mashed the word bed into Expedia and came up with Ex <strong>bed</strong> ia (pronounced: Ex-bed-ee-uh) as our project name. <strong>For our app we needed to design a logo, so I thought I’d ask my coworker Brian for some help.</strong></p>
 <blockquote>
 <h2>“Oh, yeah. Let’s just do it in PowerPoint.”</h2>
-<p>####— Brian Reyes (Sr. UX Designer)</p>
+<p>— Brian Reyes (Sr. UX Designer)</p>
 </blockquote>
 <p>Wait. PowerPoint for design!? He went on to explain how some people use PowerPoint for design mockups because it’s easily available, and people generally know how to use it.</p>
 <p>I was thinking this would be a total disaster, but it was actually a lot of fun. I should probably note here that I’ve been interested in UX/design for the past few years but haven’t pursued my interests — until now.</p>
@@ -128,15 +128,15 @@
 Special thanks to Juan Ulloa &amp; Brian Reyes for reviewing this post.</p>
 </div>
                 </div>
-            </div>
+            </article>
         </main>
-        <hr class="mb-0-5-important"/>
-        <div class="newfooter grid-4 pb-0">
+        <hr/>
+        <footer class="newfooter">
             <div><br class="mobile-only"/><a class="logo-wrapper" href="/">
                     <script>document.write("&copy; " + new Date().getFullYear() + " Shakeel Mohamed.")</script></a></div>
             <div><a href="https://instagram.com/shakeel.design" target="_blank">Instagram</a></div>
             <div><a href="https://linkedin.com/in/shakeelmohamed" target="_blank">LinkedIn</a></div>
-            <div class="deskright-mobileleft"><a href="mailto:hello@shakeel.design" target="_blank"><span class="mailto">
+            <div><a href="mailto:hello@shakeel.design" target="_blank"><span class="mailto">
                         <script type="text/javascript">
                             function gen_mail_to_link(lhs, rhs, subject, text) {
                                 const rhs_subj = subject ? `${rhs}?subject=${subject}` : rhs;
@@ -147,7 +147,7 @@ Special thanks to Juan Ulloa &amp; Brian Reyes for reviewing this post.</p>
                             gen_mail_to_link("hello", "shakeel.design", "", "")
                             
                         </script></span></a></div>
-        </div>
+        </footer>
     </body>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-36907845-2"></script>
     <script>

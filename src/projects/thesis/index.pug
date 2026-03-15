@@ -3,7 +3,7 @@ layout: project
 title: "MFA Thesis: Applied Designer"
 description: Applied Designer seeks to empower graphic designers to use their skills in other jobs and industries.
 //- TODO: update OG so stroke weight matches perfectly (make the comp in Processing probably)
-openGraphImage: "./img/Thesis - opengraph.png"
+openGraphImage: "img/Thesis - opengraph.png"
 when: 2024–2025
 tools: InDesign, Illustrator, three.js, p5.js, Processing, basil.js, Blender, Photoshop, Figma
 tags:
@@ -16,7 +16,7 @@ media:
     - environmental
     - print
 goal: Expand the perceived value of designers.
-recognition: Presented initial thesis research at Graph*c Content, a conference hosted by AIGA Los Angeles.
+recognition: Presented at the 2025 AIGA Design Conference and 2024 AIGA Los Angeles Graph*c Content.
 position: 3
 ---
 include ../../_includes/project_utils.pug
@@ -41,8 +41,8 @@ block content
         +portfolioImg("./img/Thesis - 3 - brochure spreads.png", "", "The career stages brochure maps out the 5 stages of a designer’s career, and lists other services Applied Designer offers, like personalized coaching.")
 
     .grid-1
-        +portfolioImg("./img/Thesis - 4 - nametags.png", "", "At networking events, Applied Designers can create name tags based on their relevant career stage.")
-        +portfolioImg("./img/Thesis - microsite.gif", "", "After engaging with the booth, designers can explore the 12 career archetypes on the microsite. Here, the logo comes to life as a 3 dimensional interface.")
+        +portfolioImg("./img/Thesis - 4 - nametags.png", "", "At networking events, Applied Designers can create name tags based on their relevant career&nbsp;stage.")
+        +animation("./img/Thesis - microsite.mp4", "After engaging with the booth, designers can explore the 12 career archetypes on the microsite. Here, the logo comes to life as a 3 dimensional interface.")
         //- +portfolioImg("./img/Applied_Designer_thesis_loader.gif", "Wireframe animation of a dodecahedron, the Applied Designer logo, slowly rotating on a gray background.", "")
 
     .grid-2
@@ -62,7 +62,7 @@ block content
     //- TODO: I should not need this br (see how Ontology is done), might be a CSS issue with .grid-1 vs grid-2
     br
     .grid-1
-        +portfolioImg("./img/Applied_Designer_processing_sketch.gif", "", "I believe the design industry has no fixed position, so why should the logo for my thesis be a fixed form? The logo was created with, and came to life from my code written in Processing.")
+        +portfolioImg("./img/Applied_Designer_processing_sketch.gif", "", "I believe the design industry has no fixed position, so why should the logo for my thesis be a fixed form? The logo was created with, and came to life from my code written in&nbsp;Processing.")
     .grid-1
         +portfolioImg("./img/thesis_blender_process.png", "", "Working on the trade show booth 3D model in Blender.")
     .grid-2

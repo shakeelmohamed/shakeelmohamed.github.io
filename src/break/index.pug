@@ -12,20 +12,20 @@ extends ../_includes/layouts/break.pug
 //- TODO: solve the whole alignment mess via this guy: https://codepen.io/shakeelmohamed-the-vuer/pen/OJQBEKy?editors=1000
 //- I think body gets a flex basis which is kinda interesting...
 mixin bigBreak()
-    div.flex.flex-col.justify-between.min-h-screen
+    section.break-hero
         div
-        img.self-center(src="./down-arrow.svg" alt="Downward arrow")
-        .bottom-0.inset-x-0
-            img.full-width(src="./BREAK-large-type.svg" alt="BREAK logo in navy at full page width")
-    hr.text-navy.mt-24.full-width.border-2
+        img.break-hero-arrow(src="./down-arrow.svg" alt="Downward arrow")
+        .break-hero-logo
+            img.break-hero-mark(src="./BREAK-large-type.svg" alt="BREAK logo in navy at full page width")
+    hr.break-hero-divider
 
 
 block content
     link(href="./styles.css" rel="stylesheet")
-    div.top-0.inset-x-0
+    div.break-page
         +bigBreak()
         //- TODO: these <section>s are breaking Safari reader mode, ugh
-        .flex.flex-col(class="lg:mx-48 mx-8")
+        .break-content-shell
             +section(null, "Background")
                 //- TODO: bring in photos from the original deck, showcase authentic storytelling
                 //- https://docs.google.com/presentation/d/1Ghu_DhpO3fPKq3PVFLh7qWuVXUIdD2zIHKMRhF21hhQ/edit#slide=id.gd12d243c76_0_36
@@ -64,18 +64,18 @@ block content
                 +breakForm()
 
 mixin section(num, text)
-    div(class="flex flex-col items-start py-12")
+    section.break-section
         if num
             //- TODO: fix left flush alignment on the heading AND all content within the section
-            h2.break.text-white-important #{num}. #{text}
+            h2.break.break-section-heading.is-numbered #{num}. #{text}
         else
-            h2.break #{text}
-        div(class="my-8 mx-auto lg:my-24")
+            h2.break.break-section-heading #{text}
+        div.break-section-content
             block
         //- TODO: this is really hacky, and easier way is to
         //- a) decrease the parent x-margin AND
         //- b) add a padding to the section content
-        hr.text-navy.my-4.border.min-w-[110%].relative.left-1/2.-translate-x-1/2
+        hr.break-section-divider
 
 mixin subhead(text)
     h3 #{text}

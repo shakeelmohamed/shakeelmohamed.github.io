@@ -1,3 +1,5 @@
+include blocks.pug
+
 //- TODO: there has to be a better way to do this...
 mixin projectMeta(key, value)
     p
@@ -8,22 +10,6 @@ mixin caption(cap)
     if cap
         p.caption !{cap}
 
-mixin optimizedImage(url, alt, className)
-    - var safeUrl = url || '';
-    - var isRaster = /\.(png|jpe?g)$/i.test(safeUrl);
-    - var avifUrl = isRaster ? safeUrl.replace(/\.(png|jpe?g)$/i, '.avif') : '';
-    - var webpUrl = isRaster ? safeUrl.replace(/\.(png|jpe?g)$/i, '.webp') : '';
-    - var encodedUrl = safeUrl ? encodeURI(safeUrl) : '';
-    - var encodedAvifUrl = avifUrl ? encodeURI(avifUrl) : '';
-    - var encodedWebpUrl = webpUrl ? encodeURI(webpUrl) : '';
-
-    if isRaster
-        picture
-            source(srcset=encodedAvifUrl, type='image/avif')
-            source(srcset=encodedWebpUrl, type='image/webp')
-            img(class=className, src=encodedUrl, alt=alt)
-    else
-        img(class=className, src=encodedUrl, alt=alt)
 
 mixin portfolioImg(url, alt, cap)
     //- TODO: think about lightbox behavior, do I want a full gallery?
@@ -64,11 +50,27 @@ mixin youtube(url, cap)
         iframe.video16by9(src=url title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="")
         +caption(cap)
 
+mixin animation(url, cap)
+    - var safeUrl = url || '';
+    - var webmUrl = safeUrl.replace(/\.mp4$/i, '.webm');
+    - var encodedMp4Url = safeUrl ? encodeURI(safeUrl) : '';
+    - var encodedWebmUrl = safeUrl ? encodeURI(webmUrl) : '';
+    .project-content
+        video.video16by9(width="1920" height="1080" autoplay="" loop="" muted="" playsinline="" preload="metadata")
+            source(src=encodedWebmUrl type="video/webm")
+            source(src=encodedMp4Url type="video/mp4")
+        +caption(cap)
+
 //- TODO: play with plyr.io and skin the video player a bit nicer
 mixin video(url, cap, autoplay=false)
+    - var safeUrl = url || '';
+    - var webmUrl = safeUrl.replace(/\.mp4$/i, '.webm');
+    - var encodedMp4Url = safeUrl ? encodeURI(safeUrl) : '';
+    - var encodedWebmUrl = safeUrl ? encodeURI(webmUrl) : '';
     .project-content
         video.video16by9(width="1920" height="1080" controls="" data-video="0" autoplay=autoplay)
-            source(src=url type="video/mp4")
+            source(src=encodedWebmUrl type="video/webm")
+            source(src=encodedMp4Url type="video/mp4")
         +caption(cap)
 
 
@@ -84,19 +86,19 @@ mixin fontTesterImports()
 
 //- TODO: mobile wrap issues here
 mixin projectBreadcrumb(proj, direction)
-    - var align = direction == "Next" ? "right" : "left";
+    - var modifierClass = direction == "Next" ? "is-next" : "is-prev";
     - var arrow_symbol = direction == "Next" ? "arrow_forward" : "arrow_back";
 
     div
         a(href=proj.url)
-            p.bold(class="text-" + align)
+            p.bold.project-breadcrumb-title(class=modifierClass)
                 if direction == "Next"
                     | #{proj.data.title} &nbsp;
-                    span.material-icons.align-text-bottom #{arrow_symbol}
+                    span.material-icons.project-breadcrumb-icon #{arrow_symbol}
                 else
-                    span.material-icons.align-text-bottom #{arrow_symbol}
+                    span.material-icons.project-breadcrumb-icon #{arrow_symbol}
                     | &nbsp; #{proj.data.title}
-            p.caption.desktop-only(class="text-" + align) #{proj.data.mediaString}
+            p.caption.desktop-only.project-breadcrumb-caption(class=modifierClass) #{proj.data.mediaString}
 
 mixin prevProject(proj)
     +projectBreadcrumb(proj, "Previous")

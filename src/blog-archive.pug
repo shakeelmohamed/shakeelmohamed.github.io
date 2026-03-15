@@ -7,9 +7,8 @@ canonical: "/blog-archive"
 extends _includes/layouts/base.pug
 
 block content
-    +gridCols2()
+    .grid-2
         div
             h1 Blog Archive
-            p #{description}
-            h2 All Posts
+            p.subhead #{description}
             +getPosts()

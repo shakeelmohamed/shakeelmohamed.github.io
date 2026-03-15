@@ -3,7 +3,7 @@ layout: project
 title: "Planetary Society Rebrand"
 short: Planetary Society
 description: "Bringing a philosophical and meditative approach to space exploration"
-openGraphImage: "./img/Planetary Society - opengraph.png"
+openGraphImage: "img/Planetary Society - opengraph.png"
 when: 2024
 tools: Illustrator, Photoshop, InDesign, After Effects, Glyphs, three.js, Houdini, Keynote, Figma
 tags:
@@ -36,8 +36,8 @@ block content
     //- TODO: need jacket mockups somehow in context
     //- TODO: logo diagram + clear space
     .grid-1
-        //- TODO: tall bell curve easing on the last transition; re-render + convert to avif
-        +portfolioImg("./img/Planetary_Society_logo_reveal.gif", "", "Logo reveal animation inspired by the big bang.")
+        //- TODO: tall bell curve easing on the last transition; re-render
+        +animation("./img/Planetary_Society_logo_reveal.mp4", "Logo reveal animation inspired by the big bang.")
         +portfolioImg("./img/TPS - 1.png", "Planetary Society posters at Paseo Colorado a nearby outdoor mall in Pasadena, California", "Planetary Society posters at the nearby Paseo Colorado outdoor mall.")
     .grid-2
         +portfolioImg("./img/TPS - lightsail.png", "", "The logo was inspired by the invention of Lightsail—a member-funded invention by The Planetary Society, enabling spacecraft to propel using only sunlight.")
@@ -58,17 +58,17 @@ block content
     .grid-1
         //- TOD: can I mock up the metallic poster that I wanted to print? (yes)
         +portfolioImg("./img/TPS - 4.png", "", "2025 marked 45 years since the Planetary Society was founded. I designed promotional posters for a 45th anniversary retreat on Catalina Island for members and donors. I named the event, “Under the Stars”.")
-        +portfolioImg("./img/planetary-society-sans.gif", "Planetary Society Sans variable weight font animation.", "Planetary Society Sans is a variable weight font I designed to be the typographic voice for their 45th anniversary. The modular typeface is inspired by planetary orbits, and can be used to create dynamic compositions when used at large&nbsp;scale.")
+        +animation("./img/Planetary_Society_sans.mp4", "Planetary Society Sans variable weight font animation.", "Planetary Society Sans is a variable weight font I designed to be the typographic voice for their 45th anniversary. The modular typeface is inspired by planetary orbits, and can be used to create dynamic compositions when used at large&nbsp;scale.")
     .grid-2
         +portfolioImg("./img/TPS - 11.png", "", "The 45th anniversary identity takes on a distinct brand and typographic voice.")
         +portfolioImg("./img/TPS_uts.png", "", "The color palette was inspired by the natural beauty of Catalina Island.")
     .grid-2
         //- TODO: temp workaround, made a copy to crop the ticket mockup to 16:9
         +portfolioImg("./img/TPS - 9 copy.png", "", "Event tickets for general admission and Planetary Support (VIP) levels of donors. These are samples of a larger printed invitation package, currently in progress.")
-        //- TODO: redo this avif with both GA and VIP; make it a perfect loop
+        //- TODO: redo this video with both GA and VIP; make it a perfect loop
         //- also... check: centered, latest font, color on edges
         //- use metallic paper texture from the tickets .psd
-        +portfolioImg("./img/TPS_band.avif", "", "Guest wristbands to verify ticket purchase.")
+        +animation("./img/TPS_band.mp4", "Guest wristbands to verify ticket purchase.")
         //- TODO: more merch
     //- TODO: process!!!!
     .grid-2

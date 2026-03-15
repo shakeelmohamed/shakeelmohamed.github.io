@@ -3,7 +3,7 @@ layout: post
 date: 2021-06-10
 title: Powerful Lessons From Splunk I’ll Never Forget
 description: While working at Splunk over the past eight years, I’ve had the opportunity to work with incredibly wise people.
-openGraphImage: ./header.png
+openGraphImage: header.png
 tags:
     - post
     - career

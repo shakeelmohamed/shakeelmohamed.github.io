@@ -24,7 +24,7 @@ block content
                     |“The best way to predict the future is to create it.”
                 br
                 |— Peter Drucker (attributed)
-        div.col-start-3.col-end-5
+        .col-start-3.col-end-5
             p My name is Shakeel, I’m a strategic brand designer specializing in identity design, typography, and systems thinking. I approach projects systematically by understanding the brief, audience, and constraints to create brands that work seamlessly across every&nbsp;touchpoint.
             br
             p During my graduate studies at ArtCenter College of Design I designed four typefaces, which gave me a deep appreciation for the power of typography across media types. Designing fonts requires rigorous refinement over minute details, I bring this same attention to craft through form, layout, typesetting, and print&nbsp;production.
@@ -52,11 +52,11 @@ block content
     br
 
     hr.rule
-    h2 Capabilities
+    p.caption Capabilities
 
     .grid-4.mt-4
         div
-            p.bold.mb-2 Branding
+            p.bold.about-capability-heading Branding
             p Brand strategy and positioning
             p Visual identity and logo design
             p Typeface design and font pairing
@@ -66,7 +66,7 @@ block content
             p Naming and messaging
             p Workshops and training
         div
-            p.bold.mb-2 Media
+            p.bold.about-capability-heading Media
             p Books and publications
             p Print and stationery
             p Web, digital, social
@@ -75,14 +75,14 @@ block content
             p Merchandise and apparel
             p Presentation design
         div
-            p.bold.mb-2 Production
+            p.bold.about-capability-heading Production
             p Print production management
             p Design systems and templates
             p Responsive web implementation
             p Color management
             p File optimization and asset handling
         div
-            p.bold.mb-2 Code
+            p.bold.about-capability-heading Code
             p Full-stack web development
             p Creative coding
             p Interactive design
@@ -91,12 +91,12 @@ block content
     br
     
     hr.rule
-    h2 In real life...
+    p.caption In real life...
     .grid-4.mt-4
         div
             p
                 strong I’m inspired by
-            ol.pl-12
+            ol.about-list
                 li Underdogs
                 li Walking
                 li Conversations
@@ -105,7 +105,7 @@ block content
             br
             p
                 strong Reminders to myself
-            ol.pl-12
+            ol.about-list
                 li Focus intensely, rest completely.
                 li Take more (design) risks.
                 li Explore more ideas than required.
@@ -117,8 +117,8 @@ block content
                 strong Community Building
                 br
                 | I have dedicated the past five years to involving myself in design communities, sharing my experiences with others, and building towards design leadership experience. Over this time I’m grateful to have met several designers who have inspired me throughout my&nbsp;career.
-        div.col-start-3.col-end-5
-            .grid-4.lightbox-album.keepDesktop.gap-4
+        .col-start-3.col-end-5
+            .about-community-gallery.lightbox-album.keepDesktop
                 img(src="./img/Debbie_Millman.png")
                 img(src="./img/Wael_Morcos.png")
                 img(src="./img/Brian_Collins.png")
@@ -128,7 +128,7 @@ block content
                 img(src="./img/Cheryl_Miller.png")
                 img(src="./img/Iddris_Sandu.png")
     br
-    hr
+    hr.rule
     .grid-4
         div
             p.caption Education
@@ -136,36 +136,34 @@ block content
             +experience("Master of Fine Arts in Graphic Design", "ArtCenter College of Design", "Pasadena, California", "2022–2025")
             br.mobile-only
             +experience("Bachelor of Science in Computer Science", "Seattle University", "Seattle, Washington", "2012–2015")
-            hr.mobile-only
-        div.col-start-2.col-end-5
+            hr.mobile-only.rule
+        .col-start-2.col-end-5
             p.caption Experience
             br
-            .grid-3.position
+            .grid-3
                 +experience("Senior Designer", "TALISMAN", "Remote", "08.2025–Present")
                 p.col-start-2.col-end-4 Collaborated with the Creative Director and a Senior Designer on brand strategy and visual identity for a performing arts organization. Researched historical references and competitors, designed presentation systems in Figma Slides. Led critiques and provided feedback to junior designers. Supported business development through capabilities decks.
-            .grid-3.position
+            .grid-3
                 +experience("Freelance Brand Designer", "shakeel.design", "Remote", "05.2025–Present")
                 p.col-start-2.col-end-4 Designed brand identities and motion design systems for cultural organizations, creative agencies, and emerging companies. Collaborated directly with clients to develop design solutions from strategy and concept through implementation across multiple touchpoints including print, digital, and&nbsp;environmental.
-            .grid-3.position
+            .grid-3
                 a(href="/projects/salgirah-festival-identity/")
                     +experience("Freelance Graphic Designer (Annually)", "The Ismaili Muslim Community", "Remote", "10.2021–10.2025")
                 p.col-start-2.col-end-4 Designed three evolutions of the brand identity for Salgirah, an annual international festival across 21 countries in 11 languages. Branded signage is displayed in multiple cities, notably at the Dubai World Trade&nbsp;Centre.
-            .grid-3.position
+            .grid-3
                 +experience("Teaching Assistant", "ArtCenter College of Design", "Pasadena, California", "09.2024–04.2025")
                 p.col-start-2.col-end-4 Assisted instructors Fiona Blankenship, Elise Co, and Joseph Choi in a course sponsored by Hermès with cross-disciplinary group critiques of design concepts and presentations. Assisted Professor Gloria Kondrup in a letterpress printing course by helping students hand-set wood and metal type.
-            .grid-3.position
+            .grid-3
                 +experience("Freelance Graphic Designer", "TALISMAN", "Remote", "07.2024–08.2024")
                 p.col-start-2.col-end-4 Collaborated with a team of three designers on brand identity development for higher education and performing arts clients. Designed presentation decks, brand guidelines, and print production-ready files. Analyzed typographic choices to align with overall art&nbsp;direction.
-            .grid-3.position
+            .grid-3
                 +experience("Founder", "ntrsct designs", "Remote", "02.2018–12.2022")
                 p.col-start-2.col-end-4 Operated an independent design studio providing brand strategy, identity, apparel design, and social media services for 12 clients across multiple industries. Evolved the business from B2C apparel brand to B2B consultancy, leading client relationships, project management, and art&nbsp;direction.
-            .grid-3.position
+            .grid-3
                 +experience("Software Engineer", "Splunk, Inc.", "Seattle, Washington", "06.2015–04.2021")
                 p.col-start-2.col-end-4 Led a team of three engineers to develop a data simulation engine for sales staff to demonstrate products for prospective customers. Collaborated across roles, teams, and departments to automate manual processes. Designed slides for and presented technical sessions at two major industry conferences. Maintained dozens of open-source software projects and incorporating customer feedback. Designed highly performant technical solutions for large-scale data processing used by several Fortune 500&nbsp;companies.
-            hr.mobile-only
-    hr.desktop-only
-
-    //- TODO: can set these columns like so: services, skills, recognition, speaking
+    br
+    hr.rule
     .grid-4
         div
             p.caption Skills
@@ -194,7 +192,7 @@ block content
                 strong AI Tools:
                 br
                 | Claude, Gemini, Midjourney, Adobe Firefly, Perplexity, ChatGPT, OpenCode
-            hr.mobile-only
+            hr.mobile-only.rule
         div.
         div
             p.caption Recognition
@@ -261,9 +259,6 @@ block content
                 br
                 | 2023
 
-
-            //- TODO: not having this here is a lil odd... but we have a rule right below otherwise
-            //- hr.mobile-only
         div
             p.caption Speaking
             br

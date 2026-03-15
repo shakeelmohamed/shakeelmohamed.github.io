@@ -24,7 +24,7 @@ I highly recommend reading [Find Your Why](https://amzn.to/2yOfH8T) if Golden Ci
 I got the WHY, awesome. What I do with this cool sentence now?
 Let's revisit the Golden Circle, WHY is at the center which is followed by the HOWs and the WHATs. 
 
-![Golden Circle Theory](https://simonsinek.com/wp-content/uploads/2019/02/GC_slide-2.jpg)
+![Golden Circle Theory](https://simonsinek.com/wp-content/uploads/2019/02/GC_slide-2.png)
 
 I'll expound upon these two in detail before sharing my individual HOWs and WHATs so will make a bit more sense.
 

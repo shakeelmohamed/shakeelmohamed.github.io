@@ -2,7 +2,7 @@ extends ./super.pug
 
 block body
     +header()
-    main.mb-4
+    main
         block content
     +footer()
 
@@ -21,8 +21,8 @@ block body
 //-             a(href="/gradshow") 🎓 &nbsp;Graduation show details here: April 26, 2025 &nbsp;🎉
 
 mixin header()
-    .mobile-only.mobileHeader
-        .grid-2.flex-row.justify-between
+    header.mobile-only.mobileHeader
+        .grid-2.mobile-header-row
             //- TODO: logo sizing is WIP, find a better way to match the height of 2 header lines
             div
                 div.mobileBranding
@@ -32,7 +32,7 @@ mixin header()
                     strong
                         a(href="mailto:" + metadata.author.email, target="_blank") #{metadata.author.email}
             div.hamburgerIcon
-                span.material-icons.text-2xl menu
+                span.material-icons menu
         .menuItems
             h2
                 a(href="/") Work
@@ -46,22 +46,22 @@ mixin header()
             h2
                 a(href="mailto:" + metadata.author.email, target="_blank") #{metadata.author.email}
         hr.mobile-only
-    div.newheader.sticky.top-0
+    .newheader.sticky.top-0
         .grid-4
             div
                 //- TODO: logo sizing is WIP, find a better way to match the height of 2 header lines
                 .logo-wrapper
                     a(href="/")
                         img.logosvg(src="/img/Shakeel_Mohamed_wordmark.svg" alt="Shakeel Mohamed wordmark logo set in the Mindful Roman typeface which he designed")
-            div.
-            div.col-start-3.col-end-5
-                div.pb-4.flex.justify-between.items-baseline
+            div
+            .col-start-3.col-end-5
+                .pb-4.flex.justify-between.items-baseline
                     p
                         strong Strategic Brand Designer
                     p
                         strong
                             +myEmail()
-                div.flex.justify-between.items-baseline
+                .flex.justify-between.items-baseline
                     p
                         strong
                             a(href="/projects") Work
@@ -76,8 +76,8 @@ mixin header()
 //- TODO: bring back +mailingListForm()
 
 mixin footer()
-    hr(class="mb-0-5-important")
-    .newfooter.grid-4.pb-0
+    hr
+    footer.newfooter
         div
             br.mobile-only
             a.logo-wrapper(href="/")
@@ -86,6 +86,6 @@ mixin footer()
             a(href=metadata.social.Instagram, target="_blank") Instagram
         div
             a(href=metadata.social.LinkedIn, target="_blank") LinkedIn
-        div.deskright-mobileleft
+        div
             a(href="mailto:" + metadata.author.email, target="_blank")
                 +myEmail()

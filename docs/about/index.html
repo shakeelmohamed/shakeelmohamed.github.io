@@ -17,7 +17,7 @@
         <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://shakeelmohamed.com/#person","name":"Shakeel Mohamed","url":"https://shakeelmohamed.com","email":"mailto:hello@shakeel.design","jobTitle":"Strategic Brand Designer","sameAs":["https://linkedin.com/in/shakeelmohamed","https://instagram.com/shakeel.design","https://github.com/shakeelmohamed"]},{"@type":"WebSite","@id":"https://shakeelmohamed.com/#website","url":"https://shakeelmohamed.com","name":"Shakeel Mohamed","description":"Strategic brand designer in Los Angeles specializing in identity design, typography, and systems thinking. Available for freelance and full-time opportunities.","inLanguage":"en"}]}</script>
         <link rel="stylesheet" href="https://use.typekit.net/rgm5cfh.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/material-icons@1.13.12/iconfont/material-icons.min.css">
-        <link rel="stylesheet" href="/dist/tailwind.css">
+        <link rel="stylesheet" href="/dist/styles.css">
         <link rel="sitemap" type="text/plain" title="Sitemap" href="/sitemap.txt">
         <link href="/feed.xml" rel="alternate" type="application/rss+xml" title="Shakeel Mohamed’s blog posts">
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -25,13 +25,13 @@
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
         <link rel="manifest" href="/site.webmanifest">
     </head>
-    <body class="bg-white">
-        <div class="mobile-only mobileHeader">
-            <div class="grid-2 flex-row justify-between">
+    <body>
+        <header class="mobile-only mobileHeader">
+            <div class="grid-2 mobile-header-row">
                 <div>
                     <div class="mobileBranding"><a class="logo-wrapper" href="/"><img src="/img/Shakeel_Mohamed_wordmark.svg" alt="Shakeel Mohamed wordmark logo set in the Mindful Roman typeface which he designed"/></a><br/><strong><a href="mailto:hello@shakeel.design" target="_blank">hello@shakeel.design</a></strong></div>
                 </div>
-                <div class="hamburgerIcon"><span class="material-icons text-2xl">menu</span></div>
+                <div class="hamburgerIcon"><span class="material-icons">menu</span></div>
             </div>
             <div class="menuItems">
                 <h2><a href="/">Work</a></h2>
@@ -41,7 +41,7 @@
                 <h2><a href="mailto:hello@shakeel.design" target="_blank">hello@shakeel.design</a></h2>
             </div>
             <hr class="mobile-only"/>
-        </div>
+        </header>
         <div class="newheader sticky top-0">
             <div class="grid-4">
                 <div>
@@ -72,7 +72,7 @@
             </div>
             <hr class="mb-2"/>
         </div>
-        <main class="mb-4">
+        <main>
             <h1>About Me</h1>
             <div class="grid-4 mt-4">
                 <div class="headshot"><img class="lightbox" src="../img/Shakeel_Mohamed_headshot.png" alt="Headshot of Shakeel Mohamed"></div>
@@ -99,10 +99,10 @@
                 </div>
             </div><br>
             <hr class="rule">
-            <h2>Capabilities</h2>
+            <p class="caption">Capabilities</p>
             <div class="grid-4 mt-4">
                 <div>
-                    <p class="bold mb-2">Branding</p>
+                    <p class="bold about-capability-heading">Branding</p>
                     <p>Brand strategy and positioning</p>
                     <p>Visual identity and logo design</p>
                     <p>Typeface design and font pairing</p>
@@ -113,7 +113,7 @@
                     <p>Workshops and training</p>
                 </div>
                 <div>
-                    <p class="bold mb-2">Media</p>
+                    <p class="bold about-capability-heading">Media</p>
                     <p>Books and publications</p>
                     <p>Print and stationery</p>
                     <p>Web, digital, social</p>
@@ -123,7 +123,7 @@
                     <p>Presentation design</p>
                 </div>
                 <div>
-                    <p class="bold mb-2">Production</p>
+                    <p class="bold about-capability-heading">Production</p>
                     <p>Print production management</p>
                     <p>Design systems and templates</p>
                     <p>Responsive web implementation</p>
@@ -131,7 +131,7 @@
                     <p>File optimization and asset handling</p>
                 </div>
                 <div>
-                    <p class="bold mb-2">Code</p>
+                    <p class="bold about-capability-heading">Code</p>
                     <p>Full-stack web development</p>
                     <p>Creative coding</p>
                     <p>Interactive design</p>
@@ -140,11 +140,11 @@
                 </div>
             </div><br>
             <hr class="rule">
-            <h2>In real life...</h2>
+            <p class="caption">In real life...</p>
             <div class="grid-4 mt-4">
                 <div>
                     <p><strong>I’m inspired by</strong></p>
-                    <ol class="pl-12">
+                    <ol class="about-list">
                         <li>Underdogs</li>
                         <li>Walking</li>
                         <li>Conversations</li>
@@ -152,7 +152,7 @@
                         <li>Warmth</li>
                     </ol><br>
                     <p><strong>Reminders to myself</strong></p>
-                    <ol class="pl-12">
+                    <ol class="about-list">
                         <li>Focus intensely, rest completely.</li>
                         <li>Take more (design) risks.</li>
                         <li>Explore more ideas than required.</li>
@@ -164,10 +164,10 @@
                     <p><strong>Community Building</strong><br>I have dedicated the past five years to involving myself in design communities, sharing my experiences with others, and building towards design leadership experience. Over this time I’m grateful to have met several designers who have inspired me throughout my&nbsp;career.</p>
                 </div>
                 <div class="col-start-3 col-end-5">
-                    <div class="grid-4 lightbox-album keepDesktop gap-4"><img src="./img/Debbie_Millman.png"><img src="./img/Wael_Morcos.png"><img src="./img/Brian_Collins.png"><img src="./img/Louise_Sandhaus.png"><img src="./img/Chris_Do.png"><img src="./img/April_Greiman.png"><img src="./img/Cheryl_Miller.png"><img src="./img/Iddris_Sandu.png"></div>
+                    <div class="about-community-gallery lightbox-album keepDesktop"><img src="./img/Debbie_Millman.png"><img src="./img/Wael_Morcos.png"><img src="./img/Brian_Collins.png"><img src="./img/Louise_Sandhaus.png"><img src="./img/Chris_Do.png"><img src="./img/April_Greiman.png"><img src="./img/Cheryl_Miller.png"><img src="./img/Iddris_Sandu.png"></div>
                 </div>
             </div><br>
-            <hr>
+            <hr class="rule">
             <div class="grid-4">
                 <div>
                     <p class="caption">Education</p><br>
@@ -177,56 +177,55 @@
                     <div>
                         <p><strong>Bachelor of Science in Computer Science</strong><br/>Seattle University<br/>Seattle, Washington<br/>2012–2015</p><br class="desktop-only"/>
                     </div>
-                    <hr class="mobile-only">
+                    <hr class="mobile-only rule">
                 </div>
                 <div class="col-start-2 col-end-5">
                     <p class="caption">Experience</p><br>
-                    <div class="grid-3 position">
+                    <div class="grid-3">
                         <div>
                             <p><strong>Senior Designer</strong><br/>TALISMAN<br/>Remote<br/>08.2025–Present</p><br class="desktop-only"/>
                         </div>
                         <p class="col-start-2 col-end-4">Collaborated with the Creative Director and a Senior Designer on brand strategy and visual identity for a performing arts organization. Researched historical references and competitors, designed presentation systems in Figma Slides. Led critiques and provided feedback to junior designers. Supported business development through capabilities decks.</p>
                     </div>
-                    <div class="grid-3 position">
+                    <div class="grid-3">
                         <div>
                             <p><strong>Freelance Brand Designer</strong><br/>shakeel.design<br/>Remote<br/>05.2025–Present</p><br class="desktop-only"/>
                         </div>
                         <p class="col-start-2 col-end-4">Designed brand identities and motion design systems for cultural organizations, creative agencies, and emerging companies. Collaborated directly with clients to develop design solutions from strategy and concept through implementation across multiple touchpoints including print, digital, and&nbsp;environmental.</p>
                     </div>
-                    <div class="grid-3 position"><a href="/projects/salgirah-festival-identity/">
+                    <div class="grid-3"><a href="/projects/salgirah-festival-identity/">
                             <div>
                                 <p><strong>Freelance Graphic Designer (Annually)</strong><br/>The Ismaili Muslim Community<br/>Remote<br/>10.2021–10.2025</p><br class="desktop-only"/>
                             </div></a>
                         <p class="col-start-2 col-end-4">Designed three evolutions of the brand identity for Salgirah, an annual international festival across 21 countries in 11 languages. Branded signage is displayed in multiple cities, notably at the Dubai World Trade&nbsp;Centre.</p>
                     </div>
-                    <div class="grid-3 position">
+                    <div class="grid-3">
                         <div>
                             <p><strong>Teaching Assistant</strong><br/>ArtCenter College of Design<br/>Pasadena, California<br/>09.2024–04.2025</p><br class="desktop-only"/>
                         </div>
                         <p class="col-start-2 col-end-4">Assisted instructors Fiona Blankenship, Elise Co, and Joseph Choi in a course sponsored by Hermès with cross-disciplinary group critiques of design concepts and presentations. Assisted Professor Gloria Kondrup in a letterpress printing course by helping students hand-set wood and metal type.</p>
                     </div>
-                    <div class="grid-3 position">
+                    <div class="grid-3">
                         <div>
                             <p><strong>Freelance Graphic Designer</strong><br/>TALISMAN<br/>Remote<br/>07.2024–08.2024</p><br class="desktop-only"/>
                         </div>
                         <p class="col-start-2 col-end-4">Collaborated with a team of three designers on brand identity development for higher education and performing arts clients. Designed presentation decks, brand guidelines, and print production-ready files. Analyzed typographic choices to align with overall art&nbsp;direction.</p>
                     </div>
-                    <div class="grid-3 position">
+                    <div class="grid-3">
                         <div>
                             <p><strong>Founder</strong><br/>ntrsct designs<br/>Remote<br/>02.2018–12.2022</p><br class="desktop-only"/>
                         </div>
                         <p class="col-start-2 col-end-4">Operated an independent design studio providing brand strategy, identity, apparel design, and social media services for 12 clients across multiple industries. Evolved the business from B2C apparel brand to B2B consultancy, leading client relationships, project management, and art&nbsp;direction.</p>
                     </div>
-                    <div class="grid-3 position">
+                    <div class="grid-3">
                         <div>
                             <p><strong>Software Engineer</strong><br/>Splunk, Inc.<br/>Seattle, Washington<br/>06.2015–04.2021</p><br class="desktop-only"/>
                         </div>
                         <p class="col-start-2 col-end-4">Led a team of three engineers to develop a data simulation engine for sales staff to demonstrate products for prospective customers. Collaborated across roles, teams, and departments to automate manual processes. Designed slides for and presented technical sessions at two major industry conferences. Maintained dozens of open-source software projects and incorporating customer feedback. Designed highly performant technical solutions for large-scale data processing used by several Fortune 500&nbsp;companies.</p>
                     </div>
-                    <hr class="mobile-only">
                 </div>
-            </div>
-            <hr class="desktop-only">
+            </div><br>
+            <hr class="rule">
             <div class="grid-4">
                 <div>
                     <p class="caption">Skills</p><br>
@@ -235,7 +234,7 @@
                     <p><strong>Presentation and facilitation:</strong><br>Strategic thinking, collaboration, copywriting, product management, project management, community building, agile facilitation, scrum</p><br>
                     <p><strong>Programming:</strong><br>JavaScript, p5.js, Processing, Node.js, HTML, CSS, Python, Java, C, C++, Git</p><br>
                     <p><strong>AI Tools:</strong><br>Claude, Gemini, Midjourney, Adobe Firefly, Perplexity, ChatGPT, OpenCode</p>
-                    <hr class="mobile-only">
+                    <hr class="mobile-only rule">
                 </div>
                 <div></div>
                 <div>
@@ -259,13 +258,13 @@
                 </div>
             </div>
         </main>
-        <hr class="mb-0-5-important"/>
-        <div class="newfooter grid-4 pb-0">
+        <hr/>
+        <footer class="newfooter">
             <div><br class="mobile-only"/><a class="logo-wrapper" href="/">
                     <script>document.write("&copy; " + new Date().getFullYear() + " Shakeel Mohamed.")</script></a></div>
             <div><a href="https://instagram.com/shakeel.design" target="_blank">Instagram</a></div>
             <div><a href="https://linkedin.com/in/shakeelmohamed" target="_blank">LinkedIn</a></div>
-            <div class="deskright-mobileleft"><a href="mailto:hello@shakeel.design" target="_blank"><span class="mailto">
+            <div><a href="mailto:hello@shakeel.design" target="_blank"><span class="mailto">
                         <script type="text/javascript">
                             function gen_mail_to_link(lhs, rhs, subject, text) {
                                 const rhs_subj = subject ? `${rhs}?subject=${subject}` : rhs;
@@ -276,7 +275,7 @@
                             gen_mail_to_link("hello", "shakeel.design", "", "")
                             
                         </script></span></a></div>
-        </div>
+        </footer>
     </body>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-36907845-2"></script>
     <script>
