@@ -1,5 +1,4 @@
 const fs = require('fs');
-const path = require('path');
 const glob = require('glob');
 
 // Find all .pug files
@@ -74,10 +73,10 @@ mixins.forEach((locations, mixinName) => {
     const usagePattern = new RegExp(`\\+${mixinName}\\s*[\\(\\s]`, 'g');
     let isUsed = false;
 
-    for (const [file, content] of fileContents) {
+    for (const content of fileContents.values()) {
         const lines = content.split('\n');
         let usageCount = 0;
-        lines.forEach((line, idx) => {
+        lines.forEach((line) => {
             // Skip the definition line
             if (line.match(new RegExp(`^\\s*mixin\\s+${mixinName}`))) {
                 return;

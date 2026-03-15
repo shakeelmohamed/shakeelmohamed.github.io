@@ -22,8 +22,8 @@ test("Build generates pages", async () => {
 // - check Set against media types form disk
 
 test('homepage has title', async ({ page }) => {
-  await page.goto('/');
-  await expect(page).toHaveTitle("Shakeel Mohamed – Strategic Brand Designer in Los Angeles");
+    await page.goto('/');
+    await expect(page).toHaveTitle("Shakeel Mohamed – Strategic Brand Designer in Los Angeles");
 });
 
 

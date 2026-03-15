@@ -20,9 +20,11 @@
     "postcss": "postcss src/styles.css -o docs/dist/styles.css",
     "postcss:w": "postcss src/styles.css -o docs/dist/styles.css --watch --poll",
     "clean": "rimraf docs/ .cache/ test-results/",
-    "pretest": "bun run lint:css && bun run lint:pug",
+    "pretest": "bun run lint:css && bun run lint:pug && bun run lint:js",
     "lint:css": "stylelint src/**/*.css",
-    "lint:pug": "node scripts/lint-pug.js"
+    "lint:pug": "node scripts/lint-pug.js",
+    "lint:js": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "repository": {
     "type": "git",
@@ -46,6 +48,9 @@
     "concurrently": "^7.6.0",
     "cspell": "^9.7.0",
     "cssnano": "^7.1.3",
+    "eslint": "^10.0.3",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-playwright": "^2.9.0",
     "git-date-extractor": "^4.0.1",
     "jstransformer-markdown-it": "^3.0.0",
     "markdown-it": "^14.1.1",

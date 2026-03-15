@@ -82,8 +82,6 @@ function makeGallery(selector) {
 }
 
 
-let lightbox;
-let lightboxAlbum;
 let glightboxInitialized = false;
 
 function lights() {
@@ -95,8 +93,8 @@ function lights() {
         return;
     }
 
-    lightbox = makeLightbox(".lightbox");
-    lightboxAlbum = makeGallery('.lightbox-album > img');
+    makeLightbox(".lightbox");
+    makeGallery('.lightbox-album > img');
 
     // TODO: add click handler on image to close also
     // let slides = document.querySelectorAll('.gslide-image > img');
