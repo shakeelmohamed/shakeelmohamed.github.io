@@ -18,6 +18,9 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 - [ ] Lots of strange layout issues on mobile
 - [ ] Remove all backwards compat CSS after full semantic HTMl re-organization
 - [ ] Add size optimization for og/cover images, can save lots of bandwidth on mobile
+- [ ] Lots of CSS tricks for website, especially the pure HTML menu button
+    - [ ] https://youtu.be/Ol62e-dWu0E?si=upqWiVo_qzMi_Am0
+    - [ ] https://youtu.be/pYW3O0AxpI8?si=yP-fI72i1TvTUotJ
 
 # Midjourney
 
