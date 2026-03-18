@@ -1,9 +1,22 @@
-const gitDateExtractor = require('git-date-extractor');
+const fs = require('fs');
+const path = require('path');
 const DEFAULT_OG_IMAGE = '/img/opengraph-default.png';
+const GIT_DATES_CACHE = path.join(__dirname, 'cache', 'git-dates.json');
 
 const cfs = function(val) {
     return String(val).charAt(0).toUpperCase() + String(val).slice(1);
 };
+
+function loadGitDatesCache() {
+    if (fs.existsSync(GIT_DATES_CACHE)) {
+        try {
+            return JSON.parse(fs.readFileSync(GIT_DATES_CACHE, 'utf8'));
+        } catch (e) {
+            return {};
+        }
+    }
+    return {};
+}
 
 module.exports = {
     // The date returned may be off by 1 day due to UTC Offset
@@ -55,23 +68,22 @@ module.exports = {
         }
         return words.join(" ");
     },
-    gitDates: async function(path) {
-        function epochToDate(epoch) {
-            let ret = new Date(0);
-            ret.setUTCSeconds(epoch);
-            return ret;
+    gitDates: function(pagePath) {
+        const cache = loadGitDatesCache();
+        // Normalize path for cache lookup
+        const normalizedPath = pagePath.startsWith('./') ? pagePath.substring(2) : pagePath;
+
+        if (cache[normalizedPath]) {
+            return Promise.resolve({
+                modified: new Date(cache[normalizedPath].modified),
+                created: new Date(cache[normalizedPath].created)
+            });
         }
-        return gitDateExtractor.getStamps({
-            outputToFile: false,
-            projectRootPath: __dirname,
-            files: path
-        }).then(dates => {
-            // Remove './' prefix from the path
-            let pathStem = path.substring(2);
-            return {
-                modified: epochToDate(dates[pathStem].modified),
-                created: epochToDate(dates[pathStem].created)
-            };
+
+        // Fallback to page date if no cache entry
+        return Promise.resolve({
+            modified: null,
+            created: null
         });
     }
     // TODO: if date is missing, try to parse it from the folder name?

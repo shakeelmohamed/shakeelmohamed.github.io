@@ -12,6 +12,7 @@ const INPUT_PATHS = [
     'postcss.config.js',
     'package.json',
     'utils.js',
+    'scripts/cache-git-dates.js',
 ];
 
 const newestInput = findNewestMtime(INPUT_PATHS.map((entry) => path.resolve(ROOT, entry)));
@@ -22,6 +23,7 @@ if (shouldSkipBuild()) {
     console.log('build: no changes detected, skipping');
 } else {
     run('bun', ['run', 'postcss'], { env: { NODE_ENV: 'production' } });
+    run('node', ['scripts/cache-git-dates.js']);
     run('bunx', ['@11ty/eleventy', '--input=src', '--output=docs']);
 }
 
