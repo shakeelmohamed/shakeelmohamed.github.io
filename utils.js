@@ -48,7 +48,9 @@ module.exports = {
             return DEFAULT_OG_IMAGE;
         }
         else if (!data.openGraphImage.startsWith("https:")) {
-            return data.page.filePathStem.replace("index", "") + data.openGraphImage;
+            const dir = data.page.filePathStem.replace("index", "").replace(/\/+$/, "");
+            const imgPath = data.openGraphImage.replace(/^\/+/, "");
+            return dir + "/" + imgPath;
         }
         else {
             return data.openGraphImage;
