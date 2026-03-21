@@ -21,6 +21,7 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 - [ ] Lots of CSS tricks for website, especially the pure HTML menu button
     - [ ] https://youtu.be/Ol62e-dWu0E?si=upqWiVo_qzMi_Am0
     - [ ] https://youtu.be/pYW3O0AxpI8?si=yP-fI72i1TvTUotJ
+- [ ] why aren't pages like /branding in the sitemap?
 
 # Midjourney
 
