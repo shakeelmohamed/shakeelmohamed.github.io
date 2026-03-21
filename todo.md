@@ -7,7 +7,6 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 
 - [ ] Update labyrinth with new content
 - [ ] fix broken link to break presentation (on project page)
-- [ ] Easy win, show the dark gray BG + spinning logos video that I have on the grad show site: https://artcenter.media.cleancatalog.io/public/media/image/1029a3fb-6ebb-47bb-8537-08b7f7641ae6.gif
 
 ## Cleanup
 
