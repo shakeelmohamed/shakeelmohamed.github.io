@@ -179,3 +179,20 @@ function validateMediaTypesPages() {
 test('mediaTypes collection generates correct pages with correct project counts', async () => {
     validateMediaTypesPages();
 });
+
+test('feed.xml never has epoch (1970) for updated timestamps', async () => {
+    const feedPath = resolve(DOCS_DIR, 'feed.xml');
+    const feedContent = readFileSync(feedPath, 'utf8');
+
+    const updatedMatches = feedContent.match(/<updated>(\d{4}-\d{2}-\d{2})/g) || [];
+    const years = updatedMatches.map((m) => m.match(/(\d{4})/)[1]);
+
+    for (const year of years) {
+        expect(
+            parseInt(year, 10),
+            `Feed updated date year should not be 1970 (epoch), found ${year}`,
+        ).not.toBe(1970);
+    }
+
+    expect(years.length, 'Feed should have at least one updated date').toBeGreaterThan(0);
+});

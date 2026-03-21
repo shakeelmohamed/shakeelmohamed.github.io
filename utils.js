@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const DEFAULT_OG_IMAGE = '/img/opengraph-default.png';
-const GIT_DATES_CACHE = path.join(__dirname, 'cache', 'git-dates.json');
+const GIT_DATES_CACHE = path.join(__dirname, '.cache', 'git-dates.json');
 
 const cfs = function(val) {
     return String(val).charAt(0).toUpperCase() + String(val).slice(1);
@@ -70,8 +70,21 @@ module.exports = {
         }
         return words.join(" ");
     },
-    gitDates: function(pagePath) {
-        const cache = loadGitDatesCache();
+    gitDates: function(pagePath, readCache = loadGitDatesCache) {
+        let cache;
+        try {
+            cache = readCache();
+        } catch (e) {
+            cache = null;
+        }
+
+        if (!cache || typeof cache !== 'object') {
+            return Promise.resolve({
+                modified: null,
+                created: null
+            });
+        }
+
         // Normalize path for cache lookup
         const normalizedPath = pagePath.startsWith('./') ? pagePath.substring(2) : pagePath;
 

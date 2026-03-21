@@ -47,7 +47,7 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 # Thesis
 
 - [ ] update website mockup (PSD -> AE workflow)
-- [ ] add quiz mockup on ipad (motion)
+- [ ] add quiz mockup on iPad (motion)
 - [ ] Can expand the conferences stuff to show clear spec like retail/env. design
 - [ ] social media, re-do it
 - [ ] the quiz!

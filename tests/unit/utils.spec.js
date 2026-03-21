@@ -4,6 +4,7 @@ const {
     formatDateForAtomFeed,
     titleCase,
     buildOGImageURL,
+    gitDates,
 } = require('../../utils');
 
 test.describe('utils.js', () => {
@@ -154,6 +155,72 @@ test.describe('utils.js', () => {
             buildOGImageURL(data);
             const warning = restoreWarn();
             expect(warning).toContain('missing an OG image');
+        });
+
+        test('handles extra slashes in filePathStem and openGraphImage', () => {
+            const data = {
+                openGraphImage: '//img/test.png',
+                page: { filePathStem: '/posts/test/index/' }
+            };
+            const restoreWarn = warnSpy();
+            const result = buildOGImageURL(data);
+            expect(result).toBe('/posts/test/img/test.png');
+            restoreWarn();
+        });
+    });
+
+    test.describe('gitDates', () => {
+        test('returns Date instances for cache hit with normalized path', async () => {
+            const cache = {
+                'content/posts/example.md': {
+                    modified: '2024-01-10T12:34:56.000Z',
+                    created: '2024-01-01T00:00:00.000Z',
+                },
+            };
+
+            const directPathResult = await gitDates('content/posts/example.md', () => cache);
+            const dotSlashPathResult = await gitDates('./content/posts/example.md', () => cache);
+
+            for (const result of [directPathResult, dotSlashPathResult]) {
+                expect(result.modified).toBeInstanceOf(Date);
+                expect(result.created).toBeInstanceOf(Date);
+                expect(result.modified.toISOString()).toBe(
+                    cache['content/posts/example.md'].modified
+                );
+                expect(result.created.toISOString()).toBe(
+                    cache['content/posts/example.md'].created
+                );
+            }
+        });
+
+        test('returns nulls for cache miss', async () => {
+            const emptyCache = {};
+            const result = await gitDates('content/posts/missing.md', () => emptyCache);
+
+            expect(result).toEqual({
+                modified: null,
+                created: null,
+            });
+        });
+
+        test('handles missing or invalid cache without throwing', async () => {
+            const noCacheReader = () => null;
+            const throwingReader = () => {
+                throw new Error('cache read failed');
+            };
+
+            const resultWithNoCache = await gitDates('content/posts/example.md', noCacheReader);
+            const resultWithThrowingReader = await gitDates(
+                'content/posts/example.md',
+                throwingReader
+            );
+
+            for (const result of [resultWithNoCache, resultWithThrowingReader]) {
+                expect(result).toEqual({
+                    modified: null,
+                    created: null,
+                });
+            }
         });
     });
 

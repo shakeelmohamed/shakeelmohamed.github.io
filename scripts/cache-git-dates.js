@@ -22,8 +22,8 @@ function generateCache() {
         for (const [filePath, stamp] of Object.entries(dates)) {
             const normalizedPath = filePath.startsWith('./') ? filePath.substring(2) : filePath;
             cache[normalizedPath] = {
-                modified: new Date(stamp.modified).toISOString(),
-                created: new Date(stamp.created).toISOString()
+                modified: new Date(stamp.modified * 1000).toISOString(),
+                created: new Date(stamp.created * 1000).toISOString()
             };
         }
 
