@@ -18,6 +18,9 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 - [ ] Lots of strange layout issues on mobile
 - [ ] Remove all backwards compat CSS after full semantic HTMl re-organization
 - [ ] Add size optimization for og/cover images, can save lots of bandwidth on mobile
+- [ ] Lots of CSS tricks for website, especially the pure HTML menu button
+    - [ ] https://youtu.be/Ol62e-dWu0E?si=upqWiVo_qzMi_Am0
+    - [ ] https://youtu.be/pYW3O0AxpI8?si=yP-fI72i1TvTUotJ
 
 # Midjourney
 
@@ -42,6 +45,9 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 
 # Thesis
 
+- [ ] update website mockup (PSD -> AE workflow)
+- [ ] add quiz mockup on iPad (motion)
+- [ ] Can expand the conferences stuff to show clear spec like retail/env. design
 - [ ] social media, re-do it
 - [ ] the quiz!
 - [ ] process book, more spreads
@@ -218,7 +224,7 @@ Hermes - highest vis sponsored studio ever, and being the TA is the validation f
 
 - [ ] learn about noreferrer, etc: https://linkbuilder.io/rel-noopener-noreferrer/
 - [ ] Rework semantics for SEO for: h1/h2/etc
-- [ ] JS to prevent bad breaks (widows / orphans)
+- [ ] JS to prevent bad breaks (widows / orphans) - maybe solved with text-wrap-style: balance;
 - [ ] - [ ] Responsive image loading... add avif/etc optimized loadtime support; see https://github.com/saneef/eleventy-plugin-img2picture
 - [ ] figure out how to show extra process (another slider, hidden section, etc.)
 - [ ] do I need to do anything with artsthread profile? recognition? https://www.artsthread.com/portfolios/applied-designer-mfa-thesis

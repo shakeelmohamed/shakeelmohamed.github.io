@@ -526,6 +526,7 @@ p {
     line-height: 1.4rem;
     font-family: tt-commons-pro, sans-serif;
     font-weight: 400;
+    text-wrap-style: balance;
 }
 
 .bigType {

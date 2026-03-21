@@ -5,7 +5,10 @@ module.exports = {
         pageTitle: data => data.title + " | Shakeel Mohamed — Strategic Brand Designer",
         cleanDate: data => utils.formatDate(data.page.date),
         atomFeedDate: data => utils.formatDateForAtomFeed(data.page.date),
-        atomUpdatedDate: data => utils.gitDates(data.page.inputPath).then(dates => utils.formatDateForAtomFeed(dates.modified)),
+        atomUpdatedDate: data => utils.gitDates(data.page.inputPath).then(dates => {
+            const date = dates.modified || data.page.date;
+            return utils.formatDateForAtomFeed(date);
+        }),
         categoriesList: data => data.tags.filter((val) => {
             return !(val.toLowerCase() == "post" || val.toLowerCase() == "featured");
         }),

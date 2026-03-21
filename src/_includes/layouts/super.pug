@@ -75,13 +75,9 @@ html(lang="en")
         link(rel="stylesheet" href="https://use.typekit.net/rgm5cfh.css")
         link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/material-icons@1.13.12/iconfont/material-icons.min.css")
         link(rel="stylesheet" href="/dist/styles.css")
-        //- TODO: will need google fonts for Inter
-        //- link(rel="preconnect" href="https://fonts.googleapis.com")
-        //- link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
         
         link(rel="sitemap" type="text/plain" title="Sitemap" href="/sitemap.txt")
-        //- TODO: uncomment once XML sitemap is ready
-        //- link(rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml")
+        link(rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml")
         link(href="/feed.xml" rel="alternate" type="application/rss+xml" title="Shakeel Mohamed’s blog posts")
 
         link(rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png")
@@ -98,7 +94,6 @@ html(lang="en")
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'UA-36907845-2');
-
     block pageScripts
 
     script(defer src="/scripts/main.js")
