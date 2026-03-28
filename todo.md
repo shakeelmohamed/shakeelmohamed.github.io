@@ -88,7 +88,7 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 - [ ] poster has kinda tight leading on the 3 paragraphs, I think... need to check at full scale
 - [ ] do some motion gifs/stills of the font2 specimen sheets I made, fun play on the day/night concept
 - [ ] gendesign whole astrology chart... oh yeah
-- [ ] some ephemera like all 12 astrology sign info cards or stickers idk
+- [ ] some ephemera like all 12 astrology sign info cards or stickers idk; basically push the astrology concept more
 - [ ] lifestyle brand packaging mockups (actually, can just make a whole pkg lifestyle brand)
 
 # Ontology
