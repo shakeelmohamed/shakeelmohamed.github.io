@@ -10,6 +10,7 @@ permalink: "| #{mediaType.slug}/"
 ---
 
 extends _includes/layouts/base
+include _includes/project_utils.pug
 
 block content
     if mediaType && mediaType.projects

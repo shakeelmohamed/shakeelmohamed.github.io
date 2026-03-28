@@ -18,6 +18,17 @@ function loadGitDatesCache() {
     return {};
 }
 
+function relToAbsURL(page, link) {
+    if (!link.startsWith("https:") && link.indexOf(page.url) < 0) {
+        const dir = page.filePathStem.replace("index", "").replace(/\/+$/, "");
+        const imgPath = link.replace(/^\/+/, "");
+        return dir + "/" + imgPath;
+    }
+    else {
+        return link;
+    }
+}
+
 module.exports = {
     // The date returned may be off by 1 day due to UTC Offset
     // This split on T is probably not ideal, but good enough for now
@@ -47,14 +58,21 @@ module.exports = {
             console.warn(`buildOGImageURL is missing an OG image for ${data.title}`);
             return DEFAULT_OG_IMAGE;
         }
-        else if (!data.openGraphImage.startsWith("https:")) {
-            const dir = data.page.filePathStem.replace("index", "").replace(/\/+$/, "");
-            const imgPath = data.openGraphImage.replace(/^\/+/, "");
-            return dir + "/" + imgPath;
-        }
         else {
-            return data.openGraphImage;
+            return relToAbsURL(data.page, data.openGraphImage);
         }
+
+        // else if (!data.openGraphImage.startsWith("https:")) {
+        //     const dir = data.page.filePathStem.replace("index", "").replace(/\/+$/, "");
+        //     const imgPath = data.openGraphImage.replace(/^\/+/, "");
+        //     return dir + "/" + imgPath;
+        // }
+        // else {
+        //     return data.openGraphImage;
+        // }
+    },
+    getCover: data => {
+        return data.cover ? relToAbsURL(data.page, data.cover) : relToAbsURL(data.page, data.openGraphImage);
     },
     // TODO: currently unused since mediaTags are now titlecased
     // capitalizeFirstLetter: cfs,

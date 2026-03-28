@@ -127,7 +127,11 @@ main {
 }
 
 .block-project-listing {
-    margin-bottom: var(--space-2);
+    margin-bottom: var(--space-2);;
+}
+
+.block-project-listing .project-cover {
+    overflow-y: hidden;
 }
 
 .block-project-cover {
@@ -253,7 +257,23 @@ main {
 
 .project-meta,
 .project-content {
-    padding-bottom: var(--space-4);
+    margin-bottom: var(--space-4);
+}
+
+.project-content:has(.projectCover) {
+    overflow-y: hidden;
+    object-fit: contain;
+    aspect-ratio: 1200 / 630;
+    /* TODO: the real fix is just produce OG sized cover videos instead of re-using 16:9 */
+    /* TODO: Magic number based on aspect ratio delta to 16:9, or is it a reset?  */
+    margin-bottom: 0; 
+}
+
+.project-content .projectCover {
+    /* TODO: attempted hack to vertically center this item */
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .newheader > div,

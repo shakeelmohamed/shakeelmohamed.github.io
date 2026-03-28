@@ -7,6 +7,7 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 
 - [ ] Update labyrinth with new content
 - [ ] fix broken link to break presentation (on project page)
+- [ ] portfolio-content bottom margin seems tight compared to caption leading
 
 ## Cleanup
 

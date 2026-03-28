@@ -1,4 +1,4 @@
-include blocks.pug
+extends blocks.pug
 
 //- TODO: there has to be a better way to do this...
 mixin projectMeta(key, value)
@@ -39,7 +39,6 @@ mixin slider()
 //- old list...
 //- full screen larger text, maybe a blockquote... thatline for inspo
 
-//- TODO: move this CSS where it belongs
 mixin inDesign(url, cap)
     .project-content
         iframe.video16by9(src=url frameborder="0" allowfullscreen="")
@@ -50,25 +49,27 @@ mixin youtube(url, cap)
         iframe.video16by9(src=url title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="")
         +caption(cap)
 
-mixin animation(url, cap)
+//- TODO: refactor to simplify animation() and video()
+mixin animation(url, cap=null, w=1920, h=1080, className="video16by9")
     - var safeUrl = url || '';
     - var webmUrl = safeUrl.replace(/\.mp4$/i, '.webm');
     - var encodedMp4Url = safeUrl ? encodeURI(safeUrl) : '';
     - var encodedWebmUrl = safeUrl ? encodeURI(webmUrl) : '';
     .project-content
-        video.video16by9(width="1920" height="1080" autoplay="" loop="" muted="" playsinline="" preload="metadata")
+        video(width=w height=h class=className autoplay="" loop="" muted="" playsinline="" preload="metadata")
             source(src=encodedWebmUrl type="video/webm")
             source(src=encodedMp4Url type="video/mp4")
-        +caption(cap)
+        if cap
+            +caption(cap)
 
 //- TODO: play with plyr.io and skin the video player a bit nicer
-mixin video(url, cap, autoplay=false)
+mixin video(url, cap, autoplay=false, w=1920, h=1080)
     - var safeUrl = url || '';
     - var webmUrl = safeUrl.replace(/\.mp4$/i, '.webm');
     - var encodedMp4Url = safeUrl ? encodeURI(safeUrl) : '';
     - var encodedWebmUrl = safeUrl ? encodeURI(webmUrl) : '';
     .project-content
-        video.video16by9(width="1920" height="1080" controls="" data-video="0" autoplay=autoplay)
+        video.video16by9(width=w height=h controls="" data-video="0" autoplay=autoplay)
             source(src=encodedWebmUrl type="video/webm")
             source(src=encodedMp4Url type="video/mp4")
         +caption(cap)
@@ -105,3 +106,43 @@ mixin prevProject(proj)
 
 mixin nextProject(proj)
     +projectBreadcrumb(proj, "Next")
+
+
+//- TODO: add w and h params
+mixin optimizedImage(url, alt, className, w="auto", h="auto")
+    - var safeUrl = url || '';
+    - var isRaster = /\.(png|jpe?g)$/i.test(safeUrl);
+    - var avifUrl = isRaster ? safeUrl.replace(/\.(png|jpe?g)$/i, '.avif') : '';
+    - var webpUrl = isRaster ? safeUrl.replace(/\.(png|jpe?g)$/i, '.webp') : '';
+    - var encodedUrl = safeUrl ? encodeURI(safeUrl) : '';
+    - var encodedAvifUrl = avifUrl ? encodeURI(avifUrl) : '';
+    - var encodedWebpUrl = webpUrl ? encodeURI(webpUrl) : '';
+
+    if isRaster
+        picture(class=className)
+            source(srcset=encodedAvifUrl, type='image/avif')
+            source(srcset=encodedWebpUrl, type='image/webp')
+            img(src=encodedUrl, alt=alt, width=w, height=h)
+    else
+        img(class=className, src=encodedUrl, alt=alt)
+
+//- TODO: remix so blog listing can reuse part of this
+//- TODO: use coverImg instead of openGraphImage please
+mixin projectListing(project)
+    div.block-project-listing
+        a(href=project.url)
+            - var isAnimated = project.data.cover.endsWith(".mp4");
+
+            //- //- TODO: crop or separate video project vs cover?
+            if isAnimated
+                +animation(project.data.cover, null, w=1200, h=630, className="projectCover")
+            else
+                //- img.portfolio-cover.block-project-cover(src=project.data.openGraphImage, alt="Cover image for " + project.data.title + " project", width="1200", height="630")
+                +optimizedImage(project.data.cover, "Cover image for " + project.data.title + " project", className="projectCover", w=1200, h=630)
+        div.block-project-copy
+            div.block-project-title
+                h2
+                    a(href=project.url) #{project.data.title}
+            //- TODO: need a max-width here so the lines aren't super long
+            div.project-meta
+                p.block-project-meta!= project.data.mediaLinks
