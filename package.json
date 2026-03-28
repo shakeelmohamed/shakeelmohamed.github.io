@@ -23,7 +23,7 @@
     "postcss:w": "postcss src/styles.css -o docs/dist/styles.css --watch --poll",
     "clean": "rimraf docs/ .cache/ test-results/",
     "pretest": "bun run lint:css && bun run lint:pug && bun run lint:js",
-    "lint:css": "stylelint src/**/*.css",
+    "lint:css": "stylelint src/**/.css src/*.css",
     "lint:pug": "node scripts/lint-pug.js",
     "lint:js": "eslint .",
     "lint:fix": "eslint . --fix"
