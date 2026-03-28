@@ -27,19 +27,39 @@ for (let i = 0; i < imgs.length; i++) {
     const innerWrapper = document.createElement('div');
     innerWrapper.classList.add('gallery_card_image');
 
-    const newImg = document.createElement('img');
+    let newImg;
+    const isVideo = imgs[i].src.endsWith(".mp4");
+    // TODO: add optimizations like project pages
+    if (isVideo) {
+        // TODO: videos currently break drag functionality
+        // continue;
+        newImg = document.createElement('video');
+        newImg.setAttribute("autoplay", "");
+        // newImg.setAttribute("controls", "");
+        newImg.setAttribute("data-video", "0");
+        newImg.setAttribute("loop", "");
+        newImg.setAttribute("muted", "");
+        newImg.setAttribute("playsinline", "");
+        newImg.setAttribute("preload", "metadata");
+        newImg.addEventListener('loadedmetadata', () => {
+            newImg.play().catch(() => {});
+        });
+    } else {
+        newImg = document.createElement('img');
+    }
+    
     // newImg.classList.add("image-zoom"); // TODO: this functionality is not there yet
     newImg.setAttribute('src', './img/' + imgs[i].src);
     newImg.setAttribute('alt', '');
     newImg.addEventListener('load', scheduleFixPaddingBottom, { once: true });
 
     const imageReadyPromise = new Promise(resolve => {
-        if (newImg.complete) {
+        if (isVideo && newImg.readyState >= 1 || !isVideo && newImg.complete) {
             resolve();
             return;
         }
 
-        newImg.addEventListener('load', resolve, { once: true });
+        newImg.addEventListener(isVideo ? 'loadedmetadata' : 'load', resolve, { once: true });
         newImg.addEventListener('error', resolve, { once: true });
     });
     imageLoadPromises.push(imageReadyPromise);

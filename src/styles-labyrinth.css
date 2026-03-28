@@ -7,7 +7,7 @@
     transform-origin: 0 0;
 }
 
-.labyrinth > img {
+.labyrinth > img, .labyrinth > video {
     position: absolute;
     cursor: grab;
     z-index: 1;
@@ -98,18 +98,18 @@ div.gallery_card {
     cursor: grab;
 }
 
-img {
+img, video {
     border: 0px;
     padding: 0px;
 }
 
-.content img {
+.content img, .content video {
     float: none;
     margin-bottom: 0rem;
     vertical-align: bottom;
 }
 
-img.image-zoom {
+img.image-zoom, video.image-zoom {
     cursor: zoom-in;
 }
 
@@ -153,4 +153,8 @@ img.image-zoom {
     cursor: pointer;
     font-size: 13px;
     font-weight: bold;
+}
+
+.gallery_card_image video {
+    pointer-events: none;
 }
