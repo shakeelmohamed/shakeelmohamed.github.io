@@ -42,6 +42,7 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 - [ ] keep working on lighting in the installation scene, renders have some odd ghosting on the left side from the HDR
 - [ ] show prompts
 - [ ] could 3D model the exterior facade for the conf, and make a wayfinding program with a clear system + grid
+- [ ] can show wall crit process
 
 
 # Rothko
