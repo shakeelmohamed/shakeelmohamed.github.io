@@ -141,6 +141,10 @@ img.image-zoom, video.image-zoom {
     pointer-events: auto;
 }
 
+.gallery_card--editable:hover .gallery_resize_handle {
+    opacity: 1;
+}
+
 #labyrinth-copy {
     position: fixed;
     bottom: 16px;

@@ -55,7 +55,7 @@
   --tw-backdrop-invert:  ;
   border-width: 0; /* 2 */
   border-style: solid; /* 2 */
-  border-color: currentColor; /* 2 */
+  border-color: currentcolor; /* 2 */
 }
 
 ::before,
@@ -383,8 +383,7 @@ input::-moz-placeholder, textarea::-moz-placeholder {
   color: #9ca3af; /* 2 */
 }
 
-input::placeholder,
-textarea::placeholder {
+input::placeholder, textarea::placeholder {
   opacity: 1; /* 1 */
   color: #9ca3af; /* 2 */
 }
@@ -468,15 +467,6 @@ video {
   border-color: #2563eb;
 }
 
-input::-moz-placeholder, textarea::-moz-placeholder {
-  color: #6b7280;
-  opacity: 1;
-}
-
-input::placeholder,textarea::placeholder {
-  color: #6b7280;
-  opacity: 1;
-}
 
 ::-webkit-datetime-edit-fields-wrapper {
   padding: 0;
@@ -556,7 +546,7 @@ select {
 
 [type='checkbox']:checked,[type='radio']:checked {
   border-color: transparent;
-  background-color: currentColor;
+  background-color: currentcolor;
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -572,13 +562,13 @@ select {
 
 [type='checkbox']:checked:hover,[type='checkbox']:checked:focus,[type='radio']:checked:hover,[type='radio']:checked:focus {
   border-color: transparent;
-  background-color: currentColor;
+  background-color: currentcolor;
 }
 
 [type='checkbox']:indeterminate {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 16 16'%3e%3cpath stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8h8'/%3e%3c/svg%3e");
   border-color: transparent;
-  background-color: currentColor;
+  background-color: currentcolor;
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -586,7 +576,7 @@ select {
 
 [type='checkbox']:indeterminate:hover,[type='checkbox']:indeterminate:focus {
   border-color: transparent;
-  background-color: currentColor;
+  background-color: currentcolor;
 }
 
 [type='file'] {

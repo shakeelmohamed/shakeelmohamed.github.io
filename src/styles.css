@@ -2,10 +2,10 @@
 Single CSS bundle entry point.
 Import order: compat base → page/component isolates → semantic styles.
 */
-@import "styles-preflight.css";
-@import "styles-formkit.css";
-@import "styles-labyrinth.css";
-@import "styles-fontsampler.css";
+@import url("styles-preflight.css");
+@import url("styles-formkit.css");
+@import url("styles-labyrinth.css");
+@import url("styles-fontsampler.css");
 
 :root {
     --color-black: #000000;
@@ -222,8 +222,7 @@ main {
     padding-right: 2rem;
 }
 
-.newheader,
-.newfooter {
+.newheader, .newfooter {
     padding-bottom: var(--space-2);
     font-weight: 700;
     font-size: 1rem;
@@ -372,7 +371,7 @@ main {
 }
 
 .about-list {
-    padding-left: var(--space-12);
+    padding-left: var(--space-6);
 }
 
 .post-layout {
@@ -447,15 +446,12 @@ blockquote {
 .post-content h2,
 .post-content h3,
 .post-content h4,
-.post-content h2,
-.post-content h3,
-.post-content h4,
 .post-content h5 {
     padding-top: 0;
     padding-bottom: 0;
     margin-top: 0.125rem;
     margin-bottom: 0.125rem;
-    line-height: 1.3333333;
+    line-height: 1.3333;
 }
 
 .post-content pre {
@@ -478,10 +474,11 @@ blockquote {
 }
 
 .inclusion-virgil-image {
-    width: 66.666667%;
+    width: 66.6667%;
 }
 
 .inclusion-hero-panel {
+    height: 100vh;
     min-height: 50vh;
     display: flex;
     justify-content: center;
@@ -508,23 +505,11 @@ blockquote {
     margin-top: var(--space-4);
     margin-bottom: var(--space-4);
 }
-/* Match production: row-gap and margin for .grid-2 */
-.grid-2 {
-    row-gap: var(--space-4);
-    margin-top: var(--space-4);
-    margin-bottom: var(--space-4);
-}
 
 .grid-3 {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);  
     column-gap: var(--space-8);
-    row-gap: var(--space-4);
-    margin-top: var(--space-4);
-    margin-bottom: var(--space-4);
-}
-/* Match production: row-gap and margin for .grid-3 */
-.grid-3 {
     row-gap: var(--space-4);
     margin-top: var(--space-4);
     margin-bottom: var(--space-4);
@@ -891,15 +876,6 @@ img.emoji {
     background-color: var(--color-bisque);
 }
 
-.block-centered-page {
-    width: 50%;
-}
-
-.inclusion-hero-panel {
-    height: 100vh;
-}
-
-
 img.lightbox,
 video,
 .project-content > img {
@@ -1048,77 +1024,69 @@ video,
 }
 
 /* TODO: technically tablet styles below but ignore that fact until we can solidify desktop and mobile */
-header,
-footer {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    header,
+    footer {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+    }
 
-nav {
-    display: flex;
-    flex-direction: row-reverse;
-}
+    nav {
+        display: flex;
+        flex-direction: row-reverse;
+    }
 
-nav > p {
-    text-align: right;
-}
+    nav > p {
+        text-align: right;
+    }
 
-nav > p::before {
-    --tw-content: '';
-    content: var(--tw-content);
-}
+    nav > p::before {
+        --tw-content: '';
+        content: var(--tw-content);
+    }
 
-h1 {
-    font-size: 2.5rem;
-    line-height: 1.2;
-}
+    code,
+    kbd,
+    samp,
+    pre {
+      font-family: ui-monospace, SFMono-Regular, Menlo, "Courier New", monospace;
+      font-feature-settings: normal;
+      font-variation-settings: normal;
+      font-size: 1rem;
+    }
+    /* Production-matching code block styling (no .prose) */
+    pre {
+        background-color: #24292f;
+        color: #f6f8fa;
+        overflow-x: auto;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.75;
+        border-radius: 0.5rem;
+        padding: 1rem;
+    }
 
-h3 {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-}
+    pre code {
+        background-color: transparent;
+        border-width: 0;
+        border-radius: 0;
+        padding: 0;
+        font-weight: inherit;
+        color: inherit;
+        font-size: inherit;
+        font-family: inherit;
+        line-height: inherit;
+    }
 
-code,
-kbd,
-samp,
-pre {
-  font-family: ui-monospace, SFMono-Regular, Menlo, "Courier New", monospace;
-  font-feature-settings: normal;
-  font-variation-settings: normal;
-  font-size: 1rem;
-}
-/* Production-matching code block styling (no .prose) */
-pre {
-    background-color: #24292f;
-    color: #f6f8fa;
-    overflow-x: auto;
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 1.75;
-    border-radius: 0.5rem;
-    padding: 1rem;
-}
+    pre code::before,
+    pre code::after {
+        content: none;
+    }
 
-pre code {
-    background-color: transparent;
-    border-width: 0;
-    border-radius: 0;
-    padding: 0;
-    font-weight: inherit;
-    color: inherit;
-    font-size: inherit;
-    font-family: inherit;
-    line-height: inherit;
-}
-
-pre code::before,
-pre code::after {
-    content: none;
-}
-
-/* Fix for inline code block */
-code {
-    padding-left: .25rem;
-    padding-right: .25rem;
+    /* Fix for inline code block */
+    code {
+        padding-left: .25rem;
+        padding-right: .25rem;
+    }
 }
