@@ -7,10 +7,13 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 
 - [ ] Update labyrinth with new content
 - [ ] fix broken link to break presentation (on project page)
+- [ ] portfolio-content bottom margin seems tight compared to caption leading
 
 ## Cleanup
 
 - [ ] Replace all avif/gif files with .mp4
+- [ ] Add 1200:630 videos for project covers, cleanup CSS hacks to make the 1920x1080 files work
+    - [ ] mini highlight videos for Salgirah 2025, MJ, Rothko, MR, RM, TYPO maybe just logo animation
 - [ ] use <footer>, etc structured markup; rename newheader, newfooter CSS classes accordingly
 - [ ] resolve rules and tighten up spacing when header comes after a rule; probably remove rule from the header markup if possible; (Started with hr.rule class)
 - [ ] Fix right margin issues on tablet / half-width desktop size
@@ -21,24 +24,30 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 - [ ] Lots of CSS tricks for website, especially the pure HTML menu button
     - [ ] https://youtu.be/Ol62e-dWu0E?si=upqWiVo_qzMi_Am0
     - [ ] https://youtu.be/pYW3O0AxpI8?si=yP-fI72i1TvTUotJ
+- [ ] why aren't pages like /branding in the sitemap?
 
 # Midjourney
 
 - [ ] brand guidelines
+- [ ] brand book flip through with motion, show spiral binding and lots of great editorial speads
 - [ ] update project summary
+- [ ] caustic dispersion (light refraction) with logo in Blender
 - [ ] Need to optimize it for skimming, missing all the good stuff with the slideshows
 - [ ] spend 3 hours on motion (new storyboard, logo decomposition into layers, production), goal should be 10 seconds max
 - [ ] SIMPLE web and mobile UI screens / scroll motion
 - [ ] motion (logo reveal, 15-30s piece, product UI features)
 - [ ] brand inspiration book (better name)
-- [ ] Midjourney: keep working on lighting in the installation scene, renders have some odd ghosting on the left side from the HDR
-- [ ] Midjourney: show prompts
-- [ ] Midjourney: could 3D model the exterior facade for the conf, and make a wayfinding program with a clear system + grid
+- [ ] add presentation design
+- [ ] add research and strategy deck, build it out + show thumbs
+- [ ] keep working on lighting in the installation scene, renders have some odd ghosting on the left side from the HDR
+- [ ] show prompts
+- [ ] could 3D model the exterior facade for the conf, and make a wayfinding program with a clear system + grid
+- [ ] can show wall crit process
 
 
 # Rothko
 
-- [ ] photoshoot outside of my holding fabric poster(s) https://www.instagram.com/p/CxGUOs_rMTE/?img_index=1
+- [ ] photoshoot outside of me holding fabric poster(s), or better renders with fabric sim
 - [ ] update all book imgs, missing some stills instead of all gifs
 - [ ] try to match background colors to the brand gray tone
 - [ ] why is the book cover so pixelated, esp PBS logo? investigate
@@ -57,6 +66,7 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 
 # TPS
 
+- [ ] Create wayfinding system using clean grid
 - [ ] wristband motion... there is not face between inside/outside oops! Also make it loop perfectly
 - [ ] show motion design system (3x vertical social posts, LT, slates/bumpers) - show the system/grid, adaptive resizing
 - [ ] re-do social media mockup, looks a bit low saturation, dark mode UI would help
@@ -75,10 +85,11 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 # Mindful Roman
 
 - [ ] update colors to match personal ID system
+- [ ] motion cover / screen recording from glyphs typing interface
 - [ ] poster has kinda tight leading on the 3 paragraphs, I think... need to check at full scale
 - [ ] do some motion gifs/stills of the font2 specimen sheets I made, fun play on the day/night concept
 - [ ] gendesign whole astrology chart... oh yeah
-- [ ] some ephemera like all 12 astrology sign info cards or stickers idk
+- [ ] some ephemera like all 12 astrology sign info cards or stickers idk; basically push the astrology concept more
 - [ ] lifestyle brand packaging mockups (actually, can just make a whole pkg lifestyle brand)
 
 # Ontology
@@ -182,7 +193,7 @@ Hermes - highest vis sponsored studio ever, and being the TA is the validation f
 # P3
 
 - [ ] secret/hidden landing pages for video editing, tech, etc.
-- [ ] hmm (security) Add rel="noopener noreferrer" to external links
+- [ ] hmm (security) Add rel="noopener noreferrer" to external links; https://linkbuilder.io/rel-noopener-noreferrer/
 - [ ] Media-specific pages could have more detail/context, scrollable images... TBD
     - [x] Type design list page (ideally I have all the tag-specific pages auto generated, otherwise I can curate the ones I need by skill (type design, branding, motion, editorial, web))
 - [ ] maybe add a spacer for empty grid divs... https://github.com/shakeelmohamed/shakeelmohamed.github.io/pull/181#discussion_r2114879681; see also https://github.com/shakeelmohamed/shakeelmohamed.github.io/pull/181#discussion_r2114880664
@@ -222,7 +233,6 @@ Hermes - highest vis sponsored studio ever, and being the TA is the validation f
 
 ## Low priority
 
-- [ ] learn about noreferrer, etc: https://linkbuilder.io/rel-noopener-noreferrer/
 - [ ] Rework semantics for SEO for: h1/h2/etc
 - [ ] JS to prevent bad breaks (widows / orphans) - maybe solved with text-wrap-style: balance;
 - [ ] - [ ] Responsive image loading... add avif/etc optimized loadtime support; see https://github.com/saneef/eleventy-plugin-img2picture

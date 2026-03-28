@@ -2,11 +2,11 @@
 // Image positions are defined in src/_data/labyrinth.json
 // To update layout: drag images locally, click "Copy layout JSON", paste the output back into labyrinth.json
 
-const imgs = JSON.parse(document.getElementById('labyrinth-images-data').textContent);
-const thumbnailSizer = document.querySelector('.thumbnail_sizer');
-const imageGallery = document.querySelector('.image-gallery');
-const isLocal = ['localhost', '127.0.0.1'].includes(window.location.hostname);
-const resizeHandleDirections = ['nw', 'ne', 'sw', 'se'];
+const imgs = JSON.parse(document.getElementById("labyrinth-images-data").textContent);
+const thumbnailSizer = document.querySelector(".thumbnail_sizer");
+const imageGallery = document.querySelector(".image-gallery");
+const isLocal = ["localhost", "127.0.0.1"].includes(window.location.hostname);
+const resizeHandleDirections = ["nw", "ne", "sw", "se"];
 const imageLoadPromises = [];
 
 let latestJson = null;
@@ -17,30 +17,50 @@ let draggablesInitialized = false;
 imgs.sort((a, b) => a.pos.y - b.pos.y);
 
 for (let i = 0; i < imgs.length; i++) {
-    const wrapper = document.createElement('div');
+    const wrapper = document.createElement("div");
 
-    wrapper.classList.add('gallery_card', 'gallery_card--editable');
+    wrapper.classList.add("gallery_card", "gallery_card--editable");
     applyCardPosition(wrapper, imgs[i].pos);
     wrapper.dataset.imgSrc = imgs[i].src;
     wrapper.dataset.imgIndex = `${i}`;
 
-    const innerWrapper = document.createElement('div');
-    innerWrapper.classList.add('gallery_card_image');
+    const innerWrapper = document.createElement("div");
+    innerWrapper.classList.add("gallery_card_image");
 
-    const newImg = document.createElement('img');
+    let newImg;
+    const isVideo = imgs[i].src.endsWith(".mp4");
+    // TODO: add optimizations like project pages
+    if (isVideo) {
+        // TODO: videos currently break drag functionality
+        // continue;
+        newImg = document.createElement("video");
+        newImg.setAttribute("autoplay", "");
+        // newImg.setAttribute("controls", "");
+        newImg.setAttribute("data-video", "0");
+        newImg.setAttribute("loop", "");
+        newImg.setAttribute("muted", "");
+        newImg.setAttribute("playsinline", "");
+        newImg.setAttribute("preload", "metadata");
+        newImg.addEventListener("loadedmetadata", () => {
+            newImg.play().catch(() => {});
+        });
+    } else {
+        newImg = document.createElement("img");
+    }
+    
     // newImg.classList.add("image-zoom"); // TODO: this functionality is not there yet
-    newImg.setAttribute('src', './img/' + imgs[i].src);
-    newImg.setAttribute('alt', '');
-    newImg.addEventListener('load', scheduleFixPaddingBottom, { once: true });
+    newImg.setAttribute("src", "./img/" + imgs[i].src);
+    newImg.setAttribute("alt", "");
+    newImg.addEventListener("load", scheduleFixPaddingBottom, { once: true });
 
     const imageReadyPromise = new Promise(resolve => {
-        if (newImg.complete) {
+        if (isVideo && newImg.readyState >= 1 || !isVideo && newImg.complete) {
             resolve();
             return;
         }
 
-        newImg.addEventListener('load', resolve, { once: true });
-        newImg.addEventListener('error', resolve, { once: true });
+        newImg.addEventListener(isVideo ? "loadedmetadata" : "load", resolve, { once: true });
+        newImg.addEventListener("error", resolve, { once: true });
     });
     imageLoadPromises.push(imageReadyPromise);
 
@@ -72,7 +92,7 @@ function updateLatestJson() {
 function updateDumpOutput() {
     updateLatestJson();
     if (isLocal) {
-        console.log('labyrinth layout JSON:', latestJson);
+        console.log("labyrinth layout JSON:", latestJson);
     }
 }
 
@@ -151,7 +171,7 @@ function persistCardPosition(element, shouldLog = true) {
 }
 
 function getResizeCursor(direction) {
-    return direction === 'nw' || direction === 'se' ? 'nwse-resize' : 'nesw-resize';
+    return direction === "nw" || direction === "se" ? "nwse-resize" : "nesw-resize";
 }
 
 function handleResizeMove(event) {
@@ -170,7 +190,7 @@ function handleResizeMove(event) {
     let nextWidthPx = resizeState.startWidthPx;
     let nextLeftPx = resizeState.startLeftPx;
 
-    if (resizeState.direction.endsWith('e')) {
+    if (resizeState.direction.endsWith("e")) {
         nextWidthPx = clamp(
             resizeState.startWidthPx + deltaX,
             minWidthPx,
@@ -201,11 +221,11 @@ function stopResize() {
         return;
     }
 
-    resizeState.element.classList.remove('is-resizing');
-    document.body.style.cursor = '';
-    window.removeEventListener('pointermove', handleResizeMove);
-    window.removeEventListener('pointerup', stopResize);
-    window.removeEventListener('pointercancel', stopResize);
+    resizeState.element.classList.remove("is-resizing");
+    document.body.style.cursor = "";
+    window.removeEventListener("pointermove", handleResizeMove);
+    window.removeEventListener("pointerup", stopResize);
+    window.removeEventListener("pointercancel", stopResize);
 
     persistCardPosition(resizeState.element, true);
     scheduleFixPaddingBottom();
@@ -234,28 +254,28 @@ function startResize(event, element, direction) {
         startWidthPx: elementRect.width
     };
 
-    element.classList.add('is-resizing');
+    element.classList.add("is-resizing");
     document.body.style.cursor = getResizeCursor(direction);
-    window.addEventListener('pointermove', handleResizeMove);
-    window.addEventListener('pointerup', stopResize);
-    window.addEventListener('pointercancel', stopResize);
+    window.addEventListener("pointermove", handleResizeMove);
+    window.addEventListener("pointerup", stopResize);
+    window.addEventListener("pointercancel", stopResize);
 }
 
 function addResizeHandles(wrapper) {
     for (let i = 0; i < resizeHandleDirections.length; i++) {
         const direction = resizeHandleDirections[i];
-        const handle = document.createElement('button');
+        const handle = document.createElement("button");
 
-        handle.type = 'button';
-        handle.classList.add('gallery_resize_handle', `gallery_resize_handle--${direction}`);
-        handle.setAttribute('aria-label', `Resize ${wrapper.dataset.imgSrc} from ${direction} corner`);
-        handle.addEventListener('pointerdown', event => startResize(event, wrapper, direction));
+        handle.type = "button";
+        handle.classList.add("gallery_resize_handle", `gallery_resize_handle--${direction}`);
+        handle.setAttribute("aria-label", `Resize ${wrapper.dataset.imgSrc} from ${direction} corner`);
+        handle.addEventListener("pointerdown", event => startResize(event, wrapper, direction));
         wrapper.appendChild(handle);
     }
 }
 
-window.addEventListener('load', scheduleFixPaddingBottom);
-window.addEventListener('resize', scheduleFixPaddingBottom);
+window.addEventListener("load", scheduleFixPaddingBottom);
+window.addEventListener("resize", scheduleFixPaddingBottom);
 
 gsap.registerPlugin(Draggable);
 
@@ -264,13 +284,13 @@ function initializeDraggables() {
         return;
     }
 
-    const cards = document.querySelectorAll('.gallery_card');
+    const cards = document.querySelectorAll(".gallery_card");
     for (let i = 0; i < cards.length; i++) {
         const card = cards[i];
-        const dragTrigger = card.querySelector('.gallery_card_image') || card;
+        const dragTrigger = card.querySelector(".gallery_card_image") || card;
 
         Draggable.create(card, {
-            type: 'left,top',
+            type: "left,top",
             trigger: dragTrigger,
             allowContextMenu: true,
             minimumMovement: 3,
@@ -280,10 +300,10 @@ function initializeDraggables() {
                 }
 
                 bringCardToFront(this.target);
-                this.target.classList.add('is-dragging');
+                this.target.classList.add("is-dragging");
             },
             onRelease: function () {
-                this.target.classList.remove('is-dragging');
+                this.target.classList.remove("is-dragging");
             },
             onDragEnd: function () {
                 if (resizeState && resizeState.element === this.target) {
@@ -300,16 +320,16 @@ function initializeDraggables() {
 }
 
 if (isLocal) {
-    const btn = document.createElement('button');
-    btn.id = 'labyrinth-copy';
-    btn.textContent = 'Copy layout JSON';
-    btn.addEventListener('click', () => {
+    const btn = document.createElement("button");
+    btn.id = "labyrinth-copy";
+    btn.textContent = "Copy layout JSON";
+    btn.addEventListener("click", () => {
         navigator.clipboard.writeText(latestJson).then(() => {
-            btn.textContent = 'Copied!';
-            setTimeout(() => { btn.textContent = 'Copy layout JSON'; }, 2000);
+            btn.textContent = "Copied!";
+            setTimeout(() => { btn.textContent = "Copy layout JSON"; }, 2000);
         }).catch(() => {
-            btn.textContent = 'Copy failed';
-            setTimeout(() => { btn.textContent = 'Copy layout JSON'; }, 2000);
+            btn.textContent = "Copy failed";
+            setTimeout(() => { btn.textContent = "Copy layout JSON"; }, 2000);
         });
     });
     document.body.appendChild(btn);
@@ -320,7 +340,7 @@ function fixPaddingBottom() {
         return;
     }
 
-    const cards = document.querySelectorAll('.gallery_card');
+    const cards = document.querySelectorAll(".gallery_card");
     const gutter = convertRemToPixels(2);
 
     let maxBottom = 0;
@@ -333,5 +353,5 @@ function fixPaddingBottom() {
     }
 
     const newPaddingBottom = Math.max(gutter, maxBottom + gutter);
-    imageGallery.style.setProperty('padding-bottom', `${newPaddingBottom}px`);
+    imageGallery.style.setProperty("padding-bottom", `${newPaddingBottom}px`);
 }

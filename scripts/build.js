@@ -1,18 +1,18 @@
-const fs = require('node:fs');
-const path = require('node:path');
-const { spawnSync } = require('node:child_process');
+const fs = require("node:fs");
+const path = require("node:path");
+const { spawnSync } = require("node:child_process");
 
 const ROOT = process.cwd();
-const META_PATH = path.resolve(ROOT, '.cache/build-meta.json');
-const OUTPUT_SENTINEL = path.resolve(ROOT, 'docs/sitemap.txt');
+const META_PATH = path.resolve(ROOT, ".cache/build-meta.json");
+const OUTPUT_SENTINEL = path.resolve(ROOT, "docs/sitemap.txt");
 
 const INPUT_PATHS = [
-    'src',
-    '.eleventy.js',
-    'postcss.config.js',
-    'package.json',
-    'utils.js',
-    'scripts/cache-git-dates.js',
+    "src",
+    ".eleventy.js",
+    "postcss.config.js",
+    "package.json",
+    "utils.js",
+    "scripts/cache-git-dates.js",
 ];
 
 const newestInput = findNewestMtime(INPUT_PATHS.map((entry) => path.resolve(ROOT, entry)));
@@ -20,11 +20,11 @@ const previous = readJson(META_PATH);
 const hasOutput = fs.existsSync(OUTPUT_SENTINEL);
 
 if (shouldSkipBuild()) {
-    console.log('build: no changes detected, skipping');
+    console.log("build: no changes detected, skipping");
 } else {
-    run('bun', ['run', 'postcss'], { env: { NODE_ENV: 'production' } });
-    run('node', ['scripts/cache-git-dates.js']);
-    run('bunx', ['@11ty/eleventy', '--input=src', '--output=docs']);
+    run("bun", ["run", "postcss"], { env: { NODE_ENV: "production" } });
+    run("node", ["scripts/cache-git-dates.js"]);
+    run("bunx", ["@11ty/eleventy", "--input=src", "--output=docs"]);
 }
 
 fs.mkdirSync(path.dirname(META_PATH), { recursive: true });
@@ -34,7 +34,7 @@ fs.writeFileSync(
 );
 
 function shouldSkipBuild() {
-    if (!hasOutput || !previous || typeof previous.newestInput !== 'number') {
+    if (!hasOutput || !previous || typeof previous.newestInput !== "number") {
         return false;
     }
 
@@ -45,7 +45,7 @@ function readJson(path) {
     if (!fs.existsSync(path)) {
         return null;
     }
-    return JSON.parse(fs.readFileSync(path, 'utf8'));
+    return JSON.parse(fs.readFileSync(path, "utf8"));
 }
 
 function findNewestMtime(paths) {
@@ -73,7 +73,7 @@ function findNewestMtime(paths) {
 
 function run(command, args, options = {}) {
     const result = spawnSync(command, args, {
-        stdio: 'inherit',
+        stdio: "inherit",
         cwd: ROOT,
         env: { ...process.env, ...options.env },
     });

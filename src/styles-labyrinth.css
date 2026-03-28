@@ -7,7 +7,7 @@
     transform-origin: 0 0;
 }
 
-.labyrinth > img {
+.labyrinth > img, .labyrinth > video {
     position: absolute;
     cursor: grab;
     z-index: 1;
@@ -98,18 +98,18 @@ div.gallery_card {
     cursor: grab;
 }
 
-img {
+img, video {
     border: 0px;
     padding: 0px;
 }
 
-.content img {
+.content img, .content video {
     float: none;
     margin-bottom: 0rem;
     vertical-align: bottom;
 }
 
-img.image-zoom {
+img.image-zoom, video.image-zoom {
     cursor: zoom-in;
 }
 
@@ -122,6 +122,30 @@ img.image-zoom {
        -moz-user-select: none;
             user-select: none;
     -webkit-user-drag: none;
+}
+
+.gallery_resize_handle--nw {
+    top: 0;
+    left: 0;
+    cursor: nwse-resize;
+}
+
+.gallery_resize_handle--ne {
+    top: 0;
+    right: 0;
+    cursor: nesw-resize;
+}
+
+.gallery_resize_handle--sw {
+    bottom: 0;
+    left: 0;
+    cursor: nesw-resize
+}
+
+.gallery_resize_handle--se {
+    bottom: 0;
+    right: 0;
+    cursor: nwse-resize;
 }
 
 .gallery_card--editable .gallery_resize_handle {
@@ -141,6 +165,10 @@ img.image-zoom {
     pointer-events: auto;
 }
 
+.gallery_card--editable:hover .gallery_resize_handle {
+    opacity: 1;
+}
+
 #labyrinth-copy {
     position: fixed;
     bottom: 16px;
@@ -153,4 +181,8 @@ img.image-zoom {
     cursor: pointer;
     font-size: 13px;
     font-weight: bold;
+}
+
+.gallery_card_image video {
+    pointer-events: none;
 }

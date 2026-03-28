@@ -1,4 +1,4 @@
-const utils = require('../../utils');
+const utils = require("../../utils");
 
 function makeLinks(data) {
     if (!data.media || data.media.length === 0) {
@@ -12,7 +12,7 @@ function makeLinks(data) {
             if (data.tags.includes("archive")) {
                 links.push(mediaName);
             } else {
-                links.push(`<a href="/${mediaName.replace(/\s+/g, '-').toLowerCase()}">${mediaName}</a>`);
+                links.push(`<a href="/${mediaName.replace(/\s+/g, "-").toLowerCase()}">${mediaName}</a>`);
                 // TODO: ideally we are matching against existing tags to avoid broken links, worst case write tests for this
                 // let matched; 
                 // data.collections.mediaTypes.find(mediaData => {
@@ -49,6 +49,7 @@ module.exports = {
     eleventyComputed: {
         pageTitle: data => data.title + " | Shakeel Mohamed — Strategic Brand Designer",
         openGraphImage: data => utils.buildOGImageURL(data),
+        cover: data => utils.getCover(data),
         // TODO: consider making media a hardcoded string... unless using it for filtering
         //      (e.g.: I could make a "tag" view for projects /media/experimental-typography)
         

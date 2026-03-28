@@ -1,18 +1,18 @@
-const { createHash } = require('node:crypto');
-const { readdirSync, readFileSync } = require('node:fs');
-const { resolve, dirname, join, extname } = require('node:path');
+const { createHash } = require("node:crypto");
+const { readdirSync, readFileSync } = require("node:fs");
+const { resolve, dirname, join, extname } = require("node:path");
 
-const SITE_ORIGIN = 'https://shakeelmohamed.com';
-const LOCAL_ORIGIN = 'http://localhost:8080';
-const DOCS_DIR = resolve(process.cwd(), 'docs');
-const SRC_DIR = resolve(process.cwd(), 'src');
-const SITEMAP_PATH = resolve(process.cwd(), 'docs/sitemap.txt');
-const SOURCE_REFERENCE_FILE_EXTENSIONS = new Set(['.pug', '.js', '.json', '.md', '.txt', '.webmanifest', '.xml', '.yml', '.yaml']);
-const SOURCE_IMAGE_EXTENSIONS = new Set(['png', 'jpg', 'jpeg', 'gif', 'svg']);
+const SITE_ORIGIN = "https://shakeelmohamed.com";
+const LOCAL_ORIGIN = "http://localhost:8080";
+const DOCS_DIR = resolve(process.cwd(), "docs");
+const SRC_DIR = resolve(process.cwd(), "src");
+const SITEMAP_PATH = resolve(process.cwd(), "docs/sitemap.txt");
+const SOURCE_REFERENCE_FILE_EXTENSIONS = new Set([".pug", ".js", ".json", ".md", ".txt", ".webmanifest", ".xml", ".yml", ".yaml"]);
+const SOURCE_IMAGE_EXTENSIONS = new Set(["png", "jpg", "jpeg", "gif", "svg"]);
 
 function discoverRoutes() {
-    return readFileSync(SITEMAP_PATH, 'utf8')
-        .split('\n')
+    return readFileSync(SITEMAP_PATH, "utf8")
+        .split("\n")
         .map((line) => line.trim())
         .filter(Boolean)
         .map((url) => {
@@ -28,10 +28,10 @@ function discoverRoutes() {
 }
 
 function snapshotNameForRoute(route) {
-    const normalized = route === '/' ? 'home' : route.replace(/^\/+|\/+$/g, '').replace(/\//g, '__');
-    const safe = normalized.replace(/[^a-zA-Z0-9_-]/g, '-').toLowerCase() || 'home';
+    const normalized = route === "/" ? "home" : route.replace(/^\/+|\/+$/g, "").replace(/\//g, "__");
+    const safe = normalized.replace(/[^a-zA-Z0-9_-]/g, "-").toLowerCase() || "home";
     const short = safe.slice(0, 80);
-    const hash = createHash('sha1').update(route).digest('hex').slice(0, 8);
+    const hash = createHash("sha1").update(route).digest("hex").slice(0, 8);
     return `${short}--${hash}.png`;
 }
 
@@ -54,7 +54,7 @@ function getFilesRecursively(dirPath, filterFn) {
 }
 
 function listHtmlFilesRecursively(dirPath) {
-    return getFilesRecursively(dirPath, (fullPath) => fullPath.endsWith('.html'));
+    return getFilesRecursively(dirPath, (fullPath) => fullPath.endsWith(".html"));
 }
 
 function listSourceImageFilesRecursively(dirPath) {
@@ -70,15 +70,15 @@ function listSourceReferenceFilesRecursively(dirPath) {
 
 function isLocalAssetUrl(value) {
     if (!value) return false;
-    return !(value.startsWith('http://') || value.startsWith('https://') || value.startsWith('//') || value.startsWith('data:') || value.startsWith('#'));
+    return !(value.startsWith("http://") || value.startsWith("https://") || value.startsWith("//") || value.startsWith("data:") || value.startsWith("#"));
 }
 
 function splitSrcsetValues(srcset) {
-    return srcset.split(',').map((part) => part.trim().split(/\s+/)[0]).filter(Boolean);
+    return srcset.split(",").map((part) => part.trim().split(/\s+/)[0]).filter(Boolean);
 }
 
 function normalizeAssetUrl(urlValue) {
-    const stripped = urlValue.split('#')[0].split('?')[0].trim();
+    const stripped = urlValue.split("#")[0].split("?")[0].trim();
     try {
         return decodeURI(stripped);
     } catch {
@@ -87,18 +87,18 @@ function normalizeAssetUrl(urlValue) {
 }
 
 function normalizeSourceAssetReference(rawValue) {
-    return normalizeAssetUrl(rawValue).replace(/^['"]|['"]$/g, '');
+    return normalizeAssetUrl(rawValue).replace(/^['"]|['"]$/g, "");
 }
 
 function resolveAssetPath(htmlFile, assetUrl) {
-    if (assetUrl.startsWith('/')) {
+    if (assetUrl.startsWith("/")) {
         return resolve(DOCS_DIR, `.${assetUrl}`);
     }
     return resolve(dirname(htmlFile), assetUrl);
 }
 
 function resolveSourceAssetPath(sourceFile, assetUrl) {
-    if (assetUrl.startsWith('/')) {
+    if (assetUrl.startsWith("/")) {
         return resolve(SRC_DIR, `.${assetUrl}`);
     }
     return resolve(dirname(sourceFile), assetUrl);
@@ -154,17 +154,17 @@ function extractDynamicSourceImageReferences(content, sourceFile) {
     const labyrinthFilenameMatches = content.matchAll(/\bsrc\s*:\s*["']([^"']+?\.(?:png|jpg|jpeg|gif|svg))["']/gi);
     const hasLabyrinthJoinPattern = /["']\.\/img\/["']\s*\+\s*imgs\[[^\]]+\]\.src/.test(content);
 
-    if (sourceFile.endsWith(join('_data', 'labyrinth.json'))) {
+    if (sourceFile.endsWith(join("_data", "labyrinth.json"))) {
         const labyrinthItems = JSON.parse(content);
         for (const item of labyrinthItems) {
-            if (!item || typeof item.src !== 'string') continue;
-            refs.push(resolve(SRC_DIR, 'labyrinth', 'img', item.src));
+            if (!item || typeof item.src !== "string") continue;
+            refs.push(resolve(SRC_DIR, "labyrinth", "img", item.src));
         }
     }
 
     if (hasLabyrinthJoinPattern) {
         for (const match of labyrinthFilenameMatches) {
-            refs.push(resolve(dirname(sourceFile), '../labyrinth/img', match[1]));
+            refs.push(resolve(dirname(sourceFile), "../labyrinth/img", match[1]));
         }
     }
 
@@ -178,8 +178,8 @@ function extractSourceImageReferences(content) {
     );
     const frontmatterPathMatches = content.matchAll(
         new RegExp(
-            `^\\s*(?:openGraphImage|image|img|thumbnail|headerImage|socialImage|icon|logo)\\s*:\\s*["']?([^"'\\n]+?\\.(?:${[...SOURCE_IMAGE_EXTENSIONS].join('|')})(?:[?#][^"'\\s]+)?)["']?\\s*$`,
-            'gim',
+            `^\\s*(?:openGraphImage|image|img|thumbnail|headerImage|socialImage|icon|logo)\\s*:\\s*["']?([^"'\\n]+?\\.(?:${[...SOURCE_IMAGE_EXTENSIONS].join("|")})(?:[?#][^"'\\s]+)?)["']?\\s*$`,
+            "gim",
         ),
     );
     const markdownImageMatches = content.matchAll(/!\[[^\]]*\]\(([^)\n]+?\.(?:png|jpg|jpeg|gif|svg)(?:[?#][^)\n]+)?)\)/gi);

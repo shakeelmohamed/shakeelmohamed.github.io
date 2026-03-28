@@ -1,15 +1,15 @@
-const Image = require('@11ty/eleventy-img');
-const crypto = require('node:crypto');
-const fs = require('node:fs');
-const path = require('node:path');
-const { spawnSync } = require('node:child_process');
+const Image = require("@11ty/eleventy-img");
+const crypto = require("node:crypto");
+const fs = require("node:fs");
+const path = require("node:path");
+const { spawnSync } = require("node:child_process");
 
 const ROOT = process.cwd();
-const DOCS_ROOT = path.resolve(ROOT, 'docs');
-const CACHE_PATH = path.resolve(ROOT, '.cache/optimize-media.json');
-const TARGET_EXTENSIONS = new Set(['.png', '.jpg', '.jpeg']);
-const VIDEO_EXTENSIONS = new Set(['.mp4']);
-const VIDEO_ENCODER_SIGNATURE = 'vp9-crf33-b0-rowmt1-opus-v1';
+const DOCS_ROOT = path.resolve(ROOT, "docs");
+const CACHE_PATH = path.resolve(ROOT, ".cache/optimize-media.json");
+const TARGET_EXTENSIONS = new Set([".png", ".jpg", ".jpeg"]);
+const VIDEO_EXTENSIONS = new Set([".mp4"]);
+const VIDEO_ENCODER_SIGNATURE = "vp9-crf33-b0-rowmt1-opus-v1";
 
 async function main() {
     const allFiles = collectFiles(DOCS_ROOT);
@@ -55,7 +55,7 @@ async function optimizeImages(files, imageCache) {
     let failedCount = 0;
 
     if (files.length === 0) {
-        console.log('optimize:image no qualifying files found');
+        console.log("optimize:image no qualifying files found");
         return { optimizedCount, skippedCount, failedCount, cache: nextCache };
     }
 
@@ -63,8 +63,8 @@ async function optimizeImages(files, imageCache) {
         const relative = normalizePath(path.relative(DOCS_ROOT, file));
         const outputDir = path.dirname(file);
         const sourceStats = fs.statSync(file);
-        const avifPath = file.replace(/\.(png|jpe?g)$/i, '.avif');
-        const webpPath = file.replace(/\.(png|jpe?g)$/i, '.webp');
+        const avifPath = file.replace(/\.(png|jpe?g)$/i, ".avif");
+        const webpPath = file.replace(/\.(png|jpe?g)$/i, ".webp");
         const cached = imageCache[relative];
 
         const outputsExist = fs.existsSync(avifPath) && fs.existsSync(webpPath);
@@ -87,7 +87,7 @@ async function optimizeImages(files, imageCache) {
         try {
             const metadata = await Image(file, {
                 widths: [null],
-                formats: ['avif', 'webp'],
+                formats: ["avif", "webp"],
                 outputDir,
                 filenameFormat(_id, src, _width, format) {
                     return `${path.parse(src).name}.${format}`;
@@ -133,7 +133,7 @@ async function optimizeVideos(files, videoCache) {
     let failedCount = 0;
 
     if (files.length === 0) {
-        console.log('optimize:video no qualifying files found');
+        console.log("optimize:video no qualifying files found");
         return { optimizedCount, skippedCount, failedCount, cache: nextCache };
     }
 
@@ -143,7 +143,7 @@ async function optimizeVideos(files, videoCache) {
         const relative = normalizePath(path.relative(DOCS_ROOT, file));
         const sourceStats = fs.statSync(file);
         const sourceFingerprint = await fingerprintFile(file);
-        const webmPath = file.replace(/\.mp4$/i, '.webm');
+        const webmPath = file.replace(/\.mp4$/i, ".webm");
         const webmRelativePath = normalizePath(path.relative(DOCS_ROOT, webmPath));
         const cached = videoCache[relative];
 
@@ -216,61 +216,61 @@ function collectFiles(dir) {
 }
 
 function normalizePath(value) {
-    return value.split('\\').join('/');
+    return value.split("\\").join("/");
 }
 
 function ensureFfmpegAvailable() {
-    const versionCheck = spawnSync('ffmpeg', ['-version'], { stdio: 'ignore' });
+    const versionCheck = spawnSync("ffmpeg", ["-version"], { stdio: "ignore" });
     if (versionCheck.status === 0) {
         return;
     }
 
-    throw new Error('ffmpeg CLI is required for MP4 to WebM optimization.');
+    throw new Error("ffmpeg CLI is required for MP4 to WebM optimization.");
 }
 
 function transcodeVideoToWebm(inputPath, outputPath) {
     const result = spawnSync(
-        'ffmpeg',
+        "ffmpeg",
         [
-            '-y',
-            '-i',
+            "-y",
+            "-i",
             inputPath,
-            '-c:v',
-            'libvpx-vp9',
-            '-crf',
-            '33',
-            '-b:v',
-            '0',
-            '-row-mt',
-            '1',
-            '-pix_fmt',
-            'yuv420p',
-            '-c:a',
-            'libopus',
+            "-c:v",
+            "libvpx-vp9",
+            "-crf",
+            "33",
+            "-b:v",
+            "0",
+            "-row-mt",
+            "1",
+            "-pix_fmt",
+            "yuv420p",
+            "-c:a",
+            "libopus",
             outputPath,
         ],
-        { stdio: 'pipe' },
+        { stdio: "pipe" },
     );
 
     if (result.status !== 0) {
-        const stderr = (result.stderr || '').toString().trim();
-        const detail = stderr.length > 0 ? ` ${stderr}` : '';
+        const stderr = (result.stderr || "").toString().trim();
+        const detail = stderr.length > 0 ? ` ${stderr}` : "";
         throw new Error(`ffmpeg failed with status ${result.status}.${detail}`);
     }
 }
 
 async function fingerprintFile(filePath) {
-    const hash = crypto.createHash('sha256');
+    const hash = crypto.createHash("sha256");
 
     await new Promise((resolve, reject) => {
         const stream = fs.createReadStream(filePath);
 
-        stream.on('data', (chunk) => hash.update(chunk));
-        stream.on('error', reject);
-        stream.on('end', resolve);
+        stream.on("data", (chunk) => hash.update(chunk));
+        stream.on("error", reject);
+        stream.on("end", resolve);
     });
 
-    return hash.digest('hex');
+    return hash.digest("hex");
 }
 
 function outputsAreInSync(sourceMtimeMs, avifPath, webpPath) {
@@ -285,7 +285,7 @@ function readJson(filePath) {
         return null;
     }
   
-    return JSON.parse(fs.readFileSync(filePath, 'utf8'));
+    return JSON.parse(fs.readFileSync(filePath, "utf8"));
 }
 
 function readCache(filePath) {

@@ -1,19 +1,19 @@
-const { test, expect } = require('@playwright/test');
-const { writeFileSync, mkdirSync } = require('node:fs');
-const { dirname } = require('node:path');
+const { test, expect } = require("@playwright/test");
+const { writeFileSync, mkdirSync } = require("node:fs");
+const { dirname } = require("node:path");
 
-const { SITE_ORIGIN, LOCAL_ORIGIN, discoverRoutes, snapshotNameForRoute } = require('./test_utils');
+const { SITE_ORIGIN, LOCAL_ORIGIN, discoverRoutes, snapshotNameForRoute } = require("./test_utils");
 
 const routes = discoverRoutes();
 const mismatchedRoutes = [];
 
 if (routes.length === 0) {
-    throw new Error('No routes found');
+    throw new Error("No routes found");
 }
 
 async function stabilizePage(page, url) {
-    await page.goto(url, { waitUntil: 'networkidle' });
-    await page.emulateMedia({ reducedMotion: 'reduce' });
+    await page.goto(url, { waitUntil: "networkidle" });
+    await page.emulateMedia({ reducedMotion: "reduce" });
 
     await page.addStyleTag({
         content: `
@@ -33,14 +33,14 @@ async function stabilizePage(page, url) {
     await page.waitForTimeout(500);
 }
 
-test.describe('Local vs live visual comparison', () => {
+test.describe("Local vs live visual comparison", () => {
     test.afterAll(() => {
         if (mismatchedRoutes.length === 0) {
-            console.log('\n[visual-compare] No visual differences detected.');
+            console.log("\n[visual-compare] No visual differences detected.");
             return;
         }
 
-        console.log('\n[visual-compare] Pages with visual differences:');
+        console.log("\n[visual-compare] Pages with visual differences:");
         for (const route of mismatchedRoutes) {
             console.log(`- ${route}`);
         }
@@ -62,14 +62,14 @@ test.describe('Local vs live visual comparison', () => {
 
                 const localImage = await localPage.screenshot({
                     fullPage: true,
-                    animations: 'disabled',
-                    caret: 'hide',
+                    animations: "disabled",
+                    caret: "hide",
                 });
 
                 const liveImage = await livePage.screenshot({
                     fullPage: true,
-                    animations: 'disabled',
-                    caret: 'hide',
+                    animations: "disabled",
+                    caret: "hide",
                 });
 
                 const snapshotName = snapshotNameForRoute(route);
