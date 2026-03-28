@@ -124,6 +124,30 @@ img.image-zoom, video.image-zoom {
     -webkit-user-drag: none;
 }
 
+.gallery_resize_handle--nw {
+    top: 0;
+    left: 0;
+    cursor: nwse-resize;
+}
+
+.gallery_resize_handle--ne {
+    top: 0;
+    right: 0;
+    cursor: nesw-resize;
+}
+
+.gallery_resize_handle--sw {
+    bottom: 0;
+    left: 0;
+    cursor: nesw-resize
+}
+
+.gallery_resize_handle--se {
+    bottom: 0;
+    right: 0;
+    cursor: nwse-resize;
+}
+
 .gallery_card--editable .gallery_resize_handle {
     -webkit-appearance: none;
        -moz-appearance: none;

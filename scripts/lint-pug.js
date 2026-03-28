@@ -1,25 +1,25 @@
-const fs = require('fs');
-const glob = require('glob');
+const fs = require("fs");
+const glob = require("glob");
 
 // Find all .pug files
-const pugFiles = glob.sync('src/**/*.pug', { ignore: 'node_modules/**' });
+const pugFiles = glob.sync("src/**/*.pug", { ignore: "node_modules/**" });
 
 if (pugFiles.length === 0) {
-    console.log('No Pug files found');
+    console.log("No Pug files found");
     process.exit(0);
 }
 
 // Read all files and extract content
 const fileContents = new Map();
 pugFiles.forEach(file => {
-    fileContents.set(file, fs.readFileSync(file, 'utf-8'));
+    fileContents.set(file, fs.readFileSync(file, "utf-8"));
 });
 
 // Find all mixin definitions: mixin name(...)
 const mixins = new Map(); // name -> { file, line }
 
 fileContents.forEach((content, file) => {
-    const lines = content.split('\n');
+    const lines = content.split("\n");
     lines.forEach((line, idx) => {
         const match = line.match(/^\s*mixin\s+(\w+)/);
         if (match) {
@@ -70,11 +70,11 @@ mixins.forEach((locations, mixinName) => {
     }
 
     // Search for usage: +mixinName(
-    const usagePattern = new RegExp(`\\+${mixinName}\\s*[\\(\\s]`, 'g');
+    const usagePattern = new RegExp(`\\+${mixinName}\\s*[\\(\\s]`, "g");
     let isUsed = false;
 
     for (const content of fileContents.values()) {
-        const lines = content.split('\n');
+        const lines = content.split("\n");
         let usageCount = 0;
         lines.forEach((line) => {
             // Skip the definition line
@@ -98,7 +98,7 @@ mixins.forEach((locations, mixinName) => {
 });
 
 // Output results
-console.log(`\n📊 Pug Mixin Analysis\n`);
+console.log("\n📊 Pug Mixin Analysis\n");
 console.log(`Total mixins found: ${mixins.size}`);
 
 if (unusedMixins.length > 0) {
@@ -112,7 +112,7 @@ if (duplicateMixins.length > 0) {
 }
 
 if (unusedMixins.length === 0 && duplicateMixins.length === 0) {
-    console.log(`\n✅ All mixins are used and no duplicates found!`);
+    console.log("\n✅ All mixins are used and no duplicates found!");
 }
 
 process.exit(unusedMixins.length > 0 ? 1 : 0);

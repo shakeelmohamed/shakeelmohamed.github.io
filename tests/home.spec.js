@@ -1,4 +1,4 @@
-const { test, expect } = require('@playwright/test');
+const { test, expect } = require("@playwright/test");
 
 // TODO: use this workflow for units
 /*
@@ -21,8 +21,8 @@ test("Build generates pages", async () => {
 // - go through all projects, add mediatypes to a Set
 // - check Set against media types form disk
 
-test('homepage has title', async ({ page }) => {
-    await page.goto('/');
+test("homepage has title", async ({ page }) => {
+    await page.goto("/");
     await expect(page).toHaveTitle("Shakeel Mohamed – Strategic Brand Designer in Los Angeles");
 });
 

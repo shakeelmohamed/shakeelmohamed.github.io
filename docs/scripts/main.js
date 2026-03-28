@@ -1,12 +1,12 @@
 let menuOpen = false;
 
 function makeMenu() {
-    const hamburgerIcon = document.querySelector('.hamburgerIcon');
+    const hamburgerIcon = document.querySelector(".hamburgerIcon");
     if (!hamburgerIcon) {
         return;
     }
 
-    hamburgerIcon.addEventListener('click', function (e) {
+    hamburgerIcon.addEventListener("click", function (e) {
         e.preventDefault();
 
         let mobileBranding = document.querySelector(".mobileBranding");
@@ -48,8 +48,8 @@ const galleryOptions = {
     draggable: singleOptions.draggable,
     loop: true,
     cssEfects: { // NOTE THE TYPO IN THE API
-        slide: {in: 'fadeIn', out: 'fadeOut'},
-        slideBack: {in: 'fadeIn', out: 'fadeOut'}
+        slide: {in: "fadeIn", out: "fadeOut"},
+        slideBack: {in: "fadeIn", out: "fadeOut"}
     }
 };
 
@@ -89,12 +89,12 @@ function lights() {
         return;
     }
 
-    if (!document.querySelector('.lightbox') && !document.querySelector('.lightbox-album')) {
+    if (!document.querySelector(".lightbox") && !document.querySelector(".lightbox-album")) {
         return;
     }
 
     makeLightbox(".lightbox");
-    makeGallery('.lightbox-album > img');
+    makeGallery(".lightbox-album > img");
 
     // TODO: add click handler on image to close also
     // let slides = document.querySelectorAll('.gslide-image > img');
@@ -111,7 +111,7 @@ function fullPath(el) {
     const names = [];
     while (el.parentNode) {
         if (el.id) {
-            names.unshift('#' + el.id);
+            names.unshift("#" + el.id);
             break;
         } else {
             if (el == el.ownerDocument.documentElement) names.unshift(el.tagName);
@@ -190,7 +190,7 @@ function initProjectLightboxFeatures() {
         return;
     }
 
-    if (!document.querySelector('.lightbox, .lightbox-album, .project-slider')) {
+    if (!document.querySelector(".lightbox, .lightbox-album, .project-slider")) {
         return;
     }
 
@@ -204,5 +204,5 @@ function init() {
     initProjectLightboxFeatures();
 }
 
-window.addEventListener('load', init);
-window.addEventListener('glightbox:ready', initProjectLightboxFeatures);
+window.addEventListener("load", init);
+window.addEventListener("glightbox:ready", initProjectLightboxFeatures);

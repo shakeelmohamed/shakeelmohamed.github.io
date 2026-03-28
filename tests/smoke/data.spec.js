@@ -1,18 +1,18 @@
-const { test, expect } = require('@playwright/test');
-const { readFileSync, statSync } = require('node:fs');
-const { resolve } = require('node:path');
+const { test, expect } = require("@playwright/test");
+const { readFileSync, statSync } = require("node:fs");
+const { resolve } = require("node:path");
 
-const { getFilesRecursively, DOCS_DIR } = require('../test_utils');
+const { getFilesRecursively, DOCS_DIR } = require("../test_utils");
 
-const DATA_DIR = resolve(process.cwd(), 'src/_data');
+const DATA_DIR = resolve(process.cwd(), "src/_data");
 
 function isPlainObject(value) {
-    return value !== null && typeof value === 'object' && !Array.isArray(value);
+    return value !== null && typeof value === "object" && !Array.isArray(value);
 }
 
 function assertStringField(record, fieldName, fileName, index) {
     expect(
-        typeof record[fieldName] === 'string' && record[fieldName].trim().length > 0,
+        typeof record[fieldName] === "string" && record[fieldName].trim().length > 0,
         `${fileName} entry ${index} must include non-empty string "${fieldName}"`,
     ).toBe(true);
 }
@@ -25,24 +25,24 @@ function validateLinksJson(data, fileName) {
         expect(isPlainObject(entry), `${fileName} entry ${i} must be an object`).toBe(true);
 
         const keys = Object.keys(entry).sort();
-        expect(keys, `${fileName} entry ${i} must only contain text + url`).toEqual(['text', 'url']);
+        expect(keys, `${fileName} entry ${i} must only contain text + url`).toEqual(["text", "url"]);
 
-        assertStringField(entry, 'text', fileName, i);
-        assertStringField(entry, 'url', fileName, i);
+        assertStringField(entry, "text", fileName, i);
+        assertStringField(entry, "url", fileName, i);
     }
 }
 
 function validateMetadataJson(data, fileName) {
     expect(isPlainObject(data), `${fileName} must export an object`).toBe(true);
-    assertStringField(data, 'baseurl', fileName, 'root');
+    assertStringField(data, "baseurl", fileName, "root");
 
     expect(isPlainObject(data.author), `${fileName}.author must be an object`).toBe(true);
-    assertStringField(data.author, 'name', fileName, 'author');
-    assertStringField(data.author, 'email', fileName, 'author');
+    assertStringField(data.author, "name", fileName, "author");
+    assertStringField(data.author, "email", fileName, "author");
 
     expect(isPlainObject(data.social), `${fileName}.social must be an object`).toBe(true);
     for (const [key, value] of Object.entries(data.social)) {
-        expect(typeof value === 'string' && value.trim().length > 0, `${fileName}.social.${key} must be a string`).toBe(true);
+        expect(typeof value === "string" && value.trim().length > 0, `${fileName}.social.${key} must be a string`).toBe(true);
     }
 }
 
@@ -54,18 +54,18 @@ function validateLabyrinthJson(data, fileName) {
         expect(isPlainObject(img), `${fileName}[${i}] must be an object`).toBe(true);
 
         const keys = Object.keys(img).sort();
-        expect(keys, `${fileName}[${i}] must only contain pos + src`).toEqual(['pos', 'src']);
+        expect(keys, `${fileName}[${i}] must only contain pos + src`).toEqual(["pos", "src"]);
 
-        assertStringField(img, 'src', fileName, i);
+        assertStringField(img, "src", fileName, i);
         expect(isPlainObject(img.pos), `${fileName}[${i}].pos must be an object`).toBe(true);
 
         const posKeys = Object.keys(img.pos).sort();
-        expect(posKeys, `${fileName}[${i}].pos must only contain width + x + y + z`).toEqual(['width', 'x', 'y', 'z']);
+        expect(posKeys, `${fileName}[${i}].pos must only contain width + x + y + z`).toEqual(["width", "x", "y", "z"]);
 
-        for (const fieldName of ['x', 'y', 'z', 'width']) {
+        for (const fieldName of ["x", "y", "z", "width"]) {
             const value = img.pos[fieldName];
             expect(
-                typeof value === 'number' && Number.isFinite(value),
+                typeof value === "number" && Number.isFinite(value),
                 `${fileName}[${i}].pos.${fieldName} must be a finite number`,
             ).toBe(true);
         }
@@ -85,45 +85,45 @@ function validateMentionsJs(data, fileName) {
 
         const keys = Object.keys(mention).sort();
         expect(keys, `${fileName}.all[${i}] must only contain date + title + url`).toEqual([
-            'date',
-            'title',
-            'url',
+            "date",
+            "title",
+            "url",
         ]);
 
-        assertStringField(mention, 'date', `${fileName}.all`, i);
-        assertStringField(mention, 'title', `${fileName}.all`, i);
-        assertStringField(mention, 'url', `${fileName}.all`, i);
+        assertStringField(mention, "date", `${fileName}.all`, i);
+        assertStringField(mention, "title", `${fileName}.all`, i);
+        assertStringField(mention, "url", `${fileName}.all`, i);
     }
 }
 
 function validateEleventyComputedJs(data, fileName) {
     expect(isPlainObject(data), `${fileName} must export an object`).toBe(true);
     expect(isPlainObject(data.eleventyComputed), `${fileName}.eleventyComputed must be an object`).toBe(true);
-    expect(typeof data.eleventyComputed.cleanDate, `${fileName}.eleventyComputed.cleanDate must be a function`).toBe('function');
+    expect(typeof data.eleventyComputed.cleanDate, `${fileName}.eleventyComputed.cleanDate must be a function`).toBe("function");
     expect(
         typeof data.eleventyComputed.atomFeedUpdatedDate,
         `${fileName}.eleventyComputed.atomFeedUpdatedDate must be a function`,
-    ).toBe('function');
+    ).toBe("function");
 }
 
 const validators = {
-    'links.json': validateLinksJson,
-    'metadata.json': validateMetadataJson,
-    'labyrinth.json': validateLabyrinthJson,
-    'mentions.js': validateMentionsJs,
-    'eleventyComputed.js': validateEleventyComputedJs,
+    "links.json": validateLinksJson,
+    "metadata.json": validateMetadataJson,
+    "labyrinth.json": validateLabyrinthJson,
+    "mentions.js": validateMentionsJs,
+    "eleventyComputed.js": validateEleventyComputedJs,
 };
 
-test('all src/_data files match schema', async () => {
-    const { readdirSync, statSync } = require('node:fs');
+test("all src/_data files match schema", async () => {
+    const { readdirSync, statSync } = require("node:fs");
     const files = readdirSync(DATA_DIR).filter((name) => {
         const fullPath = resolve(DATA_DIR, name);
-        return statSync(fullPath).isFile() && ['.js', '.json'].includes(require('node:path').extname(name));
+        return statSync(fullPath).isFile() && [".js", ".json"].includes(require("node:path").extname(name));
     });
 
     for (const fileName of files) {
         const validator = validators[fileName];
-        expect(typeof validator, `Missing schema validator for ${fileName}`).toBe('function');
+        expect(typeof validator, `Missing schema validator for ${fileName}`).toBe("function");
 
         const filePath = resolve(DATA_DIR, fileName);
         delete require.cache[filePath];
@@ -134,13 +134,13 @@ test('all src/_data files match schema', async () => {
 });
 
 function validateMediaTypesPages() {
-    const PROJECTS_DIR = resolve(process.cwd(), 'src', 'projects');
+    const PROJECTS_DIR = resolve(process.cwd(), "src", "projects");
     const mediaTypeCounts = new Map();
 
-    const projectFiles = getFilesRecursively(PROJECTS_DIR, (f) => f.endsWith('index.pug'));
+    const projectFiles = getFilesRecursively(PROJECTS_DIR, (f) => f.endsWith("index.pug"));
 
     for (const file of projectFiles) {
-        const content = readFileSync(file, 'utf8');
+        const content = readFileSync(file, "utf8");
 
         if (/^\s*-\s*archive\s*$/m.test(content)) continue;
 
@@ -155,20 +155,20 @@ function validateMediaTypesPages() {
         }
     }
 
-    expect(mediaTypeCounts.size, 'Should discover at least one media type').toBeGreaterThan(0);
+    expect(mediaTypeCounts.size, "Should discover at least one media type").toBeGreaterThan(0);
 
     for (const [mediaType, expectedCount] of mediaTypeCounts) {
-        const slug = mediaType.replace(/\s+/g, '-').toLowerCase();
-        const pagePath = resolve(DOCS_DIR, slug, 'index.html');
+        const slug = mediaType.replace(/\s+/g, "-").toLowerCase();
+        const pagePath = resolve(DOCS_DIR, slug, "index.html");
 
         expect(statSync(pagePath).isFile(), `Media type "${mediaType}" should generate /${slug}/`).toBe(true);
 
-        const html = readFileSync(pagePath, 'utf8');
+        const html = readFileSync(pagePath, "utf8");
         const projectLinks = html.match(/<div class="block-project-listing"><a href="\/projects\/[^"]+"/g) || [];
         const uniqueProjectUrls = new Set(
             projectLinks
                 .map((m) => m.match(/href="([^"]+)"/)[1])
-                .map((url) => (url.endsWith('/') ? url : url + '/')),
+                .map((url) => (url.endsWith("/") ? url : url + "/")),
         );
         const actualCount = uniqueProjectUrls.size;
 
@@ -176,13 +176,13 @@ function validateMediaTypesPages() {
     }
 }
 
-test('mediaTypes collection generates correct pages with correct project counts', async () => {
+test("mediaTypes collection generates correct pages with correct project counts", async () => {
     validateMediaTypesPages();
 });
 
-test('feed.xml never has epoch (1970) for updated timestamps', async () => {
-    const feedPath = resolve(DOCS_DIR, 'feed.xml');
-    const feedContent = readFileSync(feedPath, 'utf8');
+test("feed.xml never has epoch (1970) for updated timestamps", async () => {
+    const feedPath = resolve(DOCS_DIR, "feed.xml");
+    const feedContent = readFileSync(feedPath, "utf8");
 
     const updatedMatches = feedContent.match(/<updated>(\d{4}-\d{2}-\d{2})/g) || [];
     const years = updatedMatches.map((m) => m.match(/(\d{4})/)[1]);
@@ -194,5 +194,5 @@ test('feed.xml never has epoch (1970) for updated timestamps', async () => {
         ).not.toBe(1970);
     }
 
-    expect(years.length, 'Feed should have at least one updated date').toBeGreaterThan(0);
+    expect(years.length, "Feed should have at least one updated date").toBeGreaterThan(0);
 });
