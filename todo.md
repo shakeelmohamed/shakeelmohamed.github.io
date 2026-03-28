@@ -12,6 +12,8 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 ## Cleanup
 
 - [ ] Replace all avif/gif files with .mp4
+- [ ] Add 1200:630 videos for project covers, cleanup CSS hacks to make the 1920x1080 files work
+    - [ ] mini highlight videos for Salgirah 2025, MJ, Rothko, MR, RM, TYPO maybe just logo animation
 - [ ] use <footer>, etc structured markup; rename newheader, newfooter CSS classes accordingly
 - [ ] resolve rules and tighten up spacing when header comes after a rule; probably remove rule from the header markup if possible; (Started with hr.rule class)
 - [ ] Fix right margin issues on tablet / half-width desktop size
@@ -59,6 +61,7 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 
 # TPS
 
+- [ ] Create wayfinding system using clean grid
 - [ ] wristband motion... there is not face between inside/outside oops! Also make it loop perfectly
 - [ ] show motion design system (3x vertical social posts, LT, slates/bumpers) - show the system/grid, adaptive resizing
 - [ ] re-do social media mockup, looks a bit low saturation, dark mode UI would help
