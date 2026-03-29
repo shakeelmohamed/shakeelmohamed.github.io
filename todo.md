@@ -25,6 +25,7 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
     - [ ] https://youtu.be/Ol62e-dWu0E?si=upqWiVo_qzMi_Am0
     - [ ] https://youtu.be/pYW3O0AxpI8?si=yP-fI72i1TvTUotJ
 - [ ] why aren't pages like /branding in the sitemap?
+- [ ] restructure home page so type design projects drop below portfolio projects; maybe do this once I start a 4th typeface... OR just show those as a 3-up row
 
 # Midjourney
 
@@ -90,7 +91,7 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 - [ ] motion cover / screen recording from glyphs typing interface
 - [ ] poster has kinda tight leading on the 3 paragraphs, I think... need to check at full scale
 - [ ] do some motion gifs/stills of the font2 specimen sheets I made, fun play on the day/night concept
-- [ ] gendesign whole astrology chart... oh yeah
+- [ ] gendesign whole astrology chart for IG stories... oh yeah 
 - [ ] some ephemera like all 12 astrology sign info cards or stickers idk; basically push the astrology concept more
 - [ ] lifestyle brand packaging mockups (actually, can just make a whole pkg lifestyle brand)
 
