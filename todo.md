@@ -67,7 +67,9 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 # TPS
 
 - [ ] Create wayfinding system using clean grid
-- [ ] wristband motion... there is not face between inside/outside oops! Also make it loop perfectly
+- [ ] wristband motion... there is no face between inside/outside oops! Also make it loop perfectly
+- [ ] use the pattern as a lining for either stationery, apparel, bag lining, or something else for VIPs
+- [ ] VIP stationery mockup with vellum, etc.
 - [ ] show motion design system (3x vertical social posts, LT, slates/bumpers) - show the system/grid, adaptive resizing
 - [ ] re-do social media mockup, looks a bit low saturation, dark mode UI would help
 - [ ] Redo mockups for TPS tickets, start from a clean INDD file -> PSD, maybe even do Blender mockups
