@@ -5,6 +5,9 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 
 # ASAP
 
+- [ ] Add 1200:630 videos for project covers, cleanup CSS hacks to make the 1920x1080 files work
+    - [ ] mini highlight videos for Salgirah 2025, MJ, Rothko, MR, RM, TYPO maybe just logo animation
+    - [ ] this is breaking mobile layout ans Safari desktop
 - [ ] add "creative tech" or similar tag/page once 3 projects are up
 - [ ] Update labyrinth with new content
 - [ ] fix broken link to break presentation (on project page)
@@ -13,8 +16,6 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 ## Cleanup
 
 - [ ] Replace all avif/gif files with .mp4
-- [ ] Add 1200:630 videos for project covers, cleanup CSS hacks to make the 1920x1080 files work
-    - [ ] mini highlight videos for Salgirah 2025, MJ, Rothko, MR, RM, TYPO maybe just logo animation
 - [ ] use <footer>, etc structured markup; rename newheader, newfooter CSS classes accordingly
 - [ ] resolve rules and tighten up spacing when header comes after a rule; probably remove rule from the header markup if possible; (Started with hr.rule class)
 - [ ] Fix right margin issues on tablet / half-width desktop size
