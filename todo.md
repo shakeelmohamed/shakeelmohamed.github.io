@@ -28,6 +28,12 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 - [ ] why aren't pages like /branding in the sitemap?
 - [ ] restructure home page so type design projects drop below portfolio projects; maybe do this once I start a 4th typeface... OR just show those as a 3-up row
 
+# 10k24
+
+- [ ] after the case study is up and thorough, get some press
+    - [ ]  Octave + Adelle Mono on fonts in use: https://fontsinuse.com/typefaces/210887/octave + https://fontsinuse.com/typefaces/131711/adelle-mono
+    - [ ]  Can also get Referential Mono on there probably; might need to hit the min charset and publish it first: https://foundrysupport.monotype.com/hc/en-us/articles/360029280752-Recommended-Character-Set
+
 # Midjourney
 
 - [ ] brand guidelines
@@ -98,6 +104,7 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 
 # Ontology
 
+- [ ] Include more process photos from my WIP presentation
 - [ ] fix composition for "Ontology - 15.png", the leading is not right
 - [ ] re-export all the gif/avif spread-mockups at higher res, the small type is a bit pixelated
 - [ ] Do I need avif fallback? Ontology is using them and it’s really nice... can I get away with no gifs on the website?
