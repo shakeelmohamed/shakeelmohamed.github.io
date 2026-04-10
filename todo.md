@@ -33,6 +33,7 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 - [ ] after the case study is up and thorough, get some press
     - [ ]  Octave + Adelle Mono on fonts in use: https://fontsinuse.com/typefaces/210887/octave + https://fontsinuse.com/typefaces/131711/adelle-mono
     - [ ]  Can also get Referential Mono on there probably; might need to hit the min charset and publish it first: https://foundrysupport.monotype.com/hc/en-us/articles/360029280752-Recommended-Character-Set
+    - [ ] Publish RM with a specimen and license on Gumroad, might as well make it free maybe OSS too
 
 # Midjourney
 
