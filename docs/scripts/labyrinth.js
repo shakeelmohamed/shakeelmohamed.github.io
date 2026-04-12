@@ -10,19 +10,19 @@ const resizeHandleDirections = ["nw", "ne", "sw", "se"];
 const imageLoadPromises = [];
 
 function buildMedia(url) {
-    const baseURL = url.slice(0, url.lastIndexOf('.'));
+    const baseURL = url.slice(0, url.lastIndexOf("."));
 
-    if (!url.endsWith('.mp4')) {
-        const picture = document.createElement('picture');
-        picture.appendChild(Object.assign(document.createElement('source'), { srcset: baseURL + '.avif', type: 'image/avif' }));
-        picture.appendChild(Object.assign(document.createElement('source'), { srcset: baseURL + '.webp', type: 'image/webp' }));
-        picture.appendChild(Object.assign(document.createElement('img'), { src: url, alt: '' }));
+    if (!url.endsWith(".mp4")) {
+        const picture = document.createElement("picture");
+        picture.appendChild(Object.assign(document.createElement("source"), { srcset: baseURL + ".avif", type: "image/avif" }));
+        picture.appendChild(Object.assign(document.createElement("source"), { srcset: baseURL + ".webp", type: "image/webp" }));
+        picture.appendChild(Object.assign(document.createElement("img"), { src: url, alt: "" }));
         return picture;
     } else {
-        const video = document.createElement('video');
-        video.appendChild(Object.assign(document.createElement('source'), { src: baseURL + '.webm', type: 'video/webm' }));
-        video.appendChild(Object.assign(document.createElement('source'), { src: url, type: 'video/mp4' }));
-        Object.assign(video, { autoplay: true, loop: true, muted: true, playsInline: true, preload: 'metadata' });
+        const video = document.createElement("video");
+        video.appendChild(Object.assign(document.createElement("source"), { src: baseURL + ".webm", type: "video/webm" }));
+        video.appendChild(Object.assign(document.createElement("source"), { src: url, type: "video/mp4" }));
+        Object.assign(video, { autoplay: true, loop: true, muted: true, playsInline: true, preload: "metadata" });
         return video;
     }
 }
@@ -48,8 +48,8 @@ for (let i = 0; i < imgs.length; i++) {
     let newImg;
     const isVideo = imgs[i].src.endsWith(".mp4");
     if (isVideo) {
-        const videoWrapper = document.createElement('div');
-        videoWrapper.className = 'project-content';
+        const videoWrapper = document.createElement("div");
+        videoWrapper.className = "project-content";
         const video = buildMedia("./img/" + imgs[i].src);
         videoWrapper.appendChild(video);
         innerWrapper.appendChild(videoWrapper);

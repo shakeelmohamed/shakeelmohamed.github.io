@@ -28,6 +28,7 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
     - [ ] https://youtu.be/pYW3O0AxpI8?si=yP-fI72i1TvTUotJ
 - [ ] why aren't pages like /branding in the sitemap?
 - [ ] restructure home page so type design projects drop below portfolio projects; maybe do this once I start a 4th typeface... OR just show those as a 3-up row
+- [ ] at least for blog posts, YT videos need some helper function to apply the following CSS: `width: 100%; height: auto; aspect-ratio: 16 / 9;`
 
 # 10k24
 

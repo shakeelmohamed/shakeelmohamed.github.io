@@ -88,7 +88,11 @@
                     <div class="post-content"><p>I love using Sublime Text as do many developers these days, but I just can’t use it regularly for git commit messages.</p>
 <p>When I learned git 4 years ago I always used the default editor - vim. I don’t particularly enjoy using vim, but it’s the command-line editor I know best. For the longest time I would write inline commit messages, ie: <code>git commit -m &quot;hello world&quot;</code>.</p>
 <h2>Then one day something crazy happened…</h2>
-<p><a href="https://twitter.com/_Shakeel/status/605207143042580480"><img src="./tweet.png" alt="Tweet: Mo' money, mo' problems"></a></p>
+<p><a href="https://twitter.com/_Shakeel/status/605207143042580480"><picture>
+            <source srcset="./tweet.avif" type="image/avif">
+            <source srcset="./tweet.webp" type="image/webp">
+            <img src="./tweet.png" alt="Tweet: Mo' money, mo' problems">
+        </picture></a></p>
 <p>Since then, about 1 year ago, my default commit workflow has become the following</p>
 <ul>
 <li><code>git commit</code></li>
@@ -100,7 +104,11 @@
 <p>Nothing special about it, but this workflow is so engrained in my muscle memory I can’t seem to turn it off. So… what’s the problem? Rebasing commits. Let’s say my goal is to squash 10 commits - including merges, this involves editing several lines at once in the same way.</p>
 <p>In the main <a href="https://github.com/zen-audio-player/zen-audio-player.github.io">Zen Audio Player repo</a>, I ran <code>git rebase -i HEAD~10</code>. Here’s the workflow I’d need for either editor.</p>
 <h2>In vim</h2>
-<p><img src="./vim.png" alt="screenshot of vim"></p>
+<p><picture>
+            <source srcset="./vim.avif" type="image/avif">
+            <source srcset="./vim.webp" type="image/webp">
+            <img src="./vim.png" alt="screenshot of vim">
+        </picture></p>
 <ul>
 <li><code>j</code> to go down a line, skip the first commit</li>
 <li><code>xxxx</code> to delete the 4 characters in <code>pick</code></li>
