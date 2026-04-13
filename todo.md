@@ -5,6 +5,8 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 
 # ASAP
 
+- [ ] Covers: mini highlight videos for Salgirah 2025, MJ, Rothko, MR, TYPO maybe just logo animation
+- [ ] add "creative tech" or similar tag/page once 3 projects are up
 - [ ] Update labyrinth with new content
 - [ ] fix broken link to break presentation (on project page)
 - [ ] portfolio-content bottom margin seems tight compared to caption leading
@@ -12,8 +14,6 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 ## Cleanup
 
 - [ ] Replace all avif/gif files with .mp4
-- [ ] Add 1200:630 videos for project covers, cleanup CSS hacks to make the 1920x1080 files work
-    - [ ] mini highlight videos for Salgirah 2025, MJ, Rothko, MR, RM, TYPO maybe just logo animation
 - [ ] use <footer>, etc structured markup; rename newheader, newfooter CSS classes accordingly
 - [ ] resolve rules and tighten up spacing when header comes after a rule; probably remove rule from the header markup if possible; (Started with hr.rule class)
 - [ ] Fix right margin issues on tablet / half-width desktop size
@@ -25,6 +25,15 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
     - [ ] https://youtu.be/Ol62e-dWu0E?si=upqWiVo_qzMi_Am0
     - [ ] https://youtu.be/pYW3O0AxpI8?si=yP-fI72i1TvTUotJ
 - [ ] why aren't pages like /branding in the sitemap?
+- [ ] restructure home page so type design projects drop below portfolio projects; maybe do this once I start a 4th typeface... OR just show those as a 3-up row
+- [ ] at least for blog posts, YT videos need some helper function to apply the following CSS: `width: 100%; height: auto; aspect-ratio: 16 / 9;`
+
+# 10k24
+
+- [ ] after the case study is up and thorough, get some press
+    - [ ]  Octave + Adelle Mono on fonts in use: https://fontsinuse.com/typefaces/210887/octave + https://fontsinuse.com/typefaces/131711/adelle-mono
+    - [ ]  Can also get Referential Mono on there probably; might need to hit the min charset and publish it first: https://foundrysupport.monotype.com/hc/en-us/articles/360029280752-Recommended-Character-Set
+    - [ ] Publish RM with a specimen and license on Gumroad, might as well make it free maybe OSS too
 
 # Midjourney
 
@@ -67,7 +76,9 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 # TPS
 
 - [ ] Create wayfinding system using clean grid
-- [ ] wristband motion... there is not face between inside/outside oops! Also make it loop perfectly
+- [ ] wristband motion... there is no face between inside/outside oops! Also make it loop perfectly
+- [ ] use the pattern as a lining for either stationery, apparel, bag lining, or something else for VIPs
+- [ ] VIP stationery mockup with vellum, etc.
 - [ ] show motion design system (3x vertical social posts, LT, slates/bumpers) - show the system/grid, adaptive resizing
 - [ ] re-do social media mockup, looks a bit low saturation, dark mode UI would help
 - [ ] Redo mockups for TPS tickets, start from a clean INDD file -> PSD, maybe even do Blender mockups
@@ -88,12 +99,13 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 - [ ] motion cover / screen recording from glyphs typing interface
 - [ ] poster has kinda tight leading on the 3 paragraphs, I think... need to check at full scale
 - [ ] do some motion gifs/stills of the font2 specimen sheets I made, fun play on the day/night concept
-- [ ] gendesign whole astrology chart... oh yeah
+- [ ] gendesign whole astrology chart for IG stories... oh yeah 
 - [ ] some ephemera like all 12 astrology sign info cards or stickers idk; basically push the astrology concept more
 - [ ] lifestyle brand packaging mockups (actually, can just make a whole pkg lifestyle brand)
 
 # Ontology
 
+- [ ] Include more process photos from my WIP presentation
 - [ ] fix composition for "Ontology - 15.png", the leading is not right
 - [ ] re-export all the gif/avif spread-mockups at higher res, the small type is a bit pixelated
 - [ ] Do I need avif fallback? Ontology is using them and it’s really nice... can I get away with no gifs on the website?
@@ -235,7 +247,6 @@ Hermes - highest vis sponsored studio ever, and being the TA is the validation f
 
 - [ ] Rework semantics for SEO for: h1/h2/etc
 - [ ] JS to prevent bad breaks (widows / orphans) - maybe solved with text-wrap-style: balance;
-- [ ] - [ ] Responsive image loading... add avif/etc optimized loadtime support; see https://github.com/saneef/eleventy-plugin-img2picture
 - [ ] figure out how to show extra process (another slider, hidden section, etc.)
 - [ ] do I need to do anything with artsthread profile? recognition? https://www.artsthread.com/portfolios/applied-designer-mfa-thesis
 

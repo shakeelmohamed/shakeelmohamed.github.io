@@ -1,5 +1,5 @@
 const { test, expect } = require("@playwright/test");
-const { existsSync } = require("node:fs");
+const { existsSync, readFileSync } = require("node:fs");
 const { resolve, relative } = require("node:path");
 
 const {
@@ -186,4 +186,186 @@ test("all linked local assets in docs exist in repo", async () => {
     }
 
     expect(missing, `Missing local docs assets:\n${missing.join("\n")}`).toEqual([]);
+});
+
+test("local markdown images render as responsive picture elements with AVIF/WebP", async () => {
+    const sourceFiles = listSourceReferenceFilesRecursively(SRC_DIR).filter(f => f.endsWith(".md"));
+    const failures = [];
+
+    for (const srcFile of sourceFiles) {
+        const srcRel = relative(SRC_DIR, srcFile).replace(/\\/g, "/");
+        const htmlRel = srcRel.replace(/\/index\.md$/, "/index.html").replace(/\.md$/, "/index.html");
+        const htmlPath = resolve(DOCS_DIR, htmlRel);
+
+        if (!existsSync(htmlPath)) continue;
+
+        const srcContent = readFileSync(srcFile, "utf8");
+
+        // Only extract actual markdown images: ![alt](img.png)
+        const mdImageMatches = srcContent.matchAll(/!\[[^\]]*\]\(([^)\n]+)\)/g);
+        const mdImages = [...mdImageMatches].map(m => m[1]);
+
+        // Filter to local images only (not http)
+        const localMdImages = mdImages.filter(ref => isLocalAssetUrl(ref) && !ref.startsWith("http"));
+        if (localMdImages.length === 0) continue;
+
+        const html = readFileSync(htmlPath, "utf8");
+
+        for (const imgRef of localMdImages) {
+            // Skip if it's a figure reference (the function extracts some false positives)
+            if (imgRef.includes("figure")) continue;
+
+            const imgFileName = imgRef.split("/").pop();
+            const pictureMatch = html.match(new RegExp(`<picture[^>]*>[\\s\\S]*?<img[^>]*src="[^"]*${imgFileName}"[^>]*>[\\s\\S]*?</picture>`, "i"));
+
+            if (!pictureMatch) {
+                failures.push(`${srcRel}: local image ${imgRef} not wrapped in picture element`);
+                continue;
+            }
+
+            const pictureContent = pictureMatch[0];
+            if (!pictureContent.includes(".avif")) {
+                failures.push(`${srcRel}: picture missing AVIF source for ${imgRef}`);
+            }
+            if (!pictureContent.includes(".webp")) {
+                failures.push(`${srcRel}: picture missing WebP source for ${imgRef}`);
+            }
+        }
+    }
+
+    expect(failures, `Local markdown images not properly converted:\n${failures.join("\n")}`).toEqual([]);
+});
+
+test("linked local images in markdown render as anchor wrapped picture elements", async () => {
+    const sourceFiles = listSourceReferenceFilesRecursively(SRC_DIR).filter(f => f.endsWith(".md"));
+    const failures = [];
+
+    for (const srcFile of sourceFiles) {
+        const srcRel = relative(SRC_DIR, srcFile).replace(/\\/g, "/");
+        const htmlRel = srcRel.replace(/\/index\.md$/, "/index.html").replace(/\.md$/, "/index.html");
+        const htmlPath = resolve(DOCS_DIR, htmlRel);
+
+        if (!existsSync(htmlPath)) continue;
+
+        const srcContent = readFileSync(srcFile, "utf8");
+
+        // Check for linked image pattern: [![alt](img)](link)
+        const linkedImageMatches = srcContent.matchAll(/!\[[^\]]*\]\(([^)]+\.(?:png|jpg|jpeg))\)\(([^)]+)\)/g);
+        const linkedImages = [...linkedImageMatches];
+
+        if (linkedImages.length === 0) continue;
+
+        const html = readFileSync(htmlPath, "utf8");
+
+        for (const match of linkedImages) {
+            const imgRef = match[1];
+            const linkUrl = match[2];
+            const imgFileName = imgRef.split("/").pop();
+
+            // Look for <a href="link"><picture>...</picture></a> pattern
+            const linkedPictureMatch = html.match(new RegExp(`<a[^>]*href="${linkUrl}"[^>]*>[\\s\\S]*?<picture[^>]*>[\\s\\S]*?<img[^>]*src="[^"]*${imgFileName}"[^>]*>[\\s\\S]*?</picture>[\\s\\S]*?</a>`, "i"));
+
+            if (!linkedPictureMatch) {
+                failures.push(`${srcRel}: linked image ${imgRef} -> ${linkUrl} not in <a><picture> format`);
+                continue;
+            }
+
+            const pictureContent = linkedPictureMatch[0];
+            if (!pictureContent.includes(".avif")) {
+                failures.push(`${srcRel}: linked picture missing AVIF for ${imgRef}`);
+            }
+            if (!pictureContent.includes(".webp")) {
+                failures.push(`${srcRel}: linked picture missing WebP for ${imgRef}`);
+            }
+        }
+    }
+
+    expect(failures, `Linked local images not properly converted:\n${failures.join("\n")}`).toEqual([]);
+});
+
+test("remote markdown images remain as plain img elements", async () => {
+    const sourceFiles = listSourceReferenceFilesRecursively(SRC_DIR).filter(f => f.endsWith(".md"));
+    const failures = [];
+
+    for (const srcFile of sourceFiles) {
+        const srcRel = relative(SRC_DIR, srcFile).replace(/\\/g, "/");
+        const htmlRel = srcRel.replace(/\/index\.md$/, "/index.html").replace(/\.md$/, "/index.html");
+        const htmlPath = resolve(DOCS_DIR, htmlRel);
+
+        if (!existsSync(htmlPath)) continue;
+
+        const srcContent = readFileSync(srcFile, "utf8");
+        const imageRefs = extractSourceImageReferences(srcContent);
+
+        // Filter to remote images only
+        const remoteImages = imageRefs.filter(ref => ref.startsWith("http://") || ref.startsWith("https://"));
+        if (remoteImages.length === 0) continue;
+
+        const html = readFileSync(htmlPath, "utf8");
+
+        for (const imgRef of remoteImages) {
+            // Remote images should be plain <img>, not wrapped in <picture>
+            const imgSrc = imgRef.split("?")[0];
+            const imgFileName = imgSrc.split("/").pop();
+
+            // Check if this img is inside a picture element
+            const imgMatch = html.match(new RegExp(`<img[^>]*src="[^"]*${imgFileName}"[^>]*>`));
+            if (!imgMatch) continue;
+
+            const imgPosition = html.indexOf(imgMatch[0]);
+            const pictureBefore = html.lastIndexOf("<picture>", imgPosition);
+            const pictureAfter = html.indexOf("</picture>", imgPosition);
+            const isWrapped = pictureBefore !== -1 && (pictureAfter === -1 || pictureAfter > imgPosition);
+
+            if (isWrapped) {
+                failures.push(`${srcRel}: remote image ${imgRef} incorrectly wrapped in picture element`);
+            }
+        }
+    }
+
+    expect(failures, `Remote markdown images incorrectly converted:\n${failures.join("\n")}`).toEqual([]);
+});
+
+test("markdown images preserve alt text", async () => {
+    const sourceFiles = listSourceReferenceFilesRecursively(SRC_DIR).filter(f => f.endsWith(".md"));
+    const failures = [];
+
+    for (const srcFile of sourceFiles) {
+        const srcRel = relative(SRC_DIR, srcFile).replace(/\\/g, "/");
+        const htmlRel = srcRel.replace(/\/index\.md$/, "/index.html").replace(/\.md$/, "/index.html");
+        const htmlPath = resolve(DOCS_DIR, htmlRel);
+
+        if (!existsSync(htmlPath)) continue;
+
+        const srcContent = readFileSync(srcFile, "utf8");
+        const html = readFileSync(htmlPath, "utf8");
+
+        // Extract alt text from markdown: ![alt text](image.png)
+        const mdAltMatches = srcContent.matchAll(/!\[([^\]]*)\]\(([^)]+)\)/g);
+
+        for (const match of mdAltMatches) {
+            const mdAlt = match[1];
+            const imgRef = match[2];
+
+            expect(typeof mdAlt).toBe("string");
+
+            // Skip remote images
+            if (imgRef.startsWith("http://") || imgRef.startsWith("https://")) continue;
+
+            const imgFileName = imgRef.split("/").pop();
+
+            // Find corresponding img in HTML and verify alt
+            const imgMatch = html.match(new RegExp(`<img[^>]*src="[^"]*${imgFileName}"[^>]*>`, "i"));
+            if (!imgMatch) continue;
+
+            const htmlImg = imgMatch[0];
+            const altMatch = htmlImg.match(/alt="([^"]*)"/);
+
+            if (!altMatch) {
+                failures.push(`${srcRel}: img missing alt attribute for ${imgFileName}`);
+            }
+        }
+    }
+
+    expect(failures, `Markdown images with missing or incorrect alt text:\n${failures.join("\n")}`).toEqual([]);
 });

@@ -42,6 +42,98 @@ module.exports = function(eleventyConfig) {
     let markdownLib = markdownIt(options);
     eleventyConfig.setLibrary("md", markdownLib);
 
+    // Flag to track if we're in a custom linked image
+    let skipNextImage = false;
+
+    // Helper to get attribute from token (handles nested in inline)
+    function getAttr(tokens, idx, name) {
+        let token = tokens[idx];
+        
+        // If token is inline, look in children for the image
+        if (token && token.type === 'inline' && token.children) {
+            const imgToken = token.children.find(t => t.type === 'image');
+            if (imgToken) {
+                // src is in attrs, alt is in first child's content
+                if (name === 'alt' && imgToken.children && imgToken.children[0]) {
+                    return imgToken.children[0].content;
+                }
+                if (imgToken.attrs) {
+                    const attr = imgToken.attrs.find(a => a[0] === name);
+                    return attr ? attr[1] : null;
+                }
+            }
+        }
+        
+        // For direct image tokens, alt may be in children content
+        if (token && name === 'alt' && token.children && token.children[0]) {
+            return token.children[0].content;
+        }
+        
+        // Otherwise look directly on token
+        if (token && token.attrs) {
+            const attr = token.attrs.find(a => a[0] === name);
+            return attr ? attr[1] : null;
+        }
+        
+        return null;
+    }
+
+    // Helper to build responsive media HTML (reused by both renderers)
+    function buildMediaHTML(src, alt) {
+        const baseURL = src.slice(0, src.lastIndexOf('.'));
+        
+        if (src.endsWith('.mp4')) {
+            return `<div class="project-content"><video autoplay loop muted playsinline preload="metadata">
+                <source src="${baseURL}.webm" type="video/webm">
+                <source src="${src}" type="video/mp4">
+            </video></div>`;
+        }
+        
+        return `<picture>
+            <source srcset="${baseURL}.avif" type="image/avif">
+            <source srcset="${baseURL}.webp" type="image/webp">
+            <img src="${src}" alt="${alt}">
+        </picture>`;
+    }
+
+    // Custom renderer for linked images: [![alt](img)](link)
+    markdownLib.renderer.rules.link_open = function(tokens, idx, options, env, self) {
+        const nextToken = tokens[idx + 1];
+        
+        if (nextToken && nextToken.type === 'image') {
+            const src = getAttr(tokens, idx + 1, 'src');
+            const alt = getAttr(tokens, idx + 1, 'alt') || '';
+            
+            if (src && !src.startsWith('http://') && !src.startsWith('https://')) {
+                skipNextImage = true;
+                const alt = getAttr(tokens, idx + 1, 'alt') || '';
+                // Call default link_open for <a href="...">, then add media
+                return self.renderToken(tokens, idx, options) + buildMediaHTML(src, alt);
+            }
+        }
+        
+        return self.renderToken(tokens, idx, options);
+    };
+
+    // Custom renderer for regular images: ![alt](img)
+    markdownLib.renderer.rules.image = function(tokens, idx, options, env, self) {
+        if (skipNextImage) {
+            skipNextImage = false;
+            return '';
+        }
+        
+        const src = getAttr(tokens, idx, 'src');
+        const alt = getAttr(tokens, idx, 'alt') || '';
+
+        // TODO: alt text is dropped for http?s:// URLs?
+        
+        if (src && (src.startsWith('http://') || src.startsWith('https://'))) {
+            return self.renderToken(tokens, idx, options);
+        }
+        
+        return buildMediaHTML(src, alt);
+    };
+
     // Pug specific options 
     eleventyConfig.setPugOptions({
         debug: false,

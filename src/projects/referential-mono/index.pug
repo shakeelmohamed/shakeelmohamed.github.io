@@ -4,6 +4,7 @@ title: "Referential Mono Typeface"
 short: Referential Mono
 description: A modular typeface built on a 5x5 grid, inspired by early computing and Islamic History.
 openGraphImage: "img/Referential Mono - cargo - opengraph.png"
+cover: "img/Referential_Mono_cover.mp4"
 when: 2023
 tools: Glyphs, Illustrator, InDesign, Figma
 tags:
@@ -41,7 +42,8 @@ block content
 
     +fontTesterImports()
     hr
-    .grid-1.py-8.bg-bisque.-mx-8.p-8
+    //- TODO: style this more like the colors in use
+    .grid-1.py-8.p-8(style="aspect-ratio: 16 / 8; background-color: #ACF29D")
         div.fontDemo(id="referential-mono-tester")
         
         //- TODO: sliders handles are WAY too small for mobile right now

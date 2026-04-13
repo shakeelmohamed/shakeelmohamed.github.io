@@ -9,6 +9,24 @@ const isLocal = ["localhost", "127.0.0.1"].includes(window.location.hostname);
 const resizeHandleDirections = ["nw", "ne", "sw", "se"];
 const imageLoadPromises = [];
 
+function buildMedia(url) {
+    const baseURL = url.slice(0, url.lastIndexOf("."));
+
+    if (!url.endsWith(".mp4")) {
+        const picture = document.createElement("picture");
+        picture.appendChild(Object.assign(document.createElement("source"), { srcset: baseURL + ".avif", type: "image/avif" }));
+        picture.appendChild(Object.assign(document.createElement("source"), { srcset: baseURL + ".webp", type: "image/webp" }));
+        picture.appendChild(Object.assign(document.createElement("img"), { src: url, alt: "" }));
+        return picture;
+    } else {
+        const video = document.createElement("video");
+        video.appendChild(Object.assign(document.createElement("source"), { src: baseURL + ".webm", type: "video/webm" }));
+        video.appendChild(Object.assign(document.createElement("source"), { src: url, type: "video/mp4" }));
+        Object.assign(video, { autoplay: true, loop: true, muted: true, playsInline: true, preload: "metadata" });
+        return video;
+    }
+}
+
 let latestJson = null;
 let paddingBottomFrame = null;
 let resizeState = null;
@@ -29,29 +47,22 @@ for (let i = 0; i < imgs.length; i++) {
 
     let newImg;
     const isVideo = imgs[i].src.endsWith(".mp4");
-    // TODO: add optimizations like project pages
     if (isVideo) {
-        // TODO: videos currently break drag functionality
-        // continue;
-        newImg = document.createElement("video");
-        newImg.setAttribute("autoplay", "");
-        // newImg.setAttribute("controls", "");
-        newImg.setAttribute("data-video", "0");
-        newImg.setAttribute("loop", "");
-        newImg.setAttribute("muted", "");
-        newImg.setAttribute("playsinline", "");
-        newImg.setAttribute("preload", "metadata");
-        newImg.addEventListener("loadedmetadata", () => {
-            newImg.play().catch(() => {});
-        });
+        const videoWrapper = document.createElement("div");
+        videoWrapper.className = "project-content";
+        const video = buildMedia("./img/" + imgs[i].src);
+        videoWrapper.appendChild(video);
+        innerWrapper.appendChild(videoWrapper);
+        newImg = video;
+        newImg.addEventListener("loadedmetadata", () => newImg.play().catch(() => {}));
     } else {
-        newImg = document.createElement("img");
+        newImg = buildMedia("./img/" + imgs[i].src);
     }
-    
-    // newImg.classList.add("image-zoom"); // TODO: this functionality is not there yet
-    newImg.setAttribute("src", "./img/" + imgs[i].src);
-    newImg.setAttribute("alt", "");
-    newImg.addEventListener("load", scheduleFixPaddingBottom, { once: true });
+
+    if (!isVideo) {
+        newImg.addEventListener("load", scheduleFixPaddingBottom, { once: true });
+        innerWrapper.appendChild(newImg);
+    }
 
     const imageReadyPromise = new Promise(resolve => {
         if (isVideo && newImg.readyState >= 1 || !isVideo && newImg.complete) {
@@ -64,7 +75,6 @@ for (let i = 0; i < imgs.length; i++) {
     });
     imageLoadPromises.push(imageReadyPromise);
 
-    innerWrapper.appendChild(newImg);
     wrapper.appendChild(innerWrapper);
     addResizeHandles(wrapper);
     thumbnailSizer.appendChild(wrapper);
