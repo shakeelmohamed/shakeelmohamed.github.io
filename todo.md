@@ -5,9 +5,7 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 
 # ASAP
 
-- [ ] Add 1200:630 videos for project covers, cleanup CSS hacks to make the 1920x1080 files work
-    - [ ] mini highlight videos for Salgirah 2025, MJ, Rothko, MR, RM, TYPO maybe just logo animation
-    - [ ] this is breaking mobile layout ans Safari desktop
+- [ ] Covers: mini highlight videos for Salgirah 2025, MJ, Rothko, MR, TYPO maybe just logo animation
 - [ ] add "creative tech" or similar tag/page once 3 projects are up
 - [ ] Update labyrinth with new content
 - [ ] fix broken link to break presentation (on project page)
