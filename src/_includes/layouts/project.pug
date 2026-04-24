@@ -49,11 +49,14 @@ block append pageScripts
         });
 
 block content
-    if coverImg
-        .project-cover-section
-            +portfolioImg(coverImg, name + " cover image", "")
-            br
     .project-header
+        if showCover && cover
+            .grid-1
+                - var isAnimated = cover.endsWith(".mp4")
+                if isAnimated
+                    +animation(cover)
+                else
+                    +optimizedImage(cover, title + " cover", "")
         h1 #{title}
         div.project-meta
             p.text-gray-meta!= mediaLinks

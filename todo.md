@@ -5,11 +5,13 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 
 # ASAP
 
-- [ ] Covers: mini highlight videos for Salgirah 2025, MJ, Rothko, MR, TYPO maybe just logo animation
+- [ ] Covers: mini highlight videos for MJ, Rothko, MR, TYPO maybe just logo animation
 - [ ] add "creative tech" or similar tag/page once 3 projects are up
 - [ ] Update labyrinth with new content
 - [ ] fix broken link to break presentation (on project page)
 - [ ] portfolio-content bottom margin seems tight compared to caption leading
+- [ ] 😵‍💫 Rework projects to have a cover.png shown at the top (ideally its the same image as the OG, just scaled up + higher res) -> scale should be about 1920x1200, the OG size feels too wide for cover images
+    - [ ]  This is done... but some of the images/videos are too low res (aka they are OG size not super HD+ size); then set showCover=true in frontmatter
 
 ## Cleanup
 
@@ -236,7 +238,6 @@ Hermes - highest vis sponsored studio ever, and being the TA is the validation f
 
 ## My notes
 - [ ] Start posting on Behance!
-- [ ] Rework projects to have a cover.png shown at the top (ideally its the same image as the OG, just scaled up + higher res) -> scale should be about 1920x1200, the OG size feels too wide for cover images
 - [ ] Perhaps use cover.png instead of opengraph for project thumbnails
 - [ ] Can include small images for AIGA talks on about page... BELOW the resume area
 - [ ] Overall, I need to clean up all overview descriptions, there are a bit loose at the moment. Writing center is a good move there.
