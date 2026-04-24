@@ -4,6 +4,7 @@ title: "MFA Thesis: Applied Designer"
 description: Applied Designer seeks to empower graphic designers to use their skills in other jobs and industries.
 //- TODO: update OG so stroke weight matches perfectly (make the comp in Processing probably)
 openGraphImage: "img/Thesis - opengraph.png"
+# TODO: this is super WIP, technically being cropped not even 1200x630
 cover: "img/Applied_Designer_cover_vid.mp4"
 when: 2024–2025
 tools: InDesign, Illustrator, three.js, p5.js, Processing, basil.js, Blender, Photoshop, Figma
@@ -34,9 +35,8 @@ block content
             p The microsite is available at
                 strong &nbsp;
                     a(href="https://applieddesigner.com", target="_blank") applieddesigner.com
-    .grid-2
-        +animation("img/Applied_Designer_thesis_cover.mp4", "")
-        +portfolioImg("./img/Thesis - 1 - logo.png", "", "At the heart of my thesis is the Applied Designer identity. The wireframe aesthetic conveys the transparency I aim to bring to the design industry. The wordmark is created from <a href=\"/projects/referential-mono\">Referential Mono</a>, my first typeface.")
+    .grid-1
+        +animation("img/Applied_Designer_thesis_cover.mp4", "At the heart of my thesis is the Applied Designer identity. The wireframe aesthetic conveys the transparency I aim to bring to the design industry. The wordmark is created from <a href=\"/projects/referential-mono\">Referential Mono</a>, my first typeface.")
     .grid-1
         +portfolioImg("./img/Thesis - trade show booth 2.png", "", "As a hiring agency, Applied Designer can meet early and mid-career designers at industry events like the AIGA national conference. This begins with a trade show booth.")
     .grid-2
