@@ -14,7 +14,6 @@ include ../_includes/project_utils.pug
 
 
 block content
-    //- TODO: can we style this like a caption, but still get SEO benefits?
     .grid-1
         +animation("./img/Shakeel_chair_spin.mp4", null, 1920, 804, "")
     .grid-4.mt-4
@@ -22,6 +21,7 @@ block content
         div.headshot
             img.lightbox(src="../img/Shakeel_Mohamed_headshot.png" alt="Headshot of Shakeel Mohamed")
         div
+            //- TODO: can we style this like a caption, but still get SEO benefits?
             h1(style="padding-top:0;") About Me
             p &nbsp;
         .col-start-3.col-end-5
@@ -37,12 +37,10 @@ block content
                 | Please reach out by 
                 strong
                     +myEmail("email")
-                    | ,&nbsp;
-                strong
-                    a(href=metadata.social.LinkedIn, target="_blank") LinkedIn, 
+                    | &nbsp;
                 | or 
                 strong
-                    a(href=metadata.social.Instagram, target="_blank") Instagram
+                    a(href=metadata.social.LinkedIn, target="_blank") LinkedIn
                 | .
             br
             p
@@ -54,13 +52,10 @@ block content
     br
     br    
     br
-    .grid-4
-        div
-        div.col-start-2.col-end-4
-            p.bigType.bold.text-center “The best way to predict the future is to create it.” 
-            br
-            p.caption.text-center Peter Drucker (attributed)
-        div
+    .grid-1
+        p.bigType.bold.text-center “The best way to predict the future is to create it.” 
+        br
+        p.caption.text-center Peter Drucker (attributed)
     br
     br
     br
@@ -157,7 +152,7 @@ block content
             br
             .grid-3
                 +experience("Senior Designer", "TALISMAN", "Remote", "08.2025–Present")
-                p.col-start-2.col-end-4 Collaborated with the Creative Director and a Senior Designer on brand strategy and visual identity for a performing arts organization. Researched historical references and competitors, designed presentation systems in Figma Slides. Led critiques and provided feedback to junior designers. Supported business development through capabilities decks.
+                p.col-start-2.col-end-4 Collaborated with the Creative Director and a Senior Designer on brand strategy and visual identity for a performing arts organization. Researched historical references and competitors, designed presentation systems in Figma Slides. Led critiques and provided feedback to junior designers. Supported business development through pitch decks.
             .grid-3
                 +experience("Freelance Brand Designer", "shakeel.design", "Remote", "05.2025–Present")
                 p.col-start-2.col-end-4 Designed brand identities and motion design systems for cultural organizations, creative agencies, and emerging companies. Collaborated directly with clients to develop design solutions from strategy and concept through implementation across multiple touchpoints including print, digital, and&nbsp;environmental.
@@ -279,7 +274,8 @@ block content
             p.caption Speaking
             br
             p
-                strong College of the Canyons
+                strong
+                    a.underline(href="https://www.linkedin.com/feed/update/urn:li:activity:7447308480782217216/" target="_blank") College of the Canyons
                 br
                 | Guest Lecture
                 br

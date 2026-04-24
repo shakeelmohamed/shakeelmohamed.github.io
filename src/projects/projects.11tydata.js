@@ -9,7 +9,7 @@ function makeLinks(data) {
     for (let m of data.media) {
         if (m.length > 0) {
             const mediaName = utils.titleCase(m);
-            if (data.tags.includes("archive")) {
+            if (data.tags?.indexOf("archive") > -1) {
                 links.push(mediaName);
             } else {
                 links.push(`<a href="/${mediaName.replace(/\s+/g, "-").toLowerCase()}">${mediaName}</a>`);

@@ -18,7 +18,7 @@ media:
     - print
 goal: Expand the perceived value of designers.
 recognition: Presented at the 2025 AIGA Design Conference and 2024 AIGA Los Angeles Graph*c Content.
-position: 3
+position: 5
 ---
 include ../../_includes/project_utils.pug
 
@@ -53,14 +53,14 @@ block content
     .grid-1
         +animation("./img/AD_color_logos.mp4")
 
-    hr
+    hr.rule
     h2 Process Book
     .grid-2
         +portfolioImg("./img/Thesis_book_cover.png", "", "Process book covering two semesters of research, process, and design execution. Size: 8x10\", page count: 180.")
         +portfolioImg("./img/Thesis_book_spreads.png", "", "Selected spreads. Page numbers are only on left-hand pages to retain focus on the content.")
 
     //- TODO: process section is not complete
-    hr
+    hr.rule
     h2 Process
     //- TODO: I should not need this br (see how Ontology is done), might be a CSS issue with .grid-1 vs grid-2
     br
@@ -72,6 +72,7 @@ block content
         +portfolioImg("./img/AIGA_LA_01.png", "Shakeel Mohamed speaking at AIGA Los Angeles", "In November 2024, near the mid-point of my thesis, I gave a talk titled “Deconstructing ‘Best’: Redefining Success for Designers” at Graph*c Content, a conference hosted by AIGA Los Angeles.")
         +portfolioImg("./img/AIGA_LA_02.png", "", "119 slides of reflection, gratitude, and inspiration!")
 
+    hr.rule
     h2 Thank you Michael and PB &amp; Magick!
     .grid-2
         +portfolioImg("./img/thesis_pod.png", "", "My amazing thesis pod! Led by our advisor, professor Michael Neal. At the halfway point, after our fall semester final&nbsp;presentation.")
