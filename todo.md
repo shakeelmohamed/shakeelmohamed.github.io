@@ -5,6 +5,9 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 
 # ASAP
 
+- [ ] add SVG favicon
+- [ ] thesis fix the first 2-up image row, logo needs to be cropped or replace with a logo reveal
+- [ ] homepage add CTA -> work page “for more”
 - [ ] Covers: mini highlight videos for MJ, Rothko, MR, TYPO maybe just logo animation
 - [ ] add "creative tech" or similar tag/page once 3 projects are up
 - [ ] Update labyrinth with new content
@@ -12,6 +15,42 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 - [ ] portfolio-content bottom margin seems tight compared to caption leading
 - [ ] 😵‍💫 Rework projects to have a cover.png shown at the top (ideally its the same image as the OG, just scaled up + higher res) -> scale should be about 1920x1200, the OG size feels too wide for cover images
     - [ ]  This is done... but some of the images/videos are too low res (aka they are OG size not super HD+ size); then set showCover=true in frontmatter
+
+
+## New footer WIP
+
+Also remove the hr above it, need to fix body margin-bottom to 0, etc.
+
+```html
+<footer class="newfooter full-width" style="
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 4rem;
+    background-color: #dcd8cd;
+    align-items: baseline;
+    padding-bottom: 4rem;
+    margin-bottom: -4rem;
+">
+            <div><br class="mobile-only"><img class="" src="android-chrome-512x512.png" alt="Shakeel Mohamed wordmark logo set in the Mindful Roman typeface which he designed" style="
+    margin-bottom: 4rem;
+"><a class="logo-wrapper" href="/">
+                    <script>document.write("&copy; " + new Date().getFullYear() + " Shakeel Mohamed.")</script>© 2026 Shakeel Mohamed.</a></div>
+            <div><a href="https://instagram.com/shakeel.design" target="_blank">Instagram</a></div>
+            <div><a href="https://linkedin.com/in/shakeelmohamed" target="_blank">LinkedIn</a></div>
+            <div><a href="mailto:hello@shakeel.design" target="_blank"><span class="mailto">
+                        <script type="text/javascript">
+                            function gen_mail_to_link(lhs, rhs, subject, text) {
+                                const rhs_subj = subject ? `${rhs}?subject=${subject}` : rhs;
+                                const _txt = text ? text : `${lhs}@${rhs}`;
+                                const generated = `<a class="mailto" href="mailto:${lhs}@${rhs_subj}" target=_blank>${_txt}</a>`;
+                                document.write(generated);
+                            }
+                            gen_mail_to_link("hello", "shakeel.design", "", "")
+                            
+                        </script></span></a><a class="mailto" href="mailto:hello@shakeel.design" target="_blank">hello@shakeel.design</a></div>
+        </footer>
+```
+
 
 ## Cleanup
 
