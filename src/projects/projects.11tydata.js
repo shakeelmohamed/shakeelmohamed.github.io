@@ -9,7 +9,7 @@ function makeLinks(data) {
     for (let m of data.media) {
         if (m.length > 0) {
             const mediaName = utils.titleCase(m);
-            if (data.tags.includes("archive")) {
+            if (data.tags?.indexOf("archive") > -1) {
                 links.push(mediaName);
             } else {
                 links.push(`<a href="/${mediaName.replace(/\s+/g, "-").toLowerCase()}">${mediaName}</a>`);
@@ -47,7 +47,7 @@ function previousIndex(cur, len) {
 // TODO: bring in more metadata fields: what (branding, type, etc.), tools, client, year
 module.exports = {
     eleventyComputed: {
-        pageTitle: data => data.title + " | Shakeel Mohamed — Strategic Brand Designer",
+        pageTitle: data => data.title + " | Shakeel Mohamed — Brand Systems Designer",
         openGraphImage: data => utils.buildOGImageURL(data),
         cover: data => utils.getCover(data),
         // TODO: consider making media a hardcoded string... unless using it for filtering

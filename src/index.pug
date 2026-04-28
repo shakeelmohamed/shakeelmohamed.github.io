@@ -14,7 +14,7 @@ block content
             div.h-4
             p.bigType
                 span.material-icons.bigIcon arrow_right_alt
-                | &nbsp;Ready to work together?&nbsp;
+                | &nbsp;Ready to work together? Say&nbsp;
                 br.mobile-only
                 a(href="mailto:" + metadata.author.email, target="_blank") #{metadata.author.email}
                 | .
@@ -25,4 +25,16 @@ block content
     if collections.portfolio
         .grid-2
             each project in collections.portfolio
-                +projectListing(project)
+                - var isType = 0 !== project.fileSlug.indexOf("planetary") && project.data.media.includes("type design");
+                unless isType
+                    +projectListing(project)
+
+        h2 Type Design
+        hr.rule
+        .grid-3
+            p.caption I love love love typography! The rigor and systematic thought process of designing typefaces is something I enjoy and think about often. My love of typography began with a decade of computer programming experience.
+        .grid-3
+            each project in collections.portfolio
+                - var isType = 0 !== project.fileSlug.indexOf("planetary") && project.data.media.includes("type design");
+                if isType
+                    +projectListing(project)

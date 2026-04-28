@@ -118,8 +118,8 @@ function scheduleFixPaddingBottom() {
 }
 
 function initializeWhenReady() {
+    initializeDraggables(); // DOM is ready; no need to wait for media
     Promise.all(imageLoadPromises).then(() => {
-        initializeDraggables();
         scheduleFixPaddingBottom();
     });
 }

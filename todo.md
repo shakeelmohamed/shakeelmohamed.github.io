@@ -5,11 +5,58 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 
 # ASAP
 
-- [ ] Covers: mini highlight videos for Salgirah 2025, MJ, Rothko, MR, TYPO maybe just logo animation
+- [ ] add SVG favicon
+
+- [ ] Covers: mini highlight videos for MJ, Rothko, MR maybe just logo animation
 - [ ] add "creative tech" or similar tag/page once 3 projects are up
 - [ ] Update labyrinth with new content
 - [ ] fix broken link to break presentation (on project page)
 - [ ] portfolio-content bottom margin seems tight compared to caption leading
+- [ ] 😵‍💫 Rework projects to have a cover.png shown at the top (ideally its the same image as the OG, just scaled up + higher res) -> scale should be about 1920x1200, the OG size feels too wide for cover images
+    - [ ]  This is done... but some of the images/videos are too low res (aka they are OG size not super HD+ size); then set showCover=true in frontmatter
+- [ ] homepage add CTA -> work page “for more”
+- [ ] test primary domain migration to shakeel.design
+    - [ ] new repo /test -> manual copy docs directory from here
+    - [ ] replace domains
+    - [ ] add CNAME
+    - [ ] push to test.shakeel.design
+    - [ ] ensure test.shakeelmohamed.com redirects cleanly
+    - [ ] figure out how to avoid SEO hit when doing the same thing with this repo
+
+## New footer WIP
+
+Also remove the hr above it, need to fix body margin-bottom to 0, etc.
+
+```html
+<footer class="newfooter full-width" style="
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 4rem;
+    background-color: #dcd8cd;
+    align-items: baseline;
+    padding-bottom: 4rem;
+    margin-bottom: -4rem;
+">
+            <div><br class="mobile-only"><img class="" src="android-chrome-512x512.png" alt="Shakeel Mohamed wordmark logo set in the Mindful Roman typeface which he designed" style="
+    margin-bottom: 4rem;
+"><a class="logo-wrapper" href="/">
+                    <script>document.write("&copy; " + new Date().getFullYear() + " Shakeel Mohamed.")</script>© 2026 Shakeel Mohamed.</a></div>
+            <div><a href="https://instagram.com/shakeel.design" target="_blank">Instagram</a></div>
+            <div><a href="https://linkedin.com/in/shakeelmohamed" target="_blank">LinkedIn</a></div>
+            <div><a href="mailto:hello@shakeel.design" target="_blank"><span class="mailto">
+                        <script type="text/javascript">
+                            function gen_mail_to_link(lhs, rhs, subject, text) {
+                                const rhs_subj = subject ? `${rhs}?subject=${subject}` : rhs;
+                                const _txt = text ? text : `${lhs}@${rhs}`;
+                                const generated = `<a class="mailto" href="mailto:${lhs}@${rhs_subj}" target=_blank>${_txt}</a>`;
+                                document.write(generated);
+                            }
+                            gen_mail_to_link("hello", "shakeel.design", "", "")
+                            
+                        </script></span></a><a class="mailto" href="mailto:hello@shakeel.design" target="_blank">hello@shakeel.design</a></div>
+        </footer>
+```
+
 
 ## Cleanup
 
@@ -115,6 +162,7 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 
 # Referential Mono
 
+- [ ] specimen content needs more “early computing” content
 - [ ] fix mobile alignment issues with center or right align
 - [ ] crit/printed process, kashida/Eid motion, what about the posters?
 - [ ] show research kufic chart also
@@ -236,7 +284,6 @@ Hermes - highest vis sponsored studio ever, and being the TA is the validation f
 
 ## My notes
 - [ ] Start posting on Behance!
-- [ ] Rework projects to have a cover.png shown at the top (ideally its the same image as the OG, just scaled up + higher res) -> scale should be about 1920x1200, the OG size feels too wide for cover images
 - [ ] Perhaps use cover.png instead of opengraph for project thumbnails
 - [ ] Can include small images for AIGA talks on about page... BELOW the resume area
 - [ ] Overall, I need to clean up all overview descriptions, there are a bit loose at the moment. Writing center is a good move there.

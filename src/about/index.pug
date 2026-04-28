@@ -1,10 +1,11 @@
 ---
-title: About | Shakeel Mohamed — Strategic Brand Designer
+title: About | Shakeel Mohamed — Brand Systems Designer
 description: Strategic brand designer in Los Angeles specializing in identity design, typography, and systems thinking. Available for freelance and full-time opportunities.
 ---
 
 extends ../_includes/layouts/base.pug
 include ../_includes/blocks.pug
+include ../_includes/project_utils.pug
 //- TODO: resume... think about JSON model?
 //-     COULD just be a list for now
 
@@ -13,21 +14,18 @@ include ../_includes/blocks.pug
 
 
 block content
-    //- TODO: can we style this like a caption, but still get SEO benefits?
-    h1 About Me
+    .grid-1
+        +animation("./img/Shakeel_chair_spin.mp4", null, 1920, 804, "")
     .grid-4.mt-4
         //- TODO: this will overflow x on tablet scale
         div.headshot
             img.lightbox(src="../img/Shakeel_Mohamed_headshot.png" alt="Headshot of Shakeel Mohamed")
         div
-            p
-                strong
-                    |“The best way to predict the future is to create it.”
-                br
-                |— Peter Drucker (attributed)
+            //- TODO: can we style this like a caption, but still get SEO benefits?
+            h1(style="padding-top:0;") About Me
+            p &nbsp;
         .col-start-3.col-end-5
             p My name is Shakeel, I’m a strategic brand designer specializing in identity design, typography, and systems thinking. I approach projects systematically by understanding the brief, audience, and constraints to create brands that work seamlessly across every&nbsp;touchpoint.
-            br
             p During my graduate studies at ArtCenter College of Design I designed four typefaces, which gave me a deep appreciation for the power of typography across media types. Designing fonts requires rigorous refinement over minute details, I bring this same attention to craft through form, layout, typesetting, and print&nbsp;production.
             br
             p At Splunk, I was known as “the glue” for my ability to coordinate across teams and translate complex ideas for different audiences from technical to non-technical, from interns to vice presidents. Many of these projects were demonstrated on stage at technology conferences and used by several Fortune 500 companies.
@@ -39,17 +37,28 @@ block content
                 | Please reach out by 
                 strong
                     +myEmail("email")
-                    | ,&nbsp;
-                strong
-                    a(href=metadata.social.LinkedIn, target="_blank") LinkedIn, 
+                    | &nbsp;
                 | or 
                 strong
-                    a(href=metadata.social.Instagram, target="_blank") Instagram
+                    a(href=metadata.social.LinkedIn, target="_blank") LinkedIn
                 | .
             br
             p
                 strong
                     a(href="./Shakeel_Mohamed_resume.pdf" target="_blank") View my résumé here.
+    br
+    hr.rule
+    br
+    br
+    br    
+    br
+    .grid-1
+        p.bigType.bold.text-center “The best way to predict the future is to create it.” 
+        br
+        p.caption.text-center Peter Drucker (attributed)
+    br
+    br
+    br
     br
 
     hr.rule
@@ -143,7 +152,7 @@ block content
             br
             .grid-3
                 +experience("Senior Designer", "TALISMAN", "Remote", "08.2025–Present")
-                p.col-start-2.col-end-4 Collaborated with the Creative Director and a Senior Designer on brand strategy and visual identity for a performing arts organization. Researched historical references and competitors, designed presentation systems in Figma Slides. Led critiques and provided feedback to junior designers. Supported business development through capabilities decks.
+                p.col-start-2.col-end-4 Collaborated with the Creative Director and a Senior Designer on brand strategy and visual identity for a performing arts organization. Researched historical references and competitors, designed presentation systems in Figma Slides. Led critiques and provided feedback to junior designers. Supported business development through pitch decks.
             .grid-3
                 +experience("Freelance Brand Designer", "shakeel.design", "Remote", "05.2025–Present")
                 p.col-start-2.col-end-4 Designed brand identities and motion design systems for cultural organizations, creative agencies, and emerging companies. Collaborated directly with clients to develop design solutions from strategy and concept through implementation across multiple touchpoints including print, digital, and&nbsp;environmental.
@@ -265,7 +274,8 @@ block content
             p.caption Speaking
             br
             p
-                strong College of the Canyons
+                strong
+                    a.underline(href="https://www.linkedin.com/feed/update/urn:li:activity:7447308480782217216/" target="_blank") College of the Canyons
                 br
                 | Guest Lecture
                 br
@@ -275,7 +285,7 @@ block content
                 strong 
                     a.underline(href="https://www.linkedin.com/feed/update/urn:li:activity:7405072210052182016/" target="_blank") The George Washington University (GWU)
                 br
-                | Guest Lecture: Design Fundamentals II
+                | Guest Lecture
                 br
                 | 2025
             br
