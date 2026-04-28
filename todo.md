@@ -22,6 +22,7 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
     - [ ] push to test.shakeel.design
     - [ ] ensure test.shakeelmohamed.com redirects cleanly
     - [ ] figure out how to avoid SEO hit when doing the same thing with this repo
+- [ ] later on, time all covers to 5s at 60fp exactly and even preview them so they sync/loop mostly perfectly
 
 ## New footer WIP
 
