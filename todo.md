@@ -15,7 +15,13 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 - [ ] portfolio-content bottom margin seems tight compared to caption leading
 - [ ] 😵‍💫 Rework projects to have a cover.png shown at the top (ideally its the same image as the OG, just scaled up + higher res) -> scale should be about 1920x1200, the OG size feels too wide for cover images
     - [ ]  This is done... but some of the images/videos are too low res (aka they are OG size not super HD+ size); then set showCover=true in frontmatter
-
+- [ ] test primary domain migration to shakeel.design
+    - [ ] new repo /test -> manual copy docs directory from here
+    - [ ] replace domains
+    - [ ] add CNAME
+    - [ ] push to test.shakeel.design
+    - [ ] ensure test.shakeelmohamed.com redirects cleanly
+    - [ ] figure out how to avoid SEO hit when doing the same thing with this repo
 
 ## New footer WIP
 
