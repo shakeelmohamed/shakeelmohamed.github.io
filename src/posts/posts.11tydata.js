@@ -2,7 +2,7 @@ const utils = require("../../utils");
 
 module.exports = {
     eleventyComputed: {
-        pageTitle: data => data.title + " | Shakeel Mohamed — Strategic Brand Designer",
+        pageTitle: data => data.title + " | Shakeel Mohamed — Brand Systems Designer",
         cleanDate: data => utils.formatDate(data.page.date),
         atomFeedDate: data => utils.formatDateForAtomFeed(data.page.date),
         atomUpdatedDate: data => utils.gitDates(data.page.inputPath).then(dates => {

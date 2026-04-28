@@ -74,6 +74,16 @@ mixin video(url, cap, autoplay=false, w=1920, h=1080)
             source(src=encodedMp4Url type="video/mp4")
         +caption(cap)
 
+mixin videoCustom(url, cap, autoplay=false, w=1920, h=1080)
+    - var safeUrl = url || '';
+    - var webmUrl = safeUrl.replace(/\.mp4$/i, '.webm');
+    - var encodedMp4Url = safeUrl ? encodeURI(safeUrl) : '';
+    - var encodedWebmUrl = safeUrl ? encodeURI(webmUrl) : '';
+    .project-content
+        video.w-full(width=w height=h controls="" data-video="0" autoplay=autoplay)
+            source(src=encodedWebmUrl type="video/webm")
+            source(src=encodedMp4Url type="video/mp4")
+        +caption(cap)
 
 mixin fontTesterImports()
     <script type="text/javascript" src="/scripts/fontsampler/fontsampler.min.js"></script>
