@@ -6,15 +6,15 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 # ASAP
 
 - [ ] add SVG favicon
-- [ ] thesis fix the first 2-up image row, logo needs to be cropped or replace with a logo reveal
-- [ ] homepage add CTA -> work page “for more”
-- [ ] Covers: mini highlight videos for MJ, Rothko, MR, TYPO maybe just logo animation
+
+- [ ] Covers: mini highlight videos for MJ, Rothko, MR maybe just logo animation
 - [ ] add "creative tech" or similar tag/page once 3 projects are up
 - [ ] Update labyrinth with new content
 - [ ] fix broken link to break presentation (on project page)
 - [ ] portfolio-content bottom margin seems tight compared to caption leading
 - [ ] 😵‍💫 Rework projects to have a cover.png shown at the top (ideally its the same image as the OG, just scaled up + higher res) -> scale should be about 1920x1200, the OG size feels too wide for cover images
     - [ ]  This is done... but some of the images/videos are too low res (aka they are OG size not super HD+ size); then set showCover=true in frontmatter
+- [ ] homepage add CTA -> work page “for more”
 - [ ] test primary domain migration to shakeel.design
     - [ ] new repo /test -> manual copy docs directory from here
     - [ ] replace domains
@@ -162,6 +162,7 @@ Also remove the hr above it, need to fix body margin-bottom to 0, etc.
 
 # Referential Mono
 
+- [ ] specimen content needs more “early computing” content
 - [ ] fix mobile alignment issues with center or right align
 - [ ] crit/printed process, kashida/Eid motion, what about the posters?
 - [ ] show research kufic chart also
