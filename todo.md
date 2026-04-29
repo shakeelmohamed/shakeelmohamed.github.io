@@ -7,7 +7,7 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 
 - [ ] add SVG favicon
 
-- [ ] Covers: mini highlight videos for MJ, Rothko, MR maybe just logo animation
+- [ ] Covers: mini highlight videos for MJ (cleanup existing motion, maybe rebuild), Rothko, MR (astrology chart concept... make a storyboard)
 - [ ] add "creative tech" or similar tag/page once 3 projects are up
 - [ ] Update labyrinth with new content
 - [ ] fix broken link to break presentation (on project page)
