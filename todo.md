@@ -23,6 +23,9 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
     - [ ] ensure test.shakeelmohamed.com redirects cleanly
     - [ ] figure out how to avoid SEO hit when doing the same thing with this repo
 - [ ] later on, time all covers to 5s at 60fp exactly and even preview them so they sync/loop mostly perfectly
+- [ ] Custom media type pages
+    - [ ] add motion reel to /motion/index.html, maybe setup
+    - [ ] More context to /type-design/index.html
 
 ## New footer WIP
 
@@ -187,6 +190,8 @@ Also remove the hr above it, need to fix body margin-bottom to 0, etc.
 
 ## About / Bio revision
 
+- [ ] Something about “0 to 1” and “1 to infinity” as a designer
+- [ ] Industries of interest: deep tech, cultural organizations, what else?
 - [ ] Experience... consider Parenthetical titles or in 1 line summary at the top: Product Manager (Functionally leading roadmap without formal title)
 - [ ] Future bio update: I’m interested in environmental design, creative technology, and Arabic type design.
 - [ ] Can set up thesis in my bio a bit to speak more maturely as being an advocate and helping others to become advocates.
