@@ -70,7 +70,12 @@ block content
                 +projectMeta("Goal", goal)
             if recognition
                 +projectMeta("Recognition", recognition)
-        div &nbsp;
+        //- TODO: does this all need to be bold? Probably not, maybe p.caption
+        div.project-meta
+            if client && clientTeam
+                +projectMeta(client + " Team", clientTeam)
+            if agencyName && agencyTeam
+                +projectMeta(agencyName + " Team", agencyTeam)
     !=content
 
     if thanks
