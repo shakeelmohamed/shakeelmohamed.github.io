@@ -16,7 +16,7 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
     - [ ]  This is done... but some of the images/videos are too low res (aka they are OG size not super HD+ size); then set showCover=true in frontmatter
 - [ ] homepage add CTA -> work page “for more”
 - [ ] test primary domain migration to shakeel.design
-    - [ ] new repo /test -> manual copy docs directory from here
+    - [X] new repo /test -> manual copy docs directory from here, see flippy-flip.github.io
     - [ ] replace domains
     - [ ] add CNAME
     - [ ] push to test.shakeel.design
