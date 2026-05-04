@@ -50,13 +50,13 @@ mixin youtube(url, cap)
         +caption(cap)
 
 //- TODO: refactor to simplify animation() and video()
-mixin animation(url, cap=null, w=1920, h=1080, className="video16by9")
+mixin animation(url, cap=null, w=1920, h=1080, className="video16by9", poster=null)
     - var safeUrl = url || '';
     - var webmUrl = safeUrl.replace(/\.mp4$/i, '.webm');
     - var encodedMp4Url = safeUrl ? encodeURI(safeUrl) : '';
     - var encodedWebmUrl = safeUrl ? encodeURI(webmUrl) : '';
     .project-content
-        video(width=w height=h class=className autoplay="" loop="" muted="" playsinline="" preload="metadata")
+        video(width=w height=h class=className autoplay="" loop="" muted="" playsinline="" preload="metadata" poster=poster)
             source(src=encodedWebmUrl type="video/webm")
             source(src=encodedMp4Url type="video/mp4")
         if cap
@@ -155,7 +155,7 @@ mixin projectListing(project)
 
             //- //- TODO: crop or separate video project vs cover?
             if isAnimated
-                +animation(project.data.cover, null, w=1200, h=630, className="projectCover")
+                +animation(project.data.cover, null, w=1200, h=630, className="projectCover", poster=project.data.openGraphImage)
             else
                 //- img.portfolio-cover.block-project-cover(src=project.data.openGraphImage, alt="Cover image for " + project.data.title + " project", width="1200", height="630")
                 +optimizedImage(project.data.cover, "Cover image for " + project.data.title + " project", className="projectCover", w=1200, h=630)
