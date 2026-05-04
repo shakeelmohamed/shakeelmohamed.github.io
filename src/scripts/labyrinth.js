@@ -342,7 +342,7 @@ if (isLocal) {
             setTimeout(() => { btn.textContent = "Copy layout JSON"; }, 2000);
         });
     });
-    document.body.appendChild(btn);
+    document.querySelector("main").appendChild(btn);
 }
 
 function fixPaddingBottom() {

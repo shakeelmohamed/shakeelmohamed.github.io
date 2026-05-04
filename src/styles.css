@@ -580,6 +580,15 @@ section {
     width: 100%;
 }
 
+video {
+    background-color: var(--color-black);
+    width: 100%;
+}
+
+video.projectCover {
+    aspect-ratio: 1200 / 630;
+}
+
 h1 {
     padding-top: var(--space-4);
     padding-bottom: var(--space-4);

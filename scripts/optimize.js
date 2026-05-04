@@ -152,7 +152,8 @@ async function optimizeVideos(files, videoCache) {
         const cacheInSync =
       cached
       && cached.sourceFingerprint === sourceFingerprint
-      && cached.encoderSignature === VIDEO_ENCODER_SIGNATURE;
+      && cached.encoderSignature === VIDEO_ENCODER_SIGNATURE
+      && cached.faststartApplied === true;
 
         if (outputExists && cacheInSync && outputInSync) {
             skippedCount += 1;
@@ -161,6 +162,7 @@ async function optimizeVideos(files, videoCache) {
                 sourceSize: sourceStats.size,
                 sourceMtimeMs: sourceStats.mtimeMs,
                 encoderSignature: VIDEO_ENCODER_SIGNATURE,
+                faststartApplied: true,
                 optimizedAt: cached && cached.optimizedAt ? cached.optimizedAt : Date.now(),
                 output: {
                     webm: webmRelativePath,
@@ -171,6 +173,7 @@ async function optimizeVideos(files, videoCache) {
 
         try {
             transcodeVideoToWebm(file, webmPath);
+            applyFaststart(file);
             optimizedCount += 1;
             console.log(`optimize:video generated webm for ${relative}`);
 
@@ -180,6 +183,7 @@ async function optimizeVideos(files, videoCache) {
                 sourceSize: sourceStats.size,
                 sourceMtimeMs: sourceStats.mtimeMs,
                 encoderSignature: VIDEO_ENCODER_SIGNATURE,
+                faststartApplied: true,
                 optimizedAt: Date.now(),
                 output: {
                     webm: webmRelativePath,
@@ -226,6 +230,16 @@ function ensureFfmpegAvailable() {
     }
 
     throw new Error("ffmpeg CLI is required for MP4 to WebM optimization.");
+}
+
+function applyFaststart(filePath) {
+    const tmp = filePath + ".tmp.mp4";
+    const result = spawnSync("ffmpeg", ["-y", "-i", filePath, "-c", "copy", "-movflags", "+faststart", tmp], { stdio: "pipe" });
+    if (result.status !== 0) {
+        const stderr = (result.stderr || "").toString().trim();
+        throw new Error(`ffmpeg faststart failed with status ${result.status}. ${stderr}`);
+    }
+    fs.renameSync(tmp, filePath);
 }
 
 function transcodeVideoToWebm(inputPath, outputPath) {
