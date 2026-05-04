@@ -170,7 +170,7 @@ img.image-zoom, video.image-zoom {
 }
 
 #labyrinth-copy {
-    position: fixed;
+    position: sticky;
     bottom: 16px;
     right: 16px;
     z-index: 9999;
