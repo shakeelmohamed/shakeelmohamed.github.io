@@ -179,7 +179,7 @@ Also remove the hr above it, need to fix body margin-bottom to 0, etc.
 - [ ] Have 2026 (55?) until... 59 exported and ready
 - [ ] Re-export motion at 60fps + updated years
 - [ ] Re-do explainer animation, send for approval
-- [ ] Pull all lother notes in here
+- [ ] Pull all other notes in here
 - [ ] Salgirah archive: fix weird images sizes + replace all content, can make it flatter + break up the carousels so it reads cleanly
 
 
