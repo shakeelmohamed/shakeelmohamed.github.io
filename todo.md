@@ -175,7 +175,12 @@ Also remove the hr above it, need to fix body margin-bottom to 0, etc.
 
 # Salgirah
 
-- [ ] Salgirah + others, fix weird images sizes + replace all content, can make it flatter + break up the carousels so it reads cleanly
+- [ ] Update header image without year number
+- [ ] Have 2026 (55?) until... 59 exported and ready
+- [ ] Re-export motion at 60fps + updated years
+- [ ] Re-do explainer animation, send for approval
+- [ ] Pull all other notes in here
+- [ ] Salgirah archive: fix weird images sizes + replace all content, can make it flatter + break up the carousels so it reads cleanly
 
 
 # Digital Anarchy
@@ -184,7 +189,7 @@ Also remove the hr above it, need to fix body margin-bottom to 0, etc.
 
 # Projects
 
-- [ ] Make an overview gif for each project cover (fallback to still for OG)
+- [ ] Make an overview mp4 for each project cover (fallback to still for OG)
 - [ ] check OG images for projects, then posts, etc. Consider gif/video versions
 - [ ] move all logo family / kit of parts stuff to the bottom of each project (before process)
 

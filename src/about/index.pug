@@ -14,19 +14,20 @@ include ../_includes/project_utils.pug
 
 
 block content
-    .grid-1
+    .grid-1.desktop-only
         +animation("./img/Shakeel_chair_spin.mp4", null, 1920, 804, "")
     .grid-4.mt-4
         //- TODO: this will overflow x on tablet scale
         div.headshot
-            img.lightbox(src="../img/Shakeel_Mohamed_headshot.png" alt="Headshot of Shakeel Mohamed")
+            img.mobile-only.lightbox(src="../img/Shakeel_Mohamed_headshot.png" alt="Headshot of Shakeel Mohamed")
         div
             //- TODO: can we style this like a caption, but still get SEO benefits?
             h1(style="padding-top:0;") About Me
             p &nbsp;
         .col-start-3.col-end-5
             p My name is Shakeel, I’m a brand systems designer specializing in identity design, typography, and systems thinking. I approach projects systematically by understanding the brief, audience, and constraints to create brands that work seamlessly across every&nbsp;touchpoint.
-            p During my graduate studies at ArtCenter College of Design I designed four typefaces, which gave me a deep appreciation for the power of typography across media types. Designing fonts requires rigorous refinement over minute details, I bring this same attention to craft through form, layout, typesetting, and print&nbsp;production.
+            br
+            p Recently, at TALISMAN I helped launch the rebrand for Trinity Repertory Company across print and digital media. During my graduate studies at ArtCenter College of Design I designed four typefaces, which gave me a deep appreciation for the power of typography across media types. Designing fonts requires rigorous refinement over minute details, I bring this same attention to craft through form, layout, typesetting, and print&nbsp;production.
             br
             p At Splunk, I was known as “the glue” for my ability to coordinate across teams and translate complex ideas for different audiences from technical to non-technical, from interns to vice presidents. Many of these projects were demonstrated on stage at technology conferences and used by several Fortune 500 companies.
             br
