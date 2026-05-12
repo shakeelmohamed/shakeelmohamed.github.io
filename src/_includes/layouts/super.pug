@@ -1,5 +1,8 @@
 include ../blocks.pug
 
+if !description
+    - description = metadata.description
+
 if !pageTitle
     if title
         - pageTitle = title

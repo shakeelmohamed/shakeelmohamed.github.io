@@ -1,6 +1,5 @@
 ---
 title: About | Shakeel Mohamed — Brand Systems Designer
-description: Brand designer in Los Angeles specializing in identity design, typography, and systems thinking. Available for freelance opportunities.
 ---
 
 extends ../_includes/layouts/base.pug
@@ -14,12 +13,12 @@ include ../_includes/project_utils.pug
 
 
 block content
-    .grid-1
+    .grid-1.desktop-only
         +animation("./img/Shakeel_chair_spin.mp4", null, 1920, 804, "")
     .grid-4.mt-4
         //- TODO: this will overflow x on tablet scale
         div.headshot
-            img.lightbox(src="../img/Shakeel_Mohamed_headshot.png" alt="Headshot of Shakeel Mohamed")
+            img.lightbox.mobile-only(src="../img/Shakeel_Mohamed_headshot.png" alt="Headshot of Shakeel Mohamed")
         div
             //- TODO: can we style this like a caption, but still get SEO benefits?
             h1(style="padding-top:0;") About Me
