@@ -1,6 +1,5 @@
 ---
 title: About | Shakeel Mohamed — Brand Systems Designer
-description: Brand designer in Los Angeles specializing in identity design, typography, and systems thinking. Available for freelance opportunities.
 ---
 
 extends ../_includes/layouts/base.pug
@@ -19,7 +18,7 @@ block content
     .grid-4.mt-4
         //- TODO: this will overflow x on tablet scale
         div.headshot
-            img.mobile-only.lightbox(src="../img/Shakeel_Mohamed_headshot.png" alt="Headshot of Shakeel Mohamed")
+            img.lightbox.mobile-only(src="../img/Shakeel_Mohamed_headshot.png" alt="Headshot of Shakeel Mohamed")
         div
             //- TODO: can we style this like a caption, but still get SEO benefits?
             h1(style="padding-top:0;") About Me
@@ -31,7 +30,6 @@ block content
             br
             p At Splunk, I was known as “the glue” for my ability to coordinate across teams and translate complex ideas for different audiences from technical to non-technical, from interns to vice presidents. Many of these projects were demonstrated on stage at technology conferences and used by several Fortune 500 companies.
             br
-            //- p Available for freelance or full-time opportunities on-site in Los Angeles or&nbsp;remote.
             p Available for freelance opportunities on-site in Los Angeles or&nbsp;remote.
             br
             p
@@ -158,7 +156,7 @@ block content
                 +experience("Freelance Brand Designer", "shakeel.design", "Remote", "05.2025–Present")
                 p.col-start-2.col-end-4 Designed brand identities and motion design systems for cultural organizations, creative agencies, and emerging companies. Collaborated directly with clients to develop design solutions from strategy and concept through implementation across multiple touchpoints including print, digital, and&nbsp;environmental.
             .grid-3
-                a(href="/projects/salgirah-archive/")
+                a(href="/projects/salgirah-festival-identity/")
                     +experience("Freelance Graphic Designer (Annually)", "The Ismaili Muslim Community", "Remote", "10.2021–10.2025")
                 p.col-start-2.col-end-4 Designed three evolutions of the brand identity for Salgirah, an annual international festival across 21 countries in 11 languages. Branded signage is displayed in multiple cities, notably at the Dubai World Trade&nbsp;Centre.
             .grid-3
@@ -207,6 +205,14 @@ block content
         div.
         div
             p.caption Recognition
+            br
+            p
+                strong
+                    a.underline(href="https://processingfoundation.org/dev/open-source-software-microgrant-program" target="_blank") Processing Foundation
+                br
+                | Grant recipient: Typography Research in p5.js
+                br
+                | 2026
             br
             p
                 strong

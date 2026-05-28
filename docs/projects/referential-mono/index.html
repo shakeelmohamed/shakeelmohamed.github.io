@@ -88,7 +88,8 @@
                     <p><span class="bold">Goal:&nbsp;</span>Design a modular typeface, infused with personal meaning.</p>
                     <p><span class="bold">Recognition:&nbsp;</span>Hoffmitz Milken Center for Typography (HMCT) Newsletter 2023 holiday greetings (featured typeface).</p>
                 </div>
-                <div>&nbsp;</div>
+                <div class="project-meta">
+                </div>
             </div>
 <div class="grid-2">
     <div>
@@ -238,14 +239,14 @@
             <div>
                 <hr>
                 <div class="grid-2">
-                    <div><a href="/projects/ontology/">
-                            <p class="bold project-breadcrumb-title is-prev"><span class="material-icons project-breadcrumb-icon">arrow_back</span>&nbsp; Ontology Typeface
-                            </p>
-                            <p class="caption desktop-only project-breadcrumb-caption is-prev">Print, Type Design</p></a></div>
                     <div><a href="/projects/typo-mexico-city/">
-                            <p class="bold project-breadcrumb-title is-next">TYPO Mexico City Conference Identity &nbsp;<span class="material-icons project-breadcrumb-icon">arrow_forward</span>
+                            <p class="bold project-breadcrumb-title is-prev"><span class="material-icons project-breadcrumb-icon">arrow_back</span>&nbsp; TYPO Mexico City Conference Identity
                             </p>
-                            <p class="caption desktop-only project-breadcrumb-caption is-next">Branding, Motion, Print</p></a></div>
+                            <p class="caption desktop-only project-breadcrumb-caption is-prev">Branding, Motion, Print</p></a></div>
+                    <div><a href="/projects/ontology/">
+                            <p class="bold project-breadcrumb-title is-next">Ontology Typeface &nbsp;<span class="material-icons project-breadcrumb-icon">arrow_forward</span>
+                            </p>
+                            <p class="caption desktop-only project-breadcrumb-caption is-next">Print, Type Design</p></a></div>
                 </div>
             </div>
         </main>
@@ -271,9 +272,11 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-36907845-2"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-36907845-2');
+        if (window.location.hostname !== "localhost"){
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-36907845-2');
+        }
     </script>
     <script>
         window.addEventListener('load', function () {

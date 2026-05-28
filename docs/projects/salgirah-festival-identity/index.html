@@ -88,7 +88,8 @@
                     <p><span class="bold">Tools:&nbsp;</span>Illustrator, InDesign, After Effects, Photoshop, Rhino</p>
                     <p><span class="bold">Goal:&nbsp;</span>Update a unified festival identity for the global Ismaili community.</p>
                 </div>
-                <div>&nbsp;</div>
+                <div class="project-meta">
+                </div>
             </div>
 <div class="grid-2">
     <div>
@@ -102,8 +103,8 @@
 <div class="grid-1">
     <div class="project-content">
         <video class="video16by9" width="1920" height="1080" autoplay="" loop="" muted="" playsinline="" preload="metadata">
-            <source src="img/Salgirah_2025_header.webm" type="video/webm"/>
-            <source src="img/Salgirah_2025_header.mp4" type="video/mp4"/>
+            <source src="img/Salgirah_animation.webm" type="video/webm"/>
+            <source src="img/Salgirah_animation.mp4" type="video/mp4"/>
         </video>
     </div>
 </div><br/>
@@ -182,14 +183,14 @@
             <div>
                 <hr>
                 <div class="grid-2">
-                    <div><a href="/projects/typo-mexico-city/">
-                            <p class="bold project-breadcrumb-title is-prev"><span class="material-icons project-breadcrumb-icon">arrow_back</span>&nbsp; TYPO Mexico City Conference Identity
+                    <div><a href="/projects/mindful-roman/">
+                            <p class="bold project-breadcrumb-title is-prev"><span class="material-icons project-breadcrumb-icon">arrow_back</span>&nbsp; Mindful Roman Typeface
                             </p>
-                            <p class="caption desktop-only project-breadcrumb-caption is-prev">Branding, Motion, Print</p></a></div>
-                    <div><a href="/projects/midjourney/">
-                            <p class="bold project-breadcrumb-title is-next">Midjourney Rebrand &nbsp;<span class="material-icons project-breadcrumb-icon">arrow_forward</span>
+                            <p class="caption desktop-only project-breadcrumb-caption is-prev">Print, Type Design</p></a></div>
+                    <div><a href="/projects/trinity-rep/">
+                            <p class="bold project-breadcrumb-title is-next">Trinity Rep Rebrand (for TALISMAN) &nbsp;<span class="material-icons project-breadcrumb-icon">arrow_forward</span>
                             </p>
-                            <p class="caption desktop-only project-breadcrumb-caption is-next">Branding, Environmental, Motion, Strategy</p></a></div>
+                            <p class="caption desktop-only project-breadcrumb-caption is-next">Branding, Environmental, Print</p></a></div>
                 </div>
             </div>
         </main>
@@ -215,9 +216,11 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-36907845-2"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-36907845-2');
+        if (window.location.hostname !== "localhost"){
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-36907845-2');
+        }
     </script>
     <script>
         window.addEventListener('load', function () {

@@ -88,7 +88,8 @@
                     <p><span class="bold">Goal:&nbsp;</span>To express the idea of post-pandemic community building for a design conference identity.</p>
                     <p><span class="bold">Recognition:&nbsp;</span>Selected to present this project at a Type Thursday LA meetup.</p>
                 </div>
-                <div>&nbsp;</div>
+                <div class="project-meta">
+                </div>
             </div>
 <div class="grid-2">
     <div>
@@ -171,14 +172,14 @@
             <div>
                 <hr>
                 <div class="grid-2">
+                    <div><a href="/projects/thesis/">
+                            <p class="bold project-breadcrumb-title is-prev"><span class="material-icons project-breadcrumb-icon">arrow_back</span>&nbsp; MFA Thesis: Applied Designer
+                            </p>
+                            <p class="caption desktop-only project-breadcrumb-caption is-prev">Book Design, Branding, Environmental, Print, Research</p></a></div>
                     <div><a href="/projects/referential-mono/">
-                            <p class="bold project-breadcrumb-title is-prev"><span class="material-icons project-breadcrumb-icon">arrow_back</span>&nbsp; Referential Mono Typeface
+                            <p class="bold project-breadcrumb-title is-next">Referential Mono Typeface &nbsp;<span class="material-icons project-breadcrumb-icon">arrow_forward</span>
                             </p>
-                            <p class="caption desktop-only project-breadcrumb-caption is-prev">Type Design</p></a></div>
-                    <div><a href="/projects/salgirah-festival-identity/">
-                            <p class="bold project-breadcrumb-title is-next">Salgirah International Festival Identity &nbsp;<span class="material-icons project-breadcrumb-icon">arrow_forward</span>
-                            </p>
-                            <p class="caption desktop-only project-breadcrumb-caption is-next">Branding, Environmental, Motion</p></a></div>
+                            <p class="caption desktop-only project-breadcrumb-caption is-next">Type Design</p></a></div>
                 </div>
             </div>
         </main>
@@ -204,9 +205,11 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-36907845-2"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-36907845-2');
+        if (window.location.hostname !== "localhost"){
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-36907845-2');
+        }
     </script>
     <script>
         window.addEventListener('load', function () {

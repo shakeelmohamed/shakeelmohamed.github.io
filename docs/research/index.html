@@ -5,18 +5,18 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="chrome=1">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description">
+        <meta name="description" content="Brand designer in Los Angeles specializing in identity design, typography, and systems thinking. Available for freelance opportunities.">
         <meta name="author" content="Shakeel Mohamed">
         <meta property="og:url" content="https://shakeelmohamed.com/research/">
         <meta property="og:title" content="Research | Shakeel Mohamed – Brand Systems Designer">
         <meta property="og:image" content="https://shakeelmohamed.com/img/opengraph-default.png">
         <meta property="og:image:width" content="1200">
         <meta property="og:image:height" content="630">
-        <meta property="og:description">
+        <meta property="og:description" content="Brand designer in Los Angeles specializing in identity design, typography, and systems thinking. Available for freelance opportunities.">
         <meta property="og:type" content="website">
         <meta property="twitter:card" content="summary_large_image">
         <link href="https://shakeelmohamed.com/research/" rel="canonical">
-        <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://shakeelmohamed.com/#person","name":"Shakeel Mohamed","url":"https://shakeelmohamed.com","email":"mailto:hello@shakeel.design","jobTitle":"Brand Systems Designer","sameAs":["https://linkedin.com/in/shakeelmohamed","https://instagram.com/shakeel.design","https://github.com/shakeelmohamed"]},{"@type":"WebSite","@id":"https://shakeelmohamed.com/#website","url":"https://shakeelmohamed.com","name":"Shakeel Mohamed","inLanguage":"en"}]}</script>
+        <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://shakeelmohamed.com/#person","name":"Shakeel Mohamed","url":"https://shakeelmohamed.com","email":"mailto:hello@shakeel.design","jobTitle":"Brand Systems Designer","sameAs":["https://linkedin.com/in/shakeelmohamed","https://instagram.com/shakeel.design","https://github.com/shakeelmohamed"]},{"@type":"WebSite","@id":"https://shakeelmohamed.com/#website","url":"https://shakeelmohamed.com","name":"Shakeel Mohamed","description":"Brand designer in Los Angeles specializing in identity design, typography, and systems thinking. Available for freelance opportunities.","inLanguage":"en"}]}</script>
         <link rel="stylesheet" href="https://use.typekit.net/rgm5cfh.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/material-icons@1.13.12/iconfont/material-icons.min.css">
         <link rel="stylesheet" href="/dist/styles.css">
@@ -78,6 +78,22 @@
         <main>
             <h1>Research</h1>
             <div class="grid-2">
+                <div class="block-project-listing"><a href="/projects/planetary-society/">
+                        <div class="project-content">
+                            <video class="projectCover" width="1200" height="630" autoplay="" loop="" muted="" playsinline="" preload="metadata" poster="/projects/planetary-society/img/Planetary Society - opengraph.png">
+                                <source src="/projects/planetary-society/img/Planetary_Society_cover_vid.webm" type="video/webm"/>
+                                <source src="/projects/planetary-society/img/Planetary_Society_cover_vid.mp4" type="video/mp4"/>
+                            </video>
+                        </div></a>
+                    <div class="block-project-copy">
+                        <div class="block-project-title">
+                            <h2><a href="/projects/planetary-society/">Planetary Society Rebrand</a></h2>
+                        </div>
+                        <div class="project-meta">
+                            <p class="block-project-meta"><a href="/branding">Branding</a>, <a href="/motion">Motion</a>, <a href="/print">Print</a>, <a href="/research">Research</a>, <a href="/type-design">Type Design</a></p>
+                        </div>
+                    </div>
+                </div>
                 <div class="block-project-listing"><a href="/projects/mark-rothko/">
                         <div class="project-content">
                             <video class="projectCover" width="1200" height="630" autoplay="" loop="" muted="" playsinline="" preload="metadata" poster="/projects/mark-rothko/img/Rothko - cover.png">
@@ -91,22 +107,6 @@
                         </div>
                         <div class="project-meta">
                             <p class="block-project-meta"><a href="/book-design">Book Design</a>, <a href="/branding">Branding</a>, <a href="/print">Print</a>, <a href="/research">Research</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="block-project-listing"><a href="/projects/planetary-society/">
-                        <div class="project-content">
-                            <video class="projectCover" width="1200" height="630" autoplay="" loop="" muted="" playsinline="" preload="metadata" poster="/projects/planetary-society/img/Planetary Society - opengraph.png">
-                                <source src="/projects/planetary-society/img/Planetary_Society_cover_vid.webm" type="video/webm"/>
-                                <source src="/projects/planetary-society/img/Planetary_Society_cover_vid.mp4" type="video/mp4"/>
-                            </video>
-                        </div></a>
-                    <div class="block-project-copy">
-                        <div class="block-project-title">
-                            <h2><a href="/projects/planetary-society/">Planetary Society Rebrand</a></h2>
-                        </div>
-                        <div class="project-meta">
-                            <p class="block-project-meta"><a href="/branding">Branding</a>, <a href="/motion">Motion</a>, <a href="/print">Print</a>, <a href="/research">Research</a>, <a href="/strategy">Strategy</a>, <a href="/type-design">Type Design</a></p>
                         </div>
                     </div>
                 </div>
@@ -150,9 +150,11 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-36907845-2"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-36907845-2');
+        if (window.location.hostname !== "localhost"){
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-36907845-2');
+        }
     </script>
     <script defer src="/scripts/main.js"></script>
 </html>

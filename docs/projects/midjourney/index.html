@@ -79,7 +79,7 @@
             <div class="project-header">
                 <h1>Midjourney Rebrand</h1>
                 <div class="project-meta">
-                    <p class="text-gray-meta"><a href="/branding">Branding</a>, <a href="/environmental">Environmental</a>, <a href="/motion">Motion</a>, <a href="/strategy">Strategy</a></p>
+                    <p class="text-gray-meta"><a href="/branding">Branding</a>, <a href="/environmental">Environmental</a>, <a href="/motion">Motion</a></p>
                 </div>
             </div>
             <div class="grid-2">
@@ -87,7 +87,8 @@
                     <p><span class="bold">Tools:&nbsp;</span>Midjourney, Runway, Illustrator, Photoshop, InDesign, Keynote, Figma</p>
                     <p><span class="bold">Goal:&nbsp;</span>Make generative AI tools more approachable.</p>
                 </div>
-                <div>&nbsp;</div>
+                <div class="project-meta">
+                </div>
             </div>
 <div class="grid-2">
     <div>
@@ -284,14 +285,14 @@
             <div>
                 <hr>
                 <div class="grid-2">
-                    <div><a href="/projects/salgirah-festival-identity/">
-                            <p class="bold project-breadcrumb-title is-prev"><span class="material-icons project-breadcrumb-icon">arrow_back</span>&nbsp; Salgirah International Festival Identity
+                    <div><a href="/projects/trinity-rep/">
+                            <p class="bold project-breadcrumb-title is-prev"><span class="material-icons project-breadcrumb-icon">arrow_back</span>&nbsp; Trinity Rep Rebrand (for TALISMAN)
                             </p>
-                            <p class="caption desktop-only project-breadcrumb-caption is-prev">Branding, Environmental, Motion</p></a></div>
-                    <div><a href="/projects/mark-rothko/">
-                            <p class="bold project-breadcrumb-title is-next">Mark Rothko Documentary Campaign &nbsp;<span class="material-icons project-breadcrumb-icon">arrow_forward</span>
+                            <p class="caption desktop-only project-breadcrumb-caption is-prev">Branding, Environmental, Print</p></a></div>
+                    <div><a href="/projects/planetary-society/">
+                            <p class="bold project-breadcrumb-title is-next">Planetary Society Rebrand &nbsp;<span class="material-icons project-breadcrumb-icon">arrow_forward</span>
                             </p>
-                            <p class="caption desktop-only project-breadcrumb-caption is-next">Book Design, Branding, Print, Research</p></a></div>
+                            <p class="caption desktop-only project-breadcrumb-caption is-next">Branding, Motion, Print, Research, Type Design</p></a></div>
                 </div>
             </div>
         </main>
@@ -317,9 +318,11 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-36907845-2"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-36907845-2');
+        if (window.location.hostname !== "localhost"){
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-36907845-2');
+        }
     </script>
     <script>
         window.addEventListener('load', function () {

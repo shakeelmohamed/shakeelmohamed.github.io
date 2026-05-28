@@ -7,6 +7,8 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 
 - [ ] add SVG favicon
 
+- [ ] fix tablet CSS, prefer to just force mobile at tablet width for simplicity
+- [ ] Need some photography + design comps (think campaigns/ads) in each project
 - [ ] Covers: mini highlight videos for MJ (cleanup existing motion, maybe rebuild), Rothko, MR (astrology chart concept... make a storyboard)
 - [ ] add "creative tech" or similar tag/page once 3 projects are up
 - [ ] Update labyrinth with new content
@@ -88,15 +90,15 @@ Also remove the hr above it, need to fix body margin-bottom to 0, etc.
 
 # Midjourney
 
+
 - [ ] brand guidelines
-- [ ] brand book flip through with motion, show spiral binding and lots of great editorial speads
+- [ ] brand book flip through with motion, show spiral binding and lots of great editorial spreads
 - [ ] update project summary
 - [ ] caustic dispersion (light refraction) with logo in Blender
 - [ ] Need to optimize it for skimming, missing all the good stuff with the slideshows
 - [ ] spend 3 hours on motion (new storyboard, logo decomposition into layers, production), goal should be 10 seconds max
 - [ ] SIMPLE web and mobile UI screens / scroll motion
-- [ ] motion (logo reveal, 15-30s piece, product UI features)
-- [ ] brand inspiration book (better name)
+- [ ] motion (logo reveal, 15-30s piece, product UI features); can do a brief explainer video w/ AI voice: https://www.youtube.com/watch?v=0hPoRjeSZNo
 - [ ] add presentation design
 - [ ] add research and strategy deck, build it out + show thumbs
 - [ ] keep working on lighting in the installation scene, renders have some odd ghosting on the left side from the HDR
@@ -114,6 +116,8 @@ Also remove the hr above it, need to fix body margin-bottom to 0, etc.
 
 # Thesis
 
+- [ ] Include a validation section, this becomes material for future talks. Validation from: Google Career Dreamer, Creative People x Nali (non-linear career story), Meg Lewis new brand, Melinda Livsey, Chris Do’s own career path, etc.
+    - [ ]  Talk outline: hook, what is AD + thesis overview, proof, case studies, hey look I did this already (dev -> design -> 10k24), you can do it too.
 - [ ] update website mockup (PSD -> AE workflow)
 - [ ] add quiz mockup on iPad (motion)
 - [ ] Can expand the conferences stuff to show clear spec like retail/env. design

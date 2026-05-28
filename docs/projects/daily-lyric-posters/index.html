@@ -88,7 +88,8 @@
                     <p><span class="bold">Tools:&nbsp;</span>Illustrator, Photoshop</p>
                     <p><span class="bold">Goal:&nbsp;</span>Learn more about typography by designing daily posters for one month.</p>
                 </div>
-                <div>&nbsp;</div>
+                <div class="project-meta">
+                </div>
             </div>
 <div class="grid-2">
     <div>
@@ -211,9 +212,11 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-36907845-2"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-36907845-2');
+        if (window.location.hostname !== "localhost"){
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-36907845-2');
+        }
     </script>
     <script>
         window.addEventListener('load', function () {

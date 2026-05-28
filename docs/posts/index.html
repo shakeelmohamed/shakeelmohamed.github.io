@@ -15,7 +15,7 @@
         <meta property="og:description" content="Thoughts on strategic thinking, creative collaboration, and lessons learned along the way.">
         <meta property="og:type" content="website">
         <meta property="twitter:card" content="summary_large_image">
-        <link href="https://shakeelmohamed.com/blog" rel="canonical">
+        <link href="https://shakeelmohamed.com/blog/" rel="canonical">
         <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://shakeelmohamed.com/#person","name":"Shakeel Mohamed","url":"https://shakeelmohamed.com","email":"mailto:hello@shakeel.design","jobTitle":"Brand Systems Designer","sameAs":["https://linkedin.com/in/shakeelmohamed","https://instagram.com/shakeel.design","https://github.com/shakeelmohamed"]},{"@type":"WebSite","@id":"https://shakeelmohamed.com/#website","url":"https://shakeelmohamed.com","name":"Shakeel Mohamed","description":"Thoughts on strategic thinking, creative collaboration, and lessons learned along the way.","inLanguage":"en"}]}</script>
         <link rel="stylesheet" href="https://use.typekit.net/rgm5cfh.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/material-icons@1.13.12/iconfont/material-icons.min.css">
@@ -384,9 +384,11 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-36907845-2"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-36907845-2');
+        if (window.location.hostname !== "localhost"){
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-36907845-2');
+        }
     </script>
     <script defer src="/scripts/main.js"></script>
 </html>
