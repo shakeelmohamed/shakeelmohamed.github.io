@@ -89,15 +89,15 @@ Also remove the hr above it, need to fix body margin-bottom to 0, etc.
 
 # Midjourney
 
+
 - [ ] brand guidelines
-- [ ] brand book flip through with motion, show spiral binding and lots of great editorial speads
+- [ ] brand book flip through with motion, show spiral binding and lots of great editorial spreads
 - [ ] update project summary
 - [ ] caustic dispersion (light refraction) with logo in Blender
 - [ ] Need to optimize it for skimming, missing all the good stuff with the slideshows
 - [ ] spend 3 hours on motion (new storyboard, logo decomposition into layers, production), goal should be 10 seconds max
 - [ ] SIMPLE web and mobile UI screens / scroll motion
-- [ ] motion (logo reveal, 15-30s piece, product UI features)
-- [ ] brand inspiration book (better name)
+- [ ] motion (logo reveal, 15-30s piece, product UI features); can do a brief explainer video w/ AI voice: https://www.youtube.com/watch?v=0hPoRjeSZNo
 - [ ] add presentation design
 - [ ] add research and strategy deck, build it out + show thumbs
 - [ ] keep working on lighting in the installation scene, renders have some odd ghosting on the left side from the HDR
