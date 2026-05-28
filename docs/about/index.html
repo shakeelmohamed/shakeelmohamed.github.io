@@ -86,7 +86,7 @@
             </div>
             <div class="grid-4 mt-4">
                 <div class="headshot"><img class="lightbox mobile-only" src="../img/Shakeel_Mohamed_headshot.png" alt="Headshot of Shakeel Mohamed"></div>
-                <div>
+                <div class="desktop-only">
                     <h1 style="padding-top:0;">About Me</h1>
                     <p>&nbsp;</p>
                 </div>
@@ -255,6 +255,7 @@
                 <div></div>
                 <div>
                     <p class="caption">Recognition</p><br>
+                    <p><strong><a class="underline" href="https://processingfoundation.org/dev/open-source-software-microgrant-program" target="_blank">Processing Foundation</a></strong><br>Grant recipient: Typography Research in p5.js<br>2026</p><br>
                     <p><strong><a class="underline" href="https://www.wallofportfolios.in/portfolios/shakeel-mohamed/" target="_blank">Wall of Portfolios</a></strong><br>Featured Portfolio<br>2025</p><br>
                     <p><strong><a class="underline" href="https://www.bestfolios.com/portfolio/shakeelmohamed" target="_blank">Bestfolios</a></strong><br>Editor’s Pick: Portfolio<br>2025</p><br>
                     <p><strong><a class="underline" href="https://www.linkedin.com/posts/lithographix_artcentergx-activity-7333914789993160705-A71a" target="_blank">Lithographix ArtCenter Alumni Gallery</a></strong><br><a class="underline" href="../projects/mark-rothko">Mark Rothko Documentary Poster</a><br>2025</p><br>
@@ -298,9 +299,11 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-36907845-2"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-36907845-2');
+        if (window.location.hostname !== "localhost"){
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-36907845-2');
+        }
     </script>
     <script defer src="/scripts/main.js"></script>
 </html>

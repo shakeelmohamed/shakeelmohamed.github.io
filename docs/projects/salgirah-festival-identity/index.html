@@ -103,8 +103,8 @@
 <div class="grid-1">
     <div class="project-content">
         <video class="video16by9" width="1920" height="1080" autoplay="" loop="" muted="" playsinline="" preload="metadata">
-            <source src="img/Salgirah_cover.webm" type="video/webm"/>
-            <source src="img/Salgirah_cover.mp4" type="video/mp4"/>
+            <source src="img/Salgirah_animation.webm" type="video/webm"/>
+            <source src="img/Salgirah_animation.mp4" type="video/mp4"/>
         </video>
     </div>
 </div>
@@ -210,9 +210,11 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-36907845-2"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-36907845-2');
+        if (window.location.hostname !== "localhost"){
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-36907845-2');
+        }
     </script>
     <script>
         window.addEventListener('load', function () {
