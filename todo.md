@@ -130,6 +130,9 @@ Also remove the hr above it, need to fix body margin-bottom to 0, etc.
 
 # TPS
 
+- [ ] Logo design explanation
+- [ ] Embroidered patch from the logo, super important
+- [ ] rework the posters as social templates, just swap the photos
 - [ ] Create wayfinding system using clean grid
 - [ ] wristband motion... there is no face between inside/outside oops! Also make it loop perfectly
 - [ ] use the pattern as a lining for either stationery, apparel, bag lining, or something else for VIPs
@@ -137,6 +140,7 @@ Also remove the hr above it, need to fix body margin-bottom to 0, etc.
 - [ ] show motion design system (3x vertical social posts, LT, slates/bumpers) - show the system/grid, adaptive resizing
 - [ ] re-do social media mockup, looks a bit low saturation, dark mode UI would help
 - [ ] Redo mockups for TPS tickets, start from a clean INDD file -> PSD, maybe even do Blender mockups
+- [ ] need more 3D, houdini/particle stuff, 3D models with materials, can push that a lot
 - [ ] use this for website particle physics (better than three.js): https://github.com/naughtyduk/particlesGL
 - [ ] process is missing
 - [ ] maybe show lightsail itself in the motion reveal?
