@@ -21,6 +21,7 @@ function buildMedia(url) {
     } else {
         const video = document.createElement("video");
         video.appendChild(Object.assign(document.createElement("source"), { src: baseURL + ".webm", type: "video/webm" }));
+        video.appendChild(Object.assign(document.createElement("source"), { src: baseURL + ".hevc.mp4", type: 'video/mp4; codecs="hvc1"' }));
         video.appendChild(Object.assign(document.createElement("source"), { src: url, type: "video/mp4" }));
         Object.assign(video, { autoplay: true, loop: true, muted: true, playsInline: true, preload: "metadata" });
         return video;
