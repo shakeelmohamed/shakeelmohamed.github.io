@@ -10,6 +10,7 @@ const CACHE_PATH = path.resolve(ROOT, ".cache/optimize-media.json");
 const TARGET_EXTENSIONS = new Set([".png", ".jpg", ".jpeg"]);
 const VIDEO_EXTENSIONS = new Set([".mp4"]);
 const VIDEO_ENCODER_SIGNATURE = "vp9-crf33-b0-rowmt1-opus-v1";
+const VIDEO_HEVC_ENCODER_SIGNATURE = "hevc-crf28-hvc1-yuv420p-v1";
 
 async function main() {
     const allFiles = collectFiles(DOCS_ROOT);
@@ -85,6 +86,7 @@ async function optimizeImages(files, imageCache) {
         }
 
         try {
+            // TODO: add support for variable width img loading
             const metadata = await Image(file, {
                 widths: [null],
                 formats: ["avif", "webp"],
@@ -93,7 +95,7 @@ async function optimizeImages(files, imageCache) {
                     return `${path.parse(src).name}.${format}`;
                 },
                 sharpAvifOptions: {
-                    quality: 50,
+                    quality: 80,
                 },
                 sharpWebpOptions: {
                     quality: 80,
@@ -144,51 +146,68 @@ async function optimizeVideos(files, videoCache) {
         const sourceStats = fs.statSync(file);
         const sourceFingerprint = await fingerprintFile(file);
         const webmPath = file.replace(/\.mp4$/i, ".webm");
+        const hevcPath = file.replace(/\.mp4$/i, ".hevc.mp4");
         const webmRelativePath = normalizePath(path.relative(DOCS_ROOT, webmPath));
+        const hevcRelativePath = normalizePath(path.relative(DOCS_ROOT, hevcPath));
         const cached = videoCache[relative];
 
-        const outputExists = fs.existsSync(webmPath);
-        const outputInSync = outputExists && fs.statSync(webmPath).mtimeMs >= sourceStats.mtimeMs;
+        const webmExists = fs.existsSync(webmPath);
+        const hevcExists = fs.existsSync(hevcPath);
+        const webmInSync = webmExists && fs.statSync(webmPath).mtimeMs >= sourceStats.mtimeMs;
+        const hevcInSync = hevcExists && fs.statSync(hevcPath).mtimeMs >= sourceStats.mtimeMs;
         const cacheInSync =
       cached
       && cached.sourceFingerprint === sourceFingerprint
       && cached.encoderSignature === VIDEO_ENCODER_SIGNATURE
+      && cached.hevcEncoderSignature === VIDEO_HEVC_ENCODER_SIGNATURE
       && cached.faststartApplied === true;
 
-        if (outputExists && cacheInSync && outputInSync) {
+        if (webmExists && hevcExists && cacheInSync && webmInSync && hevcInSync) {
             skippedCount += 1;
             nextCache[relative] = {
                 sourceFingerprint,
                 sourceSize: sourceStats.size,
                 sourceMtimeMs: sourceStats.mtimeMs,
                 encoderSignature: VIDEO_ENCODER_SIGNATURE,
+                hevcEncoderSignature: VIDEO_HEVC_ENCODER_SIGNATURE,
                 faststartApplied: true,
                 optimizedAt: cached && cached.optimizedAt ? cached.optimizedAt : Date.now(),
                 output: {
                     webm: webmRelativePath,
+                    hevc: hevcRelativePath,
                 },
             };
             continue;
         }
 
         try {
-            transcodeVideoToWebm(file, webmPath);
+            if (!webmExists || !webmInSync || !cacheInSync) {
+                transcodeVideoToWebm(file, webmPath);
+                console.log(`optimize:video generated webm for ${relative}`);
+            }
+            if (!hevcExists || !hevcInSync || !cacheInSync) {
+                transcodeVideoToHevc(file, hevcPath);
+                console.log(`optimize:video generated hevc for ${relative}`);
+            }
             applyFaststart(file);
             optimizedCount += 1;
-            console.log(`optimize:video generated webm for ${relative}`);
 
             const webmStats = fs.statSync(webmPath);
+            const hevcStats = fs.statSync(hevcPath);
             nextCache[relative] = {
                 sourceFingerprint,
                 sourceSize: sourceStats.size,
                 sourceMtimeMs: sourceStats.mtimeMs,
                 encoderSignature: VIDEO_ENCODER_SIGNATURE,
+                hevcEncoderSignature: VIDEO_HEVC_ENCODER_SIGNATURE,
                 faststartApplied: true,
                 optimizedAt: Date.now(),
                 output: {
                     webm: webmRelativePath,
+                    hevc: hevcRelativePath,
                 },
                 outputSize: webmStats.size,
+                hevcOutputSize: hevcStats.size,
             };
         } catch (error) {
             failedCount += 1;
@@ -270,6 +289,34 @@ function transcodeVideoToWebm(inputPath, outputPath) {
         const stderr = (result.stderr || "").toString().trim();
         const detail = stderr.length > 0 ? ` ${stderr}` : "";
         throw new Error(`ffmpeg failed with status ${result.status}.${detail}`);
+    }
+}
+
+function transcodeVideoToHevc(inputPath, outputPath) {
+    const result = spawnSync(
+        "ffmpeg",
+        [
+            "-y",
+            "-i",
+            inputPath,
+            "-c:v",
+            "libx265",
+            "-crf",
+            "28",
+            "-tag:v",
+            "hvc1",
+            "-pix_fmt",
+            "yuv420p",
+            "-an",
+            outputPath,
+        ],
+        { stdio: "pipe" },
+    );
+
+    if (result.status !== 0) {
+        const stderr = (result.stderr || "").toString().trim();
+        const detail = stderr.length > 0 ? ` ${stderr}` : "";
+        throw new Error(`ffmpeg hevc failed with status ${result.status}.${detail}`);
     }
 }
 

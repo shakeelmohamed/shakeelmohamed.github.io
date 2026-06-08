@@ -326,6 +326,56 @@ test("remote markdown images remain as plain img elements", async () => {
     expect(failures, `Remote markdown images incorrectly converted:\n${failures.join("\n")}`).toEqual([]);
 });
 
+test("all video elements have webm, hevc, and mp4 sources", async () => {
+    const { readFileSync } = require("node:fs");
+    const htmlFiles = listHtmlFilesRecursively(DOCS_DIR);
+    expect(htmlFiles.length, "No generated HTML files found under docs").toBeGreaterThan(0);
+
+    const failures = [];
+
+    for (const htmlFile of htmlFiles) {
+        const html = readFileSync(htmlFile, "utf8");
+        const videoBlocks = [...html.matchAll(/<video\b[^>]*>([\s\S]*?)<\/video>/gi)];
+
+        for (const [, inner] of videoBlocks) {
+            const sourceElements = [...inner.matchAll(/<source\b([^>]*)>/gi)].map(m => m[1]);
+            const sources = sourceElements.map(attrs => {
+                const srcMatch = attrs.match(/\bsrc=["']([^"']+)["']/i);
+                const typeMatch = attrs.match(/\btype=["']([^"']+)["']/i);
+                return { src: srcMatch ? srcMatch[1] : null, type: typeMatch ? typeMatch[1] : null, raw: attrs };
+            }).filter(s => s.src);
+
+            const hasWebm = sources.some(s => s.src.endsWith(".webm"));
+            const hasHevc = sources.some(s => s.src.endsWith(".hevc.mp4"));
+            const hasMp4 = sources.some(s => s.src.endsWith(".mp4") && !s.src.endsWith(".hevc.mp4"));
+
+            if (!hasWebm || !hasHevc || !hasMp4) {
+                const missing = [!hasWebm && "webm", !hasHevc && "hevc.mp4", !hasMp4 && "mp4"].filter(Boolean);
+                failures.push(`${htmlFile}: video missing sources: ${missing.join(", ")}`);
+            }
+
+            for (const { src, type, raw } of sources) {
+                if (!src.startsWith("http://") && !src.startsWith("https://")) {
+                    const filePath = resolveAssetPath(htmlFile, decodeURIComponent(src));
+                    if (!existsSync(filePath)) {
+                        failures.push(`${htmlFile}: video source file missing: ${src}`);
+                    }
+                }
+                if (src.endsWith(".hevc.mp4")) {
+                    if (type && type.includes("&quot;")) {
+                        failures.push(`${htmlFile}: hevc source has escaped quotes in type attribute: ${raw.trim()}`);
+                    }
+                    if (!type || !type.match(/codecs=["']?hvc1["']?/)) {
+                        failures.push(`${htmlFile}: hevc source missing hvc1 codec in type: ${type}`);
+                    }
+                }
+            }
+        }
+    }
+
+    expect(failures, `Video source issues:\n${failures.join("\n")}`).toEqual([]);
+});
+
 test("markdown images preserve alt text", async () => {
     const sourceFiles = listSourceReferenceFilesRecursively(SRC_DIR).filter(f => f.endsWith(".md"));
     const failures = [];
