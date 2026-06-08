@@ -85,6 +85,7 @@ async function optimizeImages(files, imageCache) {
         }
 
         try {
+            // TODO: add support for variable width img loading
             const metadata = await Image(file, {
                 widths: [null],
                 formats: ["avif", "webp"],
@@ -93,7 +94,7 @@ async function optimizeImages(files, imageCache) {
                     return `${path.parse(src).name}.${format}`;
                 },
                 sharpAvifOptions: {
-                    quality: 50,
+                    quality: 80,
                 },
                 sharpWebpOptions: {
                     quality: 80,
