@@ -53,11 +53,14 @@ mixin youtube(url, cap)
 mixin animation(url, cap=null, w=1920, h=1080, className="video16by9", poster=null)
     - var safeUrl = url || '';
     - var webmUrl = safeUrl.replace(/\.mp4$/i, '.webm');
+    - var hevcUrl = safeUrl.replace(/\.mp4$/i, '.hevc.mp4');
     - var encodedMp4Url = safeUrl ? encodeURI(safeUrl) : '';
     - var encodedWebmUrl = safeUrl ? encodeURI(webmUrl) : '';
+    - var encodedHevcUrl = safeUrl ? encodeURI(hevcUrl) : '';
     .project-content
         video(width=w height=h class=className autoplay="" loop="" muted="" playsinline="" preload="metadata" poster=poster)
             source(src=encodedWebmUrl type="video/webm")
+            source(src=encodedHevcUrl type="video/mp4; codecs=hvc1")
             source(src=encodedMp4Url type="video/mp4")
         if cap
             +caption(cap)
@@ -66,22 +69,28 @@ mixin animation(url, cap=null, w=1920, h=1080, className="video16by9", poster=nu
 mixin video(url, cap, autoplay=false, w=1920, h=1080)
     - var safeUrl = url || '';
     - var webmUrl = safeUrl.replace(/\.mp4$/i, '.webm');
+    - var hevcUrl = safeUrl.replace(/\.mp4$/i, '.hevc.mp4');
     - var encodedMp4Url = safeUrl ? encodeURI(safeUrl) : '';
     - var encodedWebmUrl = safeUrl ? encodeURI(webmUrl) : '';
+    - var encodedHevcUrl = safeUrl ? encodeURI(hevcUrl) : '';
     .project-content
         video.video16by9(width=w height=h controls="" data-video="0" autoplay=autoplay)
             source(src=encodedWebmUrl type="video/webm")
+            source(src=encodedHevcUrl type="video/mp4; codecs=hvc1")
             source(src=encodedMp4Url type="video/mp4")
         +caption(cap)
 
 mixin videoCustom(url, cap, autoplay=false, w=1920, h=1080)
     - var safeUrl = url || '';
     - var webmUrl = safeUrl.replace(/\.mp4$/i, '.webm');
+    - var hevcUrl = safeUrl.replace(/\.mp4$/i, '.hevc.mp4');
     - var encodedMp4Url = safeUrl ? encodeURI(safeUrl) : '';
     - var encodedWebmUrl = safeUrl ? encodeURI(webmUrl) : '';
+    - var encodedHevcUrl = safeUrl ? encodeURI(hevcUrl) : '';
     .project-content
         video.w-full(width=w height=h controls="" data-video="0" autoplay=autoplay)
             source(src=encodedWebmUrl type="video/webm")
+            source(src=encodedHevcUrl type="video/mp4; codecs=hvc1")
             source(src=encodedMp4Url type="video/mp4")
         +caption(cap)
 

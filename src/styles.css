@@ -881,7 +881,7 @@ img.emoji {
 img.lightbox,
 video,
 .project-content > img,
-.project-content > a.lightbox > picture > img, {
+.project-content > a.lightbox > picture > img {
     min-width: 100%;
     width: 100%;
 }
