@@ -5,6 +5,7 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 
 # ASAP
 
+- [ ] revise shakeel.design on resume and ATS resume
 - [ ] add SVG favicon
 
 - [ ] fix tablet CSS, prefer to just force mobile at tablet width for simplicity

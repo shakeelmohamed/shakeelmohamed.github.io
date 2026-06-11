@@ -488,6 +488,7 @@ blockquote {
 .grid-1 {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+    margin-top: var(--space-4);
 }
 
 .grid-2 {
