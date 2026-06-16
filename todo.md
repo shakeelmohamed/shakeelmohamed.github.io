@@ -273,6 +273,7 @@ Hermes - highest vis sponsored studio ever, and being the TA is the validation f
 
 # P3
 
+- [ ] This random article quoted my IG comment: https://www.creativeboom.com/tips/im-stuck-as-a-mid-weight-designer-now-what/
 - [ ] secret/hidden landing pages for video editing, tech, etc.
 - [ ] hmm (security) Add rel="noopener noreferrer" to external links; https://linkbuilder.io/rel-noopener-noreferrer/
 - [ ] Media-specific pages could have more detail/context, scrollable images... TBD
