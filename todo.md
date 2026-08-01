@@ -5,7 +5,8 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 
 # ASAP
 
-- [ ] revise shakeel.design on resume and ATS resume
+- [ ] revise shakeel.design on resume and ATS resume: include agencies list (DL English Design, TALISMAN, Curve Ahead Design)
+- [ ] shakeel.design include client list once reaching that point (TBD...)
 - [ ] update OG image to use bolt logo
 - [ ] add SVG favicon
 
@@ -96,6 +97,7 @@ Also remove the hr above it, need to fix body margin-bottom to 0, etc.
 - [ ] brand guidelines
 - [ ] brand book flip through with motion, show spiral binding and lots of great editorial spreads
 - [ ] update project summary
+- [ ] Grasshopper infinite variations of 3D printed sail as a gift to all attendees?
 - [ ] caustic dispersion (light refraction) with logo in Blender
 - [ ] Need to optimize it for skimming, missing all the good stuff with the slideshows
 - [ ] spend 3 hours on motion (new storyboard, logo decomposition into layers, production), goal should be 10 seconds max
