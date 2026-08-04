@@ -9,6 +9,7 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 - [ ] shakeel.design include client list once reaching that point (TBD...)
 - [ ] update OG image to use bolt logo
 - [ ] add SVG favicon
+- [ ] add landing pages for: video editing, presentation design
 
 - [ ] fix tablet CSS, prefer to just force mobile at tablet width for simplicity
 - [ ] Need some photography + design comps (think campaigns/ads) in each project
