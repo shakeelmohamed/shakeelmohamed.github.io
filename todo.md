@@ -7,7 +7,6 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 
 - [ ] revise shakeel.design on resume and ATS resume: include agencies list (DL English Design, TALISMAN, Curve Ahead Design)
 - [ ] shakeel.design include client list once reaching that point (TBD...)
-- [ ] update OG image to use bolt logo
 - [ ] add SVG favicon
 - [ ] add landing pages for: video editing, presentation design
 
