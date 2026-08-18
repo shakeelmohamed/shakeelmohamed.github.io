@@ -17,6 +17,7 @@ const {
     resolveSourceAssetPath,
     normalizeSourceAssetReference,
     isLocalAssetUrl,
+    getFilesRecursively
 } = require("../test_utils");
 
 const UNUSED_SOURCE_IMAGE_ALLOWLIST = new Set([]);
@@ -418,4 +419,31 @@ test("markdown images preserve alt text", async () => {
     }
 
     expect(failures, `Markdown images with missing or incorrect alt text:\n${failures.join("\n")}`).toEqual([]);
+});
+
+const IMAGE_EXTENSIONS = [".png", ".jpg", ".jpeg", ".gif", ".svg"];
+
+function findSourceForDocsFile(docsFile) {
+    const docsRel = relative(DOCS_DIR, docsFile);
+    const srcBase = resolve(SRC_DIR, docsRel);
+
+    if (docsRel.endsWith(".avif") || docsRel.endsWith(".webp")) {
+        const base = srcBase.replace(/\.\w+$/, "");
+        return IMAGE_EXTENSIONS.some((imgExt) => existsSync(base + imgExt));
+    }
+
+    if (docsRel.endsWith(".hevc.mp4") || docsRel.endsWith(".webm")) {
+        return existsSync(srcBase.replace(/\.(hevc\.mp4|webm)$/, ".mp4"));
+    }
+
+    return existsSync(srcBase);
+}
+
+test("no dangling files in docs/projects", () => {
+    const docsImgFiles = getFilesRecursively(resolve(DOCS_DIR, "projects"), (f) => f.includes("/img/"));
+    expect(docsImgFiles.length, "No files found under docs/projects/*/img/").toBeGreaterThan(0);
+
+    const dangling = docsImgFiles.filter((f) => !findSourceForDocsFile(f));
+
+    expect(dangling, `Dangling files in docs with no source in src:\n${dangling.join("\n")}`).toEqual([]);
 });

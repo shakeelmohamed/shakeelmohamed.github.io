@@ -1,5 +1,9 @@
 const { defineConfig, devices } = require('@playwright/test');
 
+const parsedPort = process.env.PORT ? parseInt(process.env.PORT, 10) : null;
+const PORT = parsedPort && Number.isInteger(parsedPort) && parsedPort > 0 ? parsedPort : 8080;
+const BASE_URL = `http://localhost:${PORT}`;
+
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
@@ -35,7 +39,7 @@ module.exports = defineConfig({
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
-    baseURL: 'http://localhost:8080',
+    baseURL: BASE_URL,
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
@@ -81,8 +85,8 @@ module.exports = defineConfig({
 
   /* Run your local dev server before starting the tests */
   webServer: {
-    command: 'npm run start',
-    url: 'http://localhost:8080',
+    command: `PORT=${PORT} npm run start`,
+    url: BASE_URL,
     reuseExistingServer: !process.env.CI,
   },
 });

@@ -5,8 +5,10 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 
 # ASAP
 
-- [ ] revise shakeel.design on resume and ATS resume
+- [ ] revise shakeel.design on resume and ATS resume: include agencies list (DL English Design, TALISMAN, Curve Ahead Design)
+- [ ] add support for portfolioJumbo type, which is 2x wide on desktop
 - [ ] add SVG favicon
+- [ ] add landing pages for: video editing, presentation design
 
 - [ ] fix tablet CSS, prefer to just force mobile at tablet width for simplicity
 - [ ] Need some photography + design comps (think campaigns/ads) in each project
@@ -67,7 +69,6 @@ Also remove the hr above it, need to fix body margin-bottom to 0, etc.
 
 ## Cleanup
 
-- [ ] Replace all avif/gif files with .mp4
 - [ ] use <footer>, etc structured markup; rename newheader, newfooter CSS classes accordingly
 - [ ] resolve rules and tighten up spacing when header comes after a rule; probably remove rule from the header markup if possible; (Started with hr.rule class)
 - [ ] Fix right margin issues on tablet / half-width desktop size
@@ -95,6 +96,7 @@ Also remove the hr above it, need to fix body margin-bottom to 0, etc.
 - [ ] brand guidelines
 - [ ] brand book flip through with motion, show spiral binding and lots of great editorial spreads
 - [ ] update project summary
+- [ ] Grasshopper infinite variations of 3D printed sail as a gift to all attendees?
 - [ ] caustic dispersion (light refraction) with logo in Blender
 - [ ] Need to optimize it for skimming, missing all the good stuff with the slideshows
 - [ ] spend 3 hours on motion (new storyboard, logo decomposition into layers, production), goal should be 10 seconds max
@@ -131,11 +133,12 @@ Also remove the hr above it, need to fix body margin-bottom to 0, etc.
 
 # TPS
 
+- [ ] Overall, needs color grading on everything. Background colors are way too different from mockups, wristband motion, and photography
 - [ ] Logo design explanation
+- [ ] See notes about fixing wristband loop
 - [ ] Embroidered patch from the logo, super important
 - [ ] rework the posters as social templates, just swap the photos
 - [ ] Create wayfinding system using clean grid
-- [ ] wristband motion... there is no face between inside/outside oops! Also make it loop perfectly
 - [ ] use the pattern as a lining for either stationery, apparel, bag lining, or something else for VIPs
 - [ ] VIP stationery mockup with vellum, etc.
 - [ ] show motion design system (3x vertical social posts, LT, slates/bumpers) - show the system/grid, adaptive resizing
@@ -272,6 +275,7 @@ Hermes - highest vis sponsored studio ever, and being the TA is the validation f
 
 # P3
 
+- [ ] This random article quoted my IG comment: https://www.creativeboom.com/tips/im-stuck-as-a-mid-weight-designer-now-what/
 - [ ] secret/hidden landing pages for video editing, tech, etc.
 - [ ] hmm (security) Add rel="noopener noreferrer" to external links; https://linkbuilder.io/rel-noopener-noreferrer/
 - [ ] Media-specific pages could have more detail/context, scrollable images... TBD

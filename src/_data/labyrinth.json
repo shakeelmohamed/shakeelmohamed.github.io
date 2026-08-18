@@ -54,6 +54,15 @@
         }
     },
     {
+        "src": "Getty_Villa_fountain.png",
+        "pos": {
+            "x": 27.9,
+            "y": 41.547,
+            "z": 191,
+            "width": 17.234
+        }
+    },
+    {
         "src": "Rothko-AR-demo.png",
         "pos": {
             "x": 0.772,
@@ -74,9 +83,9 @@
     {
         "src": "crazy-timeline---04132079-8bdc-4857-82cf-f356bcaf402c.png",
         "pos": {
-            "x": 2.147,
-            "y": 56.335,
-            "z": 139,
+            "x": 0,
+            "y": 59.333,
+            "z": 189,
             "width": 40
         }
     },
@@ -141,6 +150,15 @@
             "y": 115,
             "z": 2,
             "width": 40
+        }
+    },
+    {
+        "src": "Getty_Villa_statue.png",
+        "pos": {
+            "x": 12.303,
+            "y": 136.746,
+            "z": 197,
+            "width": 20.617
         }
     },
     {
