@@ -1,29 +1,15 @@
 const { test, expect } = require("@playwright/test");
-const { readFileSync, existsSync, readdirSync } = require("node:fs");
+const { readFileSync, existsSync } = require("node:fs");
 const { resolve, relative } = require("node:path");
 const { execSync } = require("node:child_process");
 
-const DOCS_DIR = resolve(process.cwd(), "docs");
+const {
+    DOCS_DIR,
+    SRC_DIR,
+    getFilesRecursively
+} = require("../test_utils");
+
 const CACHE_PATH = resolve(process.cwd(), ".cache", "optimize-media.json");
-const SRC_DIR = resolve(process.cwd(), "src");
-
-function getFilesRecursively(dirPath, filterFn) {
-    const entries = readdirSync(dirPath, { withFileTypes: true });
-    const files = [];
-
-    for (const entry of entries) {
-        const fullPath = resolve(dirPath, entry.name);
-        if (entry.isDirectory()) {
-            files.push(...getFilesRecursively(fullPath, filterFn));
-            continue;
-        }
-        if (!filterFn || filterFn(fullPath)) {
-            files.push(fullPath);
-        }
-    }
-
-    return files;
-}
 
 test("optimize cache exists and has correct structure", () => {
     expect(existsSync(CACHE_PATH), ".cache/optimize-media.json should exist").toBe(true);

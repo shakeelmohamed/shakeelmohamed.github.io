@@ -193,6 +193,7 @@ function extractSourceImageReferences(content) {
     return refs;
 }
 
+
 module.exports = {
     SITE_ORIGIN,
     LOCAL_ORIGIN,
@@ -214,5 +215,5 @@ module.exports = {
     extractDocsLocalAssetUrls,
     extractOpenGraphImageValues,
     extractDynamicSourceImageReferences,
-    extractSourceImageReferences,
+    extractSourceImageReferences
 };
