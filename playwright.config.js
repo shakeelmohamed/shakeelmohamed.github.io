@@ -1,6 +1,7 @@
 const { defineConfig, devices } = require('@playwright/test');
 
-const PORT = 8080;
+const parsedPort = process.env.PORT ? parseInt(process.env.PORT, 10) : null;
+const PORT = parsedPort && Number.isInteger(parsedPort) && parsedPort > 0 ? parsedPort : 8080;
 const BASE_URL = `http://localhost:${PORT}`;
 
 /**
@@ -84,7 +85,7 @@ module.exports = defineConfig({
 
   /* Run your local dev server before starting the tests */
   webServer: {
-    command: 'npm run start',
+    command: `PORT=${PORT} npm run start`,
     url: BASE_URL,
     reuseExistingServer: !process.env.CI,
   },
