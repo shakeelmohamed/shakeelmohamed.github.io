@@ -1,5 +1,5 @@
 const { test, expect } = require("@playwright/test");
-const { readFileSync, existsSync, statSync, readdirSync } = require("node:fs");
+const { readFileSync, existsSync, readdirSync } = require("node:fs");
 const { resolve, relative } = require("node:path");
 const { execSync } = require("node:child_process");
 
@@ -35,7 +35,7 @@ test("optimize cache exists and has correct structure", () => {
     expect(Object.keys(cache.images).length).toBeGreaterThan(0);
     expect(Object.keys(cache.videos).length).toBeGreaterThan(0);
 
-    for (const [key, entry] of Object.entries(cache.images)) {
+    for (const entry of Object.values(cache.images)) {
         expect(typeof entry.sourceFingerprint).toBe("string");
         expect(entry.sourceFingerprint.length).toBeGreaterThan(0);
         expect(entry.output).toBeDefined();
@@ -43,7 +43,7 @@ test("optimize cache exists and has correct structure", () => {
         expect(entry.output.webp).toBeDefined();
     }
 
-    for (const [key, entry] of Object.entries(cache.videos)) {
+    for (const entry of Object.values(cache.videos)) {
         expect(typeof entry.sourceFingerprint).toBe("string");
         expect(entry.sourceFingerprint.length).toBeGreaterThan(0);
         expect(typeof entry.encoderSignature).toBe("string");
