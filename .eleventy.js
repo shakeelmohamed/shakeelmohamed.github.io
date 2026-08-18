@@ -85,6 +85,7 @@ module.exports = function(eleventyConfig) {
         if (src.endsWith('.mp4')) {
             return `<div class="project-content"><video autoplay loop muted playsinline preload="metadata">
                 <source src="${baseURL}.webm" type="video/webm">
+                <source src="${baseURL}.hevc.mp4" type="video/mp4; codecs=hvc1">
                 <source src="${src}" type="video/mp4">
             </video></div>`;
         }

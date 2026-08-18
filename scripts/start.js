@@ -12,8 +12,10 @@ function findFreePort(port) {
     return findFreePort(port + 1);
 }
 
-const port = findFreePort(START_PORT);
-if (port !== START_PORT) {
+const port = process.env.PORT ? parseInt(process.env.PORT, 10) : findFreePort(START_PORT);
+if (process.env.PORT) {
+    console.log(`Using PORT=${port} from environment`);
+} else if (port !== START_PORT) {
     console.log(`Port ${START_PORT} in use, using port ${port}`);
 }
 

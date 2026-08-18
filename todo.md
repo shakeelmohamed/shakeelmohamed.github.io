@@ -6,7 +6,7 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 # ASAP
 
 - [ ] revise shakeel.design on resume and ATS resume: include agencies list (DL English Design, TALISMAN, Curve Ahead Design)
-- [ ] shakeel.design include client list once reaching that point (TBD...)
+- [ ] replace src/projects/salgirah-archive/img/salgirah_motion.avif with the .mp4 equivalent and update the reference in src/projects/salgirah-archive/index.pug:42
 - [ ] add SVG favicon
 - [ ] add landing pages for: video editing, presentation design
 
@@ -138,7 +138,6 @@ Also remove the hr above it, need to fix body margin-bottom to 0, etc.
 - [ ] Embroidered patch from the logo, super important
 - [ ] rework the posters as social templates, just swap the photos
 - [ ] Create wayfinding system using clean grid
-- [ ] wristband motion... there is no face between inside/outside oops! Also make it loop perfectly
 - [ ] use the pattern as a lining for either stationery, apparel, bag lining, or something else for VIPs
 - [ ] VIP stationery mockup with vellum, etc.
 - [ ] show motion design system (3x vertical social posts, LT, slates/bumpers) - show the system/grid, adaptive resizing

@@ -13,12 +13,11 @@ include ../_includes/project_utils.pug
 
 
 block content
-    .grid-1.desktop-only
+    .grid-1
         +animation("./img/Shakeel_chair_spin.mp4", null, 1920, 804, "")
     .grid-4.mt-4
         //- TODO: this will overflow x on tablet scale
-        div.headshot
-            img.lightbox.mobile-only(src="../img/Shakeel_Mohamed_headshot.png" alt="Headshot of Shakeel Mohamed")
+        div &nbsp;
         div
             //- TODO: can we style this like a caption, but still get SEO benefits?
             h1(style="padding-top:0;") About Me
@@ -149,11 +148,11 @@ block content
         .col-start-2.col-end-5
             p.caption Experience
             .grid-3
+                +experience("Freelance Design Consultant", "shakeel.design", "Remote", "05.2025–Present")
+                p.col-start-2.col-end-4 Designed brand identities, motion design, and visual systems for cultural organizations, architecture firms, creative agencies, and emerging companies. Collaborated directly with clients from strategy and concept through implementation across print, digital, and environmental applications. Clients include: DL English Design, Processing Foundation, Curve Ahead Design, The Ismaili Community.
+            .grid-3
                 +experience("Senior Designer", "TALISMAN", "Remote", "08.2025–Present")
                 p.col-start-2.col-end-4 Collaborated with the Creative Director and a Senior Designer on brand strategy and visual identity for a performing arts organization. Researched historical references and competitors, designed presentation systems in Figma Slides. Led critiques and provided feedback to junior designers. Supported business development through pitch decks.
-            .grid-3
-                +experience("Freelance Design Consultant", "shakeel.design", "Remote", "05.2025–Present")
-                p.col-start-2.col-end-4 Designed brand identities, motion design, and visual systems for cultural organizations, architecture firms, creative agencies, and emerging companies. Collaborated directly with clients from strategy and concept through implementation across print, digital, and environmental applications.
             .grid-3
                 a(href="/projects/salgirah-festival-identity/")
                     +experience("Freelance Graphic Designer (Annually)", "The Ismaili Muslim Community", "Remote", "10.2021–10.2025")
