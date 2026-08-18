@@ -112,6 +112,27 @@ test("no stacked extension files in docs", () => {
     expect(stacked, `Found stacked extension files:\n${stacked.join("\n")}`).toEqual([]);
 });
 
+test("no video sources produce avif or webp artifacts in docs", () => {
+    const srcVideos = getFilesRecursively(SRC_DIR, (f) => f.endsWith(".mp4"));
+    expect(srcVideos.length).toBeGreaterThan(0);
+
+    const stale = [];
+
+    for (const srcFile of srcVideos) {
+        const rel = relative(SRC_DIR, srcFile).replace(/\\/g, "/");
+        const docsBase = resolve(DOCS_DIR, rel.replace(/\.mp4$/, ""));
+
+        if (existsSync(docsBase + ".avif")) {
+            stale.push(docsBase + ".avif");
+        }
+        if (existsSync(docsBase + ".webp")) {
+            stale.push(docsBase + ".webp");
+        }
+    }
+
+    expect(stale, `Found stale image artifacts for video sources:\n${stale.join("\n")}`).toEqual([]);
+});
+
 test("no image files in src have avif or webp variants", () => {
     const optimized = getFilesRecursively(SRC_DIR, (f) => f.endsWith(".avif") || f.endsWith(".webp"));
     expect(optimized, `Found optimized images in src/:\n${optimized.join("\n")}`).toEqual([]);

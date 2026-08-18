@@ -6,7 +6,7 @@ https://cardiff.marketing/pug-in-eleventy-making-it-work/
 # ASAP
 
 - [ ] revise shakeel.design on resume and ATS resume: include agencies list (DL English Design, TALISMAN, Curve Ahead Design)
-- [ ] replace src/projects/salgirah-archive/img/salgirah_motion.avif with the .mp4 equivalent and update the reference in src/projects/salgirah-archive/index.pug:42
+- [ ] add support for portfolioJumbo type, which is 2x wide on desktop
 - [ ] add SVG favicon
 - [ ] add landing pages for: video editing, presentation design
 
@@ -69,7 +69,6 @@ Also remove the hr above it, need to fix body margin-bottom to 0, etc.
 
 ## Cleanup
 
-- [ ] Replace all avif/gif files with .mp4
 - [ ] use <footer>, etc structured markup; rename newheader, newfooter CSS classes accordingly
 - [ ] resolve rules and tighten up spacing when header comes after a rule; probably remove rule from the header markup if possible; (Started with hr.rule class)
 - [ ] Fix right margin issues on tablet / half-width desktop size
@@ -134,7 +133,9 @@ Also remove the hr above it, need to fix body margin-bottom to 0, etc.
 
 # TPS
 
+- [ ] Overall, needs color grading on everything. Background colors are way too different from mockups, wristband motion, and photography
 - [ ] Logo design explanation
+- [ ] See notes about fixing wristband loop
 - [ ] Embroidered patch from the logo, super important
 - [ ] rework the posters as social templates, just swap the photos
 - [ ] Create wayfinding system using clean grid
