@@ -20,7 +20,7 @@ async function main() {
     });
     const videoFiles = allFiles.filter((file) => {
         const ext = path.extname(file).toLowerCase();
-        return VIDEO_EXTENSIONS.has(ext);
+        return VIDEO_EXTENSIONS.has(ext) && !file.endsWith(".hevc.mp4");
     });
 
     const cache = readCache(CACHE_PATH);
@@ -63,19 +63,20 @@ async function optimizeImages(files, imageCache) {
     for (const file of files) {
         const relative = normalizePath(path.relative(DOCS_ROOT, file));
         const outputDir = path.dirname(file);
-        const sourceStats = fs.statSync(file);
+        const sourceFingerprint = await fingerprintFile(file);
         const avifPath = file.replace(/\.(png|jpe?g)$/i, ".avif");
         const webpPath = file.replace(/\.(png|jpe?g)$/i, ".webp");
         const cached = imageCache[relative];
 
         const outputsExist = fs.existsSync(avifPath) && fs.existsSync(webpPath);
-        const outputsInSync = outputsExist && outputsAreInSync(sourceStats.mtimeMs, avifPath, webpPath);
-        const cacheInSync = cached && cached.sourceMtimeMs === sourceStats.mtimeMs;
+        const cacheInSync =
+            cached
+            && cached.sourceFingerprint === sourceFingerprint;
 
-        if ((cacheInSync && outputsExist) || outputsInSync) {
+        if (cacheInSync && outputsExist) {
             skippedCount += 1;
             nextCache[relative] = {
-                sourceMtimeMs: sourceStats.mtimeMs,
+                sourceFingerprint,
                 optimizedAt: cached && cached.optimizedAt ? cached.optimizedAt : Date.now(),
                 output: {
                     avif: normalizePath(path.relative(DOCS_ROOT, avifPath)),
@@ -108,7 +109,7 @@ async function optimizeImages(files, imageCache) {
             const firstAvif = metadata.avif && metadata.avif[0];
             const firstWebp = metadata.webp && metadata.webp[0];
             nextCache[relative] = {
-                sourceMtimeMs: sourceStats.mtimeMs,
+                sourceFingerprint,
                 optimizedAt: Date.now(),
                 output: {
                     avif: firstAvif
@@ -153,8 +154,6 @@ async function optimizeVideos(files, videoCache) {
 
         const webmExists = fs.existsSync(webmPath);
         const hevcExists = fs.existsSync(hevcPath);
-        const webmInSync = webmExists && fs.statSync(webmPath).mtimeMs >= sourceStats.mtimeMs;
-        const hevcInSync = hevcExists && fs.statSync(hevcPath).mtimeMs >= sourceStats.mtimeMs;
         const cacheInSync =
       cached
       && cached.sourceFingerprint === sourceFingerprint
@@ -162,7 +161,7 @@ async function optimizeVideos(files, videoCache) {
       && cached.hevcEncoderSignature === VIDEO_HEVC_ENCODER_SIGNATURE
       && cached.faststartApplied === true;
 
-        if (webmExists && hevcExists && cacheInSync && webmInSync && hevcInSync) {
+        if (webmExists && hevcExists && cacheInSync) {
             skippedCount += 1;
             nextCache[relative] = {
                 sourceFingerprint,
@@ -181,11 +180,11 @@ async function optimizeVideos(files, videoCache) {
         }
 
         try {
-            if (!webmExists || !webmInSync || !cacheInSync) {
+            if (!webmExists || !cacheInSync) {
                 transcodeVideoToWebm(file, webmPath);
                 console.log(`optimize:video generated webm for ${relative}`);
             }
-            if (!hevcExists || !hevcInSync || !cacheInSync) {
+            if (!hevcExists || !cacheInSync) {
                 transcodeVideoToHevc(file, hevcPath);
                 console.log(`optimize:video generated hevc for ${relative}`);
             }
@@ -332,13 +331,6 @@ async function fingerprintFile(filePath) {
     });
 
     return hash.digest("hex");
-}
-
-function outputsAreInSync(sourceMtimeMs, avifPath, webpPath) {
-    const avifStats = fs.statSync(avifPath);
-    const webpStats = fs.statSync(webpPath);
-
-    return avifStats.mtimeMs >= sourceMtimeMs && webpStats.mtimeMs >= sourceMtimeMs;
 }
 
 function readJson(filePath) {
