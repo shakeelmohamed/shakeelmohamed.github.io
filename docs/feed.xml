@@ -46,7 +46,7 @@
         <title>Did I Just Discover The Simplest Success Formula? (5 Actionable Steps)</title>
         <link href="https://shakeelmohamed.com/posts/2021-01-22-5-steps-to-success/"/>
         <published>2021-01-22T00:00:00Z</published>
-        <updated>2021-09-12T07:58:43Z</updated>
+        <updated>2021-09-16T01:11:06Z</updated>
         <id>https://shakeelmohamed.com/posts/2021-01-22-5-steps-to-success/</id>
         <summary>type="text" After a lot of reflection, I think I've uncovered something special here: the simplest formula for success!</summary>
     </entry>
@@ -62,7 +62,7 @@
         <title>CodeLabs 2020: Mentoring College Students During a Global Pandemic</title>
         <link href="https://shakeelmohamed.com/posts/2020-08-11-mentoring-2-college-students-during-a-global-pandemic/"/>
         <published>2020-08-11T00:00:00Z</published>
-        <updated>2021-09-12T07:58:43Z</updated>
+        <updated>2021-09-16T01:11:06Z</updated>
         <id>https://shakeelmohamed.com/posts/2020-08-11-mentoring-2-college-students-during-a-global-pandemic/</id>
         <summary>type="text" A quick recap of my experience mentoring two college students during a virtual internship program with Codeday</summary>
     </entry>
@@ -94,7 +94,7 @@
         <title>Tips for solo travel through Chiang Mai, Thailand</title>
         <link href="https://shakeelmohamed.com/posts/2020-03-15-chiang-mai/"/>
         <published>2020-03-15T00:00:00Z</published>
-        <updated>2021-09-12T07:58:43Z</updated>
+        <updated>2021-09-16T01:11:06Z</updated>
         <id>https://shakeelmohamed.com/posts/2020-03-15-chiang-mai/</id>
         <summary>type="text" I spent 10 days in Thailand in 3 areas: Bangkok, Phuket &amp; Chiang Mai. I spent most of my time in Chiang Mai and absolutely loved it!</summary>
     </entry>
@@ -150,7 +150,7 @@
         <title>Changing My Git Editor On The Fly</title>
         <link href="https://shakeelmohamed.com/posts/2016-04-10-changing-my-git-editor-on-the-fly/"/>
         <published>2016-04-10T00:00:00Z</published>
-        <updated>2021-09-12T07:58:43Z</updated>
+        <updated>2021-09-16T01:11:06Z</updated>
         <id>https://shakeelmohamed.com/posts/2016-04-10-changing-my-git-editor-on-the-fly/</id>
         <summary>type="text" I love using Sublime Text as do many developers these days, but I just can't use it regularly for git commit messages.</summary>
     </entry>
@@ -174,7 +174,7 @@
         <title>A bash alias for intermediate git users: gityank</title>
         <link href="https://shakeelmohamed.com/posts/2016-03-20-a-bash-alias-for-intermediate-git-users-gityank/"/>
         <published>2016-03-20T00:00:00Z</published>
-        <updated>2021-09-12T07:58:43Z</updated>
+        <updated>2021-09-16T01:11:06Z</updated>
         <id>https://shakeelmohamed.com/posts/2016-03-20-a-bash-alias-for-intermediate-git-users-gityank/</id>
         <summary>type="text" As a git user, every once in a while you'll be doing a git pull and be blindsided by the following error...</summary>
     </entry>
@@ -182,7 +182,7 @@
         <title>Silence JavaScript console output</title>
         <link href="https://shakeelmohamed.com/posts/2015-09-04-silence-javascript-console-output/"/>
         <published>2015-09-04T00:00:00Z</published>
-        <updated>2021-09-12T07:58:43Z</updated>
+        <updated>2021-09-16T01:11:06Z</updated>
         <id>https://shakeelmohamed.com/posts/2015-09-04-silence-javascript-console-output/</id>
         <summary>type="text" This is super helpful for unit testing with 100% code coverage, while maintaining a clean test output on the console!</summary>
     </entry>
@@ -190,7 +190,7 @@
         <title>git diff against a remote branch</title>
         <link href="https://shakeelmohamed.com/posts/2015-05-28-git-diff-against-a-remote-branch/"/>
         <published>2015-05-28T00:00:00Z</published>
-        <updated>2021-09-12T07:58:43Z</updated>
+        <updated>2021-09-16T01:11:06Z</updated>
         <id>https://shakeelmohamed.com/posts/2015-05-28-git-diff-against-a-remote-branch/</id>
         <summary>type="text" This is equivalent to previewing a pull request, and it works great across remotes!</summary>
     </entry>
@@ -206,7 +206,7 @@
         <title>An actually helpful git diff of your uncommitted changes</title>
         <link href="https://shakeelmohamed.com/posts/2015-04-21-an-actually-helpful-git-diff-of-your-uncommitted-changes/"/>
         <published>2015-04-21T00:00:00Z</published>
-        <updated>2021-09-12T07:58:43Z</updated>
+        <updated>2021-09-16T01:11:06Z</updated>
         <id>https://shakeelmohamed.com/posts/2015-04-21-an-actually-helpful-git-diff-of-your-uncommitted-changes/</id>
         <summary>type="text" So you just made a bunch of changes to a git project, good job. Now you want to review your changes before committing, even better.</summary>
     </entry>
@@ -214,7 +214,7 @@
         <title>Magic Spells: Deploying an app to AWS OpsWorks</title>
         <link href="https://shakeelmohamed.com/posts/2015-04-10-magic-spells-deploying-an-app-to-aws-opsworks/"/>
         <published>2015-04-10T00:00:00Z</published>
-        <updated>2021-09-12T07:58:43Z</updated>
+        <updated>2021-09-16T01:11:06Z</updated>
         <id>https://shakeelmohamed.com/posts/2015-04-10-magic-spells-deploying-an-app-to-aws-opsworks/</id>
         <summary>type="text" My goal with this post is to walk you through the mind-bending procedures required to setup a new app on AWS using OpsWorks.</summary>
     </entry>

@@ -27,7 +27,8 @@
     "lint:css": "stylelint src/**/.css src/*.css",
     "lint:pug": "node scripts/lint-pug.js",
     "lint:js": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "fallow": "bunx fallow"
   },
   "repository": {
     "type": "git",
